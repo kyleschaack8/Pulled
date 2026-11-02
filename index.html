@@ -62,6 +62,25 @@ button, input, select { font: inherit; color: inherit; }
 .gempty { padding: 14px 10px; color: var(--muted); font-size: 14px; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 @media (max-width: 760px) { .gsearch { order: 3; flex-basis: 100%; max-width: none; } }
+/* Hot cards: fire glow on the top risers */
+.flame { position: relative; isolation: isolate; border-radius: 7px; }
+.flame::before { content: ""; position: absolute; inset: -4px; border-radius: 9px; z-index: -1; pointer-events: none;
+  background: linear-gradient(0deg, #ff2d00 0%, #ff7a00 40%, #ffc400 75%, rgba(255,196,0,0) 100%); filter: blur(5px); opacity: .9;
+  transform-origin: 50% 100%; animation: flicker 1.4s ease-in-out infinite alternate; }
+.flame::after { content: ""; position: absolute; inset: -1px; border-radius: 8px; pointer-events: none;
+  box-shadow: 0 0 0 1.5px #ff8a00, 0 -3px 12px 2px rgba(255,110,0,.55); animation: glow 1.1s ease-in-out infinite alternate; }
+.flame.big::before { inset: -8px; filter: blur(10px); border-radius: 14px; }
+.flame.big::after { border-radius: 12px; }
+.flame .tongues { position: absolute; left: -6%; right: -6%; width: 112%; top: -15%; height: 22%; z-index: -1; pointer-events: none; overflow: visible; }
+.flame .tongues path { transform-box: fill-box; transform-origin: 50% 100%; animation: tongue 1s ease-in-out infinite alternate; }
+.flame .tongues path:nth-child(2n) { animation-duration: .8s; animation-delay: -.3s; }
+.flame .tongues path:nth-child(3n) { animation-duration: 1.25s; animation-delay: -.6s; }
+@keyframes flicker { 0% { transform: scaleY(1); opacity: .75; } 35% { transform: scaleY(1.07) translateY(-2px); opacity: .95; } 70% { transform: scaleY(.98); opacity: .82; } 100% { transform: scaleY(1.12) translateY(-3px); opacity: 1; } }
+@keyframes glow { from { box-shadow: 0 0 0 1.5px #ff8a00, 0 -2px 9px 1px rgba(255,90,0,.45); } to { box-shadow: 0 0 0 1.5px #ffb300, 0 -5px 18px 4px rgba(255,140,0,.7); } }
+@keyframes tongue { 0% { transform: scaleY(.65) skewX(-4deg); opacity: .8; } 50% { transform: scaleY(1.05) skewX(3deg); opacity: 1; } 100% { transform: scaleY(.85) skewX(-2deg); opacity: .9; } }
+@media (prefers-reduced-motion: reduce) { .flame::before, .flame::after, .flame .tongues path { animation: none; } }
+.hot { display: inline-flex; align-items: center; gap: 4px; height: 22px; padding: 0 8px; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: .03em; color: #1a0800; background: linear-gradient(90deg, #ffb300, #ff6a00); flex-shrink: 0; }
+.hot svg { display: block; }
 .teamtag { display: inline-flex; align-items: center; height: 22px; padding: 0 8px; border-radius: 6px; font-size: 11px; font-weight: 800; letter-spacing: .04em; color: var(--fg); background: color-mix(in srgb, var(--tc) 22%, var(--raise)); border: 1px solid color-mix(in srgb, var(--tc) 55%, var(--line)); }
 .gres .gbadge.team { background: color-mix(in srgb, var(--tc) 22%, var(--raise)); border-color: color-mix(in srgb, var(--tc) 55%, var(--line)); color: var(--fg); }
 .nav { display: flex; gap: 4px; flex-wrap: wrap; }
@@ -497,7 +516,7 @@ const segBtns = (group, opts, cur) => `<div class="seg" role="group">${opts.map(
 
 function cardItem(c, right = 'price') {
   const m = monthChange(c);
-  return `<a class="item" href="#card-${c.id}"><div class="thumb">${cardVisual(c)}</div><div class="main"><span class="title">${esc(c.name)}</span><span class="sub">${esc(PLAYERS[c.p].name)} · ${esc(c.detail)}</span></div><div class="end"><span class="num" style="font-weight:600">${money(last(c.price))}</span><span class="num ${cls(m)}" style="font-size:12px">${fmtPct(m)}</span></div></a>`;
+  return `<a class="item" href="#card-${c.id}">${flameThumb(c, cardVisual(c))}<div class="main"><span class="title">${esc(c.name)}</span><span class="sub">${esc(PLAYERS[c.p].name)} · ${esc(c.detail)}</span></div>${hotTag(c.id)}<div class="end"><span class="num" style="font-weight:600">${money(last(c.price))}</span><span class="num ${cls(m)}" style="font-size:12px">${fmtPct(m)}</span></div></a>`;
 }
 
 /* ---------- team colors (official colors; no logos) ---------- */
@@ -598,6 +617,25 @@ function handlePhoto(file, id) {
     img.src = r.result;
   };
   r.readAsDataURL(file);
+}
+
+/* ---------- hot cards: top 5 risers this month (10%+ on 3+ recent sales) ---------- */
+let HOT = null;
+function hotRank(id) {
+  if (!HOT || HOT.cards !== CARDS) {
+    const rows = CARDS.map(c => ({ id: c.id, ch: monthChange(c), s: (c.sales[10] || 0) + (c.sales[11] || 0) }))
+      .filter(r => isFinite(r.ch) && r.ch >= 10 && r.s >= 3)
+      .sort((a, b) => b.ch - a.ch).slice(0, 5);
+    HOT = { cards: CARDS, rank: Object.fromEntries(rows.map((r, i) => [r.id, i + 1])) };
+  }
+  return HOT.rank[id] || 0;
+}
+const FLAME_ICON = '<svg width="10" height="12" viewBox="0 0 10 12" aria-hidden="true"><path d="M5 0c.6 2.2 3.8 3.6 3.8 7a3.8 3.8 0 0 1-7.6 0C1.2 5 2.4 4 3 2.6c.3 1.4 1 2 1.6 2.2C4.4 3 4.6 1.4 5 0z" fill="#1a0800"/></svg>';
+function hotTag(id) { const r = hotRank(id); return r ? `<span class="hot" title="Top riser #${r} this month">${FLAME_ICON}Hot</span>` : ''; }
+function flameThumb(c, inner) { return hotRank(c.id) ? `<div class="thumb flame">${inner}</div>` : `<div class="thumb">${inner}</div>`; }
+function flameTongues() {
+  const xs = [4, 16, 28, 40, 52, 64, 76, 88, 100, 112];
+  return `<svg class="tongues" viewBox="0 0 120 30" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="fgrad" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff2d00"/><stop offset=".5" stop-color="#ff8a00"/><stop offset="1" stop-color="#ffd54f"/></linearGradient></defs>${xs.map((x, i) => { const h = 12 + (i * 7 % 5) * 4; return `<path d="M${x - 6} 30 C ${x - 7} ${30 - h * .5}, ${x - 2} ${30 - h * .7}, ${x} ${30 - h} C ${x + 2} ${30 - h * .6}, ${x + 7} ${30 - h * .45}, ${x + 6} 30 Z" fill="url(#fgrad)"/>`; }).join('')}</svg>`;
 }
 
 /* ---------- views ---------- */
@@ -701,7 +739,7 @@ function viewCard(id) {
       <a href="#player-${c.p}" style="color:var(--muted);text-decoration:none;font-weight:600;font-size:14px">← ${esc(p.name)}</a>
       <div class="row" style="gap:20px;align-items:flex-start">
         <div style="width:180px;max-width:100%;display:flex;flex-direction:column;gap:8px;flex-shrink:0">
-          <div style="width:100%;aspect-ratio:5/7;max-width:100%">${cardVisual(c)}</div>
+          <div class="${hotRank(c.id) ? 'flame big' : ''}" style="width:100%;aspect-ratio:5/7;max-width:100%">${hotRank(c.id) ? flameTongues() : ''}${cardVisual(c)}</div>
           <label for="photo" class="btn" style="min-height:40px;font-size:13px;cursor:pointer">${memPhotos[c.id] ? 'Replace photo' : 'Add your photo'}</label>
           <input id="photo" type="file" accept="image/*" data-id="${c.id}" hidden>
           ${memPhotos[c.id] ? `<button type="button" class="btn" style="min-height:36px;font-size:12px" data-act="removePhoto" data-id="${c.id}">Use artwork instead</button>` : `<span style="font-size:11px;color:var(--faint);text-align:center">${repoImages[c.id] ? 'Card image from CardSight AI' : 'Artwork shown until a real image or your photo is added'}</span>`}
@@ -710,7 +748,7 @@ function viewCard(id) {
           <span class="eyebrow">${esc(p.name)} · ${esc(p.sport)}</span>
           <h1 style="font-size:clamp(24px,4vw,34px)">${esc(c.name)}</h1>
           <div class="chips">${[c.detail, ...c.tags].map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
-          <div class="row" style="align-items:baseline;gap:14px"><span class="num" style="font-size:36px;font-weight:600">${moneyFull(last(c.price))}</span><span class="num ${cls(m)}" style="font-weight:600">${fmtPct(m)} this month</span></div>
+          <div class="row" style="align-items:baseline;gap:14px"><span class="num" style="font-size:36px;font-weight:600">${moneyFull(last(c.price))}</span><span class="num ${cls(m)}" style="font-weight:600">${fmtPct(m)} this month</span>${hotRank(c.id) ? `<span class="hot">${FLAME_ICON}Top riser #${hotRank(c.id)}</span>` : ''}</div>
           <div class="row"><button type="button" class="btn ${inCol ? '' : 'primary'}" data-act="toggleCol" data-id="${c.id}">${inCol ? '✓ In your collection' : '+ Add to collection'}</button><button type="button" class="btn" data-act="compareThis" data-id="${c.id}">Compare with other cards</button></div>
         </div>
       </div>
@@ -820,6 +858,7 @@ const BUILD = {
     ['Compare tool', 'Up to four cards on price, sales volume and graded population.'],
     ['My collection', 'Total value and trend for the cards you add (saved in this browser).'],
     ['Card images', 'Original artwork for every card, your own photo, or real images from CardSight AI.'],
+    ['Hot cards', 'The top 5 risers this month (10%+ on 3+ recent sales) get an animated flame glow and a Hot tag; their card page shows rising flames and a Top riser rank.'],
     ['Team colors', 'Each player shows a team badge, a jersey-number avatar and card artwork in their team’s official colors. No logos or photos until they’re licensed.'],
     ['Search', 'Top-bar search on every page for any of the 107 players by name, with suggestions as you type, accent-insensitive, keyboard friendly.'],
     ['Player stats and injuries', 'Team, jersey, key stats with league rank, season / last 5 / projected / career table, awards and injury reports for 78 active players, refreshed nightly; career totals and honors for 29 legends.'],
@@ -873,7 +912,7 @@ function moverPlayers() {
 }
 function moverRow(r, i) {
   const c = r.c;
-  return `<a class="item" href="#card-${c.id}"><span class="num" style="width:22px;color:var(--faint);font-size:13px;text-align:right">${i + 1}</span><div class="thumb">${cardVisual(c)}</div><div class="main"><span class="title">${esc(c.name)}</span><span class="sub">${esc(PLAYERS[c.p].name)} · ${esc(c.detail)} · ${r.sales} sale${r.sales === 1 ? '' : 's'}</span></div><span class="spark" aria-hidden="true">${sparkline(r.p, r.change >= 0 ? 'var(--up)' : 'var(--down)')}</span><div class="end"><span class="num" style="font-weight:600">${money(last(c.price))}</span><span class="num ${cls(r.change)}" style="font-size:13px;font-weight:600">${fmtPct(r.change)}</span></div></a>`;
+  return `<a class="item" href="#card-${c.id}"><span class="num" style="width:22px;color:var(--faint);font-size:13px;text-align:right">${i + 1}</span>${flameThumb(c, cardVisual(c))}<div class="main"><span class="title">${esc(c.name)}</span><span class="sub">${esc(PLAYERS[c.p].name)} · ${esc(c.detail)} · ${r.sales} sale${r.sales === 1 ? '' : 's'}</span></div>${hotTag(c.id)}<span class="spark" aria-hidden="true">${sparkline(r.p, r.change >= 0 ? 'var(--up)' : 'var(--down)')}</span><div class="end"><span class="num" style="font-weight:600">${money(last(c.price))}</span><span class="num ${cls(r.change)}" style="font-size:13px;font-weight:600">${fmtPct(r.change)}</span></div></a>`;
 }
 function moverPlayerRow(r, i) {
   return `<a class="item" href="#player-${r.pid}"><span class="num" style="width:22px;color:var(--faint);font-size:13px;text-align:right">${i + 1}</span><div class="main"><span class="title">${esc(r.p.name)}</span><span class="sub">${esc(r.p.sport)} · ${r.n} card versions · ${r.sales} sales</span></div><span class="spark" aria-hidden="true">${sparkline(r.series, r.change >= 0 ? 'var(--up)' : 'var(--down)')}</span><div class="end"><span class="num ${cls(r.change)}" style="font-size:15px;font-weight:600">${fmtPct(r.change)}</span></div></a>`;
