@@ -94,6 +94,8 @@ h2 { margin: 0; font-size: 20px; letter-spacing: -0.02em; font-weight: 700; text
 .item .main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
 .item .title { font-weight: 700; font-size: 14px; }
 .item .sub { font-size: 12px; color: var(--faint); }
+.item .spark { flex-shrink: 0; }
+@media (max-width: 520px) { .item .spark { display: none; } }
 .item .end { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; flex-shrink: 0; }
 .pcard { display: flex; flex-direction: column; gap: 10px; padding: 16px; border-radius: 14px; border: 1px solid var(--line); background: var(--surface); text-decoration: none; color: var(--fg); }
 .pcard:hover { border-color: var(--faint); }
@@ -140,6 +142,7 @@ td.best { color: var(--fg); font-weight: 600; }
     <a class="brand" href="#home">Pulled<span>.</span></a>
     <nav class="nav" aria-label="Main">
       <a href="#home" data-nav="home">Home</a>
+      <a href="#movers" data-nav="movers">Movers</a>
       <a href="#compare" data-nav="compare">Compare</a>
       <a href="#collection" data-nav="collection">My collection<span class="count" id="colCount"></span></a>
       <a href="#build" data-nav="build">Build log</a>
@@ -152,7 +155,7 @@ td.best { color: var(--fg); font-weight: 600; }
 
 <script>
 let MONTHS = ['Dec','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov'];
-const RANGES = { '3M': 4, '6M': 7, '1Y': 12 };
+const RANGES = { '1M': 2, '3M': 4, '6M': 7, '1Y': 12 };
 
 let PLAYERS = {
   curry: { short: 'Curry', name: 'Stephen Curry', sport: 'NBA', team: 'Golden State Warriors', pos: 'PG', num: '#30', status: 'active',
@@ -223,11 +226,24 @@ let CARDS = [
 ];
 let CARD = Object.fromEntries(CARDS.map(c => [c.id, c]));
 
-const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '', homeSport: 'All' };
+const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '', moversRange: '1M', moversSport: 'All', moversGrade: 'All', moversMin: '3', moversView: 'cards', homeSport: 'All' };
 const charts = {};
 
 /* ---------- real data from data/*.json (built by the "Build card data" robot) ---------- */
 const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+/* Ignore a month whose price is 3x above/below the recent typical price when it rests on only 1-2 sales
+   (usually a mislabeled parallel, auto or damaged copy). */
+function cleanSeries(med, cnt) {
+  const out = med.slice();
+  for (let i = 0; i < out.length; i++) {
+    if (out[i] == null || (cnt[i] || 0) > 2) continue;
+    const prev = out.slice(0, i).filter(v => v != null).slice(-3).sort((a, b) => a - b);
+    if (prev.length < 2) continue;
+    const ref = prev[Math.floor(prev.length / 2)];
+    if (out[i] > ref * 3 || out[i] < ref / 3) out[i] = null;
+  }
+  return out;
+}
 function fillSeries(med) {
   const first = med.find(v => v != null);
   if (first == null) return null;
@@ -247,7 +263,7 @@ async function loadRealData() {
       const ph = pr.cards && pr.cards[c.id]; if (!ph) return;
       [['raw', 'Raw'], ['psa10', 'PSA 10']].forEach(([k, label]) => {
         const s = ph[k]; if (!s) return;
-        const price = fillSeries(s.median || []); if (!price) return;
+        const price = fillSeries(cleanSeries(s.median || [], s.count || [])); if (!price) return;
         const tags = [];
         if (c.rookie) tags.push('Rookie');
         if (k === 'psa10') tags.push('Graded');
@@ -523,7 +539,7 @@ function viewHome() {
       <div class="grid">${pids.map(pid => { const p = PLAYERS[pid], t = playerTrend(pid, '3M'); const m = (() => { const cs = CARDS.filter(c => c.p === pid); const w = cs.map(c => Math.max(0.5, c.sales[11])); return cs.reduce((s, c, k) => s + w[k] * monthChange(c), 0) / w.reduce((a, b) => a + b, 0); })();
         return `<a class="pcard" href="#player-${pid}"><div class="row between"><span class="tag">${esc(p.sport)}</span><span class="status ${p.status}">${p.status === 'active' ? 'Active' : 'Retired'}</span></div><div><div style="font-size:18px;font-weight:700">${esc(p.name)}</div><div style="font-size:13px;color:var(--faint)">${esc(p.team)}</div></div><div class="row between"><span class="num ${cls(m)}" style="font-size:22px;font-weight:600">${fmtPct(m)}</span>${sparkline(t.series, m >= 0 ? 'var(--up)' : 'var(--down)')}</div></a>`; }).join('') || '<p class="lede">No players match.</p>'}</div></div>
     ${q ? '' : `<div class="cols">
-      <div class="section"><h2>Biggest risers this month</h2><div class="list">${sorted.slice(0, 5).map(c => cardItem(c)).join('')}</div></div>
+      <div class="section"><div class="row between"><h2>Biggest risers this month</h2><a href="#movers" style="font-weight:600;font-size:14px;text-decoration:none">See all movers →</a></div><div class="list">${sorted.slice(0, 5).map(c => cardItem(c)).join('')}</div></div>
       <div class="section"><h2>Biggest drops this month</h2><div class="list">${sorted.slice(-5).reverse().map(c => cardItem(c)).join('')}</div></div>
     </div>`}
   </div>`;
@@ -721,6 +737,7 @@ const BUILD = {
     ['Compare tool', 'Up to four cards on price, sales volume and graded population.'],
     ['My collection', 'Total value and trend for the cards you add (saved in this browser).'],
     ['Card images', 'Original artwork for every card, your own photo, or real images from CardSight AI.'],
+    ['Biggest movers', 'Risers and drops for cards or whole players, by 1M to 1Y, sport, raw or PSA 10, with a minimum-sales filter to hide noisy one-sale swings.'],
     ['Real card data', '107 NBA, MLB and NFL players. Real cards, 12 months of raw and PSA 10 sale prices, and sales counts from CardSight AI, built by the "Build card data" robot.']
   ],
   next: [
@@ -745,6 +762,72 @@ function viewBuild() {
     </div>
   </div>`;
 }
+/* ---------- biggest movers ---------- */
+function moverCards() {
+  const range = state.moversRange, minSales = parseInt(state.moversMin, 10) || 0;
+  return CARDS
+    .filter(c => state.moversSport === 'All' || PLAYERS[c.p].sport === state.moversSport)
+    .filter(c => state.moversGrade === 'All' || (state.moversGrade === 'graded' ? c.tags.includes('Graded') : !c.tags.includes('Graded')))
+    .map(c => {
+      const p = slice(c.price, range), s = slice(c.sales, range);
+      return { c, p, change: pct(p[0], last(p)), sales: s.reduce((a, b) => a + b, 0), recent: last(c.sales) };
+    })
+    .filter(r => isFinite(r.change) && r.sales >= minSales && (minSales === 0 || r.recent > 0));
+}
+function moverPlayers() {
+  return Object.keys(PLAYERS)
+    .filter(pid => state.moversSport === 'All' || PLAYERS[pid].sport === state.moversSport)
+    .map(pid => {
+      const cs = CARDS.filter(c => c.p === pid && (state.moversGrade === 'All' || (state.moversGrade === 'graded' ? c.tags.includes('Graded') : !c.tags.includes('Graded'))));
+      if (!cs.length) return null;
+      const t = combined(cs, state.moversRange);
+      return { pid, p: PLAYERS[pid], change: t.change, series: t.series, sales: cs.reduce((a, c) => a + slice(c.sales, state.moversRange).reduce((x, y) => x + y, 0), 0), n: cs.length };
+    })
+    .filter(r => r && isFinite(r.change));
+}
+function moverRow(r, i) {
+  const c = r.c;
+  return `<a class="item" href="#card-${c.id}"><span class="num" style="width:22px;color:var(--faint);font-size:13px;text-align:right">${i + 1}</span><div class="thumb">${cardVisual(c)}</div><div class="main"><span class="title">${esc(c.name)}</span><span class="sub">${esc(PLAYERS[c.p].name)} · ${esc(c.detail)} · ${r.sales} sale${r.sales === 1 ? '' : 's'}</span></div><span class="spark" aria-hidden="true">${sparkline(r.p, r.change >= 0 ? 'var(--up)' : 'var(--down)')}</span><div class="end"><span class="num" style="font-weight:600">${money(last(c.price))}</span><span class="num ${cls(r.change)}" style="font-size:13px;font-weight:600">${fmtPct(r.change)}</span></div></a>`;
+}
+function moverPlayerRow(r, i) {
+  return `<a class="item" href="#player-${r.pid}"><span class="num" style="width:22px;color:var(--faint);font-size:13px;text-align:right">${i + 1}</span><div class="main"><span class="title">${esc(r.p.name)}</span><span class="sub">${esc(r.p.sport)} · ${r.n} card versions · ${r.sales} sales</span></div><span class="spark" aria-hidden="true">${sparkline(r.series, r.change >= 0 ? 'var(--up)' : 'var(--down)')}</span><div class="end"><span class="num ${cls(r.change)}" style="font-size:15px;font-weight:600">${fmtPct(r.change)}</span></div></a>`;
+}
+function viewMovers() {
+  const label = { '1M': 'this month', '3M': 'over 3 months', '6M': 'over 6 months', '1Y': 'over the past year' }[state.moversRange];
+  const isCards = state.moversView === 'cards';
+  const rows = isCards ? moverCards() : moverPlayers();
+  const up = [...rows].filter(r => r.change > 0.05).sort((a, b) => b.change - a.change);
+  const down = [...rows].filter(r => r.change < -0.05).sort((a, b) => a.change - b.change);
+  const flat = rows.length - up.length - down.length;
+  const changes = rows.map(r => r.change).sort((a, b) => a - b);
+  const median = changes.length ? changes[Math.floor(changes.length / 2)] : 0;
+  const row = isCards ? moverRow : moverPlayerRow;
+  const sports = ['All', ...new Set(Object.values(PLAYERS).map(p => p.sport))];
+  return `<div class="view">
+    <div class="section" style="padding-top:8px"><h1>Biggest movers</h1><p class="lede">The cards and players gaining and losing the most value ${label}, based on completed sales.</p></div>
+    <div class="panel section">
+      <div class="row">${segBtns('moversView', [['cards', 'Cards'], ['players', 'Players']], state.moversView)}${segBtns('moversRange', [['1M', '1M'], ['3M', '3M'], ['6M', '6M'], ['1Y', '1Y']], state.moversRange)}${segBtns('moversGrade', [['All', 'All'], ['raw', 'Raw'], ['graded', 'PSA 10']], state.moversGrade)}</div>
+      <div class="row between">
+        <div class="chips">${sports.map(s => `<button type="button" class="chip" data-set="moversSport" data-val="${s}" aria-pressed="${s === state.moversSport}">${s}</button>`).join('')}</div>
+        <label for="minSales" class="row" style="gap:8px;font-size:13px;color:var(--muted)">Minimum sales
+          <select id="minSales" style="min-height:40px;border-radius:10px;border:1px solid var(--line);background:var(--surface);padding:0 10px">
+            ${[['0', 'Any'], ['3', '3+'], ['10', '10+'], ['25', '25+']].map(([v, l]) => `<option value="${v}"${v === state.moversMin ? ' selected' : ''}>${l}</option>`).join('')}
+          </select></label>
+      </div>
+    </div>
+    <div class="tiles">
+      <div class="tile"><span class="k">Rising</span><span class="v up">${up.length}</span></div>
+      <div class="tile"><span class="k">Falling</span><span class="v down">${down.length}</span></div>
+      <div class="tile"><span class="k">Flat</span><span class="v flat">${flat}</span></div>
+      <div class="tile"><span class="k">Typical change</span><span class="v ${cls(median)}">${fmtPct(median)}</span></div>
+    </div>
+    ${rows.length ? `<div class="cols">
+      <div class="section"><h2><span class="up">▲</span> Biggest risers</h2><div class="list">${up.slice(0, 10).map(row).join('') || '<p class="lede">Nothing rising with these filters.</p>'}</div></div>
+      <div class="section"><h2><span class="down">▼</span> Biggest drops</h2><div class="list">${down.slice(0, 10).map(row).join('') || '<p class="lede">Nothing falling with these filters.</p>'}</div></div>
+    </div>` : `<div class="panel empty"><h2>No ${isCards ? 'cards' : 'players'} match these filters</h2><p class="lede">Try a longer time range or a lower minimum sales count.</p></div>`}
+    <span style="font-size:12px;color:var(--faint)">Change compares the typical sale price at the start and end of the period. The current month includes sales so far, and single sales far outside a card's normal range are ignored. The minimum sales filter hides cards with too few sales to trust, since one unusual sale can swing a price a lot.</span>
+  </div>`;
+}
 const notFound = () => `<div class="view"><div class="panel empty"><h2>That page doesn't exist</h2><a class="btn primary" href="#home">Go home</a></div></div>`;
 
 /* ---------- router ---------- */
@@ -756,6 +839,7 @@ function render() {
   else if (h.startsWith('player-')) html = viewPlayer(h.slice(7));
   else if (h.startsWith('card-')) html = viewCard(h.slice(5));
   else if (h === 'compare') { html = viewCompare(); nav = 'compare'; }
+  else if (h === 'movers') { html = viewMovers(); nav = 'movers'; }
   else if (h === 'collection') { html = viewCollection(); nav = 'collection'; }
   else if (h === 'build') { html = viewBuild(); nav = 'build'; }
   else html = notFound();
@@ -764,6 +848,7 @@ function render() {
   wireCharts();
   const q = $('#q');
   if (q) q.addEventListener('input', e => { state.homeQuery = e.target.value; const pos = e.target.selectionStart; render(); const nq = $('#q'); nq.focus(); try { nq.setSelectionRange(pos, pos); } catch (err) {} });
+  const ms = $('#minSales'); if (ms) ms.addEventListener('change', e => { state.moversMin = e.target.value; render(); });
   const sort = $('#sort'); if (sort) sort.addEventListener('change', e => { state.playerSort = e.target.value; render(); });
   const photo = $('#photo'); if (photo) photo.addEventListener('change', e => handlePhoto(e.target.files[0], e.target.dataset.id));
   const add = $('#addCompare'); if (add) add.addEventListener('change', e => { if (e.target.value) { state.compareIds.push(e.target.value); render(); } });
