@@ -1,0 +1,831 @@
+{
+ "cards": {
+  "0747caf0-e08e-42b7-b5a2-3043461e53e4": {
+   "psa10": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     3,
+     12,
+     14,
+     4,
+     7,
+     1
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     716,
+     770,
+     712.23,
+     655.5,
+     814.44,
+     625,
+     500
+    ]
+   },
+   "raw": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     3,
+     2,
+     4,
+     5,
+     3,
+     0
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     175,
+     152.5,
+     158.5,
+     150,
+     178.5,
+     136.5,
+     null
+    ]
+   }
+  },
+  "2dcce9cd-ec86-404c-a241-5c4e93ab49d6": {
+   "raw": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     5.51,
+     null,
+     null,
+     null
+    ]
+   }
+  },
+  "2f1f2e30-0eee-4ee5-9f45-8f318375c1d1": {
+   "raw": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     48
+    ]
+   }
+  },
+  "3266ac8c-7a8f-4b73-bfe1-650064571c73": {
+   "raw": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     36,
+     null,
+     null
+    ]
+   }
+  },
+  "5b3d8d72-f535-42b7-bbc2-5bc87cf843f8": {
+   "psa10": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     0,
+     0
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1299,
+     null,
+     2284,
+     null,
+     null
+    ]
+   },
+   "raw": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     9,
+     28,
+     33,
+     37,
+     48,
+     37,
+     2
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     10.3,
+     9.12,
+     9.5,
+     8.5,
+     11.66,
+     9.5,
+     11
+    ]
+   }
+  },
+  "671c054b-d1b6-4806-a60c-abdb00a51d0a": {
+   "psa10": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     2,
+     0
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     227.5,
+     267.5,
+     null
+    ]
+   },
+   "raw": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     5,
+     5,
+     4,
+     0
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     19.69,
+     29,
+     28.75,
+     null
+    ]
+   }
+  },
+  "70118b54-1fda-4959-af1d-50091bbd7af4": {
+   "raw": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     0
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     4.25,
+     null,
+     9.5,
+     null
+    ]
+   }
+  },
+  "708c35b2-bd3e-4adc-9ce6-5741384a89a5": {
+   "psa10": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     4,
+     1,
+     1,
+     5,
+     4,
+     0
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     728.5,
+     857,
+     1550,
+     1536,
+     1511.5,
+     null
+    ]
+   },
+   "raw": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     3,
+     7,
+     0,
+     4,
+     4,
+     7,
+     2
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     91,
+     90,
+     null,
+     93.5,
+     145.5,
+     120.27,
+     105.75
+    ]
+   }
+  },
+  "7ff4710d-2b9b-423a-9bb1-5bf569c70189": {
+   "raw": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     8,
+     null,
+     null,
+     null,
+     null
+    ]
+   }
+  },
+  "81b2cf0b-8f11-4a8d-8171-82179f40cefa": {
+   "psa10": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     30100,
+     null,
+     null,
+     null
+    ]
+   },
+   "raw": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   }
+  },
+  "8c19aca3-d872-44cd-90ee-cdc388bfe3f2": {
+   "raw": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     8.75,
+     null,
+     null
+    ]
+   }
+  },
+  "9d46bea0-e2cc-4cca-8fd7-4c6c544b9540": {
+   "psa10": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     12450,
+     null,
+     11100
+    ]
+   },
+   "raw": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   }
+  },
+  "a0a5f292-52e0-4367-b228-b09a6628965d": {
+   "psa10": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     6,
+     0,
+     6,
+     2,
+     0,
+     0
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     917,
+     765,
+     null,
+     927.5,
+     929.01,
+     null,
+     null
+    ]
+   },
+   "raw": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     5,
+     17,
+     4,
+     7,
+     8,
+     8,
+     0
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     182.5,
+     122.5,
+     169.75,
+     170.01,
+     190,
+     178,
+     null
+    ]
+   }
+  },
+  "bee4e4b6-e71c-43c5-8859-a0db8739517a": {
+   "psa10": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     1975,
+     null,
+     null,
+     null
+    ]
+   },
+   "raw": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     2,
+     3,
+     0
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     413,
+     758.44,
+     413,
+     null
+    ]
+   }
+  },
+  "eddc3d40-de67-43ad-a2e5-e80c602ee233": {
+   "psa10": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     3,
+     0,
+     4,
+     0
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     240.5,
+     null,
+     255,
+     null
+    ]
+   },
+   "raw": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     2,
+     0,
+     1
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     100.25,
+     53.5,
+     null,
+     53
+    ]
+   }
+  },
+  "f1661f13-de6e-469b-9cd6-d36fb04c718b": {
+   "psa10": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     1,
+     3,
+     0
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     170.5,
+     174.39,
+     152.5,
+     null
+    ]
+   },
+   "raw": {
+    "count": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     6,
+     11,
+     0
+    ],
+    "median": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     66.5,
+     28.5,
+     31.3,
+     null
+    ]
+   }
+  }
+ },
+ "months": [
+  "2025-12",
+  "2026-01",
+  "2026-02",
+  "2026-03",
+  "2026-04",
+  "2026-05",
+  "2026-06",
+  "2026-07",
+  "2026-08",
+  "2026-09",
+  "2026-10",
+  "2026-11"
+ ],
+ "updated": "2026-11-02T07:13Z"
+}

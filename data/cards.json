@@ -1,0 +1,251 @@
+{
+ "cards": [
+  {
+   "attributes": [
+    "NBA-CLE"
+   ],
+   "id": "2dcce9cd-ec86-404c-a241-5c4e93ab49d6",
+   "image": null,
+   "number": "1",
+   "numberedTo": null,
+   "playerId": "lebron-james",
+   "release": "Upper Deck LeBron James",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2003 Upper Deck LeBron James #1",
+   "year": "2003"
+  },
+  {
+   "attributes": [
+    "NBA-CLE"
+   ],
+   "id": "70118b54-1fda-4959-af1d-50091bbd7af4",
+   "number": "2",
+   "numberedTo": null,
+   "playerId": "lebron-james",
+   "release": "Upper Deck LeBron James",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2003 Upper Deck LeBron James #2",
+   "year": "2003"
+  },
+  {
+   "attributes": [
+    "NBA-CLE"
+   ],
+   "id": "8c19aca3-d872-44cd-90ee-cdc388bfe3f2",
+   "number": "3",
+   "numberedTo": null,
+   "playerId": "lebron-james",
+   "release": "Upper Deck LeBron James",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2003 Upper Deck LeBron James #3",
+   "year": "2003"
+  },
+  {
+   "attributes": [
+    "NBA-CLE"
+   ],
+   "id": "7ff4710d-2b9b-423a-9bb1-5bf569c70189",
+   "number": "5",
+   "numberedTo": null,
+   "playerId": "lebron-james",
+   "release": "Upper Deck LeBron James",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2003 Upper Deck LeBron James #5",
+   "year": "2003"
+  },
+  {
+   "attributes": [
+    "NBA-GSW",
+    "RC"
+   ],
+   "id": "9d46bea0-e2cc-4cca-8fd7-4c6c544b9540",
+   "image": "images/cards/9d46bea0-e2cc-4cca-8fd7-4c6c544b9540.jpg",
+   "number": "106",
+   "numberedTo": null,
+   "playerId": "stephen-curry",
+   "release": "Bowman 48",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2009 Bowman 48 #106",
+   "year": "2009-10"
+  },
+  {
+   "attributes": [
+    "AU",
+    "NBA-GSW",
+    "RC"
+   ],
+   "id": "81b2cf0b-8f11-4a8d-8171-82179f40cefa",
+   "number": "166",
+   "numberedTo": null,
+   "playerId": "stephen-curry",
+   "release": "Panini Classics",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2009 Panini Classics #166",
+   "year": "2009-10"
+  },
+  {
+   "attributes": [
+    "NBA-SEA",
+    "RC"
+   ],
+   "id": "708c35b2-bd3e-4adc-9ce6-5741384a89a5",
+   "image": "images/cards/708c35b2-bd3e-4adc-9ce6-5741384a89a5.jpg",
+   "number": "131",
+   "numberedTo": null,
+   "playerId": "kevin-durant",
+   "release": "Topps Chrome",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2007 Topps Chrome #131",
+   "year": "2007-08"
+  },
+  {
+   "attributes": [
+    "NBA-SEA",
+    "RC"
+   ],
+   "id": "5b3d8d72-f535-42b7-bbc2-5bc87cf843f8",
+   "number": "112",
+   "numberedTo": null,
+   "playerId": "kevin-durant",
+   "release": "Topps",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2007 Topps #112",
+   "year": "2007-08"
+  },
+  {
+   "attributes": [
+    "NBA-SEA",
+    "RC"
+   ],
+   "id": "2f1f2e30-0eee-4ee5-9f45-8f318375c1d1",
+   "number": "88",
+   "numberedTo": null,
+   "playerId": "kevin-durant",
+   "release": "Topps Co Signers",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2007 Topps Co Signers #88",
+   "year": "2007-08"
+  },
+  {
+   "attributes": [
+    "NBA-SEA",
+    "RC"
+   ],
+   "id": "3266ac8c-7a8f-4b73-bfe1-650064571c73",
+   "number": "56",
+   "numberedTo": null,
+   "playerId": "kevin-durant",
+   "release": "Topps Letterman",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2007 Topps Letterman #56",
+   "year": "2007-08"
+  },
+  {
+   "attributes": [
+    "NBA-MIL",
+    "RC",
+    "UER"
+   ],
+   "id": "0747caf0-e08e-42b7-b5a2-3043461e53e4",
+   "image": "images/cards/0747caf0-e08e-42b7-b5a2-3043461e53e4.jpg",
+   "number": "290",
+   "numberedTo": null,
+   "playerId": "giannis-antetokounmpo",
+   "release": "Panini Prizm",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2013 Panini Prizm #290",
+   "year": "2013-14"
+  },
+  {
+   "attributes": [
+    "NBA-MIL",
+    "RC",
+    "UER"
+   ],
+   "id": "eddc3d40-de67-43ad-a2e5-e80c602ee233",
+   "number": "178",
+   "numberedTo": null,
+   "playerId": "giannis-antetokounmpo",
+   "release": "Panini Select",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2013 Panini Select #178",
+   "year": "2013-14"
+  },
+  {
+   "attributes": [
+    "NBA-MIL",
+    "RC",
+    "UER"
+   ],
+   "id": "f1661f13-de6e-469b-9cd6-d36fb04c718b",
+   "number": "275",
+   "numberedTo": null,
+   "playerId": "giannis-antetokounmpo",
+   "release": "NBA Hoops",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2013 NBA Hoops #275",
+   "year": "2013-14"
+  },
+  {
+   "attributes": [
+    "NBA-MIL",
+    "RC",
+    "UER"
+   ],
+   "id": "671c054b-d1b6-4806-a60c-abdb00a51d0a",
+   "number": "194",
+   "numberedTo": null,
+   "playerId": "giannis-antetokounmpo",
+   "release": "Panini",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2013 Panini #194",
+   "year": "2013-14"
+  },
+  {
+   "attributes": [
+    "NBA-DEN",
+    "RC"
+   ],
+   "id": "a0a5f292-52e0-4367-b228-b09a6628965d",
+   "image": "images/cards/a0a5f292-52e0-4367-b228-b09a6628965d.jpg",
+   "number": "335",
+   "numberedTo": null,
+   "playerId": "nikola-jokic",
+   "release": "Panini Prizm",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2015 Panini Prizm #335",
+   "year": "2015-16"
+  },
+  {
+   "attributes": [
+    "NBA-DEN",
+    "RC"
+   ],
+   "id": "bee4e4b6-e71c-43c5-8859-a0db8739517a",
+   "number": "128",
+   "numberedTo": null,
+   "playerId": "nikola-jokic",
+   "release": "Panini Select",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2015 Panini Select #128",
+   "year": "2015-16"
+  }
+ ],
+ "updated": "2026-11-02T07:13Z"
+}
