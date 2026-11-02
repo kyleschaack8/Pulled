@@ -256,8 +256,8 @@ function lastName(name) { const w = name.replace(/,?\s+Jr\.?$/, '').split(' '); 
 async function loadRealData() {
   try {
     const get = f => fetch('data/' + f, { cache: 'no-store' }).then(r => (r.ok ? r.json() : null));
-    const [pl, cd, pr, sj] = await Promise.all([get('players.json'), get('cards.json'), get('prices.json'), get('stats.json').catch(() => null)]);
-    const SJ = (sj && sj.players) || {};
+    const [pl, cd, pr, sj, lg] = await Promise.all([get('players.json'), get('cards.json'), get('prices.json'), get('stats.json').catch(() => null), get('legends.json').catch(() => null)]);
+    const SJ = (sj && sj.players) || {}, LG = (lg && lg.players) || {};
     if (!pl || !cd || !pr || !Array.isArray(cd.cards) || !cd.cards.length || !Array.isArray(pr.months)) return;
     const players = {}, cards = [];
     const counts = {};
@@ -286,7 +286,7 @@ async function loadRealData() {
         note: { kind: 'info', title: p.status === 'active' ? 'Stats and injuries' : 'Career and legacy', text: p.status === 'active' ? 'Team, current stats, projections and injury updates arrive when the sports data feed is connected.' : 'Career stats and legacy events (Hall of Fame news, anniversaries) arrive with the sports data feed.' },
         events: []
       };
-      applyStats(players[p.id], SJ[p.id], p);
+      applyStats(players[p.id], SJ[p.id] || (LG[p.id] && { ...LG[p.id], statsLabel: 'Career totals', awards: [...(LG[p.id].hof ? [['Hall of Fame class of ' + LG[p.id].hof, '']] : []), ...(LG[p.id].awards || [])] }), p);
     });
     PLAYERS = players; CARDS = cards.filter(c => players[c.p]); CARD = Object.fromEntries(CARDS.map(c => [c.id, c]));
     MONTHS = pr.months.map(m => MON[parseInt(m.slice(5, 7), 10) - 1] + (m.slice(5, 7) === '01' ? " '" + m.slice(2, 4) : ''));
