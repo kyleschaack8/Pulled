@@ -283,8 +283,30 @@ def fetch_image(card_id):
     return None
 
 
+def debug(players):
+    """MODE=debug PLAYERS=id1,id2: show what the catalog returns, without saving anything."""
+    want = [x.strip() for x in os.environ.get("PLAYERS", "").split(",") if x.strip()]
+    for p in [p for p in players if p["id"] in want]:
+        for label, params in [
+            ("name+year", {"name": p["name"], "year": str(p["rookieYear"]), "take": 15}),
+            ("name only", {"name": p["name"], "take": 15, "sort": "year", "order": "desc"}),
+            ("min/max year", {"name": p["name"], "minYear": str(p["rookieYear"]), "maxYear": str(p["rookieYear"] + 1), "take": 15}),
+        ]:
+            res = api("/v1/catalog/cards", params)
+            cards = g(res, "cards", default=[]) or []
+            print(f"{p['name']} [{label}] total={g(res, 'totalCount', 'total_count')} msgs={g(res, 'messages')}")
+            for c in cards[:15]:
+                print(f"    {g(c, 'releaseYear', 'release_year')} | {g(c, 'releaseName', 'release_name')} | {g(c, 'setName', 'set_name')} | #{g(c, 'number')} | {g(c, 'name')} | attrs={g(c, 'attributes')}")
+        s = api("/v1/catalog/search", {"q": f"{p['rookieYear']} {p['name']} rookie", "take": 10})
+        print(f"{p['name']} [search] {[(g(r, 'type'), g(r, 'name')) for r in (g(s, 'results', default=[]) or [])][:10]}")
+
+
 def main():
     players = load("players.json", {}).get("players", [])
+    if MODE == "debug":
+        debug(players)
+        print(f"{calls['n']} API calls used")
+        return
     cards = load("cards.json", {"cards": []})
     prices = load("prices.json", {"cards": {}})
     progress = load("progress.json", {"done": [], "calls": []})

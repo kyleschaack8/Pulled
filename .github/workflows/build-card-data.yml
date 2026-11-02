@@ -16,7 +16,11 @@ on:
         required: true
         default: "build"
         type: choice
-        options: [build, prices]
+        options: [build, prices, debug]
+      players:
+        description: "debug mode only: player ids, comma-separated"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -41,6 +45,7 @@ jobs:
           CARDSIGHTAI_API_KEY: ${{ secrets.CARDSIGHTAI_API_KEY }}
           MAX_CALLS: ${{ inputs.max_calls }}
           MODE: ${{ inputs.mode }}
+          PLAYERS: ${{ inputs.players }}
         run: python tools/build_catalog.py
 
       - name: Save data to the repo
