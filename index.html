@@ -160,8 +160,8 @@ td.best { color: var(--fg); font-weight: 600; }
     <a class="brand" href="#home">Pulled<span>.</span></a>
     <div class="gsearch" role="search">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--faint)" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
-      <label for="gq" class="sr">Search players and cards</label>
-      <input id="gq" type="search" placeholder="Search any player or card" autocomplete="off" role="combobox" aria-autocomplete="list" aria-controls="gresults" aria-expanded="false">
+      <label for="gq" class="sr">Search players</label>
+      <input id="gq" type="search" placeholder="Search any player" autocomplete="off" role="combobox" aria-autocomplete="list" aria-controls="gresults" aria-expanded="false">
       <div id="gresults" class="gresults" role="listbox" aria-label="Search results" hidden></div>
     </div>
     <nav class="nav" aria-label="Main">
@@ -798,7 +798,7 @@ const BUILD = {
     ['Compare tool', 'Up to four cards on price, sales volume and graded population.'],
     ['My collection', 'Total value and trend for the cards you add (saved in this browser).'],
     ['Card images', 'Original artwork for every card, your own photo, or real images from CardSight AI.'],
-    ['Search', 'Top-bar search on every page for any of the 107 players or their cards, with suggestions as you type, accent-insensitive, keyboard friendly.'],
+    ['Search', 'Top-bar search on every page for any of the 107 players by name, with suggestions as you type, accent-insensitive, keyboard friendly.'],
     ['Player stats and injuries', 'Team, jersey, key stats with league rank, season / last 5 / projected / career table, awards and injury reports for 78 active players, refreshed nightly; career totals and honors for 29 legends.'],
     ['Biggest movers', 'Risers and drops for cards or whole players, by 1M to 1Y, sport, raw or PSA 10, with a minimum-sales filter to hide noisy one-sale swings.'],
     ['Real card data', '107 NBA, MLB and NFL players. Real cards, 12 months of raw and PSA 10 sale prices, and sales counts from CardSight AI, built by the "Build card data" robot.']
@@ -910,15 +910,8 @@ function searchAll(raw) {
     if (t.startsWith(q)) return 3;
     return t.split(/[\s.'-]+/).some(x => x.startsWith(words[0])) ? 2 : 1;
   };
-  const players = Object.entries(PLAYERS).map(([id, p]) => {
-    const n = score(p.name), o = score([p.team, p.sport, p.pos].join(' '));
-    return { kind: 'player', id, p, s: n >= 0 ? n + 10 : o, cards: has.has(id) };
-  }).filter(r => r.s >= 0).sort((a, b) => b.s - a.s || (b.cards - a.cards) || a.p.name.localeCompare(b.p.name)).slice(0, 7);
-  const seen = new Set();
-  const cards = CARDS.map(c => ({ kind: 'card', c, s: score(c.name + ' ' + PLAYERS[c.p].name) }))
-    .filter(r => r.s >= 0 && !seen.has(r.c.name + r.c.p) && seen.add(r.c.name + r.c.p))
-    .sort((a, b) => b.s - a.s || avg(b.c.sales) - avg(a.c.sales)).slice(0, 5);
-  return [...players, ...cards];
+  return Object.entries(PLAYERS).map(([id, p]) => ({ kind: 'player', id, p, s: score(p.name), cards: has.has(id) }))
+    .filter(r => r.s >= 0).sort((a, b) => b.s - a.s || (b.cards - a.cards) || a.p.name.localeCompare(b.p.name)).slice(0, 8);
 }
 const gs = { items: [], active: -1 };
 function gOpen(open) { const box = $('#gresults'), inp = $('#gq'); box.hidden = !open; inp.setAttribute('aria-expanded', open ? 'true' : 'false'); }
@@ -926,10 +919,9 @@ function gRender() {
   const box = $('#gresults'), inp = $('#gq'), q = inp.value;
   if (!q.trim()) { gOpen(false); return; }
   const items = gs.items;
-  if (!items.length) { box.innerHTML = `<div class="gempty">No players or cards match “${esc(q)}”.</div>`; gOpen(true); return; }
+  if (!items.length) { box.innerHTML = `<div class="gempty">No players match “${esc(q)}”.</div>`; gOpen(true); return; }
   let html = '', lastKind = '';
   items.forEach((r, i) => {
-    if (r.kind !== lastKind) { html += `<div class="ghead">${r.kind === 'player' ? 'Players' : 'Cards'}</div>`; lastKind = r.kind; }
     const sel = i === gs.active ? 'true' : 'false';
     if (r.kind === 'player') {
       const sub = [r.p.team, r.p.pos, r.p.sport].filter(Boolean).join(' · ') + (r.cards ? '' : ' · card prices coming soon');
