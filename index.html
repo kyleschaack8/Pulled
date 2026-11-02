@@ -62,6 +62,8 @@ button, input, select { font: inherit; color: inherit; }
 .gempty { padding: 14px 10px; color: var(--muted); font-size: 14px; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 @media (max-width: 760px) { .gsearch { order: 3; flex-basis: 100%; max-width: none; } }
+.teamtag { display: inline-flex; align-items: center; height: 22px; padding: 0 8px; border-radius: 6px; font-size: 11px; font-weight: 800; letter-spacing: .04em; color: var(--fg); background: color-mix(in srgb, var(--tc) 22%, var(--raise)); border: 1px solid color-mix(in srgb, var(--tc) 55%, var(--line)); }
+.gres .gbadge.team { background: color-mix(in srgb, var(--tc) 22%, var(--raise)); border-color: color-mix(in srgb, var(--tc) 55%, var(--line)); color: var(--fg); }
 .nav { display: flex; gap: 4px; flex-wrap: wrap; }
 .nav a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 14px; padding: 8px 12px; border-radius: 8px; min-height: 40px; display: inline-flex; align-items: center; }
 .nav a:hover { color: var(--fg); background: var(--raise); }
@@ -325,6 +327,8 @@ async function loadRealData() {
 function applyStats(P, s, p) {
   if (!s) return;
   if (s.team) P.team = s.team;
+  if (s.teamAbbr) P.teamAbbr = s.teamAbbr;
+  P.color = teamAccent(s.teamColor, s.teamAlt);
   if (s.jersey) P.num = '#' + s.jersey;
   if (s.position) P.pos = s.position;
   if (s.summary && s.summary.stats && s.summary.stats.length) {
@@ -496,6 +500,24 @@ function cardItem(c, right = 'price') {
   return `<a class="item" href="#card-${c.id}"><div class="thumb">${cardVisual(c)}</div><div class="main"><span class="title">${esc(c.name)}</span><span class="sub">${esc(PLAYERS[c.p].name)} · ${esc(c.detail)}</span></div><div class="end"><span class="num" style="font-weight:600">${money(last(c.price))}</span><span class="num ${cls(m)}" style="font-size:12px">${fmtPct(m)}</span></div></a>`;
 }
 
+/* ---------- team colors (official colors; no logos) ---------- */
+function hexRgb(h) { const m = /^#?([0-9a-f]{6})$/i.exec(h || ''); if (!m) return null; const n = parseInt(m[1], 16); return [n >> 16 & 255, n >> 8 & 255, n & 255]; }
+function lum([r, g, b]) { const f = v => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); }; return 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(b); }
+function mixWhite([r, g, b], a) { return [r + (255 - r) * a, g + (255 - g) * a, b + (255 - b) * a].map(Math.round); }
+const toHex = rgb => '#' + rgb.map(v => v.toString(16).padStart(2, '0')).join('');
+/* Pick a team color that reads on the dark background: the primary, else the alternate, else a lightened primary */
+function teamAccent(primary, alt) {
+  const p = hexRgb(primary), a = hexRgb(alt);
+  if (!p && !a) return '';
+  if (p && lum(p) > 0.12) return toHex(p);
+  if (a && lum(a) > 0.12 && lum(a) < 0.85) return toHex(a);
+  let c = p || a, i = 0;
+  while (lum(c) <= 0.12 && i++ < 10) c = mixWhite(c, 0.15);
+  return toHex(c);
+}
+function hexHue(h) { const c = hexRgb(h); if (!c) return null; const [r, g, b] = c.map(v => v / 255), mx = Math.max(r, g, b), mn = Math.min(r, g, b), d = mx - mn; if (!d) return null; let x = mx === r ? ((g - b) / d) % 6 : mx === g ? (b - r) / d + 2 : (r - g) / d + 4; return Math.round(x * 60 + 360) % 360; }
+function teamTag(p) { return p.teamAbbr ? `<span class="teamtag" style="--tc:${p.color || 'var(--muted)'}">${esc(p.teamAbbr)}</span>` : ''; }
+
 /* ---------- card images: original artwork, or the viewer's own photo ---------- */
 function getPhotos() { try { const v = JSON.parse(localStorage.getItem('pulled-photos') || '{}'); return v && typeof v === 'object' ? v : {}; } catch (e) { return {}; } }
 let memPhotos = getPhotos();
@@ -523,7 +545,7 @@ function setPhoto(id, url) {
 const HUES = { curry: 44, wemby: 205, mahomes: 4, ohtani: 222, griffey: 168 };
 let artN = 0;
 function cardArt(c) {
-  const p = PLAYERS[c.p], h = HUES[c.p] ?? 210, k = 'a' + (++artN);
+  const p = PLAYERS[c.p], h = (p.color && hexHue(p.color)) ?? HUES[c.p] ?? 210, k = 'a' + (++artN);
   const graded = /PSA|BGS/.test(c.detail);
   const grade = (c.detail.match(/(PSA|BGS) [\d.]+/) || [''])[0];
   const shiny = /Refractor|Silver|Orange|Tiffany/.test(c.name + ' ' + c.detail);
@@ -596,7 +618,7 @@ function viewHome() {
     <div class="section"><div class="row between"><h2>Players <span style="color:var(--faint);font-weight:500;font-size:15px">${pids.length}</span></h2><span class="eyebrow">All cards combined · 1 month</span></div>
       <div class="chips">${['All', ...[...new Set(Object.values(PLAYERS).map(p => p.sport))]].map(s => `<button type="button" class="chip" data-set="homeSport" data-val="${s}" aria-pressed="${s === state.homeSport}">${s}</button>`).join('')}</div>
       <div class="grid">${pids.map(pid => { const p = PLAYERS[pid], t = playerTrend(pid, '3M'); const m = (() => { const cs = CARDS.filter(c => c.p === pid); const w = cs.map(c => Math.max(0.5, c.sales[11])); return cs.reduce((s, c, k) => s + w[k] * monthChange(c), 0) / w.reduce((a, b) => a + b, 0); })();
-        return `<a class="pcard" href="#player-${pid}"><div class="row between"><span class="tag">${esc(p.sport)}</span><span class="status ${p.injured ? 'injured' : p.status}">${p.injured ? esc(p.injured) : p.status === 'active' ? 'Active' : 'Retired'}</span></div><div><div style="font-size:18px;font-weight:700">${esc(p.name)}</div><div style="font-size:13px;color:var(--faint)">${esc(p.team)}</div></div><div class="row between"><span class="num ${cls(m)}" style="font-size:22px;font-weight:600">${fmtPct(m)}</span>${sparkline(t.series, m >= 0 ? 'var(--up)' : 'var(--down)')}</div></a>`; }).join('') || '<p class="lede">No players match.</p>'}</div></div>
+        return `<a class="pcard" href="#player-${pid}"><div class="row between"><span class="row" style="gap:6px">${teamTag(p)}<span class="tag">${esc(p.sport)}</span></span><span class="status ${p.injured ? 'injured' : p.status}">${p.injured ? esc(p.injured) : p.status === 'active' ? 'Active' : 'Retired'}</span></div><div><div style="font-size:18px;font-weight:700">${esc(p.name)}</div><div style="font-size:13px;color:var(--faint)">${esc(p.team)}</div></div><div class="row between"><span class="num ${cls(m)}" style="font-size:22px;font-weight:600">${fmtPct(m)}</span>${sparkline(t.series, m >= 0 ? 'var(--up)' : 'var(--down)')}</div></a>`; }).join('') || '<p class="lede">No players match.</p>'}</div></div>
     ${q ? '' : `<div class="cols">
       <div class="section"><div class="row between"><h2>Biggest risers this month</h2><a href="#movers" style="font-weight:600;font-size:14px;text-decoration:none">See all movers →</a></div><div class="list">${sorted.slice(0, 5).map(c => cardItem(c)).join('')}</div></div>
       <div class="section"><h2>Biggest drops this month</h2><div class="list">${sorted.slice(-5).reverse().map(c => cardItem(c)).join('')}</div></div>
@@ -626,10 +648,10 @@ function viewPlayer(pid) {
     <div class="section" style="padding-top:8px">
       <a href="#home" style="color:var(--muted);text-decoration:none;font-weight:600;font-size:14px">← All players</a>
       <div class="row" style="gap:16px;align-items:flex-start">
-        <div class="thumb" style="width:72px;height:72px;border-radius:16px;background:var(--raise);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:var(--faint)">${esc(p.num)}</div>
+        <div class="thumb" style="--tc:${p.color || 'var(--faint)'};width:72px;height:72px;border-radius:16px;background:color-mix(in srgb, var(--tc) 24%, var(--raise));border:1px solid color-mix(in srgb, var(--tc) 60%, var(--line));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:22px;font-weight:800;color:var(--fg)">${esc(p.num)}${p.teamAbbr ? `<span style="font-size:10px;letter-spacing:.08em;color:var(--muted)">${esc(p.teamAbbr)}</span>` : ''}</div>
         <div style="display:flex;flex-direction:column;gap:6px;min-width:0;flex:1">
           <h1>${esc(p.name)}</h1>
-          <div class="row" style="gap:8px"><span style="color:var(--muted)">${[p.team, p.pos, p.sport].filter(Boolean).map(esc).join(' · ')}</span><span class="status ${p.status}">${p.status === 'active' ? 'Active' : 'Retired'}</span>${p.injured ? `<span class="status injured">${esc(p.injured)}</span>` : ''}</div>
+          <div class="row" style="gap:8px">${teamTag(p)}<span style="color:var(--muted)">${[p.team, p.pos, p.sport].filter(Boolean).map(esc).join(' · ')}</span><span class="status ${p.status}">${p.status === 'active' ? 'Active' : 'Retired'}</span>${p.injured ? `<span class="status injured">${esc(p.injured)}</span>` : ''}</div>
         </div>
       </div>
       <p class="lede">${esc(p.summary)}</p>
@@ -798,6 +820,7 @@ const BUILD = {
     ['Compare tool', 'Up to four cards on price, sales volume and graded population.'],
     ['My collection', 'Total value and trend for the cards you add (saved in this browser).'],
     ['Card images', 'Original artwork for every card, your own photo, or real images from CardSight AI.'],
+    ['Team colors', 'Each player shows a team badge, a jersey-number avatar and card artwork in their team’s official colors. No logos or photos until they’re licensed.'],
     ['Search', 'Top-bar search on every page for any of the 107 players by name, with suggestions as you type, accent-insensitive, keyboard friendly.'],
     ['Player stats and injuries', 'Team, jersey, key stats with league rank, season / last 5 / projected / career table, awards and injury reports for 78 active players, refreshed nightly; career totals and honors for 29 legends.'],
     ['Biggest movers', 'Risers and drops for cards or whole players, by 1M to 1Y, sport, raw or PSA 10, with a minimum-sales filter to hide noisy one-sale swings.'],
@@ -925,7 +948,7 @@ function gRender() {
     const sel = i === gs.active ? 'true' : 'false';
     if (r.kind === 'player') {
       const sub = [r.p.team, r.p.pos, r.p.sport].filter(Boolean).join(' · ') + (r.cards ? '' : ' · card prices coming soon');
-      html += `<a class="gres" role="option" id="gr-${i}" aria-selected="${sel}" href="#player-${r.id}"><span class="gbadge">${esc(r.p.sport)}</span><span class="gm"><span class="gt">${hl(r.p.name, q)}</span><span class="gs">${esc(sub)}</span></span>${r.p.injured ? `<span class="status injured">${esc(r.p.injured)}</span>` : ''}</a>`;
+      html += `<a class="gres" role="option" id="gr-${i}" aria-selected="${sel}" href="#player-${r.id}"><span class="gbadge${r.p.teamAbbr ? ' team' : ''}" style="--tc:${r.p.color || 'var(--line)'}">${esc(r.p.teamAbbr || r.p.sport)}</span><span class="gm"><span class="gt">${hl(r.p.name, q)}</span><span class="gs">${esc(sub)}</span></span>${r.p.injured ? `<span class="status injured">${esc(r.p.injured)}</span>` : ''}</a>`;
     } else {
       const m = monthChange(r.c);
       html += `<a class="gres" role="option" id="gr-${i}" aria-selected="${sel}" href="#card-${r.c.id}"><span class="gthumb">${cardVisual(r.c)}</span><span class="gm"><span class="gt">${hl(r.c.name, q)}</span><span class="gs">${esc(PLAYERS[r.c.p].name)} · ${esc(r.c.detail)}</span></span><span class="num" style="text-align:right;font-size:13px">${money(last(r.c.price))}<br><span class="${cls(m)}">${fmtPct(m)}</span></span></a>`;

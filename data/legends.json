@@ -1,34 +1,1149 @@
 {
  "note": "Career totals and honors for retired players. These don't change, so they're kept here instead of coming from the nightly stats feed. Edit to correct or add players.",
  "players": {
-  "michael-jordan": {"team": "Chicago Bulls", "jersey": "23", "career": [["PTS", "30.1"], ["REB", "6.2"], ["AST", "5.3"], ["GP", "1,072"]], "awards": [["NBA Champion", "6x"], ["MVP", "5x"], ["Finals MVP", "6x"], ["All-Star", "14x"]], "hof": "2009"},
-  "kobe-bryant": {"team": "Los Angeles Lakers", "jersey": "24", "career": [["PTS", "25.0"], ["REB", "5.2"], ["AST", "4.7"], ["GP", "1,346"]], "awards": [["NBA Champion", "5x"], ["MVP", "1x"], ["Finals MVP", "2x"], ["All-Star", "18x"]], "hof": "2020"},
-  "tim-duncan": {"team": "San Antonio Spurs", "jersey": "21", "career": [["PTS", "19.0"], ["REB", "10.8"], ["AST", "3.0"], ["GP", "1,392"]], "awards": [["NBA Champion", "5x"], ["MVP", "2x"], ["Finals MVP", "3x"], ["All-Star", "15x"]], "hof": "2020"},
-  "shaquille-oneal": {"team": "Los Angeles Lakers", "jersey": "34", "career": [["PTS", "23.7"], ["REB", "10.9"], ["AST", "2.5"], ["GP", "1,207"]], "awards": [["NBA Champion", "4x"], ["MVP", "1x"], ["Finals MVP", "3x"], ["All-Star", "15x"]], "hof": "2016"},
-  "magic-johnson": {"team": "Los Angeles Lakers", "jersey": "32", "career": [["PTS", "19.5"], ["REB", "7.2"], ["AST", "11.2"], ["GP", "906"]], "awards": [["NBA Champion", "5x"], ["MVP", "3x"], ["Finals MVP", "3x"], ["All-Star", "12x"]], "hof": "2002"},
-  "larry-bird": {"team": "Boston Celtics", "jersey": "33", "career": [["PTS", "24.3"], ["REB", "10.0"], ["AST", "6.3"], ["GP", "897"]], "awards": [["NBA Champion", "3x"], ["MVP", "3x"], ["Finals MVP", "2x"], ["All-Star", "12x"]], "hof": "1998"},
-  "dirk-nowitzki": {"team": "Dallas Mavericks", "jersey": "41", "career": [["PTS", "20.7"], ["REB", "7.5"], ["AST", "2.4"], ["GP", "1,522"]], "awards": [["NBA Champion", "1x"], ["MVP", "1x"], ["Finals MVP", "1x"], ["All-Star", "14x"]], "hof": "2023"},
-  "dwyane-wade": {"team": "Miami Heat", "jersey": "3", "career": [["PTS", "22.0"], ["REB", "4.7"], ["AST", "5.4"], ["GP", "1,054"]], "awards": [["NBA Champion", "3x"], ["Finals MVP", "1x"], ["All-Star", "13x"]], "hof": "2023"},
-  "allen-iverson": {"team": "Philadelphia 76ers", "jersey": "3", "career": [["PTS", "26.7"], ["REB", "3.7"], ["AST", "6.2"], ["GP", "914"]], "awards": [["MVP", "1x"], ["Scoring Champion", "4x"], ["All-Star", "11x"]], "hof": "2016"},
-  "kevin-garnett": {"team": "Minnesota Timberwolves", "jersey": "21", "career": [["PTS", "17.8"], ["REB", "10.0"], ["AST", "3.7"], ["GP", "1,462"]], "awards": [["NBA Champion", "1x"], ["MVP", "1x"], ["Defensive Player of the Year", "1x"], ["All-Star", "15x"]], "hof": "2020"},
-  "ken-griffey-jr": {"team": "Seattle Mariners", "jersey": "24", "career": [["HR", "630"], ["H", "2,781"], ["AVG", ".284"], ["RBI", "1,836"]], "awards": [["MVP", "1x"], ["All-Star", "13x"], ["Gold Glove", "10x"]], "hof": "2016"},
-  "derek-jeter": {"team": "New York Yankees", "jersey": "2", "career": [["H", "3,465"], ["AVG", ".310"], ["HR", "260"], ["RBI", "1,311"]], "awards": [["World Series Champion", "5x"], ["All-Star", "14x"], ["Rookie of the Year", "1x"]], "hof": "2020"},
-  "mickey-mantle": {"team": "New York Yankees", "jersey": "7", "career": [["HR", "536"], ["H", "2,415"], ["AVG", ".298"], ["RBI", "1,509"]], "awards": [["World Series Champion", "7x"], ["MVP", "3x"], ["Triple Crown", "1x"]], "hof": "1974"},
-  "hank-aaron": {"team": "Atlanta Braves", "jersey": "44", "career": [["HR", "755"], ["H", "3,771"], ["AVG", ".305"], ["RBI", "2,297"]], "awards": [["MVP", "1x"], ["World Series Champion", "1x"], ["Gold Glove", "3x"]], "hof": "1982"},
-  "willie-mays": {"team": "San Francisco Giants", "jersey": "24", "career": [["HR", "660"], ["AVG", ".301"], ["SB", "339"]], "awards": [["MVP", "2x"], ["World Series Champion", "1x"], ["Gold Glove", "12x"]], "hof": "1979"},
-  "roberto-clemente": {"team": "Pittsburgh Pirates", "jersey": "21", "career": [["H", "3,000"], ["AVG", ".317"], ["HR", "240"]], "awards": [["MVP", "1x"], ["World Series Champion", "2x"], ["Gold Glove", "12x"], ["Batting Title", "4x"]], "hof": "1973"},
-  "nolan-ryan": {"team": "Texas Rangers", "jersey": "34", "career": [["K", "5,714"], ["W", "324"], ["ERA", "3.19"], ["No-hitters", "7"]], "awards": [["All-Star", "8x"], ["Strikeout Leader", "11x"]], "hof": "1999"},
-  "cal-ripken-jr": {"team": "Baltimore Orioles", "jersey": "8", "career": [["H", "3,184"], ["HR", "431"], ["AVG", ".276"], ["Consecutive games", "2,632"]], "awards": [["MVP", "2x"], ["World Series Champion", "1x"], ["All-Star", "19x"]], "hof": "2007"},
-  "albert-pujols": {"team": "St. Louis Cardinals", "jersey": "5", "career": [["HR", "703"], ["H", "3,384"], ["AVG", ".296"], ["RBI", "2,218"]], "awards": [["MVP", "3x"], ["World Series Champion", "2x"], ["All-Star", "11x"]], "hof": ""},
-  "ichiro-suzuki": {"team": "Seattle Mariners", "jersey": "51", "career": [["H", "3,089"], ["AVG", ".311"], ["SB", "509"]], "awards": [["MVP", "1x"], ["Rookie of the Year", "1x"], ["Gold Glove", "10x"], ["All-Star", "10x"]], "hof": "2025"},
-  "mariano-rivera": {"team": "New York Yankees", "jersey": "42", "career": [["SV", "652"], ["ERA", "2.21"], ["W", "82"]], "awards": [["World Series Champion", "5x"], ["All-Star", "13x"], ["World Series MVP", "1x"]], "hof": "2019"},
-  "babe-ruth": {"team": "New York Yankees", "jersey": "3", "career": [["HR", "714"], ["AVG", ".342"], ["H", "2,873"]], "awards": [["World Series Champion", "7x"], ["MVP", "1x"]], "hof": "1936"},
-  "tom-brady": {"team": "New England Patriots", "jersey": "12", "career": [["PASS YDS", "89,214"], ["PASS TD", "649"], ["INT", "212"]], "awards": [["Super Bowl Champion", "7x"], ["Super Bowl MVP", "5x"], ["NFL MVP", "3x"]], "hof": ""},
-  "peyton-manning": {"team": "Indianapolis Colts", "jersey": "18", "career": [["PASS YDS", "71,940"], ["PASS TD", "539"], ["INT", "251"]], "awards": [["Super Bowl Champion", "2x"], ["NFL MVP", "5x"], ["Pro Bowl", "14x"]], "hof": "2021"},
-  "jerry-rice": {"team": "San Francisco 49ers", "jersey": "80", "career": [["REC", "1,549"], ["REC YDS", "22,895"], ["REC TD", "197"]], "awards": [["Super Bowl Champion", "3x"], ["Super Bowl MVP", "1x"], ["Pro Bowl", "13x"]], "hof": "2010"},
-  "joe-montana": {"team": "San Francisco 49ers", "jersey": "16", "career": [["PASS YDS", "40,551"], ["PASS TD", "273"], ["INT", "139"]], "awards": [["Super Bowl Champion", "4x"], ["Super Bowl MVP", "3x"], ["NFL MVP", "2x"]], "hof": "2000"},
-  "walter-payton": {"team": "Chicago Bears", "jersey": "34", "career": [["RUSH YDS", "16,726"], ["RUSH TD", "110"], ["REC", "492"]], "awards": [["Super Bowl Champion", "1x"], ["NFL MVP", "1x"], ["Pro Bowl", "9x"]], "hof": "1993"},
-  "barry-sanders": {"team": "Detroit Lions", "jersey": "20", "career": [["RUSH YDS", "15,269"], ["RUSH TD", "99"], ["YDS/CAR", "5.0"]], "awards": [["NFL MVP", "1x"], ["Pro Bowl", "10x"], ["Rushing Leader", "4x"]], "hof": "2004"},
-  "emmitt-smith": {"team": "Dallas Cowboys", "jersey": "22", "career": [["RUSH YDS", "18,355"], ["RUSH TD", "164"], ["REC", "515"]], "awards": [["Super Bowl Champion", "3x"], ["Super Bowl MVP", "1x"], ["NFL MVP", "1x"]], "hof": "2010"}
+  "michael-jordan": {
+   "team": "Chicago Bulls",
+   "jersey": "23",
+   "career": [
+    [
+     "PTS",
+     "30.1"
+    ],
+    [
+     "REB",
+     "6.2"
+    ],
+    [
+     "AST",
+     "5.3"
+    ],
+    [
+     "GP",
+     "1,072"
+    ]
+   ],
+   "awards": [
+    [
+     "NBA Champion",
+     "6x"
+    ],
+    [
+     "MVP",
+     "5x"
+    ],
+    [
+     "Finals MVP",
+     "6x"
+    ],
+    [
+     "All-Star",
+     "14x"
+    ]
+   ],
+   "hof": "2009",
+   "teamAbbr": "CHI",
+   "teamColor": "#CE1141",
+   "teamAlt": "#000000"
+  },
+  "kobe-bryant": {
+   "team": "Los Angeles Lakers",
+   "jersey": "24",
+   "career": [
+    [
+     "PTS",
+     "25.0"
+    ],
+    [
+     "REB",
+     "5.2"
+    ],
+    [
+     "AST",
+     "4.7"
+    ],
+    [
+     "GP",
+     "1,346"
+    ]
+   ],
+   "awards": [
+    [
+     "NBA Champion",
+     "5x"
+    ],
+    [
+     "MVP",
+     "1x"
+    ],
+    [
+     "Finals MVP",
+     "2x"
+    ],
+    [
+     "All-Star",
+     "18x"
+    ]
+   ],
+   "hof": "2020",
+   "teamAbbr": "LAL",
+   "teamColor": "#552583",
+   "teamAlt": "#FDB927"
+  },
+  "tim-duncan": {
+   "team": "San Antonio Spurs",
+   "jersey": "21",
+   "career": [
+    [
+     "PTS",
+     "19.0"
+    ],
+    [
+     "REB",
+     "10.8"
+    ],
+    [
+     "AST",
+     "3.0"
+    ],
+    [
+     "GP",
+     "1,392"
+    ]
+   ],
+   "awards": [
+    [
+     "NBA Champion",
+     "5x"
+    ],
+    [
+     "MVP",
+     "2x"
+    ],
+    [
+     "Finals MVP",
+     "3x"
+    ],
+    [
+     "All-Star",
+     "15x"
+    ]
+   ],
+   "hof": "2020",
+   "teamAbbr": "SA",
+   "teamColor": "#C4CED4",
+   "teamAlt": "#000000"
+  },
+  "shaquille-oneal": {
+   "team": "Los Angeles Lakers",
+   "jersey": "34",
+   "career": [
+    [
+     "PTS",
+     "23.7"
+    ],
+    [
+     "REB",
+     "10.9"
+    ],
+    [
+     "AST",
+     "2.5"
+    ],
+    [
+     "GP",
+     "1,207"
+    ]
+   ],
+   "awards": [
+    [
+     "NBA Champion",
+     "4x"
+    ],
+    [
+     "MVP",
+     "1x"
+    ],
+    [
+     "Finals MVP",
+     "3x"
+    ],
+    [
+     "All-Star",
+     "15x"
+    ]
+   ],
+   "hof": "2016",
+   "teamAbbr": "LAL",
+   "teamColor": "#552583",
+   "teamAlt": "#FDB927"
+  },
+  "magic-johnson": {
+   "team": "Los Angeles Lakers",
+   "jersey": "32",
+   "career": [
+    [
+     "PTS",
+     "19.5"
+    ],
+    [
+     "REB",
+     "7.2"
+    ],
+    [
+     "AST",
+     "11.2"
+    ],
+    [
+     "GP",
+     "906"
+    ]
+   ],
+   "awards": [
+    [
+     "NBA Champion",
+     "5x"
+    ],
+    [
+     "MVP",
+     "3x"
+    ],
+    [
+     "Finals MVP",
+     "3x"
+    ],
+    [
+     "All-Star",
+     "12x"
+    ]
+   ],
+   "hof": "2002",
+   "teamAbbr": "LAL",
+   "teamColor": "#552583",
+   "teamAlt": "#FDB927"
+  },
+  "larry-bird": {
+   "team": "Boston Celtics",
+   "jersey": "33",
+   "career": [
+    [
+     "PTS",
+     "24.3"
+    ],
+    [
+     "REB",
+     "10.0"
+    ],
+    [
+     "AST",
+     "6.3"
+    ],
+    [
+     "GP",
+     "897"
+    ]
+   ],
+   "awards": [
+    [
+     "NBA Champion",
+     "3x"
+    ],
+    [
+     "MVP",
+     "3x"
+    ],
+    [
+     "Finals MVP",
+     "2x"
+    ],
+    [
+     "All-Star",
+     "12x"
+    ]
+   ],
+   "hof": "1998",
+   "teamAbbr": "BOS",
+   "teamColor": "#007A33",
+   "teamAlt": "#BA9653"
+  },
+  "dirk-nowitzki": {
+   "team": "Dallas Mavericks",
+   "jersey": "41",
+   "career": [
+    [
+     "PTS",
+     "20.7"
+    ],
+    [
+     "REB",
+     "7.5"
+    ],
+    [
+     "AST",
+     "2.4"
+    ],
+    [
+     "GP",
+     "1,522"
+    ]
+   ],
+   "awards": [
+    [
+     "NBA Champion",
+     "1x"
+    ],
+    [
+     "MVP",
+     "1x"
+    ],
+    [
+     "Finals MVP",
+     "1x"
+    ],
+    [
+     "All-Star",
+     "14x"
+    ]
+   ],
+   "hof": "2023",
+   "teamAbbr": "DAL",
+   "teamColor": "#00538C",
+   "teamAlt": "#B8C4CA"
+  },
+  "dwyane-wade": {
+   "team": "Miami Heat",
+   "jersey": "3",
+   "career": [
+    [
+     "PTS",
+     "22.0"
+    ],
+    [
+     "REB",
+     "4.7"
+    ],
+    [
+     "AST",
+     "5.4"
+    ],
+    [
+     "GP",
+     "1,054"
+    ]
+   ],
+   "awards": [
+    [
+     "NBA Champion",
+     "3x"
+    ],
+    [
+     "Finals MVP",
+     "1x"
+    ],
+    [
+     "All-Star",
+     "13x"
+    ]
+   ],
+   "hof": "2023",
+   "teamAbbr": "MIA",
+   "teamColor": "#98002E",
+   "teamAlt": "#F9A01B"
+  },
+  "allen-iverson": {
+   "team": "Philadelphia 76ers",
+   "jersey": "3",
+   "career": [
+    [
+     "PTS",
+     "26.7"
+    ],
+    [
+     "REB",
+     "3.7"
+    ],
+    [
+     "AST",
+     "6.2"
+    ],
+    [
+     "GP",
+     "914"
+    ]
+   ],
+   "awards": [
+    [
+     "MVP",
+     "1x"
+    ],
+    [
+     "Scoring Champion",
+     "4x"
+    ],
+    [
+     "All-Star",
+     "11x"
+    ]
+   ],
+   "hof": "2016",
+   "teamAbbr": "PHI",
+   "teamColor": "#006BB6",
+   "teamAlt": "#ED174C"
+  },
+  "kevin-garnett": {
+   "team": "Minnesota Timberwolves",
+   "jersey": "21",
+   "career": [
+    [
+     "PTS",
+     "17.8"
+    ],
+    [
+     "REB",
+     "10.0"
+    ],
+    [
+     "AST",
+     "3.7"
+    ],
+    [
+     "GP",
+     "1,462"
+    ]
+   ],
+   "awards": [
+    [
+     "NBA Champion",
+     "1x"
+    ],
+    [
+     "MVP",
+     "1x"
+    ],
+    [
+     "Defensive Player of the Year",
+     "1x"
+    ],
+    [
+     "All-Star",
+     "15x"
+    ]
+   ],
+   "hof": "2020",
+   "teamAbbr": "MIN",
+   "teamColor": "#236192",
+   "teamAlt": "#78BE20"
+  },
+  "ken-griffey-jr": {
+   "team": "Seattle Mariners",
+   "jersey": "24",
+   "career": [
+    [
+     "HR",
+     "630"
+    ],
+    [
+     "H",
+     "2,781"
+    ],
+    [
+     "AVG",
+     ".284"
+    ],
+    [
+     "RBI",
+     "1,836"
+    ]
+   ],
+   "awards": [
+    [
+     "MVP",
+     "1x"
+    ],
+    [
+     "All-Star",
+     "13x"
+    ],
+    [
+     "Gold Glove",
+     "10x"
+    ]
+   ],
+   "hof": "2016",
+   "teamAbbr": "SEA",
+   "teamColor": "#005C5C",
+   "teamAlt": "#0C2C56"
+  },
+  "derek-jeter": {
+   "team": "New York Yankees",
+   "jersey": "2",
+   "career": [
+    [
+     "H",
+     "3,465"
+    ],
+    [
+     "AVG",
+     ".310"
+    ],
+    [
+     "HR",
+     "260"
+    ],
+    [
+     "RBI",
+     "1,311"
+    ]
+   ],
+   "awards": [
+    [
+     "World Series Champion",
+     "5x"
+    ],
+    [
+     "All-Star",
+     "14x"
+    ],
+    [
+     "Rookie of the Year",
+     "1x"
+    ]
+   ],
+   "hof": "2020",
+   "teamAbbr": "NYY",
+   "teamColor": "#0C2340",
+   "teamAlt": "#C4CED3"
+  },
+  "mickey-mantle": {
+   "team": "New York Yankees",
+   "jersey": "7",
+   "career": [
+    [
+     "HR",
+     "536"
+    ],
+    [
+     "H",
+     "2,415"
+    ],
+    [
+     "AVG",
+     ".298"
+    ],
+    [
+     "RBI",
+     "1,509"
+    ]
+   ],
+   "awards": [
+    [
+     "World Series Champion",
+     "7x"
+    ],
+    [
+     "MVP",
+     "3x"
+    ],
+    [
+     "Triple Crown",
+     "1x"
+    ]
+   ],
+   "hof": "1974",
+   "teamAbbr": "NYY",
+   "teamColor": "#0C2340",
+   "teamAlt": "#C4CED3"
+  },
+  "hank-aaron": {
+   "team": "Atlanta Braves",
+   "jersey": "44",
+   "career": [
+    [
+     "HR",
+     "755"
+    ],
+    [
+     "H",
+     "3,771"
+    ],
+    [
+     "AVG",
+     ".305"
+    ],
+    [
+     "RBI",
+     "2,297"
+    ]
+   ],
+   "awards": [
+    [
+     "MVP",
+     "1x"
+    ],
+    [
+     "World Series Champion",
+     "1x"
+    ],
+    [
+     "Gold Glove",
+     "3x"
+    ]
+   ],
+   "hof": "1982",
+   "teamAbbr": "ATL",
+   "teamColor": "#CE1141",
+   "teamAlt": "#13274F"
+  },
+  "willie-mays": {
+   "team": "San Francisco Giants",
+   "jersey": "24",
+   "career": [
+    [
+     "HR",
+     "660"
+    ],
+    [
+     "AVG",
+     ".301"
+    ],
+    [
+     "SB",
+     "339"
+    ]
+   ],
+   "awards": [
+    [
+     "MVP",
+     "2x"
+    ],
+    [
+     "World Series Champion",
+     "1x"
+    ],
+    [
+     "Gold Glove",
+     "12x"
+    ]
+   ],
+   "hof": "1979",
+   "teamAbbr": "SF",
+   "teamColor": "#FD5A1E",
+   "teamAlt": "#27251F"
+  },
+  "roberto-clemente": {
+   "team": "Pittsburgh Pirates",
+   "jersey": "21",
+   "career": [
+    [
+     "H",
+     "3,000"
+    ],
+    [
+     "AVG",
+     ".317"
+    ],
+    [
+     "HR",
+     "240"
+    ]
+   ],
+   "awards": [
+    [
+     "MVP",
+     "1x"
+    ],
+    [
+     "World Series Champion",
+     "2x"
+    ],
+    [
+     "Gold Glove",
+     "12x"
+    ],
+    [
+     "Batting Title",
+     "4x"
+    ]
+   ],
+   "hof": "1973",
+   "teamAbbr": "PIT",
+   "teamColor": "#FDB827",
+   "teamAlt": "#27251F"
+  },
+  "nolan-ryan": {
+   "team": "Texas Rangers",
+   "jersey": "34",
+   "career": [
+    [
+     "K",
+     "5,714"
+    ],
+    [
+     "W",
+     "324"
+    ],
+    [
+     "ERA",
+     "3.19"
+    ],
+    [
+     "No-hitters",
+     "7"
+    ]
+   ],
+   "awards": [
+    [
+     "All-Star",
+     "8x"
+    ],
+    [
+     "Strikeout Leader",
+     "11x"
+    ]
+   ],
+   "hof": "1999",
+   "teamAbbr": "TEX",
+   "teamColor": "#003278",
+   "teamAlt": "#C0111F"
+  },
+  "cal-ripken-jr": {
+   "team": "Baltimore Orioles",
+   "jersey": "8",
+   "career": [
+    [
+     "H",
+     "3,184"
+    ],
+    [
+     "HR",
+     "431"
+    ],
+    [
+     "AVG",
+     ".276"
+    ],
+    [
+     "Consecutive games",
+     "2,632"
+    ]
+   ],
+   "awards": [
+    [
+     "MVP",
+     "2x"
+    ],
+    [
+     "World Series Champion",
+     "1x"
+    ],
+    [
+     "All-Star",
+     "19x"
+    ]
+   ],
+   "hof": "2007",
+   "teamAbbr": "BAL",
+   "teamColor": "#DF4601",
+   "teamAlt": "#000000"
+  },
+  "albert-pujols": {
+   "team": "St. Louis Cardinals",
+   "jersey": "5",
+   "career": [
+    [
+     "HR",
+     "703"
+    ],
+    [
+     "H",
+     "3,384"
+    ],
+    [
+     "AVG",
+     ".296"
+    ],
+    [
+     "RBI",
+     "2,218"
+    ]
+   ],
+   "awards": [
+    [
+     "MVP",
+     "3x"
+    ],
+    [
+     "World Series Champion",
+     "2x"
+    ],
+    [
+     "All-Star",
+     "11x"
+    ]
+   ],
+   "hof": "",
+   "teamAbbr": "STL",
+   "teamColor": "#C41E3A",
+   "teamAlt": "#0C2340"
+  },
+  "ichiro-suzuki": {
+   "team": "Seattle Mariners",
+   "jersey": "51",
+   "career": [
+    [
+     "H",
+     "3,089"
+    ],
+    [
+     "AVG",
+     ".311"
+    ],
+    [
+     "SB",
+     "509"
+    ]
+   ],
+   "awards": [
+    [
+     "MVP",
+     "1x"
+    ],
+    [
+     "Rookie of the Year",
+     "1x"
+    ],
+    [
+     "Gold Glove",
+     "10x"
+    ],
+    [
+     "All-Star",
+     "10x"
+    ]
+   ],
+   "hof": "2025",
+   "teamAbbr": "SEA",
+   "teamColor": "#005C5C",
+   "teamAlt": "#0C2C56"
+  },
+  "mariano-rivera": {
+   "team": "New York Yankees",
+   "jersey": "42",
+   "career": [
+    [
+     "SV",
+     "652"
+    ],
+    [
+     "ERA",
+     "2.21"
+    ],
+    [
+     "W",
+     "82"
+    ]
+   ],
+   "awards": [
+    [
+     "World Series Champion",
+     "5x"
+    ],
+    [
+     "All-Star",
+     "13x"
+    ],
+    [
+     "World Series MVP",
+     "1x"
+    ]
+   ],
+   "hof": "2019",
+   "teamAbbr": "NYY",
+   "teamColor": "#0C2340",
+   "teamAlt": "#C4CED3"
+  },
+  "babe-ruth": {
+   "team": "New York Yankees",
+   "jersey": "3",
+   "career": [
+    [
+     "HR",
+     "714"
+    ],
+    [
+     "AVG",
+     ".342"
+    ],
+    [
+     "H",
+     "2,873"
+    ]
+   ],
+   "awards": [
+    [
+     "World Series Champion",
+     "7x"
+    ],
+    [
+     "MVP",
+     "1x"
+    ]
+   ],
+   "hof": "1936",
+   "teamAbbr": "NYY",
+   "teamColor": "#0C2340",
+   "teamAlt": "#C4CED3"
+  },
+  "tom-brady": {
+   "team": "New England Patriots",
+   "jersey": "12",
+   "career": [
+    [
+     "PASS YDS",
+     "89,214"
+    ],
+    [
+     "PASS TD",
+     "649"
+    ],
+    [
+     "INT",
+     "212"
+    ]
+   ],
+   "awards": [
+    [
+     "Super Bowl Champion",
+     "7x"
+    ],
+    [
+     "Super Bowl MVP",
+     "5x"
+    ],
+    [
+     "NFL MVP",
+     "3x"
+    ]
+   ],
+   "hof": "",
+   "teamAbbr": "NE",
+   "teamColor": "#002244",
+   "teamAlt": "#C60C30"
+  },
+  "peyton-manning": {
+   "team": "Indianapolis Colts",
+   "jersey": "18",
+   "career": [
+    [
+     "PASS YDS",
+     "71,940"
+    ],
+    [
+     "PASS TD",
+     "539"
+    ],
+    [
+     "INT",
+     "251"
+    ]
+   ],
+   "awards": [
+    [
+     "Super Bowl Champion",
+     "2x"
+    ],
+    [
+     "NFL MVP",
+     "5x"
+    ],
+    [
+     "Pro Bowl",
+     "14x"
+    ]
+   ],
+   "hof": "2021",
+   "teamAbbr": "IND",
+   "teamColor": "#002C5F",
+   "teamAlt": "#A2AAAD"
+  },
+  "jerry-rice": {
+   "team": "San Francisco 49ers",
+   "jersey": "80",
+   "career": [
+    [
+     "REC",
+     "1,549"
+    ],
+    [
+     "REC YDS",
+     "22,895"
+    ],
+    [
+     "REC TD",
+     "197"
+    ]
+   ],
+   "awards": [
+    [
+     "Super Bowl Champion",
+     "3x"
+    ],
+    [
+     "Super Bowl MVP",
+     "1x"
+    ],
+    [
+     "Pro Bowl",
+     "13x"
+    ]
+   ],
+   "hof": "2010",
+   "teamAbbr": "SF",
+   "teamColor": "#AA0000",
+   "teamAlt": "#B3995D"
+  },
+  "joe-montana": {
+   "team": "San Francisco 49ers",
+   "jersey": "16",
+   "career": [
+    [
+     "PASS YDS",
+     "40,551"
+    ],
+    [
+     "PASS TD",
+     "273"
+    ],
+    [
+     "INT",
+     "139"
+    ]
+   ],
+   "awards": [
+    [
+     "Super Bowl Champion",
+     "4x"
+    ],
+    [
+     "Super Bowl MVP",
+     "3x"
+    ],
+    [
+     "NFL MVP",
+     "2x"
+    ]
+   ],
+   "hof": "2000",
+   "teamAbbr": "SF",
+   "teamColor": "#AA0000",
+   "teamAlt": "#B3995D"
+  },
+  "walter-payton": {
+   "team": "Chicago Bears",
+   "jersey": "34",
+   "career": [
+    [
+     "RUSH YDS",
+     "16,726"
+    ],
+    [
+     "RUSH TD",
+     "110"
+    ],
+    [
+     "REC",
+     "492"
+    ]
+   ],
+   "awards": [
+    [
+     "Super Bowl Champion",
+     "1x"
+    ],
+    [
+     "NFL MVP",
+     "1x"
+    ],
+    [
+     "Pro Bowl",
+     "9x"
+    ]
+   ],
+   "hof": "1993",
+   "teamAbbr": "CHI",
+   "teamColor": "#0B162A",
+   "teamAlt": "#C83803"
+  },
+  "barry-sanders": {
+   "team": "Detroit Lions",
+   "jersey": "20",
+   "career": [
+    [
+     "RUSH YDS",
+     "15,269"
+    ],
+    [
+     "RUSH TD",
+     "99"
+    ],
+    [
+     "YDS/CAR",
+     "5.0"
+    ]
+   ],
+   "awards": [
+    [
+     "NFL MVP",
+     "1x"
+    ],
+    [
+     "Pro Bowl",
+     "10x"
+    ],
+    [
+     "Rushing Leader",
+     "4x"
+    ]
+   ],
+   "hof": "2004",
+   "teamAbbr": "DET",
+   "teamColor": "#0076B6",
+   "teamAlt": "#B0B7BC"
+  },
+  "emmitt-smith": {
+   "team": "Dallas Cowboys",
+   "jersey": "22",
+   "career": [
+    [
+     "RUSH YDS",
+     "18,355"
+    ],
+    [
+     "RUSH TD",
+     "164"
+    ],
+    [
+     "REC",
+     "515"
+    ]
+   ],
+   "awards": [
+    [
+     "Super Bowl Champion",
+     "3x"
+    ],
+    [
+     "Super Bowl MVP",
+     "1x"
+    ],
+    [
+     "NFL MVP",
+     "1x"
+    ]
+   ],
+   "hof": "2010",
+   "teamAbbr": "DAL",
+   "teamColor": "#041E42",
+   "teamAlt": "#869397"
+  }
  }
 }

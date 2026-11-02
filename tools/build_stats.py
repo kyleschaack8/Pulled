@@ -160,6 +160,8 @@ def build():
         team = ath.get("team") or {}
         rec["team"] = team.get("displayName") or ""
         rec["teamAbbr"] = team.get("abbreviation") or ""
+        rec["teamColor"] = ("#" + team["color"]) if team.get("color") else ""
+        rec["teamAlt"] = ("#" + team["alternateColor"]) if team.get("alternateColor") else ""
         rec["jersey"] = ath.get("jersey") or ""
         rec["position"] = (ath.get("position") or {}).get("abbreviation") or ""
         rec["active"] = bool(ath.get("active"))
