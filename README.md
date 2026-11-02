@@ -25,4 +25,4 @@ Sports card prices, explained. Pulled tracks card prices next to player stats, i
 
 Built: navigation and search, player pages (active + retired), combined player trend, card pages with event markers, auto-written "why it moved," compare tool, collection, card artwork and photo upload.
 
-Next: connect CardSight AI for real card images and scanning.
+Next: add your CardSight key as a GitHub secret and run the "Fetch card images" action (Actions tab) to load real card pictures into `images/cards/`. Then: scanning.

@@ -371,6 +371,22 @@ function cardItem(c, right = 'price') {
 /* ---------- card images: original artwork, or the viewer's own photo ---------- */
 function getPhotos() { try { const v = JSON.parse(localStorage.getItem('pulled-photos') || '{}'); return v && typeof v === 'object' ? v : {}; } catch (e) { return {}; } }
 let memPhotos = getPhotos();
+/* real card images saved in the repo by the "Fetch card images" GitHub Action */
+let repoImages = {};
+function loadRepoImages() {
+  try {
+    fetch('images/cards/manifest.json', { cache: 'no-store' })
+      .then(r => r.ok ? r.json() : {})
+      .then(m => {
+        if (!m || typeof m !== 'object') return;
+        const ok = {};
+        Object.keys(m).forEach(k => { if (CARD[k] && /^[\w.-]+\.(jpe?g|png|webp)$/i.test(String(m[k]))) ok[k] = 'images/cards/' + m[k]; });
+        repoImages = ok;
+        if (Object.keys(ok).length) render();
+      })
+      .catch(() => {});
+  } catch (e) {}
+}
 function setPhoto(id, url) {
   if (url) memPhotos[id] = url; else delete memPhotos[id];
   try { localStorage.setItem('pulled-photos', JSON.stringify(memPhotos)); } catch (e) {}
@@ -411,7 +427,9 @@ function cardArt(c) {
 }
 function cardVisual(c) {
   const ph = memPhotos[c.id];
-  return ph && /^data:image\//.test(ph) ? `<img src="${ph}" alt="Your photo of ${esc(c.name)}" style="width:100%;height:100%;object-fit:contain;display:block">` : cardArt(c);
+  if (ph && /^data:image\//.test(ph)) return `<img src="${ph}" alt="Your photo of ${esc(c.name)}" style="width:100%;height:100%;object-fit:contain;display:block">`;
+  if (repoImages[c.id]) return `<img src="${repoImages[c.id]}" alt="${esc(c.name)}" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block">`;
+  return cardArt(c);
 }
 function handlePhoto(file, id) {
   if (!file || !/^image\//.test(file.type)) { toast('Choose an image file'); return; }
@@ -530,7 +548,7 @@ function viewCard(id) {
           <div style="width:100%;aspect-ratio:5/7;max-width:100%">${cardVisual(c)}</div>
           <label for="photo" class="btn" style="min-height:40px;font-size:13px;cursor:pointer">${memPhotos[c.id] ? 'Replace photo' : 'Add your photo'}</label>
           <input id="photo" type="file" accept="image/*" data-id="${c.id}" hidden>
-          ${memPhotos[c.id] ? `<button type="button" class="btn" style="min-height:36px;font-size:12px" data-act="removePhoto" data-id="${c.id}">Use artwork instead</button>` : `<span style="font-size:11px;color:var(--faint);text-align:center">Artwork shown until you add a photo of your card</span>`}
+          ${memPhotos[c.id] ? `<button type="button" class="btn" style="min-height:36px;font-size:12px" data-act="removePhoto" data-id="${c.id}">Use artwork instead</button>` : `<span style="font-size:11px;color:var(--faint);text-align:center">${repoImages[c.id] ? 'Card image from CardSight AI' : 'Artwork shown until a real image or your photo is added'}</span>`}
         </div>
         <div style="display:flex;flex-direction:column;gap:8px;min-width:0;flex:1 1 260px">
           <span class="eyebrow">${esc(p.name)} · ${esc(p.sport)}</span>
@@ -645,9 +663,10 @@ const BUILD = {
     ['Auto-written "Why it moved"', 'Generated from price, sales and event data. No manual writing.'],
     ['Compare tool', 'Up to four cards on price, sales volume and graded population.'],
     ['My collection', 'Total value and trend for the cards you add (saved in this browser).'],
-    ['Card images', 'Original artwork for every card (slab, rookie badge, parallel shine, auto, serial), or your own photo.']
+    ['Card images', 'Original artwork for every card, your own photo, or real images from CardSight AI once connected.']
   ],
   next: [
+    ['Connect CardSight AI', 'Wired up. Add your API key as a GitHub secret, then run the "Fetch card images" action to load real card pictures.'],
     ['Scan a card', 'Match an uploaded photo to the right card automatically. Start with manual confirm of the exact parallel.'],
     ['Real price data', 'Connect a licensed sales data source and refresh prices nightly.'],
     ['Live stats and injuries', 'Pull from a sports data API so player pages update on their own.'],
@@ -660,7 +679,7 @@ const BUILD = {
 function viewBuild() {
   const row = ([t, d], kind) => `<div class="check"><span class="dot ${kind}" aria-hidden="true"></span><div><div style="font-weight:700">${esc(t)}</div><div style="color:var(--muted);font-size:14px">${esc(d)}</div></div></div>`;
   return `<div class="view">
-    <div class="section" style="padding-top:8px"><span class="eyebrow">Version 0.2 · Nov 1, 2026</span><h1>Build log</h1><p class="lede">This test site grows one piece at a time. Each piece gets built, tested here, then checked off.</p></div>
+    <div class="section" style="padding-top:8px"><span class="eyebrow">Version 0.3 · Nov 1, 2026</span><h1>Build log</h1><p class="lede">This test site grows one piece at a time. Each piece gets built, tested here, then checked off.</p></div>
     <div class="cols">
       <div class="panel" style="padding:0"><div style="padding:16px 14px 8px" class="row between"><h2>Built</h2><span class="tag">${BUILD.done.length} pieces</span></div>${BUILD.done.map(r => row(r, 'done')).join('')}</div>
       <div class="panel" style="padding:0"><div style="padding:16px 14px 8px" class="row between"><h2>Up next</h2><span class="tag">${BUILD.next.length} pieces</span></div>${BUILD.next.map(r => row(r, 'next')).join('')}</div>
@@ -704,6 +723,7 @@ document.addEventListener('click', e => {
 });
 window.addEventListener('hashchange', () => { render(); window.scrollTo(0, 0); });
 render();
+loadRepoImages();
 </script>
 </body>
 </html>

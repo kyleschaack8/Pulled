@@ -11,14 +11,18 @@ Setup (one time):
 Run:
   python tools/get_card_images.py
 
-Output:
-  pulled_card_images/          one image per card, named by the test site's card id
-  pulled_card_images/matches.csv   what CardSight matched each card to, so you can check
-                                   it picked the right set and parallel
+Output (folder set by PULLED_IMAGE_DIR, default pulled_card_images/):
+  <card id>.jpg/.png/.webp   one image per card, named by the test site's card id
+  matches.csv                what CardSight matched each card to, so you can check
+                             it picked the right set and parallel
+  manifest.json              card id -> image file, read by the website
+
+Run automatically on GitHub: Actions tab -> "Fetch card images" -> Run workflow.
 
 Uses about 2 API calls per card (32 total), well inside the free tier.
 """
 import csv
+import json
 import os
 import pathlib
 import sys
@@ -52,8 +56,8 @@ CARDS = {
     "griffey-ud-raw":    "1989 Upper Deck Ken Griffey Jr 1",
 }
 
-out = pathlib.Path("pulled_card_images")
-out.mkdir(exist_ok=True)
+out = pathlib.Path(os.environ.get("PULLED_IMAGE_DIR", "pulled_card_images"))
+out.mkdir(parents=True, exist_ok=True)
 client = CardSightAI()
 
 
@@ -110,6 +114,18 @@ with open(out / "matches.csv", "w", newline="", encoding="utf-8") as f:
     w = csv.writer(f)
     w.writerow(["test_site_card_id", "searched_for", "cardsight_matched", "status", "image_file"])
     w.writerows(rows)
+
+manifest = {r[0]: r[4] for r in rows if r[3] == "OK"}
+old = out / "manifest.json"
+if old.exists():  # keep images from earlier runs for cards that failed this time
+    try:
+        prev = json.loads(old.read_text())
+        for k, v in prev.items():
+            if k not in manifest and (out / v).exists():
+                manifest[k] = v
+    except ValueError:
+        pass
+(out / "manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True))
 
 ok = sum(1 for r in rows if r[3] == "OK")
 print(f"\nDone: {ok} of {len(CARDS)} images saved to {out.resolve()}")
