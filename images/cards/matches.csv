@@ -1,17 +1,17 @@
 test_site_card_id,searched_for,cardsight_matched,status,image_file
-curry-chrome-ref,2009 Topps Chrome Stephen Curry 101 Refractor,,ERROR: No image function accepted the card id (None),
-curry-contenders,2009 Playoff Contenders Stephen Curry Rookie Ticket Auto,,ERROR: No image function accepted the card id (None),
-curry-chrome-base,2009 Topps Chrome Stephen Curry 101,,ERROR: No image function accepted the card id (None),
-curry-prizm,2012 Panini Prizm Stephen Curry 1 Silver,,ERROR: No image function accepted the card id (None),
-wemby-silver,2023 Panini Prizm Victor Wembanyama 136 Silver,,ERROR: No image function accepted the card id (None),
-wemby-base,2023 Panini Prizm Victor Wembanyama 136,,ERROR: No image function accepted the card id (None),
-wemby-nt,2023 National Treasures Victor Wembanyama Rookie Patch Auto,,ERROR: No image function accepted the card id (None),
-mahomes-silver,2017 Panini Prizm Patrick Mahomes 269 Silver,,ERROR: No image function accepted the card id (None),
-mahomes-nt,2017 National Treasures Patrick Mahomes Rookie Patch Auto,,ERROR: No image function accepted the card id (None),
-mahomes-optic,2017 Donruss Optic Patrick Mahomes Rated Rookie 177,,ERROR: No image function accepted the card id (None),
-ohtani-update,2018 Topps Update Shohei Ohtani US1,,ERROR: No image function accepted the card id (None),
-ohtani-orange,2018 Bowman Chrome Shohei Ohtani Prospect Auto Orange,,ERROR: No image function accepted the card id (None),
-ohtani-chrome,2018 Topps Chrome Update Shohei Ohtani,,ERROR: No image function accepted the card id (None),
-griffey-ud,1989 Upper Deck Ken Griffey Jr 1,,ERROR: No image function accepted the card id (None),
-griffey-bowman,1989 Bowman Tiffany Ken Griffey Jr 220,,ERROR: No image function accepted the card id (None),
-griffey-ud-raw,1989 Upper Deck Ken Griffey Jr 1,,ERROR: No image function accepted the card id (None),
+curry-chrome-ref,2009 Topps Chrome Stephen Curry 101 Refractor,Stephen Curry,OK,curry-chrome-ref.jpg
+curry-contenders,2009 Playoff Contenders Stephen Curry Rookie Ticket Auto,Stephen Curry,ERROR: Image download failed. Tried: images.get_card_image_detailed: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte | images.get_card_image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte,
+curry-chrome-base,2009 Topps Chrome Stephen Curry 101,Stephen Curry,OK,curry-chrome-base.jpg
+curry-prizm,2012 Panini Prizm Stephen Curry 1 Silver,Stephen Curry,ERROR: Image download failed. Tried: images.get_card_image_detailed: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte | images.get_card_image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte,
+wemby-silver,2023 Panini Prizm Victor Wembanyama 136 Silver,Victor Wembanyama,ERROR: Image download failed. Tried: images.get_card_image_detailed: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte | images.get_card_image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte,
+wemby-base,2023 Panini Prizm Victor Wembanyama 136,Victor Wembanyama,ERROR: Image download failed. Tried: images.get_card_image_detailed: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte | images.get_card_image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte,
+wemby-nt,2023 National Treasures Victor Wembanyama,Victor Wembanyama,OK,wemby-nt.jpg
+mahomes-silver,2017 Panini Prizm Patrick Mahomes,Patrick Mahomes II,OK,mahomes-silver.jpg
+mahomes-nt,2017 National Treasures Patrick Mahomes Rookie Patch Auto,Patrick Mahomes II,OK,mahomes-nt.jpg
+mahomes-optic,2017 Donruss Optic Patrick Mahomes Rated Rookie 177,Patrick Mahomes II,OK,mahomes-optic.jpg
+ohtani-update,2018 Topps Update Shohei Ohtani US1,Shohei Ohtani,ERROR: Image download failed. Tried: images.get_card_image_detailed: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte | images.get_card_image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte,
+ohtani-orange,2018 Bowman Chrome Shohei Ohtani Prospect Auto Orange,Shohei Ohtani,ERROR: Image download failed. Tried: images.get_card_image_detailed: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte | images.get_card_image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte,
+ohtani-chrome,2018 Topps Chrome Update Shohei Ohtani,Shohei Ohtani,ERROR: Image download failed. Tried: images.get_card_image_detailed: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte | images.get_card_image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte,
+griffey-ud,1989 Upper Deck Ken Griffey Jr 1,Ken Griffey Jr.,ERROR: Image download failed. Tried: images.get_card_image_detailed: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte | images.get_card_image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte,
+griffey-bowman,1989 Bowman Tiffany Ken Griffey Jr 220,"Ken Griffey, Jr.",ERROR: Image download failed. Tried: images.get_card_image_detailed: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte | images.get_card_image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte,
+griffey-ud-raw,1989 Upper Deck Ken Griffey Jr 1,Ken Griffey Jr.,ERROR: Image download failed. Tried: images.get_card_image_detailed: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte | images.get_card_image: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte,
