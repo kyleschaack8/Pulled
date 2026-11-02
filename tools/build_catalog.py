@@ -155,38 +155,86 @@ def has_sales(ph):
     return ph and any(v for k in ("raw", "psa10") if k in ph for v in ph[k]["count"])
 
 
+def api_post(path, body):
+    if calls["n"] >= MAX_CALLS:
+        raise OutOfBudget()
+    wait = 1.5 - (time.time() - _last[0])
+    if wait > 0:
+        time.sleep(wait)
+    _last[0] = time.time()
+    calls["n"] += 1
+    req = urllib.request.Request(API + path, data=json.dumps(body).encode(), method="POST",
+                                 headers={"X-API-Key": KEY, "Content-Type": "application/json", "Accept": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        if e.code == 429:
+            raise RateLimited(f"HTTP 429 on {path}") from None
+        print(f"    HTTP {e.code} on {path}: {e.read()[:200].decode('utf-8', 'replace')}")
+        return None
+
+
+def sales_counts(card_ids):
+    """One bulk call: how many completed sales each candidate had in the last year (raw + graded, capped at 25 each)."""
+    res = api_post("/v1/pricing/", {"card_ids": card_ids[:100], "period": "1y", "listing_type": "auction"})
+    out = {}
+    for item in g(res, "results", default=[]) or []:
+        data = g(item, "data", default={}) or {}
+        n = int(g(g(data, "raw", default={}), "count", default=0) or 0)
+        for comp in g(data, "graded", default=[]) or []:
+            for gr in g(comp, "grades", default=[]) or []:
+                n += int(g(gr, "count", default=0) or 0)
+            n += int(g(comp, "count", default=0) or 0) if not g(comp, "grades") else 0
+        out[str(g(item, "card_id", "cardId"))] = n
+    return out
+
+
 def pick_cards(player):
+    """Find the player's rookie-year cards, then keep the most-traded ones (one per release)."""
     name, year = player["name"], str(player["rookieYear"])
     last = norm(name.replace(" Jr.", "").replace(" Jr", "")).split()[-1]
     res = api("/v1/catalog/cards", {"name": name, "year": year, "take": 100})
     cards = g(res, "cards", default=[]) or []
+    total = int(g(res, "totalCount", "total_count", default=0) or 0)
+    if cards and total > 100:
+        more = api("/v1/catalog/cards", {"name": name, "year": year, "take": 100, "skip": 100})
+        cards += g(more, "cards", default=[]) or []
     if not cards:
         res = api("/v1/catalog/cards", {"name": name, "take": 100, "sort": "year", "order": "asc"})
         cards = g(res, "cards", default=[]) or []
         rookie = [c for c in cards if str(g(c, "releaseYear", "release_year", default="")).startswith(year)]
-        cards = rookie or cards[:30]
-    picked, seen = [], set()
-
-    def score(c):
-        rel = norm(g(c, "releaseName", "release_name", default=""))
-        st = norm(g(c, "setName", "set_name", default=""))
-        attrs = [a.upper() for a in (g(c, "attributes", default=[]) or [])]
-        pri = next((i for i, p in enumerate(PRIORITY) if p in rel), len(PRIORITY))
-        base = 0 if ("base" in st or st == rel) else 1
-        rc = 0 if ("RC" in attrs or "rookie" in st) else 1
-        return (rc, base, pri)
-
-    for c in sorted(cards, key=score):
+        cards = rookie or cards[:40]
+    cands, seen = [], set()
+    for c in cards:
         if last not in norm(g(c, "name", default="")):
             continue
         if g(c, "isParallelOnly", "is_parallel_only", default=False) or g(c, "variationOf", "variation_of"):
             continue
         k = (g(c, "releaseName", "release_name"), g(c, "setName", "set_name"), g(c, "number"))
-        if k in seen:
+        if k in seen or not g(c, "id"):
             continue
         seen.add(k)
+        cands.append(c)
+    if not cands:
+        return []
+    counts = sales_counts([str(g(c, "id")) for c in cands])
+
+    def rank(c):
+        rel = norm(g(c, "releaseName", "release_name", default=""))
+        pri = next((i for i, p in enumerate(PRIORITY) if p in rel), len(PRIORITY))
+        return (-counts.get(str(g(c, "id")), 0), pri)
+
+    picked, releases = [], set()
+    for c in sorted(cands, key=rank):
+        if counts.get(str(g(c, "id")), 0) == 0:
+            break
+        rel = norm(g(c, "releaseName", "release_name", default=""))
+        if rel in releases:
+            continue
+        releases.add(rel)
         picked.append(c)
-        if len(picked) >= PER_PLAYER * 2:  # extra candidates in case some have no sales
+        if len(picked) >= PER_PLAYER + 2:
             break
     return picked
 
