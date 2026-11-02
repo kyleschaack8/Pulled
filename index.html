@@ -45,6 +45,23 @@ button, input, select { font: inherit; color: inherit; }
 .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-block: 12px; }
 .brand { font-size: 22px; font-weight: 800; letter-spacing: -0.03em; color: var(--fg); text-decoration: none; }
 .brand span { color: var(--accent); }
+.gsearch { position: relative; flex: 1 1 260px; max-width: 440px; min-width: 0; }
+.gsearch svg { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); pointer-events: none; }
+.gsearch input { width: 100%; min-height: 44px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); padding: 0 14px 0 40px; font-size: 15px; }
+.gsearch input:focus { border-color: var(--faint); }
+.gresults { position: absolute; top: calc(100% + 6px); left: 0; right: 0; z-index: 30; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 16px 40px rgba(0,0,0,.45); max-height: min(70vh, 520px); overflow-y: auto; padding: 6px; }
+.gresults .ghead { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); padding: 8px 10px 4px; }
+.gres { display: flex; gap: 10px; align-items: center; padding: 8px 10px; border-radius: 8px; text-decoration: none; color: var(--fg); min-height: 44px; }
+.gres[aria-selected="true"], .gres:hover { background: var(--raise); }
+.gres .gm { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.gres .gt { font-weight: 700; font-size: 14px; }
+.gres .gs { font-size: 12px; color: var(--faint); }
+.gres .gthumb { width: 30px; height: 42px; flex-shrink: 0; }
+.gres .gbadge { width: 30px; height: 30px; border-radius: 8px; background: var(--raise); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: var(--muted); flex-shrink: 0; }
+.gres mark { background: none; color: var(--accent); }
+.gempty { padding: 14px 10px; color: var(--muted); font-size: 14px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (max-width: 760px) { .gsearch { order: 3; flex-basis: 100%; max-width: none; } }
 .nav { display: flex; gap: 4px; flex-wrap: wrap; }
 .nav a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 14px; padding: 8px 12px; border-radius: 8px; min-height: 40px; display: inline-flex; align-items: center; }
 .nav a:hover { color: var(--fg); background: var(--raise); }
@@ -141,6 +158,12 @@ td.best { color: var(--fg); font-weight: 600; }
 <header class="topbar">
   <div class="wrap">
     <a class="brand" href="#home">Pulled<span>.</span></a>
+    <div class="gsearch" role="search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--faint)" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <label for="gq" class="sr">Search players and cards</label>
+      <input id="gq" type="search" placeholder="Search any player or card" autocomplete="off" role="combobox" aria-autocomplete="list" aria-controls="gresults" aria-expanded="false">
+      <div id="gresults" class="gresults" role="listbox" aria-label="Search results" hidden></div>
+    </div>
     <nav class="nav" aria-label="Main">
       <a href="#home" data-nav="home">Home</a>
       <a href="#movers" data-nav="movers">Movers</a>
@@ -277,11 +300,10 @@ async function loadRealData() {
     });
     if (!cards.length) return;
     (pl.players || []).forEach(p => {
-      if (!counts[p.id]) return;
       const pc = cards.filter(c => c.p === p.id).length;
       players[p.id] = {
         short: lastName(p.name), name: p.name, sport: p.sport, team: '', pos: p.pos, num: initials(p.name), status: p.status,
-        summary: `${p.status === 'active' ? 'Active' : 'Retired'} ${p.sport} ${p.pos}. Pulled tracks ${pc} of his ${p.rookieYear} rookie-year cards, raw and PSA 10, from real completed sales.`,
+        summary: pc ? `${p.status === 'active' ? 'Active' : 'Retired'} ${p.sport} ${p.pos}. Pulled tracks ${pc} of his ${p.rookieYear} rookie-year cards, raw and PSA 10, from real completed sales.` : `${p.status === 'active' ? 'Active' : 'Retired'} ${p.sport} ${p.pos}. Rookie cards from ${p.rookieYear}.`,
         stats: [], statsLabel: p.status === 'active' ? 'Stats' : 'Career', extra: '',
         note: { kind: 'info', title: p.status === 'active' ? 'Stats and injuries' : 'Career and legacy', text: p.status === 'active' ? 'Team, current stats, projections and injury updates arrive when the sports data feed is connected.' : 'Career stats and legacy events (Hall of Fame news, anniversaries) arrive with the sports data feed.' },
         events: []
@@ -559,7 +581,8 @@ function handlePhoto(file, id) {
 /* ---------- views ---------- */
 function viewHome() {
   const q = state.homeQuery.trim().toLowerCase();
-  const pids = Object.keys(PLAYERS).filter(pid => state.homeSport === 'All' || PLAYERS[pid].sport === state.homeSport).filter(pid => !q || PLAYERS[pid].name.toLowerCase().includes(q) || PLAYERS[pid].team.toLowerCase().includes(q) || PLAYERS[pid].sport.toLowerCase().includes(q));
+  const withCards = new Set(CARDS.map(c => c.p));
+  const pids = Object.keys(PLAYERS).filter(pid => withCards.has(pid)).filter(pid => state.homeSport === 'All' || PLAYERS[pid].sport === state.homeSport).filter(pid => !q || PLAYERS[pid].name.toLowerCase().includes(q) || PLAYERS[pid].team.toLowerCase().includes(q) || PLAYERS[pid].sport.toLowerCase().includes(q));
   const cardsQ = q ? CARDS.filter(c => (c.name + ' ' + PLAYERS[c.p].name + ' ' + c.detail).toLowerCase().includes(q)) : [];
   const sorted = [...CARDS].sort((a, b) => monthChange(b) - monthChange(a));
   return `<div class="view">
@@ -612,14 +635,14 @@ function viewPlayer(pid) {
       <p class="lede">${esc(p.summary)}</p>
     </div>
 
-    <div class="panel section">
+    ${cs.length ? `<div class="panel section">
       <div class="row between"><span style="font-weight:700">All ${esc(p.short)} cards combined</span>${segBtns('playerRange', [['3M', '3M'], ['6M', '6M'], ['1Y', '1Y']], state.playerRange)}</div>
       <div class="row" style="align-items:baseline"><span class="num ${cls(t.change)}" style="font-size:44px;font-weight:600;letter-spacing:-0.02em">${fmtPct(t.change)}</span><span style="color:var(--muted)">over the last ${state.playerRange === '1Y' ? 'year' : state.playerRange === '6M' ? '6 months' : '3 months'}, across ${cs.length} tracked cards</span></div>
       ${lineChart('ch-player', { series: [{ name: 'Combined change', values: t.series, color: t.change >= 0 ? 'var(--up)' : 'var(--down)', area: true }], labels, fmt: v => fmtPct(v, false), events: evs, zero: true, h: 220 })}
       ${eventLegend(evs.map(e => e.type))}
       <div class="tiles">${segs.map(([n, v]) => `<div class="tile"><span class="k">${n}</span><span class="v ${v === null ? 'flat' : cls(v)}" style="font-size:17px">${v === null ? '—' : fmtPct(v)}</span></div>`).join('')}</div>
       <span style="font-size:12px;color:var(--faint)">Weighted by how often each card sells, so one rare sale can't skew it.${biggest ? ` Biggest recent driver: ${esc(biggest.label)} (${MONTHS[biggest.i]}).` : ''}</span>
-    </div>
+    </div>` : `<div class="panel" style="display:flex;flex-direction:column;gap:6px"><span style="font-weight:700">Card prices coming soon</span><span style="color:var(--muted);font-size:14px">${esc(p.name)}'s rookie cards haven't been added yet. They'll appear here, with 12 months of real sale prices, after the next card data build.</span></div>`}
 
     <div class="section"><h2>${esc(p.statsLabel)}</h2>
       <div class="tiles"${p.stats.length ? '' : ' hidden'}>${p.stats.map(([k, v, r]) => `<div class="tile"><span class="k">${esc(k)}</span><span class="v">${esc(v)}</span>${r ? `<span class="k">${esc(r)} in league</span>` : ''}</div>`).join('')}</div>
@@ -629,7 +652,7 @@ function viewPlayer(pid) {
       <div class="alert ${p.note.kind}"><div><div style="font-weight:700">${esc(p.note.title)}</div><div style="color:var(--muted);font-size:14px">${esc(p.note.text)}</div></div></div>
     </div>
 
-    <div class="section">
+    <div class="section"${cs.length ? '' : ' hidden'}>
       <div class="row between"><h2>Cards <span style="color:var(--faint);font-weight:500;font-size:15px">${list.length} shown</span></h2>
         <label class="row" style="gap:8px;font-size:13px;color:var(--muted)" for="sort">Sort
           <select id="sort" style="min-height:40px;border-radius:10px;border:1px solid var(--line);background:var(--surface);padding:0 10px">
@@ -725,7 +748,7 @@ function viewCompare() {
       ${ids.length < 4 ? `<label for="addCompare" class="row" style="gap:8px;font-size:14px;color:var(--muted)">Add a card
         <select id="addCompare" style="min-height:44px;border-radius:10px;border:1px solid var(--line);background:var(--surface);padding:0 10px;max-width:100%">
           <option value="">Choose a card…</option>
-          ${Object.keys(PLAYERS).map(pid => `<optgroup label="${esc(PLAYERS[pid].name)}">${CARDS.filter(c => c.p === pid && !ids.includes(c.id)).map(c => `<option value="${c.id}">${esc(c.name)} · ${esc(c.detail)}</option>`).join('')}</optgroup>`).join('')}
+          ${Object.keys(PLAYERS).filter(pid => CARDS.some(c => c.p === pid)).map(pid => `<optgroup label="${esc(PLAYERS[pid].name)}">${CARDS.filter(c => c.p === pid && !ids.includes(c.id)).map(c => `<option value="${c.id}">${esc(c.name)} · ${esc(c.detail)}</option>`).join('')}</optgroup>`).join('')}
         </select></label>` : ''}
     </div>
     <div class="panel section">
@@ -775,6 +798,7 @@ const BUILD = {
     ['Compare tool', 'Up to four cards on price, sales volume and graded population.'],
     ['My collection', 'Total value and trend for the cards you add (saved in this browser).'],
     ['Card images', 'Original artwork for every card, your own photo, or real images from CardSight AI.'],
+    ['Search', 'Top-bar search on every page for any of the 107 players or their cards, with suggestions as you type, accent-insensitive, keyboard friendly.'],
     ['Player stats and injuries', 'Team, jersey, key stats with league rank, season / last 5 / projected / career table, awards and injury reports for 78 active players, refreshed nightly; career totals and honors for 29 legends.'],
     ['Biggest movers', 'Risers and drops for cards or whole players, by 1M to 1Y, sport, raw or PSA 10, with a minimum-sales filter to hide noisy one-sale swings.'],
     ['Real card data', '107 NBA, MLB and NFL players. Real cards, 12 months of raw and PSA 10 sale prices, and sales counts from CardSight AI, built by the "Build card data" robot.']
@@ -868,6 +892,79 @@ function viewMovers() {
   </div>`;
 }
 const notFound = () => `<div class="view"><div class="panel empty"><h2>That page doesn't exist</h2><a class="btn primary" href="#home">Go home</a></div></div>`;
+
+/* ---------- global search (top bar) ---------- */
+const fold = s => String(s || '').normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase();
+function hl(text, q) {
+  const t = String(text), f = fold(t), w = fold(q).trim().split(/\s+/)[0];
+  const i = w ? f.indexOf(w) : -1;
+  return i < 0 ? esc(t) : esc(t.slice(0, i)) + '<mark>' + esc(t.slice(i, i + w.length)) + '</mark>' + esc(t.slice(i + w.length));
+}
+function searchAll(raw) {
+  const q = fold(raw).trim(); if (!q) return [];
+  const words = q.split(/\s+/);
+  const has = new Set(CARDS.map(c => c.p));
+  const score = text => {
+    const t = fold(text);
+    if (!words.every(w => t.includes(w))) return -1;
+    if (t.startsWith(q)) return 3;
+    return t.split(/[\s.'-]+/).some(x => x.startsWith(words[0])) ? 2 : 1;
+  };
+  const players = Object.entries(PLAYERS).map(([id, p]) => {
+    const n = score(p.name), o = score([p.team, p.sport, p.pos].join(' '));
+    return { kind: 'player', id, p, s: n >= 0 ? n + 10 : o, cards: has.has(id) };
+  }).filter(r => r.s >= 0).sort((a, b) => b.s - a.s || (b.cards - a.cards) || a.p.name.localeCompare(b.p.name)).slice(0, 7);
+  const seen = new Set();
+  const cards = CARDS.map(c => ({ kind: 'card', c, s: score(c.name + ' ' + PLAYERS[c.p].name) }))
+    .filter(r => r.s >= 0 && !seen.has(r.c.name + r.c.p) && seen.add(r.c.name + r.c.p))
+    .sort((a, b) => b.s - a.s || avg(b.c.sales) - avg(a.c.sales)).slice(0, 5);
+  return [...players, ...cards];
+}
+const gs = { items: [], active: -1 };
+function gOpen(open) { const box = $('#gresults'), inp = $('#gq'); box.hidden = !open; inp.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+function gRender() {
+  const box = $('#gresults'), inp = $('#gq'), q = inp.value;
+  if (!q.trim()) { gOpen(false); return; }
+  const items = gs.items;
+  if (!items.length) { box.innerHTML = `<div class="gempty">No players or cards match “${esc(q)}”.</div>`; gOpen(true); return; }
+  let html = '', lastKind = '';
+  items.forEach((r, i) => {
+    if (r.kind !== lastKind) { html += `<div class="ghead">${r.kind === 'player' ? 'Players' : 'Cards'}</div>`; lastKind = r.kind; }
+    const sel = i === gs.active ? 'true' : 'false';
+    if (r.kind === 'player') {
+      const sub = [r.p.team, r.p.pos, r.p.sport].filter(Boolean).join(' · ') + (r.cards ? '' : ' · card prices coming soon');
+      html += `<a class="gres" role="option" id="gr-${i}" aria-selected="${sel}" href="#player-${r.id}"><span class="gbadge">${esc(r.p.sport)}</span><span class="gm"><span class="gt">${hl(r.p.name, q)}</span><span class="gs">${esc(sub)}</span></span>${r.p.injured ? `<span class="status injured">${esc(r.p.injured)}</span>` : ''}</a>`;
+    } else {
+      const m = monthChange(r.c);
+      html += `<a class="gres" role="option" id="gr-${i}" aria-selected="${sel}" href="#card-${r.c.id}"><span class="gthumb">${cardVisual(r.c)}</span><span class="gm"><span class="gt">${hl(r.c.name, q)}</span><span class="gs">${esc(PLAYERS[r.c.p].name)} · ${esc(r.c.detail)}</span></span><span class="num" style="text-align:right;font-size:13px">${money(last(r.c.price))}<br><span class="${cls(m)}">${fmtPct(m)}</span></span></a>`;
+    }
+  });
+  box.innerHTML = html; gOpen(true);
+  const act = gs.active >= 0 && document.getElementById('gr-' + gs.active);
+  if (act && act.scrollIntoView) act.scrollIntoView({ block: 'nearest' });
+  inp.setAttribute('aria-activedescendant', gs.active >= 0 ? 'gr-' + gs.active : '');
+}
+function gGo(i) {
+  const r = gs.items[i]; if (!r) return;
+  location.hash = r.kind === 'player' ? 'player-' + r.id : 'card-' + r.c.id;
+  gClose();
+}
+function gClose() { const inp = $('#gq'); inp.value = ''; gs.items = []; gs.active = -1; gOpen(false); inp.blur(); }
+(function wireSearch() {
+  const inp = $('#gq'), box = $('#gresults');
+  if (!inp || !inp.addEventListener) return;
+  inp.addEventListener('input', () => { gs.items = searchAll(inp.value); gs.active = gs.items.length ? 0 : -1; gRender(); });
+  inp.addEventListener('focus', () => { if (inp.value.trim()) gRender(); });
+  inp.addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown') { e.preventDefault(); if (gs.items.length) { gs.active = (gs.active + 1) % gs.items.length; gRender(); } }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); if (gs.items.length) { gs.active = (gs.active - 1 + gs.items.length) % gs.items.length; gRender(); } }
+    else if (e.key === 'Enter') { e.preventDefault(); gGo(gs.active >= 0 ? gs.active : 0); }
+    else if (e.key === 'Escape') { gClose(); }
+  });
+  box.addEventListener('mousedown', e => e.preventDefault());
+  box.addEventListener('click', e => { if (e.target.closest('.gres')) setTimeout(gClose, 0); });
+  inp.addEventListener('blur', () => setTimeout(() => gOpen(false), 120));
+})();
 
 /* ---------- router ---------- */
 function render() {
