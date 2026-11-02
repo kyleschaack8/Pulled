@@ -168,6 +168,21 @@ main { padding-block: 8px 72px; }
 .view { display: flex; flex-direction: column; gap: 28px; }
 h1 { margin: 0; font-size: clamp(30px, 5vw, 44px); line-height: 1.05; letter-spacing: -0.035em; font-weight: 800; text-wrap: balance; }
 h2 { margin: 0; font-size: 20px; letter-spacing: -0.02em; font-weight: 700; text-wrap: balance; }
+.about { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+.about-bio { display: flex; flex-direction: column; gap: 10px; }
+.about-bio p { margin: 0; font-size: 17px; line-height: 1.55; color: var(--text); max-width: 62ch; }
+.about-meta { display: flex; flex-wrap: wrap; gap: 6px; }
+.drivers { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); overflow: hidden; }
+.drivers h3 { margin: 0; padding: 12px 16px; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); border-bottom: 1px solid var(--line); }
+.drv { display: grid; grid-template-columns: 26px 1fr; gap: 10px; padding: 11px 16px; border-bottom: 1px solid var(--line); }
+.drv:last-child { border-bottom: 0; }
+.drv-i { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-size: 13px; font-weight: 700; background: color-mix(in srgb, var(--ta, #8d94a3) 18%, transparent); color: var(--text); }
+.drv-i.up { background: color-mix(in srgb, var(--up) 18%, transparent); color: var(--up); }
+.drv-i.down { background: color-mix(in srgb, var(--down) 18%, transparent); color: var(--down); }
+.drv b { display: block; font-size: 14px; }
+.drv span { display: block; font-size: 13.5px; color: var(--muted); line-height: 1.45; }
+.drv-live { font-size: 10px; letter-spacing: .1em; font-weight: 700; color: var(--up); margin-left: 6px; vertical-align: 1px; }
+@media (max-width: 760px) { .about { grid-template-columns: 1fr; } }
 .lede { margin: 0; color: var(--muted); font-size: 17px; max-width: 62ch; }
 .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); }
 .section { display: flex; flex-direction: column; gap: 14px; }
@@ -278,6 +293,8 @@ td.best { color: var(--fg); font-weight: 600; }
 let MONTHS = ['Dec','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov'];
 const RANGES = { '1M': 2, '3M': 4, '6M': 7, '1Y': 12 };
 
+let PROFILES = {"curry": {"bio": "The greatest shooter in NBA history and the all-time leader in made threes. Four titles, two MVPs (one unanimous) and a 2022 Finals MVP.", "drivers": [["Shooting records", "Three-point milestones and big scoring nights get attention fast."], ["Playoff runs", "His prices follow how far the team goes in the postseason."], ["Late-career window", "As he nears the end of his career, legacy buying keeps a floor under his 2009-10 rookies."]]}, "wemby": {"bio": "The first pick in 2023 and the 2024 Rookie of the Year, a 7-foot-4 talent who led the league in blocks as a rookie.", "drivers": [["Health", "A blood clot ended his 2024-25 season early. Health news is the biggest swing factor."], ["Generational hype", "He's priced like a future MVP, so big games move him a lot and quiet stretches cool him."], ["Prizm and Select rookies", "His 2023-24 rookies are some of the most traded modern basketball cards."]]}, "mahomes": {"bio": "A three-time Super Bowl champion and two-time MVP who redefined quarterback play.", "drivers": [["Playoff results", "His cards follow how far the Chiefs go in January."], ["Records", "Passing milestones keep him in the spotlight."], ["Blue-chip status", "His 2017 rookies are seen as the top modern football cards."]]}, "ohtani": {"bio": "Baseball's two-way superstar who hits like an MVP and pitches like an ace. Multiple MVPs, the first 50-homer, 50-steal season in 2024 and back-to-back World Series titles with the Dodgers.", "drivers": [["Pitching return", "Starts on the mound add to his value because they show the two-way story is still going."], ["Global demand", "Collectors in Japan and the US compete for his cards, which keeps prices high."], ["Historic numbers", "Records and milestone games cause quick spikes."]]}, "griffey": {"bio": "A Hall of Famer with 630 homers and 10 Gold Gloves, one of the most loved players of the 1990s.", "drivers": [["Iconic rookie", "His 1989 Upper Deck #1 is one of the hobby's most famous cards."], ["Nostalgia", "Collectors who grew up in the 1990s drive his market."], ["Condition", "PSA 10 copies sell for many times the price of lower grades."]]}};
+
 let PLAYERS = {
   curry: { short: 'Curry', name: 'Stephen Curry', sport: 'NBA', team: 'Golden State Warriors', pos: 'PG', num: '#30', status: 'active',
     summary: "Still the league's top long-range shooter in year 18. His card market is steady to rising, driven by a hot start to the season.",
@@ -376,7 +393,7 @@ function lastName(name) { const w = name.replace(/,?\s+Jr\.?$/, '').split(' '); 
 async function loadRealData() {
   try {
     const get = f => fetch('data/' + f, { cache: 'no-store' }).then(r => (r.ok ? r.json() : null));
-    const [pl, cd, pr, sj, lg] = await Promise.all([get('players.json'), get('cards.json'), get('prices.json'), get('stats.json').catch(() => null), get('legends.json').catch(() => null)]);
+    const [pl, cd, pr, sj, lg, pf] = await Promise.all([get('players.json'), get('cards.json'), get('prices.json'), get('stats.json').catch(() => null), get('legends.json').catch(() => null), get('profiles.json').catch(() => null)]);
     const SJ = (sj && sj.players) || {}, LG = (lg && lg.players) || {};
     if (!pl || !cd || !pr || !Array.isArray(cd.cards) || !cd.cards.length || !Array.isArray(pr.months)) return;
     const players = {}, cards = [];
@@ -407,6 +424,7 @@ async function loadRealData() {
       };
       applyStats(players[p.id], SJ[p.id] || (LG[p.id] && { ...LG[p.id], statsLabel: 'Career totals', awards: [...(LG[p.id].hof ? [['Hall of Fame class of ' + LG[p.id].hof, '']] : []), ...(LG[p.id].awards || [])] }), p);
     });
+    if (pf && pf.players) PROFILES = pf.players;
     PLAYERS = players; CARDS = cards.filter(c => players[c.p]); CARD = Object.fromEntries(CARDS.map(c => [c.id, c]));
     MONTHS = pr.months.map(m => MON[parseInt(m.slice(5, 7), 10) - 1] + (m.slice(5, 7) === '01' ? " '" + m.slice(2, 4) : ''));
     const top = [...CARDS].sort((a, b) => avg(b.sales) - avg(a.sales));
@@ -1153,6 +1171,46 @@ function sparkline(vals, color) {
   return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" aria-hidden="true"><path d="${d}" fill="none" stroke="${color}" stroke-width="2" stroke-linejoin="round"/></svg>`;
 }
 
+/* What moves this player's cards: written drivers plus live signals from Pulled's own data */
+function seasonPhase(sport, d = new Date()) {
+  const m = d.getMonth() + 1;
+  if (sport === 'NBA') return m >= 10 || m <= 3 ? ['In season', 'Regular season is on, so game nights and injury reports move prices most.'] : m <= 6 ? ['Playoffs', 'Playoff games move NBA cards more than any other time of year.'] : ['Offseason', 'No games, so trades, free agency and the draft drive prices. Values often drift lower.'];
+  if (sport === 'MLB') return m >= 4 && m <= 9 ? ['In season', 'Baseball cards follow hot and cold streaks across the long season.'] : m === 10 ? ['Postseason', 'October performances can move baseball cards sharply.'] : ['Offseason', 'Award voting, trades and signings drive prices until spring training.'];
+  if (sport === 'NFL') return m >= 9 || m === 1 ? [m === 1 ? 'Playoffs' : 'In season', m === 1 ? 'Playoff games bring the biggest football price swings.' : 'Football cards climb once games start and react to each week\'s results.'] : m === 2 ? ['Super Bowl', 'Super Bowl results set the tone for the offseason market.'] : ['Offseason', 'Football cards usually cool in the offseason. The draft and contracts are the main news.'];
+  return null;
+}
+function liveDrivers(pid, p, cs) {
+  const out = [];
+  if (p.status === 'active') {
+    const ph = seasonPhase(p.sport); if (ph) out.push(['◷', '', ph[0], ph[1]]);
+    if (p.injured) out.push(['+', 'down', 'Injury: ' + p.injured, 'An active injury designation. Cards usually dip until there is a clear return date.']);
+  }
+  if (cs.length) {
+    const t = playerTrend(pid, '3M').change;
+    if (isFinite(t)) out.push([t >= 0 ? '▲' : '▼', t >= 0 ? 'up' : 'down', `${fmtPct(t, false)} in 3 months`, t >= 5 ? 'Buyers have been paying more lately across his tracked cards.' : t <= -5 ? 'Prices have been sliding across his tracked cards.' : 'His tracked cards have been fairly flat lately.']);
+    const by = {}; cs.forEach(c => { const b = c.id.replace(/-(raw|psa10)$/, ''); (by[b] = by[b] || {})[c.tags.includes('Graded') ? 'g' : 'r'] = last(c.price); });
+    const r = Object.values(by).filter(x => x.g && x.r).map(x => x.g / x.r).sort((a, b) => a - b);
+    if (r.length) { const m = r[Math.floor(r.length / 2)]; out.push(['×', '', `PSA 10 premium: ${m.toFixed(1)}×`, `A PSA 10 copy typically sells for ${m.toFixed(1)} times a raw copy, so condition matters ${m >= 4 ? 'a lot' : 'some'} here.`]); }
+    const vol = cs.reduce((a, c) => a + c.sales.slice(-3).reduce((x, y) => x + y, 0), 0) / 3;
+    out.push(['#', '', `About ${Math.round(vol)} sales a month`, vol >= 40 ? 'A busy market, so prices update quickly and are reliable.' : vol >= 10 ? 'Steady trading, enough to trust the trend.' : 'Thin trading, so a single sale can move the price.']);
+  }
+  return out;
+}
+function aboutSection(pid, p, cs) {
+  const pr = PROFILES[pid];
+  const bio = pr && pr.bio ? pr.bio : p.summary;
+  const written = pr && pr.drivers ? pr.drivers : [];
+  const live = liveDrivers(pid, p, cs);
+  if (!written.length && !live.length) return `<p class="lede">${esc(bio)}</p>`;
+  return `<div class="about" style="--ta:${esc(p.color || '#8d94a3')}">
+    <div class="about-bio"><span class="eyebrow">Who he is</span><p>${esc(bio)}</p>
+      ${pr && p.summary && cs.length ? `<span style="font-size:13px;color:var(--faint)">${esc(p.summary)}</span>` : ''}
+      ${live.length ? `<div class="drivers" style="margin-top:6px"><h3>Right now <span class="drv-live">● LIVE</span></h3>${live.map(([i, k, t, d]) => `<div class="drv"><div class="drv-i ${k}">${esc(i)}</div><div><b>${esc(t)}</b><span>${esc(d)}</span></div></div>`).join('')}</div>` : ''}
+    </div>
+    ${written.length ? `<div class="drivers"><h3>What moves his cards</h3>${written.map(([t, d], n) => `<div class="drv"><div class="drv-i">${n + 1}</div><div><b>${esc(t)}</b><span>${esc(d)}</span></div></div>`).join('')}</div>` : ''}
+  </div>`;
+}
+
 function viewPlayer(pid) {
   const p = PLAYERS[pid]; if (!p) return notFound();
   const t = playerTrend(pid, state.playerRange);
@@ -1181,7 +1239,7 @@ function viewPlayer(pid) {
         </div>
         </div>
       </div>`; })()}
-      <p class="lede">${esc(p.summary)}</p>
+      ${aboutSection(pid, p, cs)}
     </div>
 
     ${cs.length ? `<div class="panel section">
@@ -1347,6 +1405,7 @@ const BUILD = {
     ['Card pages', 'Price chart with game, injury and news markers, sales volume and key stats.'],
     ['Auto-written "Why it moved"', 'Generated from price, sales and event data. No manual writing.'],
     ['Compare tool', 'Up to four cards on price, sales volume and graded population.'],
+    ['Player profiles', 'Every player page has a short bio, the 3 things that move his cards most, and live signals from Pulled data: season phase, injuries, 3-month trend, PSA 10 premium and sales volume.'],
     ['My collection', 'Total value and trend for the cards you add (saved in this browser).'],
     ['Card images', 'Original artwork for every card, your own photo, or real images from CardSight AI.'],
     ['Cold cards', 'The top 5 drops this month (10%+ down on 3+ recent sales) get frost crystals growing in from the edges, sinking cold mist, falling snow and a Cold tag.'],

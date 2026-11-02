@@ -1,0 +1,1824 @@
+{
+ "note": "Written player bios and value drivers. Career facts as of 2025-26; live signals are computed on the page.",
+ "players": {
+  "lebron-james": {
+   "bio": "The NBA's all-time leading scorer and the first player to pass 40,000 points. Four titles and four MVPs across a career that started straight out of high school in 2003.",
+   "drivers": [
+    [
+     "Retirement watch",
+     "Every hint about his final season pushes collectors to buy before the farewell tour."
+    ],
+    [
+     "Milestones",
+     "Scoring records and playing alongside his son Bronny bring short bursts of demand."
+    ],
+    [
+     "Blue-chip rookies",
+     "His 2003-04 rookie cards are treated like long-term investments, so they hold value even in slow markets."
+    ]
+   ]
+  },
+  "stephen-curry": {
+   "bio": "The greatest shooter in NBA history and the all-time leader in made threes. Four titles, two MVPs (one unanimous) and a 2022 Finals MVP.",
+   "drivers": [
+    [
+     "Shooting records",
+     "Three-point milestones and big scoring nights get attention fast."
+    ],
+    [
+     "Playoff runs",
+     "His prices follow how far the team goes in the postseason."
+    ],
+    [
+     "Late-career window",
+     "As he nears the end of his career, legacy buying keeps a floor under his 2009-10 rookies."
+    ]
+   ]
+  },
+  "kevin-durant": {
+   "bio": "One of the most efficient scorers ever, with two titles, two Finals MVPs, a 2014 MVP and a record four Olympic gold medals.",
+   "drivers": [
+    [
+     "Health",
+     "He came back from a 2019 Achilles tear, so any injury news moves his cards more than usual."
+    ],
+    [
+     "Team changes",
+     "Trades and new teams reset the story around him and often bring a bump."
+    ],
+    [
+     "Scoring milestones",
+     "Climbing the all-time scoring list keeps legacy collectors interested."
+    ]
+   ]
+  },
+  "giannis-antetokounmpo": {
+   "bio": "A two-time MVP, 2020 Defensive Player of the Year and 2021 champion and Finals MVP. Drafted 15th as a raw 18-year-old from Greece.",
+   "drivers": [
+    [
+     "Trade rumors",
+     "Talk about him leaving Milwaukee is one of the biggest swings in the NBA card market."
+    ],
+    [
+     "Playoff success",
+     "Deep runs bring back the 2021 title story and lift prices."
+    ],
+    [
+     "Underdog story",
+     "His rise from a late lottery pick makes his 2013-14 rookies a favorite with long-term holders."
+    ]
+   ]
+  },
+  "nikola-jokic": {
+   "bio": "A three-time MVP and the 2023 champion and Finals MVP. He went 41st overall in 2014, one of the biggest draft steals ever.",
+   "drivers": [
+    [
+     "MVP races",
+     "His prices rise and fall with the MVP voting conversation."
+    ],
+    [
+     "Triple-doubles",
+     "Stat-sheet records and historic nights draw attention."
+    ],
+    [
+     "Low supply",
+     "As a second-round pick he had fewer premium rookie cards made, so the good ones are scarce."
+    ]
+   ]
+  },
+  "luka-doncic": {
+   "bio": "The 2019 Rookie of the Year and a perennial MVP candidate who led Dallas to the 2024 Finals. A stunning 2025 trade sent him to the Lakers.",
+   "drivers": [
+    [
+     "Big-market move",
+     "Joining the Lakers widened his fan base and the number of buyers."
+    ],
+    [
+     "Conditioning and health",
+     "Questions about fitness and minor injuries cause quick dips."
+    ],
+    [
+     "Scoring nights",
+     "50-point games and MVP talk bring sharp short-term spikes."
+    ]
+   ]
+  },
+  "joel-embiid": {
+   "bio": "The 2023 MVP and a two-time scoring champion. He missed his first two seasons with foot injuries after going third in 2014.",
+   "drivers": [
+    [
+     "Health",
+     "Availability is the single biggest factor. Injury news hits his cards hard."
+    ],
+    [
+     "Playoff results",
+     "Early exits weigh on his market more than regular-season numbers help it."
+    ],
+    [
+     "Rebound potential",
+     "A healthy stretch can bring big percentage gains from a lower base."
+    ]
+   ]
+  },
+  "jayson-tatum": {
+   "bio": "The third pick in 2017 and the leader of Boston's 2024 title team. A multi-time All-NBA first-teamer.",
+   "drivers": [
+    [
+     "Achilles recovery",
+     "He tore his Achilles in the 2025 playoffs, so return-to-play news is the main driver right now."
+    ],
+    [
+     "Championship equity",
+     "The 2024 title keeps his graded rookies in steady demand."
+    ],
+    [
+     "Market size",
+     "Boston has a large, active collector base."
+    ]
+   ]
+  },
+  "anthony-edwards": {
+   "bio": "The first pick in 2020, a 2024 Olympic gold medalist and the face of Minnesota's back-to-back conference finals runs.",
+   "drivers": [
+    [
+     "Star power",
+     "Big commercials and highlight dunks keep him in the spotlight."
+    ],
+    [
+     "Playoffs",
+     "Deep postseason runs have produced his biggest price jumps."
+    ],
+    [
+     "Next face of the league",
+     "Collectors buy him as a long-term bet on the league's next superstar."
+    ]
+   ]
+  },
+  "shai-gilgeous-alexander": {
+   "bio": "The 2025 MVP, 2025 champion and Finals MVP. He turned into the league's top scorer after going 11th in 2018.",
+   "drivers": [
+    [
+     "Repeat seasons",
+     "Defending the title and MVP keeps demand high; a slip would cool it."
+    ],
+    [
+     "Scoring titles",
+     "Consistent 30-point nights support steady prices."
+    ],
+    [
+     "Late adopters",
+     "Many collectors were late to him, so his market is still catching up."
+    ]
+   ]
+  },
+  "victor-wembanyama": {
+   "bio": "The first pick in 2023 and the 2024 Rookie of the Year, a 7-foot-4 talent who led the league in blocks as a rookie.",
+   "drivers": [
+    [
+     "Health",
+     "A blood clot ended his 2024-25 season early. Health news is the biggest swing factor."
+    ],
+    [
+     "Generational hype",
+     "He's priced like a future MVP, so big games move him a lot and quiet stretches cool him."
+    ],
+    [
+     "Prizm and Select rookies",
+     "His 2023-24 rookies are some of the most traded modern basketball cards."
+    ]
+   ]
+  },
+  "ja-morant": {
+   "bio": "The second pick in 2019, Rookie of the Year and 2022 Most Improved Player. Known for some of the most explosive dunks in the league.",
+   "drivers": [
+    [
+     "Off-court news",
+     "League suspensions in 2023 hit his cards hard. Headlines still move them."
+    ],
+    [
+     "Injuries",
+     "Shoulder and other injuries have cost him big stretches."
+    ],
+    [
+     "Highlights",
+     "Viral dunks bring short bursts of buying."
+    ]
+   ]
+  },
+  "zion-williamson": {
+   "bio": "The first pick in 2019 after one of the most hyped college seasons ever at Duke.",
+   "drivers": [
+    [
+     "Availability",
+     "Missed games have been the main story, so health is everything for his cards."
+    ],
+    [
+     "Buy-low interest",
+     "Prices are well below his rookie peak, so healthy stretches bring big percentage gains."
+    ],
+    [
+     "Trade talk",
+     "A new team could reset his market."
+    ]
+   ]
+  },
+  "devin-booker": {
+   "bio": "A four-time All-Star who scored 70 in a game at age 20, led Phoenix to the 2021 Finals and won Olympic gold in 2024.",
+   "drivers": [
+    [
+     "Team success",
+     "His cards follow Phoenix's results more than his own scoring."
+    ],
+    [
+     "Scoring outbursts",
+     "Big nights remind collectors of his 70-point game."
+    ],
+    [
+     "Steady demand",
+     "A deep fan base keeps prices from falling far."
+    ]
+   ]
+  },
+  "jalen-brunson": {
+   "bio": "The Knicks captain and 2025 Clutch Player of the Year, a second-round pick in 2018 who became a top-10 scorer.",
+   "drivers": [
+    [
+     "New York market",
+     "Knicks success brings one of the biggest fan bases into the hobby."
+    ],
+    [
+     "Playoff runs",
+     "Postseason performances drive his largest moves."
+    ],
+    [
+     "Late bloomer",
+     "Lower print runs from his quiet rookie year make good copies scarce."
+    ]
+   ]
+  },
+  "tyrese-haliburton": {
+   "bio": "Indiana's All-NBA point guard who led the Pacers to the 2025 Finals with a string of game-winning shots.",
+   "drivers": [
+    [
+     "Achilles recovery",
+     "He tore his Achilles in Game 7 of the 2025 Finals, so recovery news is the main driver."
+    ],
+    [
+     "Clutch moments",
+     "His 2025 playoff run created a lasting story collectors pay for."
+    ],
+    [
+     "Small market",
+     "Indiana's smaller fan base limits how high prices go."
+    ]
+   ]
+  },
+  "paolo-banchero": {
+   "bio": "The first pick in 2022 and the 2023 Rookie of the Year, Orlando's lead scorer.",
+   "drivers": [
+    [
+     "All-Star leap",
+     "Talk of a jump to superstar level brings buying."
+    ],
+    [
+     "Team results",
+     "Orlando's playoff success lifts his profile."
+    ],
+    [
+     "Injuries",
+     "Missed time cools his market quickly."
+    ]
+   ]
+  },
+  "chet-holmgren": {
+   "bio": "The second pick in 2022 who missed his first season with a foot injury, then won a title with Oklahoma City in 2025.",
+   "drivers": [
+    [
+     "Ring equity",
+     "The 2025 title gave his cards a lasting boost."
+    ],
+    [
+     "Health",
+     "His thin frame makes injury news a bigger concern for buyers."
+    ],
+    [
+     "Second-star role",
+     "His prices react when his role on the team grows or shrinks."
+    ]
+   ]
+  },
+  "cade-cunningham": {
+   "bio": "The first pick in 2021 who turned Detroit around and led the Pistons back to the playoffs in 2025.",
+   "drivers": [
+    [
+     "Team turnaround",
+     "Detroit winning is the main reason his cards have climbed."
+    ],
+    [
+     "All-NBA selections",
+     "Awards confirm he's a star and support prices."
+    ],
+    [
+     "Long runway",
+     "Buyers see room to grow, so good months bring strong gains."
+    ]
+   ]
+  },
+  "lamelo-ball": {
+   "bio": "The third pick in 2020 and the 2021 Rookie of the Year, known for flashy passing and long-range shooting.",
+   "drivers": [
+    [
+     "Ankle injuries",
+     "Repeated ankle problems have kept prices down."
+    ],
+    [
+     "Pop culture",
+     "His family name and big social following bring in buyers outside the usual hobby."
+    ],
+    [
+     "Healthy stretches",
+     "Strong runs of games bring quick rebounds."
+    ]
+   ]
+  },
+  "donovan-mitchell": {
+   "bio": "A multi-time All-Star scoring guard who scored 71 in a 2023 game and leads Cleveland's contender.",
+   "drivers": [
+    [
+     "Playoffs",
+     "Getting past the second round is the story that would lift his cards most."
+    ],
+    [
+     "Scoring nights",
+     "40-point games bring short spikes."
+    ],
+    [
+     "Mid-tier pricing",
+     "His rookies sit below the top stars, so they move with the overall market."
+    ]
+   ]
+  },
+  "kawhi-leonard": {
+   "bio": "A two-time champion and two-time Finals MVP with two different teams, plus two Defensive Player of the Year awards.",
+   "drivers": [
+    [
+     "Health",
+     "Managed minutes and knee issues make availability the main factor."
+    ],
+    [
+     "Playoff reputation",
+     "His past playoff runs keep a strong base of buyers."
+    ],
+    [
+     "Off-court news",
+     "League investigations or team news can cause sharp moves."
+    ]
+   ]
+  },
+  "damian-lillard": {
+   "bio": "The 2013 Rookie of the Year and a nine-time All-Star known for long-range game-winners.",
+   "drivers": [
+    [
+     "Achilles recovery",
+     "He tore his Achilles in the 2025 playoffs, so recovery news drives his market."
+    ],
+    [
+     "Portland nostalgia",
+     "His history in Portland keeps a loyal set of collectors."
+    ],
+    [
+     "Legacy",
+     "Hall of Fame talk supports his 2012-13 rookies."
+    ]
+   ]
+  },
+  "anthony-davis": {
+   "bio": "The first pick in 2012, a 2020 champion and a perennial All-NBA big man. He was traded to Dallas in the 2025 Luka trade.",
+   "drivers": [
+    [
+     "Health",
+     "Injuries have been the steady drag on his prices."
+    ],
+    [
+     "Team fit",
+     "His new team's success after the 2025 trade drives his market."
+    ],
+    [
+     "Legacy",
+     "Hall of Fame odds support older graded rookies."
+    ]
+   ]
+  },
+  "cooper-flagg": {
+   "bio": "The first pick in the 2025 draft after winning national player of the year as a Duke freshman.",
+   "drivers": [
+    [
+     "Rookie season",
+     "Every early game is scored by collectors. Big nights cause sharp jumps, slumps cause sharp drops."
+    ],
+    [
+     "Rookie of the Year race",
+     "Award odds are a direct driver this season."
+    ],
+    [
+     "Topps license",
+     "His NBA rookies come as Topps returns to basketball, which brings new sets and heavy print-run attention."
+    ]
+   ]
+  },
+  "dylan-harper": {
+   "bio": "The second pick in the 2025 draft after a standout freshman season at Rutgers.",
+   "drivers": [
+    [
+     "Role and minutes",
+     "How much he plays as a rookie is the biggest driver right now."
+    ],
+    [
+     "Rookie of the Year race",
+     "Award talk lifts prices quickly."
+    ],
+    [
+     "Prospect volatility",
+     "Early-career cards swing harder in both directions than established stars."
+    ]
+   ]
+  },
+  "michael-jordan": {
+   "bio": "Widely seen as the greatest basketball player ever. Six titles, six Finals MVPs and five MVPs.",
+   "drivers": [
+    [
+     "Iconic rookie",
+     "His 1986-87 Fleer rookie is one of the most traded cards in the hobby, so it sets the tone for his whole market."
+    ],
+    [
+     "Documentaries and anniversaries",
+     "Media like The Last Dance have caused big jumps."
+    ],
+    [
+     "Overall hobby health",
+     "As a blue-chip name, he moves with the broad card market."
+    ]
+   ]
+  },
+  "kobe-bryant": {
+   "bio": "A five-time champion, 2008 MVP and author of the 81-point game. He died in a helicopter crash in 2020.",
+   "drivers": [
+    [
+     "Anniversaries",
+     "Dates tied to his career and life bring waves of buying."
+    ],
+    [
+     "Iconic rookies",
+     "His 1996-97 rookies, especially Topps Chrome, are hobby staples."
+    ],
+    [
+     "Graded scarcity",
+     "High-grade copies of his rookies are hard to find, which supports PSA 10 prices."
+    ]
+   ]
+  },
+  "tim-duncan": {
+   "bio": "A five-time champion, two-time MVP and three-time Finals MVP, all with San Antonio.",
+   "drivers": [
+    [
+     "Undervalued legend",
+     "His quiet personality kept prices lower than his résumé suggests, which draws value buyers."
+    ],
+    [
+     "Spurs nostalgia",
+     "The Wembanyama era has brought new attention to Spurs legends."
+    ],
+    [
+     "Graded rookies",
+     "PSA 10 copies of his 1997-98 rookies carry most of the value."
+    ]
+   ]
+  },
+  "shaquille-oneal": {
+   "bio": "A four-time champion, three-time Finals MVP and 2000 MVP. One of the most dominant centers ever.",
+   "drivers": [
+    [
+     "Media presence",
+     "His TV and commercial fame keeps new fans buying."
+    ],
+    [
+     "1992 rookies",
+     "His rookie year has many sets, so condition and grade matter most."
+    ],
+    [
+     "Nostalgia",
+     "1990s collectors coming back to the hobby lift his market."
+    ]
+   ]
+  },
+  "magic-johnson": {
+   "bio": "A five-time champion and three-time MVP whose rivalry with Larry Bird reshaped the NBA in the 1980s.",
+   "drivers": [
+    [
+     "Shared rookie card",
+     "His key rookie is the 1980 Topps card he shares with Larry Bird and Julius Erving."
+    ],
+    [
+     "Condition",
+     "Centering and grade drive huge price differences on 1980s cards."
+    ],
+    [
+     "Anniversaries",
+     "Showtime Lakers anniversaries and media bring interest."
+    ]
+   ]
+  },
+  "larry-bird": {
+   "bio": "A three-time champion and three straight MVPs from 1984 to 1986 with Boston.",
+   "drivers": [
+    [
+     "Shared rookie card",
+     "His main rookie is the 1980 Topps card with Magic Johnson and Julius Erving."
+    ],
+    [
+     "Condition",
+     "High grades are rare, so PSA 10s sell at a big premium."
+    ],
+    [
+     "Celtics success",
+     "Boston's success brings attention back to its legends."
+    ]
+   ]
+  },
+  "dirk-nowitzki": {
+   "bio": "The 2007 MVP and 2011 champion and Finals MVP, who spent all 21 seasons with Dallas.",
+   "drivers": [
+    [
+     "Legacy",
+     "Hall of Fame recognition and his one-team career keep a steady base."
+    ],
+    [
+     "International collectors",
+     "His popularity in Europe adds buyers beyond the US."
+    ],
+    [
+     "Rookie sets",
+     "His 1998-99 rookies are limited, which supports graded prices."
+    ]
+   ]
+  },
+  "dwyane-wade": {
+   "bio": "A three-time champion and the 2006 Finals MVP, one of the best shooting guards ever.",
+   "drivers": [
+    [
+     "2003 draft class",
+     "He's tied to the famous 2003 class with LeBron, so that class's interest helps him."
+    ],
+    [
+     "Exquisite rookies",
+     "His high-end 2003-04 rookies drive his top-end market."
+    ],
+    [
+     "Heat nostalgia",
+     "Big-three era anniversaries bring interest."
+    ]
+   ]
+  },
+  "allen-iverson": {
+   "bio": "The first pick in 1996, 2001 MVP and four-time scoring champion. A cultural icon of his era.",
+   "drivers": [
+    [
+     "Cultural cachet",
+     "His style and influence on fashion and hip-hop bring in collectors beyond basketball."
+    ],
+    [
+     "1996 rookie class",
+     "He's part of a famous class with Kobe, which keeps attention high."
+    ],
+    [
+     "Graded copies",
+     "Clean high-grade copies are hard to find."
+    ]
+   ]
+  },
+  "kevin-garnett": {
+   "bio": "The 2004 MVP, 2008 champion and Defensive Player of the Year, drafted straight out of high school in 1995.",
+   "drivers": [
+    [
+     "Value play",
+     "His prices sit below other legends of his era, drawing value buyers."
+    ],
+    [
+     "Media and podcasts",
+     "His media presence keeps him in front of fans."
+    ],
+    [
+     "Graded rookies",
+     "PSA 10 1995-96 rookies drive most of his value."
+    ]
+   ]
+  },
+  "shohei-ohtani": {
+   "bio": "Baseball's two-way superstar who hits like an MVP and pitches like an ace. Multiple MVPs, the first 50-homer, 50-steal season in 2024 and back-to-back World Series titles with the Dodgers.",
+   "drivers": [
+    [
+     "Pitching return",
+     "Starts on the mound add to his value because they show the two-way story is still going."
+    ],
+    [
+     "Global demand",
+     "Collectors in Japan and the US compete for his cards, which keeps prices high."
+    ],
+    [
+     "Historic numbers",
+     "Records and milestone games cause quick spikes."
+    ]
+   ]
+  },
+  "mike-trout": {
+   "bio": "A three-time AL MVP and one of the best players of his generation, whose recent seasons have been cut short by injuries.",
+   "drivers": [
+    [
+     "Health",
+     "Time on the injured list has been the biggest drag on his market."
+    ],
+    [
+     "Prospect autos",
+     "His 2009 Bowman Chrome prospect autograph is the hobby's benchmark modern baseball card."
+    ],
+    [
+     "Comeback seasons",
+     "A healthy, productive year could bring a strong rebound."
+    ]
+   ]
+  },
+  "aaron-judge": {
+   "bio": "The Yankees captain who set the AL record with 62 homers in 2022 and has won multiple AL MVPs.",
+   "drivers": [
+    [
+     "Home run pace",
+     "His prices track his home run totals during the season."
+    ],
+    [
+     "Yankees market",
+     "New York's huge fan base gives him deep demand."
+    ],
+    [
+     "Postseason",
+     "October performances, good or bad, move his cards sharply."
+    ]
+   ]
+  },
+  "juan-soto": {
+   "bio": "A patient, powerful hitter who won the 2019 World Series at age 20 and later signed a record contract with the Mets.",
+   "drivers": [
+    [
+     "Record contract",
+     "His huge deal raised expectations, so slumps get noticed fast."
+    ],
+    [
+     "New York stage",
+     "Playing in New York brings big attention and big swings."
+    ],
+    [
+     "Hall of Fame pace",
+     "His early-career numbers compare to all-time greats, which supports long-term buying."
+    ]
+   ]
+  },
+  "ronald-acuna-jr": {
+   "bio": "The 2023 NL MVP and the first player with 40 homers and 70 steals in a season.",
+   "drivers": [
+    [
+     "Knee injuries",
+     "Two torn ACLs make his health the biggest factor."
+    ],
+    [
+     "Five-tool highlights",
+     "Speed and power highlights bring quick buying."
+    ],
+    [
+     "Comeback narrative",
+     "A strong return season would bring a big rebound."
+    ]
+   ]
+  },
+  "fernando-tatis-jr": {
+   "bio": "An electric outfielder who signed a long extension with San Diego early in his career.",
+   "drivers": [
+    [
+     "Reputation",
+     "A 2022 PED suspension hurt his market. Clean, strong seasons help repair it."
+    ],
+    [
+     "Highlights",
+     "Big homers and defensive plays bring short bursts."
+    ],
+    [
+     "Prospect cards",
+     "His 2019 rookies and prospect autos are heavily traded."
+    ]
+   ]
+  },
+  "bobby-witt-jr": {
+   "bio": "Kansas City's star shortstop, the second pick in 2019 and the 2024 AL batting champion.",
+   "drivers": [
+    [
+     "MVP races",
+     "Being in the MVP conversation is his biggest driver."
+    ],
+    [
+     "All-around stats",
+     "Speed, power and defense keep him in the spotlight all season."
+    ],
+    [
+     "Small market",
+     "Kansas City's smaller fan base keeps prices below big-city stars."
+    ]
+   ]
+  },
+  "julio-rodriguez": {
+   "bio": "Seattle's center fielder and the 2022 AL Rookie of the Year.",
+   "drivers": [
+    [
+     "Slow starts",
+     "He often starts seasons cold and finishes hot, so prices swing within a season."
+    ],
+    [
+     "Charisma",
+     "His personality and highlights bring in younger collectors."
+    ],
+    [
+     "Team success",
+     "Mariners playoff runs lift his profile."
+    ]
+   ]
+  },
+  "gunnar-henderson": {
+   "bio": "Baltimore's star shortstop and the 2023 AL Rookie of the Year.",
+   "drivers": [
+    [
+     "Power numbers",
+     "Home run totals for a shortstop drive interest."
+    ],
+    [
+     "Young core",
+     "He's the face of a young Orioles team, so team success matters."
+    ],
+    [
+     "Rookie scarcity",
+     "Top parallels from 2023 are limited."
+    ]
+   ]
+  },
+  "elly-de-la-cruz": {
+   "bio": "Cincinnati's switch-hitting shortstop with rare speed and arm strength.",
+   "drivers": [
+    [
+     "Viral highlights",
+     "Moon-shot homers, steals and throws bring sudden spikes."
+    ],
+    [
+     "Strikeouts",
+     "Long slumps lead to quick drops, so his market is volatile."
+    ],
+    [
+     "Ceiling",
+     "Buyers are paying for a very high upside."
+    ]
+   ]
+  },
+  "corbin-carroll": {
+   "bio": "Arizona's outfielder and the unanimous 2023 NL Rookie of the Year.",
+   "drivers": [
+    [
+     "Bounce-back seasons",
+     "His stats have varied year to year, and prices follow."
+    ],
+    [
+     "Speed",
+     "Stolen base totals help his profile."
+    ],
+    [
+     "Small market",
+     "Arizona's fan base limits the top end."
+    ]
+   ]
+  },
+  "paul-skenes": {
+   "bio": "The first pick in 2023, the 2024 NL Rookie of the Year and the 2025 NL Cy Young winner.",
+   "drivers": [
+    [
+     "Every start",
+     "Pitchers' cards react to each outing, so his prices swing week to week."
+    ],
+    [
+     "Arm health",
+     "Any elbow or shoulder news is a major risk for pitcher cards."
+    ],
+    [
+     "Trade talk",
+     "A move to a bigger market or contender would widen demand."
+    ]
+   ]
+  },
+  "jackson-holliday": {
+   "bio": "The first pick in 2022 and once baseball's top prospect, son of former All-Star Matt Holliday.",
+   "drivers": [
+    [
+     "Development",
+     "His early major league struggles cut prices. Signs of a breakout would bring a big rebound."
+    ],
+    [
+     "Prospect cards",
+     "His Bowman prospect autos drove most of his early value."
+    ],
+    [
+     "Lineup role",
+     "Playing time and batting order matter a lot right now."
+    ]
+   ]
+  },
+  "jackson-chourio": {
+   "bio": "Milwaukee's young outfielder who became one of the youngest players ever with a 20-20 season as a rookie in 2024.",
+   "drivers": [
+    [
+     "Age curve",
+     "Being so young means buyers see a lot of growth ahead."
+    ],
+    [
+     "Power and speed",
+     "Home run and steal totals drive interest."
+    ],
+    [
+     "Small market",
+     "Milwaukee's fan base keeps prices lower."
+    ]
+   ]
+  },
+  "wyatt-langford": {
+   "bio": "Texas's outfielder, the fourth pick in 2023, who reached the majors within a year.",
+   "drivers": [
+    [
+     "Breakout watch",
+     "Collectors are waiting for a big season, so hot stretches move him quickly."
+    ],
+    [
+     "Health",
+     "Missed time has slowed his market."
+    ],
+    [
+     "Prospect autos",
+     "His Bowman autos carry much of the value."
+    ]
+   ]
+  },
+  "roman-anthony": {
+   "bio": "Boston's top prospect who debuted in 2025 and quickly signed a long-term extension.",
+   "drivers": [
+    [
+     "Rookie season",
+     "His first full season is what collectors are watching."
+    ],
+    [
+     "Red Sox market",
+     "Boston's large fan base brings strong demand."
+    ],
+    [
+     "Prospect autos",
+     "His Bowman Chrome autos are the main high-end cards."
+    ]
+   ]
+  },
+  "mookie-betts": {
+   "bio": "The 2018 AL MVP and a multi-time World Series champion with Boston and the Dodgers.",
+   "drivers": [
+    [
+     "Championships",
+     "Titles keep his Hall of Fame case growing."
+    ],
+    [
+     "Position changes",
+     "His moves around the field get attention but rarely move prices much."
+    ],
+    [
+     "Steady demand",
+     "His rookies trade steadily with fewer big swings."
+    ]
+   ]
+  },
+  "bryce-harper": {
+   "bio": "The first pick in 2010 and a two-time NL MVP, now Philadelphia's first baseman.",
+   "drivers": [
+    [
+     "Phillies results",
+     "Playoff runs bring his biggest moves."
+    ],
+    [
+     "Hall of Fame case",
+     "Milestones help his long-term value."
+    ],
+    [
+     "Prospect cards",
+     "His 2011 Bowman prospect cards are classics."
+    ]
+   ]
+  },
+  "vladimir-guerrero-jr": {
+   "bio": "Toronto's slugging first baseman and son of a Hall of Famer, who signed a huge extension in 2025.",
+   "drivers": [
+    [
+     "Long-term deal",
+     "Staying in Toronto settled his future and steadied his market."
+    ],
+    [
+     "Canadian collectors",
+     "As Canada's biggest baseball star he has a dedicated buying base."
+    ],
+    [
+     "Power seasons",
+     "Home run totals drive his yearly swings."
+    ]
+   ]
+  },
+  "francisco-lindor": {
+   "bio": "The Mets' star shortstop and team captain.",
+   "drivers": [
+    [
+     "New York stage",
+     "Mets success brings big attention."
+    ],
+    [
+     "MVP runs",
+     "Strong seasons near the top of MVP voting lift prices."
+    ],
+    [
+     "Rookie cards",
+     "His 2015 rookies are affordable and move with team results."
+    ]
+   ]
+  },
+  "pete-alonso": {
+   "bio": "A slugging first baseman who hit a rookie-record 53 homers in 2019 and became the Mets' all-time home run leader.",
+   "drivers": [
+    [
+     "Home runs",
+     "His cards follow his power numbers."
+    ],
+    [
+     "Contract news",
+     "Free agency and team changes move his market."
+    ],
+    [
+     "Fan favorite",
+     "Strong fan loyalty supports a steady base."
+    ]
+   ]
+  },
+  "yoshinobu-yamamoto": {
+   "bio": "A Japanese ace who signed with the Dodgers and won World Series MVP in 2025.",
+   "drivers": [
+    [
+     "Postseason legacy",
+     "His 2025 World Series performance lifted his market."
+    ],
+    [
+     "Global demand",
+     "Japanese and US collectors both buy his cards."
+    ],
+    [
+     "Pitcher risk",
+     "Arm injury news is the biggest risk."
+    ]
+   ]
+  },
+  "clayton-kershaw": {
+   "bio": "A three-time Cy Young winner and 2014 NL MVP who spent his whole career with the Dodgers and retired after the 2025 season.",
+   "drivers": [
+    [
+     "Hall of Fame path",
+     "Now retired, his cards move with Hall of Fame news."
+    ],
+    [
+     "Milestones",
+     "His 3,000th strikeout and title wins anchor his legacy."
+    ],
+    [
+     "One-team career",
+     "Dodgers loyalty keeps strong demand."
+    ]
+   ]
+  },
+  "ken-griffey-jr": {
+   "bio": "A Hall of Famer with 630 homers and 10 Gold Gloves, one of the most loved players of the 1990s.",
+   "drivers": [
+    [
+     "Iconic rookie",
+     "His 1989 Upper Deck #1 is one of the hobby's most famous cards."
+    ],
+    [
+     "Nostalgia",
+     "Collectors who grew up in the 1990s drive his market."
+    ],
+    [
+     "Condition",
+     "PSA 10 copies sell for many times the price of lower grades."
+    ]
+   ]
+  },
+  "derek-jeter": {
+   "bio": "The Yankees captain with five World Series titles and more than 3,400 hits, inducted into the Hall of Fame in 2020.",
+   "drivers": [
+    [
+     "Yankees demand",
+     "The huge Yankees fan base keeps demand steady."
+    ],
+    [
+     "Key rookie",
+     "His 1993 SP rookie is famously hard to find in high grade."
+    ],
+    [
+     "Anniversaries",
+     "Career milestones and anniversaries bring buying."
+    ]
+   ]
+  },
+  "mickey-mantle": {
+   "bio": "A Yankees legend with seven World Series titles and three MVPs, inducted into the Hall of Fame in 1974.",
+   "drivers": [
+    [
+     "Record sales",
+     "A 1952 Topps Mantle sold for $12.6 million in 2022, and record sales lift his whole market."
+    ],
+    [
+     "Condition",
+     "Grade drives huge price differences on 1950s cards."
+    ],
+    [
+     "Overall hobby health",
+     "As a blue-chip name, he moves with the broad market."
+    ]
+   ]
+  },
+  "hank-aaron": {
+   "bio": "Baseball's home run king for 33 years with 755 homers. He died in 2021.",
+   "drivers": [
+    [
+     "Legacy",
+     "Anniversaries and tributes bring waves of interest."
+    ],
+    [
+     "Rookie card",
+     "His 1954 Topps rookie is a vintage staple."
+    ],
+    [
+     "Condition",
+     "High grades are rare and sell at a premium."
+    ]
+   ]
+  },
+  "willie-mays": {
+   "bio": "The Say Hey Kid, with 660 homers and 12 Gold Gloves. He died in June 2024.",
+   "drivers": [
+    [
+     "Recent passing",
+     "Prices rose after his death and have since settled."
+    ],
+    [
+     "Rookie card",
+     "His 1951 Bowman rookie is one of the key vintage cards."
+    ],
+    [
+     "Condition",
+     "Grade drives most of the value."
+    ]
+   ]
+  },
+  "roberto-clemente": {
+   "bio": "A Hall of Famer with 3,000 hits, 12 Gold Gloves and a humanitarian legacy. He died in a 1972 plane crash on a relief mission.",
+   "drivers": [
+    [
+     "Roberto Clemente Day",
+     "His annual day and anniversaries bring renewed interest."
+    ],
+    [
+     "Rookie card",
+     "His 1955 Topps rookie is a vintage staple."
+    ],
+    [
+     "Latin American collectors",
+     "Strong demand from fans across Latin America."
+    ]
+   ]
+  },
+  "nolan-ryan": {
+   "bio": "The all-time strikeout leader with 5,714 and a record seven no-hitters.",
+   "drivers": [
+    [
+     "Rookie card",
+     "His 1968 Topps rookie, shared with Jerry Koosman, carries most of his value."
+    ],
+    [
+     "Centering",
+     "Off-center copies are common, so well-centered high grades sell at big premiums."
+    ],
+    [
+     "Texas nostalgia",
+     "Strong regional fan base."
+    ]
+   ]
+  },
+  "cal-ripken-jr": {
+   "bio": "Baseball's Iron Man, who played 2,632 straight games, with two MVPs and 3,000 hits.",
+   "drivers": [
+    [
+     "Anniversaries",
+     "Streak anniversaries bring attention."
+    ],
+    [
+     "Rookie cards",
+     "His 1982 Topps Traded rookie is the key card."
+    ],
+    [
+     "Steady demand",
+     "His market moves slowly and steadily."
+    ]
+   ]
+  },
+  "albert-pujols": {
+   "bio": "A three-time MVP with 703 home runs, two World Series titles and more than 3,000 hits.",
+   "drivers": [
+    [
+     "Hall of Fame vote",
+     "His Hall of Fame election, likely on the first ballot, should bring a bump."
+    ],
+    [
+     "Rookie cards",
+     "His 2001 Bowman Chrome and Topps Chrome rookies are the key cards."
+    ],
+    [
+     "Milestones",
+     "700 homers secured his legacy."
+    ]
+   ]
+  },
+  "ichiro-suzuki": {
+   "bio": "The 2001 AL MVP and Rookie of the Year, with the single-season hits record of 262 and 3,000 MLB hits. Inducted into the Hall of Fame in 2025.",
+   "drivers": [
+    [
+     "Hall of Fame bump",
+     "His 2025 induction lifted interest."
+    ],
+    [
+     "Global demand",
+     "Collectors in Japan and the US both buy."
+    ],
+    [
+     "Rookie cards",
+     "His 2001 rookies, especially high grades, carry the value."
+    ]
+   ]
+  },
+  "mariano-rivera": {
+   "bio": "The all-time saves leader with 652 and the first unanimous Hall of Fame selection.",
+   "drivers": [
+    [
+     "Yankees demand",
+     "Strong, steady Yankees fan base."
+    ],
+    [
+     "Rookie card",
+     "His 1992 Bowman rookie is the key card."
+    ],
+    [
+     "Low volatility",
+     "His prices move slowly."
+    ]
+   ]
+  },
+  "babe-ruth": {
+   "bio": "Baseball's first great slugger, with 714 homers and seven World Series titles.",
+   "drivers": [
+    [
+     "Extreme scarcity",
+     "Few high-grade cards survive, so every big sale sets a new benchmark."
+    ],
+    [
+     "Auction records",
+     "Record sales of game-used items or cards lift his whole market."
+    ],
+    [
+     "Authenticity",
+     "Grading and authentication matter more than usual."
+    ]
+   ]
+  },
+  "patrick-mahomes": {
+   "bio": "A three-time Super Bowl champion and two-time MVP who redefined quarterback play.",
+   "drivers": [
+    [
+     "Playoff results",
+     "His cards follow how far the Chiefs go in January."
+    ],
+    [
+     "Records",
+     "Passing milestones keep him in the spotlight."
+    ],
+    [
+     "Blue-chip status",
+     "His 2017 rookies are seen as the top modern football cards."
+    ]
+   ]
+  },
+  "josh-allen": {
+   "bio": "Buffalo's dual-threat quarterback and the 2024 MVP, the seventh pick in 2018.",
+   "drivers": [
+    [
+     "Playoff breakthrough",
+     "A Super Bowl run would be the biggest driver."
+    ],
+    [
+     "Highlight plays",
+     "Big runs and throws bring short spikes."
+    ],
+    [
+     "MVP status",
+     "Award recognition supports prices."
+    ]
+   ]
+  },
+  "joe-burrow": {
+   "bio": "Cincinnati's quarterback, the 2019 Heisman winner and first pick in 2020, who led the Bengals to Super Bowl LVI.",
+   "drivers": [
+    [
+     "Health",
+     "Multiple major injuries make his availability the biggest factor."
+    ],
+    [
+     "Playoff success",
+     "Postseason wins drive his biggest gains."
+    ],
+    [
+     "Rookie class",
+     "His 2020 class is strong, which helps interest."
+    ]
+   ]
+  },
+  "lamar-jackson": {
+   "bio": "Baltimore's quarterback and a two-time MVP, the last pick of the first round in 2018.",
+   "drivers": [
+    [
+     "Playoff results",
+     "Postseason wins matter most to his market."
+    ],
+    [
+     "Rushing records",
+     "His running records bring attention."
+    ],
+    [
+     "MVP races",
+     "Award talk lifts prices."
+    ]
+   ]
+  },
+  "justin-herbert": {
+   "bio": "The Chargers' quarterback, sixth pick in 2020 and Offensive Rookie of the Year.",
+   "drivers": [
+    [
+     "Playoff wins",
+     "A deep run would bring the biggest boost."
+    ],
+    [
+     "Stats",
+     "Strong passing numbers keep steady interest."
+    ],
+    [
+     "Market",
+     "Los Angeles fan base gives moderate demand."
+    ]
+   ]
+  },
+  "cj-stroud": {
+   "bio": "Houston's quarterback, second pick in 2023 and Offensive Rookie of the Year.",
+   "drivers": [
+    [
+     "Bounce-back",
+     "His second season dipped, so a strong year could bring a rebound."
+    ],
+    [
+     "Playoff runs",
+     "Postseason success matters."
+    ],
+    [
+     "Young QB premium",
+     "Young quarterbacks get extra hobby attention."
+    ]
+   ]
+  },
+  "caleb-williams": {
+   "bio": "Chicago's quarterback, first pick in 2024 and 2022 Heisman winner.",
+   "drivers": [
+    [
+     "Development",
+     "His progress in Chicago is the main driver."
+    ],
+    [
+     "Big market",
+     "Chicago's large fan base widens demand."
+    ],
+    [
+     "Rookie volatility",
+     "Early-career prices swing hard."
+    ]
+   ]
+  },
+  "jayden-daniels": {
+   "bio": "Washington's quarterback, second pick in 2024, 2023 Heisman winner and 2024 Offensive Rookie of the Year.",
+   "drivers": [
+    [
+     "Health",
+     "His running style makes injury news important."
+    ],
+    [
+     "Playoff success",
+     "His rookie NFC title game run raised expectations."
+    ],
+    [
+     "Young QB premium",
+     "Strong demand for top young quarterbacks."
+    ]
+   ]
+  },
+  "drake-maye": {
+   "bio": "New England's quarterback, third pick in 2024.",
+   "drivers": [
+    [
+     "Development",
+     "Signs of a breakout drive his market."
+    ],
+    [
+     "Patriots market",
+     "A strong New England fan base."
+    ],
+    [
+     "Rookie volatility",
+     "Early-career cards swing hard."
+    ]
+   ]
+  },
+  "bo-nix": {
+   "bio": "Denver's quarterback, 12th pick in 2024, who led the Broncos to the playoffs as a rookie.",
+   "drivers": [
+    [
+     "Team success",
+     "Denver's results drive his cards."
+    ],
+    [
+     "Expectations",
+     "His later draft slot means wins surprise collectors in a good way."
+    ],
+    [
+     "Rookie volatility",
+     "Early-career cards swing hard."
+    ]
+   ]
+  },
+  "brock-purdy": {
+   "bio": "San Francisco's quarterback, the final pick of the 2022 draft, who led the 49ers to Super Bowl LVIII.",
+   "drivers": [
+    [
+     "Underdog story",
+     "Mr. Irrelevant to Super Bowl starter makes a story collectors like."
+    ],
+    [
+     "Low supply",
+     "Few premium rookies were made for a last-round pick."
+    ],
+    [
+     "Team success",
+     "49ers results drive his market."
+    ]
+   ]
+  },
+  "jalen-hurts": {
+   "bio": "Philadelphia's quarterback and Super Bowl LIX MVP, a second-round pick in 2020.",
+   "drivers": [
+    [
+     "Championship",
+     "His Super Bowl win lifted his market."
+    ],
+    [
+     "Playoff runs",
+     "Postseason success matters most."
+    ],
+    [
+     "Rushing",
+     "His running ability brings highlights."
+    ]
+   ]
+  },
+  "justin-jefferson": {
+   "bio": "Minnesota's star receiver, 2022 Offensive Player of the Year.",
+   "drivers": [
+    [
+     "QB play",
+     "Receiver cards depend on who's throwing to him."
+    ],
+    [
+     "Records",
+     "Yardage milestones bring attention."
+    ],
+    [
+     "Health",
+     "Missed games cool prices."
+    ]
+   ]
+  },
+  "jamarr-chase": {
+   "bio": "Cincinnati's star receiver, fifth pick in 2021, who won the receiving triple crown in 2024.",
+   "drivers": [
+    [
+     "Burrow connection",
+     "His value is tied to Burrow's health."
+    ],
+    [
+     "Stats",
+     "Yardage and touchdown totals drive interest."
+    ],
+    [
+     "Contract news",
+     "Big deals bring attention."
+    ]
+   ]
+  },
+  "ceedee-lamb": {
+   "bio": "Dallas's star receiver, 17th pick in 2020.",
+   "drivers": [
+    [
+     "Cowboys market",
+     "Dallas's huge fan base brings deep demand."
+    ],
+    [
+     "QB play",
+     "His numbers depend on the quarterback situation."
+    ],
+    [
+     "Playoffs",
+     "Postseason struggles have held his market back."
+    ]
+   ]
+  },
+  "tyreek-hill": {
+   "bio": "One of the fastest players in NFL history and a multiple All-Pro receiver.",
+   "drivers": [
+    [
+     "Age",
+     "Receivers in their 30s tend to see declining prices."
+    ],
+    [
+     "Off-field news",
+     "Headlines can move his cards sharply."
+    ],
+    [
+     "Team changes",
+     "New teams reset his market."
+    ]
+   ]
+  },
+  "travis-kelce": {
+   "bio": "A three-time Super Bowl champion and one of the best tight ends ever.",
+   "drivers": [
+    [
+     "Celebrity spotlight",
+     "His relationship with Taylor Swift brought in new buyers outside the hobby."
+    ],
+    [
+     "Retirement watch",
+     "Talk of retirement brings legacy buying."
+    ],
+    [
+     "Playoffs",
+     "Chiefs playoff runs matter."
+    ]
+   ]
+  },
+  "christian-mccaffrey": {
+   "bio": "San Francisco's star running back and the 2023 Offensive Player of the Year.",
+   "drivers": [
+    [
+     "Health",
+     "Injuries are the biggest factor for running backs."
+    ],
+    [
+     "Age",
+     "Running backs decline earlier, which weighs on prices."
+    ],
+    [
+     "Usage",
+     "His touches per game drive interest."
+    ]
+   ]
+  },
+  "saquon-barkley": {
+   "bio": "Philadelphia's running back, who ran for over 2,000 yards in 2024 and won a Super Bowl.",
+   "drivers": [
+    [
+     "Championship season",
+     "His 2024 run lifted his market."
+    ],
+    [
+     "Age",
+     "Running back age curves weigh on long-term prices."
+    ],
+    [
+     "Highlights",
+     "Big runs bring short spikes."
+    ]
+   ]
+  },
+  "bijan-robinson": {
+   "bio": "Atlanta's star running back, eighth pick in 2023.",
+   "drivers": [
+    [
+     "Usage",
+     "Touches and yards drive interest."
+    ],
+    [
+     "Team success",
+     "Atlanta's results matter."
+    ],
+    [
+     "Young RB window",
+     "Running back primes are short, so buyers move early."
+    ]
+   ]
+  },
+  "puka-nacua": {
+   "bio": "A fifth-round pick who set the NFL rookie record for receiving yards in 2023.",
+   "drivers": [
+    [
+     "Underdog story",
+     "Low draft slot means few premium rookies, which helps scarcity."
+    ],
+    [
+     "Health",
+     "Missed time cools prices."
+    ],
+    [
+     "QB play",
+     "His quarterback situation affects his numbers."
+    ]
+   ]
+  },
+  "malik-nabers": {
+   "bio": "The Giants' star receiver, sixth pick in 2024.",
+   "drivers": [
+    [
+     "QB play",
+     "Giants quarterback situation affects him."
+    ],
+    [
+     "New York market",
+     "A big fan base supports demand."
+    ],
+    [
+     "Health",
+     "Injury news matters."
+    ]
+   ]
+  },
+  "marvin-harrison-jr": {
+   "bio": "Arizona's receiver, fourth pick in 2024, son of a Hall of Famer.",
+   "drivers": [
+    [
+     "Breakout watch",
+     "A big season would bring a rebound."
+    ],
+    [
+     "Family legacy",
+     "His father's Hall of Fame career adds interest."
+    ],
+    [
+     "Licensing",
+     "He held out of some trading card deals early, which affected his card supply."
+    ]
+   ]
+  },
+  "brock-bowers": {
+   "bio": "Las Vegas's tight end, 13th pick in 2024, who set the rookie tight end receptions record.",
+   "drivers": [
+    [
+     "Records",
+     "Record-setting numbers drive interest."
+    ],
+    [
+     "QB play",
+     "His quarterback situation matters."
+    ],
+    [
+     "Position",
+     "Tight end cards usually sell below QBs and WRs."
+    ]
+   ]
+  },
+  "cam-ward": {
+   "bio": "Tennessee's quarterback, first pick in 2025.",
+   "drivers": [
+    [
+     "Rookie season",
+     "Early performance is the biggest driver."
+    ],
+    [
+     "Team rebuild",
+     "Tennessee's progress matters."
+    ],
+    [
+     "Rookie volatility",
+     "Early-career prices swing hard."
+    ]
+   ]
+  },
+  "travis-hunter": {
+   "bio": "A two-way star, 2024 Heisman winner and second pick in 2025.",
+   "drivers": [
+    [
+     "Two-way role",
+     "Whether he plays both ways drives his story."
+    ],
+    [
+     "Hype",
+     "His unique role brings heavy demand."
+    ],
+    [
+     "Rookie volatility",
+     "Early-career prices swing hard."
+    ]
+   ]
+  },
+  "ashton-jeanty": {
+   "bio": "A running back who ran for 2,601 yards at Boise State in 2024 and was the sixth pick in 2025.",
+   "drivers": [
+    [
+     "Rookie production",
+     "Yards and touchdowns drive interest."
+    ],
+    [
+     "Usage",
+     "Touches per game matter."
+    ],
+    [
+     "Running back age curve",
+     "Short primes make buyers act early."
+    ]
+   ]
+  },
+  "shedeur-sanders": {
+   "bio": "A quarterback who fell to the fifth round in 2025, son of Deion Sanders.",
+   "drivers": [
+    [
+     "Hype",
+     "His name and fan base bring heavy demand despite his draft slot."
+    ],
+    [
+     "Starting chances",
+     "Starts and playing time are the biggest driver."
+    ],
+    [
+     "Volatility",
+     "His cards swing hard on news."
+    ]
+   ]
+  },
+  "aaron-rodgers": {
+   "bio": "A four-time MVP and Super Bowl XLV champion, one of the most accurate passers ever.",
+   "drivers": [
+    [
+     "Retirement watch",
+     "Talk of retirement brings legacy buying."
+    ],
+    [
+     "Health",
+     "His 2023 Achilles tear reminds buyers of age risk."
+    ],
+    [
+     "Hall of Fame",
+     "Long-term value tied to his Hall of Fame case."
+    ]
+   ]
+  },
+  "tom-brady": {
+   "bio": "A seven-time Super Bowl champion and five-time Super Bowl MVP, widely seen as the greatest quarterback ever.",
+   "drivers": [
+    [
+     "Iconic rookies",
+     "His 2000 Playoff Contenders auto is a hobby benchmark."
+    ],
+    [
+     "Media presence",
+     "His broadcasting career keeps him visible."
+    ],
+    [
+     "Hall of Fame",
+     "His induction is expected to bring a bump."
+    ]
+   ]
+  },
+  "peyton-manning": {
+   "bio": "A five-time MVP and two-time Super Bowl champion, first pick in 1998.",
+   "drivers": [
+    [
+     "Media presence",
+     "His TV work keeps him visible."
+    ],
+    [
+     "Rookie cards",
+     "His 1998 rookies are key."
+    ],
+    [
+     "Steady demand",
+     "Prices move slowly."
+    ]
+   ]
+  },
+  "jerry-rice": {
+   "bio": "The NFL's all-time leader in receptions, receiving yards and touchdowns.",
+   "drivers": [
+    [
+     "Rookie card",
+     "His 1986 Topps rookie is the key card."
+    ],
+    [
+     "Condition",
+     "Clean copies are hard to find."
+    ],
+    [
+     "Legacy",
+     "Records keep demand steady."
+    ]
+   ]
+  },
+  "joe-montana": {
+   "bio": "A four-time Super Bowl champion and three-time Super Bowl MVP.",
+   "drivers": [
+    [
+     "Rookie card",
+     "His 1981 Topps rookie is the key card."
+    ],
+    [
+     "49ers nostalgia",
+     "Strong fan base."
+    ],
+    [
+     "Condition",
+     "High grades are rare."
+    ]
+   ]
+  },
+  "walter-payton": {
+   "bio": "One of the greatest running backs ever. He retired as the NFL's all-time rushing leader and died in 1999.",
+   "drivers": [
+    [
+     "Rookie card",
+     "His 1976 Topps rookie is a vintage staple."
+    ],
+    [
+     "Bears nostalgia",
+     "Strong Chicago fan base."
+    ],
+    [
+     "Condition",
+     "Grade drives most of the value."
+    ]
+   ]
+  },
+  "barry-sanders": {
+   "bio": "One of the most elusive runners ever, who retired suddenly in 1999 near his peak.",
+   "drivers": [
+    [
+     "Rookie card",
+     "His 1989 Score rookie is the key card."
+    ],
+    [
+     "Nostalgia",
+     "1990s collectors drive demand."
+    ],
+    [
+     "Lions success",
+     "Detroit's recent success brings attention to its legends."
+    ]
+   ]
+  },
+  "emmitt-smith": {
+   "bio": "The NFL's all-time rushing leader and a three-time Super Bowl champion with Dallas.",
+   "drivers": [
+    [
+     "Cowboys demand",
+     "A huge fan base supports prices."
+    ],
+    [
+     "Rookie cards",
+     "His 1990 rookies are the key cards."
+    ],
+    [
+     "Records",
+     "His rushing record keeps his legacy strong."
+    ]
+   ]
+  }
+ }
+}
