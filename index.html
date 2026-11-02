@@ -109,6 +109,34 @@ button, input, select { font: inherit; color: inherit; }
 .mverdict { margin: 0; font-weight: 700; font-size: 16px; }
 .mverdict.up { color: var(--up); } .mverdict.down { color: var(--game); } .mverdict.flat { color: var(--muted); }
 @media (prefers-reduced-motion: reduce) { .mmark { transition: none; } }
+.blayout { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+.fpanel { flex: 1 1 240px; max-width: 270px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.bmain { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+.fpanel .ftoggle { display: none; width: 100%; }
+.fbody { display: flex; flex-direction: column; gap: 20px; }
+@media (max-width: 760px) { .fpanel { max-width: none; } .fpanel .ftoggle { display: flex; } .fpanel:not(.open) .fbody { display: none; } }
+.fgroup { display: flex; flex-direction: column; gap: 4px; }
+.fhead { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+.fcount { background: var(--accent); color: var(--accent-ink); border-radius: 999px; padding: 1px 7px; font-size: 10px; letter-spacing: 0; }
+.fopt { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 36px; padding: 4px 6px; border: none; background: transparent; color: var(--fg); text-align: left; border-radius: 8px; cursor: pointer; font-size: 14px; }
+.fopt:hover:not(:disabled) { background: var(--raise); }
+.fopt:disabled { opacity: .38; cursor: default; }
+.fbox { width: 17px; height: 17px; border-radius: 5px; border: 1.5px solid var(--faint); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.fopt[aria-pressed="true"] .fbox { background: var(--accent); border-color: var(--accent); }
+.fopt[aria-pressed="true"] .fbox::after { content: ""; width: 5px; height: 9px; border: solid var(--accent-ink); border-width: 0 2px 2px 0; transform: translateY(-1px) rotate(45deg); }
+.flab { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fn { font-size: 12px; color: var(--faint); font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.fmore { border: none; background: none; color: var(--accent); font-weight: 600; font-size: 13px; text-align: left; padding: 6px; cursor: pointer; }
+.fin { min-height: 40px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); padding: 0 10px; width: 100%; min-width: 0; }
+#fsort.fin { width: auto; }
+.bgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); gap: 12px; }
+.btile { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); text-decoration: none; color: var(--fg); min-width: 0; }
+.btile:hover { border-color: var(--faint); }
+.bimg { aspect-ratio: 5 / 7; margin: 12px 12px 0; max-width: 100%; }
+.bbody { padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.btile .title { font-weight: 700; font-size: 13px; line-height: 1.3; }
+.btile .sub { font-size: 12px; color: var(--faint); }
+.achip { background: var(--raise); }
 .teamtag { display: inline-flex; align-items: center; height: 22px; padding: 0 8px; border-radius: 6px; font-size: 11px; font-weight: 800; letter-spacing: .04em; color: var(--fg); background: color-mix(in srgb, var(--tc) 22%, var(--raise)); border: 1px solid color-mix(in srgb, var(--tc) 55%, var(--line)); }
 .gres .gbadge.team { background: color-mix(in srgb, var(--tc) 22%, var(--raise)); border-color: color-mix(in srgb, var(--tc) 55%, var(--line)); color: var(--fg); }
 .nav { display: flex; gap: 4px; flex-wrap: wrap; }
@@ -215,6 +243,7 @@ td.best { color: var(--fg); font-weight: 600; }
     </div>
     <nav class="nav" aria-label="Main">
       <a href="#home" data-nav="home">Home</a>
+      <a href="#browse" data-nav="browse">Browse</a>
       <a href="#movers" data-nav="movers">Movers</a>
       <a href="#compare" data-nav="compare">Compare</a>
       <a href="#collectors" data-nav="collectors">Collectors</a>
@@ -300,7 +329,7 @@ let CARDS = [
 ];
 let CARD = Object.fromEntries(CARDS.map(c => [c.id, c]));
 
-const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '', collSport: 'All', collQuery: '', collAvail: 'avail', collSort: 'matches', offerFor: null, trade: null, moversRange: '1M', moversSport: 'All', moversGrade: 'All', moversMin: '3', moversView: 'cards', homeSport: 'All' };
+const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '', collSport: 'All', f: F0(), fLimit: 48, fMore: {}, fOpen: false, collQuery: '', collAvail: 'avail', collSort: 'matches', offerFor: null, trade: null, moversRange: '1M', moversSport: 'All', moversGrade: 'All', moversMin: '3', moversView: 'cards', homeSport: 'All' };
 const charts = {};
 
 /* ---------- real data from data/*.json (built by the "Build card data" robot) ---------- */
@@ -1075,6 +1104,7 @@ function viewHome() {
     <div class="section" style="gap:16px;padding-top:12px">
       <h1>Know why your cards <span style="color:var(--accent)">move.</span></h1>
       <p class="lede">Search a player or card to see prices next to stats, injuries and news.</p>
+      <div class="row"><a class="btn" href="#browse">Browse and filter all cards →</a></div>
       <div class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--faint)" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
         <label for="q" class="eyebrow" hidden>Search</label><input id="q" type="search" placeholder="Try Curry, Ohtani, NFL, Prizm…" value="${esc(state.homeQuery)}" autocomplete="off"></div>
     </div>
@@ -1676,6 +1706,134 @@ function sampleMatchCards() {
   setCol([...new Set([...col(), ...own])]); setWish([...new Set([...wishlist(), ...wish])]);
 }
 
+/* ---------- browse: filter every card ---------- */
+function F0() { return { q: '', sport: [], team: [], player: [], pos: [], status: [], release: [], era: [], grade: [], kind: [], move: [], avail: [], mine: [], pmin: '', pmax: '', minSales: '0', sort: 'value-desc', view: 'grid' }; }
+function cardYear(c) { const m = /^(\d{4})/.exec(c.name); return m ? +m[1] : null; }
+function cardRelease(c) { return c.name.replace(/^\d{4}(-\d{2})?\s+/, '').replace(/\s+#\S+$/, '').replace(/\s+(Rookie|RC|Refractor|Silver|Auto)\b.*$/i, '').trim() || 'Other'; }
+function cardEra(c) { const y = cardYear(c); return !y ? 'Unknown' : y >= 2020 ? '2020s' : y >= 2010 ? '2010s' : y >= 2000 ? '2000s' : y >= 1990 ? '1990s' : 'Before 1990'; }
+const ERA_ORDER = ['2020s', '2010s', '2000s', '1990s', 'Before 1990', 'Unknown'];
+let AVAIL = null;
+function availMap() {
+  if (AVAIL && AVAIL.cards === CARDS) return AVAIL.map;
+  const map = {};
+  collectors().forEach(c => c.items.forEach(x => { if (x.status === 'keep') return; const a = map[x.id] = map[x.id] || { sale: 0, trade: 0, low: Infinity }; a[x.status]++; if (x.status === 'sale') a.low = Math.min(a.low, x.ask); }));
+  AVAIL = { cards: CARDS, map };
+  return map;
+}
+/* the values a card has for each filter */
+function facetVals(c) {
+  const p = PLAYERS[c.p], ch = monthChange(c), a = availMap()[c.id];
+  const move = [];
+  if (hotRank(c.id)) move.push('Hot (top risers)');
+  if (coldRank(c.id)) move.push('Cold (biggest drops)');
+  if (ch > 0.05) move.push('Rising this month'); else if (ch < -0.05) move.push('Falling this month'); else move.push('Flat this month');
+  const status = [p.status === 'retired' ? 'Retired' : 'Active'];
+  if (p.injured) status.push('Injured');
+  const kind = c.tags.filter(t => ['Rookie', 'Auto', 'Numbered'].includes(t));
+  const mine = [];
+  if (col().includes(c.id)) mine.push('In my collection');
+  if (wishlist().includes(c.id)) mine.push('On my wishlist');
+  return {
+    sport: [p.sport], team: [p.team || 'No team listed'], player: [p.name], pos: [p.pos || '—'], status,
+    release: [cardRelease(c)], era: [cardEra(c)], grade: [c.tags.includes('Graded') ? 'PSA 10 (graded)' : 'Raw'], kind, move,
+    avail: a ? [...(a.sale ? ['For sale from collectors'] : []), ...(a.trade ? ['Open to trade'] : [])] : [], mine
+  };
+}
+const FACETS = [
+  ['sport', 'Sport'], ['team', 'Team'], ['player', 'Player'], ['pos', 'Position'], ['status', 'Player status'],
+  ['release', 'Set'], ['era', 'Era'], ['grade', 'Condition'], ['kind', 'Card type'], ['move', 'Price movement'],
+  ['avail', 'Availability'], ['mine', 'My cards']
+];
+function passes(c, f, skip) {
+  const v = facetVals(c);
+  for (const [k] of FACETS) { if (k === skip || !f[k].length) continue; if (!f[k].some(x => v[k].includes(x))) return false; }
+  const price = last(c.price);
+  if (f.pmin !== '' && price < +f.pmin) return false;
+  if (f.pmax !== '' && price > +f.pmax) return false;
+  if (+f.minSales && avg(c.sales.slice(-3)) < +f.minSales) return false;
+  if (f.q.trim() && !qMatch(cardText(c), f.q)) return false;
+  return true;
+}
+const BSORTS = {
+  'value-desc': ['Price: high to low', (a, b) => last(b.price) - last(a.price)],
+  'value-asc': ['Price: low to high', (a, b) => last(a.price) - last(b.price)],
+  'gain-1m': ['Biggest gain (1 month)', (a, b) => monthChange(b) - monthChange(a)],
+  'drop-1m': ['Biggest drop (1 month)', (a, b) => monthChange(a) - monthChange(b)],
+  'gain-1y': ['Biggest gain (1 year)', (a, b) => pct(b.price[0], last(b.price)) - pct(a.price[0], last(a.price))],
+  'sales': ['Most traded', (a, b) => avg(b.sales.slice(-3)) - avg(a.sales.slice(-3))],
+  'year-desc': ['Newest year', (a, b) => (cardYear(b) || 0) - (cardYear(a) || 0)],
+  'year-asc': ['Oldest year', (a, b) => (cardYear(a) || 9999) - (cardYear(b) || 9999)],
+  'name': ['Player A–Z', (a, b) => PLAYERS[a.p].name.localeCompare(PLAYERS[b.p].name)]
+};
+function activeChips(f) {
+  const chips = [];
+  FACETS.forEach(([k]) => f[k].forEach(v => chips.push([`${v}`, 'fToggle', k, v])));
+  if (f.pmin !== '' || f.pmax !== '') chips.push([`Price ${f.pmin !== '' ? money(+f.pmin) : '$0'}–${f.pmax !== '' ? money(+f.pmax) : 'any'}`, 'fClearPrice', '', '']);
+  if (+f.minSales) chips.push([`${f.minSales}+ sales/month`, 'fClearSales', '', '']);
+  if (f.q.trim()) chips.push([`“${f.q.trim()}”`, 'fClearQ', '', '']);
+  return chips;
+}
+function viewBrowse() {
+  const f = state.f;
+  const results = CARDS.filter(c => passes(c, f)).sort(BSORTS[f.sort][1]);
+  const shown = results.slice(0, state.fLimit);
+  const chips = activeChips(f);
+  const facetHTML = FACETS.map(([k, label]) => {
+    const counts = {};
+    CARDS.forEach(c => { if (!passes(c, f, k)) return; facetVals(c)[k].forEach(v => { counts[v] = (counts[v] || 0) + 1; }); });
+    f[k].forEach(v => { if (!(v in counts)) counts[v] = 0; });
+    let opts = Object.entries(counts);
+    if (k === 'era') opts.sort((a, b) => ERA_ORDER.indexOf(a[0]) - ERA_ORDER.indexOf(b[0]));
+    else if (['sport', 'grade', 'move', 'avail', 'mine', 'status', 'kind'].includes(k)) opts.sort((a, b) => b[1] - a[1]);
+    else opts.sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    if (!opts.length) return '';
+    const more = state.fMore[k], lim = 6, list = more ? opts : opts.slice(0, lim);
+    return `<div class="fgroup"><div class="fhead">${label}${f[k].length ? ` <span class="fcount">${f[k].length}</span>` : ''}</div>
+      ${list.map(([v, n]) => `<button type="button" class="fopt" data-act="fToggle" data-k="${k}" data-v="${esc(v)}" aria-pressed="${f[k].includes(v)}"${n === 0 && !f[k].includes(v) ? ' disabled' : ''}><span class="fbox" aria-hidden="true"></span><span class="flab">${esc(v)}</span><span class="fn">${n}</span></button>`).join('')}
+      ${opts.length > lim ? `<button type="button" class="fmore" data-act="fMore" data-k="${k}">${more ? 'Show fewer' : `Show all ${opts.length}`}</button>` : ''}</div>`;
+  }).join('');
+  const prices = CARDS.map(c => last(c.price));
+  const tile = c => {
+    const a = availMap()[c.id], hot = hotRank(c.id), cold = !hot && coldRank(c.id), m = monthChange(c);
+    return `<a class="btile" href="#card-${c.id}"><div class="bimg ${hot ? 'flame' : cold ? 'frost' : ''}"${hot ? ' data-fire="s"' : cold ? ' data-ice="s"' : ''}>${cardVisual(c)}</div>
+      <div class="bbody"><span class="title">${esc(c.name)}</span><span class="sub">${esc(PLAYERS[c.p].name)} · ${esc(c.detail)}</span>
+      <div class="row between" style="gap:6px"><span class="num" style="font-weight:600;font-size:16px">${money(last(c.price))}</span><span class="num ${cls(m)}" style="font-size:12px;font-weight:600">${fmtPct(m)}</span></div>
+      <div class="row" style="gap:4px">${hotTag(c.id)}${a && a.sale ? `<span class="stag st-sale">From ${money(a.low)}</span>` : ''}${a && a.trade ? '<span class="stag st-trade">Trade</span>' : ''}</div></div></a>`;
+  };
+  return `<div class="view">
+    <div class="section" style="padding-top:8px"><h1>Browse cards</h1><p class="lede">Filter every card by player, team, set, condition, price and how it's moving.</p></div>
+    <div class="search" style="max-width:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--faint)" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <label for="fq" class="sr">Search cards</label><input id="fq" type="search" placeholder="Search within cards (e.g. Prizm, Josh Allen, 2018)" value="${esc(f.q)}" autocomplete="off"></div>
+    <div class="blayout">
+      <aside class="fpanel${state.fOpen ? ' open' : ''}" aria-label="Filters">
+        <button type="button" class="btn ftoggle" data-act="fOpen" aria-expanded="${state.fOpen ? 'true' : 'false'}">Filters${chips.length ? ` (${chips.length})` : ''} ${state.fOpen ? '▲' : '▼'}</button>
+        <div class="fbody">
+          <div class="fgroup"><div class="fhead">Price</div>
+            <div class="row" style="gap:8px;flex-wrap:nowrap"><label class="sr" for="pmin">Minimum price</label><input id="pmin" type="number" min="0" inputmode="numeric" placeholder="Min $" value="${esc(f.pmin)}" class="fin"><span style="color:var(--faint)">–</span><label class="sr" for="pmax">Maximum price</label><input id="pmax" type="number" min="0" inputmode="numeric" placeholder="Max $" value="${esc(f.pmax)}" class="fin"></div>
+            <div class="chips" style="gap:6px">${[['', '50', 'Under $50'], ['50', '500', '$50–500'], ['500', '5000', '$500–5K'], ['5000', '', '$5K+']].map(([lo, hi, l]) => `<button type="button" class="chip" style="min-height:30px;padding:0 10px;font-size:12px" data-act="fPrice" data-lo="${lo}" data-hi="${hi}" aria-pressed="${f.pmin === lo && f.pmax === hi}">${l}</button>`).join('')}</div>
+            <span style="font-size:11px;color:var(--faint)">Cards range from ${money(Math.min(...prices))} to ${money(Math.max(...prices))}</span></div>
+          <div class="fgroup"><div class="fhead"><label for="msales">Sales activity</label></div><select id="msales" class="fin" style="width:100%">${[['0', 'Any'], ['1', '1+ sales a month'], ['5', '5+ sales a month'], ['20', '20+ sales a month']].map(([v, l]) => `<option value="${v}"${v === f.minSales ? ' selected' : ''}>${l}</option>`).join('')}</select></div>
+          ${facetHTML}
+          ${chips.length ? `<button type="button" class="btn" style="width:100%" data-act="fReset">Clear all filters</button>` : ''}
+        </div>
+      </aside>
+      <div class="bmain">
+        <div class="row between">
+          <span style="font-weight:700">${results.length} card${results.length === 1 ? '' : 's'}</span>
+          <div class="row" style="gap:8px">
+            <label for="fsort" class="row" style="gap:8px;font-size:13px;color:var(--muted)">Sort <select id="fsort" class="fin">${Object.entries(BSORTS).map(([v, [l]]) => `<option value="${v}"${v === f.sort ? ' selected' : ''}>${l}</option>`).join('')}</select></label>
+            <div class="seg" role="group" aria-label="View">${[['grid', 'Grid'], ['list', 'List']].map(([v, l]) => `<button type="button" data-act="fView" data-v="${v}" aria-pressed="${f.view === v}">${l}</button>`).join('')}</div>
+          </div>
+        </div>
+        ${chips.length ? `<div class="chips">${chips.map(([l, act, k, v]) => `<button type="button" class="chip achip" data-act="${act}" data-k="${k}" data-v="${esc(v)}" aria-label="Remove filter ${esc(l)}">${esc(l)} <span aria-hidden="true">✕</span></button>`).join('')}<button type="button" class="chip" data-act="fReset">Clear all</button></div>` : ''}
+        ${!results.length ? `<div class="panel empty"><h2>No cards match these filters</h2><p class="lede" style="max-width:44ch">Try removing a filter or widening the price range.</p><button type="button" class="btn primary" data-act="fReset">Clear all filters</button></div>`
+          : f.view === 'grid' ? `<div class="bgrid">${shown.map(tile).join('')}</div>` : `<div class="list">${shown.map(c => cardItem(c)).join('')}</div>`}
+        ${results.length > shown.length ? `<button type="button" class="btn" data-act="fMoreRes">Show more (${results.length - shown.length} left)</button>` : ''}
+      </div>
+    </div>
+  </div>`;
+}
+
 const notFound = () => `<div class="view"><div class="panel empty"><h2>That page doesn't exist</h2><a class="btn primary" href="#home">Go home</a></div></div>`;
 
 /* ---------- global search (top bar) ---------- */
@@ -1753,6 +1911,7 @@ function render() {
   else if (h.startsWith('card-')) html = viewCard(h.slice(5));
   else if (h === 'compare') { html = viewCompare(); nav = 'compare'; }
   else if (h === 'movers') { html = viewMovers(); nav = 'movers'; }
+  else if (h === 'browse') { html = viewBrowse(); nav = 'browse'; }
   else if (h === 'collection') { html = viewCollection(); nav = 'collection'; }
   else if (h === 'collectors') { html = viewCollectors(); nav = 'collectors'; }
   else if (h.startsWith('collector-')) { html = viewCollector(h.slice(10)); nav = 'collectors'; }
@@ -1764,6 +1923,11 @@ function render() {
   wireCharts();
   try { initFires(); } catch (e) { /* fire is decorative */ }
   try { initIce(); } catch (e) { /* ice is decorative */ }
+  const fq = $('#fq');
+  if (fq && fq.addEventListener) fq.addEventListener('input', e => { state.f.q = e.target.value; state.fLimit = 48; const pos = e.target.selectionStart; render(); const n = $('#fq'); n.focus(); try { n.setSelectionRange(pos, pos); } catch (err) {} });
+  ['pmin', 'pmax'].forEach(k => { const el = document.getElementById(k); if (el) el.addEventListener('change', e => { state.f[k] = e.target.value === '' ? '' : String(Math.max(0, Math.round(+e.target.value))); render(); }); });
+  const msl = $('#msales'); if (msl && msl.addEventListener) msl.addEventListener('change', e => { state.f.minSales = e.target.value; render(); });
+  const fs = $('#fsort'); if (fs && fs.addEventListener) fs.addEventListener('change', e => { state.f.sort = e.target.value; render(); });
   const cq = $('#cq');
   if (cq && cq.addEventListener) cq.addEventListener('input', e => { state.collQuery = e.target.value; const pos = e.target.selectionStart; render(); const n = $('#cq'); n.focus(); try { n.setSelectionRange(pos, pos); } catch (err) {} });
   const cs = $('#csort'); if (cs && cs.addEventListener) cs.addEventListener('change', e => { state.collSort = e.target.value; render(); });
@@ -1784,6 +1948,16 @@ document.addEventListener('click', e => {
   const id = a.dataset.id;
   if (a.dataset.act === 'toggleCol') { const ids = col(); const has = ids.includes(id); setCol(has ? ids.filter(x => x !== id) : [...ids, id]); toast(has ? 'Removed from your collection' : 'Added to your collection'); render(); }
   if (a.dataset.act === 'sampleCol') { setCol([...CARDS].sort((x, y) => avg(y.sales) - avg(x.sales)).slice(0, 3).map(c => c.id)); toast('Added 3 sample cards'); render(); }
+  if (a.dataset.act === 'fToggle') { const k = a.dataset.k, v = a.dataset.v, arr = state.f[k]; state.f[k] = arr.includes(v) ? arr.filter(x => x !== v) : [...arr, v]; state.fLimit = 48; render(); }
+  if (a.dataset.act === 'fMore') { state.fMore[a.dataset.k] = !state.fMore[a.dataset.k]; render(); }
+  if (a.dataset.act === 'fPrice') { const same = state.f.pmin === a.dataset.lo && state.f.pmax === a.dataset.hi; state.f.pmin = same ? '' : a.dataset.lo; state.f.pmax = same ? '' : a.dataset.hi; state.fLimit = 48; render(); }
+  if (a.dataset.act === 'fClearPrice') { state.f.pmin = ''; state.f.pmax = ''; render(); }
+  if (a.dataset.act === 'fClearSales') { state.f.minSales = '0'; render(); }
+  if (a.dataset.act === 'fClearQ') { state.f.q = ''; render(); }
+  if (a.dataset.act === 'fReset') { const keep = { sort: state.f.sort, view: state.f.view }; state.f = { ...F0(), ...keep }; state.fLimit = 48; render(); }
+  if (a.dataset.act === 'fOpen') { state.fOpen = !state.fOpen; render(); }
+  if (a.dataset.act === 'fMoreRes') { state.fLimit += 48; render(); }
+  if (a.dataset.act === 'fView') { state.f.view = a.dataset.v; render(); }
   if (a.dataset.act === 'toggleWish') { const w = wishlist(), has = w.includes(id); setWish(has ? w.filter(x => x !== id) : [...w, id]); toast(has ? 'Removed from your wishlist' : 'Added to your wishlist'); render(); }
   if (a.dataset.act === 'sampleMatch') { sampleMatchCards(); toast('Added sample cards to your collection and wishlist'); render(); }
   if (a.dataset.act === 'suggest') { suggestTrade(id); if (!a.getAttribute('href')) render(); }
