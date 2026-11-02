@@ -1,9 +1,11 @@
 name: Build player stats
 
 # Team, season and career stats, and injury status for every player (data/stats.json).
-# Uses no CardSight calls. Run by hand from the Actions tab.
+# Uses no CardSight calls. Runs nightly; can also be run by hand from the Actions tab.
 
 on:
+  schedule:
+    - cron: "17 10 * * *"   # nightly, about 3-4am Boise time
   workflow_dispatch:
     inputs:
       mode:
