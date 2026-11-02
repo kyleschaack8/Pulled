@@ -91,41 +91,110 @@ out.mkdir(parents=True, exist_ok=True)
 client = CardSightAI()
 
 
-def describe_images_api():
-    """Print what the SDK's image functions look like, for troubleshooting in the Actions log."""
-    import inspect
-    imgs = client.images
-    print("CardSight image functions:")
-    for n in dir(imgs):
-        if n.startswith("_"):
-            continue
-        fn = getattr(imgs, n)
-        if callable(fn):
+import asyncio
+import importlib
+import inspect
+import pkgutil
+
+
+def _settle(result):
+    """Some SDK calls return a coroutine; run it to get the real result."""
+    if inspect.iscoroutine(result):
+        return asyncio.run(result)
+    return result
+
+
+def _image_modules():
+    """Find the SDK's generated image endpoint modules (e.g. cardsightai.api.images.get_card_image)."""
+    import cardsightai
+    found = []
+    for info in pkgutil.walk_packages(cardsightai.__path__, cardsightai.__name__ + "."):
+        name = info.name
+        if "image" in name.lower() and "card" in name.lower() and "model" not in name.lower():
             try:
-                sig = str(inspect.signature(fn))
+                found.append(importlib.import_module(name))
+            except Exception as e:  # noqa: BLE001
+                print(f"  could not import {name}: {e}")
+    return found
+
+
+def _low_level_clients():
+    """Candidates for the generated client object the endpoint functions expect."""
+    cands = [client]
+    for attr in ("client", "_client", "api_client", "_api_client", "http_client", "_http"):
+        v = getattr(client, attr, None)
+        if v is not None:
+            cands.append(v)
+    return cands
+
+
+IMAGE_MODULES = []
+
+
+def describe_images_api():
+    """Print what we can learn about the SDK's image functions, for the Actions log."""
+    global IMAGE_MODULES
+    import cardsightai
+    print(f"cardsightai version: {getattr(cardsightai, '__version__', 'unknown')}")
+    print(f"client attributes: {[a for a in dir(client) if not a.startswith('__')][:40]}")
+    imgs = getattr(client, "images", None)
+    print(f"client.images type: {type(imgs).__name__}; attributes: {[a for a in dir(imgs) if not a.startswith('__')][:40]}")
+    IMAGE_MODULES = _image_modules()
+    for m in IMAGE_MODULES:
+        fns = [n for n in ("sync_detailed", "sync", "asyncio_detailed", "asyncio") if hasattr(m, n)]
+        sig = ""
+        if fns:
+            try:
+                sig = str(inspect.signature(getattr(m, fns[0])))
             except (TypeError, ValueError):
-                sig = "(?)"
-            print(f"  images.{n}{sig}")
+                pass
+        print(f"  module {m.__name__}: {fns} {sig}")
+
+
+def _call_with_id(fn, uuid, extra=None):
+    """Call fn, passing the card id under whatever parameter name it uses."""
+    extra = extra or {}
+    try:
+        params = inspect.signature(fn).parameters
+    except (TypeError, ValueError):
+        params = {}
+    id_names = [n for n in params if n not in ("self", "client") and ("id" in n.lower() or n.lower() in ("uuid", "card"))]
+    for n in id_names + ["id", "card_id", "uuid"]:
+        try:
+            return _settle(fn(**{n: uuid}, **extra))
+        except TypeError:
+            continue
+    return _settle(fn(uuid, **extra))
 
 
 def fetch_image(uuid):
-    """Call the SDK's image function, trying the likely names and argument styles.
-    Their docs say binary downloads may need a *_detailed variant, so try those first."""
-    imgs = client.images
-    names = [n for n in dir(imgs) if not n.startswith("_") and "image" in n.lower() and callable(getattr(imgs, n))]
-    names.sort(key=lambda n: (0 if "detailed" in n else 1, n))
-    last_err = None
-    for n in names:
-        fn = getattr(imgs, n)
-        for call in (lambda f: f(id=uuid), lambda f: f(card_id=uuid), lambda f: f(uuid)):
-            try:
-                result = call(fn)
-            except TypeError as e:
-                last_err = e
+    errors = []
+    # 1) The generated endpoint module, raw response (binary images live in .content)
+    for m in IMAGE_MODULES:
+        for fname in ("sync_detailed", "sync"):
+            fn = getattr(m, fname, None)
+            if not fn:
                 continue
+            for lc in _low_level_clients():
+                try:
+                    result = _call_with_id(fn, uuid, {"client": lc})
+                    if result is not None:
+                        return result
+                except Exception as e:  # noqa: BLE001
+                    errors.append(f"{m.__name__}.{fname}: {e}")
+    # 2) The high-level helpers on client.images
+    imgs = getattr(client, "images", None)
+    for name in ("get_card_image_detailed", "get_card_image", "get_image", "card_image"):
+        fn = getattr(imgs, name, None)
+        if fn is None:
+            continue
+        try:
+            result = _call_with_id(fn, uuid)
             if result is not None:
                 return result
-    raise RuntimeError(f"No image function accepted the card id ({last_err})")
+        except Exception as e:  # noqa: BLE001
+            errors.append(f"images.{name}: {e}")
+    raise RuntimeError("Image download failed. Tried: " + " | ".join(errors[-4:]) if errors else "Image download failed: no image function found")
 
 
 def to_bytes(img):
@@ -172,6 +241,7 @@ describe_images_api()
 
 rows = []
 for card_id, query in CARDS.items():
+    top = None
     try:
         top, used = find_card(card_id, query)
         if top is None:
@@ -188,7 +258,8 @@ for card_id, query in CARDS.items():
         rows.append([card_id, used, getattr(top, "name", ""), "OK", fname])
         print(f"  saved      {card_id}  ->  {getattr(top, 'name', '')}")
     except Exception as e:  # keep going so one bad card doesn't stop the run
-        rows.append([card_id, query, "", f"ERROR: {e}", ""])
+        matched = (getattr(top, "name", "") or "") if top is not None else ""
+        rows.append([card_id, query, matched, f"ERROR: {e}", ""])
         print(f"  error      {card_id}: {e}")
 
 with open(out / "matches.csv", "w", newline="", encoding="utf-8") as f:
