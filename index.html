@@ -81,6 +81,7 @@ h2 { margin: 0; font-size: 20px; letter-spacing: -0.02em; font-weight: 700; text
 .tag { font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; background: var(--raise); color: var(--muted); border: 1px solid var(--line); }
 .status { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; }
 .status.active { background: color-mix(in srgb, var(--up) 16%, transparent); color: var(--up); }
+.status.injured { background: color-mix(in srgb, var(--game) 18%, transparent); color: var(--game); }
 .status.retired { background: color-mix(in srgb, var(--news) 16%, transparent); color: var(--news); }
 
 .search { position: relative; max-width: 560px; }
@@ -255,7 +256,8 @@ function lastName(name) { const w = name.replace(/,?\s+Jr\.?$/, '').split(' '); 
 async function loadRealData() {
   try {
     const get = f => fetch('data/' + f, { cache: 'no-store' }).then(r => (r.ok ? r.json() : null));
-    const [pl, cd, pr] = await Promise.all([get('players.json'), get('cards.json'), get('prices.json')]);
+    const [pl, cd, pr, sj] = await Promise.all([get('players.json'), get('cards.json'), get('prices.json'), get('stats.json').catch(() => null)]);
+    const SJ = (sj && sj.players) || {};
     if (!pl || !cd || !pr || !Array.isArray(cd.cards) || !cd.cards.length || !Array.isArray(pr.months)) return;
     const players = {}, cards = [];
     const counts = {};
@@ -284,6 +286,7 @@ async function loadRealData() {
         note: { kind: 'info', title: p.status === 'active' ? 'Stats and injuries' : 'Career and legacy', text: p.status === 'active' ? 'Team, current stats, projections and injury updates arrive when the sports data feed is connected.' : 'Career stats and legacy events (Hall of Fame news, anniversaries) arrive with the sports data feed.' },
         events: []
       };
+      applyStats(players[p.id], SJ[p.id], p);
     });
     PLAYERS = players; CARDS = cards.filter(c => players[c.p]); CARD = Object.fromEntries(CARDS.map(c => [c.id, c]));
     MONTHS = pr.months.map(m => MON[parseInt(m.slice(5, 7), 10) - 1] + (m.slice(5, 7) === '01' ? " '" + m.slice(2, 4) : ''));
@@ -294,6 +297,39 @@ async function loadRealData() {
     if (n) n.textContent = `REAL SALES DATA FROM CARDSIGHT AI · ${Object.keys(PLAYERS).length} PLAYERS · ${CARDS.length} CARDS · UPDATED ${String(pr.updated || '').slice(0, 10)} · PLAYER STATS COMING SOON`;
     render();
   } catch (e) { /* keep sample data */ }
+}
+
+/* Fill a player's team, number, stats, awards and injury status from data/stats.json */
+function applyStats(P, s, p) {
+  if (!s) return;
+  if (s.team) P.team = s.team;
+  if (s.jersey) P.num = '#' + s.jersey;
+  if (s.position) P.pos = s.position;
+  if (s.summary && s.summary.stats && s.summary.stats.length) {
+    P.stats = s.summary.stats.map(([k, v, r]) => [k, v, r]);
+    P.statsLabel = s.summary.label.replace(/^\w/, c => c.toUpperCase());
+  } else if (s.career && s.career.length) {
+    P.stats = s.career.slice(0, 4).map(([k, v]) => [k, v, '']);
+    P.statsLabel = 'Career';
+  }
+  const rows = [['This season', s.season], ['Last 5 games', s.last5], ['Projected', s.projected], ['Career', s.career]].filter(([, v]) => v && v.length);
+  if (rows.length) {
+    const cols = rows[0][1].map(([k]) => k);
+    P.table = { cols, rows: rows.map(([label, v]) => [label, cols.map(c => (v.find(([k]) => k === c) || [c, '—'])[1])]) };
+    if (s.statsLabel) P.tableLabel = s.statsLabel;
+  }
+  P.awards = (s.awards || []).filter(a => a[0]);
+  P.extra = [s.experience, s.draft ? 'Drafted ' + s.draft : ''].filter(Boolean).join(' · ');
+  if (s.injury && s.injury.status) {
+    const back = s.injury.returnDate ? ` Expected back around ${s.injury.returnDate}.` : '';
+    const serious = !/rest|day-to-day/i.test(s.injury.status + ' ' + s.injury.type);
+    P.note = { kind: 'warn', title: `Injury report: ${s.injury.status}${s.injury.type ? ' (' + s.injury.type + ')' : ''}`, text: (s.injury.comment || '') + back };
+    P.injured = serious ? s.injury.status : '';
+  } else if (p.status === 'active') {
+    P.note = { kind: 'info', title: 'Injury report', text: 'No current injury designation.' };
+  } else {
+    P.note = { kind: 'info', title: 'Legacy', text: P.awards.length ? 'Career honors are listed above. Legacy events like Hall of Fame news and anniversaries can move these cards.' : 'Retired players have no live games, so their cards move on legacy news, anniversaries and nostalgia.' };
+  }
 }
 
 /* ---------- helpers ---------- */
@@ -537,7 +573,7 @@ function viewHome() {
     <div class="section"><div class="row between"><h2>Players <span style="color:var(--faint);font-weight:500;font-size:15px">${pids.length}</span></h2><span class="eyebrow">All cards combined · 1 month</span></div>
       <div class="chips">${['All', ...[...new Set(Object.values(PLAYERS).map(p => p.sport))]].map(s => `<button type="button" class="chip" data-set="homeSport" data-val="${s}" aria-pressed="${s === state.homeSport}">${s}</button>`).join('')}</div>
       <div class="grid">${pids.map(pid => { const p = PLAYERS[pid], t = playerTrend(pid, '3M'); const m = (() => { const cs = CARDS.filter(c => c.p === pid); const w = cs.map(c => Math.max(0.5, c.sales[11])); return cs.reduce((s, c, k) => s + w[k] * monthChange(c), 0) / w.reduce((a, b) => a + b, 0); })();
-        return `<a class="pcard" href="#player-${pid}"><div class="row between"><span class="tag">${esc(p.sport)}</span><span class="status ${p.status}">${p.status === 'active' ? 'Active' : 'Retired'}</span></div><div><div style="font-size:18px;font-weight:700">${esc(p.name)}</div><div style="font-size:13px;color:var(--faint)">${esc(p.team)}</div></div><div class="row between"><span class="num ${cls(m)}" style="font-size:22px;font-weight:600">${fmtPct(m)}</span>${sparkline(t.series, m >= 0 ? 'var(--up)' : 'var(--down)')}</div></a>`; }).join('') || '<p class="lede">No players match.</p>'}</div></div>
+        return `<a class="pcard" href="#player-${pid}"><div class="row between"><span class="tag">${esc(p.sport)}</span><span class="status ${p.injured ? 'injured' : p.status}">${p.injured ? esc(p.injured) : p.status === 'active' ? 'Active' : 'Retired'}</span></div><div><div style="font-size:18px;font-weight:700">${esc(p.name)}</div><div style="font-size:13px;color:var(--faint)">${esc(p.team)}</div></div><div class="row between"><span class="num ${cls(m)}" style="font-size:22px;font-weight:600">${fmtPct(m)}</span>${sparkline(t.series, m >= 0 ? 'var(--up)' : 'var(--down)')}</div></a>`; }).join('') || '<p class="lede">No players match.</p>'}</div></div>
     ${q ? '' : `<div class="cols">
       <div class="section"><div class="row between"><h2>Biggest risers this month</h2><a href="#movers" style="font-weight:600;font-size:14px;text-decoration:none">See all movers →</a></div><div class="list">${sorted.slice(0, 5).map(c => cardItem(c)).join('')}</div></div>
       <div class="section"><h2>Biggest drops this month</h2><div class="list">${sorted.slice(-5).reverse().map(c => cardItem(c)).join('')}</div></div>
@@ -570,7 +606,7 @@ function viewPlayer(pid) {
         <div class="thumb" style="width:72px;height:72px;border-radius:16px;background:var(--raise);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:var(--faint)">${esc(p.num)}</div>
         <div style="display:flex;flex-direction:column;gap:6px;min-width:0;flex:1">
           <h1>${esc(p.name)}</h1>
-          <div class="row" style="gap:8px"><span style="color:var(--muted)">${[p.team, p.pos, p.sport].filter(Boolean).map(esc).join(' · ')}</span><span class="status ${p.status}">${p.status === 'active' ? 'Active' : 'Retired'}</span></div>
+          <div class="row" style="gap:8px"><span style="color:var(--muted)">${[p.team, p.pos, p.sport].filter(Boolean).map(esc).join(' · ')}</span><span class="status ${p.status}">${p.status === 'active' ? 'Active' : 'Retired'}</span>${p.injured ? `<span class="status injured">${esc(p.injured)}</span>` : ''}</div>
         </div>
       </div>
       <p class="lede">${esc(p.summary)}</p>
@@ -586,8 +622,10 @@ function viewPlayer(pid) {
     </div>
 
     <div class="section"><h2>${esc(p.statsLabel)}</h2>
-      ${p.stats.length ? '' : ''}<div class="tiles"${p.stats.length ? '' : ' hidden'}>${p.stats.map(([k, v]) => `<div class="tile"><span class="k">${esc(k)}</span><span class="v">${esc(v)}</span></div>`).join('')}</div>
-      <span style="color:var(--muted);font-size:14px">${esc(p.extra)}</span>
+      <div class="tiles"${p.stats.length ? '' : ' hidden'}>${p.stats.map(([k, v, r]) => `<div class="tile"><span class="k">${esc(k)}</span><span class="v">${esc(v)}</span>${r ? `<span class="k">${esc(r)} in league</span>` : ''}</div>`).join('')}</div>
+      ${p.table ? `<div class="tablebox"><table><thead><tr><th scope="col">${esc(p.tableLabel || 'Stats')}</th>${p.table.cols.map(c => `<th scope="col">${esc(c)}</th>`).join('')}</tr></thead><tbody>${p.table.rows.map(([label, vals]) => `<tr><th scope="row">${esc(label)}</th>${vals.map(v => `<td>${esc(v)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>` : ''}
+      ${p.awards && p.awards.length ? `<div class="chips">${p.awards.map(([n, c]) => `<span class="tag">${esc(c ? c + ' ' : '')}${esc(n)}</span>`).join('')}</div>` : ''}
+      ${p.extra ? `<span style="color:var(--muted);font-size:14px">${esc(p.extra)}</span>` : ''}
       <div class="alert ${p.note.kind}"><div><div style="font-weight:700">${esc(p.note.title)}</div><div style="color:var(--muted);font-size:14px">${esc(p.note.text)}</div></div></div>
     </div>
 
