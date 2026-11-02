@@ -150,16 +150,19 @@ button, input, select { font: inherit; color: inherit; }
 .phero-word span { color: color-mix(in srgb, var(--ta) 9%, transparent); -webkit-text-stroke: 0; position: absolute; left: .045em; top: .045em; z-index: -1; }
 .phero-city { position: absolute; top: clamp(16px, 3vw, 26px); right: clamp(18px, 3.5vw, 32px); font-size: 12px; font-weight: 700; letter-spacing: .32em; text-transform: uppercase; color: color-mix(in srgb, var(--ta) 80%, #fff); opacity: .85; }
 .phero-stripes { position: absolute; left: 0; right: 0; bottom: 0; height: 14px; background: linear-gradient(180deg, var(--tp) 0 5px, #f3e7cf 5px 7px, var(--ts) 7px 12px, transparent 12px); opacity: .95; }
+.pchg { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 16px; width: 100%; margin-top: 12px; padding: 14px 18px; border-radius: 14px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); font: inherit; text-align: left; cursor: pointer; }
+.pchg:hover { border-color: var(--faint); }
+.pchg .k { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); }
+.pchg .v { font-family: var(--mono); font-size: clamp(26px, 3.4vw, 34px); font-weight: 600; letter-spacing: -0.02em; line-height: 1; }
+.pchg .s { font-size: 13px; color: var(--muted); }
+.pchg .s b { color: var(--fg); font-weight: 600; }
+.pchg .go { margin-left: auto; font-size: 13px; font-weight: 600; color: var(--muted); }
+@media (max-width: 560px) { .pchg .k { width: 100%; } .pchg .go { display: none; } }
 .phero-in { position: relative; width: 100%; flex: 1 1 auto; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; min-width: 0; }
 .phero-in h1 { text-shadow: 0 2px 18px rgba(0,0,0,.45); }
 .phero-in .meta { color: rgba(242,244,248,.82); }
 .phero .pavatar { box-shadow: 0 10px 30px rgba(0,0,0,.45); border-radius: 30px; }
-.phero-chg { font: inherit; cursor: pointer; text-align: right; margin-left: auto; display: flex; flex-direction: column; align-items: flex-end; gap: 2px; padding: 12px 16px; border-radius: 14px; background: rgba(8,10,14,.62); border: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); color: #f2f4f8; text-decoration: none; min-width: 0; }
-.phero-chg .k { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: rgba(242,244,248,.7); }
-.phero-chg .v { font-family: var(--mono); font-size: clamp(28px, 4vw, 40px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; }
-.phero-chg .s { font-size: 12px; color: rgba(242,244,248,.75); }
-.phero-chg:hover { border-color: rgba(255,255,255,.3); }
-@media (max-width: 560px) { .phero { min-height: 170px; } .phero-city { display: none; } .phero-chg { margin-left: 0; width: 100%; align-items: flex-start; } }
+@media (max-width: 560px) { .phero { min-height: 170px; } .phero-city { display: none; } }
 .teamtag { display: inline-flex; align-items: center; height: 22px; padding: 0 8px; border-radius: 6px; font-size: 11px; font-weight: 800; letter-spacing: .04em; color: var(--fg); background: color-mix(in srgb, var(--tc) 22%, var(--raise)); border: 1px solid color-mix(in srgb, var(--tc) 55%, var(--line)); }
 .gres .gbadge.team { background: color-mix(in srgb, var(--tc) 22%, var(--raise)); border-color: color-mix(in srgb, var(--tc) 55%, var(--line)); color: var(--fg); }
 .nav { display: flex; gap: 4px; flex-wrap: wrap; }
@@ -1462,9 +1465,9 @@ function viewPlayer(pid) {
           <h1>${esc(p.name)}</h1>
           <div class="row" style="gap:8px">${teamTag(p)}<span class="meta">${[p.team, p.pos, p.sport].filter(Boolean).map(esc).join(' · ')}</span><span class="status ${p.status}">${p.status === 'active' ? 'Active' : 'Retired'}</span>${p.injured ? `<span class="status injured">${esc(p.injured)}</span>` : ''}</div>
         </div>
-        ${cs.length ? (() => { const y = combined(cs, '1Y').change, b = basket(cs, '1Y'); return `<button type="button" class="phero-chg" data-act="toChart" title="See the chart"><span class="k">Card value · last 12 months</span><span class="v num ${cls(y)}">${fmtPct(y)}</span><span class="s">${cs.length} tracked prices · one of each now ${money(last(b))}</span></button>`; })() : ''}
         </div>
       </div>`; })()}
+      ${cs.length ? (() => { const y = combined(cs, '1Y').change, b = basket(cs, '1Y'); return `<button type="button" class="pchg" data-act="toChart" title="See the price chart"><span class="k">Card value · last 12 months</span><span class="v num ${cls(y)}">${fmtPct(y)}</span><span class="s">across ${cs.length} tracked prices · one of each now <b>${money(last(b))}</b></span><span class="go">See chart ↓</span></button>`; })() : ''}
     </div>
     ${cs.length ? marketCards(pid, p, cs) : ''}
     <div class="section">${aboutSection(pid, p, cs)}</div>
