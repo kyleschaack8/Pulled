@@ -327,6 +327,11 @@ def main():
             print(f"Refreshed prices for {len(by_id)} cards")
         else:
             todo = [p for p in players if p["id"] not in progress["done"]]
+            # Rotate through sports (NBA, MLB, NFL, ...) so partial builds stay balanced
+            by_sport = {}
+            for p in todo:
+                by_sport.setdefault(p["sport"], []).append(p)
+            todo = [p for group in __import__("itertools").zip_longest(*by_sport.values()) for p in group if p]
             print(f"{len(todo)} players to add, budget {MAX_CALLS} calls")
             for p in todo:
                 print(f"- {p['name']} ({p['sport']}, {p['rookieYear']})")
