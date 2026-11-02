@@ -286,7 +286,117 @@
    "set": "The Rookies",
    "title": "2014 Donruss The Rookies #3",
    "year": "2014-15"
+  },
+  {
+   "attributes": [
+    "NBA-CLE"
+   ],
+   "id": "739de9cc-4c17-42fd-b850-8e2465ff41ba",
+   "image": null,
+   "number": "26",
+   "numberedTo": null,
+   "playerId": "lebron-james",
+   "release": "Upper Deck LeBron James",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2003 Upper Deck LeBron James #26",
+   "year": "2003"
+  },
+  {
+   "attributes": [
+    "NBA-PHI"
+   ],
+   "id": "a7f88180-ed0b-4491-8ebb-c342a9033846",
+   "number": "26",
+   "numberedTo": null,
+   "playerId": "joel-embiid",
+   "release": "Panini Court Kings",
+   "rookie": true,
+   "set": "Remarkable Rookies",
+   "title": "2014 Panini Court Kings Remarkable Rookies #26",
+   "year": "2014-15"
+  },
+  {
+   "attributes": [
+    "NCAA-UGA"
+   ],
+   "id": "7d8bc458-465b-4d38-acbf-93aec07925e4",
+   "image": "images/cards/7d8bc458-465b-4d38-acbf-93aec07925e4.jpg",
+   "number": "1",
+   "numberedTo": null,
+   "playerId": "anthony-edwards",
+   "release": "Panini Prizm Draft Picks",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2020 Panini Prizm Draft Picks #1",
+   "year": "2020"
+  },
+  {
+   "attributes": [
+    "NCAA-UGA"
+   ],
+   "id": "8c3dcc27-e162-4a40-8324-e2f99a0b6b96",
+   "number": "SS-2",
+   "numberedTo": null,
+   "playerId": "anthony-edwards",
+   "release": "Panini Contenders Draft Picks",
+   "rookie": true,
+   "set": "Front Row Seats",
+   "title": "2020 Panini Contenders Draft Picks Front Row Seats #SS-2",
+   "year": "2020"
+  },
+  {
+   "attributes": [
+    "AUTO",
+    "NCAA-UGA"
+   ],
+   "id": "d10e25f2-0f13-428c-afb3-dba888d6e820",
+   "number": "88",
+   "numberedTo": null,
+   "playerId": "anthony-edwards",
+   "release": "Panini National Treasures Collegiate",
+   "rookie": true,
+   "set": "Rookie Autographed Memorabilia Booklet",
+   "title": "2020 Panini National Treasures Collegiate Rookie Autographed Memorabilia Booklet #88",
+   "year": "2020"
+  },
+  {
+   "attributes": [],
+   "id": "2d14868b-f060-4830-85c8-44e1e9560b15",
+   "image": "images/cards/2d14868b-f060-4830-85c8-44e1e9560b15.jpg",
+   "number": "2",
+   "numberedTo": null,
+   "playerId": "victor-wembanyama",
+   "release": "Panini Prizm Draft Picks",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2023 Panini Prizm Draft Picks #2",
+   "year": "2023"
+  },
+  {
+   "attributes": [],
+   "id": "b1b55290-38fe-4e13-955c-82e872d6a455",
+   "number": "271",
+   "numberedTo": null,
+   "playerId": "victor-wembanyama",
+   "release": "Topps Allen & Ginter",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2023 Topps Allen & Ginter #271",
+   "year": "2023"
+  },
+  {
+   "attributes": [],
+   "id": "04f51bbf-edd4-4488-bbce-c2b7957062ce",
+   "number": "271",
+   "numberedTo": null,
+   "playerId": "victor-wembanyama",
+   "release": "Topps Allen & Ginter X",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2023 Topps Allen & Ginter X #271",
+   "year": "2023"
   }
  ],
- "updated": "2026-11-02T07:16Z"
+ "updated": "2026-11-02T07:18Z"
 }

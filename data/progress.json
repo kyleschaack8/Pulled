@@ -4,12 +4,24 @@
    "at": "2026-11-02T07:16Z",
    "mode": "build",
    "used": 45
+  },
+  {
+   "at": "2026-11-02T07:18Z",
+   "mode": "build",
+   "used": 30
   }
  ],
  "done": [
   "stephen-curry",
   "kevin-durant",
   "giannis-antetokounmpo",
-  "nikola-jokic"
+  "nikola-jokic",
+  "lebron-james",
+  "luka-doncic",
+  "joel-embiid",
+  "jayson-tatum",
+  "anthony-edwards",
+  "shai-gilgeous-alexander",
+  "victor-wembanyama"
  ]
 }
