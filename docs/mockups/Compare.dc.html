@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Compare cards</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&amp;family=IBM+Plex+Mono:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0A0C10}
+a{color:#7EA2FF}a:hover{color:#A9C1FF}
+</style>
+</helmet>
+<div style="width: 390px; min-height: 1720px; box-sizing: border-box; background: #0A0C10; font-family: Inter Tight, system-ui, sans-serif; color: #F2F4F8; display: flex; flex-direction: column">
+
+  <header style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid #262C38">
+    <a href="Card.dc.html" style="display: flex; align-items: center; gap: 6px; min-height: 44px; font-size: 14px; font-weight: 600; text-decoration: none; color: #F2F4F8">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F2F4F8" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+      Back to card
+    </a>
+    <span style="font-weight: 800; font-size: 16px">Pulled</span>
+  </header>
+
+  <section style="padding: 20px 20px 4px; display: flex; flex-direction: column; gap: 6px">
+    <h1 style="margin: 0; font-size: 26px; font-weight: 800; letter-spacing: -0.02em">Compare cards</h1>
+    <p style="margin: 0; font-size: 14px; color: #A3AAB8; line-height: 1.45">See how cards stack up over time: price, how often they sell, and how many graded copies exist.</p>
+    <span style="font-size: 11px; color: #8D94A3; font-family: 'IBM Plex Mono', monospace">SAMPLE DATA — ILLUSTRATIVE ONLY</span>
+  </section>
+
+  <section style="padding: 14px 20px 4px; display: flex; flex-direction: column; gap: 8px">
+    <div style="display: flex; align-items: center; gap: 10px; background: #151922; border: 1px solid #262C38; border-radius: 12px; padding: 10px 12px">
+      <svg width="22" height="10" viewBox="0 0 22 10" aria-hidden="true"><line x1="1" y1="5" x2="21" y2="5" stroke="#F2F4F8" stroke-width="3" stroke-linecap="round"></line></svg>
+      <span style="flex: 1; font-size: 13px; font-weight: 600">Curry '09 Topps Chrome RC Refractor · PSA 10</span>
+      <button aria-label="Remove Curry card" style="width: 32px; height: 32px; border: none; background: transparent; cursor: pointer; font-size: 18px; color: #8D94A3">×</button>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px; background: #151922; border: 1px solid #262C38; border-radius: 12px; padding: 10px 12px">
+      <svg width="22" height="10" viewBox="0 0 22 10" aria-hidden="true"><line x1="1" y1="5" x2="21" y2="5" stroke="#7EA2FF" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 3"></line></svg>
+      <span style="flex: 1; font-size: 13px; font-weight: 600">Wembanyama '23 Prizm RC Silver · PSA 10</span>
+      <button aria-label="Remove Wembanyama card" style="width: 32px; height: 32px; border: none; background: transparent; cursor: pointer; font-size: 18px; color: #8D94A3">×</button>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px; background: #151922; border: 1px solid #262C38; border-radius: 12px; padding: 10px 12px">
+      <svg width="22" height="10" viewBox="0 0 22 10" aria-hidden="true"><line x1="1" y1="5" x2="21" y2="5" stroke="#E8790C" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 4"></line></svg>
+      <span style="flex: 1; font-size: 13px; font-weight: 600">Dončić '18 Prizm RC Silver · PSA 10</span>
+      <button aria-label="Remove Dončić card" style="width: 32px; height: 32px; border: none; background: transparent; cursor: pointer; font-size: 18px; color: #8D94A3">×</button>
+    </div>
+    <button style="height: 44px; border-radius: 12px; border: 1px dashed #8A90A0; background: transparent; font-family: inherit; font-size: 14px; font-weight: 700; color: #F2F4F8; cursor: pointer">+ Add a card (up to 5)</button>
+  </section>
+
+  <section style="padding: 16px 20px 8px; display: flex; flex-direction: column; gap: 10px">
+    <span style="font-size: 12px; font-weight: 700; color: #A3AAB8; letter-spacing: 0.04em">WHAT TO COMPARE</span>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
+      <sc-for list="{{metrics}}" as="m" hint-placeholder-count="3">
+        <button onClick="{{m.pick}}" style="{{m.style}}">{{m.label}}</button>
+      </sc-for>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; background: #1A1E27; border-radius: 10px; padding: 4px; flex: 1">
+        <sc-for list="{{views}}" as="v" hint-placeholder-count="2">
+          <button onClick="{{v.pick}}" style="{{v.style}}">{{v.label}}</button>
+        </sc-for>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; background: #1A1E27; border-radius: 10px; padding: 4px; flex: 1">
+        <sc-for list="{{ranges}}" as="r" hint-placeholder-count="3">
+          <button onClick="{{r.pick}}" style="{{r.style}}">{{r.label}}</button>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 4px 20px 8px">
+    <div style="background: #151922; border: 1px solid #262C38; border-radius: 16px; padding: 14px 12px 10px; display: flex; flex-direction: column; gap: 6px">
+      <span style="font-size: 12px; font-weight: 700; color: #F2F4F8; padding-left: 4px">{{chartTitle}}</span>
+      <svg viewBox="0 0 326 186" width="100%" height="186" role="img" aria-label="Line chart comparing three cards over the past 12 months">
+        <line x1="46" y1="16" x2="318" y2="16" stroke="#1E232D" stroke-width="1"></line>
+        <line x1="46" y1="83" x2="318" y2="83" stroke="#1E232D" stroke-width="1"></line>
+        <line x1="46" y1="150" x2="318" y2="150" stroke="#262C38" stroke-width="1"></line>
+        <text x="0" y="20" font-size="10" fill="#8D94A3" font-family="IBM Plex Mono, monospace">{{yTop}}</text>
+        <text x="0" y="87" font-size="10" fill="#8D94A3" font-family="IBM Plex Mono, monospace">{{yMid}}</text>
+        <text x="0" y="154" font-size="10" fill="#8D94A3" font-family="IBM Plex Mono, monospace">{{yBot}}</text>
+        <path d="{{p2}}" fill="none" stroke="#E8790C" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="1 4"></path>
+        <path d="{{p1}}" fill="none" stroke="#7EA2FF" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="5 3"></path>
+        <path d="{{p0}}" fill="none" stroke="#F2F4F8" stroke-width="2.5" stroke-linejoin="round"></path>
+        <text x="46" y="172" font-size="10" fill="#8D94A3" font-family="IBM Plex Mono, monospace">Dec '25</text>
+        <text x="180" y="172" font-size="10" fill="#8D94A3" font-family="IBM Plex Mono, monospace">Jun</text>
+        <text x="290" y="172" font-size="10" fill="#8D94A3" font-family="IBM Plex Mono, monospace">Nov</text>
+      </svg>
+    </div>
+  </section>
+
+  <section style="margin: 4px 20px 8px; padding: 14px 16px; border-radius: 14px; background: #141C33; border: 1px solid #2A3A6B; display: flex; flex-direction: column; gap: 4px">
+    <span style="font-size: 12px; font-weight: 700; color: #7EA2FF; letter-spacing: 0.04em">WHAT THIS MEANS</span>
+    <p style="margin: 0; font-size: 14px; line-height: 1.5; color: #F2F4F8">{{insight}}</p>
+  </section>
+
+  <section style="padding: 16px 20px 8px; display: flex; flex-direction: column; gap: 10px">
+    <h2 style="margin: 0; font-size: 18px; font-weight: 700">Side-by-side stats</h2>
+    <div style="background: #151922; border: 1px solid #262C38; border-radius: 14px; overflow-x: auto">
+      <table style="width: 100%; border-collapse: collapse; font-size: 12px">
+        <thead>
+          <tr style="background: #0A0C10">
+            <th scope="col" style="text-align: left; padding: 10px; font-weight: 600; color: #A3AAB8">Stat</th>
+            <th scope="col" style="text-align: right; padding: 10px; font-weight: 700">Curry</th>
+            <th scope="col" style="text-align: right; padding: 10px; font-weight: 700; color: #7EA2FF">Wemby</th>
+            <th scope="col" style="text-align: right; padding: 10px; font-weight: 700; color: #FFA94D">Dončić</th>
+          </tr>
+        </thead>
+        <tbody style="font-family: 'IBM Plex Mono', monospace">
+          <sc-for list="{{rows}}" as="row" hint-placeholder-count="7">
+            <tr style="border-top: 1px solid #1E232D">
+              <th scope="row" style="text-align: left; padding: 10px; font-family: Inter Tight, sans-serif; font-weight: 600; vertical-align: top">{{row.label}}<span style="display: block; font-size: 11px; font-weight: 500; color: #8D94A3; margin-top: 2px">{{row.help}}</span></th>
+              <td style="{{row.s0}}">{{row.v0}}</td>
+              <td style="{{row.s1}}">{{row.v1}}</td>
+              <td style="{{row.s2}}">{{row.v2}}</td>
+            </tr>
+          </sc-for>
+        </tbody>
+      </table>
+    </div>
+    <span style="font-size: 12px; color: #A3AAB8">Bold = best of the three for that stat.</span>
+  </section>
+
+  <section style="padding: 12px 20px 32px; display: flex; flex-direction: column; gap: 10px">
+    <button style="height: 48px; border-radius: 12px; border: 1px solid #F2F4F8; background: transparent; font-family: inherit; font-size: 14px; font-weight: 700; color: #F2F4F8; cursor: pointer">Show player stats on this chart</button>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1720}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { metric: 'price', view: 'pct', range: '1Y' }; }
+  renderVals() {
+    const data = {
+      price: [[40.5,41,42,41.5,43,44,43,42.5,43.6,44,46,48.5],[5.2,4.8,4.1,3.9,4.5,5.6,6.2,5.0,4.4,4.0,4.6,5.1],[9.5,9.2,8.8,8.0,7.6,7.9,8.4,8.1,7.7,7.5,7.9,8.3]],
+      sales: [[3,2,4,3,3,5,4,2,3,4,6,9],[40,35,28,25,30,52,60,38,30,26,33,41],[22,20,18,16,15,18,21,19,17,16,18,20]],
+      pop: [[118,118,119,119,120,120,121,121,121,122,122,123],[9800,10400,11100,11900,12600,13500,14300,15000,15600,16200,16900,17500],[6100,6200,6300,6350,6400,6480,6550,6600,6650,6700,6750,6800]]
+    };
+    const s = this.state;
+    let series = data[s.metric];
+    if (s.view === 'pct') series = series.map((arr) => arr.map((v) => (v / arr[0] - 1) * 100));
+    const all = [].concat(series[0], series[1], series[2]);
+    let lo = Math.min.apply(null, all), hi = Math.max.apply(null, all);
+    const pad = (hi - lo) * 0.08 || 1; lo -= pad; hi += pad;
+    const path = (arr) => arr.map((v, i) => (i ? 'L' : 'M') + (46 + i * 272 / 11).toFixed(1) + ' ' + (150 - (v - lo) / (hi - lo) * 134).toFixed(1)).join(' ');
+    const fmt = (v) => {
+      if (s.view === 'pct') return (v >= 0 ? '+' : '') + Math.round(v) + '%';
+      if (s.metric === 'price') return '$' + v.toFixed(0) + 'K';
+      if (v >= 1000) return (v / 1000).toFixed(1) + 'k';
+      return Math.round(v).toString();
+    };
+    const titles = { price: 'Sale price', sales: 'Sales per month', pop: 'PSA 10 population (graded copies)' };
+    const insights = {
+      price: "Curry's rookie gained about 20% this year with steady demand. Wembanyama swung the most, dropping 25% at its low before recovering. Dončić slid about 13%.",
+      sales: 'Wembanyama sells about 38 times a month, roughly 9x more than Curry. Cards that trade often react faster to news, in both directions.',
+      pop: "Wembanyama's PSA 10 population grew 79% this year. More graded copies means more supply, which can cap prices. Curry's barely changed."
+    };
+    const tabOn = 'height: 36px; border-radius: 8px; border: none; background: #2E3542; color: #F2F4F8; font-family: Inter Tight, sans-serif; font-size: 12px; font-weight: 700; cursor: pointer; box-shadow: none';
+    const tabOff = 'height: 36px; border-radius: 8px; border: none; background: transparent; color: #A3AAB8; font-family: Inter Tight, sans-serif; font-size: 12px; font-weight: 600; cursor: pointer';
+    const pillOn = 'height: 44px; border-radius: 10px; border: 1px solid #C6F432; background: #C6F432; color: #0A0C10; font-family: Inter Tight, sans-serif; font-size: 13px; font-weight: 700; cursor: pointer';
+    const pillOff = 'height: 44px; border-radius: 10px; border: 1px solid #262C38; background: #2E3542; color: #F2F4F8; font-family: Inter Tight, sans-serif; font-size: 13px; font-weight: 600; cursor: pointer';
+    const metrics = [['price', 'Price'], ['sales', 'Sales volume'], ['pop', 'Population']].map((m) => ({ label: m[1], style: s.metric === m[0] ? pillOn : pillOff, pick: () => this.setState({ metric: m[0] }) }));
+    const views = [['pct', '% change'], ['actual', 'Actual']].map((m) => ({ label: m[1], style: s.view === m[0] ? tabOn : tabOff, pick: () => this.setState({ view: m[0] }) }));
+    const ranges = ['3M', '1Y', 'All'].map((l) => ({ label: l, style: s.range === l ? tabOn : tabOff, pick: () => this.setState({ range: l }) }));
+    const cell = 'text-align: right; padding: 10px; vertical-align: top; font-weight: 500; color: #D5D9E0';
+    const best = 'text-align: right; padding: 10px; vertical-align: top; font-weight: 700; color: #F2F4F8';
+    const mk = (label, help, v, b) => ({ label, help, v0: v[0], v1: v[1], v2: v[2], s0: b === 0 ? best : cell, s1: b === 1 ? best : cell, s2: b === 2 ? best : cell });
+    const rows = [
+      mk('Price', 'Latest sale', ['$48.5K', '$5.1K', '$8.3K'], -1),
+      mk('1-year change', '', ['+20%', '−2%', '−13%'], 0),
+      mk('1-year range', 'Low – high', ['$40.5–48.5K', '$3.9–6.2K', '$7.5–9.5K'], -1),
+      mk('Sales / month', 'How easy to buy or sell', ['4', '38', '18'], 1),
+      mk('PSA 10 pop', 'Graded copies that exist', ['123', '17,500', '6,800'], 0),
+      mk('Pop growth', 'New graded copies, 1 yr', ['+4%', '+79%', '+11%'], 0),
+      mk('Volatility', 'How much price swings', ['Low', 'High', 'Medium'], 0)
+    ];
+    return {
+      metrics, views, ranges, rows,
+      p0: path(series[0]), p1: path(series[1]), p2: path(series[2]),
+      yTop: fmt(hi), yMid: fmt((hi + lo) / 2), yBot: fmt(lo),
+      chartTitle: titles[s.metric] + (s.view === 'pct' ? ' — % change since Dec' : ''),
+      insight: insights[s.metric]
+    };
+  }
+}
+</script>
+</body>
+</html>

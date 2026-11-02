@@ -9,7 +9,7 @@ Setup (one time):
        Windows:    setx CARDSIGHTAI_API_KEY "your_key_here"   (then open a new terminal)
 
 Run:
-  python get_card_images.py
+  python tools/get_card_images.py
 
 Output:
   pulled_card_images/          one image per card, named by the test site's card id

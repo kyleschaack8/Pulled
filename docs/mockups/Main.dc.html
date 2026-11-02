@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Player page</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&amp;family=IBM+Plex+Mono:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0A0C10}
+a{color:#7EA2FF}a:hover{color:#A9C1FF}
+</style>
+</helmet>
+<div style="width: 390px; min-height: 1900px; box-sizing: border-box; background: #0A0C10; font-family: Inter Tight, system-ui, sans-serif; color: #F2F4F8; display: flex; flex-direction: column">
+
+  <header style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid #262C38">
+    <span style="font-weight: 800; font-size: 18px; letter-spacing: -0.02em">Pulled</span>
+    <div style="display: flex; gap: 8px">
+      <button aria-label="Search players" style="width: 44px; height: 44px; border-radius: 12px; border: 1px solid #262C38; background: #151922; display: flex; align-items: center; justify-content: center; cursor: pointer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F2F4F8" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
+      </button>
+      <button aria-label="Scan a card" style="width: 44px; height: 44px; border-radius: 12px; border: none; background: #C6F432; display: flex; align-items: center; justify-content: center; cursor: pointer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0A0C10" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"></path><path d="M4 12h16"></path></svg>
+      </button>
+    </div>
+  </header>
+
+  <section style="padding: 20px 20px 8px; display: flex; flex-direction: column; gap: 14px">
+    <div style="display: flex; gap: 14px; align-items: center">
+      <div style="width: 72px; height: 72px; border-radius: 16px; background: #1E232D; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #8D94A3; text-align: center">Player<br>photo</div>
+      <div style="display: flex; flex-direction: column; gap: 4px">
+        <h1 style="margin: 0; font-size: 28px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.05">Stephen Curry</h1>
+        <span style="font-size: 14px; color: #A3AAB8">Golden State Warriors · PG · #30</span>
+        <span style="align-self: flex-start; font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 999px; background: #12301F; color: #4ADE80">● Active</span>
+      </div>
+    </div>
+    <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #D5D9E0">Still the league's top long-range threat in year 18. His card market is steady-to-rising, driven by a hot start and talk of one more title run.</p>
+    <span style="font-size: 11px; color: #8D94A3; font-family: 'IBM Plex Mono', monospace">SAMPLE DATA — ILLUSTRATIVE ONLY</span>
+  </section>
+
+  <section style="margin: 12px 20px; padding: 18px; border-radius: 18px; background: #12161E; border: 1px solid #262C38; color: #FFFFFF; display: flex; flex-direction: column; gap: 10px">
+    <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+      <span style="font-size: 13px; font-weight: 600; color: #D5D9E0">All Curry cards combined</span>
+      <div style="display: flex; gap: 2px; background: #262C38; border-radius: 8px; padding: 3px">
+        <sc-for list="{{periods}}" as="p" hint-placeholder-count="4">
+          <button onClick="{{p.pick}}" style="{{p.style}}">{{p.label}}</button>
+        </sc-for>
+      </div>
+    </div>
+    <div style="display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap">
+      <span style="{{trendStyle}}">{{trendPct}}</span>
+      <span style="font-size: 13px; color: #B8BDC8">{{trendWord}}</span>
+    </div>
+    <svg viewBox="0 0 320 70" width="100%" height="70" role="img" aria-label="Combined value of all Curry cards over the selected period">
+      <path d="{{trendPath}}" fill="none" stroke="{{trendColor}}" stroke-width="2.5" stroke-linejoin="round"></path>
+    </svg>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
+      <sc-for list="{{segments}}" as="g" hint-placeholder-count="3">
+        <div style="background: #262C38; border-radius: 10px; padding: 8px 10px; display: flex; flex-direction: column; gap: 2px">
+          <span style="font-size: 11px; color: #B8BDC8">{{g.label}}</span>
+          <span style="{{g.style}}">{{g.value}}</span>
+        </div>
+      </sc-for>
+    </div>
+    <span style="font-size: 12px; color: #B8BDC8; line-height: 1.4">Combines sales from all 1,284 tracked Curry cards, weighted by how often each one sells, so one rare sale can't skew it.</span>
+    <span style="font-size: 13px; color: #D5D9E0; line-height: 1.4"><span style="color: #FFB547; font-weight: 700">●</span> Biggest driver: 41 pts vs. LAL on Oct 24. Combined value up 5% in the 3 days after.</span>
+  </section>
+
+  <section style="padding: 16px 20px; display: flex; flex-direction: column; gap: 10px">
+    <h2 style="margin: 0; font-size: 18px; font-weight: 700">This season</h2>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px">
+      <div style="background: #151922; border: 1px solid #262C38; border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 11px; color: #8D94A3">PTS</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 20px; font-weight: 600">27.8</span></div>
+      <div style="background: #151922; border: 1px solid #262C38; border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 11px; color: #8D94A3">AST</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 20px; font-weight: 600">6.1</span></div>
+      <div style="background: #151922; border: 1px solid #262C38; border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 11px; color: #8D94A3">REB</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 20px; font-weight: 600">4.6</span></div>
+      <div style="background: #151922; border: 1px solid #262C38; border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 11px; color: #8D94A3">3PM</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 20px; font-weight: 600">4.9</span></div>
+    </div>
+    <div style="display: flex; justify-content: space-between; font-size: 13px; color: #A3AAB8; padding: 4px 2px">
+      <span>Career: 24.8 PTS · 6.4 AST</span>
+      <span>Proj. next 5: 28.5 PTS</span>
+    </div>
+  </section>
+
+  <section style="margin: 0 20px; padding: 14px 16px; border-radius: 14px; background: #2A1E0E; border: 1px solid #5C4214; display: flex; gap: 12px; align-items: flex-start">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFC979" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px"><path d="M12 3l9 16H3z"></path><path d="M12 10v4M12 17v.5"></path></svg>
+    <div style="display: flex; flex-direction: column; gap: 2px">
+      <span style="font-size: 14px; font-weight: 700; color: #FFC979">Injury update</span>
+      <span style="font-size: 13px; color: #FFC979; line-height: 1.45">Minor ankle soreness, listed probable for Tuesday. Historically, his cards dip 3–6% on "questionable" tags and recover within a week.</span>
+    </div>
+  </section>
+
+  <section style="padding: 22px 20px 12px; display: flex; flex-direction: column; gap: 12px">
+    <div style="display: flex; justify-content: space-between; align-items: baseline">
+      <h2 style="margin: 0; font-size: 18px; font-weight: 700">Cards</h2>
+      <span style="font-size: 13px; color: #A3AAB8">1,284 tracked</span>
+    </div>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap">
+      <sc-for list="{{filters}}" as="f" hint-placeholder-count="5">
+        <button onClick="{{f.pick}}" style="{{f.style}}">{{f.label}}</button>
+      </sc-for>
+    </div>
+    <label style="display: flex; align-items: center; justify-content: space-between; font-size: 13px; color: #A3AAB8">
+      <span>Sort by</span>
+      <select style="height: 36px; border-radius: 10px; border: 1px solid #262C38; background: #151922; font-family: inherit; font-size: 13px; padding: 0 10px; color: #F2F4F8">
+        <option>Value: high to low</option>
+        <option>Value: low to high</option>
+        <option>Biggest 30-day gain</option>
+        <option>Biggest 30-day drop</option>
+      </select>
+    </label>
+  </section>
+
+  <section style="padding: 0 20px 28px; display: flex; flex-direction: column; gap: 8px">
+    <sc-for list="{{cards}}" as="c" hint-placeholder-count="6">
+      <a href="Card.dc.html" style="text-decoration: none; color: #F2F4F8; background: #151922; border: 1px solid #262C38; border-radius: 14px; padding: 10px; display: flex; gap: 12px; align-items: center">
+        <div style="width: 46px; height: 64px; border-radius: 6px; background: #1E232D; flex-shrink: 0"></div>
+        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px">
+          <span style="font-size: 14px; font-weight: 700; line-height: 1.25">{{c.name}}</span>
+          <span style="font-size: 12px; color: #8D94A3">{{c.detail}}</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 3px">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 600">{{c.price}}</span>
+          <span style="{{c.changeStyle}}">{{c.change}}</span>
+        </div>
+      </a>
+    </sc-for>
+    <button style="margin-top: 6px; height: 48px; border-radius: 12px; border: 1px solid #F2F4F8; background: transparent; font-family: inherit; font-size: 14px; font-weight: 700; color: #F2F4F8; cursor: pointer">Show all 1,284 cards</button>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1900}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { filter: 'All', period: '30D' }; }
+  renderVals() {
+    const P = {
+      '7D': { pct: 2.1, word: 'up this week', pts: [50,48,49,45,44,42,40], seg: [3.0, 2.4, 0.6] },
+      '30D': { pct: 8.4, word: 'up in the last 30 days', pts: [52,50,54,48,49,44,46,40,42,34,30,33,24,20,16,14], seg: [10.9, 8.1, 3.2] },
+      '1Y': { pct: 18.6, word: 'up in the last year', pts: [40,44,50,54,52,47,42,45,38,30,26,18], seg: [24.5, 17.2, 6.8] },
+      'All': { pct: 412.0, word: 'up since tracking began (2015)', pts: [62,61,60,58,56,50,30,22,28,26,20,16,12], seg: [520, 380, 140] }
+    };
+    const cur = P[this.state.period];
+    const signed = (v) => (v >= 0 ? '▲ +' : '▼ −') + Math.abs(v).toFixed(1).replace('.0', '') + '%';
+    const trendUp = cur.pct >= 0;
+    const trendColor = trendUp ? '#6EE2A2' : '#FF8A75';
+    const trendPath = cur.pts.map((y, i) => (i ? 'L' : 'M') + (i * 320 / (cur.pts.length - 1)).toFixed(1) + ' ' + y).join(' ');
+    const segStyle = (v) => 'font-family: IBM Plex Mono, monospace; font-size: 15px; font-weight: 600; color: ' + (v >= 0 ? '#6EE2A2' : '#FF8A75');
+    const segments = [['Rookie cards', cur.seg[0]], ['Graded', cur.seg[1]], ['Base / raw', cur.seg[2]]].map((g) => ({ label: g[0], value: signed(g[1]), style: segStyle(g[1]) }));
+    const pOn = 'height: 28px; min-width: 36px; padding: 0 6px; border-radius: 6px; border: none; background: #2E3542; color: #F2F4F8; font-family: Inter Tight, sans-serif; font-size: 12px; font-weight: 700; cursor: pointer';
+    const pOff = 'height: 28px; min-width: 36px; padding: 0 6px; border-radius: 6px; border: none; background: transparent; color: #D5D9E0; font-family: Inter Tight, sans-serif; font-size: 12px; font-weight: 600; cursor: pointer';
+    const periods = ['7D', '30D', '1Y', 'All'].map((l) => ({ label: l, style: this.state.period === l ? pOn : pOff, pick: () => this.setState({ period: l }) }));
+    const trend = { periods, segments, trendPath, trendColor, trendPct: signed(cur.pct), trendWord: cur.word, trendStyle: 'font-family: IBM Plex Mono, monospace; font-size: 40px; font-weight: 600; letter-spacing: -0.02em; color: ' + trendColor };
+    const labels = ['All', 'Rookies', 'Graded', 'Autos', 'Numbered'];
+    const on = 'height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid #C6F432; background: #C6F432; color: #0A0C10; font-family: Inter Tight, sans-serif; font-size: 13px; font-weight: 600; cursor: pointer';
+    const off = 'height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid #262C38; background: #2E3542; color: #F2F4F8; font-family: Inter Tight, sans-serif; font-size: 13px; font-weight: 600; cursor: pointer';
+    const filters = labels.map((l) => ({ label: l, style: l === this.state.filter ? on : off, pick: () => this.setState({ filter: l }) }));
+    const up = 'font-family: IBM Plex Mono, monospace; font-size: 12px; font-weight: 600; color: #4ADE80';
+    const down = 'font-family: IBM Plex Mono, monospace; font-size: 12px; font-weight: 600; color: #FF7A66';
+    const all = [
+      { name: '2009 Topps Chrome #101 RC', detail: 'Refractor · PSA 10 · /500', price: '$48,500', change: '▲ +11.2%', up: true, tags: ['Rookies', 'Graded', 'Numbered'] },
+      { name: '2009 Panini Playoff Contenders RC Auto', detail: 'Rookie Ticket · BGS 9.5', price: '$36,000', change: '▲ +6.8%', up: true, tags: ['Rookies', 'Graded', 'Autos'] },
+      { name: '2009 Topps Chrome #101 RC', detail: 'Base · PSA 10', price: '$4,250', change: '▲ +9.4%', up: true, tags: ['Rookies', 'Graded'] },
+      { name: '2012 Panini Prizm #1', detail: 'Silver · PSA 10', price: '$2,900', change: '▼ −2.1%', up: false, tags: ['Graded'] },
+      { name: '2009 Upper Deck #234 RC', detail: 'Base · Raw', price: '$145', change: '▲ +4.0%', up: true, tags: ['Rookies'] },
+      { name: '2024 Panini Prizm #45', detail: 'Base · Raw', price: '$6', change: '▼ −0.8%', up: false, tags: [] }
+    ];
+    const f = this.state.filter;
+    const cards = all.filter((c) => f === 'All' || c.tags.indexOf(f) !== -1).map((c) => ({ ...c, changeStyle: c.up ? up : down }));
+    return { filters, cards, ...trend };
+  }
+}
+</script>
+</body>
+</html>
