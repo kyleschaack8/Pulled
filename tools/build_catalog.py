@@ -272,7 +272,7 @@ def pick_cards(player):
     picked, releases = [], set()
     for c in sorted(cands, key=rank):
         if counts.get(str(g(c, "id")), 0) == 0:
-            break
+            continue  # no sales in the last year
         rel = norm(g(c, "releaseName", "release_name", default=""))
         if rel in releases:
             continue
