@@ -373,6 +373,7 @@ function getPhotos() { try { const v = JSON.parse(localStorage.getItem('pulled-p
 let memPhotos = getPhotos();
 /* real card images saved in the repo by the "Fetch card images" GitHub Action */
 let repoImages = {};
+function pulledImgFail(id) { if (repoImages[id]) { delete repoImages[id]; render(); } }
 function loadRepoImages() {
   try {
     fetch('images/cards/manifest.json', { cache: 'no-store' })
@@ -428,7 +429,7 @@ function cardArt(c) {
 function cardVisual(c) {
   const ph = memPhotos[c.id];
   if (ph && /^data:image\//.test(ph)) return `<img src="${ph}" alt="Your photo of ${esc(c.name)}" style="width:100%;height:100%;object-fit:contain;display:block">`;
-  if (repoImages[c.id]) return `<img src="${repoImages[c.id]}" alt="${esc(c.name)}" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block">`;
+  if (repoImages[c.id]) return `<img src="${repoImages[c.id]}" alt="${esc(c.name)}" loading="lazy" onerror="pulledImgFail('${c.id}')" style="width:100%;height:100%;object-fit:contain;display:block">`;
   return cardArt(c);
 }
 function handlePhoto(file, id) {

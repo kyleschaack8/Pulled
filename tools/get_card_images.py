@@ -57,6 +57,24 @@ CARDS = {
     "griffey-ud-raw":    "1989 Upper Deck Ken Griffey Jr 1",
 }
 
+# The card number on the real card, used to pick the right match among search results
+NUMBERS = {
+    "curry-chrome-ref": "101", "curry-contenders": "106", "curry-chrome-base": "101", "curry-prizm": "72",
+    "wemby-silver": "136", "wemby-base": "136", "mahomes-silver": "269", "mahomes-nt": "161",
+    "mahomes-optic": "177", "ohtani-update": "US1", "ohtani-chrome": "HMT1",
+    "griffey-ud": "1", "griffey-bowman": "220", "griffey-ud-raw": "1",
+}
+
+
+def _card_number(uuid):
+    try:
+        card = client.catalog.get_card(id=uuid)
+        d = card.to_dict() if hasattr(card, "to_dict") else vars(card)
+        return str(d.get("number", "")).strip().upper()
+    except Exception:  # noqa: BLE001
+        return ""
+
+
 # Broader searches to try when the exact one finds nothing
 FALLBACK = {
     "curry": "Stephen Curry", "wemby": "Victor Wembanyama", "mahomes": "Patrick Mahomes",
@@ -78,13 +96,23 @@ def searches_for(card_id, query):
 
 
 def find_card(card_id, query):
+    """Search, then prefer the result whose card number matches the real card."""
+    want = NUMBERS.get(card_id, "").upper()
+    first = None
     for q in searches_for(card_id, query):
         res = client.catalog.search_catalog(q=q, take=10)
         results = list(getattr(res, "results", []) or [])
         cards_only = [r for r in results if str(getattr(r, "type_", "")).lower().endswith("card")]
-        if cards_only:
+        if not cards_only:
+            continue
+        if first is None:
+            first = (cards_only[0], q)
+        if not want:
             return cards_only[0], q
-    return None, None
+        for r in cards_only[:6]:
+            if _card_number(getattr(r, "id", "")) == want:
+                return r, q
+    return first if first else (None, None)
 
 
 out = pathlib.Path(os.environ.get("PULLED_IMAGE_DIR", "pulled_card_images"))
@@ -167,10 +195,14 @@ def to_bytes(img):
     raise ValueError(f"Unrecognized image response: {type(img).__name__} with fields {[a for a in dir(img) if not a.startswith('_')][:12]}")
 
 
+def is_image(data):
+    return data[:3] == b"\xff\xd8\xff" or data[:8] == b"\x89PNG\r\n\x1a\n" or data[8:12] == b"WEBP"
+
+
 def save_image(img, path_stem):
     data = to_bytes(img)
-    if not data:
-        raise ValueError("Empty image")
+    if not data or not is_image(data):
+        raise ValueError("CardSight did not return an image file")
     ext = ".png" if data[:8] == b"\x89PNG\r\n\x1a\n" else ".webp" if data[8:12] == b"WEBP" else ".jpg"
     path = out / (path_stem + ext)
     path.write_bytes(data)
@@ -215,7 +247,8 @@ if old.exists():  # keep images from earlier runs for cards that failed this tim
     try:
         prev = json.loads(old.read_text())
         for k, v in prev.items():
-            if k not in manifest and (out / v).exists():
+            f = out / v
+            if k not in manifest and f.exists() and is_image(f.read_bytes()[:12]):
                 manifest[k] = v
     except ValueError:
         pass
