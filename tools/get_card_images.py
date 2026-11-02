@@ -26,6 +26,7 @@ import json
 import os
 import pathlib
 import sys
+import urllib.error
 import urllib.request
 
 try:
@@ -91,110 +92,49 @@ out.mkdir(parents=True, exist_ok=True)
 client = CardSightAI()
 
 
-import asyncio
-import importlib
-import inspect
-import pkgutil
-
-
-def _settle(result):
-    """Some SDK calls return a coroutine; run it to get the real result."""
-    if inspect.iscoroutine(result):
-        return asyncio.run(result)
-    return result
-
-
-def _image_modules():
-    """Find the SDK's generated image endpoint modules (e.g. cardsightai.api.images.get_card_image)."""
-    import cardsightai
-    found = []
-    for info in pkgutil.walk_packages(cardsightai.__path__, cardsightai.__name__ + "."):
-        name = info.name
-        if "image" in name.lower() and "card" in name.lower() and "model" not in name.lower():
-            try:
-                found.append(importlib.import_module(name))
-            except Exception as e:  # noqa: BLE001
-                print(f"  could not import {name}: {e}")
-    return found
-
-
-def _low_level_clients():
-    """Candidates for the generated client object the endpoint functions expect."""
-    cands = [client]
-    for attr in ("client", "_client", "api_client", "_api_client", "http_client", "_http"):
-        v = getattr(client, attr, None)
-        if v is not None:
-            cands.append(v)
-    return cands
-
-
-IMAGE_MODULES = []
+API_BASE = os.environ.get("CARDSIGHTAI_BASE_URL", "https://api.cardsight.ai").rstrip("/")
 
 
 def describe_images_api():
-    """Print what we can learn about the SDK's image functions, for the Actions log."""
-    global IMAGE_MODULES
     import cardsightai
     print(f"cardsightai version: {getattr(cardsightai, '__version__', 'unknown')}")
-    print(f"client attributes: {[a for a in dir(client) if not a.startswith('__')][:40]}")
-    imgs = getattr(client, "images", None)
-    print(f"client.images type: {type(imgs).__name__}; attributes: {[a for a in dir(imgs) if not a.startswith('__')][:40]}")
-    IMAGE_MODULES = _image_modules()
-    for m in IMAGE_MODULES:
-        fns = [n for n in ("sync_detailed", "sync", "asyncio_detailed", "asyncio") if hasattr(m, n)]
-        sig = ""
-        if fns:
-            try:
-                sig = str(inspect.signature(getattr(m, fns[0])))
-            except (TypeError, ValueError):
-                pass
-        print(f"  module {m.__name__}: {fns} {sig}")
-
-
-def _call_with_id(fn, uuid, extra=None):
-    """Call fn, passing the card id under whatever parameter name it uses."""
-    extra = extra or {}
-    try:
-        params = inspect.signature(fn).parameters
-    except (TypeError, ValueError):
-        params = {}
-    id_names = [n for n in params if n not in ("self", "client") and ("id" in n.lower() or n.lower() in ("uuid", "card"))]
-    for n in id_names + ["id", "card_id", "uuid"]:
-        try:
-            return _settle(fn(**{n: uuid}, **extra))
-        except TypeError:
-            continue
-    return _settle(fn(uuid, **extra))
 
 
 def fetch_image(uuid):
-    errors = []
-    # 1) The generated endpoint module, raw response (binary images live in .content)
-    for m in IMAGE_MODULES:
-        for fname in ("sync_detailed", "sync"):
-            fn = getattr(m, fname, None)
-            if not fn:
-                continue
-            for lc in _low_level_clients():
-                try:
-                    result = _call_with_id(fn, uuid, {"client": lc})
-                    if result is not None:
-                        return result
-                except Exception as e:  # noqa: BLE001
-                    errors.append(f"{m.__name__}.{fname}: {e}")
-    # 2) The high-level helpers on client.images
-    imgs = getattr(client, "images", None)
-    for name in ("get_card_image_detailed", "get_card_image", "get_image", "card_image"):
-        fn = getattr(imgs, name, None)
-        if fn is None:
-            continue
-        try:
-            result = _call_with_id(fn, uuid)
-            if result is not None:
-                return result
-        except Exception as e:  # noqa: BLE001
-            errors.append(f"images.{name}: {e}")
-    raise RuntimeError("Image download failed. Tried: " + " | ".join(errors[-4:]) if errors else "Image download failed: no image function found")
+    """Download the raw JPEG straight from CardSight's REST API.
+    (The SDK's get_card_image asks for raw bytes but then parses them as JSON, which fails.)"""
+    req = urllib.request.Request(
+        f"{API_BASE}/v1/images/cards/{uuid}?format=raw&default=false",
+        headers={"X-API-Key": os.environ["CARDSIGHTAI_API_KEY"], "Accept": "image/*"},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            data = r.read()
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"CardSight returned HTTP {e.code} for this card's image") from None
+    if not data or data[:1] in (b"{", b"["):
+        raise RuntimeError("CardSight returned no image for this card")
+    return data
+
+
+def card_details(uuid):
+    """Year / set / number / parallel for the matched card, so matches can be checked."""
+    try:
+        card = client.catalog.get_card(id=uuid)
+        d = card.to_dict() if hasattr(card, "to_dict") else vars(card)
+    except Exception as e:  # noqa: BLE001
+        return f"(details unavailable: {e})"
+    keep = []
+    for k, v in d.items():
+        kl = k.lower()
+        if any(w in kl for w in ("year", "set", "release", "number", "parallel", "variation", "name", "manufacturer")):
+            if isinstance(v, (str, int, float)) and str(v).strip():
+                keep.append(f"{k}={v}")
+            elif isinstance(v, dict):
+                n = v.get("name") or v.get("title")
+                if n:
+                    keep.append(f"{k}={n}")
+    return "; ".join(keep[:8])
 
 
 def to_bytes(img):
@@ -242,6 +182,7 @@ describe_images_api()
 rows = []
 for card_id, query in CARDS.items():
     top = None
+    details = ""
     try:
         top, used = find_card(card_id, query)
         if top is None:
@@ -253,12 +194,13 @@ for card_id, query in CARDS.items():
             rows.append([card_id, query, getattr(top, "name", ""), "NO ID ON RESULT", ""])
             print(f"  no id      {card_id}")
             continue
+        details = card_details(uuid)
         img = fetch_image(uuid)
         fname = save_image(img, card_id)
-        rows.append([card_id, used, getattr(top, "name", ""), "OK", fname])
+        rows.append([card_id, used, details or getattr(top, "name", ""), "OK", fname])
         print(f"  saved      {card_id}  ->  {getattr(top, 'name', '')}")
     except Exception as e:  # keep going so one bad card doesn't stop the run
-        matched = (getattr(top, "name", "") or "") if top is not None else ""
+        matched = details or ((getattr(top, "name", "") or "") if top is not None else "")
         rows.append([card_id, query, matched, f"ERROR: {e}", ""])
         print(f"  error      {card_id}: {e}")
 
