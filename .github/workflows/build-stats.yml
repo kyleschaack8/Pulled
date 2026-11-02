@@ -1,0 +1,51 @@
+name: Build player stats
+
+# Team, season and career stats, and injury status for every player (data/stats.json).
+# Uses no CardSight calls. Run by hand from the Actions tab.
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "build = refresh data/stats.json; discover = save sample responses (development)"
+        required: true
+        default: "build"
+        type: choice
+        options: [build, discover]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: player-stats
+  cancel-in-progress: false
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build stats
+        env:
+          MODE: ${{ inputs.mode || 'build' }}
+        run: python tools/build_stats.py
+
+      - name: Save to the repo
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898469+github-actions[bot]@users.noreply.github.com"
+          git add data debug 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Update player stats (${{ inputs.mode || 'build' }})"
+            git pull --rebase origin main
+            git push
+          fi
