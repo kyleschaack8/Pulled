@@ -19,6 +19,11 @@
    "at": "2026-11-02T07:27Z",
    "mode": "build",
    "used": 150
+  },
+  {
+   "at": "2026-11-02T07:31Z",
+   "mode": "build",
+   "used": 50
   }
  ],
  "done": [
@@ -32,6 +37,12 @@
   "lamar-jackson",
   "joel-embiid",
   "ronald-acuna-jr",
-  "justin-herbert"
+  "justin-herbert",
+  "kevin-durant",
+  "shohei-ohtani",
+  "patrick-mahomes",
+  "luka-doncic",
+  "aaron-judge",
+  "joe-burrow"
  ]
 }
