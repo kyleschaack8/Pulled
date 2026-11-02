@@ -6,7 +6,7 @@
 <title>Pulled Test Site</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Alfa+Slab+One&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <style>
 /* Layout: one app shell, sticky top bar, single content column up to 1120px; views swap by hash. Single dark look by design. */
 :root {
@@ -137,6 +137,11 @@ button, input, select { font: inherit; color: inherit; }
 .btile .title { font-weight: 700; font-size: 13px; line-height: 1.3; }
 .btile .sub { font-size: 12px; color: var(--faint); }
 .achip { background: var(--raise); }
+.phead { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between; }
+.phead > .pleft { flex: 1 1 360px; min-width: 0; }
+.pennant { flex: 0 1 420px; width: 100%; max-width: 420px; aspect-ratio: 440 / 240; }
+.pennant svg { display: block; }
+@media (max-width: 760px) { .pennant { flex-basis: 100%; max-width: 100%; } }
 .teamtag { display: inline-flex; align-items: center; height: 22px; padding: 0 8px; border-radius: 6px; font-size: 11px; font-weight: 800; letter-spacing: .04em; color: var(--fg); background: color-mix(in srgb, var(--tc) 22%, var(--raise)); border: 1px solid color-mix(in srgb, var(--tc) 55%, var(--line)); }
 .gres .gbadge.team { background: color-mix(in srgb, var(--tc) 22%, var(--raise)); border-color: color-mix(in srgb, var(--tc) 55%, var(--line)); color: var(--fg); }
 .nav { display: flex; gap: 4px; flex-wrap: wrap; }
@@ -686,6 +691,75 @@ function avatarSVG(o) {
 </svg>`;
 }
 
+/* ---------- retro team pennant (original vintage-style art in team colors; not a team logo) ---------- */
+const TWO_WORD = ['Red Sox', 'White Sox', 'Blue Jays', 'Trail Blazers', 'Maple Leafs', 'Golden Knights', 'Red Wings', 'Blue Jackets'];
+function teamParts(team) {
+  const t = String(team || '').trim();
+  if (!t || /·|retired/i.test(t)) return null;
+  const two = TWO_WORD.find(n => t.endsWith(' ' + n));
+  const nick = two || t.split(' ').slice(-1)[0];
+  return { city: t.slice(0, t.length - nick.length).trim(), nick };
+}
+function pennantSVG(o) {
+  // o: { team, prim, alt, sport, uid }
+  const parts = teamParts(o.team); if (!parts) return '';
+  const hexRgb = h => { const m = /^#?([0-9a-f]{6})$/i.exec(h || ''); if (!m) return null; const n = parseInt(m[1], 16); return [n >> 16 & 255, n >> 8 & 255, n & 255]; };
+  const lum = c => { if (!c) return 0; const f = v => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); }; return 0.2126 * f(c[0]) + 0.7152 * f(c[1]) + 0.0722 * f(c[2]); };
+  const hex = c => '#' + c.map(v => Math.max(0, Math.min(255, Math.round(v))).toString(16).padStart(2, '0')).join('');
+  const shade = (h, k) => { const c = hexRgb(h) || [70, 80, 100]; return hex(c.map(v => k < 0 ? v * (1 + k) : v + (255 - v) * k)); };
+  const ratio = (a, b) => { const x = lum(hexRgb(a)), y = lum(hexRgb(b)); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); };
+  const e = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const cream = '#f3e7cf';
+  const felt = o.prim || '#2f3b55';
+  const second = o.alt && ratio(o.alt, felt) >= 1.8 ? o.alt : (lum(hexRgb(felt)) > 0.45 ? '#141821' : cream);
+  // big letters: second color with a cream outline, offset shadow in deep felt
+  const letter = second, rim = ratio(cream, letter) > 1.4 ? cream : shade(felt, -0.6), drop = shade(felt, -0.55);
+  const id = 'pn' + (o.uid || Math.random().toString(36).slice(2, 7));
+  const nick = parts.nick.toUpperCase(), city = parts.city.toUpperCase();
+  const font = "'Alfa Slab One', 'Rockwell Extra Bold', 'Rockwell', Georgia, serif";
+  // size the nickname so it always fits inside the pennant's taper, whatever font loads
+  const x0 = 96, topEdge = x => 28 + 82 * (x - 40) / 390, botEdge = x => 212 - 82 * (x - 40) / 390;
+  const fit = s => { const yb = 122 + s * 0.36, top = yb - s * 0.74; const xEnd = Math.min(40 + (top - 6 - 28) * 390 / 82, 40 + (botEdge(40) - 6 - yb) * 390 / 82, 410); return xEnd - x0; };
+  let big = 66;
+  while (big > 22 && nick.length * big * 0.74 > fit(big)) big -= 1;
+  const nickW = Math.min(nick.length * big * 0.74, fit(big));
+  const cityS = Math.min(17, 230 / Math.max(6, city.length * 0.7));
+  const cityW = Math.min(city.length * cityS * 0.78, 250);
+  const stripes = [shade(second, 0.1), shade(felt, 0.25), second, shade(felt, -0.2)];
+  const sportGlyph = { NBA: '<circle cx="0" cy="0" r="13" fill="none" stroke="CURR" stroke-width="2.4"/><path d="M-13 0 H13 M0 -13 V13 M-9 -9 Q0 0 -9 9 M9 -9 Q0 0 9 9" stroke="CURR" stroke-width="2" fill="none"/>',
+    MLB: '<circle cx="0" cy="0" r="13" fill="none" stroke="CURR" stroke-width="2.4"/><path d="M-8 -10 Q-3 0 -8 10 M8 -10 Q3 0 8 10" stroke="CURR" stroke-width="2" fill="none" stroke-dasharray="2.5 2"/>',
+    NFL: '<ellipse rx="16" ry="9.5" fill="none" stroke="CURR" stroke-width="2.4" transform="rotate(-30)"/><path d="M-6 0 H6 M-3 -3 V3 M0 -3 V3 M3 -3 V3" stroke="CURR" stroke-width="1.6" transform="rotate(-30)"/>' }[o.sport] || '';
+  return `<svg viewBox="0 0 440 240" width="100%" height="100%" role="img" aria-label="Retro ${e(parts.city)} ${e(parts.nick)} pennant" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <filter id="${id}felt" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7" result="n"/><feColorMatrix in="n" type="saturate" values="0" result="g"/><feComponentTransfer in="g" result="g2"><feFuncA type="linear" slope=".22"/></feComponentTransfer><feComposite in="g2" in2="SourceGraphic" operator="in" result="t"/><feBlend in="SourceGraphic" in2="t" mode="multiply"/></filter>
+  <filter id="${id}sh" x="-10%" y="-20%" width="130%" height="150%"><feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#000" flood-opacity=".55"/></filter>
+  <pattern id="${id}dots" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.1" fill="${cream}" opacity=".09"/></pattern>
+  <linearGradient id="${id}fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".08"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".22"/></linearGradient>
+  <clipPath id="${id}clip"><path d="M44 30 L428 112 Q436 120 428 128 L44 210 Z"/></clipPath>
+</defs>
+<rect width="440" height="240" rx="22" fill="${shade(felt, -0.72)}"/>
+<g opacity=".55">${stripes.map((s, i) => `<path d="M-20 ${170 + i * 18} L460 ${70 + i * 18} L460 ${84 + i * 18} L-20 ${184 + i * 18} Z" fill="${s}" opacity="${0.55 - i * 0.08}"/>`).join('')}</g>
+<rect width="440" height="240" rx="22" fill="url(#${id}dots)"/>
+<rect x="30" y="14" width="10" height="214" rx="4" fill="#8a6a45"/><rect x="31.5" y="14" width="3" height="214" rx="1.5" fill="#c49a68" opacity=".7"/><circle cx="35" cy="12" r="7" fill="#d8b46a"/><circle cx="33" cy="10" r="2.2" fill="#fff4cc" opacity=".8"/>
+<g filter="url(#${id}sh)">
+  <path d="M40 28 L430 110 Q442 120 430 130 L40 212 Z" fill="${felt}" filter="url(#${id}felt)"/>
+  <g clip-path="url(#${id}clip)">
+    <rect x="40" y="20" width="34" height="200" fill="${second}" opacity=".95"/>
+    <rect x="74" y="20" width="5" height="200" fill="${cream}" opacity=".85"/>
+    <g transform="translate(57 120) rotate(-90)" font-family="${font}" font-size="11" letter-spacing="3" fill="${lum(hexRgb(second)) > 0.4 ? '#141821' : cream}" text-anchor="middle"><text y="4">${e(o.sport || '')} · EST. PULLED</text></g>
+    <rect x="40" y="20" width="400" height="200" fill="url(#${id}fade)"/>
+  </g>
+  <path d="M46 37 L420 116 Q426 120 420 124 L46 203" fill="none" stroke="${cream}" stroke-width="1.8" stroke-dasharray="6 5" opacity=".7"/>
+  ${city ? `<text x="96" y="${100 - big * 0.42}" font-family="${font}" font-size="${cityS.toFixed(1)}" textLength="${cityW.toFixed(1)}" lengthAdjust="spacingAndGlyphs" fill="${cream}" opacity=".92" transform="rotate(-2.2 96 100)">${e(city)}</text>` : ''}
+  <g transform="rotate(-2.2 96 120)">
+    <text x="${96 + 4}" y="${122 + big * 0.36 + 4}" font-family="${font}" font-size="${big.toFixed(1)}" textLength="${nickW.toFixed(1)}" lengthAdjust="spacingAndGlyphs" fill="${drop}">${e(nick)}</text>
+    <text x="96" y="${122 + big * 0.36}" font-family="${font}" font-size="${big.toFixed(1)}" textLength="${nickW.toFixed(1)}" lengthAdjust="spacingAndGlyphs" fill="${letter}" stroke="${rim}" stroke-width="${(big / 16).toFixed(1)}" paint-order="stroke">${e(nick)}</text>
+  </g>
+  <g transform="translate(${Math.min(372, 96 + nickW * 0.55)} ${Math.min(176, 122 + big * 0.36 + 26)}) rotate(-12)" opacity=".85">${sportGlyph.replace(/CURR/g, cream)}</g>
+</g>
+</svg>`;
+}
+
 let avN = 0;
 function playerAvatar(p) {
   const num = /^#/.test(p.num || '') ? p.num.slice(1) : '';
@@ -1141,13 +1215,13 @@ function viewPlayer(pid) {
   return `<div class="view">
     <div class="section" style="padding-top:8px">
       <a href="#home" style="color:var(--muted);text-decoration:none;font-weight:600;font-size:14px">← All players</a>
-      <div class="row" style="gap:16px;align-items:flex-start">
+      <div class="phead"><div class="pleft"><div class="row" style="gap:16px;align-items:flex-start">
         <div class="pavatar">${playerAvatar(p)}</div>
         <div style="display:flex;flex-direction:column;gap:6px;min-width:0;flex:1">
           <h1>${esc(p.name)}</h1>
           <div class="row" style="gap:8px">${teamTag(p)}<span style="color:var(--muted)">${[p.team, p.pos, p.sport].filter(Boolean).map(esc).join(' · ')}</span><span class="status ${p.status}">${p.status === 'active' ? 'Active' : 'Retired'}</span>${p.injured ? `<span class="status injured">${esc(p.injured)}</span>` : ''}</div>
         </div>
-      </div>
+      </div></div>${(pn => pn ? `<div class="pennant">${pn}</div>` : '')(pennantSVG({ team: p.team, prim: p.teamPrimary || p.color, alt: p.teamSecondary || '', sport: p.sport, uid: 'pn' + (++avN) }))}</div>
       <p class="lede">${esc(p.summary)}</p>
     </div>
 
