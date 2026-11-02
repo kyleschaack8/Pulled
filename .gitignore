@@ -1,0 +1,6 @@
+# Never upload secrets or downloaded images
+.env
+*.key
+pulled_card_images/
+__pycache__/
+.DS_Store
