@@ -1,4 +1,126 @@
 {
- "cards": [],
- "updated": "2026-11-02T07:18Z"
+ "cards": [
+  {
+   "attributes": [
+    "NBA-CLE",
+    "RC"
+   ],
+   "id": "2735bc7e-51c2-497c-a890-86012b4ff0fc",
+   "image": "images/cards/2735bc7e-51c2-497c-a890-86012b4ff0fc.jpg",
+   "number": "111",
+   "numberedTo": null,
+   "playerId": "lebron-james",
+   "release": "Topps Chrome",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2003-04 Topps Chrome #111",
+   "year": "2003-04"
+  },
+  {
+   "attributes": [
+    "NBA-CLE",
+    "RC"
+   ],
+   "id": "46f5551a-87f0-4845-936e-97f8ef9de1e1",
+   "number": "221",
+   "numberedTo": null,
+   "playerId": "lebron-james",
+   "release": "Topps",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2003-04 Topps #221",
+   "year": "2003-04"
+  },
+  {
+   "attributes": [
+    "NBA-CLE",
+    "RC"
+   ],
+   "id": "a73bbc75-1a41-4023-9251-f4243c013952",
+   "number": "123",
+   "numberedTo": null,
+   "playerId": "lebron-james",
+   "release": "Bowman",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2003-04 Bowman #123",
+   "year": "2003-04"
+  },
+  {
+   "attributes": [
+    "NBA-CLE",
+    "RC"
+   ],
+   "id": "68684d71-fda7-4ac3-bfdc-d91ac5d11122",
+   "number": "101",
+   "numberedTo": null,
+   "playerId": "lebron-james",
+   "release": "Upper Deck Victory",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2003-04 Upper Deck Victory #101",
+   "year": "2003-04"
+  },
+  {
+   "attributes": [
+    "NBA-GSW",
+    "RC"
+   ],
+   "id": "f74d5b3e-417b-4ebe-930b-edeec87dc3ab",
+   "image": "images/cards/f74d5b3e-417b-4ebe-930b-edeec87dc3ab.jpg",
+   "number": "321",
+   "numberedTo": null,
+   "playerId": "stephen-curry",
+   "release": "Topps",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2009-10 Topps #321",
+   "year": "2009-10"
+  },
+  {
+   "attributes": [
+    "NBA-GSW",
+    "RC",
+    "SP"
+   ],
+   "id": "a3f0e0f7-560f-4cfc-a7ea-2d56bf05f7e9",
+   "number": "234",
+   "numberedTo": null,
+   "playerId": "stephen-curry",
+   "release": "Upper Deck",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2009-10 Upper Deck #234",
+   "year": "2009-10"
+  },
+  {
+   "attributes": [
+    "NBA-GSW"
+   ],
+   "id": "e930b7f8-e45e-4c51-a890-0008366b2930",
+   "number": "157",
+   "numberedTo": null,
+   "playerId": "stephen-curry",
+   "release": "Panini Prestige",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2009-10 Panini Prestige #157",
+   "year": "2009-10"
+  },
+  {
+   "attributes": [
+    "NBA-GSW"
+   ],
+   "id": "2204a45f-651c-43b4-bd17-863af053a3a7",
+   "number": "357",
+   "numberedTo": null,
+   "playerId": "stephen-curry",
+   "release": "Panini",
+   "rookie": true,
+   "set": "Base Set",
+   "title": "2009-10 Panini #357",
+   "year": "2009-10"
+  }
+ ],
+ "updated": "2026-11-02T07:20Z"
 }
