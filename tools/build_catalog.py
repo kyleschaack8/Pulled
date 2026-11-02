@@ -56,6 +56,13 @@ FLAGSHIP = {
 }
 
 
+# Words that mark autographs, memorabilia, inserts and reprints (ranked after base rookie cards)
+SPECIAL = ["auto", "signature", "signed", "relic", "material", "memorabilia", "patch", "jersey", "swatch",
+           "reprint", "archives", "coins", "combo", "trios", "canvas", "museum", "illumination", "emergent",
+           "roundup", "roll call", "acetate", "contenders", "parallels", "mega box", "favorites", "draft notices",
+           "co signers", "stickers", "booklet", "front row", "allen  ginter x", "elite update"]
+
+
 class RateLimited(Exception):
     pass
 
@@ -245,10 +252,22 @@ def pick_cards(player):
         return []
     counts = sales_counts([str(g(c, "id")) for c in cands])
 
+    def tier(c):
+        """0 = the main base/rookie card of a release, 1 = other regular cards, 2 = autos, relics, inserts, reprints."""
+        st = norm(g(c, "setName", "set_name", default=""))
+        rel = norm(g(c, "releaseName", "release_name", default=""))
+        attrs = [a.upper() for a in (g(c, "attributes", default=[]) or [])]
+        text = st + " " + rel
+        if any(w in text for w in SPECIAL) or "AU" in attrs:
+            return 2
+        if st in ("base set", "base", "rated rookies", "rookies", "rookie") or st == rel:
+            return 0
+        return 1
+
     def rank(c):
         rel = norm(g(c, "releaseName", "release_name", default=""))
         pri = next((i for i, p in enumerate(PRIORITY) if p in rel), len(PRIORITY))
-        return (-counts.get(str(g(c, "id")), 0), pri)
+        return (tier(c), -counts.get(str(g(c, "id")), 0), pri)
 
     picked, releases = [], set()
     for c in sorted(cands, key=rank):
