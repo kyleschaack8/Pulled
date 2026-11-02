@@ -18,7 +18,7 @@ on:
         type: choice
         options: [build, prices, debug]
       players:
-        description: "debug mode only: player ids, comma-separated"
+        description: "optional: only these player ids, comma-separated (build or debug)"
         required: false
         default: ""
 

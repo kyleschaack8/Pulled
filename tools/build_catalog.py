@@ -346,6 +346,9 @@ def main():
             print(f"Refreshed prices for {len(by_id)} cards")
         else:
             todo = [p for p in players if p["id"] not in progress["done"]]
+            only = [x.strip() for x in os.environ.get("PLAYERS", "").split(",") if x.strip()]
+            if only:  # build just these players (e.g. to redo a few)
+                todo = [p for p in todo if p["id"] in only]
             # Rotate through sports (NBA, MLB, NFL, ...) so partial builds stay balanced
             by_sport = {}
             for p in todo:
