@@ -337,7 +337,7 @@ async function loadRealData() {
     state.compareIds = [...new Set(top.map(c => c.p))].slice(0, 3).map(pid => top.find(c => c.p === pid).id);
     memCol = getCol();
     const n = $('#dataNotice');
-    if (n) n.textContent = `REAL SALES DATA FROM CARDSIGHT AI · ${Object.keys(PLAYERS).length} PLAYERS · ${CARDS.length} CARDS · UPDATED ${String(pr.updated || '').slice(0, 10)} · PLAYER STATS COMING SOON`;
+    if (n) n.textContent = `REAL SALES DATA FROM CARDSIGHT AI · ${Object.keys(PLAYERS).length} PLAYERS · ${CARDS.length} CARDS · PRICES UPDATED ${String(pr.updated || '').slice(0, 10)}${sj && sj.updated ? ' · STATS UPDATED ' + String(sj.updated).slice(0, 10) : ''}`;
     render();
   } catch (e) { /* keep sample data */ }
 }
