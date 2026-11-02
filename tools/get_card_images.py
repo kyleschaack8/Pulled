@@ -23,6 +23,7 @@ Uses about 2 API calls per card (32 total), well inside the free tier.
 """
 import csv
 import json
+import time
 import os
 import pathlib
 import sys
@@ -66,9 +67,42 @@ NUMBERS = {
 }
 
 
+class RateLimited(Exception):
+    pass
+
+
+_last_call = [0.0]
+
+
+def pace():
+    """Space out API calls so the free plan's per-minute limit isn't hit."""
+    wait = 1.5 - (time.time() - _last_call[0])
+    if wait > 0:
+        time.sleep(wait)
+    _last_call[0] = time.time()
+
+
+def check_limit(obj):
+    s = str(obj).lower()
+    if "429" in s or "rate limit" in s or "too many requests" in s or "quota" in s:
+        raise RateLimited(s[:200])
+
+
+_card_cache = {}
+
+
+def get_card(uuid):
+    if uuid not in _card_cache:
+        pace()
+        card = client.catalog.get_card(id=uuid)
+        check_limit(type(card).__name__ + " " + str(getattr(card, "message", "")) + " " + str(getattr(card, "code", "")))
+        _card_cache[uuid] = card
+    return _card_cache[uuid]
+
+
 def _card_number(uuid):
     try:
-        card = client.catalog.get_card(id=uuid)
+        card = get_card(uuid)
         d = card.to_dict() if hasattr(card, "to_dict") else vars(card)
         return str(d.get("number", "")).strip().upper()
     except Exception:  # noqa: BLE001
@@ -100,7 +134,9 @@ def find_card(card_id, query):
     want = NUMBERS.get(card_id, "").upper()
     first = None
     for q in searches_for(card_id, query):
+        pace()
         res = client.catalog.search_catalog(q=q, take=10)
+        check_limit(type(res).__name__ + " " + str(getattr(res, "message", "")) + " " + str(getattr(res, "code", "")))
         results = list(getattr(res, "results", []) or [])
         cards_only = [r for r in results if str(getattr(r, "type_", "")).lower().endswith("card")]
         if not cards_only:
@@ -109,7 +145,7 @@ def find_card(card_id, query):
             first = (cards_only[0], q)
         if not want:
             return cards_only[0], q
-        for r in cards_only[:6]:
+        for r in cards_only[:4]:
             if _card_number(getattr(r, "id", "")) == want:
                 return r, q
     return first if first else (None, None)
@@ -131,6 +167,7 @@ def describe_images_api():
 def fetch_image(uuid):
     """Download the raw JPEG straight from CardSight's REST API.
     (The SDK's get_card_image asks for raw bytes but then parses them as JSON, which fails.)"""
+    pace()
     req = urllib.request.Request(
         f"{API_BASE}/v1/images/cards/{uuid}?format=raw&default=false",
         headers={"X-API-Key": os.environ["CARDSIGHTAI_API_KEY"], "Accept": "image/*"},
@@ -139,6 +176,8 @@ def fetch_image(uuid):
         with urllib.request.urlopen(req, timeout=30) as r:
             data = r.read()
     except urllib.error.HTTPError as e:
+        if e.code == 429:
+            raise RateLimited("HTTP 429") from None
         raise RuntimeError(f"CardSight returned HTTP {e.code} for this card's image") from None
     if not data or data[:1] in (b"{", b"["):
         raise RuntimeError("CardSight returned no image for this card")
@@ -148,8 +187,10 @@ def fetch_image(uuid):
 def card_details(uuid):
     """Year / set / number / parallel for the matched card, so matches can be checked."""
     try:
-        card = client.catalog.get_card(id=uuid)
+        card = get_card(uuid)
         d = card.to_dict() if hasattr(card, "to_dict") else vars(card)
+    except RateLimited:
+        raise
     except Exception as e:  # noqa: BLE001
         return f"(details unavailable: {e})"
     keep = []
@@ -211,8 +252,24 @@ def save_image(img, path_stem):
 
 describe_images_api()
 
+existing = {}
+try:
+    existing = json.loads((out / "manifest.json").read_text())
+except (OSError, ValueError):
+    pass
+REFRESH = os.environ.get("PULLED_REFRESH") == "1"
+
 rows = []
+stopped = False
 for card_id, query in CARDS.items():
+    if stopped:
+        rows.append([card_id, query, "", "SKIPPED (rate limit)", existing.get(card_id, "")])
+        continue
+    have = existing.get(card_id)
+    if have and not REFRESH and (out / have).exists() and is_image((out / have).read_bytes()[:12]):
+        rows.append([card_id, query, "kept existing image", "OK", have])
+        print(f"  kept       {card_id}")
+        continue
     top = None
     details = ""
     try:
@@ -231,6 +288,10 @@ for card_id, query in CARDS.items():
         fname = save_image(img, card_id)
         rows.append([card_id, used, details or getattr(top, "name", ""), "OK", fname])
         print(f"  saved      {card_id}  ->  {getattr(top, 'name', '')}")
+    except RateLimited as e:
+        stopped = True
+        rows.append([card_id, query, "", "STOPPED: CardSight rate limit", ""])
+        print(f"  RATE LIMIT hit at {card_id}; stopping to save your free calls. Run again later. ({e})")
     except Exception as e:  # keep going so one bad card doesn't stop the run
         matched = details or ((getattr(top, "name", "") or "") if top is not None else "")
         rows.append([card_id, query, matched, f"ERROR: {e}", ""])
