@@ -1,0 +1,8904 @@
+{
+ "players": {
+  "aaron-judge": {
+   "active": true,
+   "awards": [
+    [
+     "Silver Slugger",
+     "5x"
+    ],
+    [
+     "MVP",
+     "3x"
+    ],
+    [
+     "Hank Aaron Award",
+     "3x"
+    ],
+    [
+     "All-MLB 1st Team",
+     "4x"
+    ],
+    [
+     "Roberto Clemente Award",
+     "1x"
+    ],
+    [
+     "All-MLB 2nd Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "HR",
+     "386"
+    ],
+    [
+     "RBI",
+     "871"
+    ],
+    [
+     "H",
+     "1262"
+    ],
+    [
+     "R",
+     "918"
+    ],
+    [
+     "AB",
+     "4342"
+    ],
+    [
+     "BB",
+     "860"
+    ]
+   ],
+   "draft": "2013: Rd 1, Pk 32 (NYY)",
+   "espnId": "33192",
+   "experience": "11th Season",
+   "jersey": "99",
+   "position": "RF",
+   "season": [
+    [
+     "HR",
+     "18"
+    ],
+    [
+     "RBI",
+     "41"
+    ],
+    [
+     "H",
+     "57"
+    ],
+    [
+     "R",
+     "45"
+    ],
+    [
+     "AB",
+     "237"
+    ],
+    [
+     "BB",
+     "43"
+    ]
+   ],
+   "statsLabel": "2026 Batting",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "AVG",
+      ".241",
+      ""
+     ],
+     [
+      "HR",
+      "18",
+      "Tied-98th"
+     ],
+     [
+      "RBI",
+      "41",
+      "Tied-219th"
+     ],
+     [
+      "OPS",
+      ".871",
+      ""
+     ]
+    ]
+   },
+   "team": "New York Yankees",
+   "teamAbbr": "NYY"
+  },
+  "aaron-rodgers": {
+   "active": true,
+   "awards": [
+    [
+     "NFL MVP",
+     "4x"
+    ],
+    [
+     "Super Bowl MVP",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "YDS",
+     "68,145"
+    ],
+    [
+     "TD",
+     "540"
+    ],
+    [
+     "INT",
+     "129"
+    ],
+    [
+     "CMP%",
+     "65.0"
+    ],
+    [
+     "RTG",
+     "101.7"
+    ],
+    [
+     "CAR",
+     "774"
+    ]
+   ],
+   "draft": "2005: Rd 1, Pk 24 (GB)",
+   "espnId": "8439",
+   "experience": "22nd Season",
+   "jersey": "8",
+   "last5": [
+    [
+     "YDS",
+     "1,171"
+    ],
+    [
+     "TD",
+     "9"
+    ],
+    [
+     "INT",
+     "4"
+    ],
+    [
+     "CMP%",
+     "61.7"
+    ],
+    [
+     "RTG",
+     "89.2"
+    ],
+    [
+     "CAR",
+     "5"
+    ]
+   ],
+   "position": "QB",
+   "projected": [
+    [
+     "YDS",
+     "3,976"
+    ],
+    [
+     "TD",
+     "28"
+    ],
+    [
+     "INT",
+     "13"
+    ],
+    [
+     "CMP%",
+     "60.8"
+    ],
+    [
+     "RTG",
+     "86.2"
+    ],
+    [
+     "CAR",
+     "26"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "1,871"
+    ],
+    [
+     "TD",
+     "13"
+    ],
+    [
+     "INT",
+     "6"
+    ],
+    [
+     "CMP%",
+     "60.8"
+    ],
+    [
+     "RTG",
+     "86.2"
+    ],
+    [
+     "CAR",
+     "12"
+    ]
+   ],
+   "statsLabel": "2026 Passing",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "YDS",
+      "1,871",
+      "10th"
+     ],
+     [
+      "TD",
+      "13",
+      "Tied-10th"
+     ],
+     [
+      "INT",
+      "6",
+      "Tied-22nd"
+     ],
+     [
+      "QBR",
+      "49.4",
+      "22nd"
+     ]
+    ]
+   },
+   "team": "Pittsburgh Steelers",
+   "teamAbbr": "PIT"
+  },
+  "anthony-davis": {
+   "active": true,
+   "awards": [
+    [
+     "All-NBA 2nd Team",
+     "1x"
+    ],
+    [
+     "All-Defensive 1st Team",
+     "3x"
+    ],
+    [
+     "NBA Cup All-Tournament Team",
+     "1x"
+    ],
+    [
+     "All-NBA 1st Team",
+     "4x"
+    ],
+    [
+     "All-Defensive 2nd Team",
+     "2x"
+    ],
+    [
+     "All-Star MVP",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "24.0"
+    ],
+    [
+     "REB",
+     "10.7"
+    ],
+    [
+     "AST",
+     "2.6"
+    ],
+    [
+     "FG%",
+     "52.1"
+    ],
+    [
+     "3P%",
+     "29.5"
+    ],
+    [
+     "STL",
+     "1.3"
+    ]
+   ],
+   "draft": "2012: Rd 1, Pk 1 (NO)",
+   "espnId": "6583",
+   "experience": "15th Season",
+   "jersey": "23",
+   "position": "F",
+   "season": [
+    [
+     "PTS",
+     "22.3"
+    ],
+    [
+     "REB",
+     "9.2"
+    ],
+    [
+     "AST",
+     "2.2"
+    ],
+    [
+     "FG%",
+     "44.5"
+    ],
+    [
+     "3P%",
+     "33.3"
+    ],
+    [
+     "STL",
+     "1.2"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "22.3",
+      "20th"
+     ],
+     [
+      "REB",
+      "9.2",
+      "Tied-10th"
+     ],
+     [
+      "AST",
+      "2.2",
+      "Tied-130th"
+     ],
+     [
+      "FG%",
+      "44.5",
+      "94th"
+     ]
+    ]
+   },
+   "team": "Washington Wizards",
+   "teamAbbr": "WSH"
+  },
+  "anthony-edwards": {
+   "active": true,
+   "awards": [
+    [
+     "All-Star MVP",
+     "1x"
+    ],
+    [
+     "All-NBA 2nd Team",
+     "2x"
+    ],
+    [
+     "All-Rookie 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "24.6"
+    ],
+    [
+     "REB",
+     "5.2"
+    ],
+    [
+     "AST",
+     "4.1"
+    ],
+    [
+     "FG%",
+     "45.3"
+    ],
+    [
+     "3P%",
+     "37.0"
+    ],
+    [
+     "STL",
+     "1.3"
+    ]
+   ],
+   "draft": "2020: Rd 1, Pk 1 (MIN)",
+   "espnId": "4594268",
+   "experience": "7th Season",
+   "injury": {
+    "comment": "Edwards underwent a successful arthroscopic procedure on his right knee Thursday, the Timberwolves announced.",
+    "date": "2026-10-29",
+    "returnDate": "2026-12-21",
+    "status": "Out",
+    "type": "Knee"
+   },
+   "jersey": "5",
+   "position": "G",
+   "season": [
+    [
+     "PTS",
+     "33.3"
+    ],
+    [
+     "REB",
+     "4.8"
+    ],
+    [
+     "AST",
+     "3.5"
+    ],
+    [
+     "FG%",
+     "48.1"
+    ],
+    [
+     "3P%",
+     "40.0"
+    ],
+    [
+     "STL",
+     "2.0"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "33.3",
+      ""
+     ],
+     [
+      "REB",
+      "4.8",
+      ""
+     ],
+     [
+      "AST",
+      "3.5",
+      ""
+     ],
+     [
+      "FG%",
+      "48.1",
+      "61st"
+     ]
+    ]
+   },
+   "team": "Minnesota Timberwolves",
+   "teamAbbr": "MIN"
+  },
+  "ashton-jeanty": {
+   "active": true,
+   "awards": [],
+   "career": [
+    [
+     "YDS",
+     "1,312"
+    ],
+    [
+     "TD",
+     "6"
+    ],
+    [
+     "REC",
+     "92"
+    ],
+    [
+     "CAR",
+     "374"
+    ]
+   ],
+   "draft": "2025: Rd 1, Pk 6 (LV)",
+   "espnId": "4890973",
+   "experience": "2nd Season",
+   "jersey": "2",
+   "last5": [
+    [
+     "YDS",
+     "131"
+    ],
+    [
+     "TD",
+     "1"
+    ],
+    [
+     "REC",
+     "24"
+    ],
+    [
+     "CAR",
+     "45"
+    ]
+   ],
+   "position": "RB",
+   "projected": [
+    [
+     "YDS",
+     "716"
+    ],
+    [
+     "TD",
+     "2"
+    ],
+    [
+     "REC",
+     "79"
+    ],
+    [
+     "CAR",
+     "230"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "337"
+    ],
+    [
+     "TD",
+     "1"
+    ],
+    [
+     "REC",
+     "37"
+    ],
+    [
+     "CAR",
+     "108"
+    ]
+   ],
+   "statsLabel": "2026 Offense",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "CAR",
+      "108",
+      "18th"
+     ],
+     [
+      "YDS",
+      "337",
+      "25th"
+     ],
+     [
+      "TD",
+      "1",
+      "Tied-37th"
+     ],
+     [
+      "AVG",
+      "3.1",
+      "43rd"
+     ]
+    ]
+   },
+   "team": "Las Vegas Raiders",
+   "teamAbbr": "LV"
+  },
+  "bijan-robinson": {
+   "active": true,
+   "awards": [],
+   "career": [
+    [
+     "YDS",
+     "4,690"
+    ],
+    [
+     "TD",
+     "29"
+    ],
+    [
+     "REC",
+     "223"
+    ],
+    [
+     "CAR",
+     "955"
+    ]
+   ],
+   "draft": "2023: Rd 1, Pk 8 (ATL)",
+   "espnId": "4430807",
+   "experience": "4th Season",
+   "jersey": "7",
+   "last5": [
+    [
+     "YDS",
+     "431"
+    ],
+    [
+     "TD",
+     "2"
+    ],
+    [
+     "REC",
+     "12"
+    ],
+    [
+     "CAR",
+     "84"
+    ]
+   ],
+   "position": "RB",
+   "projected": [
+    [
+     "YDS",
+     "1,658"
+    ],
+    [
+     "TD",
+     "9"
+    ],
+    [
+     "REC",
+     "53"
+    ],
+    [
+     "CAR",
+     "319"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "780"
+    ],
+    [
+     "TD",
+     "4"
+    ],
+    [
+     "REC",
+     "25"
+    ],
+    [
+     "CAR",
+     "150"
+    ]
+   ],
+   "statsLabel": "2026 Offense",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "CAR",
+      "150",
+      "3rd"
+     ],
+     [
+      "YDS",
+      "780",
+      "1st"
+     ],
+     [
+      "TD",
+      "4",
+      "Tied-14th"
+     ],
+     [
+      "AVG",
+      "5.2",
+      "4th"
+     ]
+    ]
+   },
+   "team": "Atlanta Falcons",
+   "teamAbbr": "ATL"
+  },
+  "bo-nix": {
+   "active": true,
+   "awards": [],
+   "career": [
+    [
+     "YDS",
+     "9,199"
+    ],
+    [
+     "TD",
+     "63"
+    ],
+    [
+     "INT",
+     "26"
+    ],
+    [
+     "CMP%",
+     "63.9"
+    ],
+    [
+     "RTG",
+     "89.3"
+    ],
+    [
+     "CAR",
+     "207"
+    ]
+   ],
+   "draft": "2024: Rd 1, Pk 12 (DEN)",
+   "espnId": "4426338",
+   "experience": "3rd Season",
+   "jersey": "10",
+   "last5": [
+    [
+     "YDS",
+     "888"
+    ],
+    [
+     "TD",
+     "5"
+    ],
+    [
+     "INT",
+     "0"
+    ],
+    [
+     "CMP%",
+     "59.2"
+    ],
+    [
+     "RTG",
+     "85.5"
+    ],
+    [
+     "CAR",
+     "20"
+    ]
+   ],
+   "position": "QB",
+   "projected": [
+    [
+     "YDS",
+     "3,173"
+    ],
+    [
+     "TD",
+     "19"
+    ],
+    [
+     "INT",
+     "6"
+    ],
+    [
+     "CMP%",
+     "59.6"
+    ],
+    [
+     "RTG",
+     "83.6"
+    ],
+    [
+     "CAR",
+     "68"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "1,493"
+    ],
+    [
+     "TD",
+     "9"
+    ],
+    [
+     "INT",
+     "3"
+    ],
+    [
+     "CMP%",
+     "59.6"
+    ],
+    [
+     "RTG",
+     "83.6"
+    ],
+    [
+     "CAR",
+     "32"
+    ]
+   ],
+   "statsLabel": "2026 Passing",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "YDS",
+      "1,493",
+      "20th"
+     ],
+     [
+      "TD",
+      "9",
+      "Tied-18th"
+     ],
+     [
+      "INT",
+      "3",
+      "Tied-6th"
+     ],
+     [
+      "QBR",
+      "48.9",
+      "24th"
+     ]
+    ]
+   },
+   "team": "Denver Broncos",
+   "teamAbbr": "DEN"
+  },
+  "bobby-witt-jr": {
+   "active": true,
+   "awards": [
+    [
+     "Gold Glove",
+     "2x"
+    ],
+    [
+     "Silver Slugger",
+     "2x"
+    ],
+    [
+     "All-MLB 1st Team",
+     "2x"
+    ]
+   ],
+   "career": [
+    [
+     "HR",
+     "123"
+    ],
+    [
+     "RBI",
+     "427"
+    ],
+    [
+     "H",
+     "879"
+    ],
+    [
+     "R",
+     "497"
+    ],
+    [
+     "AB",
+     "3049"
+    ],
+    [
+     "BB",
+     "243"
+    ]
+   ],
+   "draft": "",
+   "espnId": "42403",
+   "experience": "5th Season",
+   "jersey": "7",
+   "position": "SS",
+   "season": [
+    [
+     "HR",
+     "18"
+    ],
+    [
+     "RBI",
+     "54"
+    ],
+    [
+     "H",
+     "157"
+    ],
+    [
+     "R",
+     "94"
+    ],
+    [
+     "AB",
+     "558"
+    ],
+    [
+     "BB",
+     "67"
+    ]
+   ],
+   "statsLabel": "2026 Batting",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "AVG",
+      ".281",
+      "Tied-25th"
+     ],
+     [
+      "HR",
+      "18",
+      "Tied-98th"
+     ],
+     [
+      "RBI",
+      "54",
+      "Tied-151st"
+     ],
+     [
+      "OPS",
+      ".800",
+      "46th"
+     ]
+    ]
+   },
+   "team": "Kansas City Royals",
+   "teamAbbr": "KC"
+  },
+  "brock-bowers": {
+   "active": true,
+   "awards": [],
+   "career": [
+    [
+     "YDS",
+     "2,421"
+    ],
+    [
+     "TD",
+     "17"
+    ],
+    [
+     "REC",
+     "217"
+    ],
+    [
+     "CAR",
+     "7"
+    ]
+   ],
+   "draft": "2024: Rd 1, Pk 13 (LV)",
+   "espnId": "4432665",
+   "experience": "3rd Season",
+   "jersey": "89",
+   "last5": [
+    [
+     "YDS",
+     "431"
+    ],
+    [
+     "TD",
+     "4"
+    ],
+    [
+     "REC",
+     "31"
+    ],
+    [
+     "CAR",
+     "0"
+    ]
+   ],
+   "position": "TE",
+   "projected": [
+    [
+     "YDS",
+     "1,162"
+    ],
+    [
+     "TD",
+     "11"
+    ],
+    [
+     "REC",
+     "87"
+    ],
+    [
+     "CAR",
+     "0"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "547"
+    ],
+    [
+     "TD",
+     "5"
+    ],
+    [
+     "REC",
+     "41"
+    ],
+    [
+     "CAR",
+     "0"
+    ]
+   ],
+   "statsLabel": "2026 Offense",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "REC",
+      "41",
+      "Tied-15th"
+     ],
+     [
+      "YDS",
+      "547",
+      "13th"
+     ],
+     [
+      "TD",
+      "5",
+      "Tied-6th"
+     ],
+     [
+      "AVG",
+      "13.3",
+      "39th"
+     ]
+    ]
+   },
+   "team": "Las Vegas Raiders",
+   "teamAbbr": "LV"
+  },
+  "brock-purdy": {
+   "active": true,
+   "awards": [],
+   "career": [
+    [
+     "YDS",
+     "13,433"
+    ],
+    [
+     "TD",
+     "99"
+    ],
+    [
+     "INT",
+     "41"
+    ],
+    [
+     "CMP%",
+     "68.1"
+    ],
+    [
+     "RTG",
+     "104.8"
+    ],
+    [
+     "CAR",
+     "192"
+    ]
+   ],
+   "draft": "2022: Rd 7, Pk 262 (SF)",
+   "espnId": "4361741",
+   "experience": "5th Season",
+   "jersey": "13",
+   "last5": [
+    [
+     "YDS",
+     "1,256"
+    ],
+    [
+     "TD",
+     "10"
+    ],
+    [
+     "INT",
+     "3"
+    ],
+    [
+     "CMP%",
+     "64.9"
+    ],
+    [
+     "RTG",
+     "104.3"
+    ],
+    [
+     "CAR",
+     "24"
+    ]
+   ],
+   "position": "QB",
+   "projected": [
+    [
+     "YDS",
+     "4,245"
+    ],
+    [
+     "TD",
+     "36"
+    ],
+    [
+     "INT",
+     "10"
+    ],
+    [
+     "CMP%",
+     "69.2"
+    ],
+    [
+     "RTG",
+     "110.1"
+    ],
+    [
+     "CAR",
+     "78"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "1,748"
+    ],
+    [
+     "TD",
+     "15"
+    ],
+    [
+     "INT",
+     "4"
+    ],
+    [
+     "CMP%",
+     "69.2"
+    ],
+    [
+     "RTG",
+     "110.1"
+    ],
+    [
+     "CAR",
+     "32"
+    ]
+   ],
+   "statsLabel": "2026 Passing",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "YDS",
+      "1,748",
+      "15th"
+     ],
+     [
+      "TD",
+      "15",
+      "Tied-5th"
+     ],
+     [
+      "INT",
+      "4",
+      "Tied-11th"
+     ],
+     [
+      "QBR",
+      "79.6",
+      "1st"
+     ]
+    ]
+   },
+   "team": "San Francisco 49ers",
+   "teamAbbr": "SF"
+  },
+  "bryce-harper": {
+   "active": true,
+   "awards": [
+    [
+     "Silver Slugger",
+     "4x"
+    ],
+    [
+     "All-MLB 2nd Team",
+     "1x"
+    ],
+    [
+     "NLCS MVP",
+     "1x"
+    ],
+    [
+     "MVP",
+     "2x"
+    ],
+    [
+     "Hank Aaron Award",
+     "2x"
+    ],
+    [
+     "All-MLB 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "HR",
+     "392"
+    ],
+    [
+     "RBI",
+     "1138"
+    ],
+    [
+     "H",
+     "1956"
+    ],
+    [
+     "R",
+     "1247"
+    ],
+    [
+     "AB",
+     "7012"
+    ],
+    [
+     "BB",
+     "1212"
+    ]
+   ],
+   "draft": "2010: Rd 1, Pk 1 (WSH)",
+   "espnId": "30951",
+   "experience": "15th Season",
+   "jersey": "3",
+   "position": "1B",
+   "season": [
+    [
+     "HR",
+     "29"
+    ],
+    [
+     "RBI",
+     "87"
+    ],
+    [
+     "H",
+     "155"
+    ],
+    [
+     "R",
+     "93"
+    ],
+    [
+     "AB",
+     "577"
+    ],
+    [
+     "BB",
+     "107"
+    ]
+   ],
+   "statsLabel": "2026 Batting",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "AVG",
+      ".269",
+      "Tied-44th"
+     ],
+     [
+      "HR",
+      "29",
+      "Tied-23rd"
+     ],
+     [
+      "RBI",
+      "87",
+      "Tied-30th"
+     ],
+     [
+      "OPS",
+      ".865",
+      "Tied-12th"
+     ]
+    ]
+   },
+   "team": "Philadelphia Phillies",
+   "teamAbbr": "PHI"
+  },
+  "cade-cunningham": {
+   "active": true,
+   "awards": [
+    [
+     "All-NBA 1st Team",
+     "1x"
+    ],
+    [
+     "All-NBA 3rd Team",
+     "1x"
+    ],
+    [
+     "All-Rookie 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "22.5"
+    ],
+    [
+     "REB",
+     "5.4"
+    ],
+    [
+     "AST",
+     "7.9"
+    ],
+    [
+     "FG%",
+     "45.0"
+    ],
+    [
+     "3P%",
+     "33.9"
+    ],
+    [
+     "STL",
+     "1.1"
+    ]
+   ],
+   "draft": "2021: Rd 1, Pk 1 (DET)",
+   "espnId": "4432166",
+   "experience": "6th Season",
+   "jersey": "2",
+   "position": "G",
+   "season": [
+    [
+     "PTS",
+     "22.2"
+    ],
+    [
+     "REB",
+     "5.5"
+    ],
+    [
+     "AST",
+     "7.2"
+    ],
+    [
+     "FG%",
+     "45.0"
+    ],
+    [
+     "3P%",
+     "33.3"
+    ],
+    [
+     "STL",
+     "1.0"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "22.2",
+      "Tied-22nd"
+     ],
+     [
+      "REB",
+      "5.5",
+      "Tied-77th"
+     ],
+     [
+      "AST",
+      "7.2",
+      "12th"
+     ],
+     [
+      "FG%",
+      "45.0",
+      "90th"
+     ]
+    ]
+   },
+   "team": "Detroit Pistons",
+   "teamAbbr": "DET"
+  },
+  "caleb-williams": {
+   "active": true,
+   "awards": [],
+   "career": [
+    [
+     "YDS",
+     "8,503"
+    ],
+    [
+     "TD",
+     "52"
+    ],
+    [
+     "INT",
+     "14"
+    ],
+    [
+     "CMP%",
+     "61.3"
+    ],
+    [
+     "RTG",
+     "90.6"
+    ],
+    [
+     "CAR",
+     "182"
+    ]
+   ],
+   "draft": "2024: Rd 1, Pk 1 (CHI)",
+   "espnId": "4431611",
+   "experience": "3rd Season",
+   "jersey": "18",
+   "position": "QB",
+   "projected": [
+    [
+     "YDS",
+     "2,477"
+    ],
+    [
+     "TD",
+     "12"
+    ],
+    [
+     "INT",
+     "2"
+    ],
+    [
+     "CMP%",
+     "71.0"
+    ],
+    [
+     "RTG",
+     "105.6"
+    ],
+    [
+     "CAR",
+     "58"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "1,020"
+    ],
+    [
+     "TD",
+     "5"
+    ],
+    [
+     "INT",
+     "1"
+    ],
+    [
+     "CMP%",
+     "71.0"
+    ],
+    [
+     "RTG",
+     "105.6"
+    ],
+    [
+     "CAR",
+     "24"
+    ]
+   ],
+   "statsLabel": "2026 Passing",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "YDS",
+      "1,020",
+      "27th"
+     ],
+     [
+      "TD",
+      "5",
+      "Tied-27th"
+     ],
+     [
+      "INT",
+      "1",
+      "Tied-2nd"
+     ],
+     [
+      "QBR",
+      "78.9",
+      "2nd"
+     ]
+    ]
+   },
+   "team": "Chicago Bears",
+   "teamAbbr": "CHI"
+  },
+  "cam-ward": {
+   "active": true,
+   "awards": [],
+   "career": [
+    [
+     "YDS",
+     "4,652"
+    ],
+    [
+     "TD",
+     "21"
+    ],
+    [
+     "INT",
+     "12"
+    ],
+    [
+     "CMP%",
+     "60.7"
+    ],
+    [
+     "RTG",
+     "79.8"
+    ],
+    [
+     "CAR",
+     "65"
+    ]
+   ],
+   "draft": "2025: Rd 1, Pk 1 (TEN)",
+   "espnId": "4688380",
+   "experience": "2nd Season",
+   "jersey": "1",
+   "last5": [
+    [
+     "YDS",
+     "979"
+    ],
+    [
+     "TD",
+     "4"
+    ],
+    [
+     "INT",
+     "4"
+    ],
+    [
+     "CMP%",
+     "61.6"
+    ],
+    [
+     "RTG",
+     "75.4"
+    ],
+    [
+     "CAR",
+     "17"
+    ]
+   ],
+   "position": "QB",
+   "projected": [
+    [
+     "YDS",
+     "3,151"
+    ],
+    [
+     "TD",
+     "13"
+    ],
+    [
+     "INT",
+     "11"
+    ],
+    [
+     "CMP%",
+     "62.5"
+    ],
+    [
+     "RTG",
+     "78.7"
+    ],
+    [
+     "CAR",
+     "55"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "1,483"
+    ],
+    [
+     "TD",
+     "6"
+    ],
+    [
+     "INT",
+     "5"
+    ],
+    [
+     "CMP%",
+     "62.5"
+    ],
+    [
+     "RTG",
+     "78.7"
+    ],
+    [
+     "CAR",
+     "26"
+    ]
+   ],
+   "statsLabel": "2026 Passing",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "YDS",
+      "1,483",
+      "21st"
+     ],
+     [
+      "TD",
+      "6",
+      "Tied-24th"
+     ],
+     [
+      "INT",
+      "5",
+      "Tied-14th"
+     ],
+     [
+      "QBR",
+      "48.7",
+      "25th"
+     ]
+    ]
+   },
+   "team": "Tennessee Titans",
+   "teamAbbr": "TEN"
+  },
+  "ceedee-lamb": {
+   "active": true,
+   "awards": [],
+   "career": [
+    [
+     "YDS",
+     "8,125"
+    ],
+    [
+     "TD",
+     "47"
+    ],
+    [
+     "REC",
+     "631"
+    ],
+    [
+     "CAR",
+     "60"
+    ]
+   ],
+   "draft": "2020: Rd 1, Pk 17 (DAL)",
+   "espnId": "4241389",
+   "experience": "7th Season",
+   "jersey": "88",
+   "last5": [
+    [
+     "YDS",
+     "400"
+    ],
+    [
+     "TD",
+     "3"
+    ],
+    [
+     "REC",
+     "40"
+    ],
+    [
+     "CAR",
+     "1"
+    ]
+   ],
+   "position": "WR",
+   "projected": [
+    [
+     "YDS",
+     "1,507"
+    ],
+    [
+     "TD",
+     "13"
+    ],
+    [
+     "REC",
+     "128"
+    ],
+    [
+     "CAR",
+     "4"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "709"
+    ],
+    [
+     "TD",
+     "6"
+    ],
+    [
+     "REC",
+     "60"
+    ],
+    [
+     "CAR",
+     "2"
+    ]
+   ],
+   "statsLabel": "2026 Offense",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "REC",
+      "60",
+      "2nd"
+     ],
+     [
+      "YDS",
+      "709",
+      "3rd"
+     ],
+     [
+      "TD",
+      "6",
+      "Tied-2nd"
+     ],
+     [
+      "AVG",
+      "11.8",
+      "57th"
+     ]
+    ]
+   },
+   "team": "Dallas Cowboys",
+   "teamAbbr": "DAL"
+  },
+  "chet-holmgren": {
+   "active": true,
+   "awards": [
+    [
+     "All-NBA 3rd Team",
+     "1x"
+    ],
+    [
+     "All-Defensive 1st Team",
+     "1x"
+    ],
+    [
+     "All-Rookie 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "16.4"
+    ],
+    [
+     "REB",
+     "8.3"
+    ],
+    [
+     "AST",
+     "2.1"
+    ],
+    [
+     "FG%",
+     "53.2"
+    ],
+    [
+     "3P%",
+     "36.8"
+    ],
+    [
+     "STL",
+     "0.7"
+    ]
+   ],
+   "draft": "2022: Rd 1, Pk 2 (OKC)",
+   "espnId": "4433255",
+   "experience": "4th Season",
+   "injury": {
+    "comment": "Holmgren underwent a biological treatment Friday to address a small patellar tendon tear and will miss at least 8-10 weeks, Nick Crain of Slam reports.",
+    "date": "2026-10-31",
+    "returnDate": "2027-01-02",
+    "status": "Out",
+    "type": "Knee"
+   },
+   "jersey": "7",
+   "position": "C",
+   "season": [
+    [
+     "PTS",
+     "12.0"
+    ],
+    [
+     "REB",
+     "9.3"
+    ],
+    [
+     "AST",
+     "1.3"
+    ],
+    [
+     "FG%",
+     "40.7"
+    ],
+    [
+     "3P%",
+     "33.3"
+    ],
+    [
+     "STL",
+     "0.7"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "12.0",
+      ""
+     ],
+     [
+      "REB",
+      "9.3",
+      ""
+     ],
+     [
+      "AST",
+      "1.3",
+      ""
+     ],
+     [
+      "FG%",
+      "40.7",
+      ""
+     ]
+    ]
+   },
+   "team": "Oklahoma City Thunder",
+   "teamAbbr": "OKC"
+  },
+  "christian-mccaffrey": {
+   "active": true,
+   "awards": [
+    [
+     "NFL Comeback Player of the Year",
+     "1x"
+    ],
+    [
+     "NFL Offensive Player of the Year",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "YDS",
+     "7,978"
+    ],
+    [
+     "TD",
+     "70"
+    ],
+    [
+     "REC",
+     "660"
+    ],
+    [
+     "CAR",
+     "1742"
+    ]
+   ],
+   "draft": "2017: Rd 1, Pk 8 (CAR)",
+   "espnId": "3117251",
+   "experience": "10th Season",
+   "injury": {
+    "comment": "McCaffrey is dealing with a mild hamstring strain rather than a quadriceps injury, and the 49ers believe he'll be ready following the team's Week 8 bye, David Lombardi of SF Standard reports.",
+    "date": "2026-10-26",
+    "returnDate": "2026-11-08",
+    "status": "Questionable",
+    "type": "Hamstring"
+   },
+   "jersey": "23",
+   "last5": [
+    [
+     "YDS",
+     "298"
+    ],
+    [
+     "TD",
+     "6"
+    ],
+    [
+     "REC",
+     "25"
+    ],
+    [
+     "CAR",
+     "64"
+    ]
+   ],
+   "position": "RB",
+   "projected": [
+    [
+     "YDS",
+     "945"
+    ],
+    [
+     "TD",
+     "19"
+    ],
+    [
+     "REC",
+     "83"
+    ],
+    [
+     "CAR",
+     "204"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "389"
+    ],
+    [
+     "TD",
+     "8"
+    ],
+    [
+     "REC",
+     "34"
+    ],
+    [
+     "CAR",
+     "84"
+    ]
+   ],
+   "statsLabel": "2026 Offense",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "CAR",
+      "84",
+      "26th"
+     ],
+     [
+      "YDS",
+      "389",
+      "Tied-20th"
+     ],
+     [
+      "TD",
+      "8",
+      "Tied-2nd"
+     ],
+     [
+      "AVG",
+      "4.6",
+      "15th"
+     ]
+    ]
+   },
+   "team": "San Francisco 49ers",
+   "teamAbbr": "SF"
+  },
+  "cj-stroud": {
+   "active": true,
+   "awards": [
+    [
+     "NFL Offensive Rookie of the Year",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "YDS",
+     "12,743"
+    ],
+    [
+     "TD",
+     "73"
+    ],
+    [
+     "INT",
+     "26"
+    ],
+    [
+     "CMP%",
+     "64.0"
+    ],
+    [
+     "RTG",
+     "94.5"
+    ],
+    [
+     "CAR",
+     "157"
+    ]
+   ],
+   "draft": "2023: Rd 1, Pk 2 (HOU)",
+   "espnId": "4432577",
+   "experience": "4th Season",
+   "jersey": "7",
+   "last5": [
+    [
+     "YDS",
+     "1,240"
+    ],
+    [
+     "TD",
+     "9"
+    ],
+    [
+     "INT",
+     "1"
+    ],
+    [
+     "CMP%",
+     "67.0"
+    ],
+    [
+     "RTG",
+     "107.9"
+    ],
+    [
+     "CAR",
+     "13"
+    ]
+   ],
+   "position": "QB",
+   "projected": [
+    [
+     "YDS",
+     "4,534"
+    ],
+    [
+     "TD",
+     "27"
+    ],
+    [
+     "INT",
+     "2"
+    ],
+    [
+     "CMP%",
+     "64.8"
+    ],
+    [
+     "RTG",
+     "100.7"
+    ],
+    [
+     "CAR",
+     "44"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "1,867"
+    ],
+    [
+     "TD",
+     "11"
+    ],
+    [
+     "INT",
+     "1"
+    ],
+    [
+     "CMP%",
+     "64.8"
+    ],
+    [
+     "RTG",
+     "100.7"
+    ],
+    [
+     "CAR",
+     "18"
+    ]
+   ],
+   "statsLabel": "2026 Passing",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "YDS",
+      "1,867",
+      "11th"
+     ],
+     [
+      "TD",
+      "11",
+      "Tied-15th"
+     ],
+     [
+      "INT",
+      "1",
+      "Tied-2nd"
+     ],
+     [
+      "QBR",
+      "69.0",
+      "7th"
+     ]
+    ]
+   },
+   "team": "Houston Texans",
+   "teamAbbr": "HOU"
+  },
+  "clayton-kershaw": {
+   "active": false,
+   "awards": [
+    [
+     "All-MLB 2nd Team",
+     "1x"
+    ],
+    [
+     "Cy Young",
+     "3x"
+    ],
+    [
+     "MVP",
+     "1x"
+    ],
+    [
+     "Roberto Clemente Award",
+     "1x"
+    ],
+    [
+     "Gold Glove",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "HR",
+     "235"
+    ],
+    [
+     "H",
+     "2193"
+    ],
+    [
+     "R",
+     "881"
+    ],
+    [
+     "BB",
+     "713"
+    ],
+    [
+     "GP",
+     "455"
+    ],
+    [
+     "K",
+     "3052"
+    ]
+   ],
+   "draft": "2006: Rd 1, Pk 7 (LAD)",
+   "espnId": "28963",
+   "experience": "18th Season",
+   "jersey": "22",
+   "position": "SP",
+   "statsLabel": "Career Pitching",
+   "summary": {
+    "label": "2025 season stats",
+    "stats": [
+     [
+      "W-L",
+      "11-2",
+      "Tied-29th"
+     ],
+     [
+      "ERA",
+      "3.36",
+      ""
+     ],
+     [
+      "K",
+      "84",
+      "Tied-149th"
+     ],
+     [
+      "WHIP",
+      "1.22",
+      ""
+     ]
+    ]
+   },
+   "team": "Los Angeles Dodgers",
+   "teamAbbr": "LAD"
+  },
+  "cooper-flagg": {
+   "active": true,
+   "awards": [
+    [
+     "Rookie of the Year",
+     "1x"
+    ],
+    [
+     "All-Rookie 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "21.4"
+    ],
+    [
+     "REB",
+     "6.6"
+    ],
+    [
+     "AST",
+     "4.7"
+    ],
+    [
+     "FG%",
+     "47.4"
+    ],
+    [
+     "3P%",
+     "29.3"
+    ],
+    [
+     "STL",
+     "1.3"
+    ]
+   ],
+   "draft": "2025: Rd 1, Pk 1 (DAL)",
+   "espnId": "5041939",
+   "experience": "2nd Season",
+   "jersey": "32",
+   "position": "F",
+   "season": [
+    [
+     "PTS",
+     "26.8"
+    ],
+    [
+     "REB",
+     "6.0"
+    ],
+    [
+     "AST",
+     "6.6"
+    ],
+    [
+     "FG%",
+     "55.7"
+    ],
+    [
+     "3P%",
+     "26.9"
+    ],
+    [
+     "STL",
+     "2.6"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "26.8",
+      "7th"
+     ],
+     [
+      "REB",
+      "6.0",
+      "Tied-61st"
+     ],
+     [
+      "AST",
+      "6.6",
+      "16th"
+     ],
+     [
+      "FG%",
+      "55.7",
+      "17th"
+     ]
+    ]
+   },
+   "team": "Dallas Mavericks",
+   "teamAbbr": "DAL"
+  },
+  "corbin-carroll": {
+   "active": true,
+   "awards": [
+    [
+     "Gold Glove",
+     "1x"
+    ],
+    [
+     "Silver Slugger",
+     "1x"
+    ],
+    [
+     "All-MLB 2nd Team",
+     "1x"
+    ],
+    [
+     "Rookie of the Year",
+     "1x"
+    ],
+    [
+     "All-MLB 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "HR",
+     "104"
+    ],
+    [
+     "RBI",
+     "326"
+    ],
+    [
+     "H",
+     "609"
+    ],
+    [
+     "R",
+     "448"
+    ],
+    [
+     "AB",
+     "2404"
+    ],
+    [
+     "BB",
+     "278"
+    ]
+   ],
+   "draft": "",
+   "espnId": "42404",
+   "experience": "5th Season",
+   "jersey": "7",
+   "position": "RF",
+   "season": [
+    [
+     "HR",
+     "22"
+    ],
+    [
+     "RBI",
+     "78"
+    ],
+    [
+     "H",
+     "139"
+    ],
+    [
+     "R",
+     "91"
+    ],
+    [
+     "AB",
+     "582"
+    ],
+    [
+     "BB",
+     "73"
+    ]
+   ],
+   "statsLabel": "2026 Batting",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "AVG",
+      ".239",
+      "Tied-104th"
+     ],
+     [
+      "HR",
+      "22",
+      "Tied-64th"
+     ],
+     [
+      "RBI",
+      "78",
+      "Tied-53rd"
+     ],
+     [
+      "OPS",
+      ".795",
+      "47th"
+     ]
+    ]
+   },
+   "team": "Arizona Diamondbacks",
+   "teamAbbr": "ARI"
+  },
+  "damian-lillard": {
+   "active": true,
+   "awards": [
+    [
+     "NBA Cup All-Tournament Team",
+     "1x"
+    ],
+    [
+     "All-Star MVP",
+     "1x"
+    ],
+    [
+     "All-NBA 3rd Team",
+     "2x"
+    ],
+    [
+     "All-NBA 2nd Team",
+     "4x"
+    ],
+    [
+     "Twyman-Stokes Teammate of the Year Award",
+     "1x"
+    ],
+    [
+     "All-NBA 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "25.1"
+    ],
+    [
+     "REB",
+     "4.3"
+    ],
+    [
+     "AST",
+     "6.7"
+    ],
+    [
+     "FG%",
+     "43.8"
+    ],
+    [
+     "3P%",
+     "37.1"
+    ],
+    [
+     "STL",
+     "1.0"
+    ]
+   ],
+   "draft": "2012: Rd 1, Pk 6 (POR)",
+   "espnId": "6606",
+   "experience": "15th Season",
+   "jersey": "0",
+   "position": "G",
+   "season": [
+    [
+     "PTS",
+     "19.2"
+    ],
+    [
+     "REB",
+     "4.0"
+    ],
+    [
+     "AST",
+     "3.6"
+    ],
+    [
+     "FG%",
+     "38.9"
+    ],
+    [
+     "3P%",
+     "34.0"
+    ],
+    [
+     "STL",
+     "1.0"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "19.2",
+      "Tied-44th"
+     ],
+     [
+      "REB",
+      "4.0",
+      "Tied-126th"
+     ],
+     [
+      "AST",
+      "3.6",
+      "Tied-67th"
+     ],
+     [
+      "FG%",
+      "38.9",
+      "122nd"
+     ]
+    ]
+   },
+   "team": "Portland Trail Blazers",
+   "teamAbbr": "POR"
+  },
+  "devin-booker": {
+   "active": true,
+   "awards": [
+    [
+     "All-NBA 3rd Team",
+     "1x"
+    ],
+    [
+     "All-NBA 1st Team",
+     "1x"
+    ],
+    [
+     "All-Rookie 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "24.5"
+    ],
+    [
+     "REB",
+     "4.0"
+    ],
+    [
+     "AST",
+     "5.3"
+    ],
+    [
+     "FG%",
+     "46.3"
+    ],
+    [
+     "3P%",
+     "35.2"
+    ],
+    [
+     "STL",
+     "0.9"
+    ]
+   ],
+   "draft": "2015: Rd 1, Pk 13 (PHX)",
+   "espnId": "3136193",
+   "experience": "12th Season",
+   "jersey": "15",
+   "position": "G",
+   "season": [
+    [
+     "PTS",
+     "22.3"
+    ],
+    [
+     "REB",
+     "3.8"
+    ],
+    [
+     "AST",
+     "5.3"
+    ],
+    [
+     "FG%",
+     "50.0"
+    ],
+    [
+     "3P%",
+     "31.3"
+    ],
+    [
+     "STL",
+     "0.8"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "22.3",
+      "21st"
+     ],
+     [
+      "REB",
+      "3.8",
+      "Tied-148th"
+     ],
+     [
+      "AST",
+      "5.3",
+      "36th"
+     ],
+     [
+      "FG%",
+      "50.0",
+      "Tied-39th"
+     ]
+    ]
+   },
+   "team": "Phoenix Suns",
+   "teamAbbr": "PHX"
+  },
+  "donovan-mitchell": {
+   "active": true,
+   "awards": [
+    [
+     "All-NBA 2nd Team",
+     "2x"
+    ],
+    [
+     "All-NBA 1st Team",
+     "1x"
+    ],
+    [
+     "All-Rookie 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "25.1"
+    ],
+    [
+     "REB",
+     "4.3"
+    ],
+    [
+     "AST",
+     "4.8"
+    ],
+    [
+     "FG%",
+     "45.3"
+    ],
+    [
+     "3P%",
+     "36.6"
+    ],
+    [
+     "STL",
+     "1.4"
+    ]
+   ],
+   "draft": "2017: Rd 1, Pk 13 (DEN)",
+   "espnId": "3908809",
+   "experience": "10th Season",
+   "jersey": "45",
+   "position": "G",
+   "season": [
+    [
+     "PTS",
+     "22.7"
+    ],
+    [
+     "REB",
+     "5.3"
+    ],
+    [
+     "AST",
+     "4.5"
+    ],
+    [
+     "FG%",
+     "48.9"
+    ],
+    [
+     "3P%",
+     "37.8"
+    ],
+    [
+     "STL",
+     "1.3"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "22.7",
+      "19th"
+     ],
+     [
+      "REB",
+      "5.3",
+      "Tied-81st"
+     ],
+     [
+      "AST",
+      "4.5",
+      "Tied-48th"
+     ],
+     [
+      "FG%",
+      "48.9",
+      "Tied-50th"
+     ]
+    ]
+   },
+   "team": "Cleveland Cavaliers",
+   "teamAbbr": "CLE"
+  },
+  "drake-maye": {
+   "active": true,
+   "awards": [],
+   "career": [
+    [
+     "YDS",
+     "8,653"
+    ],
+    [
+     "TD",
+     "61"
+    ],
+    [
+     "INT",
+     "26"
+    ],
+    [
+     "CMP%",
+     "69.2"
+    ],
+    [
+     "RTG",
+     "102.5"
+    ],
+    [
+     "CAR",
+     "203"
+    ]
+   ],
+   "draft": "2024: Rd 1, Pk 3 (NE)",
+   "espnId": "4431452",
+   "experience": "3rd Season",
+   "jersey": "10",
+   "last5": [
+    [
+     "YDS",
+     "1,398"
+    ],
+    [
+     "TD",
+     "14"
+    ],
+    [
+     "INT",
+     "2"
+    ],
+    [
+     "CMP%",
+     "69.9"
+    ],
+    [
+     "RTG",
+     "123.7"
+    ],
+    [
+     "CAR",
+     "31"
+    ]
+   ],
+   "position": "QB",
+   "projected": [
+    [
+     "YDS",
+     "4,214"
+    ],
+    [
+     "TD",
+     "32"
+    ],
+    [
+     "INT",
+     "17"
+    ],
+    [
+     "CMP%",
+     "67.1"
+    ],
+    [
+     "RTG",
+     "100.4"
+    ],
+    [
+     "CAR",
+     "98"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "1,983"
+    ],
+    [
+     "TD",
+     "15"
+    ],
+    [
+     "INT",
+     "8"
+    ],
+    [
+     "CMP%",
+     "67.1"
+    ],
+    [
+     "RTG",
+     "100.4"
+    ],
+    [
+     "CAR",
+     "46"
+    ]
+   ],
+   "statsLabel": "2026 Passing",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "YDS",
+      "1,983",
+      "6th"
+     ],
+     [
+      "TD",
+      "15",
+      "Tied-5th"
+     ],
+     [
+      "INT",
+      "8",
+      "Tied-27th"
+     ],
+     [
+      "QBR",
+      "76.4",
+      "5th"
+     ]
+    ]
+   },
+   "team": "New England Patriots",
+   "teamAbbr": "NE"
+  },
+  "dylan-harper": {
+   "active": true,
+   "awards": [
+    [
+     "All-Rookie 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "12.3"
+    ],
+    [
+     "REB",
+     "3.6"
+    ],
+    [
+     "AST",
+     "3.9"
+    ],
+    [
+     "FG%",
+     "50.1"
+    ],
+    [
+     "3P%",
+     "34.3"
+    ],
+    [
+     "STL",
+     "0.8"
+    ]
+   ],
+   "draft": "2025: Rd 1, Pk 2 (SA)",
+   "espnId": "5037871",
+   "experience": "2nd Season",
+   "jersey": "2",
+   "position": "G",
+   "season": [
+    [
+     "PTS",
+     "18.5"
+    ],
+    [
+     "REB",
+     "5.5"
+    ],
+    [
+     "AST",
+     "4.8"
+    ],
+    [
+     "FG%",
+     "47.3"
+    ],
+    [
+     "3P%",
+     "34.8"
+    ],
+    [
+     "STL",
+     "1.0"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "18.5",
+      "47th"
+     ],
+     [
+      "REB",
+      "5.5",
+      "Tied-77th"
+     ],
+     [
+      "AST",
+      "4.8",
+      "Tied-44th"
+     ],
+     [
+      "FG%",
+      "47.3",
+      "Tied-67th"
+     ]
+    ]
+   },
+   "team": "San Antonio Spurs",
+   "teamAbbr": "SA"
+  },
+  "elly-de-la-cruz": {
+   "active": true,
+   "awards": [],
+   "career": [
+    [
+     "HR",
+     "90"
+    ],
+    [
+     "RBI",
+     "285"
+    ],
+    [
+     "H",
+     "575"
+    ],
+    [
+     "R",
+     "373"
+    ],
+    [
+     "AB",
+     "2194"
+    ],
+    [
+     "BB",
+     "243"
+    ]
+   ],
+   "draft": "",
+   "espnId": "4917694",
+   "experience": "4th Season",
+   "jersey": "44",
+   "position": "SS",
+   "season": [
+    [
+     "HR",
+     "30"
+    ],
+    [
+     "RBI",
+     "79"
+    ],
+    [
+     "H",
+     "158"
+    ],
+    [
+     "R",
+     "99"
+    ],
+    [
+     "AB",
+     "559"
+    ],
+    [
+     "BB",
+     "72"
+    ]
+   ],
+   "statsLabel": "2026 Batting",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "AVG",
+      ".283",
+      "Tied-20th"
+     ],
+     [
+      "HR",
+      "30",
+      "Tied-17th"
+     ],
+     [
+      "RBI",
+      "79",
+      "Tied-50th"
+     ],
+     [
+      "OPS",
+      ".880",
+      "9th"
+     ]
+    ]
+   },
+   "team": "Cincinnati Reds",
+   "teamAbbr": "CIN"
+  },
+  "fernando-tatis-jr": {
+   "active": true,
+   "awards": [
+    [
+     "Gold Glove",
+     "2x"
+    ],
+    [
+     "Silver Slugger",
+     "2x"
+    ],
+    [
+     "All-MLB 1st Team",
+     "2x"
+    ]
+   ],
+   "career": [
+    [
+     "HR",
+     "177"
+    ],
+    [
+     "RBI",
+     "476"
+    ],
+    [
+     "H",
+     "901"
+    ],
+    [
+     "R",
+     "572"
+    ],
+    [
+     "AB",
+     "3229"
+    ],
+    [
+     "BB",
+     "357"
+    ]
+   ],
+   "draft": "",
+   "espnId": "35983",
+   "experience": "7th Season",
+   "jersey": "23",
+   "position": "RF",
+   "season": [
+    [
+     "HR",
+     "25"
+    ],
+    [
+     "RBI",
+     "83"
+    ],
+    [
+     "H",
+     "181"
+    ],
+    [
+     "R",
+     "96"
+    ],
+    [
+     "AB",
+     "626"
+    ],
+    [
+     "BB",
+     "64"
+    ]
+   ],
+   "statsLabel": "2026 Batting",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "AVG",
+      ".289",
+      "Tied-14th"
+     ],
+     [
+      "HR",
+      "25",
+      "Tied-44th"
+     ],
+     [
+      "RBI",
+      "83",
+      "Tied-40th"
+     ],
+     [
+      "OPS",
+      ".828",
+      "27th"
+     ]
+    ]
+   },
+   "team": "San Diego Padres",
+   "teamAbbr": "SD"
+  },
+  "francisco-lindor": {
+   "active": true,
+   "awards": [
+    [
+     "Roberto Clemente Award",
+     "1x"
+    ],
+    [
+     "Silver Slugger",
+     "4x"
+    ],
+    [
+     "All-MLB 2nd Team",
+     "3x"
+    ],
+    [
+     "Gold Glove",
+     "2x"
+    ]
+   ],
+   "career": [
+    [
+     "HR",
+     "300"
+    ],
+    [
+     "RBI",
+     "905"
+    ],
+    [
+     "H",
+     "1758"
+    ],
+    [
+     "R",
+     "1074"
+    ],
+    [
+     "AB",
+     "6504"
+    ],
+    [
+     "BB",
+     "634"
+    ]
+   ],
+   "draft": "2011: Rd 1, Pk 8 (CLE)",
+   "espnId": "32129",
+   "experience": "12th Season",
+   "jersey": "12",
+   "position": "SS",
+   "season": [
+    [
+     "HR",
+     "21"
+    ],
+    [
+     "RBI",
+     "49"
+    ],
+    [
+     "H",
+     "94"
+    ],
+    [
+     "R",
+     "63"
+    ],
+    [
+     "AB",
+     "418"
+    ],
+    [
+     "BB",
+     "46"
+    ]
+   ],
+   "statsLabel": "2026 Batting",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "AVG",
+      ".225",
+      ""
+     ],
+     [
+      "HR",
+      "21",
+      "Tied-74th"
+     ],
+     [
+      "RBI",
+      "49",
+      "Tied-174th"
+     ],
+     [
+      "OPS",
+      ".733",
+      ""
+     ]
+    ]
+   },
+   "team": "New York Mets",
+   "teamAbbr": "NYM"
+  },
+  "giannis-antetokounmpo": {
+   "active": true,
+   "awards": [
+    [
+     "All-NBA 1st Team",
+     "7x"
+    ],
+    [
+     "NBA Cup MVP",
+     "1x"
+    ],
+    [
+     "NBA Cup All-Tournament Team",
+     "2x"
+    ],
+    [
+     "All-Defensive 1st Team",
+     "4x"
+    ],
+    [
+     "Finals MVP",
+     "1x"
+    ],
+    [
+     "All-Star MVP",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "24.1"
+    ],
+    [
+     "REB",
+     "9.9"
+    ],
+    [
+     "AST",
+     "5.0"
+    ],
+    [
+     "FG%",
+     "55.4"
+    ],
+    [
+     "3P%",
+     "28.5"
+    ],
+    [
+     "STL",
+     "1.1"
+    ]
+   ],
+   "draft": "2013: Rd 1, Pk 15 (MIL)",
+   "espnId": "3032977",
+   "experience": "14th Season",
+   "jersey": "7",
+   "position": "F",
+   "season": [
+    [
+     "PTS",
+     "28.2"
+    ],
+    [
+     "REB",
+     "12.3"
+    ],
+    [
+     "AST",
+     "5.5"
+    ],
+    [
+     "FG%",
+     "58.6"
+    ],
+    [
+     "3P%",
+     "28.6"
+    ],
+    [
+     "STL",
+     "0.8"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "28.2",
+      "4th"
+     ],
+     [
+      "REB",
+      "12.3",
+      "Tied-3rd"
+     ],
+     [
+      "AST",
+      "5.5",
+      "Tied-33rd"
+     ],
+     [
+      "FG%",
+      "58.6",
+      "10th"
+     ]
+    ]
+   },
+   "team": "Miami Heat",
+   "teamAbbr": "MIA"
+  },
+  "gunnar-henderson": {
+   "active": true,
+   "awards": [
+    [
+     "Rookie of the Year",
+     "1x"
+    ],
+    [
+     "Silver Slugger",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "HR",
+     "110"
+    ],
+    [
+     "RBI",
+     "320"
+    ],
+    [
+     "H",
+     "649"
+    ],
+    [
+     "R",
+     "403"
+    ],
+    [
+     "AB",
+     "2506"
+    ],
+    [
+     "BB",
+     "279"
+    ]
+   ],
+   "draft": "",
+   "espnId": "42507",
+   "experience": "5th Season",
+   "jersey": "2",
+   "position": "SS",
+   "season": [
+    [
+     "HR",
+     "24"
+    ],
+    [
+     "RBI",
+     "60"
+    ],
+    [
+     "H",
+     "141"
+    ],
+    [
+     "R",
+     "88"
+    ],
+    [
+     "AB",
+     "623"
+    ],
+    [
+     "BB",
+     "67"
+    ]
+   ],
+   "statsLabel": "2026 Batting",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "AVG",
+      ".226",
+      "Tied-126th"
+     ],
+     [
+      "HR",
+      "24",
+      "Tied-50th"
+     ],
+     [
+      "RBI",
+      "60",
+      "Tied-118th"
+     ],
+     [
+      "OPS",
+      ".715",
+      "Tied-100th"
+     ]
+    ]
+   },
+   "team": "Baltimore Orioles",
+   "teamAbbr": "BAL"
+  },
+  "ja-morant": {
+   "active": true,
+   "awards": [
+    [
+     "Most Improved Player",
+     "1x"
+    ],
+    [
+     "All-NBA 2nd Team",
+     "1x"
+    ],
+    [
+     "Rookie of the Year",
+     "1x"
+    ],
+    [
+     "All-Rookie 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "22.3"
+    ],
+    [
+     "REB",
+     "4.6"
+    ],
+    [
+     "AST",
+     "7.4"
+    ],
+    [
+     "FG%",
+     "46.6"
+    ],
+    [
+     "3P%",
+     "31.3"
+    ],
+    [
+     "STL",
+     "1.0"
+    ]
+   ],
+   "draft": "2019: Rd 1, Pk 2 (MEM)",
+   "espnId": "4279888",
+   "experience": "8th Season",
+   "injury": {
+    "comment": "Morant has been diagnosed with a Grade 2 left hamstring strain and is expected to miss four weeks, Portland announced Friday.",
+    "date": "2026-10-30",
+    "returnDate": "2026-12-01",
+    "status": "Out",
+    "type": "Hamstring"
+   },
+   "jersey": "1",
+   "position": "G",
+   "season": [
+    [
+     "PTS",
+     "15.8"
+    ],
+    [
+     "REB",
+     "2.5"
+    ],
+    [
+     "AST",
+     "5.5"
+    ],
+    [
+     "FG%",
+     "54.2"
+    ],
+    [
+     "3P%",
+     "42.9"
+    ],
+    [
+     "STL",
+     "1.0"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "15.8",
+      "69th"
+     ],
+     [
+      "REB",
+      "2.5",
+      "Tied-214th"
+     ],
+     [
+      "AST",
+      "5.5",
+      "Tied-33rd"
+     ],
+     [
+      "FG%",
+      "54.2",
+      "22nd"
+     ]
+    ]
+   },
+   "team": "Portland Trail Blazers",
+   "teamAbbr": "POR"
+  },
+  "jackson-chourio": {
+   "active": true,
+   "awards": [
+    [
+     "Gold Glove",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "HR",
+     "67"
+    ],
+    [
+     "RBI",
+     "232"
+    ],
+    [
+     "H",
+     "445"
+    ],
+    [
+     "R",
+     "264"
+    ],
+    [
+     "AB",
+     "1599"
+    ],
+    [
+     "BB",
+     "116"
+    ]
+   ],
+   "draft": "",
+   "espnId": "4917869",
+   "experience": "3rd Season",
+   "jersey": "11",
+   "position": "LF",
+   "season": [
+    [
+     "HR",
+     "25"
+    ],
+    [
+     "RBI",
+     "75"
+    ],
+    [
+     "H",
+     "152"
+    ],
+    [
+     "R",
+     "96"
+    ],
+    [
+     "AB",
+     "522"
+    ],
+    [
+     "BB",
+     "47"
+    ]
+   ],
+   "statsLabel": "2026 Batting",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "AVG",
+      ".291",
+      "Tied-12th"
+     ],
+     [
+      "HR",
+      "25",
+      "Tied-44th"
+     ],
+     [
+      "RBI",
+      "75",
+      "Tied-67th"
+     ],
+     [
+      "OPS",
+      ".837",
+      "Tied-21st"
+     ]
+    ]
+   },
+   "team": "Milwaukee Brewers",
+   "teamAbbr": "MIL"
+  },
+  "jackson-holliday": {
+   "active": true,
+   "awards": [],
+   "career": [
+    [
+     "HR",
+     "29"
+    ],
+    [
+     "RBI",
+     "108"
+    ],
+    [
+     "H",
+     "250"
+    ],
+    [
+     "R",
+     "143"
+    ],
+    [
+     "AB",
+     "1091"
+    ],
+    [
+     "BB",
+     "105"
+    ]
+   ],
+   "draft": "2022: Rd 1, Pk 1 (BAL)",
+   "espnId": "5080633",
+   "experience": "3rd Season",
+   "injury": {
+    "comment": "Holliday will undergo left wrist surgery next week, Jake Rill of MLB.com reports.",
+    "date": "2026-10-23",
+    "returnDate": "2027-02-01",
+    "status": "Out",
+    "type": "Wrist"
+   },
+   "jersey": "7",
+   "position": "2B",
+   "season": [
+    [
+     "HR",
+     "7"
+    ],
+    [
+     "RBI",
+     "30"
+    ],
+    [
+     "H",
+     "72"
+    ],
+    [
+     "R",
+     "45"
+    ],
+    [
+     "AB",
+     "315"
+    ],
+    [
+     "BB",
+     "34"
+    ]
+   ],
+   "statsLabel": "2026 Batting",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "AVG",
+      ".229",
+      ""
+     ],
+     [
+      "HR",
+      "7",
+      "Tied-270th"
+     ],
+     [
+      "RBI",
+      "30",
+      "Tied-288th"
+     ],
+     [
+      "OPS",
+      ".640",
+      ""
+     ]
+    ]
+   },
+   "team": "Baltimore Orioles",
+   "teamAbbr": "BAL"
+  },
+  "jalen-brunson": {
+   "active": true,
+   "awards": [
+    [
+     "Finals MVP",
+     "1x"
+    ],
+    [
+     "All-NBA 2nd Team",
+     "3x"
+    ],
+    [
+     "NBA Eastern Conference Finals MVP",
+     "1x"
+    ],
+    [
+     "NBA Cup MVP",
+     "1x"
+    ],
+    [
+     "NBA Cup All-Tournament Team",
+     "1x"
+    ],
+    [
+     "Clutch Player of the Year",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "19.2"
+    ],
+    [
+     "REB",
+     "3.2"
+    ],
+    [
+     "AST",
+     "5.3"
+    ],
+    [
+     "FG%",
+     "48.3"
+    ],
+    [
+     "3P%",
+     "38.4"
+    ],
+    [
+     "STL",
+     "0.7"
+    ]
+   ],
+   "draft": "2018: Rd 2, Pk 33 (DAL)",
+   "espnId": "3934672",
+   "experience": "9th Season",
+   "jersey": "11",
+   "position": "G",
+   "season": [
+    [
+     "PTS",
+     "25.5"
+    ],
+    [
+     "REB",
+     "2.8"
+    ],
+    [
+     "AST",
+     "5.2"
+    ],
+    [
+     "FG%",
+     "39.5"
+    ],
+    [
+     "3P%",
+     "32.5"
+    ],
+    [
+     "STL",
+     "1.0"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "25.5",
+      "12th"
+     ],
+     [
+      "REB",
+      "2.8",
+      "Tied-198th"
+     ],
+     [
+      "AST",
+      "5.2",
+      "Tied-40th"
+     ],
+     [
+      "FG%",
+      "39.5",
+      "119th"
+     ]
+    ]
+   },
+   "team": "New York Knicks",
+   "teamAbbr": "NY"
+  },
+  "jalen-hurts": {
+   "active": true,
+   "awards": [
+    [
+     "Super Bowl MVP",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "YDS",
+     "18,824"
+    ],
+    [
+     "TD",
+     "118"
+    ],
+    [
+     "INT",
+     "48"
+    ],
+    [
+     "CMP%",
+     "64.0"
+    ],
+    [
+     "RTG",
+     "93.8"
+    ],
+    [
+     "CAR",
+     "802"
+    ]
+   ],
+   "draft": "2020: Rd 2, Pk 53 (PHI)",
+   "espnId": "4040715",
+   "experience": "7th Season",
+   "injury": {
+    "comment": "Hurts (calf) is expected to be held out of football activities for multiple months and miss the rest of the season after new imaging over the weekend revealed several blood clots in his lungs, Tom Pelissero of Netflix reports.",
+    "date": "2026-10-19",
+    "returnDate": "2027-02-15",
+    "status": "Injured Reserve",
+    "type": "Calf"
+   },
+   "jersey": "1",
+   "last5": [
+    [
+     "YDS",
+     "933"
+    ],
+    [
+     "TD",
+     "8"
+    ],
+    [
+     "INT",
+     "3"
+    ],
+    [
+     "CMP%",
+     "57.4"
+    ],
+    [
+     "RTG",
+     "85.5"
+    ],
+    [
+     "CAR",
+     "23"
+    ]
+   ],
+   "position": "QB",
+   "projected": [
+    [
+     "YDS",
+     "1,983"
+    ],
+    [
+     "TD",
+     "17"
+    ],
+    [
+     "INT",
+     "6"
+    ],
+    [
+     "CMP%",
+     "57.8"
+    ],
+    [
+     "RTG",
+     "84.7"
+    ],
+    [
+     "CAR",
+     "49"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "933"
+    ],
+    [
+     "TD",
+     "8"
+    ],
+    [
+     "INT",
+     "3"
+    ],
+    [
+     "CMP%",
+     "57.8"
+    ],
+    [
+     "RTG",
+     "84.7"
+    ],
+    [
+     "CAR",
+     "23"
+    ]
+   ],
+   "statsLabel": "2026 Passing",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "YDS",
+      "933",
+      "30th"
+     ],
+     [
+      "TD",
+      "8",
+      "Tied-20th"
+     ],
+     [
+      "INT",
+      "3",
+      "Tied-6th"
+     ],
+     [
+      "QBR",
+      "57.7",
+      "19th"
+     ]
+    ]
+   },
+   "team": "Philadelphia Eagles",
+   "teamAbbr": "PHI"
+  },
+  "jamarr-chase": {
+   "active": true,
+   "awards": [
+    [
+     "NFL Offensive Rookie of the Year",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "YDS",
+     "7,329"
+    ],
+    [
+     "TD",
+     "60"
+    ],
+    [
+     "REC",
+     "563"
+    ],
+    [
+     "CAR",
+     "21"
+    ]
+   ],
+   "draft": "2021: Rd 1, Pk 5 (CIN)",
+   "espnId": "4362628",
+   "experience": "6th Season",
+   "jersey": "1",
+   "last5": [
+    [
+     "YDS",
+     "405"
+    ],
+    [
+     "TD",
+     "4"
+    ],
+    [
+     "REC",
+     "34"
+    ],
+    [
+     "CAR",
+     "0"
+    ]
+   ],
+   "position": "WR",
+   "projected": [
+    [
+     "YDS",
+     "1,195"
+    ],
+    [
+     "TD",
+     "15"
+    ],
+    [
+     "REC",
+     "104"
+    ],
+    [
+     "CAR",
+     "0"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "492"
+    ],
+    [
+     "TD",
+     "6"
+    ],
+    [
+     "REC",
+     "43"
+    ],
+    [
+     "CAR",
+     "0"
+    ]
+   ],
+   "statsLabel": "2026 Offense",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "REC",
+      "43",
+      "Tied-9th"
+     ],
+     [
+      "YDS",
+      "492",
+      "17th"
+     ],
+     [
+      "TD",
+      "6",
+      "Tied-2nd"
+     ],
+     [
+      "AVG",
+      "11.4",
+      "63rd"
+     ]
+    ]
+   },
+   "team": "Cincinnati Bengals",
+   "teamAbbr": "CIN"
+  },
+  "jayden-daniels": {
+   "active": true,
+   "awards": [
+    [
+     "NFL Offensive Rookie of the Year",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "YDS",
+     "5,806"
+    ],
+    [
+     "TD",
+     "39"
+    ],
+    [
+     "INT",
+     "12"
+    ],
+    [
+     "CMP%",
+     "65.9"
+    ],
+    [
+     "RTG",
+     "96.6"
+    ],
+    [
+     "CAR",
+     "233"
+    ]
+   ],
+   "draft": "2024: Rd 1, Pk 2 (WSH)",
+   "espnId": "4426348",
+   "experience": "3rd Season",
+   "jersey": "5",
+   "last5": [
+    [
+     "YDS",
+     "976"
+    ],
+    [
+     "TD",
+     "6"
+    ],
+    [
+     "INT",
+     "0"
+    ],
+    [
+     "CMP%",
+     "62.7"
+    ],
+    [
+     "RTG",
+     "95.6"
+    ],
+    [
+     "CAR",
+     "27"
+    ]
+   ],
+   "position": "QB",
+   "projected": [
+    [
+     "YDS",
+     "2,370"
+    ],
+    [
+     "TD",
+     "15"
+    ],
+    [
+     "INT",
+     "0"
+    ],
+    [
+     "CMP%",
+     "62.8"
+    ],
+    [
+     "RTG",
+     "96.2"
+    ],
+    [
+     "CAR",
+     "66"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "976"
+    ],
+    [
+     "TD",
+     "6"
+    ],
+    [
+     "INT",
+     "0"
+    ],
+    [
+     "CMP%",
+     "62.8"
+    ],
+    [
+     "RTG",
+     "96.2"
+    ],
+    [
+     "CAR",
+     "27"
+    ]
+   ],
+   "statsLabel": "2026 Passing",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "YDS",
+      "976",
+      "28th"
+     ],
+     [
+      "TD",
+      "6",
+      "Tied-24th"
+     ],
+     [
+      "INT",
+      "0",
+      "1st"
+     ],
+     [
+      "QBR",
+      "63.9",
+      "11th"
+     ]
+    ]
+   },
+   "team": "Washington Commanders",
+   "teamAbbr": "WSH"
+  },
+  "jayson-tatum": {
+   "active": true,
+   "awards": [
+    [
+     "All-NBA 1st Team",
+     "4x"
+    ],
+    [
+     "All-Star MVP",
+     "1x"
+    ],
+    [
+     "NBA Eastern Conference Finals MVP",
+     "1x"
+    ],
+    [
+     "All-NBA 3rd Team",
+     "1x"
+    ],
+    [
+     "All-Rookie 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "23.5"
+    ],
+    [
+     "REB",
+     "7.4"
+    ],
+    [
+     "AST",
+     "3.9"
+    ],
+    [
+     "FG%",
+     "45.8"
+    ],
+    [
+     "3P%",
+     "36.7"
+    ],
+    [
+     "STL",
+     "1.1"
+    ]
+   ],
+   "draft": "2017: Rd 1, Pk 3 (BOS)",
+   "espnId": "4065648",
+   "experience": "10th Season",
+   "jersey": "0",
+   "position": "F",
+   "season": [
+    [
+     "PTS",
+     "27.6"
+    ],
+    [
+     "REB",
+     "6.4"
+    ],
+    [
+     "AST",
+     "7.8"
+    ],
+    [
+     "FG%",
+     "43.4"
+    ],
+    [
+     "3P%",
+     "25.0"
+    ],
+    [
+     "STL",
+     "0.8"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "27.6",
+      "6th"
+     ],
+     [
+      "REB",
+      "6.4",
+      "57th"
+     ],
+     [
+      "AST",
+      "7.8",
+      "6th"
+     ],
+     [
+      "FG%",
+      "43.4",
+      "100th"
+     ]
+    ]
+   },
+   "team": "Boston Celtics",
+   "teamAbbr": "BOS"
+  },
+  "joe-burrow": {
+   "active": true,
+   "awards": [
+    [
+     "NFL Comeback Player of the Year",
+     "2x"
+    ]
+   ],
+   "career": [
+    [
+     "YDS",
+     "22,925"
+    ],
+    [
+     "TD",
+     "177"
+    ],
+    [
+     "INT",
+     "57"
+    ],
+    [
+     "CMP%",
+     "68.9"
+    ],
+    [
+     "RTG",
+     "102.0"
+    ],
+    [
+     "CAR",
+     "259"
+    ]
+   ],
+   "draft": "2020: Rd 1, Pk 1 (CIN)",
+   "espnId": "3915511",
+   "experience": "7th Season",
+   "jersey": "9",
+   "last5": [
+    [
+     "YDS",
+     "1,654"
+    ],
+    [
+     "TD",
+     "17"
+    ],
+    [
+     "INT",
+     "5"
+    ],
+    [
+     "CMP%",
+     "74.5"
+    ],
+    [
+     "RTG",
+     "119.0"
+    ],
+    [
+     "CAR",
+     "14"
+    ]
+   ],
+   "position": "QB",
+   "projected": [
+    [
+     "YDS",
+     "5,136"
+    ],
+    [
+     "TD",
+     "49"
+    ],
+    [
+     "INT",
+     "15"
+    ],
+    [
+     "CMP%",
+     "73.0"
+    ],
+    [
+     "RTG",
+     "111.6"
+    ],
+    [
+     "CAR",
+     "49"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "2,115"
+    ],
+    [
+     "TD",
+     "20"
+    ],
+    [
+     "INT",
+     "6"
+    ],
+    [
+     "CMP%",
+     "73.0"
+    ],
+    [
+     "RTG",
+     "111.6"
+    ],
+    [
+     "CAR",
+     "20"
+    ]
+   ],
+   "statsLabel": "2026 Passing",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "YDS",
+      "2,115",
+      "4th"
+     ],
+     [
+      "TD",
+      "20",
+      "1st"
+     ],
+     [
+      "INT",
+      "6",
+      "Tied-22nd"
+     ],
+     [
+      "QBR",
+      "77.0",
+      "4th"
+     ]
+    ]
+   },
+   "team": "Cincinnati Bengals",
+   "teamAbbr": "CIN"
+  },
+  "joel-embiid": {
+   "active": true,
+   "awards": [
+    [
+     "MVP",
+     "1x"
+    ],
+    [
+     "All-NBA 1st Team",
+     "1x"
+    ],
+    [
+     "All-NBA 2nd Team",
+     "4x"
+    ],
+    [
+     "All-Defensive 2nd Team",
+     "3x"
+    ],
+    [
+     "All-Rookie 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "27.6"
+    ],
+    [
+     "REB",
+     "10.8"
+    ],
+    [
+     "AST",
+     "3.7"
+    ],
+    [
+     "FG%",
+     "50.0"
+    ],
+    [
+     "3P%",
+     "33.6"
+    ],
+    [
+     "STL",
+     "0.9"
+    ]
+   ],
+   "draft": "2014: Rd 1, Pk 3 (PHI)",
+   "espnId": "3059318",
+   "experience": "11th Season",
+   "injury": {
+    "comment": "Embiid (foot) is questionable to suit up for Monday's game against the Bulls.",
+    "date": "2026-11-01",
+    "returnDate": "2026-11-02",
+    "status": "Day-To-Day",
+    "type": "Foot"
+   },
+   "jersey": "21",
+   "position": "C",
+   "season": [
+    [
+     "PTS",
+     "19.2"
+    ],
+    [
+     "REB",
+     "9.4"
+    ],
+    [
+     "AST",
+     "5.2"
+    ],
+    [
+     "FG%",
+     "40.0"
+    ],
+    [
+     "3P%",
+     "14.3"
+    ],
+    [
+     "STL",
+     "0.8"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "19.2",
+      "Tied-44th"
+     ],
+     [
+      "REB",
+      "9.4",
+      "9th"
+     ],
+     [
+      "AST",
+      "5.2",
+      "Tied-37th"
+     ],
+     [
+      "FG%",
+      "40.0",
+      "Tied-113th"
+     ]
+    ]
+   },
+   "team": "Philadelphia 76ers",
+   "teamAbbr": "PHI"
+  },
+  "josh-allen": {
+   "active": true,
+   "awards": [
+    [
+     "NFL MVP",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "YDS",
+     "31,895"
+    ],
+    [
+     "TD",
+     "231"
+    ],
+    [
+     "INT",
+     "99"
+    ],
+    [
+     "CMP%",
+     "64.1"
+    ],
+    [
+     "RTG",
+     "94.8"
+    ],
+    [
+     "CAR",
+     "926"
+    ]
+   ],
+   "draft": "2018: Rd 1, Pk 7 (BUF)",
+   "espnId": "3918298",
+   "experience": "9th Season",
+   "jersey": "17",
+   "last5": [
+    [
+     "YDS",
+     "1,211"
+    ],
+    [
+     "TD",
+     "6"
+    ],
+    [
+     "INT",
+     "5"
+    ],
+    [
+     "CMP%",
+     "65.2"
+    ],
+    [
+     "RTG",
+     "89.8"
+    ],
+    [
+     "CAR",
+     "35"
+    ]
+   ],
+   "position": "QB",
+   "projected": [
+    [
+     "YDS",
+     "4,354"
+    ],
+    [
+     "TD",
+     "27"
+    ],
+    [
+     "INT",
+     "12"
+    ],
+    [
+     "CMP%",
+     "65.9"
+    ],
+    [
+     "RTG",
+     "101.1"
+    ],
+    [
+     "CAR",
+     "134"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "1,793"
+    ],
+    [
+     "TD",
+     "11"
+    ],
+    [
+     "INT",
+     "5"
+    ],
+    [
+     "CMP%",
+     "65.9"
+    ],
+    [
+     "RTG",
+     "101.1"
+    ],
+    [
+     "CAR",
+     "55"
+    ]
+   ],
+   "statsLabel": "2026 Passing",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "YDS",
+      "1,793",
+      "14th"
+     ],
+     [
+      "TD",
+      "11",
+      "Tied-15th"
+     ],
+     [
+      "INT",
+      "5",
+      "Tied-14th"
+     ],
+     [
+      "QBR",
+      "77.0",
+      "3rd"
+     ]
+    ]
+   },
+   "team": "Buffalo Bills",
+   "teamAbbr": "BUF"
+  },
+  "juan-soto": {
+   "active": true,
+   "awards": [
+    [
+     "Silver Slugger",
+     "6x"
+    ],
+    [
+     "All-MLB 1st Team",
+     "4x"
+    ],
+    [
+     "All-MLB 2nd Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "HR",
+     "271"
+    ],
+    [
+     "RBI",
+     "765"
+    ],
+    [
+     "H",
+     "1196"
+    ],
+    [
+     "R",
+     "838"
+    ],
+    [
+     "AB",
+     "4257"
+    ],
+    [
+     "BB",
+     "974"
+    ]
+   ],
+   "draft": "",
+   "espnId": "36969",
+   "experience": "9th Season",
+   "jersey": "22",
+   "position": "LF",
+   "season": [
+    [
+     "HR",
+     "27"
+    ],
+    [
+     "RBI",
+     "68"
+    ],
+    [
+     "H",
+     "110"
+    ],
+    [
+     "R",
+     "63"
+    ],
+    [
+     "AB",
+     "400"
+    ],
+    [
+     "BB",
+     "78"
+    ]
+   ],
+   "statsLabel": "2026 Batting",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "AVG",
+      ".275",
+      ""
+     ],
+     [
+      "HR",
+      "27",
+      "Tied-29th"
+     ],
+     [
+      "RBI",
+      "68",
+      "Tied-94th"
+     ],
+     [
+      "OPS",
+      ".908",
+      ""
+     ]
+    ]
+   },
+   "team": "New York Mets",
+   "teamAbbr": "NYM"
+  },
+  "julio-rodriguez": {
+   "active": true,
+   "awards": [
+    [
+     "All-MLB 1st Team",
+     "1x"
+    ],
+    [
+     "Silver Slugger",
+     "2x"
+    ],
+    [
+     "Rookie of the Year",
+     "1x"
+    ],
+    [
+     "All-MLB 2nd Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "HR",
+     "134"
+    ],
+    [
+     "RBI",
+     "412"
+    ],
+    [
+     "H",
+     "801"
+    ],
+    [
+     "R",
+     "437"
+    ],
+    [
+     "AB",
+     "2980"
+    ],
+    [
+     "BB",
+     "216"
+    ]
+   ],
+   "draft": "",
+   "espnId": "41044",
+   "experience": "5th Season",
+   "jersey": "44",
+   "position": "CF",
+   "season": [
+    [
+     "HR",
+     "22"
+    ],
+    [
+     "RBI",
+     "71"
+    ],
+    [
+     "H",
+     "147"
+    ],
+    [
+     "R",
+     "69"
+    ],
+    [
+     "AB",
+     "596"
+    ],
+    [
+     "BB",
+     "47"
+    ]
+   ],
+   "statsLabel": "2026 Batting",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "AVG",
+      ".247",
+      "91st"
+     ],
+     [
+      "HR",
+      "22",
+      "Tied-64th"
+     ],
+     [
+      "RBI",
+      "71",
+      "Tied-82nd"
+     ],
+     [
+      "OPS",
+      ".708",
+      "107th"
+     ]
+    ]
+   },
+   "team": "Seattle Mariners",
+   "teamAbbr": "SEA"
+  },
+  "justin-herbert": {
+   "active": true,
+   "awards": [
+    [
+     "NFL Offensive Rookie of the Year",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "YDS",
+     "26,218"
+    ],
+    [
+     "TD",
+     "168"
+    ],
+    [
+     "INT",
+     "68"
+    ],
+    [
+     "CMP%",
+     "66.2"
+    ],
+    [
+     "RTG",
+     "94.8"
+    ],
+    [
+     "CAR",
+     "409"
+    ]
+   ],
+   "draft": "2020: Rd 1, Pk 6 (LAC)",
+   "espnId": "4038941",
+   "experience": "7th Season",
+   "jersey": "10",
+   "last5": [
+    [
+     "YDS",
+     "997"
+    ],
+    [
+     "TD",
+     "3"
+    ],
+    [
+     "INT",
+     "7"
+    ],
+    [
+     "CMP%",
+     "62.6"
+    ],
+    [
+     "RTG",
+     "68.4"
+    ],
+    [
+     "CAR",
+     "25"
+    ]
+   ],
+   "position": "QB",
+   "projected": [
+    [
+     "YDS",
+     "3,395"
+    ],
+    [
+     "TD",
+     "12"
+    ],
+    [
+     "INT",
+     "24"
+    ],
+    [
+     "CMP%",
+     "61.8"
+    ],
+    [
+     "RTG",
+     "69.3"
+    ],
+    [
+     "CAR",
+     "80"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "1,398"
+    ],
+    [
+     "TD",
+     "5"
+    ],
+    [
+     "INT",
+     "10"
+    ],
+    [
+     "CMP%",
+     "61.8"
+    ],
+    [
+     "RTG",
+     "69.3"
+    ],
+    [
+     "CAR",
+     "33"
+    ]
+   ],
+   "statsLabel": "2026 Passing",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "YDS",
+      "1,398",
+      "22nd"
+     ],
+     [
+      "TD",
+      "5",
+      "Tied-27th"
+     ],
+     [
+      "INT",
+      "10",
+      "31st"
+     ],
+     [
+      "QBR",
+      "32.9",
+      "30th"
+     ]
+    ]
+   },
+   "team": "Los Angeles Chargers",
+   "teamAbbr": "LAC"
+  },
+  "justin-jefferson": {
+   "active": true,
+   "awards": [
+    [
+     "NFL Offensive Player of the Year",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "YDS",
+     "8,815"
+    ],
+    [
+     "TD",
+     "46"
+    ],
+    [
+     "REC",
+     "607"
+    ],
+    [
+     "CAR",
+     "16"
+    ]
+   ],
+   "draft": "2020: Rd 1, Pk 22 (MIN)",
+   "espnId": "4262921",
+   "experience": "7th Season",
+   "jersey": "18",
+   "last5": [
+    [
+     "YDS",
+     "243"
+    ],
+    [
+     "TD",
+     "2"
+    ],
+    [
+     "REC",
+     "20"
+    ],
+    [
+     "CAR",
+     "1"
+    ]
+   ],
+   "position": "WR",
+   "projected": [
+    [
+     "YDS",
+     "814"
+    ],
+    [
+     "TD",
+     "10"
+    ],
+    [
+     "REC",
+     "68"
+    ],
+    [
+     "CAR",
+     "2"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "335"
+    ],
+    [
+     "TD",
+     "4"
+    ],
+    [
+     "REC",
+     "28"
+    ],
+    [
+     "CAR",
+     "1"
+    ]
+   ],
+   "statsLabel": "2026 Offense",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "REC",
+      "28",
+      "Tied-51st"
+     ],
+     [
+      "YDS",
+      "335",
+      "43rd"
+     ],
+     [
+      "TD",
+      "4",
+      "Tied-13th"
+     ],
+     [
+      "AVG",
+      "12.0",
+      "53rd"
+     ]
+    ]
+   },
+   "team": "Minnesota Vikings",
+   "teamAbbr": "MIN"
+  },
+  "kawhi-leonard": {
+   "active": true,
+   "awards": [
+    [
+     "All-NBA 2nd Team",
+     "4x"
+    ],
+    [
+     "All-NBA 1st Team",
+     "3x"
+    ],
+    [
+     "All-Defensive 2nd Team",
+     "4x"
+    ],
+    [
+     "All-Star MVP",
+     "1x"
+    ],
+    [
+     "Finals MVP",
+     "2x"
+    ],
+    [
+     "All-Defensive 1st Team",
+     "3x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "20.7"
+    ],
+    [
+     "REB",
+     "6.4"
+    ],
+    [
+     "AST",
+     "3.1"
+    ],
+    [
+     "FG%",
+     "49.9"
+    ],
+    [
+     "3P%",
+     "39.1"
+    ],
+    [
+     "STL",
+     "1.7"
+    ]
+   ],
+   "draft": "2011: Rd 1, Pk 15 (IND)",
+   "espnId": "6450",
+   "experience": "16th Season",
+   "injury": {
+    "comment": "Leonard (knee) is expected to be sidelined for at least three to four weeks, Chris Haynes of NBA TV reports.",
+    "date": "2026-10-29",
+    "returnDate": "2026-11-23",
+    "status": "Out",
+    "type": "Knee"
+   },
+   "jersey": "2",
+   "position": "F",
+   "season": [
+    [
+     "PTS",
+     "19.5"
+    ],
+    [
+     "REB",
+     "7.5"
+    ],
+    [
+     "AST",
+     "1.5"
+    ],
+    [
+     "FG%",
+     "32.4"
+    ],
+    [
+     "3P%",
+     "28.6"
+    ],
+    [
+     "STL",
+     "3.5"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "19.5",
+      ""
+     ],
+     [
+      "REB",
+      "7.5",
+      ""
+     ],
+     [
+      "AST",
+      "1.5",
+      ""
+     ],
+     [
+      "FG%",
+      "32.4",
+      ""
+     ]
+    ]
+   },
+   "team": "Toronto Raptors",
+   "teamAbbr": "TOR"
+  },
+  "kevin-durant": {
+   "active": true,
+   "awards": [
+    [
+     "All-NBA 2nd Team",
+     "6x"
+    ],
+    [
+     "NBA Cup All-Tournament Team",
+     "1x"
+    ],
+    [
+     "All-Star MVP",
+     "2x"
+    ],
+    [
+     "Finals MVP",
+     "2x"
+    ],
+    [
+     "All-NBA 1st Team",
+     "6x"
+    ],
+    [
+     "MVP",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "27.1"
+    ],
+    [
+     "REB",
+     "6.9"
+    ],
+    [
+     "AST",
+     "4.4"
+    ],
+    [
+     "FG%",
+     "50.3"
+    ],
+    [
+     "3P%",
+     "39.2"
+    ],
+    [
+     "STL",
+     "1.0"
+    ]
+   ],
+   "draft": "2007: Rd 1, Pk 2 (SEA)",
+   "espnId": "3202",
+   "experience": "20th Season",
+   "jersey": "7",
+   "position": "F",
+   "season": [
+    [
+     "PTS",
+     "22.0"
+    ],
+    [
+     "REB",
+     "5.6"
+    ],
+    [
+     "AST",
+     "3.1"
+    ],
+    [
+     "FG%",
+     "51.1"
+    ],
+    [
+     "3P%",
+     "40.7"
+    ],
+    [
+     "STL",
+     "0.4"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "22.0",
+      "Tied-24th"
+     ],
+     [
+      "REB",
+      "5.6",
+      "76th"
+     ],
+     [
+      "AST",
+      "3.1",
+      "81st"
+     ],
+     [
+      "FG%",
+      "51.1",
+      "36th"
+     ]
+    ]
+   },
+   "team": "Houston Rockets",
+   "teamAbbr": "HOU"
+  },
+  "lamar-jackson": {
+   "active": true,
+   "awards": [
+    [
+     "NFL MVP",
+     "2x"
+    ]
+   ],
+   "career": [
+    [
+     "YDS",
+     "23,575"
+    ],
+    [
+     "TD",
+     "193"
+    ],
+    [
+     "INT",
+     "57"
+    ],
+    [
+     "CMP%",
+     "64.9"
+    ],
+    [
+     "RTG",
+     "102.7"
+    ],
+    [
+     "CAR",
+     "1100"
+    ]
+   ],
+   "draft": "2018: Rd 1, Pk 32 (BAL)",
+   "espnId": "3916387",
+   "experience": "9th Season",
+   "injury": {
+    "comment": "Jackson is slated to have surgery to address his right thumb injury and will be placed on injured reserve, per coach Jesse Minter,  Brian Wacker of The Baltimore Sun reports.",
+    "date": "2026-11-01",
+    "returnDate": "2026-12-13",
+    "status": "Out",
+    "type": "Thumb"
+   },
+   "jersey": "8",
+   "last5": [
+    [
+     "YDS",
+     "967"
+    ],
+    [
+     "TD",
+     "6"
+    ],
+    [
+     "INT",
+     "1"
+    ],
+    [
+     "CMP%",
+     "57.1"
+    ],
+    [
+     "RTG",
+     "106.4"
+    ],
+    [
+     "CAR",
+     "19"
+    ]
+   ],
+   "position": "QB",
+   "projected": [
+    [
+     "YDS",
+     "2,055"
+    ],
+    [
+     "TD",
+     "13"
+    ],
+    [
+     "INT",
+     "2"
+    ],
+    [
+     "CMP%",
+     "70.1"
+    ],
+    [
+     "RTG",
+     "118.4"
+    ],
+    [
+     "CAR",
+     "40"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "967"
+    ],
+    [
+     "TD",
+     "6"
+    ],
+    [
+     "INT",
+     "1"
+    ],
+    [
+     "CMP%",
+     "70.1"
+    ],
+    [
+     "RTG",
+     "118.4"
+    ],
+    [
+     "CAR",
+     "19"
+    ]
+   ],
+   "statsLabel": "2026 Passing",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "YDS",
+      "967",
+      ""
+     ],
+     [
+      "TD",
+      "6",
+      ""
+     ],
+     [
+      "INT",
+      "1",
+      ""
+     ],
+     [
+      "QBR",
+      "82.4",
+      ""
+     ]
+    ]
+   },
+   "team": "Baltimore Ravens",
+   "teamAbbr": "BAL"
+  },
+  "lamelo-ball": {
+   "active": true,
+   "awards": [
+    [
+     "Rookie of the Year",
+     "1x"
+    ],
+    [
+     "All-Rookie 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "20.7"
+    ],
+    [
+     "REB",
+     "5.6"
+    ],
+    [
+     "AST",
+     "7.3"
+    ],
+    [
+     "FG%",
+     "41.8"
+    ],
+    [
+     "3P%",
+     "36.5"
+    ],
+    [
+     "STL",
+     "1.4"
+    ]
+   ],
+   "draft": "2020: Rd 1, Pk 3 (CHA)",
+   "espnId": "4432816",
+   "experience": "7th Season",
+   "jersey": "1",
+   "position": "G",
+   "season": [
+    [
+     "PTS",
+     "14.4"
+    ],
+    [
+     "REB",
+     "3.3"
+    ],
+    [
+     "AST",
+     "6.3"
+    ],
+    [
+     "FG%",
+     "39.3"
+    ],
+    [
+     "3P%",
+     "34.5"
+    ],
+    [
+     "STL",
+     "1.9"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "14.4",
+      "Tied-83rd"
+     ],
+     [
+      "REB",
+      "3.3",
+      "174th"
+     ],
+     [
+      "AST",
+      "6.3",
+      "21st"
+     ],
+     [
+      "FG%",
+      "39.3",
+      "120th"
+     ]
+    ]
+   },
+   "team": "Minnesota Timberwolves",
+   "teamAbbr": "MIN"
+  },
+  "lebron-james": {
+   "active": true,
+   "awards": [
+    [
+     "All-NBA 2nd Team",
+     "4x"
+    ],
+    [
+     "All-NBA 3rd Team",
+     "4x"
+    ],
+    [
+     "NBA Cup MVP",
+     "1x"
+    ],
+    [
+     "NBA Cup All-Tournament Team",
+     "1x"
+    ],
+    [
+     "Finals MVP",
+     "4x"
+    ],
+    [
+     "All-NBA 1st Team",
+     "13x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "26.7"
+    ],
+    [
+     "REB",
+     "7.5"
+    ],
+    [
+     "AST",
+     "7.4"
+    ],
+    [
+     "FG%",
+     "50.7"
+    ],
+    [
+     "3P%",
+     "34.8"
+    ],
+    [
+     "STL",
+     "1.5"
+    ]
+   ],
+   "draft": "2003: Rd 1, Pk 1 (CLE)",
+   "espnId": "1966",
+   "experience": "24th Season",
+   "jersey": "23",
+   "position": "F",
+   "season": [
+    [
+     "PTS",
+     "16.4"
+    ],
+    [
+     "REB",
+     "7.0"
+    ],
+    [
+     "AST",
+     "7.0"
+    ],
+    [
+     "FG%",
+     "44.9"
+    ],
+    [
+     "3P%",
+     "26.3"
+    ],
+    [
+     "STL",
+     "1.6"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "16.4",
+      "60th"
+     ],
+     [
+      "REB",
+      "7.0",
+      "Tied-41st"
+     ],
+     [
+      "AST",
+      "7.0",
+      "Tied-13th"
+     ],
+     [
+      "FG%",
+      "44.9",
+      "91st"
+     ]
+    ]
+   },
+   "team": "Philadelphia 76ers",
+   "teamAbbr": "PHI"
+  },
+  "luka-doncic": {
+   "active": true,
+   "awards": [
+    [
+     "All-NBA 1st Team",
+     "6x"
+    ],
+    [
+     "NBA Cup All-Tournament Team",
+     "1x"
+    ],
+    [
+     "NBA Western Conference Finals MVP",
+     "1x"
+    ],
+    [
+     "Rookie of the Year",
+     "1x"
+    ],
+    [
+     "All-Rookie 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "29.3"
+    ],
+    [
+     "REB",
+     "8.5"
+    ],
+    [
+     "AST",
+     "8.2"
+    ],
+    [
+     "FG%",
+     "46.9"
+    ],
+    [
+     "3P%",
+     "35.3"
+    ],
+    [
+     "STL",
+     "1.3"
+    ]
+   ],
+   "draft": "2018: Rd 1, Pk 3 (ATL)",
+   "espnId": "3945274",
+   "experience": "9th Season",
+   "jersey": "77",
+   "position": "G",
+   "season": [
+    [
+     "PTS",
+     "36.2"
+    ],
+    [
+     "REB",
+     "6.8"
+    ],
+    [
+     "AST",
+     "7.6"
+    ],
+    [
+     "FG%",
+     "47.5"
+    ],
+    [
+     "3P%",
+     "39.1"
+    ],
+    [
+     "STL",
+     "1.2"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "36.2",
+      "1st"
+     ],
+     [
+      "REB",
+      "6.8",
+      "Tied-49th"
+     ],
+     [
+      "AST",
+      "7.6",
+      "7th"
+     ],
+     [
+      "FG%",
+      "47.5",
+      "66th"
+     ]
+    ]
+   },
+   "team": "Los Angeles Lakers",
+   "teamAbbr": "LAL"
+  },
+  "malik-nabers": {
+   "active": true,
+   "awards": [],
+   "career": [
+    [
+     "YDS",
+     "2,080"
+    ],
+    [
+     "TD",
+     "11"
+    ],
+    [
+     "REC",
+     "175"
+    ],
+    [
+     "CAR",
+     "5"
+    ]
+   ],
+   "draft": "2024: Rd 1, Pk 6 (NYG)",
+   "espnId": "4595348",
+   "experience": "3rd Season",
+   "jersey": "1",
+   "last5": [
+    [
+     "YDS",
+     "535"
+    ],
+    [
+     "TD",
+     "2"
+    ],
+    [
+     "REC",
+     "41"
+    ],
+    [
+     "CAR",
+     "0"
+    ]
+   ],
+   "position": "WR",
+   "projected": [
+    [
+     "YDS",
+     "1,469"
+    ],
+    [
+     "TD",
+     "5"
+    ],
+    [
+     "REC",
+     "117"
+    ],
+    [
+     "CAR",
+     "0"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "605"
+    ],
+    [
+     "TD",
+     "2"
+    ],
+    [
+     "REC",
+     "48"
+    ],
+    [
+     "CAR",
+     "0"
+    ]
+   ],
+   "statsLabel": "2026 Offense",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "REC",
+      "48",
+      "7th"
+     ],
+     [
+      "YDS",
+      "605",
+      "9th"
+     ],
+     [
+      "TD",
+      "2",
+      "Tied-43rd"
+     ],
+     [
+      "AVG",
+      "12.6",
+      "45th"
+     ]
+    ]
+   },
+   "team": "New York Giants",
+   "teamAbbr": "NYG"
+  },
+  "marvin-harrison-jr": {
+   "active": true,
+   "awards": [],
+   "career": [
+    [
+     "YDS",
+     "1,618"
+    ],
+    [
+     "TD",
+     "14"
+    ],
+    [
+     "REC",
+     "112"
+    ],
+    [
+     "CAR",
+     "0"
+    ]
+   ],
+   "draft": "2024: Rd 1, Pk 4 (ARI)",
+   "espnId": "4432708",
+   "experience": "3rd Season",
+   "jersey": "18",
+   "last5": [
+    [
+     "YDS",
+     "92"
+    ],
+    [
+     "TD",
+     "2"
+    ],
+    [
+     "REC",
+     "8"
+    ],
+    [
+     "CAR",
+     "0"
+    ]
+   ],
+   "position": "WR",
+   "projected": [
+    [
+     "YDS",
+     "266"
+    ],
+    [
+     "TD",
+     "4"
+    ],
+    [
+     "REC",
+     "19"
+    ],
+    [
+     "CAR",
+     "0"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "125"
+    ],
+    [
+     "TD",
+     "2"
+    ],
+    [
+     "REC",
+     "9"
+    ],
+    [
+     "CAR",
+     "0"
+    ]
+   ],
+   "statsLabel": "2026 Offense",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "REC",
+      "9",
+      ""
+     ],
+     [
+      "YDS",
+      "125",
+      ""
+     ],
+     [
+      "TD",
+      "2",
+      ""
+     ],
+     [
+      "AVG",
+      "13.9",
+      ""
+     ]
+    ]
+   },
+   "team": "Houston Texans",
+   "teamAbbr": "HOU"
+  },
+  "mike-trout": {
+   "active": true,
+   "awards": [
+    [
+     "Silver Slugger",
+     "9x"
+    ],
+    [
+     "All-MLB 1st Team",
+     "3x"
+    ],
+    [
+     "MVP",
+     "3x"
+    ],
+    [
+     "Hank Aaron Award",
+     "2x"
+    ],
+    [
+     "All-Star Game MVP",
+     "2x"
+    ],
+    [
+     "Rookie of the Year",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "HR",
+     "426"
+    ],
+    [
+     "RBI",
+     "1072"
+    ],
+    [
+     "H",
+     "1878"
+    ],
+    [
+     "R",
+     "1282"
+    ],
+    [
+     "AB",
+     "6480"
+    ],
+    [
+     "BB",
+     "1174"
+    ]
+   ],
+   "draft": "2009: Rd 1, Pk 25 (LAA)",
+   "espnId": "30836",
+   "experience": "16th Season",
+   "jersey": "27",
+   "position": "CF",
+   "season": [
+    [
+     "HR",
+     "22"
+    ],
+    [
+     "RBI",
+     "54"
+    ],
+    [
+     "H",
+     "124"
+    ],
+    [
+     "R",
+     "86"
+    ],
+    [
+     "AB",
+     "513"
+    ],
+    [
+     "BB",
+     "107"
+    ]
+   ],
+   "statsLabel": "2026 Batting",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "AVG",
+      ".242",
+      "Tied-98th"
+     ],
+     [
+      "HR",
+      "22",
+      "Tied-64th"
+     ],
+     [
+      "RBI",
+      "54",
+      "Tied-151st"
+     ],
+     [
+      "OPS",
+      ".803",
+      "44th"
+     ]
+    ]
+   },
+   "team": "Los Angeles Angels",
+   "teamAbbr": "LAA"
+  },
+  "mookie-betts": {
+   "active": true,
+   "awards": [
+    [
+     "Roberto Clemente Award",
+     "1x"
+    ],
+    [
+     "Silver Slugger",
+     "7x"
+    ],
+    [
+     "All-MLB 1st Team",
+     "4x"
+    ],
+    [
+     "Gold Glove",
+     "6x"
+    ],
+    [
+     "All-MLB 2nd Team",
+     "1x"
+    ],
+    [
+     "MVP",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "HR",
+     "314"
+    ],
+    [
+     "RBI",
+     "982"
+    ],
+    [
+     "H",
+     "1890"
+    ],
+    [
+     "R",
+     "1237"
+    ],
+    [
+     "AB",
+     "6561"
+    ],
+    [
+     "BB",
+     "783"
+    ]
+   ],
+   "draft": "2011: Rd 5, Pk 172 (BOS)",
+   "espnId": "33039",
+   "experience": "13th Season",
+   "jersey": "50",
+   "position": "SS",
+   "season": [
+    [
+     "HR",
+     "23"
+    ],
+    [
+     "RBI",
+     "69"
+    ],
+    [
+     "H",
+     "123"
+    ],
+    [
+     "R",
+     "71"
+    ],
+    [
+     "AB",
+     "478"
+    ],
+    [
+     "BB",
+     "47"
+    ]
+   ],
+   "statsLabel": "2026 Batting",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "AVG",
+      ".257",
+      "73rd"
+     ],
+     [
+      "HR",
+      "23",
+      "Tied-56th"
+     ],
+     [
+      "RBI",
+      "69",
+      "Tied-87th"
+     ],
+     [
+      "OPS",
+      ".780",
+      "58th"
+     ]
+    ]
+   },
+   "team": "Los Angeles Dodgers",
+   "teamAbbr": "LAD"
+  },
+  "nikola-jokic": {
+   "active": true,
+   "awards": [
+    [
+     "All-NBA 1st Team",
+     "6x"
+    ],
+    [
+     "MVP",
+     "3x"
+    ],
+    [
+     "Finals MVP",
+     "1x"
+    ],
+    [
+     "All-NBA 2nd Team",
+     "2x"
+    ],
+    [
+     "NBA Western Conference Finals MVP",
+     "1x"
+    ],
+    [
+     "All-Rookie 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "22.2"
+    ],
+    [
+     "REB",
+     "11.1"
+    ],
+    [
+     "AST",
+     "7.5"
+    ],
+    [
+     "FG%",
+     "56.0"
+    ],
+    [
+     "3P%",
+     "36.0"
+    ],
+    [
+     "STL",
+     "1.3"
+    ]
+   ],
+   "draft": "2014: Rd 2, Pk 41 (DEN)",
+   "espnId": "3112335",
+   "experience": "12th Season",
+   "jersey": "15",
+   "position": "C",
+   "season": [
+    [
+     "PTS",
+     "21.2"
+    ],
+    [
+     "REB",
+     "9.8"
+    ],
+    [
+     "AST",
+     "9.2"
+    ],
+    [
+     "FG%",
+     "47.7"
+    ],
+    [
+     "3P%",
+     "20.8"
+    ],
+    [
+     "STL",
+     "1.6"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "21.2",
+      "31st"
+     ],
+     [
+      "REB",
+      "9.8",
+      "7th"
+     ],
+     [
+      "AST",
+      "9.2",
+      "2nd"
+     ],
+     [
+      "FG%",
+      "47.7",
+      "Tied-63rd"
+     ]
+    ]
+   },
+   "team": "Denver Nuggets",
+   "teamAbbr": "DEN"
+  },
+  "paolo-banchero": {
+   "active": true,
+   "awards": [
+    [
+     "Rookie of the Year",
+     "1x"
+    ],
+    [
+     "All-Rookie 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "22.4"
+    ],
+    [
+     "REB",
+     "7.4"
+    ],
+    [
+     "AST",
+     "4.8"
+    ],
+    [
+     "FG%",
+     "45.0"
+    ],
+    [
+     "3P%",
+     "31.8"
+    ],
+    [
+     "STL",
+     "0.8"
+    ]
+   ],
+   "draft": "2022: Rd 1, Pk 1 (ORL)",
+   "espnId": "4432573",
+   "experience": "5th Season",
+   "injury": {
+    "comment": "Banchero is expected to be sidelined for the next four-to-six weeks due to a right high-ankle sprain, Shams Charania of ESPN reports.",
+    "date": "2026-10-24",
+    "returnDate": "2026-11-22",
+    "status": "Out",
+    "type": "Ankle"
+   },
+   "jersey": "5",
+   "position": "F",
+   "season": [
+    [
+     "PTS",
+     "24.5"
+    ],
+    [
+     "REB",
+     "6.5"
+    ],
+    [
+     "AST",
+     "7.5"
+    ],
+    [
+     "FG%",
+     "69.6"
+    ],
+    [
+     "3P%",
+     "50.0"
+    ],
+    [
+     "STL",
+     "1.0"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "24.5",
+      ""
+     ],
+     [
+      "REB",
+      "6.5",
+      ""
+     ],
+     [
+      "AST",
+      "7.5",
+      ""
+     ],
+     [
+      "FG%",
+      "69.6",
+      ""
+     ]
+    ]
+   },
+   "team": "Orlando Magic",
+   "teamAbbr": "ORL"
+  },
+  "patrick-mahomes": {
+   "active": true,
+   "awards": [
+    [
+     "Super Bowl MVP",
+     "3x"
+    ],
+    [
+     "NFL MVP",
+     "2x"
+    ],
+    [
+     "NFL Offensive Player of the Year",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "YDS",
+     "37,734"
+    ],
+    [
+     "TD",
+     "279"
+    ],
+    [
+     "INT",
+     "89"
+    ],
+    [
+     "CMP%",
+     "66.2"
+    ],
+    [
+     "RTG",
+     "100.7"
+    ],
+    [
+     "CAR",
+     "517"
+    ]
+   ],
+   "draft": "2017: Rd 1, Pk 10 (KC)",
+   "espnId": "3139477",
+   "experience": "10th Season",
+   "jersey": "15",
+   "last5": [
+    [
+     "YDS",
+     "1,229"
+    ],
+    [
+     "TD",
+     "7"
+    ],
+    [
+     "INT",
+     "3"
+    ],
+    [
+     "CMP%",
+     "68.2"
+    ],
+    [
+     "RTG",
+     "97.1"
+    ],
+    [
+     "CAR",
+     "12"
+    ]
+   ],
+   "position": "QB",
+   "projected": [
+    [
+     "YDS",
+     "4,359"
+    ],
+    [
+     "TD",
+     "29"
+    ],
+    [
+     "INT",
+     "10"
+    ],
+    [
+     "CMP%",
+     "66.4"
+    ],
+    [
+     "RTG",
+     "99.7"
+    ],
+    [
+     "CAR",
+     "51"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "1,795"
+    ],
+    [
+     "TD",
+     "12"
+    ],
+    [
+     "INT",
+     "4"
+    ],
+    [
+     "CMP%",
+     "66.4"
+    ],
+    [
+     "RTG",
+     "99.7"
+    ],
+    [
+     "CAR",
+     "21"
+    ]
+   ],
+   "statsLabel": "2026 Passing",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "YDS",
+      "1,795",
+      "13th"
+     ],
+     [
+      "TD",
+      "12",
+      "Tied-13th"
+     ],
+     [
+      "INT",
+      "4",
+      "Tied-11th"
+     ],
+     [
+      "QBR",
+      "67.7",
+      "8th"
+     ]
+    ]
+   },
+   "team": "Kansas City Chiefs",
+   "teamAbbr": "KC"
+  },
+  "paul-skenes": {
+   "active": true,
+   "awards": [
+    [
+     "Cy Young",
+     "1x"
+    ],
+    [
+     "All-MLB 1st Team",
+     "2x"
+    ],
+    [
+     "Rookie of the Year",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "HR",
+     "41"
+    ],
+    [
+     "H",
+     "376"
+    ],
+    [
+     "R",
+     "158"
+    ],
+    [
+     "BB",
+     "123"
+    ],
+    [
+     "GP",
+     "87"
+    ],
+    [
+     "K",
+     "586"
+    ]
+   ],
+   "draft": "2023: Rd 1, Pk 1 (PIT)",
+   "espnId": "4719507",
+   "experience": "3rd Season",
+   "jersey": "30",
+   "position": "SP",
+   "season": [
+    [
+     "HR",
+     "20"
+    ],
+    [
+     "H",
+     "146"
+    ],
+    [
+     "R",
+     "82"
+    ],
+    [
+     "BB",
+     "49"
+    ],
+    [
+     "GP",
+     "32"
+    ],
+    [
+     "K",
+     "200"
+    ]
+   ],
+   "statsLabel": "2026 Pitching",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "W-L",
+      "10-11",
+      "Tied-41st"
+     ],
+     [
+      "ERA",
+      "3.82",
+      "27th"
+     ],
+     [
+      "K",
+      "200",
+      "Tied-11th"
+     ],
+     [
+      "WHIP",
+      "1.12",
+      "18th"
+     ]
+    ]
+   },
+   "team": "Pittsburgh Pirates",
+   "teamAbbr": "PIT"
+  },
+  "pete-alonso": {
+   "active": true,
+   "awards": [
+    [
+     "Silver Slugger",
+     "1x"
+    ],
+    [
+     "Rookie of the Year",
+     "1x"
+    ],
+    [
+     "All-MLB 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "HR",
+     "307"
+    ],
+    [
+     "RBI",
+     "825"
+    ],
+    [
+     "H",
+     "1112"
+    ],
+    [
+     "R",
+     "680"
+    ],
+    [
+     "AB",
+     "4365"
+    ],
+    [
+     "BB",
+     "500"
+    ]
+   ],
+   "draft": "2016: Rd 2, Pk 64 (NYM)",
+   "espnId": "37498",
+   "experience": "8th Season",
+   "jersey": "25",
+   "position": "1B",
+   "season": [
+    [
+     "HR",
+     "43"
+    ],
+    [
+     "RBI",
+     "113"
+    ],
+    [
+     "H",
+     "161"
+    ],
+    [
+     "R",
+     "100"
+    ],
+    [
+     "AB",
+     "602"
+    ],
+    [
+     "BB",
+     "81"
+    ]
+   ],
+   "statsLabel": "2026 Batting",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "AVG",
+      ".267",
+      "Tied-47th"
+     ],
+     [
+      "HR",
+      "43",
+      "3rd"
+     ],
+     [
+      "RBI",
+      "113",
+      "2nd"
+     ],
+     [
+      "OPS",
+      ".884",
+      "8th"
+     ]
+    ]
+   },
+   "team": "Baltimore Orioles",
+   "teamAbbr": "BAL"
+  },
+  "puka-nacua": {
+   "active": true,
+   "awards": [],
+   "career": [
+    [
+     "YDS",
+     "4,756"
+    ],
+    [
+     "TD",
+     "22"
+    ],
+    [
+     "REC",
+     "369"
+    ],
+    [
+     "CAR",
+     "38"
+    ]
+   ],
+   "draft": "2023: Rd 5, Pk 177 (LAR)",
+   "espnId": "4426515",
+   "experience": "4th Season",
+   "jersey": "12",
+   "last5": [
+    [
+     "YDS",
+     "491"
+    ],
+    [
+     "TD",
+     "3"
+    ],
+    [
+     "REC",
+     "51"
+    ],
+    [
+     "CAR",
+     "5"
+    ]
+   ],
+   "position": "WR",
+   "projected": [
+    [
+     "YDS",
+     "1,201"
+    ],
+    [
+     "TD",
+     "6"
+    ],
+    [
+     "REC",
+     "119"
+    ],
+    [
+     "CAR",
+     "11"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "565"
+    ],
+    [
+     "TD",
+     "3"
+    ],
+    [
+     "REC",
+     "56"
+    ],
+    [
+     "CAR",
+     "5"
+    ]
+   ],
+   "statsLabel": "2026 Offense",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "REC",
+      "56",
+      "4th"
+     ],
+     [
+      "YDS",
+      "565",
+      "12th"
+     ],
+     [
+      "TD",
+      "3",
+      "Tied-22nd"
+     ],
+     [
+      "AVG",
+      "10.1",
+      "84th"
+     ]
+    ]
+   },
+   "team": "Los Angeles Rams",
+   "teamAbbr": "LAR"
+  },
+  "roman-anthony": {
+   "active": true,
+   "awards": [],
+   "career": [
+    [
+     "HR",
+     "13"
+    ],
+    [
+     "RBI",
+     "47"
+    ],
+    [
+     "H",
+     "127"
+    ],
+    [
+     "R",
+     "72"
+    ],
+    [
+     "AB",
+     "469"
+    ],
+    [
+     "BB",
+     "69"
+    ]
+   ],
+   "draft": "",
+   "espnId": "5080767",
+   "experience": "2nd Season",
+   "injury": {
+    "comment": "Red Sox chief baseball officer Craig Breslow said Monday that Anthony is not expected to require surgery on his injured right hand, Chris Cotillo of MassLive.com reports.",
+    "date": "2026-10-05",
+    "returnDate": "2027-02-01",
+    "status": "Out",
+    "type": "Hand"
+   },
+   "jersey": "19",
+   "position": "LF",
+   "season": [
+    [
+     "HR",
+     "5"
+    ],
+    [
+     "RBI",
+     "15"
+    ],
+    [
+     "H",
+     "52"
+    ],
+    [
+     "R",
+     "24"
+    ],
+    [
+     "AB",
+     "212"
+    ],
+    [
+     "BB",
+     "29"
+    ]
+   ],
+   "statsLabel": "2026 Batting",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "AVG",
+      ".245",
+      ""
+     ],
+     [
+      "HR",
+      "5",
+      "Tied-319th"
+     ],
+     [
+      "RBI",
+      "15",
+      "Tied-389th"
+     ],
+     [
+      "OPS",
+      ".735",
+      ""
+     ]
+    ]
+   },
+   "team": "Boston Red Sox",
+   "teamAbbr": "BOS"
+  },
+  "ronald-acuna-jr": {
+   "active": true,
+   "awards": [
+    [
+     "Silver Slugger",
+     "3x"
+    ],
+    [
+     "MVP",
+     "1x"
+    ],
+    [
+     "Hank Aaron Award",
+     "1x"
+    ],
+    [
+     "All-MLB 1st Team",
+     "1x"
+    ],
+    [
+     "All-MLB 2nd Team",
+     "2x"
+    ],
+    [
+     "Rookie of the Year",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "HR",
+     "206"
+    ],
+    [
+     "RBI",
+     "514"
+    ],
+    [
+     "H",
+     "1017"
+    ],
+    [
+     "R",
+     "716"
+    ],
+    [
+     "AB",
+     "3564"
+    ],
+    [
+     "BB",
+     "492"
+    ]
+   ],
+   "draft": "",
+   "espnId": "36185",
+   "experience": "9th Season",
+   "jersey": "13",
+   "position": "RF",
+   "season": [
+    [
+     "HR",
+     "20"
+    ],
+    [
+     "RBI",
+     "55"
+    ],
+    [
+     "H",
+     "104"
+    ],
+    [
+     "R",
+     "61"
+    ],
+    [
+     "AB",
+     "408"
+    ],
+    [
+     "BB",
+     "53"
+    ]
+   ],
+   "statsLabel": "2026 Batting",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "AVG",
+      ".255",
+      ""
+     ],
+     [
+      "HR",
+      "20",
+      "Tied-85th"
+     ],
+     [
+      "RBI",
+      "55",
+      "Tied-147th"
+     ],
+     [
+      "OPS",
+      ".796",
+      ""
+     ]
+    ]
+   },
+   "team": "Atlanta Braves",
+   "teamAbbr": "ATL"
+  },
+  "saquon-barkley": {
+   "active": true,
+   "awards": [
+    [
+     "NFL Offensive Player of the Year",
+     "1x"
+    ],
+    [
+     "NFL Offensive Rookie of the Year",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "YDS",
+     "8,630"
+    ],
+    [
+     "TD",
+     "57"
+    ],
+    [
+     "REC",
+     "365"
+    ],
+    [
+     "CAR",
+     "1882"
+    ]
+   ],
+   "draft": "2018: Rd 1, Pk 2 (NYG)",
+   "espnId": "3929630",
+   "experience": "9th Season",
+   "jersey": "26",
+   "last5": [
+    [
+     "YDS",
+     "191"
+    ],
+    [
+     "TD",
+     "2"
+    ],
+    [
+     "REC",
+     "6"
+    ],
+    [
+     "CAR",
+     "41"
+    ]
+   ],
+   "position": "RB",
+   "projected": [
+    [
+     "YDS",
+     "582"
+    ],
+    [
+     "TD",
+     "4"
+    ],
+    [
+     "REC",
+     "15"
+    ],
+    [
+     "CAR",
+     "119"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "274"
+    ],
+    [
+     "TD",
+     "2"
+    ],
+    [
+     "REC",
+     "7"
+    ],
+    [
+     "CAR",
+     "56"
+    ]
+   ],
+   "statsLabel": "2026 Offense",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "CAR",
+      "56",
+      "38th"
+     ],
+     [
+      "YDS",
+      "274",
+      "32nd"
+     ],
+     [
+      "TD",
+      "2",
+      "Tied-26th"
+     ],
+     [
+      "AVG",
+      "4.9",
+      "Tied-12th"
+     ]
+    ]
+   },
+   "team": "Philadelphia Eagles",
+   "teamAbbr": "PHI"
+  },
+  "shai-gilgeous-alexander": {
+   "active": true,
+   "awards": [
+    [
+     "MVP",
+     "2x"
+    ],
+    [
+     "All-NBA 1st Team",
+     "4x"
+    ],
+    [
+     "Clutch Player of the Year",
+     "1x"
+    ],
+    [
+     "NBA Cup All-Tournament Team",
+     "2x"
+    ],
+    [
+     "Finals MVP",
+     "1x"
+    ],
+    [
+     "NBA Western Conference Finals MVP",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "25.3"
+    ],
+    [
+     "REB",
+     "4.7"
+    ],
+    [
+     "AST",
+     "5.3"
+    ],
+    [
+     "FG%",
+     "50.8"
+    ],
+    [
+     "3P%",
+     "35.8"
+    ],
+    [
+     "STL",
+     "1.4"
+    ]
+   ],
+   "draft": "2018: Rd 1, Pk 11 (CHA)",
+   "espnId": "4278073",
+   "experience": "9th Season",
+   "jersey": "2",
+   "position": "G",
+   "season": [
+    [
+     "PTS",
+     "26.0"
+    ],
+    [
+     "REB",
+     "4.5"
+    ],
+    [
+     "AST",
+     "3.3"
+    ],
+    [
+     "FG%",
+     "46.5"
+    ],
+    [
+     "3P%",
+     "30.0"
+    ],
+    [
+     "STL",
+     "1.2"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "26.0",
+      "9th"
+     ],
+     [
+      "REB",
+      "4.5",
+      "Tied-105th"
+     ],
+     [
+      "AST",
+      "3.3",
+      "Tied-74th"
+     ],
+     [
+      "FG%",
+      "46.5",
+      "77th"
+     ]
+    ]
+   },
+   "team": "Oklahoma City Thunder",
+   "teamAbbr": "OKC"
+  },
+  "shedeur-sanders": {
+   "active": true,
+   "awards": [],
+   "career": [
+    [
+     "YDS",
+     "1,402"
+    ],
+    [
+     "TD",
+     "7"
+    ],
+    [
+     "INT",
+     "10"
+    ],
+    [
+     "CMP%",
+     "57.2"
+    ],
+    [
+     "RTG",
+     "68.4"
+    ],
+    [
+     "CAR",
+     "21"
+    ]
+   ],
+   "draft": "2025: Rd 5, Pk 144 (CLE)",
+   "espnId": "4432762",
+   "experience": "2nd Season",
+   "jersey": "2",
+   "position": "QB",
+   "projected": [
+    [
+     "YDS",
+     "4"
+    ],
+    [
+     "TD",
+     "0"
+    ],
+    [
+     "INT",
+     "0"
+    ],
+    [
+     "CMP%",
+     "100.0"
+    ],
+    [
+     "RTG",
+     "79.2"
+    ],
+    [
+     "CAR",
+     "0"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "2"
+    ],
+    [
+     "TD",
+     "0"
+    ],
+    [
+     "INT",
+     "0"
+    ],
+    [
+     "CMP%",
+     "100.0"
+    ],
+    [
+     "RTG",
+     "79.2"
+    ],
+    [
+     "CAR",
+     "0"
+    ]
+   ],
+   "statsLabel": "2026 Passing",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "YDS",
+      "2",
+      ""
+     ],
+     [
+      "TD",
+      "0",
+      ""
+     ],
+     [
+      "INT",
+      "0",
+      ""
+     ],
+     [
+      "QBR",
+      "7.4",
+      ""
+     ]
+    ]
+   },
+   "team": "Cleveland Browns",
+   "teamAbbr": "CLE"
+  },
+  "shohei-ohtani": {
+   "active": true,
+   "awards": [
+    [
+     "Silver Slugger",
+     "4x"
+    ],
+    [
+     "MVP",
+     "4x"
+    ],
+    [
+     "NLCS MVP",
+     "1x"
+    ],
+    [
+     "Hank Aaron Award",
+     "3x"
+    ],
+    [
+     "All-MLB 1st Team",
+     "5x"
+    ],
+    [
+     "All-MLB 2nd Team",
+     "2x"
+    ]
+   ],
+   "career": [
+    [
+     "HR",
+     "310"
+    ],
+    [
+     "RBI",
+     "750"
+    ],
+    [
+     "H",
+     "1194"
+    ],
+    [
+     "R",
+     "797"
+    ],
+    [
+     "AB",
+     "4253"
+    ],
+    [
+     "BB",
+     "622"
+    ]
+   ],
+   "draft": "",
+   "espnId": "39832",
+   "experience": "9th Season",
+   "jersey": "17",
+   "position": "DH",
+   "season": [
+    [
+     "HR",
+     "30"
+    ],
+    [
+     "RBI",
+     "81"
+    ],
+    [
+     "H",
+     "144"
+    ],
+    [
+     "R",
+     "89"
+    ],
+    [
+     "AB",
+     "523"
+    ],
+    [
+     "BB",
+     "81"
+    ]
+   ],
+   "statsLabel": "2026 Batting",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "AVG",
+      ".275",
+      "Tied-38th"
+     ],
+     [
+      "HR",
+      "30",
+      "Tied-17th"
+     ],
+     [
+      "RBI",
+      "81",
+      "Tied-46th"
+     ],
+     [
+      "OPS",
+      ".889",
+      "6th"
+     ]
+    ]
+   },
+   "team": "Los Angeles Dodgers",
+   "teamAbbr": "LAD"
+  },
+  "stephen-curry": {
+   "active": true,
+   "awards": [
+    [
+     "All-NBA 2nd Team",
+     "5x"
+    ],
+    [
+     "All-Star MVP",
+     "2x"
+    ],
+    [
+     "Twyman-Stokes Teammate of the Year Award",
+     "1x"
+    ],
+    [
+     "All-NBA 3rd Team",
+     "2x"
+    ],
+    [
+     "Clutch Player of the Year",
+     "1x"
+    ],
+    [
+     "Finals MVP",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "24.8"
+    ],
+    [
+     "REB",
+     "4.6"
+    ],
+    [
+     "AST",
+     "6.3"
+    ],
+    [
+     "FG%",
+     "47.1"
+    ],
+    [
+     "3P%",
+     "42.2"
+    ],
+    [
+     "STL",
+     "1.5"
+    ]
+   ],
+   "draft": "2009: Rd 1, Pk 7 (GS)",
+   "espnId": "3975",
+   "experience": "18th Season",
+   "injury": {
+    "comment": "Curry (rest) won't play Sunday against the Clippers, Brett Siegel of ClutchPoints.com reports.",
+    "date": "2026-10-31",
+    "returnDate": "2026-11-02",
+    "status": "Out",
+    "type": "Rest"
+   },
+   "jersey": "30",
+   "position": "G",
+   "season": [
+    [
+     "PTS",
+     "29.2"
+    ],
+    [
+     "REB",
+     "3.8"
+    ],
+    [
+     "AST",
+     "4.0"
+    ],
+    [
+     "FG%",
+     "47.7"
+    ],
+    [
+     "3P%",
+     "44.0"
+    ],
+    [
+     "STL",
+     "1.4"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "29.2",
+      "3rd"
+     ],
+     [
+      "REB",
+      "3.8",
+      "Tied-141st"
+     ],
+     [
+      "AST",
+      "4.0",
+      "Tied-58th"
+     ],
+     [
+      "FG%",
+      "47.7",
+      "62nd"
+     ]
+    ]
+   },
+   "team": "Golden State Warriors",
+   "teamAbbr": "GS"
+  },
+  "travis-hunter": {
+   "active": true,
+   "awards": [],
+   "career": [
+    [
+     "YDS",
+     "374"
+    ],
+    [
+     "TD",
+     "2"
+    ],
+    [
+     "REC",
+     "34"
+    ],
+    [
+     "CAR",
+     "3"
+    ]
+   ],
+   "draft": "2025: Rd 1, Pk 2 (JAX)",
+   "espnId": "4685415",
+   "experience": "2nd Season",
+   "jersey": "12",
+   "last5": [
+    [
+     "YDS",
+     "68"
+    ],
+    [
+     "TD",
+     "1"
+    ],
+    [
+     "REC",
+     "5"
+    ],
+    [
+     "CAR",
+     "1"
+    ]
+   ],
+   "position": "WR",
+   "projected": [
+    [
+     "YDS",
+     "185"
+    ],
+    [
+     "TD",
+     "2"
+    ],
+    [
+     "REC",
+     "15"
+    ],
+    [
+     "CAR",
+     "5"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "76"
+    ],
+    [
+     "TD",
+     "1"
+    ],
+    [
+     "REC",
+     "6"
+    ],
+    [
+     "CAR",
+     "2"
+    ]
+   ],
+   "statsLabel": "2026 Offense",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "REC",
+      "6",
+      ""
+     ],
+     [
+      "YDS",
+      "76",
+      ""
+     ],
+     [
+      "TD",
+      "1",
+      ""
+     ],
+     [
+      "AVG",
+      "12.7",
+      ""
+     ]
+    ]
+   },
+   "team": "Jacksonville Jaguars",
+   "teamAbbr": "JAX"
+  },
+  "travis-kelce": {
+   "active": true,
+   "awards": [],
+   "career": [
+    [
+     "YDS",
+     "13,412"
+    ],
+    [
+     "TD",
+     "84"
+    ],
+    [
+     "REC",
+     "1109"
+    ],
+    [
+     "CAR",
+     "10"
+    ]
+   ],
+   "draft": "2013: Rd 3, Pk 63 (KC)",
+   "espnId": "15847",
+   "experience": "14th Season",
+   "jersey": "87",
+   "last5": [
+    [
+     "YDS",
+     "238"
+    ],
+    [
+     "TD",
+     "1"
+    ],
+    [
+     "REC",
+     "17"
+    ],
+    [
+     "CAR",
+     "0"
+    ]
+   ],
+   "position": "TE",
+   "projected": [
+    [
+     "YDS",
+     "996"
+    ],
+    [
+     "TD",
+     "5"
+    ],
+    [
+     "REC",
+     "70"
+    ],
+    [
+     "CAR",
+     "0"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "410"
+    ],
+    [
+     "TD",
+     "2"
+    ],
+    [
+     "REC",
+     "29"
+    ],
+    [
+     "CAR",
+     "0"
+    ]
+   ],
+   "statsLabel": "2026 Offense",
+   "summary": {
+    "label": "2026 regular season stats",
+    "stats": [
+     [
+      "REC",
+      "29",
+      "Tied-46th"
+     ],
+     [
+      "YDS",
+      "410",
+      "28th"
+     ],
+     [
+      "TD",
+      "2",
+      "Tied-43rd"
+     ],
+     [
+      "AVG",
+      "14.1",
+      "28th"
+     ]
+    ]
+   },
+   "team": "Kansas City Chiefs",
+   "teamAbbr": "KC"
+  },
+  "tyreek-hill": {
+   "active": true,
+   "awards": [],
+   "career": [
+    [
+     "YDS",
+     "11,363"
+    ],
+    [
+     "TD",
+     "83"
+    ],
+    [
+     "REC",
+     "819"
+    ],
+    [
+     "CAR",
+     "114"
+    ]
+   ],
+   "draft": "2016: Rd 5, Pk 165 (KC)",
+   "espnId": "3116406",
+   "experience": "10th Season",
+   "injury": {
+    "comment": "Hill's (knee) agent, Drew Rosenhaus, said Wednesday that he remains in contact with multiple teams, but \"nothing is imminent\" with regard to his client potentially finalizing a deal, Adam Schefter of ESPN reports. \"He's continuing his rehab with the goal of being on a team in the immediate future,\" Rosenhaus told Schefter.",
+    "date": "2026-10-14",
+    "returnDate": "2026-11-08",
+    "status": "Questionable",
+    "type": "Knee - ACL"
+   },
+   "jersey": "10",
+   "position": "WR",
+   "projected": [
+    [
+     "YDS",
+     "265"
+    ],
+    [
+     "TD",
+     "1"
+    ],
+    [
+     "REC",
+     "21"
+    ],
+    [
+     "CAR",
+     "0"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "265"
+    ],
+    [
+     "TD",
+     "1"
+    ],
+    [
+     "REC",
+     "21"
+    ],
+    [
+     "CAR",
+     "0"
+    ]
+   ],
+   "statsLabel": "2025 Offense",
+   "summary": {
+    "label": "2025 regular season stats",
+    "stats": [
+     [
+      "REC",
+      "21",
+      ""
+     ],
+     [
+      "YDS",
+      "265",
+      ""
+     ],
+     [
+      "TD",
+      "1",
+      ""
+     ],
+     [
+      "AVG",
+      "12.6",
+      ""
+     ]
+    ]
+   },
+   "team": "Miami Dolphins",
+   "teamAbbr": "MIA"
+  },
+  "tyrese-haliburton": {
+   "active": true,
+   "awards": [
+    [
+     "All-NBA 3rd Team",
+     "2x"
+    ],
+    [
+     "NBA Cup All-Tournament Team",
+     "1x"
+    ],
+    [
+     "All-Rookie 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "17.6"
+    ],
+    [
+     "REB",
+     "3.7"
+    ],
+    [
+     "AST",
+     "8.9"
+    ],
+    [
+     "FG%",
+     "47.8"
+    ],
+    [
+     "3P%",
+     "39.2"
+    ],
+    [
+     "STL",
+     "1.5"
+    ]
+   ],
+   "draft": "2020: Rd 1, Pk 12 (SAC)",
+   "espnId": "4396993",
+   "experience": "7th Season",
+   "injury": {
+    "comment": "Haliburton (hamstring) will miss at least the next two weeks of action, Shams Charania of ESPN reports.",
+    "date": "2026-10-28",
+    "returnDate": "2026-11-13",
+    "status": "Out",
+    "type": "Hamstring"
+   },
+   "jersey": "0",
+   "position": "G",
+   "season": [
+    [
+     "PTS",
+     "21.8"
+    ],
+    [
+     "REB",
+     "4.5"
+    ],
+    [
+     "AST",
+     "9.5"
+    ],
+    [
+     "FG%",
+     "51.6"
+    ],
+    [
+     "3P%",
+     "37.0"
+    ],
+    [
+     "STL",
+     "1.3"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "21.8",
+      ""
+     ],
+     [
+      "REB",
+      "4.5",
+      ""
+     ],
+     [
+      "AST",
+      "9.5",
+      ""
+     ],
+     [
+      "FG%",
+      "51.6",
+      "33rd"
+     ]
+    ]
+   },
+   "team": "Indiana Pacers",
+   "teamAbbr": "IND"
+  },
+  "victor-wembanyama": {
+   "active": true,
+   "awards": [
+    [
+     "Defensive Player of the Year",
+     "1x"
+    ],
+    [
+     "All-NBA 1st Team",
+     "1x"
+    ],
+    [
+     "All-Defensive 1st Team",
+     "2x"
+    ],
+    [
+     "NBA Western Conference Finals MVP",
+     "1x"
+    ],
+    [
+     "Rookie of the Year",
+     "1x"
+    ],
+    [
+     "All-Rookie 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "23.6"
+    ],
+    [
+     "REB",
+     "11.0"
+    ],
+    [
+     "AST",
+     "3.5"
+    ],
+    [
+     "FG%",
+     "48.4"
+    ],
+    [
+     "3P%",
+     "34.0"
+    ],
+    [
+     "STL",
+     "1.1"
+    ]
+   ],
+   "draft": "2023: Rd 1, Pk 1 (SA)",
+   "espnId": "5104157",
+   "experience": "4th Season",
+   "jersey": "1",
+   "position": "F",
+   "season": [
+    [
+     "PTS",
+     "28.0"
+    ],
+    [
+     "REB",
+     "10.7"
+    ],
+    [
+     "AST",
+     "3.0"
+    ],
+    [
+     "FG%",
+     "48.5"
+    ],
+    [
+     "3P%",
+     "29.7"
+    ],
+    [
+     "STL",
+     "1.3"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "28.0",
+      "5th"
+     ],
+     [
+      "REB",
+      "10.7",
+      "5th"
+     ],
+     [
+      "AST",
+      "3.0",
+      "Tied-82nd"
+     ],
+     [
+      "FG%",
+      "48.5",
+      "56th"
+     ]
+    ]
+   },
+   "team": "San Antonio Spurs",
+   "teamAbbr": "SA"
+  },
+  "vladimir-guerrero-jr": {
+   "active": true,
+   "awards": [
+    [
+     "ALCS MVP",
+     "1x"
+    ],
+    [
+     "All-MLB 1st Team",
+     "3x"
+    ],
+    [
+     "Silver Slugger",
+     "2x"
+    ],
+    [
+     "Gold Glove",
+     "1x"
+    ],
+    [
+     "All-Star Game MVP",
+     "1x"
+    ],
+    [
+     "Hank Aaron Award",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "HR",
+     "192"
+    ],
+    [
+     "RBI",
+     "648"
+    ],
+    [
+     "H",
+     "1218"
+    ],
+    [
+     "R",
+     "643"
+    ],
+    [
+     "AB",
+     "4276"
+    ],
+    [
+     "BB",
+     "486"
+    ]
+   ],
+   "draft": "",
+   "espnId": "35002",
+   "experience": "8th Season",
+   "jersey": "27",
+   "position": "1B",
+   "season": [
+    [
+     "HR",
+     "9"
+    ],
+    [
+     "RBI",
+     "57"
+    ],
+    [
+     "H",
+     "141"
+    ],
+    [
+     "R",
+     "72"
+    ],
+    [
+     "AB",
+     "542"
+    ],
+    [
+     "BB",
+     "56"
+    ]
+   ],
+   "statsLabel": "2026 Batting",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "AVG",
+      ".260",
+      "Tied-65th"
+     ],
+     [
+      "HR",
+      "9",
+      "Tied-233rd"
+     ],
+     [
+      "RBI",
+      "57",
+      "Tied-130th"
+     ],
+     [
+      "OPS",
+      ".688",
+      "Tied-121st"
+     ]
+    ]
+   },
+   "team": "Toronto Blue Jays",
+   "teamAbbr": "TOR"
+  },
+  "wyatt-langford": {
+   "active": true,
+   "awards": [],
+   "career": [
+    [
+     "HR",
+     "55"
+    ],
+    [
+     "RBI",
+     "180"
+    ],
+    [
+     "H",
+     "342"
+    ],
+    [
+     "R",
+     "211"
+    ],
+    [
+     "AB",
+     "1399"
+    ],
+    [
+     "BB",
+     "180"
+    ]
+   ],
+   "draft": "2023: Rd 1, Pk 4 (TEX)",
+   "espnId": "4719324",
+   "experience": "3rd Season",
+   "jersey": "36",
+   "position": "LF",
+   "season": [
+    [
+     "HR",
+     "17"
+    ],
+    [
+     "RBI",
+     "44"
+    ],
+    [
+     "H",
+     "98"
+    ],
+    [
+     "R",
+     "64"
+    ],
+    [
+     "AB",
+     "411"
+    ],
+    [
+     "BB",
+     "55"
+    ]
+   ],
+   "statsLabel": "2026 Batting",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "AVG",
+      ".238",
+      ""
+     ],
+     [
+      "HR",
+      "17",
+      "Tied-110th"
+     ],
+     [
+      "RBI",
+      "44",
+      "Tied-199th"
+     ],
+     [
+      "OPS",
+      ".754",
+      ""
+     ]
+    ]
+   },
+   "team": "Texas Rangers",
+   "teamAbbr": "TEX"
+  },
+  "yoshinobu-yamamoto": {
+   "active": true,
+   "awards": [
+    [
+     "World Series MVP",
+     "1x"
+    ],
+    [
+     "All-MLB 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "HR",
+     "41"
+    ],
+    [
+     "H",
+     "310"
+    ],
+    [
+     "R",
+     "140"
+    ],
+    [
+     "BB",
+     "123"
+    ],
+    [
+     "GP",
+     "76"
+    ],
+    [
+     "K",
+     "488"
+    ]
+   ],
+   "draft": "",
+   "espnId": "4872587",
+   "experience": "3rd Season",
+   "jersey": "18",
+   "position": "SP",
+   "season": [
+    [
+     "HR",
+     "20"
+    ],
+    [
+     "H",
+     "119"
+    ],
+    [
+     "R",
+     "55"
+    ],
+    [
+     "BB",
+     "42"
+    ],
+    [
+     "GP",
+     "28"
+    ],
+    [
+     "K",
+     "182"
+    ]
+   ],
+   "statsLabel": "2026 Pitching",
+   "summary": {
+    "label": "2026 season stats",
+    "stats": [
+     [
+      "W-L",
+      "14-9",
+      "Tied-9th"
+     ],
+     [
+      "ERA",
+      "2.53",
+      "5th"
+     ],
+     [
+      "K",
+      "182",
+      "21st"
+     ],
+     [
+      "WHIP",
+      "0.87",
+      "2nd"
+     ]
+    ]
+   },
+   "team": "Los Angeles Dodgers",
+   "teamAbbr": "LAD"
+  },
+  "zion-williamson": {
+   "active": true,
+   "awards": [
+    [
+     "All-Rookie 1st Team",
+     "1x"
+    ]
+   ],
+   "career": [
+    [
+     "PTS",
+     "23.8"
+    ],
+    [
+     "REB",
+     "6.4"
+    ],
+    [
+     "AST",
+     "4.0"
+    ],
+    [
+     "FG%",
+     "59.2"
+    ],
+    [
+     "3P%",
+     "33.0"
+    ],
+    [
+     "STL",
+     "1.1"
+    ]
+   ],
+   "draft": "2019: Rd 1, Pk 1 (NO)",
+   "espnId": "4395628",
+   "experience": "7th Season",
+   "jersey": "1",
+   "position": "F",
+   "season": [
+    [
+     "PTS",
+     "20.7"
+    ],
+    [
+     "REB",
+     "4.3"
+    ],
+    [
+     "AST",
+     "2.5"
+    ],
+    [
+     "FG%",
+     "64.4"
+    ],
+    [
+     "3P%",
+     "42.9"
+    ],
+    [
+     "STL",
+     "3.2"
+    ]
+   ],
+   "statsLabel": "Stats",
+   "summary": {
+    "label": "2026-27 regular season stats",
+    "stats": [
+     [
+      "PTS",
+      "20.7",
+      "Tied-36th"
+     ],
+     [
+      "REB",
+      "4.3",
+      "Tied-111th"
+     ],
+     [
+      "AST",
+      "2.5",
+      "Tied-112th"
+     ],
+     [
+      "FG%",
+      "64.4",
+      "7th"
+     ]
+    ]
+   },
+   "team": "New Orleans Pelicans",
+   "teamAbbr": "NO"
+  }
+ },
+ "source": "ESPN public data feeds (unofficial; replace with a licensed provider before launch)",
+ "updated": "2026-11-02T07:49Z"
+}
