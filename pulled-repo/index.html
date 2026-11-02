@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pulled Test Site</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: one app shell, sticky top bar, single content column up to 1120px; views swap by hash. Single dark look by design. */
+:root {
+  --bg: #0A0C10;
+  --surface: #12161E;
+  --raise: #1A1F29;
+  --line: #262C38;
+  --fg: #F2F4F8;
+  --muted: #A3AAB8;
+  --faint: #8D94A3;
+  --accent: #C6F432;
+  --accent-ink: #0A0C10;
+  --up: #4ADE80;
+  --down: #FF7A66;
+  --game: #F59E3B;
+  --news: #7EA2FF;
+  --s2: #7EA2FF;
+  --s3: #F59E3B;
+  --s4: #E879F9;
+  --font: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { background: var(--bg); color: var(--fg); }
+body { font-family: var(--font); font-size: 15px; line-height: 1.5; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+a { color: var(--accent); }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.up { color: var(--up); } .down { color: var(--down); } .flat { color: var(--muted); }
+
+.topbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-block: 12px; }
+.brand { font-size: 22px; font-weight: 800; letter-spacing: -0.03em; color: var(--fg); text-decoration: none; }
+.brand span { color: var(--accent); }
+.nav { display: flex; gap: 4px; flex-wrap: wrap; }
+.nav a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 14px; padding: 8px 12px; border-radius: 8px; min-height: 40px; display: inline-flex; align-items: center; }
+.nav a:hover { color: var(--fg); background: var(--raise); }
+.nav a[aria-current="page"] { color: var(--fg); background: var(--raise); }
+.nav .count { margin-left: 6px; font-family: var(--mono); font-size: 12px; color: var(--accent); }
+
+.notice { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; color: var(--faint); padding-block: 10px; }
+main { padding-block: 8px 72px; }
+.view { display: flex; flex-direction: column; gap: 28px; }
+h1 { margin: 0; font-size: clamp(30px, 5vw, 44px); line-height: 1.05; letter-spacing: -0.035em; font-weight: 800; text-wrap: balance; }
+h2 { margin: 0; font-size: 20px; letter-spacing: -0.02em; font-weight: 700; text-wrap: balance; }
+.lede { margin: 0; color: var(--muted); font-size: 17px; max-width: 62ch; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); }
+.section { display: flex; flex-direction: column; gap: 14px; }
+.row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.between { justify-content: space-between; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 18px; min-width: 0; }
+.grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.tiles { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); }
+.tile { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; }
+.tile .k { font-size: 12px; color: var(--faint); }
+.tile .v { font-family: var(--mono); font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.btn { min-height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid var(--line); background: var(--raise); color: var(--fg); font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; }
+.btn:hover { border-color: var(--faint); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.btn.primary:hover { filter: brightness(1.08); }
+.seg { display: inline-flex; gap: 2px; background: var(--raise); border: 1px solid var(--line); border-radius: 10px; padding: 3px; flex-wrap: wrap; }
+.seg button { min-height: 34px; min-width: 44px; padding: 0 12px; border: none; border-radius: 7px; background: transparent; color: var(--muted); font-weight: 600; font-size: 13px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip { min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); font-size: 13px; font-weight: 600; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.tag { font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; background: var(--raise); color: var(--muted); border: 1px solid var(--line); }
+.status { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; }
+.status.active { background: color-mix(in srgb, var(--up) 16%, transparent); color: var(--up); }
+.status.retired { background: color-mix(in srgb, var(--news) 16%, transparent); color: var(--news); }
+
+.search { position: relative; max-width: 560px; }
+.search input { width: 100%; min-height: 52px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); padding: 0 16px 0 44px; font-size: 16px; }
+.search svg { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); }
+
+.list { display: flex; flex-direction: column; gap: 8px; }
+.item { display: flex; gap: 12px; align-items: center; padding: 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); text-decoration: none; color: var(--fg); min-width: 0; }
+.item:hover { border-color: var(--faint); }
+.item .thumb { width: 44px; height: 62px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.item .main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.item .title { font-weight: 700; font-size: 14px; }
+.item .sub { font-size: 12px; color: var(--faint); }
+.item .end { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; flex-shrink: 0; }
+.pcard { display: flex; flex-direction: column; gap: 10px; padding: 16px; border-radius: 14px; border: 1px solid var(--line); background: var(--surface); text-decoration: none; color: var(--fg); }
+.pcard:hover { border-color: var(--faint); }
+
+.chart { position: relative; width: 100%; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.tip { position: absolute; top: 0; pointer-events: none; background: var(--raise); border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; font-size: 12px; min-width: 150px; transform: translateX(-50%); }
+.tip[hidden] { display: none !important; }
+.tip .t { font-weight: 700; margin-bottom: 4px; }
+.tip .l { display: flex; justify-content: space-between; gap: 12px; }
+.legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+
+.why { background: color-mix(in srgb, var(--accent) 6%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--line)); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 6px; }
+.why .eyebrow { color: var(--accent); }
+.why p { margin: 0; font-size: 16px; }
+.alert { border-radius: 12px; padding: 14px 16px; border: 1px solid var(--line); background: var(--surface); display: flex; gap: 10px; }
+.alert.warn { border-color: color-mix(in srgb, var(--game) 45%, var(--line)); background: color-mix(in srgb, var(--game) 8%, var(--surface)); }
+.alert.info { border-color: color-mix(in srgb, var(--news) 45%, var(--line)); background: color-mix(in srgb, var(--news) 8%, var(--surface)); }
+
+.tablebox { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { padding: 10px 12px; text-align: right; border-top: 1px solid var(--line); white-space: nowrap; }
+thead th { border-top: none; background: var(--raise); font-size: 12px; color: var(--muted); }
+th[scope="row"], thead th:first-child { text-align: left; }
+td { font-family: var(--mono); font-variant-numeric: tabular-nums; color: var(--muted); }
+td.best { color: var(--fg); font-weight: 600; }
+.help { display: block; font-size: 11px; color: var(--faint); font-weight: 500; }
+
+.cols { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; }
+.check { display: flex; gap: 10px; align-items: flex-start; padding: 12px 14px; border-top: 1px solid var(--line); }
+.check:first-child { border-top: none; }
+.dot { width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; margin-top: 2px; border: 2px solid var(--line); }
+.dot.done { background: var(--accent); border-color: var(--accent); }
+.dot.next { border-color: var(--game); }
+.empty { text-align: center; padding: 40px 18px; display: flex; flex-direction: column; gap: 12px; align-items: center; }
+.toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--fg); color: var(--bg); font-weight: 700; padding: 10px 16px; border-radius: 10px; font-size: 14px; z-index: 20; }
+@media (prefers-reduced-motion: no-preference) { .view { animation: in .25s ease-out; } @keyframes in { from { opacity: .4; transform: translateY(4px); } to { opacity: 1; transform: none; } } }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#home">Pulled<span>.</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#compare" data-nav="compare">Compare</a>
+      <a href="#collection" data-nav="collection">My collection<span class="count" id="colCount"></span></a>
+      <a href="#build" data-nav="build">Build log</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap"><div class="notice">TEST SITE · SAMPLE DATA · PRICES AND STATS ARE ILLUSTRATIVE, NOT REAL</div></div>
+<main class="wrap" id="app"></main>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+const MONTHS = ['Dec','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov'];
+const RANGES = { '3M': 4, '6M': 7, '1Y': 12 };
+
+const PLAYERS = {
+  curry: { short: 'Curry', name: 'Stephen Curry', sport: 'NBA', team: 'Golden State Warriors', pos: 'PG', num: '#30', status: 'active',
+    summary: "Still the league's top long-range shooter in year 18. His card market is steady to rising, driven by a hot start to the season.",
+    stats: [['PTS', '27.8'], ['AST', '6.1'], ['REB', '4.6'], ['3PM', '4.9']], statsLabel: 'This season',
+    extra: 'Career: 24.8 PTS · 6.4 AST · Projected next 5 games: 28.5 PTS',
+    note: { kind: 'warn', title: 'Injury update', text: 'Minor ankle soreness, listed probable for the next game.' },
+    events: [{ i: 5, type: 'game', label: 'Playoff run begins' }, { i: 10, type: 'game', label: '41 pts vs. LAL' }, { i: 11, type: 'injury', label: 'Ankle soreness report' }] },
+  wemby: { short: 'Wembanyama', name: 'Victor Wembanyama', sport: 'NBA', team: 'San Antonio Spurs', pos: 'C', num: '#1', status: 'active',
+    summary: 'The most hyped young player in the league. His cards trade constantly, so prices react fast to big games and injury news.',
+    stats: [['PTS', '25.1'], ['REB', '11.4'], ['BLK', '3.9'], ['AST', '3.6']], statsLabel: 'This season',
+    extra: 'Career: 22.6 PTS · 10.8 REB · Projected next 5 games: 26.0 PTS',
+    note: { kind: 'info', title: 'Injury update', text: 'No current injury designation.' },
+    events: [{ i: 3, type: 'injury', label: 'Missed two weeks' }, { i: 6, type: 'news', label: 'Season awards announced' }, { i: 10, type: 'game', label: '30 pts, 15 reb in opener' }] },
+  mahomes: { short: 'Mahomes', name: 'Patrick Mahomes', sport: 'NFL', team: 'Kansas City Chiefs', pos: 'QB', num: '#15', status: 'active',
+    summary: 'Football cards follow the calendar: prices cool in the offseason and climb once games start. His are back on the rise.',
+    stats: [['PASS YDS', '2,410'], ['PASS TD', '18'], ['INT', '5'], ['RATING', '102.4']], statsLabel: 'This season',
+    extra: 'Career: 4.1 TD per INT · Projected next game: 285 yds, 2 TD',
+    note: { kind: 'info', title: 'Injury update', text: 'Full participant in practice this week.' },
+    events: [{ i: 4, type: 'news', label: 'Offseason lull' }, { i: 9, type: 'game', label: 'Season opener: 3 TD' }, { i: 11, type: 'game', label: '4 TD game' }] },
+  ohtani: { short: 'Ohtani', name: 'Shohei Ohtani', sport: 'MLB', team: 'Los Angeles Dodgers', pos: 'DH / P', num: '#17', status: 'active',
+    summary: 'A two-way star with steady, broad demand. His cards have climbed all year, with the biggest jumps around power milestones and the postseason.',
+    stats: [['HR', '51'], ['AVG', '.288'], ['RBI', '112'], ['SB', '22']], statsLabel: '2026 season',
+    extra: 'Season is over. Next price drivers: award voting and offseason news.',
+    note: { kind: 'info', title: 'Status', text: 'Offseason. No injury designation.' },
+    events: [{ i: 4, type: 'game', label: 'Opening Day HR' }, { i: 9, type: 'news', label: '50th home run' }, { i: 10, type: 'news', label: 'Postseason run' }] },
+  griffey: { short: 'Griffey', name: 'Ken Griffey Jr.', sport: 'MLB', team: 'Retired · Mariners, Reds, White Sox', pos: 'CF', num: '#24', status: 'retired',
+    summary: 'A Hall of Famer and one of the most collected players of the 1990s. His cards move on nostalgia, anniversaries and legacy news rather than games.',
+    stats: [['CAREER HR', '630'], ['HITS', '2,781'], ['AVG', '.284'], ['GOLD GLOVES', '10']], statsLabel: 'Career',
+    extra: 'Hall of Fame class of 2016 · 13× All-Star',
+    note: { kind: 'info', title: 'Legacy', text: 'Retired players have no live games, so Pulled tracks legacy events instead: anniversaries, Hall of Fame news and record chases.' },
+    events: [{ i: 6, type: 'news', label: 'Hall of Fame weekend' }, { i: 9, type: 'news', label: 'Anniversary coverage' }] }
+};
+
+const CARDS = [
+  { id: 'curry-chrome-ref', p: 'curry', name: '2009 Topps Chrome #101 Refractor RC', detail: 'PSA 10 · /500', tags: ['Rookie', 'Graded', 'Numbered'],
+    price: [40500,41000,42000,41500,43000,44000,43000,42500,43600,44000,46000,48500], sales: [3,2,4,3,3,5,4,2,3,4,6,9], pop: [118,118,119,119,120,120,121,121,121,122,122,123] },
+  { id: 'curry-contenders', p: 'curry', name: '2009 Playoff Contenders Rookie Ticket Auto', detail: 'BGS 9.5', tags: ['Rookie', 'Graded', 'Auto'],
+    price: [31000,31500,32000,31000,32500,33000,33500,33000,34000,34500,35000,36000], sales: [1,1,2,1,1,2,1,1,2,1,2,3], pop: [40,40,41,41,42,42,42,43,43,43,44,44] },
+  { id: 'curry-chrome-base', p: 'curry', name: '2009 Topps Chrome #101 RC', detail: 'PSA 10', tags: ['Rookie', 'Graded'],
+    price: [3600,3650,3700,3600,3800,3900,3850,3800,3900,3950,4050,4250], sales: [22,20,24,21,23,28,25,20,22,24,30,38], pop: [2900,2920,2950,2970,3000,3030,3060,3080,3100,3130,3160,3200] },
+  { id: 'curry-prizm', p: 'curry', name: '2012 Panini Prizm #1', detail: 'Silver · PSA 10', tags: ['Graded'],
+    price: [3100,3050,3000,2950,3000,2980,2950,2900,2920,2880,2960,2900], sales: [8,7,9,8,7,8,9,7,8,7,9,8], pop: [610,613,616,619,622,625,628,631,634,637,640,643] },
+  { id: 'wemby-silver', p: 'wemby', name: '2023 Panini Prizm #136 Silver RC', detail: 'PSA 10', tags: ['Rookie', 'Graded'],
+    price: [5200,4800,4100,3900,4500,5600,6200,5000,4400,4000,4600,5100], sales: [40,35,28,25,30,52,60,38,30,26,33,41], pop: [9800,10400,11100,11900,12600,13500,14300,15000,15600,16200,16900,17500] },
+  { id: 'wemby-base', p: 'wemby', name: '2023 Panini Prizm #136 RC', detail: 'Base · Raw', tags: ['Rookie'],
+    price: [95,88,76,70,82,104,118,92,80,72,84,94], sales: [420,380,300,280,330,560,640,410,320,290,350,440], pop: null },
+  { id: 'wemby-nt', p: 'wemby', name: '2023 National Treasures RPA', detail: '/99 · BGS 9', tags: ['Rookie', 'Graded', 'Auto', 'Numbered'],
+    price: [21000,20000,18500,17500,19000,23000,26000,22500,20500,19500,21000,22500], sales: [2,1,1,1,2,3,3,2,1,1,2,2], pop: [28,29,30,31,32,33,34,35,36,36,37,38] },
+  { id: 'mahomes-silver', p: 'mahomes', name: '2017 Panini Prizm #269 Silver RC', detail: 'PSA 10', tags: ['Rookie', 'Graded'],
+    price: [9800,9500,9200,8900,8700,8600,8500,8700,9300,9900,10400,10900], sales: [12,11,9,7,6,5,5,7,11,14,16,18], pop: [1300,1310,1320,1330,1340,1350,1360,1370,1385,1400,1410,1420] },
+  { id: 'mahomes-nt', p: 'mahomes', name: '2017 National Treasures RPA', detail: '/99 · PSA 9', tags: ['Rookie', 'Graded', 'Auto', 'Numbered'],
+    price: [62000,61000,60000,58000,57000,56500,56000,57000,59000,61500,64000,66000], sales: [1,1,1,0,1,0,1,1,1,1,2,2], pop: [30,30,30,31,31,31,31,32,32,32,33,33] },
+  { id: 'mahomes-optic', p: 'mahomes', name: '2017 Donruss Optic Rated Rookie #177', detail: 'PSA 10', tags: ['Rookie', 'Graded'],
+    price: [520,505,490,470,455,450,445,460,490,520,550,575], sales: [60,55,48,40,35,32,30,38,55,70,82,90], pop: [5200,5230,5260,5290,5320,5350,5380,5410,5450,5500,5550,5600] },
+  { id: 'ohtani-update', p: 'ohtani', name: '2018 Topps Update #US1 RC', detail: 'PSA 10', tags: ['Rookie', 'Graded'],
+    price: [780,800,820,860,900,940,980,1020,1060,1100,1180,1240], sales: [70,65,72,80,88,95,100,104,110,118,140,150], pop: [10200,10260,10330,10400,10480,10560,10640,10720,10800,10880,10950,11000] },
+  { id: 'ohtani-orange', p: 'ohtani', name: '2018 Bowman Chrome Prospect Auto', detail: 'Orange /25 · PSA 10', tags: ['Graded', 'Auto', 'Numbered'],
+    price: [88000,90000,91000,93000,95000,97000,99000,101000,104000,108000,115000,121000], sales: [0,1,0,0,1,0,1,0,1,0,1,1], pop: [6,6,6,6,6,6,6,6,6,6,6,6] },
+  { id: 'ohtani-chrome', p: 'ohtani', name: '2018 Topps Chrome Update RC', detail: 'Base · Raw', tags: ['Rookie'],
+    price: [42,43,44,46,48,50,52,54,56,58,63,66], sales: [300,290,310,330,350,370,390,400,420,450,520,560], pop: null },
+  { id: 'griffey-ud', p: 'griffey', name: '1989 Upper Deck #1 RC', detail: 'PSA 10', tags: ['Rookie', 'Graded'],
+    price: [2400,2350,2380,2420,2450,2480,2600,2550,2500,2520,2560,2600], sales: [25,22,20,24,26,28,40,30,26,24,25,27], pop: [2650,2655,2660,2665,2670,2675,2680,2685,2690,2695,2700,2705] },
+  { id: 'griffey-bowman', p: 'griffey', name: '1989 Bowman Tiffany #220 RC', detail: 'PSA 10', tags: ['Rookie', 'Graded'],
+    price: [1500,1480,1490,1510,1520,1540,1650,1600,1580,1590,1610,1640], sales: [4,3,3,4,4,5,8,5,4,4,4,5], pop: [210,210,211,211,212,212,213,213,214,214,215,215] },
+  { id: 'griffey-ud-raw', p: 'griffey', name: '1989 Upper Deck #1 RC', detail: 'Raw', tags: ['Rookie'],
+    price: [62,60,61,62,63,64,70,67,65,66,67,68], sales: [210,190,180,200,210,230,320,250,215,205,210,220], pop: null }
+];
+const CARD = Object.fromEntries(CARDS.map(c => [c.id, c]));
+
+const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '' };
+const charts = {};
+
+/* ---------- helpers ---------- */
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+function money(v) {
+  if (v >= 100000) return '$' + Math.round(v / 1000) + 'K';
+  if (v >= 1000) return '$' + (v / 1000).toFixed(1).replace(/\.0$/, '') + 'K';
+  return '$' + Math.round(v).toLocaleString('en-US');
+}
+function moneyFull(v) { return '$' + Math.round(v).toLocaleString('en-US'); }
+const pct = (a, b) => (b / a - 1) * 100;
+function fmtPct(v, arrow = true) {
+  const r = Math.abs(v) < 0.05 ? 0 : v;
+  const s = (r > 0 ? '+' : r < 0 ? '−' : '') + Math.abs(r).toFixed(1) + '%';
+  return arrow ? (r > 0 ? '▲ ' : r < 0 ? '▼ ' : '') + s : s;
+}
+const cls = v => v > 0.05 ? 'up' : v < -0.05 ? 'down' : 'flat';
+const last = a => a[a.length - 1];
+const avg = a => a.reduce((x, y) => x + y, 0) / a.length;
+const slice = (arr, range) => arr.slice(arr.length - RANGES[range]);
+const monthChange = c => pct(c.price[10], c.price[11]);
+function toast(msg) { const t = $('#toast'); t.textContent = msg; t.hidden = false; clearTimeout(toast.h); toast.h = setTimeout(() => t.hidden = true, 1800); }
+
+/* collection (this browser only) */
+function getCol() { try { const v = JSON.parse(localStorage.getItem('pulled-collection') || '[]'); return Array.isArray(v) ? v.filter(id => CARD[id]) : []; } catch (e) { return []; } }
+function setCol(ids) { try { localStorage.setItem('pulled-collection', JSON.stringify(ids)); } catch (e) {} memCol = ids; updateCount(); }
+let memCol = getCol();
+function col() { return memCol; }
+function updateCount() { $('#colCount').textContent = col().length ? col().length : ''; }
+
+/* combined player trend: % change weighted by how often each card sells */
+function playerTrend(pid, range) {
+  const cs = CARDS.filter(c => c.p === pid);
+  return combined(cs, range);
+}
+function combined(cs, range) {
+  const n = RANGES[range];
+  if (!cs.length) return { series: new Array(n).fill(0), change: 0 };
+  const w = cs.map(c => Math.max(0.5, avg(slice(c.sales, range))));
+  const W = w.reduce((a, b) => a + b, 0);
+  const series = [];
+  for (let t = 0; t < n; t++) {
+    let s = 0;
+    cs.forEach((c, k) => { const p = slice(c.price, range); s += w[k] * pct(p[0], p[t]); });
+    series.push(s / W);
+  }
+  return { series, change: last(series) };
+}
+
+/* auto-written explanation from price + event data */
+function whyItMoved(c) {
+  const p = PLAYERS[c.p];
+  const m = monthChange(c), y = pct(c.price[0], c.price[11]);
+  const dir = m > 0.05 ? 'Up' : m < -0.05 ? 'Down' : 'Flat';
+  const recent = p.events.filter(e => e.i >= 9).slice(-1)[0];
+  const salesNow = c.sales[11], salesAvg = avg(c.sales.slice(0, 11));
+  let s = `${dir} ${fmtPct(Math.abs(m), false).replace('+', '')} this month`;
+  if (recent) s += `, following "${recent.label}" (${MONTHS[recent.i]})`;
+  s += '. ';
+  if (salesAvg > 0 && salesNow > salesAvg * 1.3) s += `Sales picked up to ${salesNow} this month, well above the usual ${Math.round(salesAvg)}. `;
+  else if (salesAvg > 0 && salesNow < salesAvg * 0.7) s += `Fewer copies sold than usual, so prices can swing on just a few sales. `;
+  s += `Over the past year it is ${y >= 0 ? 'up' : 'down'} ${Math.abs(y).toFixed(0)}%.`;
+  if (p.status === 'retired') s += ' As a retired player, his cards move on legacy news, not games.';
+  return s;
+}
+
+/* ---------- chart ---------- */
+function lineChart(id, { series, labels, fmt, events = [], h = 240, zero = false }) {
+  const W = 680, padL = 58, padR = 14, padT = 14, padB = 30;
+  const all = series.flatMap(s => s.values).concat(zero ? [0] : []);
+  let lo = Math.min(...all), hi = Math.max(...all);
+  if (lo === hi) { lo -= 1; hi += 1; }
+  const pad = (hi - lo) * 0.08; lo -= pad; hi += pad;
+  const n = labels.length;
+  const x = i => padL + (n === 1 ? 0 : i * (W - padL - padR) / (n - 1));
+  const y = v => padT + (1 - (v - lo) / (hi - lo)) * (h - padT - padB);
+  const ticks = [hi - pad, (hi + lo) / 2, lo + pad];
+  let g = '';
+  ticks.forEach(t => { g += `<line x1="${padL}" x2="${W - padR}" y1="${y(t).toFixed(1)}" y2="${y(t).toFixed(1)}" stroke="var(--line)" stroke-width="1"/><text x="${padL - 8}" y="${(y(t) + 4).toFixed(1)}" text-anchor="end" font-size="11" fill="var(--faint)" font-family="IBM Plex Mono, monospace">${esc(fmt(t))}</text>`; });
+  if (zero && lo < 0 && hi > 0) g += `<line x1="${padL}" x2="${W - padR}" y1="${y(0).toFixed(1)}" y2="${y(0).toFixed(1)}" stroke="var(--faint)" stroke-width="1" stroke-dasharray="2 3"/>`;
+  labels.forEach((l, i) => { if (n <= 7 || i % 2 === 0 || i === n - 1) g += `<text x="${x(i).toFixed(1)}" y="${h - 8}" text-anchor="middle" font-size="11" fill="var(--faint)" font-family="IBM Plex Mono, monospace">${esc(l)}</text>`; });
+  events.forEach(e => {
+    const col = e.type === 'game' ? 'var(--game)' : e.type === 'injury' ? 'var(--down)' : 'var(--news)';
+    const ex = x(e.i);
+    g += `<line x1="${ex}" x2="${ex}" y1="${padT}" y2="${h - padB}" stroke="${col}" stroke-width="1.5" stroke-dasharray="3 3"/>`;
+    g += e.type === 'injury'
+      ? `<rect x="${ex - 5}" y="${padT - 5}" width="10" height="10" fill="${col}" transform="rotate(45 ${ex} ${padT})"/>`
+      : e.type === 'game' ? `<circle cx="${ex}" cy="${padT}" r="5.5" fill="${col}"/>` : `<rect x="${ex - 5}" y="${padT - 5}" width="10" height="10" rx="2" fill="${col}"/>`;
+  });
+  series.forEach(s => {
+    const d = s.values.map((v, i) => (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(v).toFixed(1)).join(' ');
+    if (s.area) g += `<path d="${d} L${x(n - 1).toFixed(1)} ${h - padB} L${padL} ${h - padB} Z" fill="${s.color}" fill-opacity="0.08"/>`;
+    g += `<path d="${d}" fill="none" stroke="${s.color}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"${s.dash ? ` stroke-dasharray="${s.dash}"` : ''}/>`;
+    g += `<circle cx="${x(n - 1).toFixed(1)}" cy="${y(last(s.values)).toFixed(1)}" r="4" fill="${s.color}"/>`;
+  });
+  g += `<line class="guide" x1="0" x2="0" y1="${padT}" y2="${h - padB}" stroke="var(--muted)" stroke-width="1" visibility="hidden"/>`;
+  g += `<rect class="hit" x="${padL}" y="0" width="${W - padL - padR}" height="${h}" fill="transparent"/>`;
+  charts[id] = { series, labels, fmt, events, x, W, padL, padR, n };
+  return `<div class="chart" id="${id}"><svg viewBox="0 0 ${W} ${h}" role="img" aria-label="${esc(series.map(s => s.name).join(', '))} over ${labels[0]} to ${last(labels)}">${g}</svg><div class="tip" hidden></div></div>`;
+}
+function wireCharts() {
+  Object.keys(charts).forEach(id => {
+    const el = document.getElementById(id); if (!el) return;
+    const c = charts[id], svg = el.querySelector('svg'), hit = el.querySelector('.hit'), guide = el.querySelector('.guide'), tip = el.querySelector('.tip');
+    function show(evt) {
+      const r = svg.getBoundingClientRect();
+      const px = (evt.clientX - r.left) / r.width * c.W;
+      let i = Math.round((px - c.padL) / ((c.W - c.padL - c.padR) / Math.max(1, c.n - 1)));
+      i = Math.max(0, Math.min(c.n - 1, i));
+      const gx = c.x(i);
+      guide.setAttribute('x1', gx); guide.setAttribute('x2', gx); guide.setAttribute('visibility', 'visible');
+      const ev = c.events.filter(e => e.i === i);
+      tip.innerHTML = `<div class="t">${esc(c.labels[i])}</div>` + c.series.map(s => `<div class="l"><span style="color:${s.color}">${esc(s.name)}</span><span class="num">${esc(c.fmt(s.values[i]))}</span></div>`).join('') + ev.map(e => `<div style="margin-top:4px;color:var(--muted)">${esc(e.label)}</div>`).join('');
+      tip.hidden = false;
+      const left = Math.min(Math.max(gx / c.W * r.width, 80), r.width - 80);
+      tip.style.left = left + 'px';
+    }
+    hit.addEventListener('mousemove', show);
+    hit.addEventListener('touchstart', e => show(e.touches[0]), { passive: true });
+    hit.addEventListener('mouseleave', () => { tip.hidden = true; guide.setAttribute('visibility', 'hidden'); });
+  });
+}
+function barChart(values, labels, color) {
+  const W = 680, h = 120, padL = 58, padB = 24, padT = 8;
+  const max = Math.max(...values, 1);
+  const bw = (W - padL - 14) / values.length;
+  let g = `<line x1="${padL}" x2="${W - 14}" y1="${h - padB}" y2="${h - padB}" stroke="var(--line)"/><text x="${padL - 8}" y="${padT + 8}" text-anchor="end" font-size="11" fill="var(--faint)" font-family="IBM Plex Mono, monospace">${max}</text><text x="${padL - 8}" y="${h - padB + 4}" text-anchor="end" font-size="11" fill="var(--faint)" font-family="IBM Plex Mono, monospace">0</text>`;
+  values.forEach((v, i) => {
+    const bh = (v / max) * (h - padB - padT);
+    const bx = padL + i * bw + bw * 0.2;
+    g += `<rect x="${bx.toFixed(1)}" y="${(h - padB - bh).toFixed(1)}" width="${(bw * 0.6).toFixed(1)}" height="${Math.max(bh, 1).toFixed(1)}" rx="2" fill="${i === values.length - 1 ? color : 'var(--line)'}"><title>${esc(labels[i])}: ${v} sales</title></rect>`;
+    if (values.length <= 7 || i % 2 === 0 || i === values.length - 1) g += `<text x="${(bx + bw * 0.3).toFixed(1)}" y="${h - 6}" text-anchor="middle" font-size="11" fill="var(--faint)" font-family="IBM Plex Mono, monospace">${esc(labels[i])}</text>`;
+  });
+  return `<div class="chart"><svg viewBox="0 0 ${W} ${h}" role="img" aria-label="Sales per month">${g}</svg></div>`;
+}
+const eventLegend = types => `<div class="legend">${types.includes('game') ? '<span><svg width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="var(--game)"/></svg>Big game</span>' : ''}${types.includes('injury') ? '<span><svg width="12" height="12" aria-hidden="true"><rect x="2" y="2" width="8" height="8" fill="var(--down)" transform="rotate(45 6 6)"/></svg>Injury news</span>' : ''}${types.includes('news') ? '<span><svg width="12" height="12" aria-hidden="true"><rect x="1" y="1" width="10" height="10" rx="2" fill="var(--news)"/></svg>News / legacy</span>' : ''}</div>`;
+const segBtns = (group, opts, cur) => `<div class="seg" role="group">${opts.map(([v, l]) => `<button type="button" data-set="${group}" data-val="${v}" aria-pressed="${v === cur}">${l}</button>`).join('')}</div>`;
+
+function cardItem(c, right = 'price') {
+  const m = monthChange(c);
+  return `<a class="item" href="#card-${c.id}"><div class="thumb">${cardVisual(c)}</div><div class="main"><span class="title">${esc(c.name)}</span><span class="sub">${esc(PLAYERS[c.p].name)} · ${esc(c.detail)}</span></div><div class="end"><span class="num" style="font-weight:600">${money(last(c.price))}</span><span class="num ${cls(m)}" style="font-size:12px">${fmtPct(m)}</span></div></a>`;
+}
+
+/* ---------- card images: original artwork, or the viewer's own photo ---------- */
+function getPhotos() { try { const v = JSON.parse(localStorage.getItem('pulled-photos') || '{}'); return v && typeof v === 'object' ? v : {}; } catch (e) { return {}; } }
+let memPhotos = getPhotos();
+function setPhoto(id, url) {
+  if (url) memPhotos[id] = url; else delete memPhotos[id];
+  try { localStorage.setItem('pulled-photos', JSON.stringify(memPhotos)); } catch (e) {}
+}
+const HUES = { curry: 44, wemby: 205, mahomes: 4, ohtani: 222, griffey: 168 };
+let artN = 0;
+function cardArt(c) {
+  const p = PLAYERS[c.p], h = HUES[c.p] ?? 210, k = 'a' + (++artN);
+  const graded = /PSA|BGS/.test(c.detail);
+  const grade = (c.detail.match(/(PSA|BGS) [\d.]+/) || [''])[0];
+  const shiny = /Refractor|Silver|Orange|Tiffany/.test(c.name + ' ' + c.detail);
+  const auto = c.tags.includes('Auto');
+  const serial = (c.detail.match(/\/\d+/) || [''])[0];
+  const year = c.name.slice(0, 4);
+  const set = c.name.replace(/^\d{4}\s+/, '').replace(/#\S+/, '').replace(/\b(RC|Refractor|Silver|Auto|RPA)\b/g, '').trim().split(' ').slice(0, 3).join(' ');
+  const [cx, cy, cw, ch] = graded ? [27, 74, 196, 262] : [0, 0, 250, 350];
+  const s = cw / 250;
+  let g = `<defs><linearGradient id="${k}g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="hsl(${h} 55% 30%)"/><stop offset="1" stop-color="hsl(${h} 45% 14%)"/></linearGradient>`;
+  if (shiny) g += `<linearGradient id="${k}s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".45" stop-color="#fff" stop-opacity=".0"/><stop offset=".5" stop-color="#fff" stop-opacity=".28"/><stop offset=".55" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>`;
+  g += `</defs>`;
+  if (graded) {
+    g += `<rect x="4" y="4" width="242" height="342" rx="14" fill="#C9D2DE" fill-opacity=".18" stroke="#C9D2DE" stroke-opacity=".55" stroke-width="3"/>`;
+    g += `<rect x="16" y="14" width="218" height="46" rx="6" fill="#EEF1F5"/><text x="28" y="44" font-size="20" font-weight="800" fill="#141821" font-family="Inter Tight, Arial, sans-serif">${esc(grade)}</text><text x="222" y="35" text-anchor="end" font-size="11" fill="#4A5262" font-family="IBM Plex Mono, monospace">${esc(year)} ${esc(p.short.toUpperCase())}</text><text x="222" y="50" text-anchor="end" font-size="10" fill="#4A5262" font-family="IBM Plex Mono, monospace">${esc(p.sport)}</text>`;
+  }
+  g += `<rect x="${cx}" y="${cy}" width="${cw}" height="${ch}" rx="${10 * s}" fill="url(#${k}g)"/>`;
+  g += `<rect x="${cx + 12 * s}" y="${cy + 12 * s}" width="${cw - 24 * s}" height="${ch - 24 * s}" rx="${6 * s}" fill="none" stroke="hsl(${h} 70% 70%)" stroke-opacity=".6" stroke-width="${2 * s}"/>`;
+  for (let i = 0; i < 6; i++) g += `<line x1="${cx}" y1="${cy + ch * (0.25 + i * 0.07)}" x2="${cx + cw}" y2="${cy + ch * (0.05 + i * 0.07)}" stroke="hsl(${h} 70% 70%)" stroke-opacity=".08" stroke-width="${6 * s}"/>`;
+  g += `<text x="${cx + cw / 2}" y="${cy + ch * 0.56}" text-anchor="middle" font-size="${110 * s}" font-weight="800" fill="hsl(${h} 80% 88%)" fill-opacity=".92" font-family="Inter Tight, Arial, sans-serif" letter-spacing="-4">${esc(p.num.replace('#', ''))}</text>`;
+  g += `<text x="${cx + 26 * s}" y="${cy + 44 * s}" font-size="${18 * s}" font-weight="700" fill="#fff" fill-opacity=".85" font-family="IBM Plex Mono, monospace">${esc(year)}</text>`;
+  if (c.tags.includes('Rookie')) g += `<rect x="${cx + cw - 70 * s}" y="${cy + 26 * s}" width="${44 * s}" height="${26 * s}" rx="${5 * s}" fill="#C6F432"/><text x="${cx + cw - 48 * s}" y="${cy + 45 * s}" text-anchor="middle" font-size="${15 * s}" font-weight="800" fill="#0A0C10" font-family="Inter Tight, Arial, sans-serif">RC</text>`;
+  if (auto) g += `<path d="M${cx + 40 * s} ${cy + ch * 0.7} c ${18 * s} ${-24 * s}, ${30 * s} ${16 * s}, ${46 * s} ${-6 * s} s ${26 * s} ${18 * s}, ${42 * s} ${-10 * s} s ${28 * s} ${10 * s}, ${80 * s} ${-14 * s}" fill="none" stroke="#fff" stroke-opacity=".9" stroke-width="${3 * s}" stroke-linecap="round"/>`;
+  if (serial) g += `<text x="${cx + cw - 26 * s}" y="${cy + ch * 0.74}" text-anchor="end" font-size="${16 * s}" font-weight="700" fill="#FFD27A" font-family="IBM Plex Mono, monospace">${esc(serial)}</text>`;
+  g += `<rect x="${cx}" y="${cy + ch - 74 * s}" width="${cw}" height="${74 * s}" fill="#000" fill-opacity=".35"/>`;
+  g += `<text x="${cx + 24 * s}" y="${cy + ch - 42 * s}" font-size="${22 * s}" font-weight="800" fill="#fff" font-family="Inter Tight, Arial, sans-serif"${p.name.length > 13 ? ` textLength="${(cw - 48 * s).toFixed(1)}" lengthAdjust="spacingAndGlyphs"` : ''}>${esc(p.name.toUpperCase())}</text>`;
+  g += `<text x="${cx + 24 * s}" y="${cy + ch - 20 * s}" font-size="${13 * s}" fill="#fff" fill-opacity=".7" font-family="Inter Tight, Arial, sans-serif">${esc(set)} · ${esc(p.pos)}</text>`;
+  if (shiny) g += `<rect x="${cx}" y="${cy}" width="${cw}" height="${ch}" rx="${10 * s}" fill="url(#${k}s)"/>`;
+  return `<svg viewBox="0 0 250 350" width="100%" height="100%" role="img" aria-label="Illustration of ${esc(p.name)} ${esc(c.name)}" preserveAspectRatio="xMidYMid meet">${g}</svg>`;
+}
+function cardVisual(c) {
+  const ph = memPhotos[c.id];
+  return ph && /^data:image\//.test(ph) ? `<img src="${ph}" alt="Your photo of ${esc(c.name)}" style="width:100%;height:100%;object-fit:contain;display:block">` : cardArt(c);
+}
+function handlePhoto(file, id) {
+  if (!file || !/^image\//.test(file.type)) { toast('Choose an image file'); return; }
+  const r = new FileReader();
+  r.onload = () => {
+    const img = new Image();
+    img.onload = () => {
+      const max = 420, sc = Math.min(1, max / Math.max(img.width, img.height));
+      const cv = document.createElement('canvas'); cv.width = Math.round(img.width * sc); cv.height = Math.round(img.height * sc);
+      cv.getContext('2d').drawImage(img, 0, 0, cv.width, cv.height);
+      setPhoto(id, cv.toDataURL('image/jpeg', 0.82)); toast('Photo added'); render();
+    };
+    img.onerror = () => toast("That image couldn't be read. Try a JPG or PNG.");
+    img.src = r.result;
+  };
+  r.readAsDataURL(file);
+}
+
+/* ---------- views ---------- */
+function viewHome() {
+  const q = state.homeQuery.trim().toLowerCase();
+  const pids = Object.keys(PLAYERS).filter(pid => !q || PLAYERS[pid].name.toLowerCase().includes(q) || PLAYERS[pid].team.toLowerCase().includes(q) || PLAYERS[pid].sport.toLowerCase().includes(q));
+  const cardsQ = q ? CARDS.filter(c => (c.name + ' ' + PLAYERS[c.p].name + ' ' + c.detail).toLowerCase().includes(q)) : [];
+  const sorted = [...CARDS].sort((a, b) => monthChange(b) - monthChange(a));
+  return `<div class="view">
+    <div class="section" style="gap:16px;padding-top:12px">
+      <h1>Know why your cards <span style="color:var(--accent)">move.</span></h1>
+      <p class="lede">Search a player or card to see prices next to stats, injuries and news.</p>
+      <div class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--faint)" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <label for="q" class="eyebrow" hidden>Search</label><input id="q" type="search" placeholder="Try Curry, Ohtani, NFL, Prizm…" value="${esc(state.homeQuery)}" autocomplete="off"></div>
+    </div>
+    ${q ? `<div class="section"><h2>Cards matching “${esc(state.homeQuery)}”</h2>${cardsQ.length ? `<div class="list">${cardsQ.map(c => cardItem(c)).join('')}</div>` : `<p class="lede">No cards match. Try a player name or a set like Prizm.</p>`}</div>` : ''}
+    <div class="section"><div class="row between"><h2>Players</h2><span class="eyebrow">All cards combined · 1 month</span></div>
+      <div class="grid">${pids.map(pid => { const p = PLAYERS[pid], t = playerTrend(pid, '3M'); const m = (() => { const cs = CARDS.filter(c => c.p === pid); const w = cs.map(c => Math.max(0.5, c.sales[11])); return cs.reduce((s, c, k) => s + w[k] * monthChange(c), 0) / w.reduce((a, b) => a + b, 0); })();
+        return `<a class="pcard" href="#player-${pid}"><div class="row between"><span class="tag">${esc(p.sport)}</span><span class="status ${p.status}">${p.status === 'active' ? 'Active' : 'Retired'}</span></div><div><div style="font-size:18px;font-weight:700">${esc(p.name)}</div><div style="font-size:13px;color:var(--faint)">${esc(p.team)}</div></div><div class="row between"><span class="num ${cls(m)}" style="font-size:22px;font-weight:600">${fmtPct(m)}</span>${sparkline(t.series, m >= 0 ? 'var(--up)' : 'var(--down)')}</div></a>`; }).join('') || '<p class="lede">No players match.</p>'}</div></div>
+    ${q ? '' : `<div class="cols">
+      <div class="section"><h2>Biggest risers this month</h2><div class="list">${sorted.slice(0, 5).map(c => cardItem(c)).join('')}</div></div>
+      <div class="section"><h2>Biggest drops this month</h2><div class="list">${sorted.slice(-5).reverse().map(c => cardItem(c)).join('')}</div></div>
+    </div>`}
+  </div>`;
+}
+function sparkline(vals, color) {
+  const W = 96, H = 32, lo = Math.min(...vals), hi = Math.max(...vals) || 1, r = hi - lo || 1;
+  const d = vals.map((v, i) => (i ? 'L' : 'M') + (i * W / (vals.length - 1)).toFixed(1) + ' ' + (H - 3 - (v - lo) / r * (H - 6)).toFixed(1)).join(' ');
+  return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" aria-hidden="true"><path d="${d}" fill="none" stroke="${color}" stroke-width="2" stroke-linejoin="round"/></svg>`;
+}
+
+function viewPlayer(pid) {
+  const p = PLAYERS[pid]; if (!p) return notFound();
+  const t = playerTrend(pid, state.playerRange);
+  const labels = slice(MONTHS, state.playerRange);
+  const off = 12 - RANGES[state.playerRange];
+  const evs = p.events.filter(e => e.i >= off).map(e => ({ ...e, i: e.i - off }));
+  const cs = CARDS.filter(c => c.p === pid);
+  const seg = (name, f) => { const sub = cs.filter(f); return [name, sub.length ? combined(sub, state.playerRange).change : null]; };
+  const segs = [seg('Rookie cards', c => c.tags.includes('Rookie')), seg('Graded', c => c.tags.includes('Graded')), seg('Raw', c => !c.tags.includes('Graded'))];
+  let list = cs.filter(c => state.playerFilter === 'All' || c.tags.includes(state.playerFilter));
+  const sorters = { 'value-desc': (a, b) => last(b.price) - last(a.price), 'value-asc': (a, b) => last(a.price) - last(b.price), 'gain': (a, b) => monthChange(b) - monthChange(a), 'drop': (a, b) => monthChange(a) - monthChange(b) };
+  list.sort(sorters[state.playerSort]);
+  const biggest = [...p.events].reverse().find(e => e.i >= off);
+  return `<div class="view">
+    <div class="section" style="padding-top:8px">
+      <a href="#home" style="color:var(--muted);text-decoration:none;font-weight:600;font-size:14px">← All players</a>
+      <div class="row" style="gap:16px;align-items:flex-start">
+        <div class="thumb" style="width:72px;height:72px;border-radius:16px;background:var(--raise);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:var(--faint)">${esc(p.num)}</div>
+        <div style="display:flex;flex-direction:column;gap:6px;min-width:0;flex:1">
+          <h1>${esc(p.name)}</h1>
+          <div class="row" style="gap:8px"><span style="color:var(--muted)">${esc(p.team)} · ${esc(p.pos)} · ${esc(p.sport)}</span><span class="status ${p.status}">${p.status === 'active' ? 'Active' : 'Retired · Hall of Fame'}</span></div>
+        </div>
+      </div>
+      <p class="lede">${esc(p.summary)}</p>
+    </div>
+
+    <div class="panel section">
+      <div class="row between"><span style="font-weight:700">All ${esc(p.short)} cards combined</span>${segBtns('playerRange', [['3M', '3M'], ['6M', '6M'], ['1Y', '1Y']], state.playerRange)}</div>
+      <div class="row" style="align-items:baseline"><span class="num ${cls(t.change)}" style="font-size:44px;font-weight:600;letter-spacing:-0.02em">${fmtPct(t.change)}</span><span style="color:var(--muted)">over the last ${state.playerRange === '1Y' ? 'year' : state.playerRange === '6M' ? '6 months' : '3 months'}, across ${cs.length} tracked cards</span></div>
+      ${lineChart('ch-player', { series: [{ name: 'Combined change', values: t.series, color: t.change >= 0 ? 'var(--up)' : 'var(--down)', area: true }], labels, fmt: v => fmtPct(v, false), events: evs, zero: true, h: 220 })}
+      ${eventLegend(evs.map(e => e.type))}
+      <div class="tiles">${segs.map(([n, v]) => `<div class="tile"><span class="k">${n}</span><span class="v ${v === null ? 'flat' : cls(v)}" style="font-size:17px">${v === null ? '—' : fmtPct(v)}</span></div>`).join('')}</div>
+      <span style="font-size:12px;color:var(--faint)">Weighted by how often each card sells, so one rare sale can't skew it.${biggest ? ` Biggest recent driver: ${esc(biggest.label)} (${MONTHS[biggest.i]}).` : ''}</span>
+    </div>
+
+    <div class="section"><h2>${esc(p.statsLabel)}</h2>
+      <div class="tiles">${p.stats.map(([k, v]) => `<div class="tile"><span class="k">${esc(k)}</span><span class="v">${esc(v)}</span></div>`).join('')}</div>
+      <span style="color:var(--muted);font-size:14px">${esc(p.extra)}</span>
+      <div class="alert ${p.note.kind}"><div><div style="font-weight:700">${esc(p.note.title)}</div><div style="color:var(--muted);font-size:14px">${esc(p.note.text)}</div></div></div>
+    </div>
+
+    <div class="section">
+      <div class="row between"><h2>Cards <span style="color:var(--faint);font-weight:500;font-size:15px">${list.length} shown</span></h2>
+        <label class="row" style="gap:8px;font-size:13px;color:var(--muted)" for="sort">Sort
+          <select id="sort" style="min-height:40px;border-radius:10px;border:1px solid var(--line);background:var(--surface);padding:0 10px">
+            ${[['value-desc', 'Value: high to low'], ['value-asc', 'Value: low to high'], ['gain', 'Biggest gain (1M)'], ['drop', 'Biggest drop (1M)']].map(([v, l]) => `<option value="${v}"${v === state.playerSort ? ' selected' : ''}>${l}</option>`).join('')}
+          </select></label></div>
+      <div class="chips">${['All', 'Rookie', 'Graded', 'Auto', 'Numbered'].map(f => `<button type="button" class="chip" data-set="playerFilter" data-val="${f}" aria-pressed="${f === state.playerFilter}">${f}</button>`).join('')}</div>
+      <div class="list">${list.map(c => cardItem(c)).join('') || '<p class="lede">No cards in this filter.</p>'}</div>
+    </div>
+  </div>`;
+}
+
+function viewCard(id) {
+  const c = CARD[id]; if (!c) return notFound();
+  const p = PLAYERS[c.p];
+  const labels = slice(MONTHS, state.cardRange);
+  const off = 12 - RANGES[state.cardRange];
+  const evs = p.events.filter(e => e.i >= off).map(e => ({ ...e, i: e.i - off }));
+  const prices = slice(c.price, state.cardRange);
+  const m = monthChange(c), y = pct(c.price[0], c.price[11]);
+  const inCol = col().includes(c.id);
+  const others = CARDS.filter(o => o.p === c.p && o.id !== c.id);
+  return `<div class="view">
+    <div class="section" style="padding-top:8px">
+      <a href="#player-${c.p}" style="color:var(--muted);text-decoration:none;font-weight:600;font-size:14px">← ${esc(p.name)}</a>
+      <div class="row" style="gap:20px;align-items:flex-start">
+        <div style="width:180px;max-width:100%;display:flex;flex-direction:column;gap:8px;flex-shrink:0">
+          <div style="width:100%;aspect-ratio:5/7;max-width:100%">${cardVisual(c)}</div>
+          <label for="photo" class="btn" style="min-height:40px;font-size:13px;cursor:pointer">${memPhotos[c.id] ? 'Replace photo' : 'Add your photo'}</label>
+          <input id="photo" type="file" accept="image/*" data-id="${c.id}" hidden>
+          ${memPhotos[c.id] ? `<button type="button" class="btn" style="min-height:36px;font-size:12px" data-act="removePhoto" data-id="${c.id}">Use artwork instead</button>` : `<span style="font-size:11px;color:var(--faint);text-align:center">Artwork shown until you add a photo of your card</span>`}
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;min-width:0;flex:1 1 260px">
+          <span class="eyebrow">${esc(p.name)} · ${esc(p.sport)}</span>
+          <h1 style="font-size:clamp(24px,4vw,34px)">${esc(c.name)}</h1>
+          <div class="chips">${[c.detail, ...c.tags].map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
+          <div class="row" style="align-items:baseline;gap:14px"><span class="num" style="font-size:36px;font-weight:600">${moneyFull(last(c.price))}</span><span class="num ${cls(m)}" style="font-weight:600">${fmtPct(m)} this month</span></div>
+          <div class="row"><button type="button" class="btn ${inCol ? '' : 'primary'}" data-act="toggleCol" data-id="${c.id}">${inCol ? '✓ In your collection' : '+ Add to collection'}</button><button type="button" class="btn" data-act="compareThis" data-id="${c.id}">Compare with other cards</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="why"><span class="eyebrow">Why it moved · auto-written</span><p>${esc(whyItMoved(c))}</p></div>
+    <div class="panel section">
+      <div class="row between"><h2>Price vs. performance</h2>${segBtns('cardRange', [['3M', '3M'], ['6M', '6M'], ['1Y', '1Y']], state.cardRange)}</div>
+      ${lineChart('ch-card', { series: [{ name: 'Sale price', values: prices, color: 'var(--fg)', area: true }], labels, fmt: money, events: evs })}
+      ${eventLegend(evs.map(e => e.type))}
+      <div><div class="eyebrow" style="margin:8px 0 4px">Sales per month</div>${barChart(slice(c.sales, state.cardRange), labels, 'var(--accent)')}</div>
+    </div>
+    <div class="section"><h2>At a glance</h2>
+      <div class="tiles">
+        <div class="tile"><span class="k">1-year change</span><span class="v ${cls(y)}">${fmtPct(y)}</span></div>
+        <div class="tile"><span class="k">1-year high</span><span class="v">${money(Math.max(...c.price))}</span></div>
+        <div class="tile"><span class="k">1-year low</span><span class="v">${money(Math.min(...c.price))}</span></div>
+        <div class="tile"><span class="k">Sales / month</span><span class="v">${avg(c.sales).toFixed(1).replace(/\.0$/, '')}</span></div>
+        <div class="tile"><span class="k">Graded population</span><span class="v">${c.pop ? last(c.pop).toLocaleString('en-US') : '—'}</span></div>
+      </div>
+    </div>
+    ${others.length ? `<div class="section"><h2>More ${esc(p.name)} cards</h2><div class="list">${others.map(o => cardItem(o)).join('')}</div></div>` : ''}
+  </div>`;
+}
+
+function viewCompare() {
+  const ids = state.compareIds.filter(id => CARD[id]);
+  const metric = state.compareMetric, view = state.compareView, range = state.compareRange;
+  const colors = ['var(--fg)', 'var(--s2)', 'var(--s3)', 'var(--s4)'];
+  const dashes = ['', '6 4', '2 4', '10 3 2 3'];
+  const usable = ids.filter(id => metric !== 'pop' || CARD[id].pop);
+  const series = usable.map((id, k) => {
+    const c = CARD[id]; let v = slice(c[metric], range);
+    if (view === 'pct') v = v.map(x => pct(v[0] || 1, x));
+    return { name: PLAYERS[c.p].short + ' · ' + c.name.slice(0, 4), values: v, color: colors[ids.indexOf(id)], dash: dashes[ids.indexOf(id)] };
+  });
+  const fmt = view === 'pct' ? v => fmtPct(v, false) : metric === 'price' ? money : v => Math.round(v).toLocaleString('en-US');
+  const rows = [
+    ['Price', 'Latest sale', c => last(c.price), money, null],
+    ['1-year change', '', c => pct(c.price[0], c.price[11]), v => fmtPct(v, false), 'max'],
+    ['Sales / month', 'How easy to buy or sell', c => avg(c.sales), v => v.toFixed(1).replace(/\.0$/, ''), 'max'],
+    ['Graded population', 'Copies that exist at this grade', c => c.pop ? last(c.pop) : null, v => v.toLocaleString('en-US'), 'min'],
+    ['Population growth', 'New graded copies, 1 year', c => c.pop ? pct(c.pop[0], c.pop[11]) : null, v => fmtPct(v, false), 'min'],
+    ['Volatility', 'Average monthly swing', c => avg(c.price.slice(1).map((v, i) => Math.abs(pct(c.price[i], v)))), v => v.toFixed(1) + '%', 'min']
+  ];
+  const insight = (() => {
+    if (ids.length < 2) return 'Add at least two cards to compare them.';
+    const cs = ids.map(id => CARD[id]);
+    if (metric === 'price') { const ch = cs.map(c => [c, pct(slice(c.price, range)[0], last(c.price))]).sort((a, b) => b[1] - a[1]); return `${PLAYERS[ch[0][0].p].name}'s card performed best over this period (${fmtPct(ch[0][1], false)}). ${PLAYERS[last(ch)[0].p].name}'s did worst (${fmtPct(last(ch)[1], false)}).`; }
+    if (metric === 'sales') { const s = cs.map(c => [c, avg(slice(c.sales, range))]).sort((a, b) => b[1] - a[1]); return `${PLAYERS[s[0][0].p].name}'s card sells most often, about ${Math.round(s[0][1])} times a month. Cards that trade often react faster to news, in both directions.`; }
+    const g = cs.filter(c => c.pop).map(c => [c, pct(slice(c.pop, range)[0], last(c.pop))]).sort((a, b) => b[1] - a[1]);
+    return g.length ? `${PLAYERS[g[0][0].p].name}'s graded supply grew fastest (${fmtPct(g[0][1], false)}). More graded copies means more supply, which can cap prices.` : 'None of these cards are graded, so there is no population to compare.';
+  })();
+  return `<div class="view">
+    <div class="section" style="padding-top:8px"><h1>Compare cards</h1><p class="lede">Put up to four cards on one chart and see how they stack up on price, sales and supply.</p></div>
+    <div class="section">
+      <div class="list">${ids.map((id, k) => { const c = CARD[id]; return `<div class="item"><svg width="28" height="10" aria-hidden="true"><line x1="2" y1="5" x2="26" y2="5" stroke="${colors[k]}" stroke-width="3" stroke-linecap="round"${dashes[k] ? ` stroke-dasharray="${dashes[k]}"` : ''}/></svg><div class="main"><span class="title">${esc(c.name)}</span><span class="sub">${esc(PLAYERS[c.p].name)} · ${esc(c.detail)}</span></div><button type="button" class="btn" style="min-height:36px;padding:0 10px" data-act="removeCompare" data-id="${id}" aria-label="Remove ${esc(c.name)}">Remove</button></div>`; }).join('')}</div>
+      ${ids.length < 4 ? `<label for="addCompare" class="row" style="gap:8px;font-size:14px;color:var(--muted)">Add a card
+        <select id="addCompare" style="min-height:44px;border-radius:10px;border:1px solid var(--line);background:var(--surface);padding:0 10px;max-width:100%">
+          <option value="">Choose a card…</option>
+          ${Object.keys(PLAYERS).map(pid => `<optgroup label="${esc(PLAYERS[pid].name)}">${CARDS.filter(c => c.p === pid && !ids.includes(c.id)).map(c => `<option value="${c.id}">${esc(c.name)} · ${esc(c.detail)}</option>`).join('')}</optgroup>`).join('')}
+        </select></label>` : ''}
+    </div>
+    <div class="panel section">
+      <div class="row">${segBtns('compareMetric', [['price', 'Price'], ['sales', 'Sales volume'], ['pop', 'Population']], metric)}${segBtns('compareView', [['pct', '% change'], ['actual', 'Actual']], view)}${segBtns('compareRange', [['3M', '3M'], ['6M', '6M'], ['1Y', '1Y']], range)}</div>
+      ${series.length ? lineChart('ch-compare', { series, labels: slice(MONTHS, range), fmt, zero: view === 'pct' }) : '<p class="lede">No data for this view.</p>'}
+      ${metric === 'pop' && usable.length < ids.length ? '<span style="font-size:12px;color:var(--faint)">Raw cards have no graded population, so they are left off this view.</span>' : ''}
+    </div>
+    <div class="why"><span class="eyebrow">What this means</span><p>${esc(insight)}</p></div>
+    ${ids.length ? `<div class="section"><h2>Side-by-side stats</h2><div class="tablebox"><table><thead><tr><th scope="col">Stat</th>${ids.map(id => `<th scope="col">${esc(PLAYERS[CARD[id].p].short)}</th>`).join('')}</tr></thead><tbody>
+      ${rows.map(([label, help, get, f, best]) => { const vals = ids.map(id => get(CARD[id])); const nums = vals.filter(v => v !== null); const b = best && nums.length > 1 ? (best === 'max' ? Math.max(...nums) : Math.min(...nums)) : null;
+        return `<tr><th scope="row">${label}${help ? `<span class="help">${help}</span>` : ''}</th>${vals.map(v => `<td class="${v !== null && v === b ? 'best' : ''}">${v === null ? '—' : esc(f(v))}</td>`).join('')}</tr>`; }).join('')}
+    </tbody></table></div><span style="font-size:12px;color:var(--faint)">Brighter value = best of the group for that stat.</span></div>` : ''}
+  </div>`;
+}
+
+function viewCollection() {
+  const ids = col();
+  if (!ids.length) return `<div class="view"><div class="section" style="padding-top:8px"><h1>My collection</h1></div>
+    <div class="panel empty"><h2>No cards yet</h2><p class="lede" style="max-width:44ch">Add cards from any card page, or load three sample cards to see how tracking works. Your collection is saved in this browser.</p>
+    <div class="row" style="justify-content:center"><button type="button" class="btn primary" data-act="sampleCol">Add 3 sample cards</button><a class="btn" href="#home">Browse players</a></div></div></div>`;
+  const cs = ids.map(id => CARD[id]);
+  const total = cs.reduce((s, c) => s + last(c.price), 0);
+  const prev = cs.reduce((s, c) => s + c.price[10], 0);
+  const yearAgo = cs.reduce((s, c) => s + c.price[0], 0);
+  const series = MONTHS.map((_, i) => cs.reduce((s, c) => s + c.price[i], 0));
+  const best = [...cs].sort((a, b) => monthChange(b) - monthChange(a))[0];
+  return `<div class="view">
+    <div class="section" style="padding-top:8px"><h1>My collection</h1><p class="lede">${cs.length} cards · saved in this browser</p></div>
+    <div class="panel section">
+      <div class="row" style="align-items:baseline;gap:14px"><span class="num" style="font-size:40px;font-weight:600">${moneyFull(total)}</span><span class="num ${cls(pct(prev, total))}" style="font-weight:600">${fmtPct(pct(prev, total))} this month</span><span class="num ${cls(pct(yearAgo, total))}" style="font-weight:600">${fmtPct(pct(yearAgo, total))} this year</span></div>
+      ${lineChart('ch-col', { series: [{ name: 'Collection value', values: series, color: 'var(--accent)', area: true }], labels: MONTHS, fmt: money, h: 200 })}
+      <span style="font-size:13px;color:var(--muted)">Best performer this month: ${esc(best.name)} (${esc(PLAYERS[best.p].name)}), ${fmtPct(monthChange(best), false)}.</span>
+    </div>
+    <div class="section"><h2>Cards</h2>
+      <div class="list">${cs.map(c => `<div class="row" style="gap:8px;flex-wrap:nowrap"><div style="flex:1;min-width:0">${cardItem(c)}</div><button type="button" class="btn" style="min-height:44px;padding:0 12px" data-act="toggleCol" data-id="${c.id}" aria-label="Remove ${esc(c.name)} from collection">Remove</button></div>`).join('')}</div>
+    </div>
+  </div>`;
+}
+
+const BUILD = {
+  done: [
+    ['Navigation and search', 'Find any player or card from the home page.'],
+    ['Player pages', 'Active and retired players, stats, injury or legacy notes, every card with sort and filters.'],
+    ['Combined player trend', "One % for all of a player's cards, weighted by sales, with rookie, graded and raw breakdowns."],
+    ['Card pages', 'Price chart with game, injury and news markers, sales volume and key stats.'],
+    ['Auto-written "Why it moved"', 'Generated from price, sales and event data. No manual writing.'],
+    ['Compare tool', 'Up to four cards on price, sales volume and graded population.'],
+    ['My collection', 'Total value and trend for the cards you add (saved in this browser).'],
+    ['Card images', 'Original artwork for every card (slab, rookie badge, parallel shine, auto, serial), or your own photo.']
+  ],
+  next: [
+    ['Scan a card', 'Match an uploaded photo to the right card automatically. Start with manual confirm of the exact parallel.'],
+    ['Real price data', 'Connect a licensed sales data source and refresh prices nightly.'],
+    ['Live stats and injuries', 'Pull from a sports data API so player pages update on their own.'],
+    ['Price and news alerts', 'Notify users when news or a big price move hits their cards.'],
+    ['Accounts and login', 'Save collections to a user account instead of one browser.'],
+    ['Subscriptions', 'Free, All-Star and Hall of Fame plans with Stripe billing.'],
+    ['More sports', 'Hockey and soccer players and cards.']
+  ]
+};
+function viewBuild() {
+  const row = ([t, d], kind) => `<div class="check"><span class="dot ${kind}" aria-hidden="true"></span><div><div style="font-weight:700">${esc(t)}</div><div style="color:var(--muted);font-size:14px">${esc(d)}</div></div></div>`;
+  return `<div class="view">
+    <div class="section" style="padding-top:8px"><span class="eyebrow">Version 0.2 · Nov 1, 2026</span><h1>Build log</h1><p class="lede">This test site grows one piece at a time. Each piece gets built, tested here, then checked off.</p></div>
+    <div class="cols">
+      <div class="panel" style="padding:0"><div style="padding:16px 14px 8px" class="row between"><h2>Built</h2><span class="tag">${BUILD.done.length} pieces</span></div>${BUILD.done.map(r => row(r, 'done')).join('')}</div>
+      <div class="panel" style="padding:0"><div style="padding:16px 14px 8px" class="row between"><h2>Up next</h2><span class="tag">${BUILD.next.length} pieces</span></div>${BUILD.next.map(r => row(r, 'next')).join('')}</div>
+    </div>
+  </div>`;
+}
+const notFound = () => `<div class="view"><div class="panel empty"><h2>That page doesn't exist</h2><a class="btn primary" href="#home">Go home</a></div></div>`;
+
+/* ---------- router ---------- */
+function render() {
+  const h = (location.hash || '#home').slice(1);
+  Object.keys(charts).forEach(k => delete charts[k]);
+  let html, nav = '';
+  if (h === 'home' || h === '') { html = viewHome(); nav = 'home'; }
+  else if (h.startsWith('player-')) html = viewPlayer(h.slice(7));
+  else if (h.startsWith('card-')) html = viewCard(h.slice(5));
+  else if (h === 'compare') { html = viewCompare(); nav = 'compare'; }
+  else if (h === 'collection') { html = viewCollection(); nav = 'collection'; }
+  else if (h === 'build') { html = viewBuild(); nav = 'build'; }
+  else html = notFound();
+  $('#app').innerHTML = html;
+  document.querySelectorAll('[data-nav]').forEach(a => { if (a.dataset.nav === nav) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+  wireCharts();
+  const q = $('#q');
+  if (q) q.addEventListener('input', e => { state.homeQuery = e.target.value; const pos = e.target.selectionStart; render(); const nq = $('#q'); nq.focus(); try { nq.setSelectionRange(pos, pos); } catch (err) {} });
+  const sort = $('#sort'); if (sort) sort.addEventListener('change', e => { state.playerSort = e.target.value; render(); });
+  const photo = $('#photo'); if (photo) photo.addEventListener('change', e => handlePhoto(e.target.files[0], e.target.dataset.id));
+  const add = $('#addCompare'); if (add) add.addEventListener('change', e => { if (e.target.value) { state.compareIds.push(e.target.value); render(); } });
+  updateCount();
+}
+document.addEventListener('click', e => {
+  const s = e.target.closest('[data-set]');
+  if (s) { state[s.dataset.set] = s.dataset.val; render(); return; }
+  const a = e.target.closest('[data-act]'); if (!a) return;
+  const id = a.dataset.id;
+  if (a.dataset.act === 'toggleCol') { const ids = col(); const has = ids.includes(id); setCol(has ? ids.filter(x => x !== id) : [...ids, id]); toast(has ? 'Removed from your collection' : 'Added to your collection'); render(); }
+  if (a.dataset.act === 'sampleCol') { setCol(['curry-chrome-base', 'ohtani-update', 'griffey-ud']); toast('Added 3 sample cards'); render(); }
+  if (a.dataset.act === 'removePhoto') { setPhoto(id, null); toast('Showing artwork'); render(); }
+  if (a.dataset.act === 'removeCompare') { state.compareIds = state.compareIds.filter(x => x !== id); render(); }
+  if (a.dataset.act === 'compareThis') { if (!state.compareIds.includes(id)) state.compareIds = [id, ...state.compareIds.filter(x => x !== id)].slice(0, 4); else state.compareIds = [id, ...state.compareIds.filter(x => x !== id)]; location.hash = 'compare'; }
+});
+window.addEventListener('hashchange', () => { render(); window.scrollTo(0, 0); });
+render();
+</script>
+</body>
+</html>
