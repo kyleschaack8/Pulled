@@ -80,6 +80,35 @@ button, input, select { font: inherit; color: inherit; }
 .gavatar { width: 38px; height: 38px; flex-shrink: 0; display: block; }
 .pavatar svg, .havatar svg, .gavatar svg { display: block; }
 @media (max-width: 520px) { .pavatar { width: 96px; height: 96px; } }
+.cav { display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 800; color: #0a0c10; background: hsl(var(--h) 70% 72%); flex-shrink: 0; letter-spacing: -.02em; }
+.stag { display: inline-flex; align-items: center; height: 22px; padding: 0 8px; border-radius: 6px; font-size: 11px; font-weight: 700; border: 1px solid var(--line); white-space: nowrap; }
+.st-sale { color: var(--up); background: color-mix(in srgb, var(--up) 12%, transparent); border-color: color-mix(in srgb, var(--up) 35%, var(--line)); }
+.st-trade { color: var(--news); background: color-mix(in srgb, var(--news) 12%, transparent); border-color: color-mix(in srgb, var(--news) 35%, var(--line)); }
+.st-keep { color: var(--faint); background: var(--raise); }
+.st-match { color: var(--accent-ink); background: var(--accent); border-color: var(--accent); }
+.pick { display: flex; gap: 12px; align-items: center; width: 100%; padding: 10px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); text-align: left; cursor: pointer; min-height: 44px; }
+.pick:hover { border-color: var(--faint); }
+.pick[aria-pressed="true"] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--surface)); }
+.pick:disabled { opacity: .45; cursor: not-allowed; }
+.pick .thumb { width: 36px; height: 50px; flex-shrink: 0; display: block; }
+.pick .main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.pick .title { font-weight: 700; font-size: 14px; }
+.pick .sub { font-size: 12px; color: var(--faint); }
+.pick .end { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; flex-shrink: 0; }
+.pick .tick { width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0; }
+.pick[aria-pressed="true"] .tick { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.meterrow { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 18px; align-items: center; }
+@media (max-width: 560px) { .meterrow { grid-template-columns: 1fr 1fr; } .meterrow .meter { grid-column: 1 / -1; order: 3; } }
+.mside { display: flex; flex-direction: column; gap: 2px; }
+.mside .k { font-size: 12px; color: var(--faint); }
+.mside .v { font-size: 24px; font-weight: 600; }
+.meter { position: relative; padding: 6px 0 24px; }
+.mzone { height: 12px; border-radius: 999px; background: linear-gradient(90deg, var(--game) 0%, var(--raise) 34%, var(--up) 44%, var(--up) 56%, var(--raise) 66%, var(--game) 100%); }
+.mmark { position: absolute; top: 0; width: 5px; height: 24px; border-radius: 3px; background: var(--fg); transform: translateX(-50%); box-shadow: 0 0 0 3px var(--surface); transition: left .3s; }
+.mlabels { position: absolute; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-between; font-size: 11px; color: var(--faint); }
+.mverdict { margin: 0; font-weight: 700; font-size: 16px; }
+.mverdict.up { color: var(--up); } .mverdict.down { color: var(--game); } .mverdict.flat { color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { .mmark { transition: none; } }
 .teamtag { display: inline-flex; align-items: center; height: 22px; padding: 0 8px; border-radius: 6px; font-size: 11px; font-weight: 800; letter-spacing: .04em; color: var(--fg); background: color-mix(in srgb, var(--tc) 22%, var(--raise)); border: 1px solid color-mix(in srgb, var(--tc) 55%, var(--line)); }
 .gres .gbadge.team { background: color-mix(in srgb, var(--tc) 22%, var(--raise)); border-color: color-mix(in srgb, var(--tc) 55%, var(--line)); color: var(--fg); }
 .nav { display: flex; gap: 4px; flex-wrap: wrap; }
@@ -188,6 +217,7 @@ td.best { color: var(--fg); font-weight: 600; }
       <a href="#home" data-nav="home">Home</a>
       <a href="#movers" data-nav="movers">Movers</a>
       <a href="#compare" data-nav="compare">Compare</a>
+      <a href="#collectors" data-nav="collectors">Collectors</a>
       <a href="#collection" data-nav="collection">My collection<span class="count" id="colCount"></span></a>
       <a href="#build" data-nav="build">Build log</a>
     </nav>
@@ -270,7 +300,7 @@ let CARDS = [
 ];
 let CARD = Object.fromEntries(CARDS.map(c => [c.id, c]));
 
-const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '', moversRange: '1M', moversSport: 'All', moversGrade: 'All', moversMin: '3', moversView: 'cards', homeSport: 'All' };
+const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '', collSport: 'All', offerFor: null, trade: null, moversRange: '1M', moversSport: 'All', moversGrade: 'All', moversMin: '3', moversView: 'cards', homeSport: 'All' };
 const charts = {};
 
 /* ---------- real data from data/*.json (built by the "Build card data" robot) ---------- */
@@ -1298,7 +1328,7 @@ function viewCard(id) {
           <h1 style="font-size:clamp(24px,4vw,34px)">${esc(c.name)}</h1>
           <div class="chips">${[c.detail, ...c.tags].map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
           <div class="row" style="align-items:baseline;gap:14px"><span class="num" style="font-size:36px;font-weight:600">${moneyFull(last(c.price))}</span><span class="num ${cls(m)}" style="font-weight:600">${fmtPct(m)} this month</span>${hotRank(c.id) ? `<span class="hot">${FLAME_ICON}Top riser #${hotRank(c.id)}</span>` : coldRank(c.id) ? `<span class="cold">${SNOW_ICON}Biggest drop #${coldRank(c.id)}</span>` : ''}</div>
-          <div class="row"><button type="button" class="btn ${inCol ? '' : 'primary'}" data-act="toggleCol" data-id="${c.id}">${inCol ? '✓ In your collection' : '+ Add to collection'}</button><button type="button" class="btn" data-act="compareThis" data-id="${c.id}">Compare with other cards</button></div>
+          <div class="row"><button type="button" class="btn ${inCol ? '' : 'primary'}" data-act="toggleCol" data-id="${c.id}">${inCol ? '✓ In your collection' : '+ Add to collection'}</button><button type="button" class="btn" data-act="compareThis" data-id="${c.id}">Compare with other cards</button><button type="button" class="btn" data-act="toggleWish" data-id="${c.id}">${wishlist().includes(c.id) ? '★ On your wishlist' : '☆ Add to wishlist'}</button></div>
         </div>
       </div>
     </div>
@@ -1309,6 +1339,7 @@ function viewCard(id) {
       ${eventLegend(evs.map(e => e.type))}
       <div><div class="eyebrow" style="margin:8px 0 4px">Sales per month</div>${barChart(slice(c.sales, state.cardRange), labels, 'var(--accent)')}</div>
     </div>
+    ${ownersSection(c)}
     <div class="section"><h2>At a glance</h2>
       <div class="tiles">
         <div class="tile"><span class="k">1-year change</span><span class="v ${cls(y)}">${fmtPct(y)}</span></div>
@@ -1377,7 +1408,7 @@ function viewCollection() {
   const ids = col();
   if (!ids.length) return `<div class="view"><div class="section" style="padding-top:8px"><h1>My collection</h1></div>
     <div class="panel empty"><h2>No cards yet</h2><p class="lede" style="max-width:44ch">Add cards from any card page, or load three sample cards to see how tracking works. Your collection is saved in this browser.</p>
-    <div class="row" style="justify-content:center"><button type="button" class="btn primary" data-act="sampleCol">Add 3 sample cards</button><a class="btn" href="#home">Browse players</a></div></div></div>`;
+    <div class="row" style="justify-content:center"><button type="button" class="btn primary" data-act="sampleCol">Add 3 sample cards</button><a class="btn" href="#home">Browse players</a></div></div>${wishAndOffers()}</div>`;
   const cs = ids.map(id => CARD[id]);
   const total = cs.reduce((s, c) => s + last(c.price), 0);
   const prev = cs.reduce((s, c) => s + c.price[10], 0);
@@ -1394,6 +1425,7 @@ function viewCollection() {
     <div class="section"><h2>Cards</h2>
       <div class="list">${cs.map(c => `<div class="row" style="gap:8px;flex-wrap:nowrap"><div style="flex:1;min-width:0">${cardItem(c)}</div><button type="button" class="btn" style="min-height:44px;padding:0 12px" data-act="toggleCol" data-id="${c.id}" aria-label="Remove ${esc(c.name)} from collection">Remove</button></div>`).join('')}</div>
     </div>
+    ${wishAndOffers()}
   </div>`;
 }
 
@@ -1503,6 +1535,249 @@ function viewMovers() {
     <span style="font-size:12px;color:var(--faint)">Change compares the typical sale price at the start and end of the period. The current month includes sales so far, and single sales far outside a card's normal range are ignored. The minimum sales filter hides cards with too few sales to trust, since one unusual sale can swing a price a lot.</span>
   </div>`;
 }
+/* ---------- collectors, wishlist, smart trades and offers (prototype) ----------
+   Sample collectors are made up so the trade flow can be tried; their cards and prices are real data.
+   Wishlist and offers are saved in this browser until accounts exist. */
+function getList(key) { try { const v = JSON.parse(localStorage.getItem(key) || '[]'); return Array.isArray(v) ? v : []; } catch (e) { return []; } }
+function setList(key, v) { try { localStorage.setItem(key, JSON.stringify(v)); } catch (e) {} }
+let memWish = getList('pulled-wishlist'), memOffers = getList('pulled-offers');
+function wishlist() { return memWish.filter(id => CARD[id]); }
+function setWish(ids) { memWish = ids; setList('pulled-wishlist', ids); }
+function offers() { return memOffers; }
+function addOffer(o) { memOffers = [{ ...o, at: new Date().toISOString().slice(0, 10) }, ...memOffers].slice(0, 30); setList('pulled-offers', memOffers); }
+
+const COLLECTOR_SEED = [
+  ['ChromeChaser', 'NBA', 2019], ['RookieRunHQ', 'NFL', 2021], ['VintageVaultCo', 'MLB', 2016], ['PrizmPulls', 'NBA', 2020],
+  ['GridironGems', 'NFL', 2018], ['DiamondDigs', 'MLB', 2022], ['SlabSeason', 'All', 2017], ['BreakRoomBets', 'All', 2023]
+];
+let COLL = null;
+function rng(seed) { return () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+function collectors() {
+  if (COLL && COLL.cards === CARDS) return COLL.list;
+  let h = 7; CARDS.forEach(c => { for (const ch of c.id) h = (h * 31 + ch.charCodeAt(0)) | 0; });
+  const r = rng(h);
+  const list = COLLECTOR_SEED.map(([handle, fav, since], i) => {
+    const pool = CARDS.filter(c => fav === 'All' || PLAYERS[c.p].sport === fav);
+    const src = pool.length >= 6 ? pool : CARDS;
+    const pick = [...src].sort(() => r() - 0.5).slice(0, Math.min(src.length, 7 + Math.floor(r() * 5)));
+    const items = pick.map((c, k) => {
+      const roll = k === 0 ? 0.1 : k === 1 ? 0.5 : r();
+      const status = roll < 0.4 ? 'sale' : roll < 0.75 ? 'trade' : 'keep';
+      const ask = status === 'sale' ? Math.max(1, Math.round(last(c.price) * (0.95 + r() * 0.25))) : null;
+      return { id: c.id, status, ask };
+    });
+    const owned = new Set(items.map(x => x.id));
+    const wantPool = CARDS.filter(c => !owned.has(c.id) && (fav === 'All' || PLAYERS[c.p].sport === fav || r() < 0.25));
+    const wants = [...wantPool].sort(() => r() - 0.5).slice(0, 3 + Math.floor(r() * 3)).map(c => c.id);
+    return { id: handle.toLowerCase(), handle, fav, since, hue: (i * 47 + 200) % 360, trades: 4 + Math.floor(r() * 60), items, wants };
+  });
+  COLL = { cards: CARDS, list };
+  return list;
+}
+function collector(id) { return collectors().find(c => c.id === id); }
+function collValue(c) { return c.items.reduce((s, x) => s + last(CARD[x.id].price), 0); }
+function cAvatar(c, size) {
+  const ini = c.handle.replace(/[a-z]/g, '').slice(0, 2) || c.handle.slice(0, 2).toUpperCase();
+  return `<span class="cav" style="--h:${c.hue};width:${size}px;height:${size}px;font-size:${Math.round(size * 0.36)}px" aria-hidden="true">${esc(ini)}</span>`;
+}
+const STATUS = { sale: ['For sale', 'st-sale'], trade: ['Open to trade', 'st-trade'], keep: ['Not for trade', 'st-keep'] };
+
+/* how well a collector matches you: they have what you want, you have what they want */
+function matchFor(c) {
+  const mine = new Set(col()), want = new Set(wishlist());
+  const theyHave = c.items.filter(x => x.status !== 'keep' && want.has(x.id));
+  const theyWant = c.wants.filter(id => mine.has(id));
+  return { theyHave, theyWant, score: theyHave.length * 2 + theyWant.length * 1.5 + (theyHave.length && theyWant.length ? 3 : 0) };
+}
+function matchText(m) {
+  const a = [];
+  if (m.theyHave.length) a.push(`Has ${m.theyHave.length} card${m.theyHave.length > 1 ? 's' : ''} on your wishlist`);
+  if (m.theyWant.length) a.push(`Wants ${m.theyWant.length} card${m.theyWant.length > 1 ? 's' : ''} you own`);
+  return a.join(' · ');
+}
+
+/* ---------- smart trade meter ---------- */
+function sideStats(ids) {
+  const cs = ids.map(id => CARD[id]).filter(Boolean);
+  const val = cs.reduce((s, c) => s + last(c.price), 0);
+  const mom = val ? cs.reduce((s, c) => s + last(c.price) * (isFinite(monthChange(c)) ? monthChange(c) : 0), 0) / val : 0;
+  return { cs, val, mom };
+}
+function cardFlags(c) {
+  const f = [], p = PLAYERS[c.p];
+  if (hotRank(c.id)) f.push(`<span class="hot">${FLAME_ICON}Top riser #${hotRank(c.id)}</span>`);
+  else if (coldRank(c.id)) f.push(`<span class="cold">${SNOW_ICON}Biggest drop #${coldRank(c.id)}</span>`);
+  if (p.injured) f.push(`<span class="status injured">${esc(p.short)}: ${esc(p.injured)}</span>`);
+  return f.join('');
+}
+function tradeMeter(t) {
+  const g = sideStats(t.give), r = sideStats(t.get);
+  const giveVal = g.val + (+t.cashGive || 0), getVal = r.val + (+t.cashGet || 0);
+  const diff = getVal - giveVal, base = Math.max(giveVal, getVal, 1), bal = Math.max(-1, Math.min(1, diff / base));
+  const empty = !g.cs.length && !r.cs.length;
+  let verdict, kind;
+  if (empty) { verdict = 'Pick cards on each side to see how the trade stacks up.'; kind = 'flat'; }
+  else if (Math.abs(bal) <= 0.1) { verdict = Math.abs(bal) < 0.01 ? 'Fair trade. The two sides are even.' : `Fair trade. The two sides are within ${Math.round(Math.abs(bal) * 100)}% of each other.`; kind = 'up'; }
+  else if (diff > 0) { verdict = `You'd get ${money(diff)} more in value. Expect ${'@'}${esc(t.handle)} to ask for more.`; kind = 'up'; }
+  else { verdict = `You'd give up ${money(-diff)} more in value. Ask them to add about ${money(-diff)} in cash or another card.`; kind = 'down'; }
+  let momentum = '';
+  if (g.cs.length && r.cs.length) {
+    const gap = r.mom - g.mom;
+    momentum = gap > 5 ? `The cards you'd get are heating up faster: ${fmtPct(r.mom, false)} this month vs ${fmtPct(g.mom, false)} for yours.`
+      : gap < -5 ? `The cards you'd give are moving up faster: ${fmtPct(g.mom, false)} this month vs ${fmtPct(r.mom, false)} for theirs.`
+      : `Both sides are trending about the same this month.`;
+  }
+  const flags = [...g.cs, ...r.cs].filter(c => cardFlags(c)).map(c => `<div class="row" style="gap:8px"><span style="font-size:13px;color:var(--muted)">${esc(c.name)} · ${esc(PLAYERS[c.p].short)}</span>${cardFlags(c)}</div>`).join('');
+  return `<div class="panel section meterbox">
+    <div class="row between"><h2>Smart trade meter</h2><span class="eyebrow">Real sales data</span></div>
+    <div class="meterrow">
+      <div class="mside"><span class="k">You give</span><span class="num v">${moneyFull(giveVal)}</span><span class="num ${cls(g.mom)}" style="font-size:12px">${g.cs.length ? fmtPct(g.mom) + ' 1M' : '—'}</span></div>
+      <div class="meter" role="img" aria-label="Trade balance: ${diff >= 0 ? 'in your favor' : 'in their favor'} by ${money(Math.abs(diff))}">
+        <div class="mzone"></div><div class="mmark" style="left:${(50 + bal * 50).toFixed(1)}%"></div>
+        <div class="mlabels"><span>Favors them</span><span>Fair</span><span>Favors you</span></div>
+      </div>
+      <div class="mside" style="text-align:right"><span class="k">You get</span><span class="num v">${moneyFull(getVal)}</span><span class="num ${cls(r.mom)}" style="font-size:12px">${r.cs.length ? fmtPct(r.mom) + ' 1M' : '—'}</span></div>
+    </div>
+    <p class="mverdict ${kind}">${verdict}</p>
+    ${momentum ? `<p style="margin:0;color:var(--muted);font-size:14px">${momentum}</p>` : ''}
+    ${flags ? `<div class="section" style="gap:6px">${flags}</div>` : ''}
+  </div>`;
+}
+
+/* ---------- views ---------- */
+function viewCollectors() {
+  const list = collectors().filter(c => state.collSport === 'All' || c.fav === state.collSport || c.fav === 'All');
+  const hasMine = col().length, hasWish = wishlist().length;
+  const matches = collectors().map(c => ({ c, m: matchFor(c) })).filter(x => x.m.score > 0).sort((a, b) => b.m.score - a.m.score).slice(0, 3);
+  const sports = ['All', ...new Set(Object.values(PLAYERS).map(p => p.sport))];
+  return `<div class="view">
+    <div class="section" style="padding-top:8px"><h1>Collectors</h1><p class="lede">See what other collectors own, find cards you want, and build trades checked against real sales.</p></div>
+    <div class="alert info"><div><div style="font-weight:700">These are sample collectors</div><div style="color:var(--muted);font-size:14px">The profiles are made up so you can try trading and offers. Their cards and prices are real. Real collectors arrive with accounts.</div></div></div>
+    <div class="section"><h2>Your best trade matches</h2>
+      ${matches.length ? `<div class="list">${matches.map(({ c, m }) => `<div class="item" style="flex-wrap:wrap">${cAvatar(c, 40)}<div class="main"><span class="title">@${esc(c.handle)}</span><span class="sub">${esc(matchText(m))}</span></div><a class="btn primary" href="#trade-${c.id}" data-act="suggest" data-id="${c.id}">Build this trade</a></div>`).join('')}</div>`
+        : `<div class="panel" style="display:flex;flex-direction:column;gap:8px"><span style="font-weight:700">Get matched with collectors</span><span style="color:var(--muted);font-size:14px">${!hasWish ? 'Add cards to your wishlist from any card page (☆ Add to wishlist). ' : ''}${!hasMine ? 'Add cards you own to My collection. ' : ''}Pulled then finds collectors who have what you want and want what you have.</span>${!hasMine || !hasWish ? `<div class="row"><button type="button" class="btn" data-act="sampleMatch">Try it with sample cards</button></div>` : ''}</div>`}
+    </div>
+    <div class="section"><div class="row between"><h2>All collectors</h2><div class="chips">${sports.map(s => `<button type="button" class="chip" data-set="collSport" data-val="${s}" aria-pressed="${s === state.collSport}">${s}</button>`).join('')}</div></div>
+      <div class="grid">${list.map(c => { const m = matchFor(c), sale = c.items.filter(x => x.status === 'sale').length, tr = c.items.filter(x => x.status === 'trade').length;
+        return `<a class="pcard" href="#collector-${c.id}"><div class="row" style="gap:12px;flex-wrap:nowrap">${cAvatar(c, 48)}<div style="min-width:0"><div style="font-size:17px;font-weight:700">@${esc(c.handle)}</div><div style="font-size:13px;color:var(--faint)">${c.fav === 'All' ? 'All sports' : esc(c.fav)} · collecting since ${c.since}</div></div></div>
+          <div class="row between"><span class="num" style="font-size:20px;font-weight:600">${money(collValue(c))}</span><span style="font-size:13px;color:var(--muted)">${c.items.length} cards</span></div>
+          <div class="row" style="gap:6px"><span class="stag st-sale">${sale} for sale</span><span class="stag st-trade">${tr} to trade</span>${m.score ? '<span class="stag st-match">Match</span>' : ''}</div></a>`; }).join('')}</div>
+    </div>
+  </div>`;
+}
+
+function viewCollector(id) {
+  const c = collector(id); if (!c) return notFound();
+  const mine = new Set(col()), want = new Set(wishlist()), m = matchFor(c);
+  const order = { sale: 0, trade: 1, keep: 2 };
+  const items = [...c.items].sort((a, b) => order[a.status] - order[b.status] || last(CARD[b.id].price) - last(CARD[a.id].price));
+  const of = state.offerFor && state.offerFor.cid === c.id ? c.items.find(x => x.id === state.offerFor.card) : null;
+  return `<div class="view">
+    <div class="section" style="padding-top:8px">
+      <a href="#collectors" style="color:var(--muted);text-decoration:none;font-weight:600;font-size:14px">← All collectors</a>
+      <div class="row" style="gap:16px">${cAvatar(c, 72)}<div style="display:flex;flex-direction:column;gap:6px;min-width:0"><h1>@${esc(c.handle)}</h1>
+        <div class="row" style="gap:8px"><span class="tag">Sample profile</span><span style="color:var(--muted)">${c.fav === 'All' ? 'All sports' : esc(c.fav)} · collecting since ${c.since} · ${c.trades} trades completed</span></div></div></div>
+      <div class="row"><a class="btn primary" href="#trade-${c.id}" data-act="suggest" data-id="${c.id}">Propose a trade</a>${m.score ? `<span style="color:var(--accent);font-weight:600;font-size:14px">${esc(matchText(m))}</span>` : ''}</div>
+    </div>
+    <div class="tiles">
+      <div class="tile"><span class="k">Collection value</span><span class="v">${money(collValue(c))}</span></div>
+      <div class="tile"><span class="k">For sale</span><span class="v">${c.items.filter(x => x.status === 'sale').length}</span></div>
+      <div class="tile"><span class="k">Open to trade</span><span class="v">${c.items.filter(x => x.status === 'trade').length}</span></div>
+      <div class="tile"><span class="k">Cards</span><span class="v">${c.items.length}</span></div>
+    </div>
+    ${of ? offerPanel(c, of) : ''}
+    <div class="section"><h2>Collection</h2><div class="list">${items.map(x => { const cd = CARD[x.id], [lab, cl] = STATUS[x.status];
+      return `<div class="item" style="flex-wrap:wrap">${flameThumb(cd, cardVisual(cd))}<div class="main"><a class="title" href="#card-${cd.id}" style="color:var(--fg);text-decoration:none">${esc(cd.name)}</a><span class="sub">${esc(PLAYERS[cd.p].name)} · ${esc(cd.detail)} · market ${money(last(cd.price))}</span><div class="row" style="gap:6px;margin-top:4px"><span class="stag ${cl}">${lab}${x.status === 'sale' ? ' · ' + money(x.ask) : ''}</span>${want.has(x.id) ? '<span class="stag st-match">On your wishlist</span>' : ''}</div></div>
+        ${x.status === 'sale' ? `<button type="button" class="btn" data-act="offerOpen" data-cid="${c.id}" data-id="${cd.id}">Make offer</button>` : x.status === 'trade' ? `<a class="btn" href="#trade-${c.id}" data-act="tradeFor" data-cid="${c.id}" data-id="${cd.id}">Trade for it</a>` : ''}</div>`; }).join('')}</div></div>
+    <div class="section"><h2>Wishlist</h2><p style="margin:0;color:var(--muted);font-size:14px">Cards @${esc(c.handle)} is looking for.</p>
+      <div class="list">${c.wants.map(wid => `<div class="row" style="gap:8px;flex-wrap:nowrap"><div style="flex:1;min-width:0">${cardItem(CARD[wid])}</div>${mine.has(wid) ? '<span class="stag st-match">You own this</span>' : ''}</div>`).join('')}</div></div>
+  </div>`;
+}
+function offerPanel(c, x) {
+  const cd = CARD[x.id], mk = last(cd.price);
+  return `<div class="panel section" id="offerPanel" style="border-color:var(--accent)">
+    <div class="row between"><h2>Make an offer</h2><button type="button" class="btn" style="min-height:36px" data-act="offerClose">Cancel</button></div>
+    <div class="row" style="gap:12px;flex-wrap:nowrap"><div class="thumb">${cardVisual(cd)}</div><div class="main"><span class="title">${esc(cd.name)}</span><span class="sub">${esc(PLAYERS[cd.p].name)} · ${esc(cd.detail)}</span></div></div>
+    <div class="tiles"><div class="tile"><span class="k">Asking</span><span class="v">${money(x.ask)}</span></div><div class="tile"><span class="k">Market value</span><span class="v">${money(mk)}</span></div><div class="tile"><span class="k">1-month trend</span><span class="v ${cls(monthChange(cd))}">${fmtPct(monthChange(cd))}</span></div></div>
+    <label for="offerAmt" style="font-weight:600">Your offer ($)</label>
+    <input id="offerAmt" type="number" min="1" step="1" inputmode="numeric" value="${Math.round(Math.min(x.ask, mk) * 0.95)}" data-mk="${mk}" data-ask="${x.ask}" style="min-height:48px;border-radius:10px;border:1px solid var(--line);background:var(--surface);padding:0 14px;font-size:18px;max-width:220px">
+    <span id="offerHint" style="font-size:14px;color:var(--muted)"></span>
+    <div class="row"><button type="button" class="btn primary" data-act="offerSend" data-cid="${c.id}" data-id="${cd.id}">Send offer</button><button type="button" class="btn" data-act="buyNow" data-cid="${c.id}" data-id="${cd.id}">Buy now for ${money(x.ask)}</button></div>
+  </div>`;
+}
+function offerHint() {
+  const i = $('#offerAmt'), h = $('#offerHint'); if (!i || !h || !i.dataset) return;
+  const v = +i.value || 0, mk = +i.dataset.mk, ask = +i.dataset.ask;
+  const p = Math.round(v / mk * 100);
+  h.textContent = v ? `${p}% of market value · ${v >= ask ? 'at or above their asking price' : money(ask - v) + ' under their asking price'}${p < 75 ? '. Offers this low are often declined.' : ''}` : '';
+}
+
+function ensureTrade(cid) {
+  const c = collector(cid);
+  if (!state.trade || state.trade.cid !== cid) state.trade = { cid, handle: c.handle, give: [], get: [], cashGive: 0, cashGet: 0 };
+  return state.trade;
+}
+function suggestTrade(cid) {
+  const c = collector(cid), t = ensureTrade(cid), m = matchFor(c);
+  t.give = [...m.theyWant]; t.get = m.theyHave.map(x => x.id); t.cashGive = 0; t.cashGet = 0;
+  if (!t.get.length) { const best = c.items.filter(x => x.status === 'trade').sort((a, b) => last(CARD[b.id].price) - last(CARD[a.id].price))[0]; if (best) t.get = [best.id]; }
+  const diff = sideStats(t.get).val - sideStats(t.give).val;
+  if (diff > 0) t.cashGive = Math.round(diff); else if (diff < 0) t.cashGet = Math.round(-diff);
+}
+function pickRow(cd, act, on, note, disabled) {
+  return `<button type="button" class="pick" data-act="${act}" data-id="${cd.id}" aria-pressed="${on}"${disabled ? ' disabled' : ''}><span class="thumb">${cardVisual(cd)}</span><span class="main"><span class="title">${esc(cd.name)}</span><span class="sub">${esc(PLAYERS[cd.p].name)} · ${esc(cd.detail)}${note ? ' · ' + note : ''}</span></span><span class="end"><span class="num" style="font-weight:600">${money(last(cd.price))}</span><span class="num ${cls(monthChange(cd))}" style="font-size:12px">${fmtPct(monthChange(cd))}</span></span><span class="tick" aria-hidden="true">${on ? '✓' : '+'}</span></button>`;
+}
+function viewTrade(cid) {
+  const c = collector(cid); if (!c) return notFound();
+  const t = ensureTrade(cid), mine = col();
+  const theirs = [...c.items].sort((a, b) => (a.status === 'keep') - (b.status === 'keep'));
+  return `<div class="view">
+    <div class="section" style="padding-top:8px"><a href="#collector-${c.id}" style="color:var(--muted);text-decoration:none;font-weight:600;font-size:14px">← @${esc(c.handle)}</a>
+      <div class="row between"><h1>Trade with @${esc(c.handle)}</h1><button type="button" class="btn" data-act="suggest" data-id="${c.id}">Suggest a fair trade</button></div></div>
+    ${tradeMeter(t)}
+    <div class="cols">
+      <div class="section"><div class="row between"><h2>You give</h2><span class="eyebrow">${t.give.length} selected</span></div>
+        ${mine.length ? `<div class="list">${mine.map(id => CARD[id]).filter(Boolean).map(cd => pickRow(cd, 'tgGive', t.give.includes(cd.id), c.wants.includes(cd.id) ? '<span style="color:var(--accent)">they want this</span>' : '')).join('')}</div>`
+          : `<div class="panel" style="display:flex;flex-direction:column;gap:8px"><span style="color:var(--muted);font-size:14px">Add cards to My collection to offer them in trades.</span><div class="row"><button type="button" class="btn" data-act="sampleMatch">Add sample cards</button></div></div>`}
+        <label class="row" style="gap:8px;font-size:14px;color:var(--muted)" for="cashGive">Add cash $ <input id="cashGive" type="number" min="0" step="1" inputmode="numeric" value="${+t.cashGive || 0}" style="min-height:44px;width:120px;border-radius:10px;border:1px solid var(--line);background:var(--surface);padding:0 10px"></label>
+      </div>
+      <div class="section"><div class="row between"><h2>You get</h2><span class="eyebrow">${t.get.length} selected</span></div>
+        <div class="list">${theirs.map(x => pickRow(CARD[x.id], 'tgGet', t.get.includes(x.id), x.status === 'keep' ? 'not for trade' : wishlist().includes(x.id) ? '<span style="color:var(--accent)">on your wishlist</span>' : '', x.status === 'keep')).join('')}</div>
+        <label class="row" style="gap:8px;font-size:14px;color:var(--muted)" for="cashGet">They add cash $ <input id="cashGet" type="number" min="0" step="1" inputmode="numeric" value="${+t.cashGet || 0}" style="min-height:44px;width:120px;border-radius:10px;border:1px solid var(--line);background:var(--surface);padding:0 10px"></label>
+      </div>
+    </div>
+    <div class="row"><button type="button" class="btn primary" data-act="sendTrade"${t.give.length || t.get.length ? '' : ' disabled'}>Send trade offer</button><span style="font-size:13px;color:var(--faint)">Prototype: offers are saved in My collection. Sending to real collectors comes with accounts.</span></div>
+  </div>`;
+}
+
+/* extra sections for My collection */
+function wishAndOffers() {
+  const w = wishlist(), o = offers();
+  const owners = id => collectors().filter(c => c.items.some(x => x.id === id && x.status !== 'keep')).length;
+  return `<div class="section"><h2>Wishlist <span style="color:var(--faint);font-weight:500;font-size:15px">${w.length}</span></h2>
+      ${w.length ? `<div class="list">${w.map(id => `<div class="row" style="gap:8px;flex-wrap:nowrap"><div style="flex:1;min-width:0">${cardItem(CARD[id])}</div><span class="stag st-trade">${owners(id)} available</span><button type="button" class="btn" style="min-height:44px;padding:0 12px" data-act="toggleWish" data-id="${id}" aria-label="Remove from wishlist">Remove</button></div>`).join('')}</div>`
+        : `<p style="margin:0;color:var(--muted);font-size:14px">Add cards you're hunting for with ☆ Add to wishlist on any card page. Pulled matches you with collectors who have them.</p>`}</div>
+    <div class="section"><h2>My offers <span style="color:var(--faint);font-weight:500;font-size:15px">${o.length}</span></h2>
+      ${o.length ? `<div class="list">${o.map(x => { const c = collector(x.cid) || { handle: x.cid };
+        const what = x.type === 'trade' ? `Trade: ${x.give.length} card${x.give.length === 1 ? '' : 's'}${x.cashGive ? ' + ' + money(x.cashGive) : ''} for ${x.get.length} card${x.get.length === 1 ? '' : 's'}${x.cashGet ? ' + ' + money(x.cashGet) : ''}` : `${x.type === 'buy-now' ? 'Buy now' : 'Offer'} ${money(x.amount)} for ${CARD[x.card] ? esc(CARD[x.card].name) : 'a card'}`;
+        return `<div class="item"><div class="main"><span class="title">${what}</span><span class="sub">To @${esc(c.handle)} · ${esc(x.at)}</span></div><span class="stag st-keep">Saved (prototype)</span></div>`; }).join('')}</div>`
+        : `<p style="margin:0;color:var(--muted);font-size:14px">Offers and trades you send show up here.</p>`}</div>`;
+}
+/* collectors who own a card, for the card page */
+function ownersSection(cd) {
+  const own = collectors().map(c => ({ c, x: c.items.find(x => x.id === cd.id) })).filter(r => r.x && r.x.status !== 'keep');
+  if (!own.length) return '';
+  return `<div class="section"><h2>Available from collectors</h2><div class="list">${own.map(({ c, x }) => `<div class="item" style="flex-wrap:wrap">${cAvatar(c, 36)}<div class="main"><a class="title" href="#collector-${c.id}" style="color:var(--fg);text-decoration:none">@${esc(c.handle)}</a><span class="sub">Sample collector · ${c.trades} trades</span></div><span class="stag ${STATUS[x.status][1]}">${STATUS[x.status][0]}${x.status === 'sale' ? ' · ' + money(x.ask) : ''}</span>${x.status === 'sale' ? `<a class="btn" href="#collector-${c.id}" data-act="offerOpen" data-cid="${c.id}" data-id="${cd.id}">Make offer</a>` : `<a class="btn" href="#trade-${c.id}" data-act="tradeFor" data-cid="${c.id}" data-id="${cd.id}">Trade for it</a>`}</div>`).join('')}</div></div>`;
+}
+/* sample cards that make the matching demo work: some you own that collectors want, some on your wishlist that they have */
+function sampleMatchCards() {
+  const cs = collectors();
+  const wanted = [...new Set(cs.flatMap(c => c.wants))];
+  const offered = [...new Set(cs.flatMap(c => c.items.filter(x => x.status !== 'keep').map(x => x.id)))];
+  const own = wanted.slice(0, 3), wish = offered.filter(id => !own.includes(id)).slice(0, 3);
+  setCol([...new Set([...col(), ...own])]); setWish([...new Set([...wishlist(), ...wish])]);
+}
+
 const notFound = () => `<div class="view"><div class="panel empty"><h2>That page doesn't exist</h2><a class="btn primary" href="#home">Go home</a></div></div>`;
 
 /* ---------- global search (top bar) ---------- */
@@ -1581,6 +1856,9 @@ function render() {
   else if (h === 'compare') { html = viewCompare(); nav = 'compare'; }
   else if (h === 'movers') { html = viewMovers(); nav = 'movers'; }
   else if (h === 'collection') { html = viewCollection(); nav = 'collection'; }
+  else if (h === 'collectors') { html = viewCollectors(); nav = 'collectors'; }
+  else if (h.startsWith('collector-')) { html = viewCollector(h.slice(10)); nav = 'collectors'; }
+  else if (h.startsWith('trade-')) { html = viewTrade(h.slice(6)); nav = 'collectors'; }
   else if (h === 'build') { html = viewBuild(); nav = 'build'; }
   else html = notFound();
   $('#app').innerHTML = html;
@@ -1590,6 +1868,8 @@ function render() {
   try { initIce(); } catch (e) { /* ice is decorative */ }
   const q = $('#q');
   if (q) q.addEventListener('input', e => { state.homeQuery = e.target.value; const pos = e.target.selectionStart; render(); const nq = $('#q'); nq.focus(); try { nq.setSelectionRange(pos, pos); } catch (err) {} });
+  const oa = $('#offerAmt'); if (oa && oa.addEventListener) { oa.addEventListener('input', offerHint); offerHint(); }
+  ['cashGive', 'cashGet'].forEach(k => { const el = document.getElementById(k); if (el && state.trade) el.addEventListener('change', e => { state.trade[k] = Math.max(0, Math.round(+e.target.value || 0)); render(); }); });
   const ms = $('#minSales'); if (ms) ms.addEventListener('change', e => { state.moversMin = e.target.value; render(); });
   const sort = $('#sort'); if (sort) sort.addEventListener('change', e => { state.playerSort = e.target.value; render(); });
   const photo = $('#photo'); if (photo) photo.addEventListener('change', e => handlePhoto(e.target.files[0], e.target.dataset.id));
@@ -1602,7 +1882,22 @@ document.addEventListener('click', e => {
   const a = e.target.closest('[data-act]'); if (!a) return;
   const id = a.dataset.id;
   if (a.dataset.act === 'toggleCol') { const ids = col(); const has = ids.includes(id); setCol(has ? ids.filter(x => x !== id) : [...ids, id]); toast(has ? 'Removed from your collection' : 'Added to your collection'); render(); }
-  if (a.dataset.act === 'sampleCol') { setCol(['curry-chrome-base', 'ohtani-update', 'griffey-ud']); toast('Added 3 sample cards'); render(); }
+  if (a.dataset.act === 'sampleCol') { setCol([...CARDS].sort((x, y) => avg(y.sales) - avg(x.sales)).slice(0, 3).map(c => c.id)); toast('Added 3 sample cards'); render(); }
+  if (a.dataset.act === 'toggleWish') { const w = wishlist(), has = w.includes(id); setWish(has ? w.filter(x => x !== id) : [...w, id]); toast(has ? 'Removed from your wishlist' : 'Added to your wishlist'); render(); }
+  if (a.dataset.act === 'sampleMatch') { sampleMatchCards(); toast('Added sample cards to your collection and wishlist'); render(); }
+  if (a.dataset.act === 'suggest') { suggestTrade(id); if (!a.getAttribute('href')) render(); }
+  if (a.dataset.act === 'tradeFor') { const t = ensureTrade(a.dataset.cid); if (!t.get.includes(id)) t.get = [...t.get, id]; }
+  if (a.dataset.act === 'tgGive' || a.dataset.act === 'tgGet') { const t = state.trade, k = a.dataset.act === 'tgGive' ? 'give' : 'get'; if (t) { t[k] = t[k].includes(id) ? t[k].filter(x => x !== id) : [...t[k], id]; render(); } }
+  if (a.dataset.act === 'offerOpen') { state.offerFor = { cid: a.dataset.cid, card: id }; if (!a.getAttribute('href')) { render(); const p = document.getElementById('offerPanel'); if (p && p.scrollIntoView) p.scrollIntoView({ block: 'start' }); } }
+  if (a.dataset.act === 'offerClose') { state.offerFor = null; render(); }
+  if (a.dataset.act === 'offerSend' || a.dataset.act === 'buyNow') {
+    const c = collector(a.dataset.cid), x = c && c.items.find(i => i.id === id), amt = a.dataset.act === 'buyNow' ? x.ask : Math.round(+(($('#offerAmt') || {}).value) || 0);
+    if (!amt) { toast('Enter an offer amount'); return; }
+    addOffer({ type: a.dataset.act === 'buyNow' ? 'buy-now' : 'buy', cid: c.id, card: id, amount: amt });
+    state.offerFor = null; toast(a.dataset.act === 'buyNow' ? 'Saved. Checkout arrives with payments.' : `Offer of ${money(amt)} saved to My collection`); render();
+  }
+  if (a.dataset.act === 'sendTrade') { const t = state.trade; if (t) { addOffer({ type: 'trade', cid: t.cid, give: [...t.give], get: [...t.get], cashGive: +t.cashGive || 0, cashGet: +t.cashGet || 0 }); toast('Trade offer saved to My collection'); state.trade = null; location.hash = 'collection'; } }
+
   if (a.dataset.act === 'removePhoto') { setPhoto(id, null); toast('Showing artwork'); render(); }
   if (a.dataset.act === 'removeCompare') { state.compareIds = state.compareIds.filter(x => x !== id); render(); }
   if (a.dataset.act === 'compareThis') { if (!state.compareIds.includes(id)) state.compareIds = [id, ...state.compareIds.filter(x => x !== id)].slice(0, 4); else state.compareIds = [id, ...state.compareIds.filter(x => x !== id)]; location.hash = 'compare'; }
