@@ -567,253 +567,100 @@ function teamAccent(primary, alt) {
 function hexHue(h) { const c = hexRgb(h); if (!c) return null; const [r, g, b] = c.map(v => v / 255), mx = Math.max(r, g, b), mn = Math.min(r, g, b), d = mx - mn; if (!d) return null; let x = mx === r ? ((g - b) / d) % 6 : mx === g ? (b - r) / d + 2 : (r - g) / d + 4; return Math.round(x * 60 + 360) % 360; }
 function teamTag(p) { return p.teamAbbr ? `<span class="teamtag" style="--tc:${p.color || 'var(--muted)'}">${esc(p.teamAbbr)}</span>` : ''; }
 
-/* ---------- player avatars ----------
-   Player avatars: original action silhouettes in team colors with jersey number.
-   No faces or likeness: heads are shaded silhouettes or helmets. */
+/* ---------- player avatars: the back of the player's jersey ----------
+   Original illustration in team colors with last name and number (no logos, no likeness). */
 function avatarSVG(o) {
-  // o: { sport, pos, num, abbr, prim, alt, accent, uid }
+  // o: { sport, num, name, abbr, prim, alt, accent, uid }
   const hexRgb = h => { const m = /^#?([0-9a-f]{6})$/i.exec(h || ''); if (!m) return null; const n = parseInt(m[1], 16); return [n >> 16 & 255, n >> 8 & 255, n & 255]; };
   const lum = c => { if (!c) return 0; const f = v => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); }; return 0.2126 * f(c[0]) + 0.7152 * f(c[1]) + 0.0722 * f(c[2]); };
   const hex = c => '#' + c.map(v => Math.max(0, Math.min(255, Math.round(v))).toString(16).padStart(2, '0')).join('');
-  const shade = (h, k) => { const c = hexRgb(h) || [80, 90, 110]; return hex(c.map(v => k < 0 ? v * (1 + k) : v + (255 - v) * k)); };
-  const contrast = (a, b) => { const x = lum(hexRgb(a)), y = lum(hexRgb(b)); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); };
-  const prim = o.prim || '#3a4a66', alt = o.alt || '#d9dee8';
-  const jersey = prim;
-  const trim = contrast(alt, prim) > 1.8 ? alt : (lum(hexRgb(prim)) > 0.4 ? '#14171f' : '#f2f4f8');
-  const numFill = contrast(trim, prim) > 2.2 ? trim : (lum(hexRgb(prim)) > 0.4 ? '#14171f' : '#ffffff');
-  const accent = o.accent || shade(prim, 0.3);
-  const id = 'av' + (o.uid || Math.random().toString(36).slice(2, 8));
-  const sil = '#151a23', rim = shade(accent, 0.1);
+  const shade = (h, k) => { const c = hexRgb(h) || [70, 80, 100]; return hex(c.map(v => k < 0 ? v * (1 + k) : v + (255 - v) * k)); };
+  const ratio = (a, b) => { const x = lum(hexRgb(a)), y = lum(hexRgb(b)); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); };
+  const e = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const body = o.prim || '#33415c';
+  // letters: the team's second color when it reads on the jersey, else white or black
+  const letter = o.alt && ratio(o.alt, body) >= 2.2 ? o.alt : (lum(hexRgb(body)) > 0.45 ? '#111418' : '#ffffff');
+  // outline around the letters: the other contrasting option
+  const outline = ratio('#111418', letter) > ratio('#ffffff', letter) ? shade(body, -0.55) : shade(body, 0.55);
+  const trim = letter;
+  const accent = o.accent || shade(body, 0.35);
+  const id = 'jy' + (o.uid || Math.random().toString(36).slice(2, 8));
   const num = String(o.num || '').replace('#', '').slice(0, 2);
+  const name = String(o.name || '').toUpperCase().replace(/[^A-Z' .-]/g, '');
   const font = "'Inter Tight', 'Arial Black', Arial, sans-serif";
-  const S = { jersey, jerseyDark: shade(jersey, -0.28), trim, numFill, sil, rim, accent, font, num, id, abbr: o.abbr || '' };
-  const sport = o.sport, pos = String(o.pos || '').toUpperCase();
-  let pose, scene;
-  if (sport === 'NBA') { scene = sceneCourt(S); pose = /^C$|PF|^F/.test(pos) && !/G/.test(pos) ? nbaDunk(S) : nbaJumper(S); }
-  else if (sport === 'MLB') { scene = sceneDiamond(S); pose = /^(P|SP|RP)$/.test(pos) ? mlbPitcher(S) : mlbBatter(S); }
-  else { scene = sceneTurf(S); pose = /QB/.test(pos) ? nflQB(S) : /RB/.test(pos) ? nflRB(S) : nflCatch(S); }
-  return `<svg viewBox="0 0 200 200" width="100%" height="100%" role="img" aria-label="Illustrated ${esc0(o.abbr || '')} #${esc0(num)} player avatar" xmlns="http://www.w3.org/2000/svg">
+  const sport = o.sport || 'NBA';
+
+  // jersey cut by sport (back view, hanging)
+  const cut = {
+    NBA: { path: 'M66 30 L86 30 Q100 37 114 30 L134 30 C136 54 146 72 162 80 L159 186 Q100 192 41 186 L38 80 C54 72 64 54 66 30 Z',
+      trim: 'M66 30 C64 54 54 72 38 80 M134 30 C136 54 146 72 162 80 M86 30 Q100 37 114 30', nameY: 74, arc: true, numY: 160, numSize: 70, nameMax: 100 },
+    MLB: { path: 'M78 30 Q100 38 122 30 L150 36 L184 62 L170 94 L153 84 L156 188 Q100 193 44 188 L47 84 L30 94 L16 62 L50 36 Z',
+      trim: 'M78 30 Q100 38 122 30 M184 62 L170 94 M16 62 L30 94', nameY: 72, arc: true, numY: 156, numSize: 64, nameMax: 100 },
+    NFL: { path: 'M76 30 Q100 40 124 30 L160 38 Q188 50 190 82 L168 94 L160 86 L157 188 Q100 193 43 188 L40 86 L32 94 L10 82 Q12 50 40 38 Z',
+      trim: 'M76 30 Q100 40 124 30', nameY: 80, arc: null, numY: 168, numSize: 82, nameMax: 104 }
+  }[sport] || null;
+  const C = cut || { path: '', trim: '' };
+  const nameSize = Math.max(9, Math.min(17, C.nameMax / Math.max(1, name.length * 0.66)));
+  const sleeveStripes = sport === 'NFL'
+    ? `<path d="M18 68 Q30 58 40 52 M22 78 Q32 70 41 64 M182 68 Q170 58 160 52 M178 78 Q168 70 159 64" stroke="${trim}" stroke-width="4" fill="none"/>`
+    : sport === 'MLB' ? `<path d="M178 70 L166 92 M22 70 L34 92" stroke="${trim}" stroke-width="3" fill="none" opacity=".9"/>` : '';
+  const sideStripe = sport === 'NBA' ? `<path d="M40 96 L42 184 M160 96 L158 184" stroke="${trim}" stroke-width="5" opacity=".9"/>` : '';
+  const piping = sport === 'MLB' ? `<path d="M100 36 L100 189" stroke="${shade(body, -0.25)}" stroke-width="1.2" opacity=".7"/>` : '';
+  const mesh = sport !== 'MLB' ? `<pattern id="${id}m" width="4" height="4" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".7" fill="#000" opacity=".18"/></pattern>` : '';
+  // last name: arched letter by letter on basketball and baseball jerseys, straight on football
+  let nameEl = '';
+  if (name) {
+    const letters = [...name], n = letters.length;
+    const charW = nameSize * (n > 9 ? 0.66 : 0.78);
+    const W = Math.min(C.nameMax, n * charW);
+    const curve = C.arc ? 9 : 0;
+    nameEl = letters.map((ch, i) => {
+      const x = 100 - W / 2 + (i + 0.5) * (W / n);
+      const u = (x - 100) / (W / 2 || 1);
+      const y = C.nameY + curve * u * u;
+      const ang = Math.atan(2 * curve * u / (W / 2 || 1)) * 180 / Math.PI;
+      return `<text x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="middle" font-family="${font}" font-weight="900" font-size="${nameSize.toFixed(1)}" fill="${letter}" stroke="${outline}" stroke-width="${(nameSize / 7).toFixed(1)}" paint-order="stroke"${curve ? ` transform="rotate(${ang.toFixed(1)} ${x.toFixed(1)} ${y.toFixed(1)})"` : ''}>${e(ch)}</text>`;
+    }).join('');
+  }
+  return `<svg viewBox="0 0 200 200" width="100%" height="100%" role="img" aria-label="${e(o.abbr || '')} jersey, ${e(name || 'player')} number ${e(num)}" xmlns="http://www.w3.org/2000/svg">
 <defs>
-  <clipPath id="${id}c"><rect x="0" y="0" width="200" height="200" rx="30"/></clipPath>
-  <radialGradient id="${id}g" cx="50%" cy="34%" r="70%"><stop offset="0" stop-color="${accent}" stop-opacity=".55"/><stop offset=".55" stop-color="${shade(prim, -0.35)}" stop-opacity=".55"/><stop offset="1" stop-color="#07090d" stop-opacity="1"/></radialGradient>
-  <linearGradient id="${id}j" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${shade(jersey, 0.12)}"/><stop offset=".6" stop-color="${jersey}"/><stop offset="1" stop-color="${shade(jersey, -0.3)}"/></linearGradient>
-  <linearGradient id="${id}s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#232a36"/><stop offset=".5" stop-color="${sil}"/><stop offset="1" stop-color="#0c0f15"/></linearGradient>
-  <filter id="${id}d" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000" flood-opacity=".55"/></filter>
+  <clipPath id="${id}c"><rect width="200" height="200" rx="30"/></clipPath>
+  <clipPath id="${id}j"><path d="${C.path}"/></clipPath>
+  <radialGradient id="${id}g" cx="50%" cy="40%" r="70%"><stop offset="0" stop-color="${accent}" stop-opacity=".45"/><stop offset=".6" stop-color="${shade(body, -0.5)}" stop-opacity=".5"/><stop offset="1" stop-color="#07090d"/></radialGradient>
+  <linearGradient id="${id}f" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#000" stop-opacity=".32"/><stop offset=".22" stop-color="#000" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".07"/><stop offset=".78" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".32"/></linearGradient>
+  <linearGradient id="${id}v" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".1"/><stop offset=".35" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".28"/></linearGradient>
+  <filter id="${id}d" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000" flood-opacity=".6"/></filter>
+  ${mesh}
 </defs>
 <g clip-path="url(#${id}c)">
   <rect width="200" height="200" fill="#090c11"/>
   <rect width="200" height="200" fill="url(#${id}g)"/>
-  <text x="100" y="120" text-anchor="middle" font-family="${font}" font-weight="900" font-size="150" fill="${trim}" opacity=".07" letter-spacing="-6">${esc0(num)}</text>
-  ${[0, 1, 2, 3, 4, 5].map(i => `<path d="M${-40 + i * 46} 200 L${40 + i * 46} 0" stroke="${trim}" stroke-width="9" opacity=".035"/>`).join('')}
-  ${scene}
-  <g filter="url(#${id}d)">${pose}</g>
-  <rect x="1.5" y="1.5" width="197" height="197" rx="28.5" fill="none" stroke="${accent}" stroke-opacity=".55" stroke-width="3"/>
+  ${[0, 1, 2, 3, 4, 5].map(i => `<path d="M${-40 + i * 46} 200 L${40 + i * 46} 0" stroke="#fff" stroke-width="9" opacity=".025"/>`).join('')}
+  <path d="M74 31 L100 17 L126 31" fill="none" stroke="#b9c0cc" stroke-width="3" stroke-linejoin="round" opacity=".9"/>
+  <path d="M100 17 L100 11 Q100 5 106 5 Q112 5 112 11" fill="none" stroke="#b9c0cc" stroke-width="2.6" stroke-linecap="round"/>
+  <g filter="url(#${id}d)">
+    <path d="${C.path}" fill="${body}"/>
+    <g clip-path="url(#${id}j)">
+      ${mesh ? `<rect width="200" height="200" fill="url(#${id}m)"/>` : ''}
+      ${piping}${sideStripe}${sleeveStripes}
+      <path d="M60 120 Q72 150 64 186 M140 118 Q128 150 136 186 M96 100 Q104 140 98 188" stroke="#000" stroke-width="6" fill="none" opacity=".08" stroke-linecap="round"/>
+      ${nameEl}
+      <text x="100" y="${C.numY}" text-anchor="middle" font-family="${font}" font-weight="900" font-size="${C.numSize}" letter-spacing="-2" fill="${letter}" stroke="${outline}" stroke-width="${(C.numSize / 18).toFixed(1)}" paint-order="stroke">${e(num)}</text>
+      <rect width="200" height="200" fill="url(#${id}f)"/>
+      <rect width="200" height="200" fill="url(#${id}v)"/>
+    </g>
+    <path d="${C.trim}" fill="none" stroke="${trim}" stroke-width="${sport === 'NBA' ? 5 : 4}" stroke-linecap="round"/>
+    <path d="${C.path}" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="1"/>
+  </g>
+  <rect x="1.5" y="1.5" width="197" height="197" rx="28.5" fill="none" stroke="${accent}" stroke-opacity=".5" stroke-width="3"/>
 </g>
 </svg>`;
-}
-function esc0(s) { return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
-
-/* ---------- scenes ---------- */
-function sceneCourt(S) {
-  const planks = [0, 1, 2, 3, 4, 5, 6, 7].map(i => `<path d="M${-10 + i * 30} 200 L${30 + i * 24} 150" stroke="#2a1a0c" stroke-width="1" opacity=".55"/>`).join('');
-  return `<path d="M0 150 L200 150 L200 200 L0 200 Z" fill="#6b4524"/>
-  <path d="M0 150 L200 150 L200 200 L0 200 Z" fill="url(#${S.id}g)" opacity=".35"/>${planks}
-  <path d="M0 150 L200 150" stroke="#f2e6d0" stroke-opacity=".35" stroke-width="1.5"/>
-  <path d="M30 200 Q100 150 170 200" fill="none" stroke="#f2e6d0" stroke-opacity=".3" stroke-width="1.5"/>
-  <path d="M70 200 L70 168 L130 168 L130 200" fill="${S.jerseyDark}" fill-opacity=".45" stroke="#f2e6d0" stroke-opacity=".3" stroke-width="1.5"/>`;
-}
-function sceneDiamond(S) {
-  return `<path d="M0 148 L200 148 L200 200 L0 200 Z" fill="#1d3a22"/>
-  ${[0, 1, 2, 3, 4, 5].map(i => `<path d="M${i * 40} 148 L${i * 40 + 20} 148 L${i * 40 - 10} 200 L${i * 40 - 30} 200 Z" fill="#244a2b" opacity=".6"/>`).join('')}
-  <path d="M-10 200 Q100 150 210 200 Z" fill="#8a5a33"/>
-  <path d="M-10 200 Q100 150 210 200" fill="none" stroke="#b07a4a" stroke-width="2" opacity=".6"/>
-  <path d="M0 148 L200 148" stroke="#f2f4f8" stroke-opacity=".18" stroke-width="1"/>`;
-}
-function sceneTurf(S) {
-  const lines = [-1, 0, 1, 2, 3].map(i => `<path d="M${40 + i * 50} 150 L${20 + i * 62} 200" stroke="#f2f4f8" stroke-opacity=".32" stroke-width="2"/>`).join('');
-  const hash = [0, 1, 2, 3, 4, 5, 6, 7, 8].map(i => `<path d="M${18 + i * 22} 170 L${16 + i * 22} 175" stroke="#f2f4f8" stroke-opacity=".28" stroke-width="1.5"/>`).join('');
-  return `<path d="M0 150 L200 150 L200 200 L0 200 Z" fill="#1c4424"/>
-  ${[0, 1, 2, 3, 4].map(i => `<path d="M0 ${150 + i * 10} L200 ${150 + i * 10}" stroke="#235a2e" stroke-width="5" opacity=".55"/>`).join('')}${lines}${hash}`;
-}
-
-/* ---------- shared parts ---------- */
-const limb = (d, w, S, col) => `<path d="${d}" fill="none" stroke="${col || `url(#${S.id}s)`}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>` + (col ? `<path d="${d}" fill="none" stroke="#fff" stroke-opacity=".14" stroke-width="${w * 0.3}" stroke-linecap="round" stroke-linejoin="round" transform="translate(-${w * 0.18} -${w * 0.12})"/>` : `<path d="${d}" fill="none" stroke="#4a5568" stroke-opacity=".55" stroke-width="${w * 0.32}" stroke-linecap="round" stroke-linejoin="round" transform="translate(-${w * 0.2} -${w * 0.14})"/>`);
-const shadow = (x, w) => `<ellipse cx="${x}" cy="184" rx="${w}" ry="5" fill="#000" opacity=".45"/>`;
-const shoe = (x, y, flip, col) => `<path d="M${x - 9 * flip} ${y + 2} q0 -6 ${7 * flip} -6 l${6 * flip} 1 q${5 * flip} 1 ${6 * flip} 5 z" fill="${col}" stroke="#0b0d12" stroke-width="1"/>`;
-const numText = (S, x, y, size, skew) => `<text x="${x}" y="${y}" text-anchor="middle" font-family="${S.font}" font-weight="900" font-size="${size}" fill="${S.numFill}" stroke="${S.jerseyDark}" stroke-width="${size / 14}" paint-order="stroke" ${skew ? `transform="skewY(${skew})"` : ''} letter-spacing="-0.5">${esc0(S.num)}</text>`;
-
-/* ---------- basketball: guard pulling up for a jumper ---------- */
-function nbaJumper(S) {
-  return `${shadow(100, 30)}
-  ${limb('M93 136 L87 157 L90 172', 11, S)}${limb('M107 136 L114 155 L110 170', 11, S)}
-  ${limb('M90 164 L90.5 172', 11.5, S, S.trim)}${limb('M110.5 162 L110 170', 11.5, S, S.trim)}
-  ${shoe(90, 176, 1, '#f2f4f8')}${shoe(110, 174, -1, '#f2f4f8')}
-  <path d="M82 113 L118 113 L122 141 L104 143 L100 133 L96 143 L78 141 Z" fill="url(#${S.id}j)"/>
-  <path d="M82 113 L118 113 L118.6 118 L81.4 118 Z" fill="${S.trim}"/>
-  <path d="M81.5 119 L78.5 140" stroke="${S.trim}" stroke-width="3"/><path d="M118.5 119 L121.5 140" stroke="${S.trim}" stroke-width="3"/>
-  ${limb('M86 79 L77 59 L91 41', 9.5, S)}${limb('M114 79 L123 59 L109 41', 9.5, S)}
-  <rect x="96" y="66" width="8" height="10" rx="3" fill="${S.sil}"/>
-  <circle cx="100" cy="62" r="9.5" fill="url(#${S.id}s)"/><path d="M90.6 60 Q100 56 109.4 60" stroke="${S.trim}" stroke-width="2.6" fill="none"/>
-  <path d="M85 75 Q100 70 115 75 L118 87 Q113 98 116 114 L84 114 Q87 98 82 87 Z" fill="url(#${S.id}j)"/>
-  <path d="M93 74 Q100 84 107 74" fill="${S.sil}" stroke="${S.trim}" stroke-width="2.4"/>
-  <path d="M85.2 75.5 Q81 81 82 87" fill="none" stroke="${S.trim}" stroke-width="2.2"/><path d="M114.8 75.5 Q119 81 118 87" fill="none" stroke="${S.trim}" stroke-width="2.2"/>
-  <text x="100" y="91" text-anchor="middle" font-family="${S.font}" font-weight="800" font-size="6.5" letter-spacing="1" fill="${S.numFill}">${esc0(S.abbr)}</text>
-  ${numText(S, 100, 109, 19)}
-  <circle cx="92" cy="40" r="4.6" fill="${S.sil}"/><circle cx="108" cy="40" r="4.6" fill="${S.sil}"/>
-  <circle cx="100" cy="29" r="11.5" fill="#d9621c"/><circle cx="96" cy="25" r="5" fill="#f08a43" opacity=".55"/>
-  <path d="M88.5 29 L111.5 29 M100 17.5 L100 40.5 M91.5 21 Q100 29 91.5 37 M108.5 21 Q100 29 108.5 37" stroke="#2a1608" stroke-width="1.2" fill="none"/>`;
-}
-
-/* ---------- basketball: forward/center throwing it down ---------- */
-function nbaDunk(S) {
-  return `<g opacity=".9"><rect x="138" y="14" width="56" height="34" rx="2" fill="#f2f4f8" fill-opacity=".1" stroke="#f2f4f8" stroke-opacity=".55" stroke-width="2"/>
-  <rect x="155" y="27" width="22" height="16" fill="none" stroke="#f2f4f8" stroke-opacity=".55" stroke-width="1.6"/>
-  <path d="M152 48 L160 48" stroke="#f2f4f8" stroke-opacity=".6" stroke-width="2"/></g>
-  ${shadow(92, 28)}
-  <g transform="rotate(-10 100 110)">
-  ${limb('M92 136 L80 148 L90 160', 11, S)}${limb('M107 136 L111 158 L105 176', 11, S)}
-  ${limb('M86 156 L90 160', 11.5, S, S.trim)}${limb('M107 168 L105 176', 11.5, S, S.trim)}
-  ${shoe(93, 163, 1, '#f2f4f8')}${shoe(104, 179, -1, '#f2f4f8')}
-  <path d="M82 113 L118 113 L122 141 L104 143 L100 133 L96 143 L78 141 Z" fill="url(#${S.id}j)"/>
-  <path d="M82 113 L118 113 L118.6 118 L81.4 118 Z" fill="${S.trim}"/>
-  <path d="M81.5 119 L78.5 140" stroke="${S.trim}" stroke-width="3"/><path d="M118.5 119 L121.5 140" stroke="${S.trim}" stroke-width="3"/>
-  ${limb('M86 80 L74 96 L70 112', 9.5, S)}
-  <rect x="96" y="66" width="8" height="10" rx="3" fill="${S.sil}"/>
-  <circle cx="100" cy="62" r="9.5" fill="url(#${S.id}s)"/>
-  <path d="M85 75 Q100 70 115 75 L118 87 Q113 98 116 114 L84 114 Q87 98 82 87 Z" fill="url(#${S.id}j)"/>
-  <path d="M93 74 Q100 84 107 74" fill="${S.sil}" stroke="${S.trim}" stroke-width="2.4"/>
-  <path d="M85.2 75.5 Q81 81 82 87" fill="none" stroke="${S.trim}" stroke-width="2.2"/><path d="M114.8 75.5 Q119 81 118 87" fill="none" stroke="${S.trim}" stroke-width="2.2"/>
-  <text x="100" y="91" text-anchor="middle" font-family="${S.font}" font-weight="800" font-size="6.5" letter-spacing="1" fill="${S.numFill}">${esc0(S.abbr)}</text>
-  ${numText(S, 100, 109, 19)}
-  ${limb('M114 79 L132 64 L148 50', 9.5, S)}
-  </g>
-  <circle cx="154" cy="40" r="11" fill="#d9621c"/><circle cx="150" cy="36" r="4.5" fill="#f08a43" opacity=".55"/>
-  <path d="M143 40 L165 40 M154 29 L154 51 M146 33 Q154 40 146 47 M162 33 Q154 40 162 47" stroke="#2a1608" stroke-width="1.2" fill="none"/>
-  <ellipse cx="160" cy="50" rx="14" ry="3.2" fill="none" stroke="#ff6a2b" stroke-width="2.6"/>
-  <path d="M147 51 L151 66 M153 52 L155 67 M160 53 L160 68 M167 52 L165 67 M173 51 L169 66 M151 66 L169 66" stroke="#f2f4f8" stroke-opacity=".65" stroke-width="1" fill="none"/>`;
-}
-
-/* ---------- baseball: hitter in his stance ---------- */
-function mlbBatter(S) {
-  const pants = '#e9edf2';
-  return `${shadow(104, 30)}
-  <path d="M121 70 L160 20" stroke="#c99a5b" stroke-width="5.5" stroke-linecap="round"/><path d="M144 40 L160 20" stroke="#d9ad72" stroke-width="7" stroke-linecap="round"/><path d="M146 36 L158 22" stroke="#fff" stroke-opacity=".35" stroke-width="1.6" stroke-linecap="round"/>
-  <circle cx="120" cy="71.5" r="3" fill="#8a6235"/>
-  ${limb('M95 136 L88 154 L86 172', 11, S, pants)}${limb('M113 136 L116 156 L118 172', 11, S, pants)}
-  ${limb('M87 160 L86 172', 11.5, S, S.jersey)}${limb('M116.6 160 L118 172', 11.5, S, S.jersey)}
-  ${shoe(86, 177, -1, '#14171f')}${shoe(118, 177, 1, '#14171f')}
-  <path d="M93 106 L123 106 L126 136 L111 140 L104 128 L97 140 L90 136 Z" fill="${pants}"/>
-  <path d="M123 108 L126 136" stroke="${S.jersey}" stroke-width="2.4"/>
-  <rect x="92" y="103" width="32" height="5" rx="1.5" fill="#1b1f27"/><rect x="104" y="103.5" width="6" height="4" fill="#9aa3b5"/>
-  <path d="M97 70 Q111 64 124 72 L126 104 L92 105 Q91 86 97 70 Z" fill="url(#${S.id}j)"/>
-  <path d="M110 68 L110 104" stroke="${S.trim}" stroke-width="1.2" opacity=".6"/>
-  ${numText(S, 117, 96, 17)}
-  ${limb('M99 75 L104 64 L119 70', 9, S)}${limb('M122 76 L130 70 L122 68', 9, S)}
-  <circle cx="121" cy="70" r="4.5" fill="${S.sil}"/>
-  <rect x="104" y="62" width="8" height="9" rx="3" fill="${S.sil}"/>
-  <circle cx="108" cy="56" r="10" fill="url(#${S.id}s)"/>
-  <path d="M97 57 Q97 43 109 43 Q121 43 120 57 L121 61 L112 61 L111 57 Z" fill="url(#${S.id}j)" stroke="${S.jerseyDark}" stroke-width="1"/>
-  <path d="M98 55 L88 57.5 L98 59.5 Z" fill="${S.jerseyDark}"/>
-  <path d="M111 57 Q118 58 119 66 L113 66 Z" fill="${S.jersey}" stroke="${S.jerseyDark}" stroke-width="1"/>
-  <circle cx="115" cy="50" r="1.6" fill="${S.trim}" opacity=".8"/>`;
-}
-
-/* ---------- baseball: pitcher in his leg kick ---------- */
-function mlbPitcher(S) {
-  const pants = '#e9edf2';
-  return `<path d="M60 168 Q100 160 140 168 L140 176 Q100 168 60 176 Z" fill="#a06a3d" opacity=".9"/><rect x="92" y="164" width="16" height="3" fill="#f2f4f8" opacity=".85"/>
-  ${shadow(108, 24)}
-  ${limb('M110 136 L114 154 L113 170', 11, S, pants)}${limb('M113.6 156 L113 170', 11.5, S, S.jersey)}${shoe(113, 175, 1, '#14171f')}
-  ${limb('M100 134 L80 124 L84 146', 11, S, pants)}${limb('M81 132 L84 146', 11.5, S, S.jersey)}
-  <path d="M77 149 q-2 -6 4 -6 l8 0 q4 1 3 6 z" fill="#14171f"/>
-  <path d="M94 106 L122 106 L124 136 L106 138 L100 130 L94 136 Z" fill="${pants}"/>
-  <path d="M122 108 L124 136" stroke="${S.jersey}" stroke-width="2.4"/>
-  <rect x="93" y="103" width="30" height="5" rx="1.5" fill="#1b1f27"/>
-  <path d="M97 70 Q111 64 123 72 L125 104 L93 105 Q92 86 97 70 Z" fill="url(#${S.id}j)"/>
-  ${numText(S, 116, 96, 17)}
-  ${limb('M118 76 L130 92 L137 108', 9, S)}<circle cx="138" cy="110" r="4.3" fill="#f2f4f8"/><path d="M135.6 108.5 q2.4 1.5 4.8 0" stroke="#c0392b" stroke-width=".9" fill="none"/>
-  ${limb('M100 76 L92 90 L100 92', 9, S)}
-  <path d="M93 84 q-6 2 -6 10 q2 7 10 6 q6 -2 6 -9 q-3 -8 -10 -7 z" fill="#8a5a2b" stroke="#5a3818" stroke-width="1"/>
-  <rect x="104" y="62" width="8" height="9" rx="3" fill="${S.sil}"/>
-  <circle cx="108" cy="56" r="10" fill="url(#${S.id}s)"/>
-  <path d="M98.5 54 Q99 44 109 44 Q119 44 118.5 54 Z" fill="url(#${S.id}j)" stroke="${S.jerseyDark}" stroke-width="1"/>
-  <path d="M99 53 L87 55.5 L99 56.5 Z" fill="${S.jerseyDark}"/>
-  <circle cx="109" cy="44.5" r="1.4" fill="${S.trim}"/>`;
-}
-
-/* ---------- football: helmet ---------- */
-function helmet(S, cx, cy, face) {
-  // face: -1 facing left, 1 facing right
-  const f = face;
-  return `<path d="M${cx - 13 * f} ${cy + 2} Q${cx - 14 * f} ${cy - 14} ${cx} ${cy - 14} Q${cx + 14 * f} ${cy - 14} ${cx + 14 * f} ${cy + 1} L${cx + 12 * f} ${cy + 10} L${cx - 4 * f} ${cy + 11} Z" fill="url(#${S.id}j)" stroke="${S.jerseyDark}" stroke-width="1"/>
-  <path d="M${cx} ${cy - 14} Q${cx + 9 * f} ${cy - 10} ${cx + 14 * f} ${cy - 2}" stroke="${S.trim}" stroke-width="3" fill="none"/>
-  <path d="M${cx - 13 * f} ${cy - 3} L${cx - 19 * f} ${cy + 1} L${cx - 18 * f} ${cy + 11} L${cx - 6 * f} ${cy + 12} M${cx - 13 * f} ${cy + 3} L${cx - 19 * f} ${cy + 5} M${cx - 13 * f} ${cy + 8} L${cx - 18.5 * f} ${cy + 8.5}" stroke="#c7ccd6" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
-  <circle cx="${cx + 4 * f}" cy="${cy + 1}" r="2.2" fill="#0c0f15" stroke="#c7ccd6" stroke-width=".9"/>
-  <path d="M${cx - 6 * f} ${cy - 10} Q${cx + 2 * f} ${cy - 13} ${cx + 9 * f} ${cy - 9}" stroke="#fff" stroke-opacity=".45" stroke-width="2.2" fill="none" stroke-linecap="round"/>`;
-}
-function football(x, y, rot) {
-  return `<g transform="translate(${x} ${y}) rotate(${rot})"><ellipse rx="9" ry="5.4" fill="#6b3a1e" stroke="#3b1f0e" stroke-width="1"/><path d="M-3.5 0 L3.5 0 M-2 -1.6 L-2 1.6 M0 -1.6 L0 1.6 M2 -1.6 L2 1.6" stroke="#f2f4f8" stroke-width=".9"/><path d="M-9 0 q-1 0 0 0 M-7.5 -3 L-7.5 3 M7.5 -3 L7.5 3" stroke="#f2f4f8" stroke-width=".8" opacity=".7"/></g>`;
-}
-function pads(S, pantsCol) {
-  return `<path d="M88 110 L118 110 L122 140 L112 162 L105 162 L108 141 L103 135 L97 160 L90 160 L93 138 Z" fill="${pantsCol}"/>
-  <path d="M118.5 112 L121.5 139" stroke="${S.jersey}" stroke-width="3"/><path d="M87.5 112 L91.5 137" stroke="${S.jersey}" stroke-width="3"/>
-  <path d="M80 75 Q100 64 122 72 L126 86 L118 88 L117 110 L89 111 L88 88 L78 88 Z" fill="url(#${S.id}j)"/>
-  <path d="M79 84 L88 84 M118 84 L126 82" stroke="${S.trim}" stroke-width="2.6"/>
-  <path d="M94 70 Q101 76 108 70" fill="${S.sil}" stroke="${S.trim}" stroke-width="2"/>
-  ${numText(S, 103, 103, 24)}`;
-}
-
-/* ---------- football: quarterback ready to throw ---------- */
-function nflQB(S) {
-  const pc = S.trim === '#14171f' ? '#e9edf2' : S.trim;
-  return `${shadow(104, 30)}
-  ${limb('M95 136 L88 156 L87 172', 11.5, S)}${limb('M112 136 L118 155 L118 172', 11.5, S)}
-  ${limb('M88 158 L87 172', 12, S, S.jersey)}${limb('M118 158 L118 172', 12, S, S.jersey)}
-  ${shoe(87, 177, -1, '#14171f')}${shoe(118, 177, 1, '#14171f')}
-  ${limb('M83 80 L70 92 L62 90', 9.5, S)}
-  ${pads(S, pc)}
-  ${limb('M120 78 L134 64 L130 46', 9.5, S)}
-  <circle cx="130" cy="44" r="4.6" fill="${S.sil}"/>${football(131, 36, -32)}
-  <rect x="98" y="58" width="9" height="10" rx="3" fill="${S.sil}"/>
-  ${helmet(S, 103, 52, 1)}`;
-}
-
-/* ---------- football: receiver high-pointing a catch ---------- */
-function nflCatch(S) {
-  const pc = S.trim === '#14171f' ? '#e9edf2' : S.trim;
-  return `${shadow(100, 26)}
-  ${limb('M95 136 L90 152 L94 164', 11.5, S)}${limb('M111 136 L115 158 L112 175', 11.5, S)}
-  ${limb('M92 156 L94 164', 12, S, S.jersey)}${limb('M114.6 162 L112 175', 12, S, S.jersey)}
-  ${shoe(95, 169, 1, '#14171f')}${shoe(112, 180, -1, '#14171f')}
-  ${pads(S, pc)}
-  ${limb('M84 80 L82 58 L94 36', 9.5, S)}${limb('M120 78 L122 56 L110 36', 9.5, S)}
-  <circle cx="95" cy="34" r="4.6" fill="${S.sil}"/><circle cx="109" cy="34" r="4.6" fill="${S.sil}"/>
-  ${football(102, 26, 8)}
-  <rect x="98" y="58" width="9" height="10" rx="3" fill="${S.sil}"/>
-  ${helmet(S, 103, 52, 1)}`;
-}
-
-/* ---------- football: running back hitting the hole ---------- */
-function nflRB(S) {
-  const pc = S.trim === '#14171f' ? '#e9edf2' : S.trim;
-  return `${shadow(100, 32)}
-  <g transform="rotate(-14 100 120)">
-  ${limb('M95 136 L78 148 L70 164', 11.5, S)}${limb('M112 136 L124 152 L134 146', 11.5, S)}
-  ${limb('M74 156 L70 164', 12, S, S.jersey)}${limb('M128 150 L134 146', 12, S, S.jersey)}
-  ${shoe(68, 168, -1, '#14171f')}${shoe(138, 146, 1, '#14171f')}
-  ${pads(S, pc)}
-  ${limb('M120 80 L130 96 L124 108', 9.5, S)}${football(126, 106, 30)}
-  ${limb('M83 80 L68 76 L58 64', 9.5, S)}<circle cx="57" cy="62" r="4.6" fill="${S.sil}"/>
-  <rect x="98" y="58" width="9" height="10" rx="3" fill="${S.sil}"/>
-  ${helmet(S, 103, 52, 1)}
-  </g>
-  ${[0, 1, 2].map(i => `<path d="M${140 + i * 10} ${96 + i * 14} L${176 + i * 6} ${96 + i * 14}" stroke="${S.trim}" stroke-width="2" stroke-linecap="round" opacity=".35"/>`).join('')}`;
 }
 
 let avN = 0;
 function playerAvatar(p) {
   const num = /^#/.test(p.num || '') ? p.num.slice(1) : '';
-  return avatarSVG({ sport: p.sport, pos: p.pos, num, abbr: p.teamAbbr || '', prim: p.teamPrimary || p.color, alt: p.teamSecondary || '', accent: p.color, uid: 'p' + (++avN) });
+  return avatarSVG({ sport: p.sport, num, name: p.short || '', abbr: p.teamAbbr || '', prim: p.teamPrimary || p.color, alt: p.teamSecondary || '', accent: p.color, uid: 'p' + (++avN) });
 }
 
 /* ---------- card images: original artwork, or the viewer's own photo ---------- */
