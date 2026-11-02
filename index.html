@@ -300,7 +300,7 @@ let CARDS = [
 ];
 let CARD = Object.fromEntries(CARDS.map(c => [c.id, c]));
 
-const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '', collSport: 'All', offerFor: null, trade: null, moversRange: '1M', moversSport: 'All', moversGrade: 'All', moversMin: '3', moversView: 'cards', homeSport: 'All' };
+const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '', collSport: 'All', collQuery: '', collAvail: 'avail', collSort: 'matches', offerFor: null, trade: null, moversRange: '1M', moversSport: 'All', moversGrade: 'All', moversMin: '3', moversView: 'cards', homeSport: 'All' };
 const charts = {};
 
 /* ---------- real data from data/*.json (built by the "Build card data" robot) ---------- */
@@ -1492,6 +1492,49 @@ function tradeMeter(t) {
 }
 
 /* ---------- views ---------- */
+/* ---------- collector search: find accounts, and who has or wants a card ---------- */
+const WISH_Q = '@wishlist';
+function cardText(cd) { const p = PLAYERS[cd.p]; return fold([cd.name, cd.detail, p.name, p.team, p.sport, p.pos].join(' ')); }
+function qMatch(text, q) { const w = fold(q).trim().split(/\s+/).filter(Boolean); return w.length && w.every(x => text.includes(x)); }
+function collectorSearch(q) {
+  const wishMode = q === WISH_Q, wish = new Set(wishlist());
+  const hit = id => wishMode ? wish.has(id) : qMatch(cardText(CARD[id]), q);
+  const avail = state.collAvail;
+  const okStatus = s => avail === 'any' ? true : avail === 'sale' ? s === 'sale' : avail === 'trade' ? s === 'trade' : s !== 'keep';
+  const accounts = wishMode ? [] : collectors().filter(c => fold(c.handle).includes(fold(q).replace(/^@/, '').trim()));
+  const has = collectors().map(c => {
+    const items = c.items.filter(x => hit(x.id) && okStatus(x.status));
+    const deal = items.filter(x => x.status === 'sale').map(x => x.ask / last(CARD[x.id].price)).sort((a, b) => a - b)[0];
+    const low = items.filter(x => x.status === 'sale').map(x => x.ask).sort((a, b) => a - b)[0];
+    return { c, items, deal: deal ?? 9, low: low ?? Infinity };
+  }).filter(r => r.items.length);
+  const sorts = { matches: (a, b) => b.items.length - a.items.length || a.deal - b.deal, deal: (a, b) => a.deal - b.deal, price: (a, b) => a.low - b.low };
+  has.sort(sorts[state.collSort] || sorts.matches);
+  const wants = wishMode ? [] : collectors().map(c => ({ c, ids: c.wants.filter(hit) })).filter(r => r.ids.length);
+  return { accounts, has, wants, wishMode };
+}
+function collectorSearchResults(q) {
+  const r = collectorSearch(q), mine = new Set(col());
+  const label = r.wishMode ? 'cards on your wishlist' : `“${esc(q)}”`;
+  const cardsFound = r.has.reduce((s, x) => s + x.items.length, 0);
+  const accountRows = r.accounts.map(c => `<a class="item" href="#collector-${c.id}">${cAvatar(c, 40)}<div class="main"><span class="title">@${esc(c.handle)}</span><span class="sub">${c.fav === 'All' ? 'All sports' : esc(c.fav)} · ${c.items.length} cards · ${money(collValue(c))}</span></div><span class="stag st-sale">${c.items.filter(x => x.status === 'sale').length} for sale</span><span class="stag st-trade">${c.items.filter(x => x.status === 'trade').length} to trade</span></a>`).join('');
+  const hasRows = r.has.map(({ c, items }) => `<div class="panel section" style="gap:10px;padding:14px">
+      <div class="row between"><a href="#collector-${c.id}" class="row" style="gap:10px;text-decoration:none;color:var(--fg)">${cAvatar(c, 36)}<span style="font-weight:700">@${esc(c.handle)}</span></a><span style="font-size:13px;color:var(--muted)">${items.length} match${items.length === 1 ? '' : 'es'} · ${c.trades} trades</span></div>
+      <div class="list">${items.map(x => { const cd = CARD[x.id], mk = last(cd.price), [lab, cl] = STATUS[x.status], vs = x.status === 'sale' ? Math.round((x.ask / mk - 1) * 100) : null;
+        return `<div class="item" style="flex-wrap:wrap">${flameThumb(cd, cardVisual(cd))}<div class="main"><a class="title" href="#card-${cd.id}" style="color:var(--fg);text-decoration:none">${esc(cd.name)}</a><span class="sub">${esc(PLAYERS[cd.p].name)} · ${esc(cd.detail)} · market ${money(mk)}</span><div class="row" style="gap:6px;margin-top:4px"><span class="stag ${cl}">${lab}${x.status === 'sale' ? ' · ' + money(x.ask) : ''}</span>${vs !== null ? `<span class="stag ${vs <= 0 ? 'st-sale' : 'st-keep'}">${vs === 0 ? 'At market' : vs < 0 ? Math.abs(vs) + '% under market' : vs + '% over market'}</span>` : ''}</div></div>${x.status === 'sale' ? `<a class="btn" href="#collector-${c.id}" data-act="offerOpen" data-cid="${c.id}" data-id="${cd.id}">Make offer</a>` : x.status === 'trade' ? `<a class="btn" href="#trade-${c.id}" data-act="tradeFor" data-cid="${c.id}" data-id="${cd.id}">Trade for it</a>` : ''}</div>`; }).join('')}</div>
+    </div>`).join('');
+  const wantRows = r.wants.map(({ c, ids }) => `<div class="item" style="flex-wrap:wrap">${cAvatar(c, 36)}<div class="main"><a class="title" href="#collector-${c.id}" style="color:var(--fg);text-decoration:none">@${esc(c.handle)}</a><span class="sub">Looking for ${ids.map(id => esc(CARD[id].name) + ' (' + esc(CARD[id].detail) + ')').join(', ')}</span></div>${ids.some(id => mine.has(id)) ? `<span class="stag st-match">You own one</span><a class="btn primary" href="#trade-${c.id}" data-act="suggest" data-id="${c.id}">Offer a trade</a>` : `<a class="btn" href="#collector-${c.id}">View profile</a>`}</div>`).join('');
+  const none = !r.accounts.length && !r.has.length && !r.wants.length;
+  return `<div class="section" aria-live="polite">
+    ${none ? `<div class="panel empty"><h2>No collectors match ${label}</h2><p class="lede" style="max-width:46ch">Try a player's last name, a set like Prizm, a grade like PSA 10, or change the filter above.</p></div>` : `
+    <p style="margin:0;color:var(--muted);font-size:14px">${r.accounts.length ? `${r.accounts.length} account${r.accounts.length === 1 ? '' : 's'} · ` : ''}${cardsFound} card${cardsFound === 1 ? '' : 's'} available from ${r.has.length} collector${r.has.length === 1 ? '' : 's'}${r.wants.length ? ` · ${r.wants.length} looking for ${r.wishMode ? 'them' : 'it'}` : ''}</p>
+    ${r.accounts.length ? `<div class="section"><h2>Accounts</h2><div class="list">${accountRows}</div></div>` : ''}
+    ${r.has.length ? `<div class="section"><div class="row between"><h2>Who has ${r.wishMode ? 'your wishlist cards' : 'it'}</h2>
+      <label for="csort" class="row" style="gap:8px;font-size:13px;color:var(--muted)">Sort <select id="csort" style="min-height:40px;border-radius:10px;border:1px solid var(--line);background:var(--surface);padding:0 10px">${[['matches', 'Most matches'], ['deal', 'Best deal vs market'], ['price', 'Lowest price']].map(([v, l]) => `<option value="${v}"${v === state.collSort ? ' selected' : ''}>${l}</option>`).join('')}</select></label></div>${hasRows}</div>` : ''}
+    ${r.wants.length ? `<div class="section"><h2>Who's looking for it</h2><p style="margin:0;color:var(--muted);font-size:14px">Collectors with ${label} on their wishlist. Good buyers or trade partners if you own it.</p><div class="list">${wantRows}</div></div>` : ''}`}
+  </div>`;
+}
+
 function viewCollectors() {
   const list = collectors().filter(c => state.collSport === 'All' || c.fav === state.collSport || c.fav === 'All');
   const hasMine = col().length, hasWish = wishlist().length;
@@ -1500,7 +1543,15 @@ function viewCollectors() {
   return `<div class="view">
     <div class="section" style="padding-top:8px"><h1>Collectors</h1><p class="lede">See what other collectors own, find cards you want, and build trades checked against real sales.</p></div>
     <div class="alert info"><div><div style="font-weight:700">These are sample collectors</div><div style="color:var(--muted);font-size:14px">The profiles are made up so you can try trading and offers. Their cards and prices are real. Real collectors arrive with accounts.</div></div></div>
-    <div class="section"><h2>Your best trade matches</h2>
+    <div class="section" style="gap:10px">
+      <div class="search" style="max-width:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--faint)" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <label for="cq" class="sr">Search collectors, players and cards</label><input id="cq" type="search" placeholder="Search collectors, or a player, card or set (e.g. Josh Allen, Prizm, PSA 10)" value="${state.collQuery === WISH_Q ? '' : esc(state.collQuery)}" autocomplete="off"></div>
+      <div class="row between">
+        <div class="chips">${wishlist().length ? `<button type="button" class="chip" data-set="collQuery" data-val="${WISH_Q}" aria-pressed="${state.collQuery === WISH_Q}">★ Cards on my wishlist</button>` : ''}${state.collQuery ? '' : [...new Set(CARDS.map(c => PLAYERS[c.p].name))].slice(0, 4).map(n => `<button type="button" class="chip" data-set="collQuery" data-val="${esc(n)}" aria-pressed="false">${esc(n)}</button>`).join('')}${state.collQuery ? `<button type="button" class="chip" data-set="collQuery" data-val="" aria-pressed="false">Clear search ✕</button>` : ''}</div>
+        ${state.collQuery ? segBtns('collAvail', [['avail', 'For sale or trade'], ['sale', 'For sale'], ['trade', 'Trade'], ['any', 'All']], state.collAvail) : ''}
+      </div>
+    </div>
+    ${state.collQuery.trim() ? collectorSearchResults(state.collQuery.trim()) : `<div class="section"><h2>Your best trade matches</h2>
       ${matches.length ? `<div class="list">${matches.map(({ c, m }) => `<div class="item" style="flex-wrap:wrap">${cAvatar(c, 40)}<div class="main"><span class="title">@${esc(c.handle)}</span><span class="sub">${esc(matchText(m))}</span></div><a class="btn primary" href="#trade-${c.id}" data-act="suggest" data-id="${c.id}">Build this trade</a></div>`).join('')}</div>`
         : `<div class="panel" style="display:flex;flex-direction:column;gap:8px"><span style="font-weight:700">Get matched with collectors</span><span style="color:var(--muted);font-size:14px">${!hasWish ? 'Add cards to your wishlist from any card page (☆ Add to wishlist). ' : ''}${!hasMine ? 'Add cards you own to My collection. ' : ''}Pulled then finds collectors who have what you want and want what you have.</span>${!hasMine || !hasWish ? `<div class="row"><button type="button" class="btn" data-act="sampleMatch">Try it with sample cards</button></div>` : ''}</div>`}
     </div>
@@ -1509,7 +1560,7 @@ function viewCollectors() {
         return `<a class="pcard" href="#collector-${c.id}"><div class="row" style="gap:12px;flex-wrap:nowrap">${cAvatar(c, 48)}<div style="min-width:0"><div style="font-size:17px;font-weight:700">@${esc(c.handle)}</div><div style="font-size:13px;color:var(--faint)">${c.fav === 'All' ? 'All sports' : esc(c.fav)} · collecting since ${c.since}</div></div></div>
           <div class="row between"><span class="num" style="font-size:20px;font-weight:600">${money(collValue(c))}</span><span style="font-size:13px;color:var(--muted)">${c.items.length} cards</span></div>
           <div class="row" style="gap:6px"><span class="stag st-sale">${sale} for sale</span><span class="stag st-trade">${tr} to trade</span>${m.score ? '<span class="stag st-match">Match</span>' : ''}</div></a>`; }).join('')}</div>
-    </div>
+    </div>`}
   </div>`;
 }
 
@@ -1713,6 +1764,9 @@ function render() {
   wireCharts();
   try { initFires(); } catch (e) { /* fire is decorative */ }
   try { initIce(); } catch (e) { /* ice is decorative */ }
+  const cq = $('#cq');
+  if (cq && cq.addEventListener) cq.addEventListener('input', e => { state.collQuery = e.target.value; const pos = e.target.selectionStart; render(); const n = $('#cq'); n.focus(); try { n.setSelectionRange(pos, pos); } catch (err) {} });
+  const cs = $('#csort'); if (cs && cs.addEventListener) cs.addEventListener('change', e => { state.collSort = e.target.value; render(); });
   const q = $('#q');
   if (q) q.addEventListener('input', e => { state.homeQuery = e.target.value; const pos = e.target.selectionStart; render(); const nq = $('#q'); nq.focus(); try { nq.setSelectionRange(pos, pos); } catch (err) {} });
   const oa = $('#offerAmt'); if (oa && oa.addEventListener) { oa.addEventListener('input', offerHint); offerHint(); }
