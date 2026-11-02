@@ -2,21 +2,6 @@
  "cards": [
   {
    "attributes": [
-    "NBA-CLE"
-   ],
-   "id": "739de9cc-4c17-42fd-b850-8e2465ff41ba",
-   "image": null,
-   "number": "26",
-   "numberedTo": null,
-   "playerId": "lebron-james",
-   "release": "Upper Deck LeBron James",
-   "rookie": true,
-   "set": "Base Set",
-   "title": "2003 Upper Deck LeBron James #26",
-   "year": "2003"
-  },
-  {
-   "attributes": [
     "NBA-GSW"
    ],
    "id": "2204a45f-651c-43b4-bd17-863af053a3a7",

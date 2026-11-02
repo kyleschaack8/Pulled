@@ -39,7 +39,10 @@
    "sport": "NBA",
    "pos": "C",
    "rookieYear": 2015,
-   "status": "active"
+   "status": "active",
+   "aka": [
+    "Nikola Jokić"
+   ]
   },
   {
    "id": "luka-doncic",
@@ -47,7 +50,10 @@
    "sport": "NBA",
    "pos": "PG",
    "rookieYear": 2018,
-   "status": "active"
+   "status": "active",
+   "aka": [
+    "Luka Dončić"
+   ]
   },
   {
    "id": "joel-embiid",
@@ -327,7 +333,10 @@
    "sport": "MLB",
    "pos": "RF",
    "rookieYear": 2018,
-   "status": "active"
+   "status": "active",
+   "aka": [
+    "Ronald Acuña Jr."
+   ]
   },
   {
    "id": "fernando-tatis-jr",
@@ -351,7 +360,10 @@
    "sport": "MLB",
    "pos": "CF",
    "rookieYear": 2022,
-   "status": "active"
+   "status": "active",
+   "aka": [
+    "Julio Rodríguez"
+   ]
   },
   {
    "id": "gunnar-henderson",

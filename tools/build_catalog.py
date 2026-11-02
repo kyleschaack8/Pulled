@@ -25,6 +25,7 @@ import pathlib
 import re
 import sys
 import time
+import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -46,6 +47,13 @@ MODE = os.environ.get("MODE", "build")
 PRIORITY = ["prizm", "topps chrome", "bowman chrome", "optic", "topps update", "topps", "bowman",
             "select", "mosaic", "upper deck", "fleer", "score", "donruss", "contenders",
             "national treasures", "flawless", "goudey", "leaf", "spx", "finest"]
+
+
+FLAGSHIP = {
+    "NBA": ["Topps Chrome", "Panini Prizm", "Topps"],
+    "MLB": ["Topps Chrome", "Bowman Chrome", "Topps Update"],
+    "NFL": ["Panini Prizm", "Donruss Optic", "Topps Chrome"],
+}
 
 
 class RateLimited(Exception):
@@ -106,7 +114,8 @@ def save(name, obj):
 
 
 def norm(s):
-    return re.sub(r"[^a-z ]", "", (s or "").lower().replace(".", "").replace(",", ""))
+    s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z ]", "", s.lower().replace(".", "").replace(",", ""))
 
 
 def months_axis():
@@ -176,8 +185,8 @@ def api_post(path, body):
 
 
 def sales_counts(card_ids):
-    """One bulk call: how many completed sales each candidate had in the last year (raw + graded, capped at 25 each)."""
-    res = api_post("/v1/pricing/", {"card_ids": card_ids[:100], "period": "1y", "listing_type": "auction"})
+    """One bulk call: how many completed sales each candidate had in the last year (raw + graded, up to 100 each)."""
+    res = api_post("/v1/pricing/", {"card_ids": card_ids[:100], "period": "1y", "listing_type": "auction", "limit": 100})
     out = {}
     for item in g(res, "results", default=[]) or []:
         data = g(item, "data", default={}) or {}
@@ -192,14 +201,24 @@ def sales_counts(card_ids):
 
 def pick_cards(player):
     """Find the player's rookie-year cards, then keep the most-traded ones (one per release)."""
-    name, year = player["name"], str(player["rookieYear"])
-    last = norm(name.replace(" Jr.", "").replace(" Jr", "")).split()[-1]
-    res = api("/v1/catalog/cards", {"name": name, "year": year, "take": 100})
-    cards = g(res, "cards", default=[]) or []
-    total = int(g(res, "totalCount", "total_count", default=0) or 0)
+    year = str(player["rookieYear"])
+    names = [player["name"]] + list(player.get("aka", []))
+    last = norm(player["name"].replace(" Jr.", "").replace(" Jr", "")).split()[-1]
+    cards, total = [], 0
+    for name in names:
+        res = api("/v1/catalog/cards", {"name": name, "year": year, "take": 100})
+        cards = g(res, "cards", default=[]) or []
+        total = int(g(res, "totalCount", "total_count", default=0) or 0)
+        if cards:
+            break
     if cards and total > 100:
         more = api("/v1/catalog/cards", {"name": name, "year": year, "take": 100, "skip": 100})
         cards += g(more, "cards", default=[]) or []
+    if cards and total > 200:
+        # Big checklists: make sure the flagship rookie releases are in the candidate pool
+        for rel in FLAGSHIP.get(player.get("sport"), []):
+            r = api("/v1/catalog/cards", {"name": name, "year": year, "releaseName": rel, "take": 50})
+            cards += g(r, "cards", default=[]) or []
     if not cards:
         res = api("/v1/catalog/cards", {"name": name, "take": 100, "sort": "year", "order": "asc"})
         cards = g(res, "cards", default=[]) or []
