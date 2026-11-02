@@ -66,6 +66,13 @@ button, input, select { font: inherit; color: inherit; }
 .flame { position: relative; isolation: isolate; }
 .flame > canvas.fire { position: absolute; pointer-events: none; z-index: -1; }
 .flame.big { box-shadow: 0 0 40px 6px rgba(255,110,20,.18); border-radius: 12px; }
+/* Cold cards: frost, mist and snow on the biggest drops */
+.frost { position: relative; isolation: isolate; }
+.frost > canvas.mist { position: absolute; pointer-events: none; z-index: -1; }
+.frost > canvas.rime { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2; }
+.frost.big { box-shadow: 0 0 36px 6px rgba(120,190,255,.2); border-radius: 12px; }
+.cold { display: inline-flex; align-items: center; gap: 4px; height: 22px; padding: 0 8px; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: .03em; color: #04131f; background: linear-gradient(90deg, #d8f3ff, #6ab8ff); flex-shrink: 0; }
+.cold svg { display: block; }
 .hot { display: inline-flex; align-items: center; gap: 4px; height: 22px; padding: 0 8px; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: .03em; color: #1a0800; background: linear-gradient(90deg, #ffb300, #ff6a00); flex-shrink: 0; }
 .hot svg { display: block; }
 .teamtag { display: inline-flex; align-items: center; height: 22px; padding: 0 8px; border-radius: 6px; font-size: 11px; font-weight: 800; letter-spacing: .04em; color: var(--fg); background: color-mix(in srgb, var(--tc) 22%, var(--raise)); border: 1px solid color-mix(in srgb, var(--tc) 55%, var(--line)); }
@@ -618,8 +625,8 @@ function hotRank(id) {
   return HOT.rank[id] || 0;
 }
 const FLAME_ICON = '<svg width="10" height="12" viewBox="0 0 10 12" aria-hidden="true"><path d="M5 0c.6 2.2 3.8 3.6 3.8 7a3.8 3.8 0 0 1-7.6 0C1.2 5 2.4 4 3 2.6c.3 1.4 1 2 1.6 2.2C4.4 3 4.6 1.4 5 0z" fill="#1a0800"/></svg>';
-function hotTag(id) { const r = hotRank(id); return r ? `<span class="hot" title="Top riser #${r} this month">${FLAME_ICON}Hot</span>` : ''; }
-function flameThumb(c, inner) { return hotRank(c.id) ? `<div class="thumb flame" data-fire="s">${inner}</div>` : `<div class="thumb">${inner}</div>`; }
+function hotTag(id) { const r = hotRank(id), c = r ? 0 : coldRank(id); return r ? `<span class="hot" title="Top riser #${r} this month">${FLAME_ICON}Hot</span>` : c ? `<span class="cold" title="Biggest drop #${c} this month">${SNOW_ICON}Cold</span>` : ''; }
+function flameThumb(c, inner) { return hotRank(c.id) ? `<div class="thumb flame" data-fire="s">${inner}</div>` : coldRank(c.id) ? `<div class="thumb frost" data-ice="s">${inner}</div>` : `<div class="thumb">${inner}</div>`; }
 /* ---------- realistic fire (canvas particles) for hot cards ---------- */
 const FIRE = { list: [], sprites: null, running: false };
 function fireSprites() {
@@ -724,6 +731,165 @@ function fireLoop() {
   requestAnimationFrame(fireLoop);
 }
 
+/* ---------- cold cards: top 5 drops this month (10%+ down on 3+ recent sales) ---------- */
+let COLD = null;
+function coldRank(id) {
+  if (!COLD || COLD.cards !== CARDS) {
+    const rows = CARDS.map(c => ({ id: c.id, ch: monthChange(c), s: (c.sales[10] || 0) + (c.sales[11] || 0) }))
+      .filter(r => isFinite(r.ch) && r.ch <= -10 && r.s >= 3)
+      .sort((a, b) => a.ch - b.ch).slice(0, 5);
+    COLD = { cards: CARDS, rank: Object.fromEntries(rows.map((r, i) => [r.id, i + 1])) };
+  }
+  return COLD.rank[id] || 0;
+}
+const SNOW_ICON = '<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><g stroke="#04131f" stroke-width="1.4" stroke-linecap="round"><path d="M6 .8v10.4M1.5 3.4l9 5.2M1.5 8.6l9-5.2"/><path d="M4.6 1.6 6 2.8l1.4-1.2M4.6 10.4 6 9.2l1.4 1.2"/></g></svg>';
+
+/* frost crystals that grow in from the edges, cold mist sinking off the card, snow drifting down */
+const ICE = { list: [], sprites: null, running: false };
+function iceSprites() {
+  if (ICE.sprites) return ICE.sprites;
+  const make = (rgb, stop) => {
+    const c = document.createElement('canvas'); c.width = c.height = 64;
+    const g = c.getContext('2d'), gr = g.createRadialGradient(32, 32, 0, 32, 32, 32);
+    gr.addColorStop(0, `rgba(${rgb},1)`); gr.addColorStop(stop, `rgba(${rgb},.5)`); gr.addColorStop(1, `rgba(${rgb},0)`);
+    g.fillStyle = gr; g.fillRect(0, 0, 64, 64); return c;
+  };
+  ICE.sprites = { mist: make('205,232,255', 0.45), flake: make('255,255,255', 0.25), glow: make('120,190,255', 0.4) };
+  return ICE.sprites;
+}
+function initIce() {
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  ICE.list = ICE.list.filter(f => f.mist.isConnected);
+  document.querySelectorAll('[data-ice]').forEach(host => {
+    if (host.querySelector(':scope > canvas.mist')) return;
+    const big = host.dataset.ice === 'l';
+    const mist = document.createElement('canvas'); mist.className = 'mist';
+    const rime = document.createElement('canvas'); rime.className = 'rime';
+    host.prepend(mist); host.append(rime);
+    const f = { host, mist, rime, mctx: mist.getContext('2d'), rctx: rime.getContext('2d'), big, parts: [], t: Math.random() * 1000, grow: 0,
+      pad: big ? { t: 0.3, s: 0.2, b: 0.35 } : { t: 0.35, s: 0.3, b: 0.55 } };
+    if (!f.mctx || !f.rctx) return;
+    iceSize(f);
+    ICE.list.push(f);
+    if (reduce) { f.grow = 1; for (let i = 0; i < 120; i++) iceStep(f); iceDraw(f); f.still = true; }
+  });
+  if (!ICE.running && ICE.list.some(f => !f.still)) { ICE.running = true; requestAnimationFrame(iceLoop); }
+}
+function iceSize(f) {
+  const r = f.host.getBoundingClientRect(), w = r.width, h = r.height;
+  if (!w || !h) return;
+  const dpr = Math.min(window.devicePixelRatio || 1, 2), p = f.pad;
+  const cw = w * (1 + 2 * p.s), ch = h * (1 + p.t + p.b);
+  Object.assign(f.mist.style, { left: -w * p.s + 'px', top: -h * p.t + 'px', width: cw + 'px', height: ch + 'px' });
+  f.mist.width = Math.round(cw * dpr); f.mist.height = Math.round(ch * dpr);
+  f.rime.width = Math.round(w * dpr); f.rime.height = Math.round(h * dpr);
+  f.w = w; f.h = h; f.cw = cw; f.ch = ch; f.ox = w * p.s; f.oy = h * p.t; f.dpr = dpr; f.scale = Math.max(0.3, Math.min(1.4, h / 300));
+  buildFrost(f);
+}
+function buildFrost(f) {
+  const w = f.w, h = f.h, s = f.scale, segs = [], reach = Math.min(w, h) * (f.big ? 0.2 : 0.24);
+  const seeds = f.big ? 34 : 12;
+  const grow = (x, y, ang, steps, depth, t0) => {
+    for (let k = 0; k < steps; k++) {
+      const len = (f.big ? 5 : 2.2) * (0.6 + Math.random() * 0.8) * (depth ? 0.75 : 1) * Math.max(0.7, s);
+      const nx = x + Math.cos(ang) * len, ny = y + Math.sin(ang) * len;
+      if (Math.min(nx, ny, w - nx, h - ny) > reach || nx < 0 || ny < 0 || nx > w || ny > h) return;
+      segs.push({ x1: x, y1: y, x2: nx, y2: ny, t: t0 + k, w: (depth ? 0.55 : 1.05) * Math.max(0.6, s), a: depth ? 0.5 : 0.75 });
+      if (depth < 2 && Math.random() < 0.3) grow(nx, ny, ang + (Math.random() < 0.5 ? -1 : 1) * (0.8 + Math.random() * 0.4), Math.ceil(steps * 0.45), depth + 1, t0 + k + 1);
+      ang += (Math.random() - 0.5) * 0.3; x = nx; y = ny;
+    }
+  };
+  for (let i = 0; i < seeds; i++) {
+    const side = Math.floor(Math.random() * 4);
+    const u = Math.random() < 0.5 ? Math.pow(Math.random(), 2) : 1 - Math.pow(Math.random(), 2);   // favor corners
+    const [x, y, ang] = side === 0 ? [u * w, 0, Math.PI / 2] : side === 1 ? [w, u * h, Math.PI] : side === 2 ? [u * w, h, -Math.PI / 2] : [0, u * h, 0];
+    grow(x, y, ang + (Math.random() - 0.5) * 1.1, f.big ? 16 : 10, 0, Math.floor(Math.random() * 20));
+  }
+  f.segs = segs; f.maxT = segs.reduce((m, sg) => Math.max(m, sg.t), 1);
+  f.sparks = segs.filter(() => Math.random() < (f.big ? 0.12 : 0.08)).slice(0, f.big ? 45 : 10).map(sg => ({ x: sg.x2, y: sg.y2, seed: Math.random() * 100 }));
+  f.cache = null;
+}
+function iceStep(f) {
+  f.t += 1;
+  const s = f.scale;
+  const mistN = f.big ? 3 : 1;
+  for (let i = 0; i < mistN; i++) {
+    const side = Math.random();
+    const x = side < 0.6 ? f.ox + Math.random() * f.w : side < 0.8 ? f.ox + Math.random() * 4 * s : f.ox + f.w - Math.random() * 4 * s;
+    const y = side < 0.6 ? f.oy + f.h - Math.random() * 6 * s : f.oy + f.h * (0.5 + Math.random() * 0.5);
+    f.parts.push({ kind: 'mist', x, y, vx: (side < 0.6 ? (Math.random() - 0.5) * 0.3 : side < 0.8 ? -0.25 : 0.25) * s, vy: (0.12 + Math.random() * 0.3) * s,
+      r: (10 + Math.random() * 14) * s * (f.big ? 1 : 0.7), life: 1, decay: 0.006 + Math.random() * 0.007, seed: Math.random() * 100 });
+  }
+  if (Math.random() < (f.big ? 0.55 : 0.18)) {
+    f.parts.push({ kind: 'snow', x: Math.random() * f.cw, y: -4, vx: 0, vy: (0.35 + Math.random() * 0.45) * s, r: (0.9 + Math.random() * 1.4) * s * (f.big ? 1 : 0.8), life: 1, decay: 0, seed: Math.random() * 100 });
+  }
+  for (const p of f.parts) {
+    p.x += p.vx + Math.sin(f.t * 0.03 + p.seed) * (p.kind === 'snow' ? 0.35 : 0.15) * s;
+    p.y += p.vy;
+    if (p.kind === 'mist') { p.r *= 1.006; p.life -= p.decay; } else if (p.y > f.ch) p.life = 0;
+  }
+  f.parts = f.parts.filter(p => p.life > 0);
+  if (f.grow < 1) f.grow = Math.min(1, f.grow + 1 / 90);
+}
+function rimeStatic(g, f, upto) {
+  const w = f.w, h = f.h;
+  const edge = Math.min(w, h) * 0.12;   // frosted edges
+  for (const [x0, y0, x1, y1] of [[0, 0, 0, edge], [0, h, 0, h - edge], [0, 0, edge, 0], [w, 0, w - edge, 0]]) {
+    const gr = g.createLinearGradient(x0, y0, x1, y1);
+    gr.addColorStop(0, `rgba(215,238,255,${0.32 * Math.min(1, upto / f.maxT + 0.2)})`); gr.addColorStop(1, 'rgba(215,238,255,0)');
+    g.fillStyle = gr; g.fillRect(0, 0, w, h);
+  }
+  g.lineCap = 'round';
+  for (const sg of f.segs) {
+    if (sg.t > upto) continue;
+    g.strokeStyle = `rgba(232,246,255,${sg.a})`; g.lineWidth = sg.w;
+    g.beginPath(); g.moveTo(sg.x1, sg.y1); g.lineTo(sg.x2, sg.y2); g.stroke();
+  }
+}
+function iceDraw(f) {
+  const sp = iceSprites(), d = f.dpr;
+  const m = f.mctx;
+  m.setTransform(d, 0, 0, d, 0, 0); m.clearRect(0, 0, f.cw, f.ch);
+  m.globalAlpha = 0.2 + Math.sin(f.t * 0.05) * 0.03;
+  m.drawImage(sp.glow, f.ox - f.w * 0.15, f.oy - f.h * 0.1, f.w * 1.3, f.h * 1.3);
+  for (const p of f.parts) {
+    const size = p.r * 2;
+    if (p.kind === 'mist') m.globalAlpha = Math.max(0, p.life * 0.28);
+    else m.globalAlpha = Math.max(0, Math.min(1, 0.85 * Math.min(1, (f.ch - p.y) / (f.ch * 0.2))));
+    m.drawImage(p.kind === 'mist' ? sp.mist : sp.flake, p.x - size / 2, p.y - size / 2, size, size);
+  }
+  m.globalAlpha = 1;
+  const g = f.rctx;
+  g.setTransform(d, 0, 0, d, 0, 0); g.clearRect(0, 0, f.w, f.h);
+  if (f.grow < 1) rimeStatic(g, f, f.grow * f.maxT);
+  else {
+    if (!f.cache) {
+      const c = document.createElement('canvas'); c.width = f.rime.width; c.height = f.rime.height;
+      const cg = c.getContext('2d'); cg.setTransform(d, 0, 0, d, 0, 0); rimeStatic(cg, f, Infinity); f.cache = c;
+    }
+    g.setTransform(1, 0, 0, 1, 0, 0); g.drawImage(f.cache, 0, 0); g.setTransform(d, 0, 0, d, 0, 0);
+    for (const s of f.sparks) {   // glints on the ice
+      const a = Math.pow(Math.max(0, Math.sin(f.t * 0.045 + s.seed)), 8);
+      if (a < 0.02) continue;
+      const r = (f.big ? 3.2 : 1.6) * a;
+      g.strokeStyle = `rgba(255,255,255,${a})`; g.lineWidth = 0.8;
+      g.beginPath(); g.moveTo(s.x - r, s.y); g.lineTo(s.x + r, s.y); g.moveTo(s.x, s.y - r); g.lineTo(s.x, s.y + r); g.stroke();
+    }
+  }
+}
+function iceLoop() {
+  ICE.list = ICE.list.filter(f => f.mist.isConnected);
+  const live = ICE.list.filter(f => !f.still);
+  if (!live.length) { ICE.running = false; return; }
+  for (const f of live) {
+    const r = f.host.getBoundingClientRect();
+    if (Math.abs(r.width - f.w) > 1 || Math.abs(r.height - f.h) > 1) iceSize(f);
+    if (r.bottom < -200 || r.top > (window.innerHeight || 2000) + 200) continue;
+    iceStep(f); iceDraw(f);
+  }
+  requestAnimationFrame(iceLoop);
+}
+
 /* ---------- views ---------- */
 function viewHome() {
   const q = state.homeQuery.trim().toLowerCase();
@@ -825,7 +991,7 @@ function viewCard(id) {
       <a href="#player-${c.p}" style="color:var(--muted);text-decoration:none;font-weight:600;font-size:14px">← ${esc(p.name)}</a>
       <div class="row" style="gap:20px;align-items:flex-start">
         <div style="width:180px;max-width:100%;display:flex;flex-direction:column;gap:8px;flex-shrink:0">
-          <div class="${hotRank(c.id) ? 'flame big' : ''}"${hotRank(c.id) ? ' data-fire="l"' : ''} style="width:100%;aspect-ratio:5/7;max-width:100%">${cardVisual(c)}</div>
+          <div class="${hotRank(c.id) ? 'flame big' : coldRank(c.id) ? 'frost big' : ''}"${hotRank(c.id) ? ' data-fire="l"' : coldRank(c.id) ? ' data-ice="l"' : ''} style="width:100%;aspect-ratio:5/7;max-width:100%">${cardVisual(c)}</div>
           <label for="photo" class="btn" style="min-height:40px;font-size:13px;cursor:pointer">${memPhotos[c.id] ? 'Replace photo' : 'Add your photo'}</label>
           <input id="photo" type="file" accept="image/*" data-id="${c.id}" hidden>
           ${memPhotos[c.id] ? `<button type="button" class="btn" style="min-height:36px;font-size:12px" data-act="removePhoto" data-id="${c.id}">Use artwork instead</button>` : `<span style="font-size:11px;color:var(--faint);text-align:center">${repoImages[c.id] ? 'Card image from CardSight AI' : 'Artwork shown until a real image or your photo is added'}</span>`}
@@ -834,7 +1000,7 @@ function viewCard(id) {
           <span class="eyebrow">${esc(p.name)} · ${esc(p.sport)}</span>
           <h1 style="font-size:clamp(24px,4vw,34px)">${esc(c.name)}</h1>
           <div class="chips">${[c.detail, ...c.tags].map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
-          <div class="row" style="align-items:baseline;gap:14px"><span class="num" style="font-size:36px;font-weight:600">${moneyFull(last(c.price))}</span><span class="num ${cls(m)}" style="font-weight:600">${fmtPct(m)} this month</span>${hotRank(c.id) ? `<span class="hot">${FLAME_ICON}Top riser #${hotRank(c.id)}</span>` : ''}</div>
+          <div class="row" style="align-items:baseline;gap:14px"><span class="num" style="font-size:36px;font-weight:600">${moneyFull(last(c.price))}</span><span class="num ${cls(m)}" style="font-weight:600">${fmtPct(m)} this month</span>${hotRank(c.id) ? `<span class="hot">${FLAME_ICON}Top riser #${hotRank(c.id)}</span>` : coldRank(c.id) ? `<span class="cold">${SNOW_ICON}Biggest drop #${coldRank(c.id)}</span>` : ''}</div>
           <div class="row"><button type="button" class="btn ${inCol ? '' : 'primary'}" data-act="toggleCol" data-id="${c.id}">${inCol ? '✓ In your collection' : '+ Add to collection'}</button><button type="button" class="btn" data-act="compareThis" data-id="${c.id}">Compare with other cards</button></div>
         </div>
       </div>
@@ -944,6 +1110,7 @@ const BUILD = {
     ['Compare tool', 'Up to four cards on price, sales volume and graded population.'],
     ['My collection', 'Total value and trend for the cards you add (saved in this browser).'],
     ['Card images', 'Original artwork for every card, your own photo, or real images from CardSight AI.'],
+    ['Cold cards', 'The top 5 drops this month (10%+ down on 3+ recent sales) get frost crystals growing in from the edges, sinking cold mist, falling snow and a Cold tag.'],
     ['Hot cards', 'The top 5 risers this month (10%+ on 3+ recent sales) get an animated flame glow and a Hot tag; their card page shows rising flames and a Top riser rank.'],
     ['Team colors', 'Each player shows a team badge, a jersey-number avatar and card artwork in their team’s official colors. No logos or photos until they’re licensed.'],
     ['Search', 'Top-bar search on every page for any of the 107 players by name, with suggestions as you type, accent-insensitive, keyboard friendly.'],
@@ -1123,6 +1290,7 @@ function render() {
   document.querySelectorAll('[data-nav]').forEach(a => { if (a.dataset.nav === nav) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
   wireCharts();
   try { initFires(); } catch (e) { /* fire is decorative */ }
+  try { initIce(); } catch (e) { /* ice is decorative */ }
   const q = $('#q');
   if (q) q.addEventListener('input', e => { state.homeQuery = e.target.value; const pos = e.target.selectionStart; render(); const nq = $('#q'); nq.focus(); try { nq.setSelectionRange(pos, pos); } catch (err) {} });
   const ms = $('#minSales'); if (ms) ms.addEventListener('change', e => { state.moversMin = e.target.value; render(); });
