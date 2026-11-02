@@ -204,6 +204,7 @@ h2 { margin: 0; font-size: 20px; letter-spacing: -0.02em; font-weight: 700; text
 .rs:last-child { border-right: 0; }
 .rs span { font-size: 11px; color: var(--faint); }
 .rs b { font-size: 14px; font-weight: 600; }
+.btn.browse-btn { min-height: 38px; font-size: 13px; padding: 0 14px; background: var(--accent); color: var(--accent-ink); border-color: var(--accent); text-decoration: none; }
 .linkbtn { background: none; border: 0; color: var(--accent); font: inherit; font-weight: 600; cursor: pointer; padding: 0; }
 .pq { flex: 1 1 260px; min-height: 42px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); padding: 0 12px; font-size: 14px; }
 .gallery { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
@@ -1411,14 +1412,15 @@ function marketCards(pid, p, cs) {
   const sorters = { 'value-desc': (a, b) => val(b) - val(a), 'value-asc': (a, b) => val(a) - val(b), 'gain': (a, b) => chg(b) - chg(a), 'drop': (a, b) => chg(a) - chg(b), 'year': (a, b) => yr(b) - yr(a), 'sales': (a, b) => b.sales - a.sales, 'premium': (a, b) => (b.prem || 0) - (a.prem || 0) };
   groups.sort(sorters[state.playerSort] || sorters['value-desc']);
   return `<div class="section">
-    <div class="row between" style="align-items:flex-end;gap:12px"><h2>${esc(p.short)}'s cards <span style="color:var(--faint);font-weight:500;font-size:15px">${groups.length} card${groups.length === 1 ? '' : 's'}${state.pGrade === 'All' ? `, ${fc.length} prices` : ''}</span></h2>
+    <div class="row between" style="align-items:flex-end;gap:12px"><div class="row" style="gap:12px;align-items:baseline"><h2>${esc(p.short)}'s cards <span style="color:var(--faint);font-weight:500;font-size:15px">${groups.length} card${groups.length === 1 ? '' : 's'}${state.pGrade === 'All' ? `, ${fc.length} prices` : ''}</span></h2>
+      <a class="btn browse-btn" href="#browse" data-act="browsePlayer" data-id="${esc(pid)}">Browse all ${esc(p.short)} cards →</a></div>
       <div class="row" style="gap:8px">${segBtns('pLayout', [['gallery', 'Gallery'], ['table', 'Table']], state.pLayout)}
         <label class="row" style="gap:8px;font-size:13px;color:var(--muted)" for="sort">Sort
         <select id="sort" style="min-height:40px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:0 10px">
           ${[['value-desc', 'Value: high to low'], ['value-asc', 'Value: low to high'], ['gain', 'Biggest gain (1M)'], ['drop', 'Biggest drop (1M)'], ['year', 'Best year (1Y)'], ['sales', 'Most traded'], ['premium', 'Biggest PSA 10 premium']].map(([v, l]) => `<option value="${v}"${v === state.playerSort ? ' selected' : ''}>${l}</option>`).join('')}
         </select></label></div></div>
-    <div class="row" style="gap:8px"><label for="pq" class="sr">Search ${esc(p.short)}'s cards</label><input id="pq" type="search" class="pq" placeholder="Search these cards (set, year, parallel)" value="${esc(state.pQuery || '')}" autocomplete="off">
-      <span style="font-size:12px;color:var(--faint)">Grade and type filters above apply here too.</span></div>
+    <div class="pctrl-row"><label for="pq" class="sr">Search ${esc(p.short)}'s cards</label><input id="pq" type="search" class="pq" placeholder="Search these cards (set, year, parallel)" value="${esc(state.pQuery || '')}" autocomplete="off">
+      <span class="pctrl-k">Grade</span>${['All', 'Raw', 'PSA 10'].map(v => `<button type="button" class="chip sm" data-set="pGrade" data-val="${v}" aria-pressed="${state.pGrade === v}">${v}</button>`).join('')}<span class="pctrl-k">Type</span>${['All', 'Rookie', 'Auto', 'Numbered'].map(v => `<button type="button" class="chip sm" data-set="pType" data-val="${v}" aria-pressed="${state.pType === v}">${v}</button>`).join('')}</div>
     ${groups.length ? (state.pLayout === 'table' ? marketTable(groups) : `<div class="gallery">${groups.map(galleryTile).join('')}</div>`) : `<p class="lede">No cards match. <button type="button" class="linkbtn" data-act="pReset">Clear filters</button></p>`}
   </div>`;
 }
@@ -1435,8 +1437,7 @@ function playerMarket(pid, p, cs) {
       <div class="row" style="align-items:baseline;gap:12px;flex-wrap:wrap"><span class="num ${cls(t.change)}" style="font-size:40px;font-weight:600;letter-spacing:-0.02em">${fmtPct(t.change)}</span><span style="color:var(--muted)">all ${esc(p.short)} cards over the last ${rl}, across ${cs.length} tracked prices</span></div>
       ${marketControls()}
       ${marketChart(pid, p, cs)}
-    </div>
-    ${marketCards(pid, p, cs)}`;
+    </div>`;
 }
 
 function viewPlayer(pid) {
@@ -1458,8 +1459,9 @@ function viewPlayer(pid) {
         </div>
         </div>
       </div>`; })()}
-      ${aboutSection(pid, p, cs)}
     </div>
+    ${cs.length ? marketCards(pid, p, cs) : ''}
+    <div class="section">${aboutSection(pid, p, cs)}</div>
 
     ${playerMarket(pid, p, cs)}
 
@@ -2244,6 +2246,7 @@ document.addEventListener('click', e => {
   if (s) { state[s.dataset.set] = s.dataset.val; render(); return; }
   const a = e.target.closest('[data-act]'); if (!a) return;
   const id = a.dataset.id;
+  if (a.dataset.act === 'browsePlayer') { const pl = PLAYERS[id]; if (pl) { state.f = { ...F0(), player: [pl.name], view: state.f.view || 'grid' }; state.fLimit = 48; state.fOpen = false; } if (location.hash === '#browse') render(); }
   if (a.dataset.act === 'pHide') { state.pHidden = { ...state.pHidden, [id]: !state.pHidden[id] }; render(); }
   if (a.dataset.act === 'pReset') { state.pGrade = 'All'; state.pType = 'All'; state.pQuery = ''; state.pHidden = {}; render(); }
   if (a.dataset.act === 'toggleCol') { const ids = col(); const has = ids.includes(id); setCol(has ? ids.filter(x => x !== id) : [...ids, id]); toast(has ? 'Removed from your collection' : 'Added to your collection'); render(); }
