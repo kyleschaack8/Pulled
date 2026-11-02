@@ -14,10 +14,30 @@
    "at": "2026-11-02T07:20Z",
    "mode": "build",
    "used": 25
+  },
+  {
+   "at": "2026-11-02T07:27Z",
+   "mode": "build",
+   "used": 150
   }
  ],
  "done": [
   "lebron-james",
-  "stephen-curry"
+  "stephen-curry",
+  "kevin-durant",
+  "shohei-ohtani",
+  "patrick-mahomes",
+  "giannis-antetokounmpo",
+  "mike-trout",
+  "josh-allen",
+  "nikola-jokic",
+  "aaron-judge",
+  "joe-burrow",
+  "luka-doncic",
+  "juan-soto",
+  "lamar-jackson",
+  "joel-embiid",
+  "ronald-acuna-jr",
+  "justin-herbert"
  ]
 }
