@@ -69,12 +69,17 @@ button, input, select { font: inherit; color: inherit; }
 /* Cold cards: frost, mist and snow on the biggest drops */
 .frost { position: relative; isolation: isolate; }
 .frost > canvas.mist { position: absolute; pointer-events: none; z-index: -1; }
-.frost > canvas.rime { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2; }
+.frost > canvas.rime { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2; border-radius: 7px; }
 .frost.big { box-shadow: 0 0 36px 6px rgba(120,190,255,.2); border-radius: 12px; }
 .cold { display: inline-flex; align-items: center; gap: 4px; height: 22px; padding: 0 8px; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: .03em; color: #04131f; background: linear-gradient(90deg, #d8f3ff, #6ab8ff); flex-shrink: 0; }
 .cold svg { display: block; }
 .hot { display: inline-flex; align-items: center; gap: 4px; height: 22px; padding: 0 8px; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: .03em; color: #1a0800; background: linear-gradient(90deg, #ffb300, #ff6a00); flex-shrink: 0; }
 .hot svg { display: block; }
+.pavatar { width: 132px; height: 132px; flex-shrink: 0; max-width: 100%; }
+.havatar { width: 56px; height: 56px; flex-shrink: 0; }
+.gavatar { width: 38px; height: 38px; flex-shrink: 0; display: block; }
+.pavatar svg, .havatar svg, .gavatar svg { display: block; }
+@media (max-width: 520px) { .pavatar { width: 96px; height: 96px; } }
 .teamtag { display: inline-flex; align-items: center; height: 22px; padding: 0 8px; border-radius: 6px; font-size: 11px; font-weight: 800; letter-spacing: .04em; color: var(--fg); background: color-mix(in srgb, var(--tc) 22%, var(--raise)); border: 1px solid color-mix(in srgb, var(--tc) 55%, var(--line)); }
 .gres .gbadge.team { background: color-mix(in srgb, var(--tc) 22%, var(--raise)); border-color: color-mix(in srgb, var(--tc) 55%, var(--line)); color: var(--fg); }
 .nav { display: flex; gap: 4px; flex-wrap: wrap; }
@@ -342,6 +347,7 @@ function applyStats(P, s, p) {
   if (s.team) P.team = s.team;
   if (s.teamAbbr) P.teamAbbr = s.teamAbbr;
   P.color = teamAccent(s.teamColor, s.teamAlt);
+  P.teamPrimary = s.teamColor || ''; P.teamSecondary = s.teamAlt || '';
   if (s.jersey) P.num = '#' + s.jersey;
   if (s.position) P.pos = s.position;
   if (s.summary && s.summary.stats && s.summary.stats.length) {
@@ -531,6 +537,255 @@ function teamAccent(primary, alt) {
 function hexHue(h) { const c = hexRgb(h); if (!c) return null; const [r, g, b] = c.map(v => v / 255), mx = Math.max(r, g, b), mn = Math.min(r, g, b), d = mx - mn; if (!d) return null; let x = mx === r ? ((g - b) / d) % 6 : mx === g ? (b - r) / d + 2 : (r - g) / d + 4; return Math.round(x * 60 + 360) % 360; }
 function teamTag(p) { return p.teamAbbr ? `<span class="teamtag" style="--tc:${p.color || 'var(--muted)'}">${esc(p.teamAbbr)}</span>` : ''; }
 
+/* ---------- player avatars ----------
+   Player avatars: original action silhouettes in team colors with jersey number.
+   No faces or likeness: heads are shaded silhouettes or helmets. */
+function avatarSVG(o) {
+  // o: { sport, pos, num, abbr, prim, alt, accent, uid }
+  const hexRgb = h => { const m = /^#?([0-9a-f]{6})$/i.exec(h || ''); if (!m) return null; const n = parseInt(m[1], 16); return [n >> 16 & 255, n >> 8 & 255, n & 255]; };
+  const lum = c => { if (!c) return 0; const f = v => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); }; return 0.2126 * f(c[0]) + 0.7152 * f(c[1]) + 0.0722 * f(c[2]); };
+  const hex = c => '#' + c.map(v => Math.max(0, Math.min(255, Math.round(v))).toString(16).padStart(2, '0')).join('');
+  const shade = (h, k) => { const c = hexRgb(h) || [80, 90, 110]; return hex(c.map(v => k < 0 ? v * (1 + k) : v + (255 - v) * k)); };
+  const contrast = (a, b) => { const x = lum(hexRgb(a)), y = lum(hexRgb(b)); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); };
+  const prim = o.prim || '#3a4a66', alt = o.alt || '#d9dee8';
+  const jersey = prim;
+  const trim = contrast(alt, prim) > 1.8 ? alt : (lum(hexRgb(prim)) > 0.4 ? '#14171f' : '#f2f4f8');
+  const numFill = contrast(trim, prim) > 2.2 ? trim : (lum(hexRgb(prim)) > 0.4 ? '#14171f' : '#ffffff');
+  const accent = o.accent || shade(prim, 0.3);
+  const id = 'av' + (o.uid || Math.random().toString(36).slice(2, 8));
+  const sil = '#151a23', rim = shade(accent, 0.1);
+  const num = String(o.num || '').replace('#', '').slice(0, 2);
+  const font = "'Inter Tight', 'Arial Black', Arial, sans-serif";
+  const S = { jersey, jerseyDark: shade(jersey, -0.28), trim, numFill, sil, rim, accent, font, num, id, abbr: o.abbr || '' };
+  const sport = o.sport, pos = String(o.pos || '').toUpperCase();
+  let pose, scene;
+  if (sport === 'NBA') { scene = sceneCourt(S); pose = /^C$|PF|^F/.test(pos) && !/G/.test(pos) ? nbaDunk(S) : nbaJumper(S); }
+  else if (sport === 'MLB') { scene = sceneDiamond(S); pose = /^(P|SP|RP)$/.test(pos) ? mlbPitcher(S) : mlbBatter(S); }
+  else { scene = sceneTurf(S); pose = /QB/.test(pos) ? nflQB(S) : /RB/.test(pos) ? nflRB(S) : nflCatch(S); }
+  return `<svg viewBox="0 0 200 200" width="100%" height="100%" role="img" aria-label="Illustrated ${esc0(o.abbr || '')} #${esc0(num)} player avatar" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <clipPath id="${id}c"><rect x="0" y="0" width="200" height="200" rx="30"/></clipPath>
+  <radialGradient id="${id}g" cx="50%" cy="34%" r="70%"><stop offset="0" stop-color="${accent}" stop-opacity=".55"/><stop offset=".55" stop-color="${shade(prim, -0.35)}" stop-opacity=".55"/><stop offset="1" stop-color="#07090d" stop-opacity="1"/></radialGradient>
+  <linearGradient id="${id}j" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${shade(jersey, 0.12)}"/><stop offset=".6" stop-color="${jersey}"/><stop offset="1" stop-color="${shade(jersey, -0.3)}"/></linearGradient>
+  <linearGradient id="${id}s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#232a36"/><stop offset=".5" stop-color="${sil}"/><stop offset="1" stop-color="#0c0f15"/></linearGradient>
+  <filter id="${id}d" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000" flood-opacity=".55"/></filter>
+</defs>
+<g clip-path="url(#${id}c)">
+  <rect width="200" height="200" fill="#090c11"/>
+  <rect width="200" height="200" fill="url(#${id}g)"/>
+  <text x="100" y="120" text-anchor="middle" font-family="${font}" font-weight="900" font-size="150" fill="${trim}" opacity=".07" letter-spacing="-6">${esc0(num)}</text>
+  ${[0, 1, 2, 3, 4, 5].map(i => `<path d="M${-40 + i * 46} 200 L${40 + i * 46} 0" stroke="${trim}" stroke-width="9" opacity=".035"/>`).join('')}
+  ${scene}
+  <g filter="url(#${id}d)">${pose}</g>
+  <rect x="1.5" y="1.5" width="197" height="197" rx="28.5" fill="none" stroke="${accent}" stroke-opacity=".55" stroke-width="3"/>
+</g>
+</svg>`;
+}
+function esc0(s) { return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
+
+/* ---------- scenes ---------- */
+function sceneCourt(S) {
+  const planks = [0, 1, 2, 3, 4, 5, 6, 7].map(i => `<path d="M${-10 + i * 30} 200 L${30 + i * 24} 150" stroke="#2a1a0c" stroke-width="1" opacity=".55"/>`).join('');
+  return `<path d="M0 150 L200 150 L200 200 L0 200 Z" fill="#6b4524"/>
+  <path d="M0 150 L200 150 L200 200 L0 200 Z" fill="url(#${S.id}g)" opacity=".35"/>${planks}
+  <path d="M0 150 L200 150" stroke="#f2e6d0" stroke-opacity=".35" stroke-width="1.5"/>
+  <path d="M30 200 Q100 150 170 200" fill="none" stroke="#f2e6d0" stroke-opacity=".3" stroke-width="1.5"/>
+  <path d="M70 200 L70 168 L130 168 L130 200" fill="${S.jerseyDark}" fill-opacity=".45" stroke="#f2e6d0" stroke-opacity=".3" stroke-width="1.5"/>`;
+}
+function sceneDiamond(S) {
+  return `<path d="M0 148 L200 148 L200 200 L0 200 Z" fill="#1d3a22"/>
+  ${[0, 1, 2, 3, 4, 5].map(i => `<path d="M${i * 40} 148 L${i * 40 + 20} 148 L${i * 40 - 10} 200 L${i * 40 - 30} 200 Z" fill="#244a2b" opacity=".6"/>`).join('')}
+  <path d="M-10 200 Q100 150 210 200 Z" fill="#8a5a33"/>
+  <path d="M-10 200 Q100 150 210 200" fill="none" stroke="#b07a4a" stroke-width="2" opacity=".6"/>
+  <path d="M0 148 L200 148" stroke="#f2f4f8" stroke-opacity=".18" stroke-width="1"/>`;
+}
+function sceneTurf(S) {
+  const lines = [-1, 0, 1, 2, 3].map(i => `<path d="M${40 + i * 50} 150 L${20 + i * 62} 200" stroke="#f2f4f8" stroke-opacity=".32" stroke-width="2"/>`).join('');
+  const hash = [0, 1, 2, 3, 4, 5, 6, 7, 8].map(i => `<path d="M${18 + i * 22} 170 L${16 + i * 22} 175" stroke="#f2f4f8" stroke-opacity=".28" stroke-width="1.5"/>`).join('');
+  return `<path d="M0 150 L200 150 L200 200 L0 200 Z" fill="#1c4424"/>
+  ${[0, 1, 2, 3, 4].map(i => `<path d="M0 ${150 + i * 10} L200 ${150 + i * 10}" stroke="#235a2e" stroke-width="5" opacity=".55"/>`).join('')}${lines}${hash}`;
+}
+
+/* ---------- shared parts ---------- */
+const limb = (d, w, S, col) => `<path d="${d}" fill="none" stroke="${col || `url(#${S.id}s)`}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>` + (col ? `<path d="${d}" fill="none" stroke="#fff" stroke-opacity=".14" stroke-width="${w * 0.3}" stroke-linecap="round" stroke-linejoin="round" transform="translate(-${w * 0.18} -${w * 0.12})"/>` : `<path d="${d}" fill="none" stroke="#4a5568" stroke-opacity=".55" stroke-width="${w * 0.32}" stroke-linecap="round" stroke-linejoin="round" transform="translate(-${w * 0.2} -${w * 0.14})"/>`);
+const shadow = (x, w) => `<ellipse cx="${x}" cy="184" rx="${w}" ry="5" fill="#000" opacity=".45"/>`;
+const shoe = (x, y, flip, col) => `<path d="M${x - 9 * flip} ${y + 2} q0 -6 ${7 * flip} -6 l${6 * flip} 1 q${5 * flip} 1 ${6 * flip} 5 z" fill="${col}" stroke="#0b0d12" stroke-width="1"/>`;
+const numText = (S, x, y, size, skew) => `<text x="${x}" y="${y}" text-anchor="middle" font-family="${S.font}" font-weight="900" font-size="${size}" fill="${S.numFill}" stroke="${S.jerseyDark}" stroke-width="${size / 14}" paint-order="stroke" ${skew ? `transform="skewY(${skew})"` : ''} letter-spacing="-0.5">${esc0(S.num)}</text>`;
+
+/* ---------- basketball: guard pulling up for a jumper ---------- */
+function nbaJumper(S) {
+  return `${shadow(100, 30)}
+  ${limb('M93 136 L87 157 L90 172', 11, S)}${limb('M107 136 L114 155 L110 170', 11, S)}
+  ${limb('M90 164 L90.5 172', 11.5, S, S.trim)}${limb('M110.5 162 L110 170', 11.5, S, S.trim)}
+  ${shoe(90, 176, 1, '#f2f4f8')}${shoe(110, 174, -1, '#f2f4f8')}
+  <path d="M82 113 L118 113 L122 141 L104 143 L100 133 L96 143 L78 141 Z" fill="url(#${S.id}j)"/>
+  <path d="M82 113 L118 113 L118.6 118 L81.4 118 Z" fill="${S.trim}"/>
+  <path d="M81.5 119 L78.5 140" stroke="${S.trim}" stroke-width="3"/><path d="M118.5 119 L121.5 140" stroke="${S.trim}" stroke-width="3"/>
+  ${limb('M86 79 L77 59 L91 41', 9.5, S)}${limb('M114 79 L123 59 L109 41', 9.5, S)}
+  <rect x="96" y="66" width="8" height="10" rx="3" fill="${S.sil}"/>
+  <circle cx="100" cy="62" r="9.5" fill="url(#${S.id}s)"/><path d="M90.6 60 Q100 56 109.4 60" stroke="${S.trim}" stroke-width="2.6" fill="none"/>
+  <path d="M85 75 Q100 70 115 75 L118 87 Q113 98 116 114 L84 114 Q87 98 82 87 Z" fill="url(#${S.id}j)"/>
+  <path d="M93 74 Q100 84 107 74" fill="${S.sil}" stroke="${S.trim}" stroke-width="2.4"/>
+  <path d="M85.2 75.5 Q81 81 82 87" fill="none" stroke="${S.trim}" stroke-width="2.2"/><path d="M114.8 75.5 Q119 81 118 87" fill="none" stroke="${S.trim}" stroke-width="2.2"/>
+  <text x="100" y="91" text-anchor="middle" font-family="${S.font}" font-weight="800" font-size="6.5" letter-spacing="1" fill="${S.numFill}">${esc0(S.abbr)}</text>
+  ${numText(S, 100, 109, 19)}
+  <circle cx="92" cy="40" r="4.6" fill="${S.sil}"/><circle cx="108" cy="40" r="4.6" fill="${S.sil}"/>
+  <circle cx="100" cy="29" r="11.5" fill="#d9621c"/><circle cx="96" cy="25" r="5" fill="#f08a43" opacity=".55"/>
+  <path d="M88.5 29 L111.5 29 M100 17.5 L100 40.5 M91.5 21 Q100 29 91.5 37 M108.5 21 Q100 29 108.5 37" stroke="#2a1608" stroke-width="1.2" fill="none"/>`;
+}
+
+/* ---------- basketball: forward/center throwing it down ---------- */
+function nbaDunk(S) {
+  return `<g opacity=".9"><rect x="138" y="14" width="56" height="34" rx="2" fill="#f2f4f8" fill-opacity=".1" stroke="#f2f4f8" stroke-opacity=".55" stroke-width="2"/>
+  <rect x="155" y="27" width="22" height="16" fill="none" stroke="#f2f4f8" stroke-opacity=".55" stroke-width="1.6"/>
+  <path d="M152 48 L160 48" stroke="#f2f4f8" stroke-opacity=".6" stroke-width="2"/></g>
+  ${shadow(92, 28)}
+  <g transform="rotate(-10 100 110)">
+  ${limb('M92 136 L80 148 L90 160', 11, S)}${limb('M107 136 L111 158 L105 176', 11, S)}
+  ${limb('M86 156 L90 160', 11.5, S, S.trim)}${limb('M107 168 L105 176', 11.5, S, S.trim)}
+  ${shoe(93, 163, 1, '#f2f4f8')}${shoe(104, 179, -1, '#f2f4f8')}
+  <path d="M82 113 L118 113 L122 141 L104 143 L100 133 L96 143 L78 141 Z" fill="url(#${S.id}j)"/>
+  <path d="M82 113 L118 113 L118.6 118 L81.4 118 Z" fill="${S.trim}"/>
+  <path d="M81.5 119 L78.5 140" stroke="${S.trim}" stroke-width="3"/><path d="M118.5 119 L121.5 140" stroke="${S.trim}" stroke-width="3"/>
+  ${limb('M86 80 L74 96 L70 112', 9.5, S)}
+  <rect x="96" y="66" width="8" height="10" rx="3" fill="${S.sil}"/>
+  <circle cx="100" cy="62" r="9.5" fill="url(#${S.id}s)"/>
+  <path d="M85 75 Q100 70 115 75 L118 87 Q113 98 116 114 L84 114 Q87 98 82 87 Z" fill="url(#${S.id}j)"/>
+  <path d="M93 74 Q100 84 107 74" fill="${S.sil}" stroke="${S.trim}" stroke-width="2.4"/>
+  <path d="M85.2 75.5 Q81 81 82 87" fill="none" stroke="${S.trim}" stroke-width="2.2"/><path d="M114.8 75.5 Q119 81 118 87" fill="none" stroke="${S.trim}" stroke-width="2.2"/>
+  <text x="100" y="91" text-anchor="middle" font-family="${S.font}" font-weight="800" font-size="6.5" letter-spacing="1" fill="${S.numFill}">${esc0(S.abbr)}</text>
+  ${numText(S, 100, 109, 19)}
+  ${limb('M114 79 L132 64 L148 50', 9.5, S)}
+  </g>
+  <circle cx="154" cy="40" r="11" fill="#d9621c"/><circle cx="150" cy="36" r="4.5" fill="#f08a43" opacity=".55"/>
+  <path d="M143 40 L165 40 M154 29 L154 51 M146 33 Q154 40 146 47 M162 33 Q154 40 162 47" stroke="#2a1608" stroke-width="1.2" fill="none"/>
+  <ellipse cx="160" cy="50" rx="14" ry="3.2" fill="none" stroke="#ff6a2b" stroke-width="2.6"/>
+  <path d="M147 51 L151 66 M153 52 L155 67 M160 53 L160 68 M167 52 L165 67 M173 51 L169 66 M151 66 L169 66" stroke="#f2f4f8" stroke-opacity=".65" stroke-width="1" fill="none"/>`;
+}
+
+/* ---------- baseball: hitter in his stance ---------- */
+function mlbBatter(S) {
+  const pants = '#e9edf2';
+  return `${shadow(104, 30)}
+  <path d="M121 70 L160 20" stroke="#c99a5b" stroke-width="5.5" stroke-linecap="round"/><path d="M144 40 L160 20" stroke="#d9ad72" stroke-width="7" stroke-linecap="round"/><path d="M146 36 L158 22" stroke="#fff" stroke-opacity=".35" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="120" cy="71.5" r="3" fill="#8a6235"/>
+  ${limb('M95 136 L88 154 L86 172', 11, S, pants)}${limb('M113 136 L116 156 L118 172', 11, S, pants)}
+  ${limb('M87 160 L86 172', 11.5, S, S.jersey)}${limb('M116.6 160 L118 172', 11.5, S, S.jersey)}
+  ${shoe(86, 177, -1, '#14171f')}${shoe(118, 177, 1, '#14171f')}
+  <path d="M93 106 L123 106 L126 136 L111 140 L104 128 L97 140 L90 136 Z" fill="${pants}"/>
+  <path d="M123 108 L126 136" stroke="${S.jersey}" stroke-width="2.4"/>
+  <rect x="92" y="103" width="32" height="5" rx="1.5" fill="#1b1f27"/><rect x="104" y="103.5" width="6" height="4" fill="#9aa3b5"/>
+  <path d="M97 70 Q111 64 124 72 L126 104 L92 105 Q91 86 97 70 Z" fill="url(#${S.id}j)"/>
+  <path d="M110 68 L110 104" stroke="${S.trim}" stroke-width="1.2" opacity=".6"/>
+  ${numText(S, 117, 96, 17)}
+  ${limb('M99 75 L104 64 L119 70', 9, S)}${limb('M122 76 L130 70 L122 68', 9, S)}
+  <circle cx="121" cy="70" r="4.5" fill="${S.sil}"/>
+  <rect x="104" y="62" width="8" height="9" rx="3" fill="${S.sil}"/>
+  <circle cx="108" cy="56" r="10" fill="url(#${S.id}s)"/>
+  <path d="M97 57 Q97 43 109 43 Q121 43 120 57 L121 61 L112 61 L111 57 Z" fill="url(#${S.id}j)" stroke="${S.jerseyDark}" stroke-width="1"/>
+  <path d="M98 55 L88 57.5 L98 59.5 Z" fill="${S.jerseyDark}"/>
+  <path d="M111 57 Q118 58 119 66 L113 66 Z" fill="${S.jersey}" stroke="${S.jerseyDark}" stroke-width="1"/>
+  <circle cx="115" cy="50" r="1.6" fill="${S.trim}" opacity=".8"/>`;
+}
+
+/* ---------- baseball: pitcher in his leg kick ---------- */
+function mlbPitcher(S) {
+  const pants = '#e9edf2';
+  return `<path d="M60 168 Q100 160 140 168 L140 176 Q100 168 60 176 Z" fill="#a06a3d" opacity=".9"/><rect x="92" y="164" width="16" height="3" fill="#f2f4f8" opacity=".85"/>
+  ${shadow(108, 24)}
+  ${limb('M110 136 L114 154 L113 170', 11, S, pants)}${limb('M113.6 156 L113 170', 11.5, S, S.jersey)}${shoe(113, 175, 1, '#14171f')}
+  ${limb('M100 134 L80 124 L84 146', 11, S, pants)}${limb('M81 132 L84 146', 11.5, S, S.jersey)}
+  <path d="M77 149 q-2 -6 4 -6 l8 0 q4 1 3 6 z" fill="#14171f"/>
+  <path d="M94 106 L122 106 L124 136 L106 138 L100 130 L94 136 Z" fill="${pants}"/>
+  <path d="M122 108 L124 136" stroke="${S.jersey}" stroke-width="2.4"/>
+  <rect x="93" y="103" width="30" height="5" rx="1.5" fill="#1b1f27"/>
+  <path d="M97 70 Q111 64 123 72 L125 104 L93 105 Q92 86 97 70 Z" fill="url(#${S.id}j)"/>
+  ${numText(S, 116, 96, 17)}
+  ${limb('M118 76 L130 92 L137 108', 9, S)}<circle cx="138" cy="110" r="4.3" fill="#f2f4f8"/><path d="M135.6 108.5 q2.4 1.5 4.8 0" stroke="#c0392b" stroke-width=".9" fill="none"/>
+  ${limb('M100 76 L92 90 L100 92', 9, S)}
+  <path d="M93 84 q-6 2 -6 10 q2 7 10 6 q6 -2 6 -9 q-3 -8 -10 -7 z" fill="#8a5a2b" stroke="#5a3818" stroke-width="1"/>
+  <rect x="104" y="62" width="8" height="9" rx="3" fill="${S.sil}"/>
+  <circle cx="108" cy="56" r="10" fill="url(#${S.id}s)"/>
+  <path d="M98.5 54 Q99 44 109 44 Q119 44 118.5 54 Z" fill="url(#${S.id}j)" stroke="${S.jerseyDark}" stroke-width="1"/>
+  <path d="M99 53 L87 55.5 L99 56.5 Z" fill="${S.jerseyDark}"/>
+  <circle cx="109" cy="44.5" r="1.4" fill="${S.trim}"/>`;
+}
+
+/* ---------- football: helmet ---------- */
+function helmet(S, cx, cy, face) {
+  // face: -1 facing left, 1 facing right
+  const f = face;
+  return `<path d="M${cx - 13 * f} ${cy + 2} Q${cx - 14 * f} ${cy - 14} ${cx} ${cy - 14} Q${cx + 14 * f} ${cy - 14} ${cx + 14 * f} ${cy + 1} L${cx + 12 * f} ${cy + 10} L${cx - 4 * f} ${cy + 11} Z" fill="url(#${S.id}j)" stroke="${S.jerseyDark}" stroke-width="1"/>
+  <path d="M${cx} ${cy - 14} Q${cx + 9 * f} ${cy - 10} ${cx + 14 * f} ${cy - 2}" stroke="${S.trim}" stroke-width="3" fill="none"/>
+  <path d="M${cx - 13 * f} ${cy - 3} L${cx - 19 * f} ${cy + 1} L${cx - 18 * f} ${cy + 11} L${cx - 6 * f} ${cy + 12} M${cx - 13 * f} ${cy + 3} L${cx - 19 * f} ${cy + 5} M${cx - 13 * f} ${cy + 8} L${cx - 18.5 * f} ${cy + 8.5}" stroke="#c7ccd6" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+  <circle cx="${cx + 4 * f}" cy="${cy + 1}" r="2.2" fill="#0c0f15" stroke="#c7ccd6" stroke-width=".9"/>
+  <path d="M${cx - 6 * f} ${cy - 10} Q${cx + 2 * f} ${cy - 13} ${cx + 9 * f} ${cy - 9}" stroke="#fff" stroke-opacity=".45" stroke-width="2.2" fill="none" stroke-linecap="round"/>`;
+}
+function football(x, y, rot) {
+  return `<g transform="translate(${x} ${y}) rotate(${rot})"><ellipse rx="9" ry="5.4" fill="#6b3a1e" stroke="#3b1f0e" stroke-width="1"/><path d="M-3.5 0 L3.5 0 M-2 -1.6 L-2 1.6 M0 -1.6 L0 1.6 M2 -1.6 L2 1.6" stroke="#f2f4f8" stroke-width=".9"/><path d="M-9 0 q-1 0 0 0 M-7.5 -3 L-7.5 3 M7.5 -3 L7.5 3" stroke="#f2f4f8" stroke-width=".8" opacity=".7"/></g>`;
+}
+function pads(S, pantsCol) {
+  return `<path d="M88 110 L118 110 L122 140 L112 162 L105 162 L108 141 L103 135 L97 160 L90 160 L93 138 Z" fill="${pantsCol}"/>
+  <path d="M118.5 112 L121.5 139" stroke="${S.jersey}" stroke-width="3"/><path d="M87.5 112 L91.5 137" stroke="${S.jersey}" stroke-width="3"/>
+  <path d="M80 75 Q100 64 122 72 L126 86 L118 88 L117 110 L89 111 L88 88 L78 88 Z" fill="url(#${S.id}j)"/>
+  <path d="M79 84 L88 84 M118 84 L126 82" stroke="${S.trim}" stroke-width="2.6"/>
+  <path d="M94 70 Q101 76 108 70" fill="${S.sil}" stroke="${S.trim}" stroke-width="2"/>
+  ${numText(S, 103, 103, 24)}`;
+}
+
+/* ---------- football: quarterback ready to throw ---------- */
+function nflQB(S) {
+  const pc = S.trim === '#14171f' ? '#e9edf2' : S.trim;
+  return `${shadow(104, 30)}
+  ${limb('M95 136 L88 156 L87 172', 11.5, S)}${limb('M112 136 L118 155 L118 172', 11.5, S)}
+  ${limb('M88 158 L87 172', 12, S, S.jersey)}${limb('M118 158 L118 172', 12, S, S.jersey)}
+  ${shoe(87, 177, -1, '#14171f')}${shoe(118, 177, 1, '#14171f')}
+  ${limb('M83 80 L70 92 L62 90', 9.5, S)}
+  ${pads(S, pc)}
+  ${limb('M120 78 L134 64 L130 46', 9.5, S)}
+  <circle cx="130" cy="44" r="4.6" fill="${S.sil}"/>${football(131, 36, -32)}
+  <rect x="98" y="58" width="9" height="10" rx="3" fill="${S.sil}"/>
+  ${helmet(S, 103, 52, 1)}`;
+}
+
+/* ---------- football: receiver high-pointing a catch ---------- */
+function nflCatch(S) {
+  const pc = S.trim === '#14171f' ? '#e9edf2' : S.trim;
+  return `${shadow(100, 26)}
+  ${limb('M95 136 L90 152 L94 164', 11.5, S)}${limb('M111 136 L115 158 L112 175', 11.5, S)}
+  ${limb('M92 156 L94 164', 12, S, S.jersey)}${limb('M114.6 162 L112 175', 12, S, S.jersey)}
+  ${shoe(95, 169, 1, '#14171f')}${shoe(112, 180, -1, '#14171f')}
+  ${pads(S, pc)}
+  ${limb('M84 80 L82 58 L94 36', 9.5, S)}${limb('M120 78 L122 56 L110 36', 9.5, S)}
+  <circle cx="95" cy="34" r="4.6" fill="${S.sil}"/><circle cx="109" cy="34" r="4.6" fill="${S.sil}"/>
+  ${football(102, 26, 8)}
+  <rect x="98" y="58" width="9" height="10" rx="3" fill="${S.sil}"/>
+  ${helmet(S, 103, 52, 1)}`;
+}
+
+/* ---------- football: running back hitting the hole ---------- */
+function nflRB(S) {
+  const pc = S.trim === '#14171f' ? '#e9edf2' : S.trim;
+  return `${shadow(100, 32)}
+  <g transform="rotate(-14 100 120)">
+  ${limb('M95 136 L78 148 L70 164', 11.5, S)}${limb('M112 136 L124 152 L134 146', 11.5, S)}
+  ${limb('M74 156 L70 164', 12, S, S.jersey)}${limb('M128 150 L134 146', 12, S, S.jersey)}
+  ${shoe(68, 168, -1, '#14171f')}${shoe(138, 146, 1, '#14171f')}
+  ${pads(S, pc)}
+  ${limb('M120 80 L130 96 L124 108', 9.5, S)}${football(126, 106, 30)}
+  ${limb('M83 80 L68 76 L58 64', 9.5, S)}<circle cx="57" cy="62" r="4.6" fill="${S.sil}"/>
+  <rect x="98" y="58" width="9" height="10" rx="3" fill="${S.sil}"/>
+  ${helmet(S, 103, 52, 1)}
+  </g>
+  ${[0, 1, 2].map(i => `<path d="M${140 + i * 10} ${96 + i * 14} L${176 + i * 6} ${96 + i * 14}" stroke="${S.trim}" stroke-width="2" stroke-linecap="round" opacity=".35"/>`).join('')}`;
+}
+
+let avN = 0;
+function playerAvatar(p) {
+  const num = /^#/.test(p.num || '') ? p.num.slice(1) : '';
+  return avatarSVG({ sport: p.sport, pos: p.pos, num, abbr: p.teamAbbr || '', prim: p.teamPrimary || p.color, alt: p.teamSecondary || '', accent: p.color, uid: 'p' + (++avN) });
+}
+
 /* ---------- card images: original artwork, or the viewer's own photo ---------- */
 function getPhotos() { try { const v = JSON.parse(localStorage.getItem('pulled-photos') || '{}'); return v && typeof v === 'object' ? v : {}; } catch (e) { return {}; } }
 let memPhotos = getPhotos();
@@ -631,21 +886,28 @@ function flameThumb(c, inner) { return hotRank(c.id) ? `<div class="thumb flame"
 const FIRE = { list: [], sprites: null, running: false };
 function fireSprites() {
   if (FIRE.sprites) return FIRE.sprites;
+  // tall teardrop flame sprites: brightest near the bottom, tapering up
   const make = (rgb, core) => {
-    const c = document.createElement('canvas'); c.width = c.height = 64;
-    const g = c.getContext('2d'), gr = g.createRadialGradient(32, 32, 0, 32, 32, 32);
+    const c = document.createElement('canvas'); c.width = 64; c.height = 160;
+    const g = c.getContext('2d');
+    g.translate(32, 112); g.scale(1, 2.6);
+    const gr = g.createRadialGradient(0, 0, 0, 0, 0, 30);
     gr.addColorStop(0, `rgba(${core.join(',')},1)`);
-    gr.addColorStop(0.35, `rgba(${rgb.join(',')},0.85)`);
+    gr.addColorStop(0.3, `rgba(${rgb.join(',')},0.8)`);
     gr.addColorStop(1, `rgba(${rgb.join(',')},0)`);
-    g.fillStyle = gr; g.fillRect(0, 0, 64, 64); return c;
+    g.fillStyle = gr; g.beginPath(); g.arc(0, 0, 30, 0, Math.PI * 2); g.fill();
+    return c;
   };
+  const dot = (rgb) => { const c = document.createElement('canvas'); c.width = c.height = 32; const g = c.getContext('2d'), gr = g.createRadialGradient(16, 16, 0, 16, 16, 16); gr.addColorStop(0, `rgba(${rgb},1)`); gr.addColorStop(1, `rgba(${rgb},0)`); g.fillStyle = gr; g.fillRect(0, 0, 32, 32); return c; };
   FIRE.sprites = [
-    make([255, 236, 170], [255, 255, 235]), // white-hot core
-    make([255, 186, 50], [255, 236, 170]),  // yellow
-    make([255, 112, 18], [255, 170, 60]),   // orange
-    make([214, 48, 10], [255, 96, 20]),     // red
-    make([90, 30, 20], [140, 50, 25])       // dying ember / smoke tint
+    make([255, 230, 150], [255, 255, 230]),
+    make([255, 180, 40], [255, 232, 140]),
+    make([255, 104, 12], [255, 170, 50]),
+    make([200, 40, 8], [255, 90, 20]),
+    make([110, 24, 8], [170, 40, 10])
   ];
+  FIRE.sprites.ember = dot('255,200,90');
+  FIRE.sprites.glow = dot('255,120,20');
   return FIRE.sprites;
 }
 function initFires() {
@@ -656,7 +918,7 @@ function initFires() {
     const big = host.dataset.fire === 'l';
     const canvas = document.createElement('canvas'); canvas.className = 'fire';
     host.prepend(canvas);
-    const f = { host, canvas, ctx: canvas.getContext('2d'), big, parts: [], t: Math.random() * 1000, w: 0, h: 0, pad: big ? { t: 0.5, s: 0.2, b: 0.08 } : { t: 0.55, s: 0.28, b: 0.12 } };
+    const f = { host, canvas, ctx: canvas.getContext('2d'), big, parts: [], t: Math.random() * 1000, w: 0, h: 0, pad: big ? { t: 0.62, s: 0.2, b: 0.08 } : { t: 0.7, s: 0.28, b: 0.12 } };
     fireSize(f);
     if (!f.ctx) return;
     FIRE.list.push(f);
@@ -675,26 +937,32 @@ function fireSize(f) {
 }
 function fireSpawn(f) {
   const s = f.scale, r = Math.random();
-  let x, y, vx = (Math.random() - 0.5) * 0.25 * s;
-  if (r < 0.58) { x = f.ox + Math.random() * f.w; y = f.oy + Math.random() * 6 * s; }                     // along the top edge
-  else if (r < 0.79) { x = f.ox + Math.random() * 5 * s; y = f.oy + Math.random() * f.h; vx -= 0.25 * s; }  // left edge
-  else if (r < 0.98) { x = f.ox + f.w - Math.random() * 5 * s; y = f.oy + Math.random() * f.h; vx += 0.25 * s; } // right edge
-  else { x = f.ox + Math.random() * f.w; y = f.oy + f.h; }                                                  // bottom
-  const ember = Math.random() < 0.035;
-  f.parts.push({ x, y, vx, vy: -(0.55 + Math.random() * 1.05) * s * (ember ? 1.6 : 1), life: 1,
-    decay: ember ? 0.006 + Math.random() * 0.006 : (f.big ? 0.0095 + Math.random() * 0.012 : 0.014 + Math.random() * 0.016),
-    r: ember ? (1.2 + Math.random()) * s : (9 + Math.random() * 12) * s * (f.big ? 1 : 0.7), seed: Math.random() * 100, ember });
+  let x, y, vx = (Math.random() - 0.5) * 0.3 * s, side = 0;
+  if (r < 0.7) {
+    // along the top edge, bunched into moving tongues of flame
+    for (let k = 0; k < 4; k++) {
+      x = Math.random();
+      const tongue = 0.5 + 0.5 * Math.sin(x * 9 + f.t * 0.05) * Math.sin(x * 4.3 - f.t * 0.031);
+      if (Math.random() < 0.25 + tongue * 0.75) break;
+    }
+    x = f.ox + x * f.w; y = f.oy + 4 * s;
+  } else if (r < 0.85) { x = f.ox - 2 * s; y = f.oy + Math.random() * f.h * 0.9; vx -= 0.35 * s; side = -1; }
+  else { x = f.ox + f.w + 2 * s; y = f.oy + Math.random() * f.h * 0.9; vx += 0.35 * s; side = 1; }
+  const ember = Math.random() < 0.02;
+  f.parts.push({ x, y, vx, vy: -(1.6 + Math.random() * 1.8) * s * (ember ? 0.9 : 1) * (side ? 0.8 : 1), life: 1,
+    decay: ember ? 0.008 + Math.random() * 0.006 : (f.big ? 0.016 + Math.random() * 0.016 : 0.026 + Math.random() * 0.026),
+    r: ember ? (1 + Math.random()) * s : (4.5 + Math.random() * 6) * s * (f.big ? 1 : 0.75), seed: Math.random() * 100, ember });
 }
 function fireStep(f) {
   f.t += 1;
-  const n = f.big ? 7 : 2;
+  const n = f.big ? 16 : 5;
   for (let i = 0; i < n; i++) fireSpawn(f);
   const s = f.scale;
   for (const p of f.parts) {
-    p.x += p.vx + Math.sin(f.t * 0.06 + p.seed + p.y * 0.035) * 0.45 * s;
+    p.x += p.vx + Math.sin(f.t * 0.09 + p.seed + p.y * 0.05) * 0.5 * s * (1 - p.life);
     p.y += p.vy;
-    p.vy *= 1.004;                       // flames accelerate upward as they heat
-    p.vx *= 0.985;
+    p.vy *= 1.012;
+    p.vx *= 0.95;
     p.life -= p.decay;
   }
   f.parts = f.parts.filter(p => p.life > 0);
@@ -705,16 +973,22 @@ function fireDraw(f) {
   g.globalCompositeOperation = 'source-over';
   g.clearRect(0, 0, f.canvas.width, f.canvas.height);
   g.globalCompositeOperation = 'lighter';
-  const flick = 0.82 + Math.sin(f.t * 0.21) * 0.08 + Math.sin(f.t * 0.53) * 0.06;
-  g.globalAlpha = 0.16 * flick;          // warm glow behind the card
-  g.drawImage(sp[2], f.ox - f.w * 0.15, f.oy - f.h * 0.25, f.w * 1.3, f.h * 1.35);
+  const flick = 0.85 + Math.sin(f.t * 0.23) * 0.08 + Math.sin(f.t * 0.61) * 0.07;
+  g.globalAlpha = 0.22 * flick;            // heat glow behind the card
+  g.drawImage(sp.glow, f.ox - f.w * 0.25, f.oy - f.h * 0.35, f.w * 1.5, f.h * 1.3);
+  g.globalAlpha = 0.55 * flick;            // bright burning base along the top edge
+  g.drawImage(sp.glow, f.ox - 6, f.oy - 10 * f.scale, f.w + 12, 26 * f.scale);
   for (const p of f.parts) {
     const age = 1 - p.life;
-    const k = p.ember ? 1 : age < 0.12 ? 0 : age < 0.38 ? 1 : age < 0.66 ? 2 : age < 0.88 ? 3 : 4;
-    const size = p.ember ? p.r * 2 : p.r * 2 * (0.45 + p.life * 0.75);
-    const edge = Math.max(0, Math.min(1, p.y / (f.oy * 0.6)));   // fade out near the top of the fire area
-    g.globalAlpha = Math.max(0, Math.min(1, (p.ember ? (0.6 + Math.sin(f.t * 0.4 + p.seed) * 0.4) : Math.pow(p.life, 0.7) * 0.55) * flick * edge));
-    g.drawImage(sp[k], p.x - size / 2, p.y - size / 2, size, size);
+    if (p.ember) {
+      g.globalAlpha = Math.max(0, (0.55 + Math.sin(f.t * 0.5 + p.seed) * 0.45) * Math.min(1, p.life * 2));
+      const d = p.r * 3; g.drawImage(sp.ember, p.x - d / 2, p.y - d / 2, d, d); continue;
+    }
+    const k = age < 0.18 ? 0 : age < 0.42 ? 1 : age < 0.68 ? 2 : age < 0.9 ? 3 : 4;
+    const w = p.r * 2 * (0.5 + p.life * 0.6), h = w * 3.3;
+    const edge = Math.max(0, Math.min(1, p.y / (f.oy * 0.5)));
+    g.globalAlpha = Math.max(0, Math.min(1, 0.42 * Math.pow(p.life, 0.6) * flick * edge));
+    g.drawImage(sp[k], p.x - w / 2, p.y - h * 0.72, w, h);
   }
   g.globalAlpha = 1;
 }
@@ -754,7 +1028,7 @@ function iceSprites() {
     gr.addColorStop(0, `rgba(${rgb},1)`); gr.addColorStop(stop, `rgba(${rgb},.5)`); gr.addColorStop(1, `rgba(${rgb},0)`);
     g.fillStyle = gr; g.fillRect(0, 0, 64, 64); return c;
   };
-  ICE.sprites = { mist: make('205,232,255', 0.45), flake: make('255,255,255', 0.25), glow: make('120,190,255', 0.4) };
+  ICE.sprites = { mist: make('200,228,255', 0.55), flake: make('255,255,255', 0.25), glow: make('120,190,255', 0.4) };
   return ICE.sprites;
 }
 function initIce() {
@@ -767,7 +1041,7 @@ function initIce() {
     const rime = document.createElement('canvas'); rime.className = 'rime';
     host.prepend(mist); host.append(rime);
     const f = { host, mist, rime, mctx: mist.getContext('2d'), rctx: rime.getContext('2d'), big, parts: [], t: Math.random() * 1000, grow: 0,
-      pad: big ? { t: 0.3, s: 0.2, b: 0.35 } : { t: 0.35, s: 0.3, b: 0.55 } };
+      pad: big ? { t: 0.3, s: 0.38, b: 0.35 } : { t: 0.35, s: 0.45, b: 0.55 } };
     if (!f.mctx || !f.rctx) return;
     iceSize(f);
     ICE.list.push(f);
@@ -794,7 +1068,7 @@ function buildFrost(f) {
       const len = (f.big ? 5 : 2.2) * (0.6 + Math.random() * 0.8) * (depth ? 0.75 : 1) * Math.max(0.7, s);
       const nx = x + Math.cos(ang) * len, ny = y + Math.sin(ang) * len;
       if (Math.min(nx, ny, w - nx, h - ny) > reach || nx < 0 || ny < 0 || nx > w || ny > h) return;
-      segs.push({ x1: x, y1: y, x2: nx, y2: ny, t: t0 + k, w: (depth ? 0.55 : 1.05) * Math.max(0.6, s), a: depth ? 0.5 : 0.75 });
+      segs.push({ x1: x, y1: y, x2: nx, y2: ny, t: t0 + k, w: (depth ? 0.9 : 1.7) * Math.max(0.6, s), a: depth ? 0.7 : 0.92 });
       if (depth < 2 && Math.random() < 0.3) grow(nx, ny, ang + (Math.random() < 0.5 ? -1 : 1) * (0.8 + Math.random() * 0.4), Math.ceil(steps * 0.45), depth + 1, t0 + k + 1);
       ang += (Math.random() - 0.5) * 0.3; x = nx; y = ny;
     }
@@ -806,19 +1080,27 @@ function buildFrost(f) {
     grow(x, y, ang + (Math.random() - 0.5) * 1.1, f.big ? 16 : 10, 0, Math.floor(Math.random() * 20));
   }
   f.segs = segs; f.maxT = segs.reduce((m, sg) => Math.max(m, sg.t), 1);
+  // frost grain: tiny ice specks, densest at the edges
+  f.grain = [];
+  const gN = f.big ? 900 : 160;
+  for (let i = 0; i < gN; i++) {
+    const side = Math.floor(Math.random() * 4), d = Math.pow(Math.random(), 2.2) * reach * 1.2, u = Math.random();
+    const [gx, gy] = side === 0 ? [u * w, d] : side === 1 ? [w - d, u * h] : side === 2 ? [u * w, h - d] : [d, u * h];
+    f.grain.push([gx, gy, (0.4 + Math.random() * 0.9) * Math.max(0.6, s), 0.25 + Math.random() * 0.5]);
+  }
   f.sparks = segs.filter(() => Math.random() < (f.big ? 0.12 : 0.08)).slice(0, f.big ? 45 : 10).map(sg => ({ x: sg.x2, y: sg.y2, seed: Math.random() * 100 }));
-  f.cache = null;
+  f.layer = null;
 }
 function iceStep(f) {
   f.t += 1;
   const s = f.scale;
-  const mistN = f.big ? 3 : 1;
+  const mistN = Math.random() < (f.big ? 0.75 : 0.3) ? 1 : 0;
   for (let i = 0; i < mistN; i++) {
     const side = Math.random();
     const x = side < 0.6 ? f.ox + Math.random() * f.w : side < 0.8 ? f.ox + Math.random() * 4 * s : f.ox + f.w - Math.random() * 4 * s;
     const y = side < 0.6 ? f.oy + f.h - Math.random() * 6 * s : f.oy + f.h * (0.5 + Math.random() * 0.5);
     f.parts.push({ kind: 'mist', x, y, vx: (side < 0.6 ? (Math.random() - 0.5) * 0.3 : side < 0.8 ? -0.25 : 0.25) * s, vy: (0.12 + Math.random() * 0.3) * s,
-      r: (10 + Math.random() * 14) * s * (f.big ? 1 : 0.7), life: 1, decay: 0.006 + Math.random() * 0.007, seed: Math.random() * 100 });
+      r: (16 + Math.random() * 22) * s * (f.big ? 1 : 0.7), life: 1, decay: 0.005 + Math.random() * 0.006, seed: Math.random() * 100 });
   }
   if (Math.random() < (f.big ? 0.55 : 0.18)) {
     f.parts.push({ kind: 'snow', x: Math.random() * f.cw, y: -4, vx: 0, vy: (0.35 + Math.random() * 0.45) * s, r: (0.9 + Math.random() * 1.4) * s * (f.big ? 1 : 0.8), life: 1, decay: 0, seed: Math.random() * 100 });
@@ -832,19 +1114,33 @@ function iceStep(f) {
   if (f.grow < 1) f.grow = Math.min(1, f.grow + 1 / 90);
 }
 function rimeStatic(g, f, upto) {
-  const w = f.w, h = f.h;
-  const edge = Math.min(w, h) * 0.12;   // frosted edges
+  // frosted edge haze (cheap, drawn every frame)
+  const w = f.w, h = f.h, edge = Math.min(w, h) * 0.12, prog = Math.min(1, upto / f.maxT + 0.2);
   for (const [x0, y0, x1, y1] of [[0, 0, 0, edge], [0, h, 0, h - edge], [0, 0, edge, 0], [w, 0, w - edge, 0]]) {
     const gr = g.createLinearGradient(x0, y0, x1, y1);
-    gr.addColorStop(0, `rgba(215,238,255,${0.32 * Math.min(1, upto / f.maxT + 0.2)})`); gr.addColorStop(1, 'rgba(215,238,255,0)');
+    gr.addColorStop(0, `rgba(215,238,255,${0.5 * prog})`); gr.addColorStop(1, 'rgba(215,238,255,0)');
     g.fillStyle = gr; g.fillRect(0, 0, w, h);
   }
-  g.lineCap = 'round';
-  for (const sg of f.segs) {
-    if (sg.t > upto) continue;
+}
+function frostGrowTo(f, upto) {
+  // draw only the crystal segments that grew since last frame onto a cached layer
+  if (!f.layer) {
+    const c = document.createElement('canvas'); c.width = f.rime.width; c.height = f.rime.height;
+    f.layer = c; f.lctx = c.getContext('2d'); f.lctx.setTransform(f.dpr, 0, 0, f.dpr, 0, 0);
+    f.segs.sort((a, b) => a.t - b.t); f.si = 0; f.grainDone = false;
+  }
+  const g = f.lctx;
+  if (!f.grainDone && upto > f.maxT * 0.15) {
+    for (const [gx, gy, gr, ga] of f.grain) { g.fillStyle = `rgba(235,247,255,${ga})`; g.fillRect(gx, gy, gr, gr); }
+    f.grainDone = true;
+  }
+  g.lineCap = 'round'; g.shadowColor = 'rgba(160,215,255,.9)'; g.shadowBlur = 3;
+  while (f.si < f.segs.length && f.segs[f.si].t <= upto) {
+    const sg = f.segs[f.si++];
     g.strokeStyle = `rgba(232,246,255,${sg.a})`; g.lineWidth = sg.w;
     g.beginPath(); g.moveTo(sg.x1, sg.y1); g.lineTo(sg.x2, sg.y2); g.stroke();
   }
+  g.shadowBlur = 0;
 }
 function iceDraw(f) {
   const sp = iceSprites(), d = f.dpr;
@@ -854,20 +1150,21 @@ function iceDraw(f) {
   m.drawImage(sp.glow, f.ox - f.w * 0.15, f.oy - f.h * 0.1, f.w * 1.3, f.h * 1.3);
   for (const p of f.parts) {
     const size = p.r * 2;
-    if (p.kind === 'mist') m.globalAlpha = Math.max(0, p.life * 0.28);
-    else m.globalAlpha = Math.max(0, Math.min(1, 0.85 * Math.min(1, (f.ch - p.y) / (f.ch * 0.2))));
-    m.drawImage(p.kind === 'mist' ? sp.mist : sp.flake, p.x - size / 2, p.y - size / 2, size, size);
+    if (p.kind === 'mist') {
+      const fade = Math.max(0, Math.min(1, p.x / (f.cw * 0.22), (f.cw - p.x) / (f.cw * 0.22), (f.ch - p.y) / (f.ch * 0.25)));   // soft edges, never a hard cut
+      m.globalAlpha = Math.max(0, Math.sin(p.life * Math.PI) * 0.2 * fade);
+      m.drawImage(sp.mist, p.x - size, p.y - size * 0.35, size * 2, size * 0.7); continue;
+    }
+    m.globalAlpha = Math.max(0, Math.min(1, 0.9 * Math.min(1, (f.ch - p.y) / (f.ch * 0.2))));
+    m.drawImage(sp.flake, p.x - size / 2, p.y - size / 2, size, size);
   }
   m.globalAlpha = 1;
-  const g = f.rctx;
+  const g = f.rctx, upto = f.grow * f.maxT;
+  frostGrowTo(f, f.grow >= 1 ? Infinity : upto);
   g.setTransform(d, 0, 0, d, 0, 0); g.clearRect(0, 0, f.w, f.h);
-  if (f.grow < 1) rimeStatic(g, f, f.grow * f.maxT);
-  else {
-    if (!f.cache) {
-      const c = document.createElement('canvas'); c.width = f.rime.width; c.height = f.rime.height;
-      const cg = c.getContext('2d'); cg.setTransform(d, 0, 0, d, 0, 0); rimeStatic(cg, f, Infinity); f.cache = c;
-    }
-    g.setTransform(1, 0, 0, 1, 0, 0); g.drawImage(f.cache, 0, 0); g.setTransform(d, 0, 0, d, 0, 0);
+  rimeStatic(g, f, f.grow >= 1 ? f.maxT : upto);
+  g.setTransform(1, 0, 0, 1, 0, 0); g.drawImage(f.layer, 0, 0); g.setTransform(d, 0, 0, d, 0, 0);
+  if (f.grow >= 1) {
     for (const s of f.sparks) {   // glints on the ice
       const a = Math.pow(Math.max(0, Math.sin(f.t * 0.045 + s.seed)), 8);
       if (a < 0.02) continue;
@@ -908,7 +1205,7 @@ function viewHome() {
     <div class="section"><div class="row between"><h2>Players <span style="color:var(--faint);font-weight:500;font-size:15px">${pids.length}</span></h2><span class="eyebrow">All cards combined · 1 month</span></div>
       <div class="chips">${['All', ...[...new Set(Object.values(PLAYERS).map(p => p.sport))]].map(s => `<button type="button" class="chip" data-set="homeSport" data-val="${s}" aria-pressed="${s === state.homeSport}">${s}</button>`).join('')}</div>
       <div class="grid">${pids.map(pid => { const p = PLAYERS[pid], t = playerTrend(pid, '3M'); const m = (() => { const cs = CARDS.filter(c => c.p === pid); const w = cs.map(c => Math.max(0.5, c.sales[11])); return cs.reduce((s, c, k) => s + w[k] * monthChange(c), 0) / w.reduce((a, b) => a + b, 0); })();
-        return `<a class="pcard" href="#player-${pid}"><div class="row between"><span class="row" style="gap:6px">${teamTag(p)}<span class="tag">${esc(p.sport)}</span></span><span class="status ${p.injured ? 'injured' : p.status}">${p.injured ? esc(p.injured) : p.status === 'active' ? 'Active' : 'Retired'}</span></div><div><div style="font-size:18px;font-weight:700">${esc(p.name)}</div><div style="font-size:13px;color:var(--faint)">${esc(p.team)}</div></div><div class="row between"><span class="num ${cls(m)}" style="font-size:22px;font-weight:600">${fmtPct(m)}</span>${sparkline(t.series, m >= 0 ? 'var(--up)' : 'var(--down)')}</div></a>`; }).join('') || '<p class="lede">No players match.</p>'}</div></div>
+        return `<a class="pcard" href="#player-${pid}"><div class="row between"><span class="row" style="gap:6px">${teamTag(p)}<span class="tag">${esc(p.sport)}</span></span><span class="status ${p.injured ? 'injured' : p.status}">${p.injured ? esc(p.injured) : p.status === 'active' ? 'Active' : 'Retired'}</span></div><div class="row" style="gap:12px;flex-wrap:nowrap"><div class="havatar">${playerAvatar(p)}</div><div style="min-width:0"><div style="font-size:18px;font-weight:700">${esc(p.name)}</div><div style="font-size:13px;color:var(--faint)">${esc(p.team)}</div></div></div><div class="row between"><span class="num ${cls(m)}" style="font-size:22px;font-weight:600">${fmtPct(m)}</span>${sparkline(t.series, m >= 0 ? 'var(--up)' : 'var(--down)')}</div></a>`; }).join('') || '<p class="lede">No players match.</p>'}</div></div>
     ${q ? '' : `<div class="cols">
       <div class="section"><div class="row between"><h2>Biggest risers this month</h2><a href="#movers" style="font-weight:600;font-size:14px;text-decoration:none">See all movers →</a></div><div class="list">${sorted.slice(0, 5).map(c => cardItem(c)).join('')}</div></div>
       <div class="section"><h2>Biggest drops this month</h2><div class="list">${sorted.slice(-5).reverse().map(c => cardItem(c)).join('')}</div></div>
@@ -938,7 +1235,7 @@ function viewPlayer(pid) {
     <div class="section" style="padding-top:8px">
       <a href="#home" style="color:var(--muted);text-decoration:none;font-weight:600;font-size:14px">← All players</a>
       <div class="row" style="gap:16px;align-items:flex-start">
-        <div class="thumb" style="--tc:${p.color || 'var(--faint)'};width:72px;height:72px;border-radius:16px;background:color-mix(in srgb, var(--tc) 24%, var(--raise));border:1px solid color-mix(in srgb, var(--tc) 60%, var(--line));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:22px;font-weight:800;color:var(--fg)">${esc(p.num)}${p.teamAbbr ? `<span style="font-size:10px;letter-spacing:.08em;color:var(--muted)">${esc(p.teamAbbr)}</span>` : ''}</div>
+        <div class="pavatar">${playerAvatar(p)}</div>
         <div style="display:flex;flex-direction:column;gap:6px;min-width:0;flex:1">
           <h1>${esc(p.name)}</h1>
           <div class="row" style="gap:8px">${teamTag(p)}<span style="color:var(--muted)">${[p.team, p.pos, p.sport].filter(Boolean).map(esc).join(' · ')}</span><span class="status ${p.status}">${p.status === 'active' ? 'Active' : 'Retired'}</span>${p.injured ? `<span class="status injured">${esc(p.injured)}</span>` : ''}</div>
@@ -1240,7 +1537,7 @@ function gRender() {
     const sel = i === gs.active ? 'true' : 'false';
     if (r.kind === 'player') {
       const sub = [r.p.team, r.p.pos, r.p.sport].filter(Boolean).join(' · ') + (r.cards ? '' : ' · card prices coming soon');
-      html += `<a class="gres" role="option" id="gr-${i}" aria-selected="${sel}" href="#player-${r.id}"><span class="gbadge${r.p.teamAbbr ? ' team' : ''}" style="--tc:${r.p.color || 'var(--line)'}">${esc(r.p.teamAbbr || r.p.sport)}</span><span class="gm"><span class="gt">${hl(r.p.name, q)}</span><span class="gs">${esc(sub)}</span></span>${r.p.injured ? `<span class="status injured">${esc(r.p.injured)}</span>` : ''}</a>`;
+      html += `<a class="gres" role="option" id="gr-${i}" aria-selected="${sel}" href="#player-${r.id}"><span class="gavatar">${playerAvatar(r.p)}</span><span class="gm"><span class="gt">${hl(r.p.name, q)}</span><span class="gs">${esc(sub)}</span></span>${r.p.injured ? `<span class="status injured">${esc(r.p.injured)}</span>` : ''}</a>`;
     } else {
       const m = monthChange(r.c);
       html += `<a class="gres" role="option" id="gr-${i}" aria-selected="${sel}" href="#card-${r.c.id}"><span class="gthumb">${cardVisual(r.c)}</span><span class="gm"><span class="gt">${hl(r.c.name, q)}</span><span class="gs">${esc(PLAYERS[r.c.p].name)} · ${esc(r.c.detail)}</span></span><span class="num" style="text-align:right;font-size:13px">${money(last(r.c.price))}<br><span class="${cls(m)}">${fmtPct(m)}</span></span></a>`;
