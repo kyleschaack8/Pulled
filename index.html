@@ -183,6 +183,55 @@ h2 { margin: 0; font-size: 20px; letter-spacing: -0.02em; font-weight: 700; text
 .drv span { display: block; font-size: 13.5px; color: var(--muted); line-height: 1.45; }
 .drv-live { font-size: 10px; letter-spacing: .1em; font-weight: 700; color: var(--up); margin-left: 6px; vertical-align: 1px; }
 @media (max-width: 760px) { .about { grid-template-columns: 1fr; } }
+.mtiles { display: grid; gap: 10px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 760px) { .mtiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.mtile { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; gap: 3px; min-width: 0; color: var(--fg); text-decoration: none; }
+.mtile.link:hover { border-color: var(--faint); }
+.mtile .k { font-size: 12px; color: var(--faint); }
+.mtile .v { font-family: var(--mono); font-size: 21px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.mtile .s { font-size: 12px; color: var(--muted); line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.pctrl { display: flex; flex-direction: column; gap: 10px; }
+.pctrl-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.pctrl-k { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); margin: 0 2px 0 6px; }
+.pctrl-k:first-child { margin-left: 0; }
+.chip.sm { min-height: 32px; padding: 0 12px; font-size: 12.5px; }
+.plegend { display: flex; flex-wrap: wrap; gap: 6px; }
+.pleg { display: inline-flex; align-items: center; gap: 6px; min-height: 30px; padding: 0 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--raise); color: var(--fg); font-size: 12px; cursor: pointer; }
+.pleg i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.pleg[aria-pressed="false"] { opacity: .45; text-decoration: line-through; }
+.rstats { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.rs { display: flex; flex-direction: column; gap: 2px; padding: 9px 12px; border-right: 1px solid var(--line); }
+.rs:last-child { border-right: 0; }
+.rs span { font-size: 11px; color: var(--faint); }
+.rs b { font-size: 14px; font-weight: 600; }
+.linkbtn { background: none; border: 0; color: var(--accent); font: inherit; font-weight: 600; cursor: pointer; padding: 0; }
+.pq { flex: 1 1 260px; min-height: 42px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); padding: 0 12px; font-size: 14px; }
+.gallery { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.gtile { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); overflow: visible; min-width: 0; }
+.gtile:hover { border-color: var(--faint); }
+.gimg { position: relative; display: flex; justify-content: center; padding: 18px 18px 10px; background: radial-gradient(120% 90% at 50% 0%, var(--raise), transparent 70%); border-radius: 16px 16px 0 0; }
+.gimg .thumb { width: 62%; aspect-ratio: 5 / 7; display: flex; align-items: center; justify-content: center; position: relative; }
+.gimg .thumb > img, .gimg .thumb > svg { filter: drop-shadow(0 10px 18px rgba(0,0,0,.45)); }
+.gbadge { position: absolute; top: 10px; right: 10px; }
+.gbody { display: flex; flex-direction: column; gap: 8px; padding: 4px 14px 14px; flex: 1; }
+.gname { font-weight: 700; font-size: 14.5px; color: var(--fg); text-decoration: none; line-height: 1.3; }
+.gtags { display: flex; flex-wrap: wrap; gap: 4px; }
+.gtags .tag { font-size: 10px; padding: 2px 6px; }
+.gprices { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.gp { display: grid; grid-template-columns: 1fr auto auto; gap: 10px; align-items: baseline; padding: 8px 10px; color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--line); }
+.gp:last-child { border-bottom: 0; }
+a.gp:hover { background: var(--raise); }
+.gp.off { color: var(--faint); grid-template-columns: 1fr auto; font-size: 12px; }
+.gl { font-size: 12px; color: var(--muted); font-weight: 600; }
+.gv { font-weight: 600; font-size: 15px; }
+.gc { font-size: 12px; }
+.gfoot { display: flex; gap: 10px; align-items: center; margin-top: auto; }
+.gmeta { display: flex; flex-direction: column; gap: 1px; font-size: 11.5px; color: var(--faint); }
+.gmeta b { font-weight: 600; }
+.mtable td, .mtable th { white-space: nowrap; }
+.mtable th[scope="row"] a, .mtable td a { color: var(--fg); text-decoration: none; font-weight: 600; }
+.mtable th[scope="row"] .gtags { margin-top: 4px; }
+@media (max-width: 560px) { .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } .gimg { padding: 12px 10px 6px; } .gimg .thumb { width: 74%; } .gbody { padding: 2px 10px 10px; } .gp { grid-template-columns: 1fr auto; } .gp .gc { grid-column: 2; } .gfoot svg { display: none; } }
 .lede { margin: 0; color: var(--muted); font-size: 17px; max-width: 62ch; }
 .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); }
 .section { display: flex; flex-direction: column; gap: 14px; }
@@ -364,7 +413,7 @@ let CARDS = [
 ];
 let CARD = Object.fromEntries(CARDS.map(c => [c.id, c]));
 
-const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '', collSport: 'All', f: F0(), fLimit: 48, fMore: {}, fOpen: false, collQuery: '', collAvail: 'avail', collSort: 'matches', offerFor: null, trade: null, moversRange: '1M', moversSport: 'All', moversGrade: 'All', moversMin: '3', moversView: 'cards', homeSport: 'All' };
+const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', pView: 'index', pUnit: 'pct', pGrade: 'All', pType: 'All', pVol: 'on', pEvents: 'on', pHidden: {}, pLayout: 'gallery', pQuery: '', pFor: '', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '', collSport: 'All', f: F0(), fLimit: 48, fMore: {}, fOpen: false, collQuery: '', collAvail: 'avail', collSort: 'matches', offerFor: null, trade: null, moversRange: '1M', moversSport: 'All', moversGrade: 'All', moversMin: '3', moversView: 'cards', homeSport: 'All' };
 const charts = {};
 
 /* ---------- real data from data/*.json (built by the "Build card data" robot) ---------- */
@@ -426,6 +475,7 @@ async function loadRealData() {
     });
     if (pf && pf.players) PROFILES = pf.players;
     PLAYERS = players; CARDS = cards.filter(c => players[c.p]); CARD = Object.fromEntries(CARDS.map(c => [c.id, c]));
+    PARTIAL = String(pr.months[pr.months.length - 1]) === new Date().toISOString().slice(0, 7);
     MONTHS = pr.months.map(m => MON[parseInt(m.slice(5, 7), 10) - 1] + (m.slice(5, 7) === '01' ? " '" + m.slice(2, 4) : ''));
     const top = [...CARDS].sort((a, b) => avg(b.sales) - avg(a.sales));
     state.compareIds = [...new Set(top.map(c => c.p))].slice(0, 3).map(pid => top.find(c => c.p === pid).id);
@@ -538,37 +588,41 @@ function whyItMoved(c) {
 }
 
 /* ---------- chart ---------- */
-function lineChart(id, { series, labels, fmt, events = [], h = 240, zero = false }) {
-  const W = 680, padL = 58, padR = 14, padT = 14, padB = 30;
+function lineChart(id, { series, labels, fmt, events = [], h = 240, zero = false, vol = null, log = false, partial = false, noData = 0 }) {
+  const narrow = typeof window !== 'undefined' && window.innerWidth > 0 && window.innerWidth < 640;
+  if (narrow) h = Math.round(h * 0.95);
+  const W = narrow ? 360 : 680, padL = 54, padR = 14, padT = 14, padB = 30, volH = vol ? 46 : 0, plotB = h - padB - (vol ? volH + 8 : 0);
   const all = series.flatMap(s => s.values).concat(zero ? [0] : []);
   let lo = Math.min(...all), hi = Math.max(...all);
   if (lo === hi) { lo -= 1; hi += 1; }
   const pad = (hi - lo) * 0.08; lo -= pad; hi += pad;
   const n = labels.length;
   const x = i => padL + (n === 1 ? 0 : i * (W - padL - padR) / (n - 1));
-  const y = v => padT + (1 - (v - lo) / (hi - lo)) * (h - padT - padB);
+  const y = v => padT + (1 - (v - lo) / (hi - lo)) * (plotB - padT);
   const ticks = [hi - pad, (hi + lo) / 2, lo + pad];
   let g = '';
   ticks.forEach(t => { g += `<line x1="${padL}" x2="${W - padR}" y1="${y(t).toFixed(1)}" y2="${y(t).toFixed(1)}" stroke="var(--line)" stroke-width="1"/><text x="${padL - 8}" y="${(y(t) + 4).toFixed(1)}" text-anchor="end" font-size="11" fill="var(--faint)" font-family="IBM Plex Mono, monospace">${esc(fmt(t))}</text>`; });
   if (zero && lo < 0 && hi > 0) g += `<line x1="${padL}" x2="${W - padR}" y1="${y(0).toFixed(1)}" y2="${y(0).toFixed(1)}" stroke="var(--faint)" stroke-width="1" stroke-dasharray="2 3"/>`;
+  if (noData > 0) { const nx = x(Math.min(noData, n - 1)); g += `<defs><pattern id="${id}nd" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="var(--line)" stroke-width="3"/></pattern></defs><rect x="${padL}" y="${padT}" width="${(nx - padL).toFixed(1)}" height="${(plotB - padT).toFixed(1)}" fill="url(#${id}nd)" opacity=".7"/><text x="${((padL + nx) / 2).toFixed(1)}" y="${(padT + 30).toFixed(1)}" text-anchor="middle" font-size="11" fill="var(--faint)" font-family="Inter Tight, Arial, sans-serif">${narrow || nx - padL < 260 ? 'No sales yet' : 'No sales recorded yet · price carried forward'}</text>`; }
+  if (vol) { const vm = Math.max(1, ...vol), bw = Math.min(26, (W - padL - padR) / n * 0.55); g += `<text x="${padL - 8}" y="${h - padB - volH + 9}" text-anchor="end" font-size="10" fill="var(--faint)" font-family="IBM Plex Mono, monospace">${vm}</text><text x="${padL - 8}" y="${h - padB}" text-anchor="end" font-size="10" fill="var(--faint)" font-family="IBM Plex Mono, monospace">sales</text>`; vol.forEach((v, i) => { const bh = Math.max(v ? 2 : 0, v / vm * volH); g += `<rect x="${(x(i) - bw / 2).toFixed(1)}" y="${(h - padB - bh).toFixed(1)}" width="${bw.toFixed(1)}" height="${bh.toFixed(1)}" rx="2" fill="var(--muted)" fill-opacity="${i === n - 1 ? (partial ? 0.18 : 0.55) : 0.28}"${i === n - 1 && partial ? ' stroke="var(--muted)" stroke-dasharray="2 2"' : ''}/>`; }); }
   labels.forEach((l, i) => { if (n <= 7 || i % 2 === 0 || i === n - 1) g += `<text x="${x(i).toFixed(1)}" y="${h - 8}" text-anchor="middle" font-size="11" fill="var(--faint)" font-family="IBM Plex Mono, monospace">${esc(l)}</text>`; });
   events.forEach(e => {
     const col = e.type === 'game' ? 'var(--game)' : e.type === 'injury' ? 'var(--down)' : 'var(--news)';
     const ex = x(e.i);
-    g += `<line x1="${ex}" x2="${ex}" y1="${padT}" y2="${h - padB}" stroke="${col}" stroke-width="1.5" stroke-dasharray="3 3"/>`;
+    g += `<line x1="${ex}" x2="${ex}" y1="${padT}" y2="${plotB}" stroke="${col}" stroke-width="1.5" stroke-dasharray="3 3"/>`;
     g += e.type === 'injury'
       ? `<rect x="${ex - 5}" y="${padT - 5}" width="10" height="10" fill="${col}" transform="rotate(45 ${ex} ${padT})"/>`
       : e.type === 'game' ? `<circle cx="${ex}" cy="${padT}" r="5.5" fill="${col}"/>` : `<rect x="${ex - 5}" y="${padT - 5}" width="10" height="10" rx="2" fill="${col}"/>`;
   });
   series.forEach(s => {
     const d = s.values.map((v, i) => (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(v).toFixed(1)).join(' ');
-    if (s.area) g += `<path d="${d} L${x(n - 1).toFixed(1)} ${h - padB} L${padL} ${h - padB} Z" fill="${s.color}" fill-opacity="0.08"/>`;
+    if (s.area) g += `<path d="${d} L${x(n - 1).toFixed(1)} ${plotB} L${padL} ${plotB} Z" fill="${s.color}" fill-opacity="0.08"/>`;
     g += `<path d="${d}" fill="none" stroke="${s.color}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"${s.dash ? ` stroke-dasharray="${s.dash}"` : ''}/>`;
     g += `<circle cx="${x(n - 1).toFixed(1)}" cy="${y(last(s.values)).toFixed(1)}" r="4" fill="${s.color}"/>`;
   });
   g += `<line class="guide" x1="0" x2="0" y1="${padT}" y2="${h - padB}" stroke="var(--muted)" stroke-width="1" visibility="hidden"/>`;
   g += `<rect class="hit" x="${padL}" y="0" width="${W - padL - padR}" height="${h}" fill="transparent"/>`;
-  charts[id] = { series, labels, fmt, events, x, W, padL, padR, n };
+  charts[id] = { series, labels, fmt, events, x, W, padL, padR, n, vol, partial };
   return `<div class="chart" id="${id}"><svg viewBox="0 0 ${W} ${h}" role="img" aria-label="${esc(series.map(s => s.name).join(', '))} over ${labels[0]} to ${last(labels)}">${g}</svg><div class="tip" hidden></div></div>`;
 }
 function wireCharts() {
@@ -583,7 +637,7 @@ function wireCharts() {
       const gx = c.x(i);
       guide.setAttribute('x1', gx); guide.setAttribute('x2', gx); guide.setAttribute('visibility', 'visible');
       const ev = c.events.filter(e => e.i === i);
-      tip.innerHTML = `<div class="t">${esc(c.labels[i])}</div>` + c.series.map(s => `<div class="l"><span style="color:${s.color}">${esc(s.name)}</span><span class="num">${esc(c.fmt(s.values[i]))}</span></div>`).join('') + ev.map(e => `<div style="margin-top:4px;color:var(--muted)">${esc(e.label)}</div>`).join('');
+      tip.innerHTML = `<div class="t">${esc(c.labels[i])}${c.partial && i === c.n - 1 ? ' (so far)' : ''}</div>` + c.series.map(s => `<div class="l"><span style="color:${s.color}">${esc(s.name)}</span><span class="num">${esc(c.fmt(s.values[i]))}</span></div>`).join('') + (c.vol ? `<div class="l" style="color:var(--muted)"><span>Sales</span><span class="num">${c.vol[i]}</span></div>` : '') + ev.map(e => `<div style="margin-top:4px;color:var(--muted)">${esc(e.label)}</div>`).join('');
       tip.hidden = false;
       const left = Math.min(Math.max(gx / c.W * r.width, 80), r.width - 80);
       tip.style.left = left + 'px';
@@ -1211,19 +1265,184 @@ function aboutSection(pid, p, cs) {
   </div>`;
 }
 
+/* ---------- player card market: snapshot, filterable chart, card gallery ---------- */
+let PARTIAL = false;
+const P_COLORS = ['#7cc4ff', '#c6f432', '#ff9f5a', '#d39bff', '#5fe0c0', '#ff6b8b', '#ffd25e', '#9aa8ff', '#6fdc7a', '#ff8fd0'];
+const baseId = c => c.base || c.id.replace(/-(raw|psa10)$/, '');
+const isPSA = c => c.tags.includes('Graded');
+function cardGroups(cs) {
+  const m = new Map();
+  cs.forEach(c => { const b = baseId(c); if (!m.has(b)) m.set(b, { id: b, cards: [] }); const g = m.get(b); g.cards.push(c); if (isPSA(c)) g.psa = c; else g.raw = c; });
+  return [...m.values()].map(g => {
+    const any = g.raw || g.psa;
+    g.name = any.name; g.tags = [...new Set(g.cards.flatMap(c => c.tags.filter(t => t !== 'Graded')))];
+    g.prem = g.raw && g.psa ? last(g.psa.price) / last(g.raw.price) : null;
+    g.sales = g.cards.reduce((a, c) => a + avg(c.sales.slice(-3)), 0);
+    return g;
+  });
+}
+function pFiltered(cs) {
+  const q = (state.pQuery || '').trim().toLowerCase();
+  return cs.filter(c => (state.pGrade === 'All' || (state.pGrade === 'PSA 10') === isPSA(c))
+    && (state.pType === 'All' || c.tags.includes(state.pType))
+    && (!q || (c.name + ' ' + c.detail + ' ' + c.tags.join(' ')).toLowerCase().includes(q)));
+}
+const basket = (cs, range) => { const n = RANGES[range]; return Array.from({ length: n }, (_, t) => cs.reduce((s, c) => s + slice(c.price, range)[t], 0)); };
+const shortName = c => c.name.replace(/^(\d{4})(-\d{2})?\s+/, "$1 ") + (isPSA(c) ? ' · PSA 10' : ' · Raw');
+
+function marketSnapshot(pid, p, cs) {
+  const now = cs.reduce((s, c) => s + last(c.price), 0), prev = cs.reduce((s, c) => s + c.price[c.price.length - 2], 0);
+  const yearB = basket(cs, '1Y'), hi = Math.max(...yearB);
+  const si = PARTIAL ? 2 : 1, sMon = String(MONTHS[MONTHS.length - si]).replace(/ '.*/, '');
+  const salesNow = cs.reduce((s, c) => s + c.sales[c.sales.length - si], 0), salesAvg = cs.reduce((s, c) => s + avg(c.sales.slice(0, -si)), 0);
+  const byPrice = [...cs].sort((a, b) => last(a.price) - last(b.price));
+  const hot = [...cs].filter(c => avg(c.sales.slice(-3)) >= 1).sort((a, b) => monthChange(b) - monthChange(a))[0];
+  const most = [...cs].sort((a, b) => avg(b.sales.slice(-3)) - avg(a.sales.slice(-3)))[0];
+  const prems = cardGroups(cs).map(g => g.prem).filter(Boolean).sort((a, b) => a - b);
+  const prem = prems.length ? prems[Math.floor(prems.length / 2)] : null;
+  const fromHi = pct(hi, now);
+  const tile = (k, v, sub, href, c2) => `<${href ? `a href="${href}"` : 'div'} class="mtile${href ? ' link' : ''}"><span class="k">${k}</span><span class="v ${c2 || ''}">${v}</span><span class="s">${sub}</span></${href ? 'a' : 'div'}>`;
+  return `<div class="mtiles">
+    ${tile('Market value', money(now), `<span class="${cls(pct(prev, now))}">${fmtPct(pct(prev, now))}</span> this month</span><span class="s">One of each tracked card`)}
+    ${tile('From 12-month high', Math.abs(fromHi) < 0.5 ? 'At high' : fmtPct(fromHi, false), Math.abs(fromHi) < 0.5 ? 'Prices are at their best level of the year' : `High was ${money(hi)}`, null, Math.abs(fromHi) < 0.5 ? 'up' : 'down')}
+    ${tile(`Sales in ${esc(sMon)}`, String(salesNow), salesAvg ? `<span class="${cls(pct(salesAvg, salesNow))}">${fmtPct(pct(salesAvg, salesNow), false)}</span> vs. the monthly average` : 'Completed sales')}
+    ${tile('Cheapest way in', money(last(byPrice[0].price)), esc(shortName(byPrice[0])), '#card-' + byPrice[0].id)}
+    ${tile('Top card', money(last(byPrice[byPrice.length - 1].price)), esc(shortName(byPrice[byPrice.length - 1])), '#card-' + byPrice[byPrice.length - 1].id)}
+    ${hot ? tile('Hottest card', fmtPct(monthChange(hot)), esc(shortName(hot)), '#card-' + hot.id, cls(monthChange(hot))) : ''}
+    ${tile('Most traded', `${Math.round(avg(most.sales.slice(-3)))}/mo`, esc(shortName(most)), '#card-' + most.id)}
+    ${prem ? tile('PSA 10 premium', prem.toFixed(1) + '×', 'Typical PSA 10 price vs. a raw copy') : ''}
+  </div>`;
+}
+
+function marketChart(pid, p, cs) {
+  const range = state.playerRange, labels = slice(MONTHS, range), n = labels.length, off = 12 - RANGES[range];
+  const evs = state.pEvents === 'on' ? p.events.filter(e => e.i >= off).map(e => ({ ...e, i: e.i - off })) : [];
+  const fc = pFiltered(cs);
+  const usd = state.pUnit === 'usd';
+  const vol = Array.from({ length: n }, (_, t) => fc.reduce((s, c) => s + slice(c.sales, range)[t], 0));
+  let series = [], fmt = v => fmtPct(v, false), zero = !usd, note = '', legend = '', log = false;
+  const pctS = cs2 => combined(cs2, range).series;
+  if (!fc.length) return `<div class="panel" style="color:var(--muted)">No cards match these filters. <button type="button" class="linkbtn" data-act="pReset">Clear filters</button></div>`;
+  if (state.pView === 'index') {
+    const v = usd ? basket(fc, range) : pctS(fc), up = last(v) >= v[0];
+    series = [{ name: usd ? 'Value of one of each' : 'Combined change', values: v, color: up ? 'var(--up)' : 'var(--down)', area: true }];
+    if (usd) fmt = money;
+    note = usd ? 'What it would cost to own one copy of every card in the filter.' : 'Each card weighted by how often it sells, so one rare sale can\'t skew it.';
+  } else if (state.pView === 'grades') {
+    const t = cs.filter(c => (state.pType === 'All' || c.tags.includes(state.pType)));
+    const r = t.filter(c => !isPSA(c)), g = t.filter(isPSA);
+    if (r.length) series.push({ name: 'Raw', values: usd ? basket(r, range).map(x => x / r.length) : pctS(r), color: '#7cc4ff' });
+    if (g.length) series.push({ name: 'PSA 10', values: usd ? basket(g, range).map(x => x / g.length) : pctS(g), color: '#ffd25e' });
+    if (usd) { fmt = money; zero = false; }
+    legend = `<div class="legend">${series.map(s2 => `<span><i style="display:inline-block;width:14px;height:3px;border-radius:2px;background:${s2.color}"></i>${s2.name}</span>`).join('')}</div>`;
+    note = usd ? 'Average price of a raw copy vs. a PSA 10 copy. The gap is the grading premium.' : 'Raw and PSA 10 copies often move differently. Grading demand can rise when prices climb.';
+  } else {
+    const shown = [...fc].sort((a, b) => last(b.price) - last(a.price));
+    const live = shown.filter(c => !state.pHidden[c.id]).slice(0, 10);
+    series = live.map(c => ({ name: shortName(c), values: usd ? slice(c.price, range).map(v => Math.log10(Math.max(1, v))) : slice(c.price, range).map(v => pct(slice(c.price, range)[0], v)), color: P_COLORS[shown.indexOf(c) % P_COLORS.length] }));
+    if (usd) { fmt = v => money(Math.pow(10, v)); zero = false; log = true; }
+    legend = `<div class="plegend">${shown.slice(0, 16).map((c, i) => `<button type="button" class="pleg" data-act="pHide" data-id="${c.id}" aria-pressed="${!state.pHidden[c.id]}"><i style="background:${P_COLORS[i % P_COLORS.length]}"></i>${esc(shortName(c))}</button>`).join('')}</div>`;
+    note = (usd ? 'Prices on a log scale so cheap and expensive cards fit together. ' : '') + 'Tap a card below the chart to hide or show its line.';
+    if (!series.length) return `<div class="panel" style="color:var(--muted)">All lines are hidden. Tap a card name to show it.</div>${legend}`;
+  }
+  const main = series[0].values, hiV = Math.max(...main), loV = Math.min(...main);
+  const moves = main.slice(1).map((v, i) => usd ? pct(main[i], v) : v - main[i]);
+  const bigI = moves.reduce((b, v, i) => Math.abs(v) > Math.abs(moves[b] || 0) ? i : b, 0);
+  const stat = (k, v, c2) => `<div class="rs"><span>${k}</span><b class="num ${c2 || ''}">${v}</b></div>`;
+  let gradeRow = '';
+  if (state.pView === 'grades' && series.length === 2) {
+    const [r2, g2] = series, ch = s2 => usd ? pct(s2.values[0], last(s2.values)) : last(s2.values) - s2.values[0];
+    const t2 = cs.filter(c => (state.pType === 'All' || c.tags.includes(state.pType)));
+    const pr0 = basket(t2.filter(isPSA), range), rr0 = basket(t2.filter(c => !isPSA(c)), range), gN = t2.filter(isPSA).length, rN = t2.filter(c => !isPSA(c)).length;
+    const premAt = i => (pr0[i] / gN) / (rr0[i] / rN);
+    gradeRow = `<div class="rstats">${stat('Raw now', fmt(last(r2.values)))}${stat('Raw change', fmtPct(ch(r2)), cls(ch(r2)))}${stat('PSA 10 now', fmt(last(g2.values)))}${stat('PSA 10 change', fmtPct(ch(g2)), cls(ch(g2)))}${stat('Premium now', premAt(n - 1).toFixed(1) + '×')}${stat('Premium at start', premAt(0).toFixed(1) + '×')}</div>`;
+  }
+  const statRow = state.pView === 'cards' ? '' : state.pView === 'grades' ? gradeRow : `<div class="rstats">
+    ${stat('Start', fmt(main[0]))}${stat('Now', fmt(last(main)))}${stat('High', fmt(hiV))}${stat('Low', fmt(loV))}
+    ${stat('Change', usd ? fmtPct(pct(main[0], last(main))) : fmtPct(last(main) - main[0]), cls(usd ? pct(main[0], last(main)) : last(main) - main[0]))}
+    ${moves.length ? stat('Biggest month', `${labels[bigI + 1]} ${usd ? fmtPct(moves[bigI], false) : fmtPct(moves[bigI], false)}`, cls(moves[bigI])) : ''}
+  </div>`;
+  return `${lineChart('ch-player', { series, labels, fmt, events: evs, zero, h: 280, vol: state.pVol === 'on' ? vol : null, log, partial: PARTIAL, noData: Math.max(0, vol.findIndex(v => v > 0)) })}
+    ${legend}
+    ${evs.length ? eventLegend(evs.map(e => e.type)) : ''}
+    ${statRow}
+    <span style="font-size:12px;color:var(--faint)">${note}${state.pVol === 'on' ? ` Bars along the bottom show completed sales each month${PARTIAL ? `; ${esc(last(labels))} is the month so far` : ''}.` : ''}</span>`;
+}
+
+function marketControls() {
+  const chip = (k, v, l) => `<button type="button" class="chip sm" data-set="${k}" data-val="${v}" aria-pressed="${state[k] === v}">${l}</button>`;
+  return `<div class="pctrl">
+    <div class="pctrl-row">${segBtns('pView', [['index', 'Combined'], ['grades', 'Raw vs PSA 10'], ['cards', 'Each card']], state.pView)}${segBtns('pUnit', [['pct', '% change'], ['usd', '$ price']], state.pUnit)}${segBtns('playerRange', [['3M', '3M'], ['6M', '6M'], ['1Y', '1Y']], state.playerRange)}</div>
+    <div class="pctrl-row"><span class="pctrl-k">Grade</span>${['All', 'Raw', 'PSA 10'].map(v => chip('pGrade', v, v)).join('')}<span class="pctrl-k">Type</span>${['All', 'Rookie', 'Auto', 'Numbered'].map(v => chip('pType', v, v)).join('')}
+      <span class="pctrl-k">Show</span><button type="button" class="chip sm" data-set="pVol" data-val="${state.pVol === 'on' ? 'off' : 'on'}" aria-pressed="${state.pVol === 'on'}">Sales volume</button><button type="button" class="chip sm" data-set="pEvents" data-val="${state.pEvents === 'on' ? 'off' : 'on'}" aria-pressed="${state.pEvents === 'on'}">News markers</button></div>
+  </div>`;
+}
+
+function galleryTile(g) {
+  const primary = state.pGrade === 'PSA 10' ? (g.psa || g.raw) : (g.raw || g.psa);
+  const imgCard = g.cards.find(c => memPhotos[c.id] || c.image || repoImages[c.id]) || primary;
+  const any = g.cards.find(c => hotRank(c.id)) || g.cards.find(c => coldRank(c.id));
+  const row = (c, label) => c ? `<a class="gp" href="#card-${c.id}"><span class="gl">${label}</span><span class="num gv">${money(last(c.price))}</span><span class="num ${cls(monthChange(c))} gc">${fmtPct(monthChange(c))}</span></a>` : `<div class="gp off"><span class="gl">${label}</span><span class="gv">Not tracked</span></div>`;
+  const yr = slice(primary.price, '1Y');
+  return `<div class="gtile">
+    <a class="gimg" href="#card-${primary.id}" aria-label="${esc(g.name)}">${flameThumb(primary, cardVisual(imgCard))}${any ? `<span class="gbadge">${hotTag(any.id)}</span>` : ''}</a>
+    <div class="gbody">
+      <a class="gname" href="#card-${primary.id}">${esc(g.name)}</a>
+      <div class="gtags">${g.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
+      <div class="gprices">${state.pGrade !== 'PSA 10' ? row(g.raw, 'Raw') : ''}${state.pGrade !== 'Raw' ? row(g.psa, 'PSA 10') : ''}</div>
+      <div class="gfoot">${sparkline(yr, last(yr) >= yr[0] ? 'var(--up)' : 'var(--down)')}<div class="gmeta"><span>1Y <b class="num ${cls(pct(yr[0], last(yr)))}">${fmtPct(pct(yr[0], last(yr)), false)}</b></span><span>${Math.round(g.sales)} sales/mo</span>${g.prem ? `<span>PSA 10 = ${g.prem.toFixed(1)}× raw</span>` : ''}</div></div>
+    </div>
+  </div>`;
+}
+
+function marketTable(groups) {
+  const cell = c => c ? `<td class="num"><a href="#card-${c.id}">${money(last(c.price))}</a></td><td class="num ${cls(monthChange(c))}">${fmtPct(monthChange(c), false)}</td>` : '<td class="flat">—</td><td></td>';
+  return `<div class="tablebox"><table class="mtable"><thead><tr><th scope="col">Card</th><th scope="col">Raw</th><th scope="col">1M</th><th scope="col">PSA 10</th><th scope="col">1M</th><th scope="col">Premium</th><th scope="col">1Y</th><th scope="col">Sales/mo</th><th scope="col">12 months</th></tr></thead><tbody>
+    ${groups.map(g => { const pc = g.raw || g.psa, yr = pc.price; return `<tr><th scope="row"><a href="#card-${pc.id}">${esc(g.name)}</a><div class="gtags">${g.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div></th>${cell(g.raw)}${cell(g.psa)}<td class="num">${g.prem ? g.prem.toFixed(1) + '×' : '—'}</td><td class="num ${cls(pct(yr[0], last(yr)))}">${fmtPct(pct(yr[0], last(yr)), false)}</td><td class="num">${Math.round(g.sales)}</td><td>${sparkline(yr, last(yr) >= yr[0] ? 'var(--up)' : 'var(--down)')}</td></tr>`; }).join('')}
+  </tbody></table></div>`;
+}
+
+function marketCards(pid, p, cs) {
+  const fc = pFiltered(cs);
+  const groups = cardGroups(fc);
+  const val = g => { const c = state.pGrade === 'PSA 10' ? (g.psa || g.raw) : (g.raw || g.psa); return last(c.price); };
+  const chg = g => { const c = g.raw || g.psa; return monthChange(c); };
+  const yr = g => { const c = g.raw || g.psa; return pct(c.price[0], last(c.price)); };
+  const sorters = { 'value-desc': (a, b) => val(b) - val(a), 'value-asc': (a, b) => val(a) - val(b), 'gain': (a, b) => chg(b) - chg(a), 'drop': (a, b) => chg(a) - chg(b), 'year': (a, b) => yr(b) - yr(a), 'sales': (a, b) => b.sales - a.sales, 'premium': (a, b) => (b.prem || 0) - (a.prem || 0) };
+  groups.sort(sorters[state.playerSort] || sorters['value-desc']);
+  return `<div class="section">
+    <div class="row between" style="align-items:flex-end;gap:12px"><h2>${esc(p.short)}'s cards <span style="color:var(--faint);font-weight:500;font-size:15px">${groups.length} card${groups.length === 1 ? '' : 's'}${state.pGrade === 'All' ? `, ${fc.length} prices` : ''}</span></h2>
+      <div class="row" style="gap:8px">${segBtns('pLayout', [['gallery', 'Gallery'], ['table', 'Table']], state.pLayout)}
+        <label class="row" style="gap:8px;font-size:13px;color:var(--muted)" for="sort">Sort
+        <select id="sort" style="min-height:40px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:0 10px">
+          ${[['value-desc', 'Value: high to low'], ['value-asc', 'Value: low to high'], ['gain', 'Biggest gain (1M)'], ['drop', 'Biggest drop (1M)'], ['year', 'Best year (1Y)'], ['sales', 'Most traded'], ['premium', 'Biggest PSA 10 premium']].map(([v, l]) => `<option value="${v}"${v === state.playerSort ? ' selected' : ''}>${l}</option>`).join('')}
+        </select></label></div></div>
+    <div class="row" style="gap:8px"><label for="pq" class="sr">Search ${esc(p.short)}'s cards</label><input id="pq" type="search" class="pq" placeholder="Search these cards (set, year, parallel)" value="${esc(state.pQuery || '')}" autocomplete="off">
+      <span style="font-size:12px;color:var(--faint)">Grade and type filters above apply here too.</span></div>
+    ${groups.length ? (state.pLayout === 'table' ? marketTable(groups) : `<div class="gallery">${groups.map(galleryTile).join('')}</div>`) : `<p class="lede">No cards match. <button type="button" class="linkbtn" data-act="pReset">Clear filters</button></p>`}
+  </div>`;
+}
+
+function playerMarket(pid, p, cs) {
+  if (!cs.length) return `<div class="panel section" style="display:flex;flex-direction:column;gap:6px"><span style="font-weight:700">Card prices coming soon</span><span style="color:var(--muted);font-size:14px">${esc(p.name)}'s rookie cards haven't been added yet. They'll appear here, with 12 months of real sale prices, after the next card data build.</span></div>`;
+  const t = combined(cs, state.playerRange);
+  const rl = state.playerRange === '1Y' ? 'year' : state.playerRange === '6M' ? '6 months' : '3 months';
+  return `<div class="section">
+      <h2>Card market</h2>
+      ${marketSnapshot(pid, p, cs)}
+    </div>
+    <div class="panel section" id="pchart">
+      <div class="row" style="align-items:baseline;gap:12px;flex-wrap:wrap"><span class="num ${cls(t.change)}" style="font-size:40px;font-weight:600;letter-spacing:-0.02em">${fmtPct(t.change)}</span><span style="color:var(--muted)">all ${esc(p.short)} cards over the last ${rl}, across ${cs.length} tracked prices</span></div>
+      ${marketControls()}
+      ${marketChart(pid, p, cs)}
+    </div>
+    ${marketCards(pid, p, cs)}`;
+}
+
 function viewPlayer(pid) {
   const p = PLAYERS[pid]; if (!p) return notFound();
-  const t = playerTrend(pid, state.playerRange);
-  const labels = slice(MONTHS, state.playerRange);
-  const off = 12 - RANGES[state.playerRange];
-  const evs = p.events.filter(e => e.i >= off).map(e => ({ ...e, i: e.i - off }));
+  if (state.pFor !== pid) { state.pFor = pid; state.pQuery = ''; state.pHidden = {}; }
   const cs = CARDS.filter(c => c.p === pid);
-  const seg = (name, f) => { const sub = cs.filter(f); return [name, sub.length ? combined(sub, state.playerRange).change : null]; };
-  const segs = [seg('Rookie cards', c => c.tags.includes('Rookie')), seg('Graded', c => c.tags.includes('Graded')), seg('Raw', c => !c.tags.includes('Graded'))];
-  let list = cs.filter(c => state.playerFilter === 'All' || c.tags.includes(state.playerFilter));
-  const sorters = { 'value-desc': (a, b) => last(b.price) - last(a.price), 'value-asc': (a, b) => last(a.price) - last(b.price), 'gain': (a, b) => monthChange(b) - monthChange(a), 'drop': (a, b) => monthChange(a) - monthChange(b) };
-  list.sort(sorters[state.playerSort]);
-  const biggest = [...p.events].reverse().find(e => e.i >= off);
   return `<div class="view">
     <div class="section" style="padding-top:8px">
       <a href="#home" style="color:var(--muted);text-decoration:none;font-weight:600;font-size:14px">← All players</a>
@@ -1242,14 +1461,7 @@ function viewPlayer(pid) {
       ${aboutSection(pid, p, cs)}
     </div>
 
-    ${cs.length ? `<div class="panel section">
-      <div class="row between"><span style="font-weight:700">All ${esc(p.short)} cards combined</span>${segBtns('playerRange', [['3M', '3M'], ['6M', '6M'], ['1Y', '1Y']], state.playerRange)}</div>
-      <div class="row" style="align-items:baseline"><span class="num ${cls(t.change)}" style="font-size:44px;font-weight:600;letter-spacing:-0.02em">${fmtPct(t.change)}</span><span style="color:var(--muted)">over the last ${state.playerRange === '1Y' ? 'year' : state.playerRange === '6M' ? '6 months' : '3 months'}, across ${cs.length} tracked cards</span></div>
-      ${lineChart('ch-player', { series: [{ name: 'Combined change', values: t.series, color: t.change >= 0 ? 'var(--up)' : 'var(--down)', area: true }], labels, fmt: v => fmtPct(v, false), events: evs, zero: true, h: 220 })}
-      ${eventLegend(evs.map(e => e.type))}
-      <div class="tiles">${segs.map(([n, v]) => `<div class="tile"><span class="k">${n}</span><span class="v ${v === null ? 'flat' : cls(v)}" style="font-size:17px">${v === null ? '—' : fmtPct(v)}</span></div>`).join('')}</div>
-      <span style="font-size:12px;color:var(--faint)">Weighted by how often each card sells, so one rare sale can't skew it.${biggest ? ` Biggest recent driver: ${esc(biggest.label)} (${MONTHS[biggest.i]}).` : ''}</span>
-    </div>` : `<div class="panel" style="display:flex;flex-direction:column;gap:6px"><span style="font-weight:700">Card prices coming soon</span><span style="color:var(--muted);font-size:14px">${esc(p.name)}'s rookie cards haven't been added yet. They'll appear here, with 12 months of real sale prices, after the next card data build.</span></div>`}
+    ${playerMarket(pid, p, cs)}
 
     <div class="section"><h2>${esc(p.statsLabel)}</h2>
       <div class="tiles"${p.stats.length ? '' : ' hidden'}>${p.stats.map(([k, v, r]) => `<div class="tile"><span class="k">${esc(k)}</span><span class="v">${esc(v)}</span>${r ? `<span class="k">${esc(r)} in league</span>` : ''}</div>`).join('')}</div>
@@ -1259,15 +1471,6 @@ function viewPlayer(pid) {
       <div class="alert ${p.note.kind}"><div><div style="font-weight:700">${esc(p.note.title)}</div><div style="color:var(--muted);font-size:14px">${esc(p.note.text)}</div></div></div>
     </div>
 
-    <div class="section"${cs.length ? '' : ' hidden'}>
-      <div class="row between"><h2>Cards <span style="color:var(--faint);font-weight:500;font-size:15px">${list.length} shown</span></h2>
-        <label class="row" style="gap:8px;font-size:13px;color:var(--muted)" for="sort">Sort
-          <select id="sort" style="min-height:40px;border-radius:10px;border:1px solid var(--line);background:var(--surface);padding:0 10px">
-            ${[['value-desc', 'Value: high to low'], ['value-asc', 'Value: low to high'], ['gain', 'Biggest gain (1M)'], ['drop', 'Biggest drop (1M)']].map(([v, l]) => `<option value="${v}"${v === state.playerSort ? ' selected' : ''}>${l}</option>`).join('')}
-          </select></label></div>
-      <div class="chips">${['All', 'Rookie', 'Graded', 'Auto', 'Numbered'].map(f => `<button type="button" class="chip" data-set="playerFilter" data-val="${f}" aria-pressed="${f === state.playerFilter}">${f}</button>`).join('')}</div>
-      <div class="list">${list.map(c => cardItem(c)).join('') || '<p class="lede">No cards in this filter.</p>'}</div>
-    </div>
   </div>`;
 }
 
@@ -1405,6 +1608,7 @@ const BUILD = {
     ['Card pages', 'Price chart with game, injury and news markers, sales volume and key stats.'],
     ['Auto-written "Why it moved"', 'Generated from price, sales and event data. No manual writing.'],
     ['Compare tool', 'Up to four cards on price, sales volume and graded population.'],
+    ['Player card market', 'Market snapshot (value, 12-month high, monthly sales, cheapest way in, top, hottest and most traded card, PSA 10 premium), a chart you can switch between combined, raw vs PSA 10 and each card, in % or $, filtered by grade and type, with sales volume and news markers, plus a card gallery or table with raw and PSA 10 prices side by side.'],
     ['Player profiles', 'Every player page has a short bio, the 3 things that move his cards most, and live signals from Pulled data: season phase, injuries, 3-month trend, PSA 10 premium and sales volume.'],
     ['My collection', 'Total value and trend for the cards you add (saved in this browser).'],
     ['Card images', 'Original artwork for every card, your own photo, or real images from CardSight AI.'],
@@ -2028,6 +2232,8 @@ function render() {
   const oa = $('#offerAmt'); if (oa && oa.addEventListener) { oa.addEventListener('input', offerHint); offerHint(); }
   ['cashGive', 'cashGet'].forEach(k => { const el = document.getElementById(k); if (el && state.trade) el.addEventListener('change', e => { state.trade[k] = Math.max(0, Math.round(+e.target.value || 0)); render(); }); });
   const ms = $('#minSales'); if (ms) ms.addEventListener('change', e => { state.moversMin = e.target.value; render(); });
+  const pq = $('#pq');
+  if (pq && pq.addEventListener) pq.addEventListener('input', e => { state.pQuery = e.target.value; const pos = e.target.selectionStart; render(); const n = $('#pq'); if (n) { n.focus(); try { n.setSelectionRange(pos, pos); } catch (err) {} } });
   const sort = $('#sort'); if (sort) sort.addEventListener('change', e => { state.playerSort = e.target.value; render(); });
   const photo = $('#photo'); if (photo) photo.addEventListener('change', e => handlePhoto(e.target.files[0], e.target.dataset.id));
   const add = $('#addCompare'); if (add) add.addEventListener('change', e => { if (e.target.value) { state.compareIds.push(e.target.value); render(); } });
@@ -2038,6 +2244,8 @@ document.addEventListener('click', e => {
   if (s) { state[s.dataset.set] = s.dataset.val; render(); return; }
   const a = e.target.closest('[data-act]'); if (!a) return;
   const id = a.dataset.id;
+  if (a.dataset.act === 'pHide') { state.pHidden = { ...state.pHidden, [id]: !state.pHidden[id] }; render(); }
+  if (a.dataset.act === 'pReset') { state.pGrade = 'All'; state.pType = 'All'; state.pQuery = ''; state.pHidden = {}; render(); }
   if (a.dataset.act === 'toggleCol') { const ids = col(); const has = ids.includes(id); setCol(has ? ids.filter(x => x !== id) : [...ids, id]); toast(has ? 'Removed from your collection' : 'Added to your collection'); render(); }
   if (a.dataset.act === 'sampleCol') { setCol([...CARDS].sort((x, y) => avg(y.sales) - avg(x.sales)).slice(0, 3).map(c => c.id)); toast('Added 3 sample cards'); render(); }
   if (a.dataset.act === 'fToggle') { const k = a.dataset.k, v = a.dataset.v, arr = state.f[k]; state.f[k] = arr.includes(v) ? arr.filter(x => x !== v) : [...arr, v]; state.fLimit = 48; render(); }
