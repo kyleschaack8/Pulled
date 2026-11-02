@@ -14,6 +14,9 @@ Sports card prices, explained. Pulled tracks card prices next to player stats, i
 | `docs/PROJECT.md` | Business overview: concept, features, pricing, automation plan, data providers |
 | `docs/content-plan.md` | 4-week "Card Market Movers" content plan to validate demand |
 | `docs/mockups/` | Design canvas source files for the app screens and website |
+| `data/players.json` | The 107 players Pulled tracks (edit to add or remove players) |
+| `data/cards.json`, `data/prices.json` | Real cards and 12-month price history from CardSight AI, built by the "Build card data" action |
+| `tools/build_catalog.py` | The data robot behind "Build card data" (resumable, runs within a call budget) |
 | `tools/get_card_images.py` | Downloads card images from CardSight AI. Needs your own `CARDSIGHTAI_API_KEY` |
 
 ## Rules for this repo

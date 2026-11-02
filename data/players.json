@@ -1,0 +1,861 @@
+{
+ "note": "Edit this list to add or remove players. rookieYear = year of the player's rookie cards. Run the 'Build card data' action after editing.",
+ "players": [
+  {
+   "id": "lebron-james",
+   "name": "LeBron James",
+   "sport": "NBA",
+   "pos": "SF",
+   "rookieYear": 2003,
+   "status": "active"
+  },
+  {
+   "id": "stephen-curry",
+   "name": "Stephen Curry",
+   "sport": "NBA",
+   "pos": "PG",
+   "rookieYear": 2009,
+   "status": "active"
+  },
+  {
+   "id": "kevin-durant",
+   "name": "Kevin Durant",
+   "sport": "NBA",
+   "pos": "SF",
+   "rookieYear": 2007,
+   "status": "active"
+  },
+  {
+   "id": "giannis-antetokounmpo",
+   "name": "Giannis Antetokounmpo",
+   "sport": "NBA",
+   "pos": "PF",
+   "rookieYear": 2013,
+   "status": "active"
+  },
+  {
+   "id": "nikola-jokic",
+   "name": "Nikola Jokic",
+   "sport": "NBA",
+   "pos": "C",
+   "rookieYear": 2015,
+   "status": "active"
+  },
+  {
+   "id": "luka-doncic",
+   "name": "Luka Doncic",
+   "sport": "NBA",
+   "pos": "PG",
+   "rookieYear": 2018,
+   "status": "active"
+  },
+  {
+   "id": "joel-embiid",
+   "name": "Joel Embiid",
+   "sport": "NBA",
+   "pos": "C",
+   "rookieYear": 2014,
+   "status": "active"
+  },
+  {
+   "id": "jayson-tatum",
+   "name": "Jayson Tatum",
+   "sport": "NBA",
+   "pos": "SF",
+   "rookieYear": 2017,
+   "status": "active"
+  },
+  {
+   "id": "anthony-edwards",
+   "name": "Anthony Edwards",
+   "sport": "NBA",
+   "pos": "SG",
+   "rookieYear": 2020,
+   "status": "active"
+  },
+  {
+   "id": "shai-gilgeous-alexander",
+   "name": "Shai Gilgeous-Alexander",
+   "sport": "NBA",
+   "pos": "PG",
+   "rookieYear": 2018,
+   "status": "active"
+  },
+  {
+   "id": "victor-wembanyama",
+   "name": "Victor Wembanyama",
+   "sport": "NBA",
+   "pos": "C",
+   "rookieYear": 2023,
+   "status": "active"
+  },
+  {
+   "id": "ja-morant",
+   "name": "Ja Morant",
+   "sport": "NBA",
+   "pos": "PG",
+   "rookieYear": 2019,
+   "status": "active"
+  },
+  {
+   "id": "zion-williamson",
+   "name": "Zion Williamson",
+   "sport": "NBA",
+   "pos": "PF",
+   "rookieYear": 2019,
+   "status": "active"
+  },
+  {
+   "id": "devin-booker",
+   "name": "Devin Booker",
+   "sport": "NBA",
+   "pos": "SG",
+   "rookieYear": 2015,
+   "status": "active"
+  },
+  {
+   "id": "jalen-brunson",
+   "name": "Jalen Brunson",
+   "sport": "NBA",
+   "pos": "PG",
+   "rookieYear": 2018,
+   "status": "active"
+  },
+  {
+   "id": "tyrese-haliburton",
+   "name": "Tyrese Haliburton",
+   "sport": "NBA",
+   "pos": "PG",
+   "rookieYear": 2020,
+   "status": "active"
+  },
+  {
+   "id": "paolo-banchero",
+   "name": "Paolo Banchero",
+   "sport": "NBA",
+   "pos": "PF",
+   "rookieYear": 2022,
+   "status": "active"
+  },
+  {
+   "id": "chet-holmgren",
+   "name": "Chet Holmgren",
+   "sport": "NBA",
+   "pos": "C",
+   "rookieYear": 2022,
+   "status": "active"
+  },
+  {
+   "id": "cade-cunningham",
+   "name": "Cade Cunningham",
+   "sport": "NBA",
+   "pos": "PG",
+   "rookieYear": 2021,
+   "status": "active"
+  },
+  {
+   "id": "lamelo-ball",
+   "name": "LaMelo Ball",
+   "sport": "NBA",
+   "pos": "PG",
+   "rookieYear": 2020,
+   "status": "active"
+  },
+  {
+   "id": "donovan-mitchell",
+   "name": "Donovan Mitchell",
+   "sport": "NBA",
+   "pos": "SG",
+   "rookieYear": 2017,
+   "status": "active"
+  },
+  {
+   "id": "kawhi-leonard",
+   "name": "Kawhi Leonard",
+   "sport": "NBA",
+   "pos": "SF",
+   "rookieYear": 2012,
+   "status": "active"
+  },
+  {
+   "id": "damian-lillard",
+   "name": "Damian Lillard",
+   "sport": "NBA",
+   "pos": "PG",
+   "rookieYear": 2012,
+   "status": "active"
+  },
+  {
+   "id": "anthony-davis",
+   "name": "Anthony Davis",
+   "sport": "NBA",
+   "pos": "PF",
+   "rookieYear": 2012,
+   "status": "active"
+  },
+  {
+   "id": "cooper-flagg",
+   "name": "Cooper Flagg",
+   "sport": "NBA",
+   "pos": "SF",
+   "rookieYear": 2025,
+   "status": "active"
+  },
+  {
+   "id": "dylan-harper",
+   "name": "Dylan Harper",
+   "sport": "NBA",
+   "pos": "SG",
+   "rookieYear": 2025,
+   "status": "active"
+  },
+  {
+   "id": "michael-jordan",
+   "name": "Michael Jordan",
+   "sport": "NBA",
+   "pos": "SG",
+   "rookieYear": 1986,
+   "status": "retired"
+  },
+  {
+   "id": "kobe-bryant",
+   "name": "Kobe Bryant",
+   "sport": "NBA",
+   "pos": "SG",
+   "rookieYear": 1996,
+   "status": "retired"
+  },
+  {
+   "id": "tim-duncan",
+   "name": "Tim Duncan",
+   "sport": "NBA",
+   "pos": "PF",
+   "rookieYear": 1997,
+   "status": "retired"
+  },
+  {
+   "id": "shaquille-oneal",
+   "name": "Shaquille O'Neal",
+   "sport": "NBA",
+   "pos": "C",
+   "rookieYear": 1992,
+   "status": "retired"
+  },
+  {
+   "id": "magic-johnson",
+   "name": "Magic Johnson",
+   "sport": "NBA",
+   "pos": "PG",
+   "rookieYear": 1980,
+   "status": "retired"
+  },
+  {
+   "id": "larry-bird",
+   "name": "Larry Bird",
+   "sport": "NBA",
+   "pos": "SF",
+   "rookieYear": 1980,
+   "status": "retired"
+  },
+  {
+   "id": "dirk-nowitzki",
+   "name": "Dirk Nowitzki",
+   "sport": "NBA",
+   "pos": "PF",
+   "rookieYear": 1998,
+   "status": "retired"
+  },
+  {
+   "id": "dwyane-wade",
+   "name": "Dwyane Wade",
+   "sport": "NBA",
+   "pos": "SG",
+   "rookieYear": 2003,
+   "status": "retired"
+  },
+  {
+   "id": "allen-iverson",
+   "name": "Allen Iverson",
+   "sport": "NBA",
+   "pos": "PG",
+   "rookieYear": 1996,
+   "status": "retired"
+  },
+  {
+   "id": "kevin-garnett",
+   "name": "Kevin Garnett",
+   "sport": "NBA",
+   "pos": "PF",
+   "rookieYear": 1995,
+   "status": "retired"
+  },
+  {
+   "id": "shohei-ohtani",
+   "name": "Shohei Ohtani",
+   "sport": "MLB",
+   "pos": "DH/P",
+   "rookieYear": 2018,
+   "status": "active"
+  },
+  {
+   "id": "mike-trout",
+   "name": "Mike Trout",
+   "sport": "MLB",
+   "pos": "CF",
+   "rookieYear": 2011,
+   "status": "active"
+  },
+  {
+   "id": "aaron-judge",
+   "name": "Aaron Judge",
+   "sport": "MLB",
+   "pos": "RF",
+   "rookieYear": 2017,
+   "status": "active"
+  },
+  {
+   "id": "juan-soto",
+   "name": "Juan Soto",
+   "sport": "MLB",
+   "pos": "RF",
+   "rookieYear": 2018,
+   "status": "active"
+  },
+  {
+   "id": "ronald-acuna-jr",
+   "name": "Ronald Acuna Jr.",
+   "sport": "MLB",
+   "pos": "RF",
+   "rookieYear": 2018,
+   "status": "active"
+  },
+  {
+   "id": "fernando-tatis-jr",
+   "name": "Fernando Tatis Jr.",
+   "sport": "MLB",
+   "pos": "RF",
+   "rookieYear": 2019,
+   "status": "active"
+  },
+  {
+   "id": "bobby-witt-jr",
+   "name": "Bobby Witt Jr.",
+   "sport": "MLB",
+   "pos": "SS",
+   "rookieYear": 2022,
+   "status": "active"
+  },
+  {
+   "id": "julio-rodriguez",
+   "name": "Julio Rodriguez",
+   "sport": "MLB",
+   "pos": "CF",
+   "rookieYear": 2022,
+   "status": "active"
+  },
+  {
+   "id": "gunnar-henderson",
+   "name": "Gunnar Henderson",
+   "sport": "MLB",
+   "pos": "SS",
+   "rookieYear": 2023,
+   "status": "active"
+  },
+  {
+   "id": "elly-de-la-cruz",
+   "name": "Elly De La Cruz",
+   "sport": "MLB",
+   "pos": "SS",
+   "rookieYear": 2023,
+   "status": "active"
+  },
+  {
+   "id": "corbin-carroll",
+   "name": "Corbin Carroll",
+   "sport": "MLB",
+   "pos": "OF",
+   "rookieYear": 2023,
+   "status": "active"
+  },
+  {
+   "id": "paul-skenes",
+   "name": "Paul Skenes",
+   "sport": "MLB",
+   "pos": "P",
+   "rookieYear": 2024,
+   "status": "active"
+  },
+  {
+   "id": "jackson-holliday",
+   "name": "Jackson Holliday",
+   "sport": "MLB",
+   "pos": "2B",
+   "rookieYear": 2024,
+   "status": "active"
+  },
+  {
+   "id": "jackson-chourio",
+   "name": "Jackson Chourio",
+   "sport": "MLB",
+   "pos": "OF",
+   "rookieYear": 2024,
+   "status": "active"
+  },
+  {
+   "id": "wyatt-langford",
+   "name": "Wyatt Langford",
+   "sport": "MLB",
+   "pos": "OF",
+   "rookieYear": 2024,
+   "status": "active"
+  },
+  {
+   "id": "roman-anthony",
+   "name": "Roman Anthony",
+   "sport": "MLB",
+   "pos": "OF",
+   "rookieYear": 2025,
+   "status": "active"
+  },
+  {
+   "id": "mookie-betts",
+   "name": "Mookie Betts",
+   "sport": "MLB",
+   "pos": "SS",
+   "rookieYear": 2014,
+   "status": "active"
+  },
+  {
+   "id": "bryce-harper",
+   "name": "Bryce Harper",
+   "sport": "MLB",
+   "pos": "1B",
+   "rookieYear": 2012,
+   "status": "active"
+  },
+  {
+   "id": "vladimir-guerrero-jr",
+   "name": "Vladimir Guerrero Jr.",
+   "sport": "MLB",
+   "pos": "1B",
+   "rookieYear": 2019,
+   "status": "active"
+  },
+  {
+   "id": "francisco-lindor",
+   "name": "Francisco Lindor",
+   "sport": "MLB",
+   "pos": "SS",
+   "rookieYear": 2015,
+   "status": "active"
+  },
+  {
+   "id": "pete-alonso",
+   "name": "Pete Alonso",
+   "sport": "MLB",
+   "pos": "1B",
+   "rookieYear": 2019,
+   "status": "active"
+  },
+  {
+   "id": "yoshinobu-yamamoto",
+   "name": "Yoshinobu Yamamoto",
+   "sport": "MLB",
+   "pos": "P",
+   "rookieYear": 2024,
+   "status": "active"
+  },
+  {
+   "id": "clayton-kershaw",
+   "name": "Clayton Kershaw",
+   "sport": "MLB",
+   "pos": "P",
+   "rookieYear": 2008,
+   "status": "active"
+  },
+  {
+   "id": "ken-griffey-jr",
+   "name": "Ken Griffey Jr.",
+   "sport": "MLB",
+   "pos": "CF",
+   "rookieYear": 1989,
+   "status": "retired"
+  },
+  {
+   "id": "derek-jeter",
+   "name": "Derek Jeter",
+   "sport": "MLB",
+   "pos": "SS",
+   "rookieYear": 1993,
+   "status": "retired"
+  },
+  {
+   "id": "mickey-mantle",
+   "name": "Mickey Mantle",
+   "sport": "MLB",
+   "pos": "CF",
+   "rookieYear": 1952,
+   "status": "retired"
+  },
+  {
+   "id": "hank-aaron",
+   "name": "Hank Aaron",
+   "sport": "MLB",
+   "pos": "RF",
+   "rookieYear": 1954,
+   "status": "retired"
+  },
+  {
+   "id": "willie-mays",
+   "name": "Willie Mays",
+   "sport": "MLB",
+   "pos": "CF",
+   "rookieYear": 1951,
+   "status": "retired"
+  },
+  {
+   "id": "roberto-clemente",
+   "name": "Roberto Clemente",
+   "sport": "MLB",
+   "pos": "RF",
+   "rookieYear": 1955,
+   "status": "retired"
+  },
+  {
+   "id": "nolan-ryan",
+   "name": "Nolan Ryan",
+   "sport": "MLB",
+   "pos": "P",
+   "rookieYear": 1968,
+   "status": "retired"
+  },
+  {
+   "id": "cal-ripken-jr",
+   "name": "Cal Ripken Jr.",
+   "sport": "MLB",
+   "pos": "SS",
+   "rookieYear": 1982,
+   "status": "retired"
+  },
+  {
+   "id": "albert-pujols",
+   "name": "Albert Pujols",
+   "sport": "MLB",
+   "pos": "1B",
+   "rookieYear": 2001,
+   "status": "retired"
+  },
+  {
+   "id": "ichiro-suzuki",
+   "name": "Ichiro Suzuki",
+   "sport": "MLB",
+   "pos": "RF",
+   "rookieYear": 2001,
+   "status": "retired"
+  },
+  {
+   "id": "mariano-rivera",
+   "name": "Mariano Rivera",
+   "sport": "MLB",
+   "pos": "P",
+   "rookieYear": 1992,
+   "status": "retired"
+  },
+  {
+   "id": "babe-ruth",
+   "name": "Babe Ruth",
+   "sport": "MLB",
+   "pos": "RF",
+   "rookieYear": 1933,
+   "status": "retired"
+  },
+  {
+   "id": "patrick-mahomes",
+   "name": "Patrick Mahomes",
+   "sport": "NFL",
+   "pos": "QB",
+   "rookieYear": 2017,
+   "status": "active"
+  },
+  {
+   "id": "josh-allen",
+   "name": "Josh Allen",
+   "sport": "NFL",
+   "pos": "QB",
+   "rookieYear": 2018,
+   "status": "active"
+  },
+  {
+   "id": "joe-burrow",
+   "name": "Joe Burrow",
+   "sport": "NFL",
+   "pos": "QB",
+   "rookieYear": 2020,
+   "status": "active"
+  },
+  {
+   "id": "lamar-jackson",
+   "name": "Lamar Jackson",
+   "sport": "NFL",
+   "pos": "QB",
+   "rookieYear": 2018,
+   "status": "active"
+  },
+  {
+   "id": "justin-herbert",
+   "name": "Justin Herbert",
+   "sport": "NFL",
+   "pos": "QB",
+   "rookieYear": 2020,
+   "status": "active"
+  },
+  {
+   "id": "cj-stroud",
+   "name": "C.J. Stroud",
+   "sport": "NFL",
+   "pos": "QB",
+   "rookieYear": 2023,
+   "status": "active"
+  },
+  {
+   "id": "caleb-williams",
+   "name": "Caleb Williams",
+   "sport": "NFL",
+   "pos": "QB",
+   "rookieYear": 2024,
+   "status": "active"
+  },
+  {
+   "id": "jayden-daniels",
+   "name": "Jayden Daniels",
+   "sport": "NFL",
+   "pos": "QB",
+   "rookieYear": 2024,
+   "status": "active"
+  },
+  {
+   "id": "drake-maye",
+   "name": "Drake Maye",
+   "sport": "NFL",
+   "pos": "QB",
+   "rookieYear": 2024,
+   "status": "active"
+  },
+  {
+   "id": "bo-nix",
+   "name": "Bo Nix",
+   "sport": "NFL",
+   "pos": "QB",
+   "rookieYear": 2024,
+   "status": "active"
+  },
+  {
+   "id": "brock-purdy",
+   "name": "Brock Purdy",
+   "sport": "NFL",
+   "pos": "QB",
+   "rookieYear": 2022,
+   "status": "active"
+  },
+  {
+   "id": "jalen-hurts",
+   "name": "Jalen Hurts",
+   "sport": "NFL",
+   "pos": "QB",
+   "rookieYear": 2020,
+   "status": "active"
+  },
+  {
+   "id": "justin-jefferson",
+   "name": "Justin Jefferson",
+   "sport": "NFL",
+   "pos": "WR",
+   "rookieYear": 2020,
+   "status": "active"
+  },
+  {
+   "id": "jamarr-chase",
+   "name": "Ja'Marr Chase",
+   "sport": "NFL",
+   "pos": "WR",
+   "rookieYear": 2021,
+   "status": "active"
+  },
+  {
+   "id": "ceedee-lamb",
+   "name": "CeeDee Lamb",
+   "sport": "NFL",
+   "pos": "WR",
+   "rookieYear": 2020,
+   "status": "active"
+  },
+  {
+   "id": "tyreek-hill",
+   "name": "Tyreek Hill",
+   "sport": "NFL",
+   "pos": "WR",
+   "rookieYear": 2016,
+   "status": "active"
+  },
+  {
+   "id": "travis-kelce",
+   "name": "Travis Kelce",
+   "sport": "NFL",
+   "pos": "TE",
+   "rookieYear": 2013,
+   "status": "active"
+  },
+  {
+   "id": "christian-mccaffrey",
+   "name": "Christian McCaffrey",
+   "sport": "NFL",
+   "pos": "RB",
+   "rookieYear": 2017,
+   "status": "active"
+  },
+  {
+   "id": "saquon-barkley",
+   "name": "Saquon Barkley",
+   "sport": "NFL",
+   "pos": "RB",
+   "rookieYear": 2018,
+   "status": "active"
+  },
+  {
+   "id": "bijan-robinson",
+   "name": "Bijan Robinson",
+   "sport": "NFL",
+   "pos": "RB",
+   "rookieYear": 2023,
+   "status": "active"
+  },
+  {
+   "id": "puka-nacua",
+   "name": "Puka Nacua",
+   "sport": "NFL",
+   "pos": "WR",
+   "rookieYear": 2023,
+   "status": "active"
+  },
+  {
+   "id": "malik-nabers",
+   "name": "Malik Nabers",
+   "sport": "NFL",
+   "pos": "WR",
+   "rookieYear": 2024,
+   "status": "active"
+  },
+  {
+   "id": "marvin-harrison-jr",
+   "name": "Marvin Harrison Jr.",
+   "sport": "NFL",
+   "pos": "WR",
+   "rookieYear": 2024,
+   "status": "active"
+  },
+  {
+   "id": "brock-bowers",
+   "name": "Brock Bowers",
+   "sport": "NFL",
+   "pos": "TE",
+   "rookieYear": 2024,
+   "status": "active"
+  },
+  {
+   "id": "cam-ward",
+   "name": "Cam Ward",
+   "sport": "NFL",
+   "pos": "QB",
+   "rookieYear": 2025,
+   "status": "active"
+  },
+  {
+   "id": "travis-hunter",
+   "name": "Travis Hunter",
+   "sport": "NFL",
+   "pos": "WR/CB",
+   "rookieYear": 2025,
+   "status": "active"
+  },
+  {
+   "id": "ashton-jeanty",
+   "name": "Ashton Jeanty",
+   "sport": "NFL",
+   "pos": "RB",
+   "rookieYear": 2025,
+   "status": "active"
+  },
+  {
+   "id": "shedeur-sanders",
+   "name": "Shedeur Sanders",
+   "sport": "NFL",
+   "pos": "QB",
+   "rookieYear": 2025,
+   "status": "active"
+  },
+  {
+   "id": "aaron-rodgers",
+   "name": "Aaron Rodgers",
+   "sport": "NFL",
+   "pos": "QB",
+   "rookieYear": 2005,
+   "status": "active"
+  },
+  {
+   "id": "tom-brady",
+   "name": "Tom Brady",
+   "sport": "NFL",
+   "pos": "QB",
+   "rookieYear": 2000,
+   "status": "retired"
+  },
+  {
+   "id": "peyton-manning",
+   "name": "Peyton Manning",
+   "sport": "NFL",
+   "pos": "QB",
+   "rookieYear": 1998,
+   "status": "retired"
+  },
+  {
+   "id": "jerry-rice",
+   "name": "Jerry Rice",
+   "sport": "NFL",
+   "pos": "WR",
+   "rookieYear": 1986,
+   "status": "retired"
+  },
+  {
+   "id": "joe-montana",
+   "name": "Joe Montana",
+   "sport": "NFL",
+   "pos": "QB",
+   "rookieYear": 1981,
+   "status": "retired"
+  },
+  {
+   "id": "walter-payton",
+   "name": "Walter Payton",
+   "sport": "NFL",
+   "pos": "RB",
+   "rookieYear": 1976,
+   "status": "retired"
+  },
+  {
+   "id": "barry-sanders",
+   "name": "Barry Sanders",
+   "sport": "NFL",
+   "pos": "RB",
+   "rookieYear": 1989,
+   "status": "retired"
+  },
+  {
+   "id": "emmitt-smith",
+   "name": "Emmitt Smith",
+   "sport": "NFL",
+   "pos": "RB",
+   "rookieYear": 1990,
+   "status": "retired"
+  }
+ ]
+}

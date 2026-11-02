@@ -1,0 +1,58 @@
+name: Build card data
+
+# Adds real cards, price history and images from CardSight AI for the players in data/players.json.
+# Run by hand: Actions tab -> "Build card data" -> Run workflow.
+# Each run stops at its call budget and saves progress; run again to continue.
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_calls:
+        description: "API call budget for this run (free plan: 750/month total)"
+        required: true
+        default: "200"
+      mode:
+        description: "build = add players not done yet; prices = refresh prices for all tracked cards"
+        required: true
+        default: "build"
+        type: choice
+        options: [build, prices]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: card-data
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build card data
+        env:
+          CARDSIGHTAI_API_KEY: ${{ secrets.CARDSIGHTAI_API_KEY }}
+          MAX_CALLS: ${{ inputs.max_calls }}
+          MODE: ${{ inputs.mode }}
+        run: python tools/build_catalog.py
+
+      - name: Save data to the repo
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898469+github-actions[bot]@users.noreply.github.com"
+          git add data images/cards
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Update card data from CardSight AI (${{ inputs.mode }})"
+            git pull --rebase origin main
+            git push
+          fi

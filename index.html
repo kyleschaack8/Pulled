@@ -146,15 +146,15 @@ td.best { color: var(--fg); font-weight: 600; }
     </nav>
   </div>
 </header>
-<div class="wrap"><div class="notice">TEST SITE · SAMPLE DATA · PRICES AND STATS ARE ILLUSTRATIVE, NOT REAL</div></div>
+<div class="wrap"><div class="notice" id="dataNotice">TEST SITE · SAMPLE DATA · PRICES AND STATS ARE ILLUSTRATIVE, NOT REAL</div></div>
 <main class="wrap" id="app"></main>
 <div class="toast" id="toast" hidden></div>
 
 <script>
-const MONTHS = ['Dec','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov'];
+let MONTHS = ['Dec','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov'];
 const RANGES = { '3M': 4, '6M': 7, '1Y': 12 };
 
-const PLAYERS = {
+let PLAYERS = {
   curry: { short: 'Curry', name: 'Stephen Curry', sport: 'NBA', team: 'Golden State Warriors', pos: 'PG', num: '#30', status: 'active',
     summary: "Still the league's top long-range shooter in year 18. His card market is steady to rising, driven by a hot start to the season.",
     stats: [['PTS', '27.8'], ['AST', '6.1'], ['REB', '4.6'], ['3PM', '4.9']], statsLabel: 'This season',
@@ -187,7 +187,7 @@ const PLAYERS = {
     events: [{ i: 6, type: 'news', label: 'Hall of Fame weekend' }, { i: 9, type: 'news', label: 'Anniversary coverage' }] }
 };
 
-const CARDS = [
+let CARDS = [
   { id: 'curry-chrome-ref', p: 'curry', name: '2009 Topps Chrome #101 Refractor RC', detail: 'PSA 10 · /500', tags: ['Rookie', 'Graded', 'Numbered'],
     price: [40500,41000,42000,41500,43000,44000,43000,42500,43600,44000,46000,48500], sales: [3,2,4,3,3,5,4,2,3,4,6,9], pop: [118,118,119,119,120,120,121,121,121,122,122,123] },
   { id: 'curry-contenders', p: 'curry', name: '2009 Playoff Contenders Rookie Ticket Auto', detail: 'BGS 9.5', tags: ['Rookie', 'Graded', 'Auto'],
@@ -221,10 +221,64 @@ const CARDS = [
   { id: 'griffey-ud-raw', p: 'griffey', name: '1989 Upper Deck #1 RC', detail: 'Raw', tags: ['Rookie'],
     price: [62,60,61,62,63,64,70,67,65,66,67,68], sales: [210,190,180,200,210,230,320,250,215,205,210,220], pop: null }
 ];
-const CARD = Object.fromEntries(CARDS.map(c => [c.id, c]));
+let CARD = Object.fromEntries(CARDS.map(c => [c.id, c]));
 
-const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '' };
+const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '', homeSport: 'All' };
 const charts = {};
+
+/* ---------- real data from data/*.json (built by the "Build card data" robot) ---------- */
+const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function fillSeries(med) {
+  const first = med.find(v => v != null);
+  if (first == null) return null;
+  let prev = first;
+  return med.map(v => (v == null ? prev : (prev = v)));
+}
+function initials(name) { return name.replace(/\bJr\.?/, '').split(/\s+/).filter(Boolean).map(w => w[0]).join('').slice(0, 3).toUpperCase(); }
+function lastName(name) { const w = name.replace(/,?\s+Jr\.?$/, '').split(' '); return w[w.length - 1]; }
+async function loadRealData() {
+  try {
+    const get = f => fetch('data/' + f, { cache: 'no-store' }).then(r => (r.ok ? r.json() : null));
+    const [pl, cd, pr] = await Promise.all([get('players.json'), get('cards.json'), get('prices.json')]);
+    if (!pl || !cd || !pr || !Array.isArray(cd.cards) || !cd.cards.length || !Array.isArray(pr.months)) return;
+    const players = {}, cards = [];
+    const counts = {};
+    cd.cards.forEach(c => {
+      const ph = pr.cards && pr.cards[c.id]; if (!ph) return;
+      [['raw', 'Raw'], ['psa10', 'PSA 10']].forEach(([k, label]) => {
+        const s = ph[k]; if (!s) return;
+        const price = fillSeries(s.median || []); if (!price) return;
+        const tags = [];
+        if (c.rookie) tags.push('Rookie');
+        if (k === 'psa10') tags.push('Graded');
+        if (/auto/i.test((c.set || '') + ' ' + (c.attributes || []).join(' ')) || (c.attributes || []).some(a => /^AU/i.test(a))) tags.push('Auto');
+        if (c.numberedTo) tags.push('Numbered');
+        cards.push({ id: c.id + '-' + k, p: c.playerId, name: c.title, detail: label + (c.numberedTo ? ' · /' + c.numberedTo : ''), tags, price, sales: (s.count || []).map(n => n || 0), pop: null, image: c.image || null });
+        counts[c.playerId] = (counts[c.playerId] || 0) + 1;
+      });
+    });
+    if (!cards.length) return;
+    (pl.players || []).forEach(p => {
+      if (!counts[p.id]) return;
+      const pc = cards.filter(c => c.p === p.id).length;
+      players[p.id] = {
+        short: lastName(p.name), name: p.name, sport: p.sport, team: '', pos: p.pos, num: initials(p.name), status: p.status,
+        summary: `${p.status === 'active' ? 'Active' : 'Retired'} ${p.sport} ${p.pos}. Pulled tracks ${pc} of his ${p.rookieYear} rookie-year cards, raw and PSA 10, from real completed sales.`,
+        stats: [], statsLabel: p.status === 'active' ? 'Stats' : 'Career', extra: '',
+        note: { kind: 'info', title: p.status === 'active' ? 'Stats and injuries' : 'Career and legacy', text: p.status === 'active' ? 'Team, current stats, projections and injury updates arrive when the sports data feed is connected.' : 'Career stats and legacy events (Hall of Fame news, anniversaries) arrive with the sports data feed.' },
+        events: []
+      };
+    });
+    PLAYERS = players; CARDS = cards.filter(c => players[c.p]); CARD = Object.fromEntries(CARDS.map(c => [c.id, c]));
+    MONTHS = pr.months.map(m => MON[parseInt(m.slice(5, 7), 10) - 1] + (m.slice(5, 7) === '01' ? " '" + m.slice(2, 4) : ''));
+    const top = [...CARDS].sort((a, b) => avg(b.sales) - avg(a.sales));
+    state.compareIds = [...new Set(top.map(c => c.p))].slice(0, 3).map(pid => top.find(c => c.p === pid).id);
+    memCol = getCol();
+    const n = $('#dataNotice');
+    if (n) n.textContent = `REAL SALES DATA FROM CARDSIGHT AI · ${Object.keys(PLAYERS).length} PLAYERS · ${CARDS.length} CARDS · UPDATED ${String(pr.updated || '').slice(0, 10)} · PLAYER STATS COMING SOON`;
+    render();
+  } catch (e) { /* keep sample data */ }
+}
 
 /* ---------- helpers ---------- */
 const $ = (s, r = document) => r.querySelector(s);
@@ -429,6 +483,7 @@ function cardArt(c) {
 function cardVisual(c) {
   const ph = memPhotos[c.id];
   if (ph && /^data:image\//.test(ph)) return `<img src="${ph}" alt="Your photo of ${esc(c.name)}" style="width:100%;height:100%;object-fit:contain;display:block">`;
+  if (c.image) return `<img src="${esc(c.image)}" alt="${esc(c.name)}" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block">`;
   if (repoImages[c.id]) return `<img src="${repoImages[c.id]}" alt="${esc(c.name)}" loading="lazy" onerror="pulledImgFail('${c.id}')" style="width:100%;height:100%;object-fit:contain;display:block">`;
   return cardArt(c);
 }
@@ -452,7 +507,7 @@ function handlePhoto(file, id) {
 /* ---------- views ---------- */
 function viewHome() {
   const q = state.homeQuery.trim().toLowerCase();
-  const pids = Object.keys(PLAYERS).filter(pid => !q || PLAYERS[pid].name.toLowerCase().includes(q) || PLAYERS[pid].team.toLowerCase().includes(q) || PLAYERS[pid].sport.toLowerCase().includes(q));
+  const pids = Object.keys(PLAYERS).filter(pid => state.homeSport === 'All' || PLAYERS[pid].sport === state.homeSport).filter(pid => !q || PLAYERS[pid].name.toLowerCase().includes(q) || PLAYERS[pid].team.toLowerCase().includes(q) || PLAYERS[pid].sport.toLowerCase().includes(q));
   const cardsQ = q ? CARDS.filter(c => (c.name + ' ' + PLAYERS[c.p].name + ' ' + c.detail).toLowerCase().includes(q)) : [];
   const sorted = [...CARDS].sort((a, b) => monthChange(b) - monthChange(a));
   return `<div class="view">
@@ -463,7 +518,8 @@ function viewHome() {
         <label for="q" class="eyebrow" hidden>Search</label><input id="q" type="search" placeholder="Try Curry, Ohtani, NFL, Prizm…" value="${esc(state.homeQuery)}" autocomplete="off"></div>
     </div>
     ${q ? `<div class="section"><h2>Cards matching “${esc(state.homeQuery)}”</h2>${cardsQ.length ? `<div class="list">${cardsQ.map(c => cardItem(c)).join('')}</div>` : `<p class="lede">No cards match. Try a player name or a set like Prizm.</p>`}</div>` : ''}
-    <div class="section"><div class="row between"><h2>Players</h2><span class="eyebrow">All cards combined · 1 month</span></div>
+    <div class="section"><div class="row between"><h2>Players <span style="color:var(--faint);font-weight:500;font-size:15px">${pids.length}</span></h2><span class="eyebrow">All cards combined · 1 month</span></div>
+      <div class="chips">${['All', ...[...new Set(Object.values(PLAYERS).map(p => p.sport))]].map(s => `<button type="button" class="chip" data-set="homeSport" data-val="${s}" aria-pressed="${s === state.homeSport}">${s}</button>`).join('')}</div>
       <div class="grid">${pids.map(pid => { const p = PLAYERS[pid], t = playerTrend(pid, '3M'); const m = (() => { const cs = CARDS.filter(c => c.p === pid); const w = cs.map(c => Math.max(0.5, c.sales[11])); return cs.reduce((s, c, k) => s + w[k] * monthChange(c), 0) / w.reduce((a, b) => a + b, 0); })();
         return `<a class="pcard" href="#player-${pid}"><div class="row between"><span class="tag">${esc(p.sport)}</span><span class="status ${p.status}">${p.status === 'active' ? 'Active' : 'Retired'}</span></div><div><div style="font-size:18px;font-weight:700">${esc(p.name)}</div><div style="font-size:13px;color:var(--faint)">${esc(p.team)}</div></div><div class="row between"><span class="num ${cls(m)}" style="font-size:22px;font-weight:600">${fmtPct(m)}</span>${sparkline(t.series, m >= 0 ? 'var(--up)' : 'var(--down)')}</div></a>`; }).join('') || '<p class="lede">No players match.</p>'}</div></div>
     ${q ? '' : `<div class="cols">
@@ -498,7 +554,7 @@ function viewPlayer(pid) {
         <div class="thumb" style="width:72px;height:72px;border-radius:16px;background:var(--raise);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:var(--faint)">${esc(p.num)}</div>
         <div style="display:flex;flex-direction:column;gap:6px;min-width:0;flex:1">
           <h1>${esc(p.name)}</h1>
-          <div class="row" style="gap:8px"><span style="color:var(--muted)">${esc(p.team)} · ${esc(p.pos)} · ${esc(p.sport)}</span><span class="status ${p.status}">${p.status === 'active' ? 'Active' : 'Retired · Hall of Fame'}</span></div>
+          <div class="row" style="gap:8px"><span style="color:var(--muted)">${[p.team, p.pos, p.sport].filter(Boolean).map(esc).join(' · ')}</span><span class="status ${p.status}">${p.status === 'active' ? 'Active' : 'Retired'}</span></div>
         </div>
       </div>
       <p class="lede">${esc(p.summary)}</p>
@@ -514,7 +570,7 @@ function viewPlayer(pid) {
     </div>
 
     <div class="section"><h2>${esc(p.statsLabel)}</h2>
-      <div class="tiles">${p.stats.map(([k, v]) => `<div class="tile"><span class="k">${esc(k)}</span><span class="v">${esc(v)}</span></div>`).join('')}</div>
+      ${p.stats.length ? '' : ''}<div class="tiles"${p.stats.length ? '' : ' hidden'}>${p.stats.map(([k, v]) => `<div class="tile"><span class="k">${esc(k)}</span><span class="v">${esc(v)}</span></div>`).join('')}</div>
       <span style="color:var(--muted);font-size:14px">${esc(p.extra)}</span>
       <div class="alert ${p.note.kind}"><div><div style="font-weight:700">${esc(p.note.title)}</div><div style="color:var(--muted);font-size:14px">${esc(p.note.text)}</div></div></div>
     </div>
@@ -664,10 +720,12 @@ const BUILD = {
     ['Auto-written "Why it moved"', 'Generated from price, sales and event data. No manual writing.'],
     ['Compare tool', 'Up to four cards on price, sales volume and graded population.'],
     ['My collection', 'Total value and trend for the cards you add (saved in this browser).'],
-    ['Card images', 'Original artwork for every card, your own photo, or real images from CardSight AI once connected.']
+    ['Card images', 'Original artwork for every card, your own photo, or real images from CardSight AI.'],
+    ['Real card data', '107 NBA, MLB and NFL players. Real cards, 12 months of raw and PSA 10 sale prices, and sales counts from CardSight AI, built by the "Build card data" robot.']
   ],
   next: [
-    ['Connect CardSight AI', 'Wired up. Add your API key as a GitHub secret, then run the "Fetch card images" action to load real card pictures.'],
+    ['Finish the card data', 'Keep running "Build card data" until all players are done; refresh prices weekly with mode "prices".'],
+    ['Stats and injuries feed', 'Connect a sports data API for team, current stats, projections and injury updates on every player page.'],
     ['Scan a card', 'Match an uploaded photo to the right card automatically. Start with manual confirm of the exact parallel.'],
     ['Real price data', 'Connect a licensed sales data source and refresh prices nightly.'],
     ['Live stats and injuries', 'Pull from a sports data API so player pages update on their own.'],
@@ -725,6 +783,7 @@ document.addEventListener('click', e => {
 window.addEventListener('hashchange', () => { render(); window.scrollTo(0, 0); });
 render();
 loadRepoImages();
+loadRealData();
 </script>
 </body>
 </html>
