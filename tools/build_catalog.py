@@ -50,7 +50,7 @@ PRIORITY = ["prizm", "topps chrome", "bowman chrome", "optic", "topps update", "
 
 
 FLAGSHIP = {
-    "NBA": ["Topps Chrome", "Panini Prizm", "Topps"],
+    "NBA": ["Topps Chrome", "Panini Prizm", "Topps", "Donruss Optic"],
     "MLB": ["Topps Chrome", "Bowman Chrome", "Topps Update"],
     "NFL": ["Panini Prizm", "Donruss Optic", "Topps Chrome"],
 }
@@ -204,21 +204,27 @@ def pick_cards(player):
     year = str(player["rookieYear"])
     names = [player["name"]] + list(player.get("aka", []))
     last = norm(player["name"].replace(" Jr.", "").replace(" Jr", "")).split()[-1]
-    cards, total = [], 0
+    y = int(year)
+    # Basketball and hockey releases are labeled by season ("2003-04"); others by year ("2017")
+    years = [f"{y}-{str(y + 1)[2:]}"] if player.get("sport") in ("NBA", "NHL") else [year]
+    cards, total, name = [], 0, names[0]
     for name in names:
-        res = api("/v1/catalog/cards", {"name": name, "year": year, "take": 100})
-        cards = g(res, "cards", default=[]) or []
-        total = int(g(res, "totalCount", "total_count", default=0) or 0)
+        for yr in years:
+            res = api("/v1/catalog/cards", {"name": name, "year": yr, "take": 100})
+            found = g(res, "cards", default=[]) or []
+            t_ = int(g(res, "totalCount", "total_count", default=0) or 0)
+            cards += found
+            total = max(total, t_)
+            if found and t_ > 100:
+                more = api("/v1/catalog/cards", {"name": name, "year": yr, "take": 100, "skip": 100})
+                cards += g(more, "cards", default=[]) or []
+            if found and t_ > 200:
+                # Big checklists: make sure the flagship rookie releases are in the candidate pool
+                for rel in FLAGSHIP.get(player.get("sport"), []):
+                    r = api("/v1/catalog/cards", {"name": name, "year": yr, "releaseName": rel, "take": 50})
+                    cards += g(r, "cards", default=[]) or []
         if cards:
             break
-    if cards and total > 100:
-        more = api("/v1/catalog/cards", {"name": name, "year": year, "take": 100, "skip": 100})
-        cards += g(more, "cards", default=[]) or []
-    if cards and total > 200:
-        # Big checklists: make sure the flagship rookie releases are in the candidate pool
-        for rel in FLAGSHIP.get(player.get("sport"), []):
-            r = api("/v1/catalog/cards", {"name": name, "year": year, "releaseName": rel, "take": 50})
-            cards += g(r, "cards", default=[]) or []
     if not cards:
         res = api("/v1/catalog/cards", {"name": name, "take": 100, "sort": "year", "order": "asc"})
         cards = g(res, "cards", default=[]) or []
@@ -264,7 +270,7 @@ def card_record(c, player):
     st = g(c, "setName", "set_name", default="")
     num = g(c, "number", default="")
     attrs = g(c, "attributes", default=[]) or []
-    title = f"{year[:4]} {rel}".strip()
+    title = f"{year if '-' in year else year[:4]} {rel}".strip()
     if st and norm(st) not in ("base set", "base", norm(rel)):
         title += f" {st}"
     if num:
