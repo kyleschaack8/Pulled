@@ -1,0 +1,4096 @@
+{
+ "athlete": {
+  "id": "3139477",
+  "uid": "s:20~l:28~a:3139477",
+  "guid": "37d87523-280a-9d4a-0adb-22cfc6d3619c",
+  "type": "football",
+  "firstName": "Patrick",
+  "lastName": "Mahomes",
+  "displayName": "Patrick Mahomes",
+  "fullName": "Patrick Mahomes",
+  "debutYear": 2017,
+  "jersey": "15",
+  "links": [
+   {
+    "language": "en",
+    "rel": [
+     "playercard",
+     "desktop",
+     "athlete"
+    ],
+    "href": "https://www.espn.com/nfl/player/_/id/3139477/patrick-mahomes",
+    "text": "Player Card",
+    "shortText": "Player Card",
+    "isExternal": false,
+    "isPremium": false
+   },
+   {
+    "language": "en",
+    "rel": [
+     "stats",
+     "desktop",
+     "athlete"
+    ],
+    "href": "https://www.espn.com/nfl/player/stats/_/id/3139477/patrick-mahomes",
+    "text": "Stats",
+    "shortText": "Stats",
+    "isExternal": false,
+    "isPremium": false
+   },
+   {
+    "language": "en",
+    "rel": [
+     "stats",
+     "sportscenter",
+     "app",
+     "athlete"
+    ],
+    "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~a:3139477&section=stats",
+    "text": "Stats",
+    "shortText": "Stats",
+    "isExternal": false,
+    "isPremium": false
+   },
+   {
+    "language": "en",
+    "rel": [
+     "splits",
+     "desktop",
+     "athlete"
+    ],
+    "href": "https://www.espn.com/nfl/player/splits/_/id/3139477/patrick-mahomes",
+    "text": "Splits",
+    "shortText": "Splits",
+    "isExternal": false,
+    "isPremium": false
+   },
+   {
+    "language": "en",
+    "rel": [
+     "gamelog",
+     "desktop",
+     "athlete"
+    ],
+    "href": "https://www.espn.com/nfl/player/gamelog/_/id/3139477/patrick-mahomes",
+    "text": "Game Log",
+    "shortText": "Game Log",
+    "isExternal": false,
+    "isPremium": false
+   },
+   {
+    "language": "en",
+    "rel": [
+     "gamelog",
+     "sportscenter",
+     "app",
+     "athlete"
+    ],
+    "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~a:3139477&section=gamelog",
+    "text": "Game Log",
+    "shortText": "Game Log",
+    "isExternal": false,
+    "isPremium": false
+   },
+   {
+    "language": "en",
+    "rel": [
+     "news",
+     "desktop",
+     "athlete"
+    ],
+    "href": "https://www.espn.com/nfl/player/news/_/id/3139477/patrick-mahomes",
+    "text": "News",
+    "shortText": "News",
+    "isExternal": false,
+    "isPremium": false
+   },
+   {
+    "language": "en",
+    "rel": [
+     "news",
+     "sportscenter",
+     "app",
+     "athlete"
+    ],
+    "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~a:3139477&section=news",
+    "text": "News",
+    "shortText": "News",
+    "isExternal": false,
+    "isPremium": false
+   },
+   {
+    "language": "en",
+    "rel": [
+     "bio",
+     "desktop",
+     "athlete"
+    ],
+    "href": "https://www.espn.com/nfl/player/bio/_/id/3139477/patrick-mahomes",
+    "text": "Bio",
+    "shortText": "Bio",
+    "isExternal": false,
+    "isPremium": false
+   },
+   {
+    "language": "en",
+    "rel": [
+     "bio",
+     "sportscenter",
+     "app",
+     "athlete"
+    ],
+    "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~a:3139477&section=bio",
+    "text": "Bio",
+    "shortText": "Bio",
+    "isExternal": false,
+    "isPremium": false
+   },
+   {
+    "language": "en",
+    "rel": [
+     "overview",
+     "desktop",
+     "athlete"
+    ],
+    "href": "https://www.espn.com/nfl/player/_/id/3139477/patrick-mahomes",
+    "text": "Overview",
+    "shortText": "Overview",
+    "isExternal": false,
+    "isPremium": false
+   },
+   {
+    "language": "en",
+    "rel": [
+     "overview",
+     "sportscenter",
+     "app",
+     "athlete"
+    ],
+    "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~a:3139477",
+    "text": "Overview",
+    "shortText": "Overview",
+    "isExternal": false,
+    "isPremium": false
+   }
+  ],
+  "college": {
+   "id": "2641",
+   "mascot": "Red Raiders",
+   "name": "Texas Tech",
+   "shortName": "Texas Tech",
+   "abbrev": "TTU"
+  },
+  "collegeTeam": {
+   "id": "2641",
+   "uid": "s:20~l:23~t:2641",
+   "guid": "4350bc91-1a0d-8292-bf66-9687147703f0",
+   "slug": "texas-tech-red-raiders",
+   "location": "Texas Tech",
+   "name": "Red Raiders",
+   "nickname": "Texas Tech",
+   "abbreviation": "TTU",
+   "displayName": "Texas Tech Red Raiders",
+   "shortDisplayName": "Texas Tech",
+   "color": "C80025",
+   "alternateColor": "000000",
+   "isActive": true,
+   "isAllStar": false,
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/ncaa/500/2641.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "default"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2641.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "dark"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4350bc91-1a0d-8292-bf66-9687147703f0/logos/primary_logo_on_white_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_on_white_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4350bc91-1a0d-8292-bf66-9687147703f0/logos/primary_logo_on_black_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_on_black_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4350bc91-1a0d-8292-bf66-9687147703f0/logos/primary_logo_on_primary_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_on_primary_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4350bc91-1a0d-8292-bf66-9687147703f0/logos/primary_logo_on_secondary_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_on_secondary_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4350bc91-1a0d-8292-bf66-9687147703f0/logos/primary_logo_black.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_black"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4350bc91-1a0d-8292-bf66-9687147703f0/logos/primary_logo_white.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_white"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4350bc91-1a0d-8292-bf66-9687147703f0/logos/secondary_logo_on_white_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_on_white_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4350bc91-1a0d-8292-bf66-9687147703f0/logos/secondary_logo_on_black_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_on_black_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4350bc91-1a0d-8292-bf66-9687147703f0/logos/secondary_logo_on_primary_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_on_primary_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4350bc91-1a0d-8292-bf66-9687147703f0/logos/secondary_logo_on_secondary_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_on_secondary_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4350bc91-1a0d-8292-bf66-9687147703f0/logos/secondary_logo_black.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_black"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/4350bc91-1a0d-8292-bf66-9687147703f0/logos/secondary_logo_white.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_white"
+     ]
+    }
+   ],
+   "links": [
+    {
+     "language": "en",
+     "rel": [
+      "clubhouse",
+      "desktop",
+      "team"
+     ],
+     "href": "https://www.espn.com/college-football/team/_/id/2641/texas-tech-red-raiders",
+     "text": "Clubhouse",
+     "shortText": "Clubhouse",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "clubhouse",
+      "mobile",
+      "team"
+     ],
+     "href": "https://www.espn.com/college-football/team/_/id/2641/texas-tech-red-raiders",
+     "text": "Clubhouse",
+     "shortText": "Clubhouse",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "roster",
+      "desktop",
+      "team"
+     ],
+     "href": "https://www.espn.com/college-football/team/roster/_/id/2641",
+     "text": "Roster",
+     "shortText": "Roster",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "roster",
+      "sportscenter",
+      "app",
+      "team"
+     ],
+     "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:23~t:2641&section=roster",
+     "text": "Roster",
+     "shortText": "Roster",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "stats",
+      "desktop",
+      "team"
+     ],
+     "href": "https://www.espn.com/college-football/team/stats/_/id/2641",
+     "text": "Statistics",
+     "shortText": "Statistics",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "stats",
+      "sportscenter",
+      "app",
+      "team"
+     ],
+     "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:23~t:2641&section=stats",
+     "text": "Statistics",
+     "shortText": "Statistics",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "schedule",
+      "desktop",
+      "team"
+     ],
+     "href": "https://www.espn.com/college-football/team/schedule/_/id/2641",
+     "text": "Schedule",
+     "shortText": "Schedule",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "schedule",
+      "sportscenter",
+      "app",
+      "team"
+     ],
+     "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:23~t:2641&section=scores",
+     "text": "Schedule",
+     "shortText": "Schedule",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "tickets",
+      "desktop",
+      "team"
+     ],
+     "href": "https://www.vividseats.com/texas-tech-red-raiders-football-tickets--sports-ncaa-football/performer/1156?wsUser=717",
+     "text": "Tickets",
+     "shortText": "Tickets",
+     "isExternal": true,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "awards",
+      "desktop",
+      "team"
+     ],
+     "href": "https://www.espn.com/college-football/awards/_/team/2641",
+     "text": "Awards",
+     "shortText": "Awards",
+     "isExternal": false,
+     "isPremium": false
+    }
+   ],
+   "groups": {},
+   "college": {},
+   "coaches": {},
+   "venue": {
+    "id": "3784",
+    "fullName": "Galaxy Stadium",
+    "address": {
+     "city": "Lubbock",
+     "state": "TX",
+     "zipCode": "79407",
+     "country": "USA"
+    },
+    "grass": false,
+    "indoor": false,
+    "images": [
+     {
+      "href": "https://a.espncdn.com/i/venues/college-football/day/3784.jpg",
+      "width": 2000,
+      "height": 1125,
+      "rel": [
+       "full",
+       "day"
+      ]
+     },
+     {
+      "href": "https://a.espncdn.com/i/venues/college-football/day/interior/3784.jpg",
+      "width": 2000,
+      "height": 1125,
+      "rel": [
+       "full",
+       "day",
+       "interior"
+      ]
+     }
+    ]
+   },
+   "record": {},
+   "againstTheSpreadRecords": {},
+   "ranks": {},
+   "franchise": {}
+  },
+  "collegeAthlete": {
+   "id": "3139477"
+  },
+  "headshot": {
+   "href": "https://a.espncdn.com/i/headshots/nfl/players/full/3139477.png",
+   "alt": "Patrick Mahomes"
+  },
+  "position": {
+   "id": "8",
+   "name": "Quarterback",
+   "displayName": "Quarterback",
+   "abbreviation": "QB",
+   "leaf": true,
+   "parent": {
+    "leaf": false
+   },
+   "slug": "quarterback"
+  },
+  "team": {
+   "id": "12",
+   "uid": "s:20~l:28~t:12",
+   "guid": "f68f2343-8ceb-7a02-740d-af6338be21d2",
+   "slug": "kansas-city-chiefs",
+   "location": "Kansas City",
+   "name": "Chiefs",
+   "nickname": "Chiefs",
+   "abbreviation": "KC",
+   "displayName": "Kansas City Chiefs",
+   "shortDisplayName": "Chiefs",
+   "color": "e31837",
+   "alternateColor": "ffb612",
+   "isActive": true,
+   "isAllStar": false,
+   "logos": [
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "default"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/kc.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "dark"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "scoreboard"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/scoreboard/kc.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "scoreboard",
+      "dark"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/f68f2343-8ceb-7a02-740d-af6338be21d2/logos/grayscale.png",
+     "width": 500,
+     "height": 500,
+     "rel": [
+      "full",
+      "grayscale"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/f68f2343-8ceb-7a02-740d-af6338be21d2/logos/primary_logo_on_white_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_on_white_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/f68f2343-8ceb-7a02-740d-af6338be21d2/logos/primary_logo_on_black_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_on_black_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/f68f2343-8ceb-7a02-740d-af6338be21d2/logos/primary_logo_on_primary_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_on_primary_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/f68f2343-8ceb-7a02-740d-af6338be21d2/logos/primary_logo_on_secondary_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_on_secondary_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/f68f2343-8ceb-7a02-740d-af6338be21d2/logos/primary_logo_black.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_black"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/f68f2343-8ceb-7a02-740d-af6338be21d2/logos/primary_logo_white.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "primary_logo_white"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/f68f2343-8ceb-7a02-740d-af6338be21d2/logos/secondary_logo_on_white_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_on_white_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/f68f2343-8ceb-7a02-740d-af6338be21d2/logos/secondary_logo_on_black_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_on_black_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/f68f2343-8ceb-7a02-740d-af6338be21d2/logos/secondary_logo_on_primary_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_on_primary_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/f68f2343-8ceb-7a02-740d-af6338be21d2/logos/secondary_logo_on_secondary_color.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_on_secondary_color"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/f68f2343-8ceb-7a02-740d-af6338be21d2/logos/secondary_logo_black.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_black"
+     ]
+    },
+    {
+     "href": "https://a.espncdn.com/guid/f68f2343-8ceb-7a02-740d-af6338be21d2/logos/secondary_logo_white.png",
+     "width": 4096,
+     "height": 4096,
+     "rel": [
+      "full",
+      "secondary_logo_white"
+     ]
+    }
+   ],
+   "links": [
+    {
+     "language": "en",
+     "rel": [
+      "clubhouse",
+      "desktop",
+      "team"
+     ],
+     "href": "https://www.espn.com/nfl/team/_/name/kc/kansas-city-chiefs",
+     "text": "Clubhouse",
+     "shortText": "Clubhouse",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "roster",
+      "desktop",
+      "team"
+     ],
+     "href": "https://www.espn.com/nfl/team/roster/_/name/kc/kansas-city-chiefs",
+     "text": "Roster",
+     "shortText": "Roster",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "roster",
+      "sportscenter",
+      "app",
+      "team"
+     ],
+     "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~t:12&section=roster",
+     "text": "Roster",
+     "shortText": "Roster",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "stats",
+      "desktop",
+      "team"
+     ],
+     "href": "https://www.espn.com/nfl/team/stats/_/name/kc/kansas-city-chiefs",
+     "text": "Statistics",
+     "shortText": "Statistics",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "stats",
+      "sportscenter",
+      "app",
+      "team"
+     ],
+     "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~t:12&section=stats",
+     "text": "Statistics",
+     "shortText": "Statistics",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "schedule",
+      "desktop",
+      "team"
+     ],
+     "href": "https://www.espn.com/nfl/team/schedule/_/name/kc",
+     "text": "Schedule",
+     "shortText": "Schedule",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "schedule",
+      "sportscenter",
+      "app",
+      "team"
+     ],
+     "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~t:12&section=scores",
+     "text": "Schedule",
+     "shortText": "Schedule",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "photos",
+      "desktop",
+      "team"
+     ],
+     "href": "https://www.espn.com/nfl/team/photos/_/name/kc",
+     "text": "photos",
+     "shortText": "photos",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "tickets",
+      "desktop",
+      "team"
+     ],
+     "href": "https://www.vividseats.com/kansas-city-chiefs-tickets--sports-nfl-football/performer/427?wsUser=717",
+     "text": "Tickets",
+     "shortText": "Tickets",
+     "isExternal": true,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "draftpicks",
+      "desktop",
+      "team"
+     ],
+     "href": "https://www.espn.com/nfl/draft/teams/_/name/kc/kansas-city-chiefs",
+     "text": "Draft Picks",
+     "shortText": "Draft Picks",
+     "isExternal": false,
+     "isPremium": true
+    },
+    {
+     "language": "en",
+     "rel": [
+      "transactions",
+      "desktop",
+      "team"
+     ],
+     "href": "https://www.espn.com/nfl/team/transactions/_/name/kc",
+     "text": "Transactions",
+     "shortText": "Transactions",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "injuries",
+      "desktop",
+      "team"
+     ],
+     "href": "https://www.espn.com/nfl/team/injuries/_/name/kc",
+     "text": "Injuries",
+     "shortText": "Injuries",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "depthchart",
+      "desktop",
+      "team"
+     ],
+     "href": "https://www.espn.com/nfl/team/depth/_/name/kc",
+     "text": "Depth Chart",
+     "shortText": "Depth Chart",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "depthchart",
+      "sportscenter",
+      "app",
+      "team"
+     ],
+     "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~t:12&section=depthchart",
+     "text": "Depth Chart",
+     "shortText": "Depth Chart",
+     "isExternal": false,
+     "isPremium": false
+    }
+   ],
+   "groups": {
+    "uid": "s:20~l:28~g:6",
+    "id": "6",
+    "name": "AFC West",
+    "abbreviation": "WEST",
+    "slug": "afc-west",
+    "season": {
+     "year": 2026,
+     "startDate": "2026-08-06T07:00:00.000+00:00",
+     "endDate": "2027-02-16T07:59:00.000+00:00",
+     "type": {
+      "id": "2",
+      "type": 2,
+      "name": "Regular Season",
+      "abbreviation": "reg",
+      "slug": "regular-season",
+      "startDate": "2026-09-06T07:00:00.000+00:00",
+      "endDate": "2027-01-13T07:59:00.000+00:00",
+      "hasGroups": false,
+      "hasStandings": true,
+      "hasLegs": false,
+      "week": {
+       "number": 8,
+       "startDate": "2026-10-28T07:00:00.000+00:00",
+       "endDate": "2026-11-04T07:59:00.000+00:00",
+       "text": "Week 8",
+       "qbr": {},
+       "talentpicks": {}
+      },
+      "weeks": {},
+      "year": 2026
+     },
+     "types": {
+      "count": 4,
+      "pageIndex": 1,
+      "pageSize": 4,
+      "pageCount": 1,
+      "items": [
+       {
+        "id": "1",
+        "type": 1,
+        "name": "Preseason",
+        "abbreviation": "pre",
+        "slug": "preseason",
+        "startDate": "2026-08-06T07:00:00.000+00:00",
+        "endDate": "2026-09-06T06:59:00.000+00:00",
+        "hasGroups": false,
+        "hasStandings": true,
+        "hasLegs": false,
+        "weeks": {},
+        "year": 2026
+       },
+       {
+        "id": "2",
+        "type": 2,
+        "name": "Regular Season",
+        "abbreviation": "reg",
+        "slug": "regular-season",
+        "startDate": "2026-09-06T07:00:00.000+00:00",
+        "endDate": "2027-01-13T07:59:00.000+00:00",
+        "hasGroups": false,
+        "hasStandings": true,
+        "hasLegs": false,
+        "week": {
+         "number": 8,
+         "startDate": "2026-10-28T07:00:00.000+00:00",
+         "endDate": "2026-11-04T07:59:00.000+00:00",
+         "text": "Week 8",
+         "qbr": {},
+         "talentpicks": {}
+        },
+        "weeks": {},
+        "year": 2026
+       },
+       {
+        "id": "3",
+        "type": 3,
+        "name": "Postseason",
+        "abbreviation": "post",
+        "slug": "post-season",
+        "startDate": "2027-01-13T08:00:00.000+00:00",
+        "endDate": "2027-02-16T07:59:00.000+00:00",
+        "hasGroups": false,
+        "hasStandings": false,
+        "hasLegs": false,
+        "weeks": {},
+        "year": 2026
+       },
+       {
+        "id": "4",
+        "type": 4,
+        "name": "Off Season",
+        "abbreviation": "off",
+        "slug": "off-season",
+        "startDate": "2027-02-16T08:00:00.000+00:00",
+        "endDate": "2027-08-01T06:59:00.000+00:00",
+        "hasGroups": false,
+        "hasStandings": false,
+        "hasLegs": false,
+        "weeks": {},
+        "year": 2026
+       }
+      ]
+     },
+     "displayName": "2026"
+    },
+    "parent": {
+     "uid": "s:20~l:28~g:8",
+     "id": "8",
+     "name": "American Football Conference",
+     "abbreviation": "AFC",
+     "slug": "american-football-conference",
+     "season": {},
+     "parent": {},
+     "standings": {},
+     "isConference": true,
+     "teams": {}
+    },
+    "standings": {},
+    "isConference": false,
+    "teams": {}
+   },
+   "coaches": {},
+   "venue": {
+    "id": "3622",
+    "fullName": "Arrowhead Stadium",
+    "address": {
+     "city": "Kansas City",
+     "state": "MO",
+     "zipCode": "64129",
+     "country": "USA"
+    },
+    "grass": true,
+    "indoor": false,
+    "images": [
+     {
+      "href": "https://a.espncdn.com/i/venues/nfl/day/3622.jpg",
+      "width": 2000,
+      "height": 1125,
+      "rel": [
+       "full",
+       "day"
+      ]
+     },
+     {
+      "href": "https://a.espncdn.com/i/venues/nfl/day/interior/3622.jpg",
+      "width": 2000,
+      "height": 1125,
+      "rel": [
+       "full",
+       "day",
+       "interior"
+      ]
+     }
+    ]
+   },
+   "record": {},
+   "athletes": {},
+   "againstTheSpreadRecords": {},
+   "ranks": {},
+   "franchise": {
+    "id": "12",
+    "uid": "s:20~l:28~f:12",
+    "slug": "kansas-city-chiefs",
+    "abbreviation": "KC",
+    "displayName": "Kansas City Chiefs",
+    "location": "Kansas City",
+    "name": "Chiefs",
+    "nickname": "Chiefs",
+    "shortDisplayName": "Chiefs"
+   }
+  },
+  "active": true,
+  "status": {
+   "id": "1",
+   "name": "Active",
+   "type": "active",
+   "abbreviation": "Active"
+  },
+  "statsSummary": {
+   "displayName": "2026 regular season stats",
+   "statistics": [
+    {
+     "name": "passingYards",
+     "displayName": "Passing Yards",
+     "shortDisplayName": "Pass Yards",
+     "description": "The total passing yards.",
+     "abbreviation": "YDS",
+     "value": 1795.0,
+     "displayValue": "1,795",
+     "rank": 13,
+     "rankDisplayValue": "13th"
+    },
+    {
+     "name": "passingTouchdowns",
+     "displayName": "Passing Touchdowns",
+     "shortDisplayName": "Touchdowns",
+     "description": "The total number of passing touchdowns.",
+     "abbreviation": "TD",
+     "value": 12.0,
+     "displayValue": "12",
+     "rank": 13,
+     "rankDisplayValue": "Tied-13th"
+    },
+    {
+     "name": "interceptions",
+     "displayName": "Interceptions",
+     "shortDisplayName": "INT",
+     "description": "The number of passes thrown that were intercepted by the opposing team.",
+     "abbreviation": "INT",
+     "value": 4.0,
+     "displayValue": "4",
+     "rank": 11,
+     "rankDisplayValue": "Tied-11th"
+    },
+    {
+     "name": "adjQBR",
+     "displayName": "Adjusted QBR",
+     "shortDisplayName": "QBR",
+     "description": "Adjusted Quarterback Rating.",
+     "abbreviation": "QBR",
+     "value": 67.66,
+     "displayValue": "67.7",
+     "rank": 8,
+     "rankDisplayValue": "8th"
+    }
+   ]
+  },
+  "displayBirthPlace": "Whitehouse, TX",
+  "displayHeight": "6' 2\"",
+  "displayWeight": "225 lbs",
+  "displayDOB": "17/9/1995",
+  "age": 31,
+  "displayJersey": "#15",
+  "displayExperience": "10th Season",
+  "displayDraft": "2017: Rd 1, Pk 10 (KC)"
+ },
+ "season": {
+  "year": 2026,
+  "startDate": "2026-08-06T07:00:00.000+00:00",
+  "endDate": "2027-02-16T07:59:00.000+00:00",
+  "type": {
+   "id": "2",
+   "type": 2,
+   "name": "Regular Season",
+   "abbreviation": "reg",
+   "slug": "regular-season",
+   "startDate": "2026-09-06T07:00:00.000+00:00",
+   "endDate": "2027-01-13T07:59:00.000+00:00",
+   "hasGroups": false,
+   "hasStandings": true,
+   "hasLegs": false,
+   "week": {
+    "number": 8,
+    "startDate": "2026-10-28T07:00:00.000+00:00",
+    "endDate": "2026-11-04T07:59:00.000+00:00",
+    "text": "Week 8",
+    "qbr": {},
+    "talentpicks": {}
+   },
+   "weeks": {},
+   "year": 2026
+  },
+  "types": {
+   "count": 4,
+   "pageIndex": 1,
+   "pageSize": 4,
+   "pageCount": 1,
+   "items": [
+    {
+     "id": "1",
+     "type": 1,
+     "name": "Preseason",
+     "abbreviation": "pre",
+     "slug": "preseason",
+     "startDate": "2026-08-06T07:00:00.000+00:00",
+     "endDate": "2026-09-06T06:59:00.000+00:00",
+     "hasGroups": false,
+     "hasStandings": true,
+     "hasLegs": false,
+     "weeks": {},
+     "year": 2026
+    },
+    {
+     "id": "2",
+     "type": 2,
+     "name": "Regular Season",
+     "abbreviation": "reg",
+     "slug": "regular-season",
+     "startDate": "2026-09-06T07:00:00.000+00:00",
+     "endDate": "2027-01-13T07:59:00.000+00:00",
+     "hasGroups": false,
+     "hasStandings": true,
+     "hasLegs": false,
+     "week": {
+      "number": 8,
+      "startDate": "2026-10-28T07:00:00.000+00:00",
+      "endDate": "2026-11-04T07:59:00.000+00:00",
+      "text": "Week 8",
+      "qbr": {},
+      "talentpicks": {}
+     },
+     "weeks": {},
+     "year": 2026
+    },
+    {
+     "id": "3",
+     "type": 3,
+     "name": "Postseason",
+     "abbreviation": "post",
+     "slug": "post-season",
+     "startDate": "2027-01-13T08:00:00.000+00:00",
+     "endDate": "2027-02-16T07:59:00.000+00:00",
+     "hasGroups": false,
+     "hasStandings": false,
+     "hasLegs": false,
+     "weeks": {},
+     "year": 2026
+    },
+    {
+     "id": "4",
+     "type": 4,
+     "name": "Off Season",
+     "abbreviation": "off",
+     "slug": "off-season",
+     "startDate": "2027-02-16T08:00:00.000+00:00",
+     "endDate": "2027-08-01T06:59:00.000+00:00",
+     "hasGroups": false,
+     "hasStandings": false,
+     "hasLegs": false,
+     "weeks": {},
+     "year": 2026
+    }
+   ]
+  },
+  "displayName": "2026"
+ },
+ "league": {
+  "id": "28",
+  "uid": "s:20~l:28",
+  "name": "National Football League",
+  "abbreviation": "NFL",
+  "slug": "nfl",
+  "logos": [
+   {
+    "href": "https://a.espncdn.com/i/teamlogos/leagues/500/nfl.png",
+    "width": 500,
+    "height": 500,
+    "rel": [
+     "full",
+     "default"
+    ]
+   },
+   {
+    "href": "https://a.espncdn.com/i/teamlogos/leagues/500-dark/nfl.png",
+    "width": 500,
+    "height": 500,
+    "rel": [
+     "full",
+     "dark"
+    ]
+   }
+  ],
+  "shortName": "NFL"
+ },
+ "playerSwitcher": {
+  "team": {
+   "id": "12",
+   "uid": "s:20~l:28~t:12",
+   "slug": "kansas-city-chiefs",
+   "location": "Kansas City",
+   "alternateLocation": "Kansas City",
+   "name": "Chiefs",
+   "abbreviation": "KC",
+   "displayName": "Kansas City Chiefs",
+   "shortDisplayName": "Chiefs",
+   "color": "e31837",
+   "alternateColor": "ffb612",
+   "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png",
+   "links": [
+    {
+     "language": "en",
+     "rel": [
+      "clubhouse",
+      "desktop",
+      "team"
+     ],
+     "href": "https://www.espn.com/nfl/team/_/name/kc/kansas-city-chiefs",
+     "text": "Clubhouse",
+     "shortText": "Clubhouse",
+     "isExternal": false,
+     "isPremium": false
+    }
+   ]
+  },
+  "athletes": [
+   {
+    "id": "4362887",
+    "uid": "s:20~l:28~a:4362887",
+    "guid": "7e9fbd60-951e-2d9a-8d8c-b3f1ab6c4a4d",
+    "displayName": "Justin Fields",
+    "jersey": "6",
+    "links": [
+     {
+      "language": "en",
+      "rel": [
+       "playercard",
+       "desktop",
+       "athlete"
+      ],
+      "href": "https://www.espn.com/nfl/player/_/id/4362887/justin-fields",
+      "text": "Player Card",
+      "shortText": "Player Card",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "stats",
+       "desktop",
+       "athlete"
+      ],
+      "href": "https://www.espn.com/nfl/player/stats/_/id/4362887/justin-fields",
+      "text": "Stats",
+      "shortText": "Stats",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "stats",
+       "sportscenter",
+       "app",
+       "athlete"
+      ],
+      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~a:4362887&section=stats",
+      "text": "Stats",
+      "shortText": "Stats",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "splits",
+       "desktop",
+       "athlete"
+      ],
+      "href": "https://www.espn.com/nfl/player/splits/_/id/4362887/justin-fields",
+      "text": "Splits",
+      "shortText": "Splits",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "gamelog",
+       "desktop",
+       "athlete"
+      ],
+      "href": "https://www.espn.com/nfl/player/gamelog/_/id/4362887/justin-fields",
+      "text": "Game Log",
+      "shortText": "Game Log",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "gamelog",
+       "sportscenter",
+       "app",
+       "athlete"
+      ],
+      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~a:4362887&section=gamelog",
+      "text": "Game Log",
+      "shortText": "Game Log",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "news",
+       "desktop",
+       "athlete"
+      ],
+      "href": "https://www.espn.com/nfl/player/news/_/id/4362887/justin-fields",
+      "text": "News",
+      "shortText": "News",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "news",
+       "sportscenter",
+       "app",
+       "athlete"
+      ],
+      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~a:4362887&section=news",
+      "text": "News",
+      "shortText": "News",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "bio",
+       "desktop",
+       "athlete"
+      ],
+      "href": "https://www.espn.com/nfl/player/bio/_/id/4362887/justin-fields",
+      "text": "Bio",
+      "shortText": "Bio",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "bio",
+       "sportscenter",
+       "app",
+       "athlete"
+      ],
+      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~a:4362887&section=bio",
+      "text": "Bio",
+      "shortText": "Bio",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "overview",
+       "desktop",
+       "athlete"
+      ],
+      "href": "https://www.espn.com/nfl/player/_/id/4362887/justin-fields",
+      "text": "Overview",
+      "shortText": "Overview",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "overview",
+       "sportscenter",
+       "app",
+       "athlete"
+      ],
+      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~a:4362887",
+      "text": "Overview",
+      "shortText": "Overview",
+      "isExternal": false,
+      "isPremium": false
+     }
+    ],
+    "headshot": {
+     "href": "https://a.espncdn.com/i/headshots/nfl/players/full/4362887.png",
+     "alt": "Justin Fields"
+    },
+    "position": {
+     "id": "8",
+     "name": "Quarterback",
+     "displayName": "Quarterback",
+     "abbreviation": "QB",
+     "leaf": true,
+     "parent": {
+      "leaf": false
+     },
+     "slug": "quarterback"
+    },
+    "displayJersey": "#6"
+   },
+   {
+    "id": "3139477",
+    "uid": "s:20~l:28~a:3139477",
+    "guid": "37d87523-280a-9d4a-0adb-22cfc6d3619c",
+    "displayName": "Patrick Mahomes",
+    "jersey": "15",
+    "links": [
+     {
+      "language": "en",
+      "rel": [
+       "playercard",
+       "desktop",
+       "athlete"
+      ],
+      "href": "https://www.espn.com/nfl/player/_/id/3139477/patrick-mahomes",
+      "text": "Player Card",
+      "shortText": "Player Card",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "stats",
+       "desktop",
+       "athlete"
+      ],
+      "href": "https://www.espn.com/nfl/player/stats/_/id/3139477/patrick-mahomes",
+      "text": "Stats",
+      "shortText": "Stats",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "stats",
+       "sportscenter",
+       "app",
+       "athlete"
+      ],
+      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~a:3139477&section=stats",
+      "text": "Stats",
+      "shortText": "Stats",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "splits",
+       "desktop",
+       "athlete"
+      ],
+      "href": "https://www.espn.com/nfl/player/splits/_/id/3139477/patrick-mahomes",
+      "text": "Splits",
+      "shortText": "Splits",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "gamelog",
+       "desktop",
+       "athlete"
+      ],
+      "href": "https://www.espn.com/nfl/player/gamelog/_/id/3139477/patrick-mahomes",
+      "text": "Game Log",
+      "shortText": "Game Log",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "gamelog",
+       "sportscenter",
+       "app",
+       "athlete"
+      ],
+      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~a:3139477&section=gamelog",
+      "text": "Game Log",
+      "shortText": "Game Log",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "news",
+       "desktop",
+       "athlete"
+      ],
+      "href": "https://www.espn.com/nfl/player/news/_/id/3139477/patrick-mahomes",
+      "text": "News",
+      "shortText": "News",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "news",
+       "sportscenter",
+       "app",
+       "athlete"
+      ],
+      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~a:3139477&section=news",
+      "text": "News",
+      "shortText": "News",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "bio",
+       "desktop",
+       "athlete"
+      ],
+      "href": "https://www.espn.com/nfl/player/bio/_/id/3139477/patrick-mahomes",
+      "text": "Bio",
+      "shortText": "Bio",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "bio",
+       "sportscenter",
+       "app",
+       "athlete"
+      ],
+      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~a:3139477&section=bio",
+      "text": "Bio",
+      "shortText": "Bio",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "overview",
+       "desktop",
+       "athlete"
+      ],
+      "href": "https://www.espn.com/nfl/player/_/id/3139477/patrick-mahomes",
+      "text": "Overview",
+      "shortText": "Overview",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "overview",
+       "sportscenter",
+       "app",
+       "athlete"
+      ],
+      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~a:3139477",
+      "text": "Overview",
+      "shortText": "Overview",
+      "isExternal": false,
+      "isPremium": false
+     }
+    ],
+    "headshot": {
+     "href": "https://a.espncdn.com/i/headshots/nfl/players/full/3139477.png",
+     "alt": "Patrick Mahomes"
+    },
+    "position": {
+     "id": "8",
+     "name": "Quarterback",
+     "displayName": "Quarterback",
+     "abbreviation": "QB",
+     "leaf": true,
+     "parent": {
+      "leaf": false
+     },
+     "slug": "quarterback"
+    },
+    "displayJersey": "#15"
+   },
+   {
+    "id": "4567747",
+    "uid": "s:20~l:28~a:4567747",
+    "guid": "c3970aed-2e7b-34e0-bf3e-04af89ce8add",
+    "displayName": "Garrett Nussmeier",
+    "jersey": "19",
+    "links": [
+     {
+      "language": "en",
+      "rel": [
+       "playercard",
+       "desktop",
+       "athlete"
+      ],
+      "href": "https://www.espn.com/nfl/player/_/id/4567747/garrett-nussmeier",
+      "text": "Player Card",
+      "shortText": "Player Card",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "stats",
+       "desktop",
+       "athlete"
+      ],
+      "href": "https://www.espn.com/nfl/player/stats/_/id/4567747/garrett-nussmeier",
+      "text": "Stats",
+      "shortText": "Stats",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "stats",
+       "sportscenter",
+       "app",
+       "athlete"
+      ],
+      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~a:4567747&section=stats",
+      "text": "Stats",
+      "shortText": "Stats",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "splits",
+       "desktop",
+       "athlete"
+      ],
+      "href": "https://www.espn.com/nfl/player/splits/_/id/4567747/garrett-nussmeier",
+      "text": "Splits",
+      "shortText": "Splits",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "gamelog",
+       "desktop",
+       "athlete"
+      ],
+      "href": "https://www.espn.com/nfl/player/gamelog/_/id/4567747/garrett-nussmeier",
+      "text": "Game Log",
+      "shortText": "Game Log",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "gamelog",
+       "sportscenter",
+       "app",
+       "athlete"
+      ],
+      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~a:4567747&section=gamelog",
+      "text": "Game Log",
+      "shortText": "Game Log",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "news",
+       "desktop",
+       "athlete"
+      ],
+      "href": "https://www.espn.com/nfl/player/news/_/id/4567747/garrett-nussmeier",
+      "text": "News",
+      "shortText": "News",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "news",
+       "sportscenter",
+       "app",
+       "athlete"
+      ],
+      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~a:4567747&section=news",
+      "text": "News",
+      "shortText": "News",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "bio",
+       "desktop",
+       "athlete"
+      ],
+      "href": "https://www.espn.com/nfl/player/bio/_/id/4567747/garrett-nussmeier",
+      "text": "Bio",
+      "shortText": "Bio",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "bio",
+       "sportscenter",
+       "app",
+       "athlete"
+      ],
+      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~a:4567747&section=bio",
+      "text": "Bio",
+      "shortText": "Bio",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "overview",
+       "desktop",
+       "athlete"
+      ],
+      "href": "https://www.espn.com/nfl/player/_/id/4567747/garrett-nussmeier",
+      "text": "Overview",
+      "shortText": "Overview",
+      "isExternal": false,
+      "isPremium": false
+     },
+     {
+      "language": "en",
+      "rel": [
+       "overview",
+       "sportscenter",
+       "app",
+       "athlete"
+      ],
+      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:20~l:28~a:4567747",
+      "text": "Overview",
+      "shortText": "Overview",
+      "isExternal": false,
+      "isPremium": false
+     }
+    ],
+    "headshot": {
+     "href": "https://a.espncdn.com/i/headshots/nfl/players/full/4567747.png",
+     "alt": "Garrett Nussmeier"
+    },
+    "position": {
+     "id": "8",
+     "name": "Quarterback",
+     "displayName": "Quarterback",
+     "abbreviation": "QB",
+     "leaf": true,
+     "parent": {
+      "leaf": false
+     },
+     "slug": "quarterback"
+    },
+    "displayJersey": "#19"
+   }
+  ],
+  "links": [
+   {
+    "language": "en",
+    "rel": [
+     "roster",
+     "desktop",
+     "team"
+    ],
+    "href": "https://www.espn.com/nfl/team/roster/_/name/kc/kansas-city-chiefs",
+    "text": "Roster",
+    "shortText": "Roster",
+    "isExternal": false,
+    "isPremium": false
+   }
+  ],
+  "filters": [
+   {
+    "displayName": "Team",
+    "name": "team",
+    "value": "12",
+    "options": [
+     {
+      "value": "22",
+      "displayValue": "Arizona Cardinals"
+     },
+     {
+      "value": "1",
+      "displayValue": "Atlanta Falcons"
+     },
+     {
+      "value": "33",
+      "displayValue": "Baltimore Ravens"
+     },
+     {
+      "value": "2",
+      "displayValue": "Buffalo Bills"
+     },
+     {
+      "value": "29",
+      "displayValue": "Carolina Panthers"
+     },
+     {
+      "value": "3",
+      "displayValue": "Chicago Bears"
+     },
+     {
+      "value": "4",
+      "displayValue": "Cincinnati Bengals"
+     },
+     {
+      "value": "5",
+      "displayValue": "Cleveland Browns"
+     },
+     {
+      "value": "6",
+      "displayValue": "Dallas Cowboys"
+     },
+     {
+      "value": "7",
+      "displayValue": "Denver Broncos"
+     },
+     {
+      "value": "8",
+      "displayValue": "Detroit Lions"
+     },
+     {
+      "value": "9",
+      "displayValue": "Green Bay Packers"
+     },
+     {
+      "value": "34",
+      "displayValue": "Houston Texans"
+     },
+     {
+      "value": "11",
+      "displayValue": "Indianapolis Colts"
+     },
+     {
+      "value": "30",
+      "displayValue": "Jacksonville Jaguars"
+     },
+     {
+      "value": "12",
+      "displayValue": "Kansas City Chiefs"
+     },
+     {
+      "value": "13",
+      "displayValue": "Las Vegas Raiders"
+     },
+     {
+      "value": "24",
+      "displayValue": "Los Angeles Chargers"
+     },
+     {
+      "value": "14",
+      "displayValue": "Los Angeles Rams"
+     },
+     {
+      "value": "15",
+      "displayValue": "Miami Dolphins"
+     },
+     {
+      "value": "16",
+      "displayValue": "Minnesota Vikings"
+     },
+     {
+      "value": "17",
+      "displayValue": "New England Patriots"
+     },
+     {
+      "value": "18",
+      "displayValue": "New Orleans Saints"
+     },
+     {
+      "value": "19",
+      "displayValue": "New York Giants"
+     },
+     {
+      "value": "20",
+      "displayValue": "New York Jets"
+     },
+     {
+      "value": "21",
+      "displayValue": "Philadelphia Eagles"
+     },
+     {
+      "value": "23",
+      "displayValue": "Pittsburgh Steelers"
+     },
+     {
+      "value": "25",
+      "displayValue": "San Francisco 49ers"
+     },
+     {
+      "value": "26",
+      "displayValue": "Seattle Seahawks"
+     },
+     {
+      "value": "27",
+      "displayValue": "Tampa Bay Buccaneers"
+     },
+     {
+      "value": "10",
+      "displayValue": "Tennessee Titans"
+     },
+     {
+      "value": "28",
+      "displayValue": "Washington Commanders"
+     }
+    ]
+   },
+   {
+    "displayName": "Position",
+    "name": "position",
+    "value": "8",
+    "options": [
+     {
+      "value": "8",
+      "displayValue": "Quarterback"
+     },
+     {
+      "value": "1",
+      "displayValue": "Wide Receiver"
+     },
+     {
+      "value": "9",
+      "displayValue": "Running Back"
+     },
+     {
+      "value": "7",
+      "displayValue": "Tight End"
+     },
+     {
+      "value": "22",
+      "displayValue": "Place Kicker"
+     },
+     {
+      "value": "23",
+      "displayValue": "Punter"
+     },
+     {
+      "value": "35",
+      "displayValue": "Defensive Back"
+     },
+     {
+      "value": "30",
+      "displayValue": "Linebacker"
+     },
+     {
+      "value": "37",
+      "displayValue": "Defensive Lineman"
+     },
+     {
+      "value": "45",
+      "displayValue": "Offensive Lineman"
+     },
+     {
+      "value": "72",
+      "displayValue": "Special Teams"
+     }
+    ]
+   }
+  ]
+ },
+ "quicklinks": [
+  {
+   "text": "[team] Quick Links",
+   "title": "Player Quick Links - Team - Football - EN",
+   "items": [
+    {
+     "title": "Player Quick Link - Stats (Pro) - Shared - EN",
+     "links": [
+      {
+       "href": "http://www.espn.com/[leagueSlug]/team/stats/_/name/[abbrev]",
+       "text": "Stats",
+       "shortText": "Stats",
+       "isExternal": false,
+       "isPremium": false,
+       "attributes": {
+        "icon": "stats"
+       }
+      }
+     ]
+    },
+    {
+     "title": "Player Quick Link - Schedule (Pro) - Shared - EN",
+     "links": [
+      {
+       "href": "https://www.espn.com/[leagueSlug]/team/schedule/_/name/[abbrev]",
+       "text": "Schedule",
+       "shortText": "Schedule",
+       "isExternal": false,
+       "isPremium": false,
+       "attributes": {
+        "icon": "calendar"
+       }
+      }
+     ]
+    },
+    {
+     "title": "Player Quick Link - Depth Chart (Pro) - Shared - EN",
+     "links": [
+      {
+       "href": "http://www.espn.com/[leagueSlug]/team/depth/_/name/[abbrev]",
+       "text": "Depth Chart",
+       "shortText": "Depth Chart",
+       "isExternal": false,
+       "isPremium": false,
+       "attributes": {
+        "icon": "list__stars_solid"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "text": "[leagueAbbrev] Quick Links",
+   "title": "Player Quick Links - League - Football - EN",
+   "items": [
+    {
+     "title": "Player Quick Link - Scores - Shared - EN",
+     "links": [
+      {
+       "href": "https://www.espn.com/[leagueSlug]/scoreboard",
+       "text": "Scores",
+       "shortText": "Scores",
+       "isExternal": false,
+       "isPremium": false,
+       "attributes": {
+        "icon": "scores__outline"
+       }
+      }
+     ]
+    },
+    {
+     "title": "Player Quick Link - Standings - Shared - EN",
+     "links": [
+      {
+       "href": "https://www.espn.com/[leagueSlug]/standings",
+       "text": "Standings",
+       "shortText": "Standings",
+       "isExternal": false,
+       "isPremium": false,
+       "attributes": {
+        "icon": "list__ordered_solid"
+       }
+      }
+     ]
+    },
+    {
+     "title": "Player Quick Link - Schedule - Shared - EN",
+     "links": [
+      {
+       "href": "https://www.espn.com/[leagueSlug]/schedule",
+       "text": "Schedule",
+       "shortText": "Schedule",
+       "isExternal": false,
+       "isPremium": false,
+       "attributes": {
+        "icon": "calendar"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "links": [
+  {
+   "language": "en",
+   "rel": [
+    "overview",
+    "desktop",
+    "athlete"
+   ],
+   "href": "https://www.espn.com/nfl/player/_/id/3139477/patrick-mahomes",
+   "text": "Overview",
+   "shortText": "Overview",
+   "isExternal": false,
+   "isPremium": false
+  },
+  {
+   "language": "en",
+   "rel": [
+    "news",
+    "desktop",
+    "athlete"
+   ],
+   "href": "https://www.espn.com/nfl/player/news/_/id/3139477/patrick-mahomes",
+   "text": "News",
+   "shortText": "News",
+   "isExternal": false,
+   "isPremium": false
+  },
+  {
+   "language": "en",
+   "rel": [
+    "stats",
+    "desktop",
+    "athlete"
+   ],
+   "href": "https://www.espn.com/nfl/player/stats/_/id/3139477/patrick-mahomes",
+   "text": "Stats",
+   "shortText": "Stats",
+   "isExternal": false,
+   "isPremium": false
+  },
+  {
+   "language": "en",
+   "rel": [
+    "bio",
+    "desktop",
+    "athlete"
+   ],
+   "href": "https://www.espn.com/nfl/player/bio/_/id/3139477/patrick-mahomes",
+   "text": "Bio",
+   "shortText": "Bio",
+   "isExternal": false,
+   "isPremium": false
+  },
+  {
+   "language": "en",
+   "rel": [
+    "splits",
+    "desktop",
+    "athlete"
+   ],
+   "href": "https://www.espn.com/nfl/player/splits/_/id/3139477/patrick-mahomes",
+   "text": "Splits",
+   "shortText": "Splits",
+   "isExternal": false,
+   "isPremium": false
+  },
+  {
+   "language": "en",
+   "rel": [
+    "gamelog",
+    "desktop",
+    "athlete"
+   ],
+   "href": "https://www.espn.com/nfl/player/gamelog/_/id/3139477/patrick-mahomes",
+   "text": "Game Log",
+   "shortText": "Game Log",
+   "isExternal": false,
+   "isPremium": false
+  }
+ ],
+ "ticketsInfo": {
+  "tickets": [
+   {
+    "name": "All NFL Tickets",
+    "link": "https://www.vividseats.com/nfl/?wsUser=717"
+   },
+   {
+    "name": "11/8 vs Jets 3,842 tickets left",
+    "link": "https://www.vividseats.com/kansas-city-chiefs-tickets-kansas-city-geha-field-at-arrowhead-stadium-3-4-2026/production/6491109?wsUser=717"
+   },
+   {
+    "name": "11/15 @ Falcons 5,451 tickets left",
+    "link": "https://www.vividseats.com/atlanta-falcons-tickets-atlanta-mercedes-benz-stadium-3-9-2026/production/6487188?wsUser=717"
+   },
+   {
+    "name": "11/22 vs Cardinals 6,074 tickets left",
+    "link": "https://www.vividseats.com/kansas-city-chiefs-tickets-kansas-city-geha-field-at-arrowhead-stadium-3-7-2026/production/6491124?wsUser=717"
+   },
+   {
+    "name": "11/26 @ Bills 6,991 tickets left",
+    "link": "https://www.vividseats.com/buffalo-bills-tickets-orchard-park-highmark-stadium-3-6-2026/production/6488364?wsUser=717"
+   },
+   {
+    "name": "12/3 @ Rams 9,706 tickets left",
+    "link": "https://www.vividseats.com/los-angeles-rams-tickets-inglewood-sofi-stadium-3-7-2026/production/6491638?wsUser=717"
+   },
+   {
+    "name": "12/13 @ Bengals 4,594 tickets left",
+    "link": "https://www.vividseats.com/cincinnati-bengals-tickets-cincinnati-paycor-stadium-3-8-2026/production/6489069?wsUser=717"
+   },
+   {
+    "name": "12/21 vs Patriots 6,889 tickets left",
+    "link": "https://www.vividseats.com/kansas-city-chiefs-tickets-kansas-city-geha-field-at-arrowhead-stadium-3-5-2026/production/6491112?wsUser=717"
+   },
+   {
+    "name": "12/27 vs 49ers 6,379 tickets left",
+    "link": "https://www.vividseats.com/kansas-city-chiefs-tickets-kansas-city-geha-field-at-arrowhead-stadium-3-8-2026/production/6491132?wsUser=717"
+   },
+   {
+    "name": "1/3 @ Chargers 8,650 tickets left",
+    "link": "https://www.vividseats.com/los-angeles-chargers-tickets-inglewood-sofi-stadium-3-2-2026/production/6491352?wsUser=717"
+   },
+   {
+    "name": "1/10 vs Raiders 5,566 tickets left",
+    "link": "https://www.vividseats.com/kansas-city-chiefs-tickets-kansas-city-geha-field-at-arrowhead-stadium-3-2-2026/production/6491105?wsUser=717"
+   }
+  ],
+  "seatSituation": {
+   "opponentTeamName": "Jets",
+   "currentTeamName": "Chiefs",
+   "venueName": "Arrowhead Stadium",
+   "summary": "Tickets as low as $256",
+   "date": "2026-11-08T18:00:00.000+00:00",
+   "dateShort": "11/8",
+   "dateDay": "Sun",
+   "homeAway": "home",
+   "eventLink": "https://www.vividseats.com/kansas-city-chiefs-tickets-kansas-city-geha-field-at-arrowhead-stadium-3-4-2026/production/6491109?wsUser=717",
+   "venueLink": "https://www.vividseats.com/geha-field-at-arrowhead-stadium-tickets/venue/92?wsUser=717",
+   "genericLink": "https://www.vividseats.com?wsUser=717",
+   "teamLink": "https://www.vividseats.com/kansas-city-chiefs-tickets--sports-nfl-football/performer/427?wsUser=717",
+   "neutralSite": false,
+   "timeValid": true
+  }
+ },
+ "standings": {
+  "groups": [
+   {
+    "header": "2026 AFC West Standings",
+    "groups": [
+     {
+      "standings": {
+       "header": "AFC West",
+       "href": "https://www.espn.com/nfl/standings/_/group/6",
+       "entries": [
+        {
+         "id": "7",
+         "uid": "s:20~l:28~t:7",
+         "team": "Denver",
+         "link": "https://www.espn.com/nfl/team/_/name/den/denver-broncos",
+         "stats": [
+          {
+           "name": "differential",
+           "type": "differential",
+           "displayName": "Point Differential",
+           "shortDisplayName": "DIFF",
+           "description": "Point Differential",
+           "abbreviation": "DIFF",
+           "value": 7.0,
+           "displayValue": "+7"
+          },
+          {
+           "name": "gamesBehind",
+           "type": "gamesbehind",
+           "displayName": "Games Back",
+           "shortDisplayName": "GB",
+           "description": "Games Back",
+           "abbreviation": "GB",
+           "value": 0.0,
+           "displayValue": "-"
+          },
+          {
+           "name": "losses",
+           "type": "losses",
+           "displayName": "Losses",
+           "shortDisplayName": "L",
+           "description": "Losses",
+           "abbreviation": "L",
+           "value": 2.0,
+           "displayValue": "2"
+          },
+          {
+           "name": "playoffSeed",
+           "type": "playoffseed",
+           "displayName": "Position",
+           "shortDisplayName": "POS",
+           "description": "Playoff Seed",
+           "abbreviation": "SEED",
+           "value": 2.0,
+           "displayValue": "2"
+          },
+          {
+           "name": "pointDifferential",
+           "type": "pointdifferential",
+           "displayName": "Point Differential",
+           "shortDisplayName": "DIFF",
+           "description": "Point Differential",
+           "abbreviation": "DIFF",
+           "value": 7.0,
+           "displayValue": "+7"
+          },
+          {
+           "name": "pointsAgainst",
+           "type": "pointsagainst",
+           "displayName": "Points Against",
+           "shortDisplayName": "PA",
+           "description": "Total Points Against",
+           "abbreviation": "PA",
+           "value": 165.0,
+           "displayValue": "165"
+          },
+          {
+           "name": "pointsFor",
+           "type": "pointsfor",
+           "displayName": "Points For",
+           "shortDisplayName": "PF",
+           "description": "Total Points For",
+           "abbreviation": "PF",
+           "value": 172.0,
+           "displayValue": "172"
+          },
+          {
+           "name": "streak",
+           "type": "streak",
+           "displayName": "Streak",
+           "shortDisplayName": "STRK",
+           "description": "Current Streak",
+           "abbreviation": "STRK",
+           "value": 4.0,
+           "displayValue": "W4"
+          },
+          {
+           "name": "ties",
+           "type": "ties",
+           "displayName": "Ties",
+           "shortDisplayName": "T",
+           "description": "Ties",
+           "abbreviation": "T",
+           "value": 0.0,
+           "displayValue": "0"
+          },
+          {
+           "name": "winPercent",
+           "type": "winpercent",
+           "displayName": "Win Percentage",
+           "shortDisplayName": "PCT",
+           "description": "Winning Percentage",
+           "abbreviation": "PCT",
+           "value": 0.75,
+           "displayValue": ".750"
+          },
+          {
+           "name": "wins",
+           "type": "wins",
+           "displayName": "Wins",
+           "shortDisplayName": "W",
+           "description": "Wins",
+           "abbreviation": "W",
+           "value": 6.0,
+           "displayValue": "6"
+          },
+          {
+           "name": "divisionLosses",
+           "type": "divisionlosses",
+           "displayName": "Division Losses",
+           "shortDisplayName": "DL",
+           "description": "Division Losses",
+           "abbreviation": "DL",
+           "value": 1.0,
+           "displayValue": "1"
+          },
+          {
+           "name": "divisionRecord",
+           "type": "divisionrecord",
+           "displayName": "Division record",
+           "shortDisplayName": "DIV",
+           "description": "Division Record",
+           "abbreviation": "DIV",
+           "value": 0.0,
+           "displayValue": "2-1"
+          },
+          {
+           "name": "divisionTies",
+           "type": "divisionties",
+           "displayName": "Division Tie ",
+           "shortDisplayName": "DT",
+           "description": "Division Tie ",
+           "abbreviation": "DT",
+           "value": 0.0,
+           "displayValue": "0.000"
+          },
+          {
+           "name": "divisionWins",
+           "type": "divisionwins",
+           "displayName": "Division Wins ",
+           "shortDisplayName": "DW",
+           "description": "Division Winning ",
+           "abbreviation": "DW",
+           "value": 2.0,
+           "displayValue": "2.000"
+          },
+          {
+           "name": "lockedDivRank",
+           "type": "lockeddivrank",
+           "displayName": "Locked Div Rank",
+           "shortDisplayName": "LDR",
+           "description": "Locked Div Rank",
+           "abbreviation": "LDR",
+           "value": 0.0,
+           "displayValue": "0"
+          },
+          {
+           "name": "overall",
+           "type": "total",
+           "abbreviation": "Any",
+           "displayValue": "6-2"
+          },
+          {
+           "name": "Home",
+           "type": "home",
+           "displayName": "Home",
+           "shortDisplayName": "HOME",
+           "description": "Home Record",
+           "displayValue": "4-0"
+          },
+          {
+           "name": "Road",
+           "type": "road",
+           "displayName": "Road",
+           "shortDisplayName": "AWAY",
+           "description": "Away Record",
+           "displayValue": "2-2"
+          },
+          {
+           "name": "vs. Div.",
+           "type": "vsdiv",
+           "displayName": "DIV",
+           "shortDisplayName": "DIV",
+           "description": "Division Record",
+           "displayValue": "2-1"
+          },
+          {
+           "name": "vs. Conf.",
+           "type": "vsconf",
+           "displayName": "CONF",
+           "shortDisplayName": "CONF",
+           "description": "Conference Record",
+           "displayValue": "3-1"
+          }
+         ],
+         "logo": {
+          "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/scoreboard/den.png",
+          "width": 500,
+          "height": 500,
+          "rel": [
+           "full",
+           "scoreboard",
+           "dark"
+          ]
+         }
+        },
+        {
+         "id": "12",
+         "uid": "s:20~l:28~t:12",
+         "team": "Kansas City",
+         "link": "https://www.espn.com/nfl/team/_/name/kc/kansas-city-chiefs",
+         "stats": [
+          {
+           "name": "differential",
+           "type": "differential",
+           "displayName": "Point Differential",
+           "shortDisplayName": "DIFF",
+           "description": "Point Differential",
+           "abbreviation": "DIFF",
+           "value": 36.0,
+           "displayValue": "+36"
+          },
+          {
+           "name": "gamesBehind",
+           "type": "gamesbehind",
+           "displayName": "Games Back",
+           "shortDisplayName": "GB",
+           "description": "Games Back",
+           "abbreviation": "GB",
+           "value": 0.5,
+           "displayValue": "0.5"
+          },
+          {
+           "name": "losses",
+           "type": "losses",
+           "displayName": "Losses",
+           "shortDisplayName": "L",
+           "description": "Losses",
+           "abbreviation": "L",
+           "value": 2.0,
+           "displayValue": "2"
+          },
+          {
+           "name": "playoffSeed",
+           "type": "playoffseed",
+           "displayName": "Position",
+           "shortDisplayName": "POS",
+           "description": "Playoff Seed",
+           "abbreviation": "SEED",
+           "value": 5.0,
+           "displayValue": "5"
+          },
+          {
+           "name": "pointDifferential",
+           "type": "pointdifferential",
+           "displayName": "Point Differential",
+           "shortDisplayName": "DIFF",
+           "description": "Point Differential",
+           "abbreviation": "DIFF",
+           "value": 36.0,
+           "displayValue": "+36"
+          },
+          {
+           "name": "pointsAgainst",
+           "type": "pointsagainst",
+           "displayName": "Points Against",
+           "shortDisplayName": "PA",
+           "description": "Total Points Against",
+           "abbreviation": "PA",
+           "value": 131.0,
+           "displayValue": "131"
+          },
+          {
+           "name": "pointsFor",
+           "type": "pointsfor",
+           "displayName": "Points For",
+           "shortDisplayName": "PF",
+           "description": "Total Points For",
+           "abbreviation": "PF",
+           "value": 167.0,
+           "displayValue": "167"
+          },
+          {
+           "name": "streak",
+           "type": "streak",
+           "displayName": "Streak",
+           "shortDisplayName": "STRK",
+           "description": "Current Streak",
+           "abbreviation": "STRK",
+           "value": -2.0,
+           "displayValue": "L2"
+          },
+          {
+           "name": "ties",
+           "type": "ties",
+           "displayName": "Ties",
+           "shortDisplayName": "T",
+           "description": "Ties",
+           "abbreviation": "T",
+           "value": 0.0,
+           "displayValue": "0"
+          },
+          {
+           "name": "winPercent",
+           "type": "winpercent",
+           "displayName": "Win Percentage",
+           "shortDisplayName": "PCT",
+           "description": "Winning Percentage",
+           "abbreviation": "PCT",
+           "value": 0.71428573,
+           "displayValue": ".714"
+          },
+          {
+           "name": "wins",
+           "type": "wins",
+           "displayName": "Wins",
+           "shortDisplayName": "W",
+           "description": "Wins",
+           "abbreviation": "W",
+           "value": 5.0,
+           "displayValue": "5"
+          },
+          {
+           "name": "divisionLosses",
+           "type": "divisionlosses",
+           "displayName": "Division Losses",
+           "shortDisplayName": "DL",
+           "description": "Division Losses",
+           "abbreviation": "DL",
+           "value": 1.0,
+           "displayValue": "1"
+          },
+          {
+           "name": "divisionRecord",
+           "type": "divisionrecord",
+           "displayName": "Division record",
+           "shortDisplayName": "DIV",
+           "description": "Division Record",
+           "abbreviation": "DIV",
+           "value": 0.0,
+           "displayValue": "3-1"
+          },
+          {
+           "name": "divisionTies",
+           "type": "divisionties",
+           "displayName": "Division Tie ",
+           "shortDisplayName": "DT",
+           "description": "Division Tie ",
+           "abbreviation": "DT",
+           "value": 0.0,
+           "displayValue": "0.000"
+          },
+          {
+           "name": "divisionWins",
+           "type": "divisionwins",
+           "displayName": "Division Wins ",
+           "shortDisplayName": "DW",
+           "description": "Division Winning ",
+           "abbreviation": "DW",
+           "value": 3.0,
+           "displayValue": "3.000"
+          },
+          {
+           "name": "lockedDivRank",
+           "type": "lockeddivrank",
+           "displayName": "Locked Div Rank",
+           "shortDisplayName": "LDR",
+           "description": "Locked Div Rank",
+           "abbreviation": "LDR",
+           "value": 0.0,
+           "displayValue": "0"
+          },
+          {
+           "name": "overall",
+           "type": "total",
+           "abbreviation": "Any",
+           "displayValue": "5-2"
+          },
+          {
+           "name": "Home",
+           "type": "home",
+           "displayName": "Home",
+           "shortDisplayName": "HOME",
+           "description": "Home Record",
+           "displayValue": "3-0"
+          },
+          {
+           "name": "Road",
+           "type": "road",
+           "displayName": "Road",
+           "shortDisplayName": "AWAY",
+           "description": "Away Record",
+           "displayValue": "2-2"
+          },
+          {
+           "name": "vs. Div.",
+           "type": "vsdiv",
+           "displayName": "DIV",
+           "shortDisplayName": "DIV",
+           "description": "Division Record",
+           "displayValue": "3-1"
+          },
+          {
+           "name": "vs. Conf.",
+           "type": "vsconf",
+           "displayName": "CONF",
+           "shortDisplayName": "CONF",
+           "description": "Conference Record",
+           "displayValue": "5-1"
+          }
+         ],
+         "logo": {
+          "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/scoreboard/kc.png",
+          "width": 500,
+          "height": 500,
+          "rel": [
+           "full",
+           "scoreboard",
+           "dark"
+          ]
+         }
+        },
+        {
+         "id": "13",
+         "uid": "s:20~l:28~t:13",
+         "team": "Las Vegas",
+         "link": "https://www.espn.com/nfl/team/_/name/lv/las-vegas-raiders",
+         "stats": [
+          {
+           "name": "differential",
+           "type": "differential",
+           "displayName": "Point Differential",
+           "shortDisplayName": "DIFF",
+           "description": "Point Differential",
+           "abbreviation": "DIFF",
+           "value": -9.0,
+           "displayValue": "-9"
+          },
+          {
+           "name": "gamesBehind",
+           "type": "gamesbehind",
+           "displayName": "Games Back",
+           "shortDisplayName": "GB",
+           "description": "Games Back",
+           "abbreviation": "GB",
+           "value": 2.0,
+           "displayValue": "2"
+          },
+          {
+           "name": "losses",
+           "type": "losses",
+           "displayName": "Losses",
+           "shortDisplayName": "L",
+           "description": "Losses",
+           "abbreviation": "L",
+           "value": 4.0,
+           "displayValue": "4"
+          },
+          {
+           "name": "playoffSeed",
+           "type": "playoffseed",
+           "displayName": "Position",
+           "shortDisplayName": "POS",
+           "description": "Playoff Seed",
+           "abbreviation": "SEED",
+           "value": 9.0,
+           "displayValue": "9"
+          },
+          {
+           "name": "pointDifferential",
+           "type": "pointdifferential",
+           "displayName": "Point Differential",
+           "shortDisplayName": "DIFF",
+           "description": "Point Differential",
+           "abbreviation": "DIFF",
+           "value": -9.0,
+           "displayValue": "-9"
+          },
+          {
+           "name": "pointsAgainst",
+           "type": "pointsagainst",
+           "displayName": "Points Against",
+           "shortDisplayName": "PA",
+           "description": "Total Points Against",
+           "abbreviation": "PA",
+           "value": 230.0,
+           "displayValue": "230"
+          },
+          {
+           "name": "pointsFor",
+           "type": "pointsfor",
+           "displayName": "Points For",
+           "shortDisplayName": "PF",
+           "description": "Total Points For",
+           "abbreviation": "PF",
+           "value": 221.0,
+           "displayValue": "221"
+          },
+          {
+           "name": "streak",
+           "type": "streak",
+           "displayName": "Streak",
+           "shortDisplayName": "STRK",
+           "description": "Current Streak",
+           "abbreviation": "STRK",
+           "value": 1.0,
+           "displayValue": "W1"
+          },
+          {
+           "name": "ties",
+           "type": "ties",
+           "displayName": "Ties",
+           "shortDisplayName": "T",
+           "description": "Ties",
+           "abbreviation": "T",
+           "value": 0.0,
+           "displayValue": "0"
+          },
+          {
+           "name": "winPercent",
+           "type": "winpercent",
+           "displayName": "Win Percentage",
+           "shortDisplayName": "PCT",
+           "description": "Winning Percentage",
+           "abbreviation": "PCT",
+           "value": 0.5,
+           "displayValue": ".500"
+          },
+          {
+           "name": "wins",
+           "type": "wins",
+           "displayName": "Wins",
+           "shortDisplayName": "W",
+           "description": "Wins",
+           "abbreviation": "W",
+           "value": 4.0,
+           "displayValue": "4"
+          },
+          {
+           "name": "divisionLosses",
+           "type": "divisionlosses",
+           "displayName": "Division Losses",
+           "shortDisplayName": "DL",
+           "description": "Division Losses",
+           "abbreviation": "DL",
+           "value": 1.0,
+           "displayValue": "1"
+          },
+          {
+           "name": "divisionRecord",
+           "type": "divisionrecord",
+           "displayName": "Division record",
+           "shortDisplayName": "DIV",
+           "description": "Division Record",
+           "abbreviation": "DIV",
+           "value": 0.0,
+           "displayValue": "1-1"
+          },
+          {
+           "name": "divisionTies",
+           "type": "divisionties",
+           "displayName": "Division Tie ",
+           "shortDisplayName": "DT",
+           "description": "Division Tie ",
+           "abbreviation": "DT",
+           "value": 0.0,
+           "displayValue": "0.000"
+          },
+          {
+           "name": "divisionWins",
+           "type": "divisionwins",
+           "displayName": "Division Wins ",
+           "shortDisplayName": "DW",
+           "description": "Division Winning ",
+           "abbreviation": "DW",
+           "value": 1.0,
+           "displayValue": "1.000"
+          },
+          {
+           "name": "lockedDivRank",
+           "type": "lockeddivrank",
+           "displayName": "Locked Div Rank",
+           "shortDisplayName": "LDR",
+           "description": "Locked Div Rank",
+           "abbreviation": "LDR",
+           "value": 0.0,
+           "displayValue": "0"
+          },
+          {
+           "name": "overall",
+           "type": "total",
+           "abbreviation": "Any",
+           "displayValue": "4-4"
+          },
+          {
+           "name": "Home",
+           "type": "home",
+           "displayName": "Home",
+           "shortDisplayName": "HOME",
+           "description": "Home Record",
+           "displayValue": "1-3"
+          },
+          {
+           "name": "Road",
+           "type": "road",
+           "displayName": "Road",
+           "shortDisplayName": "AWAY",
+           "description": "Away Record",
+           "displayValue": "3-1"
+          },
+          {
+           "name": "vs. Div.",
+           "type": "vsdiv",
+           "displayName": "DIV",
+           "shortDisplayName": "DIV",
+           "description": "Division Record",
+           "displayValue": "1-1"
+          },
+          {
+           "name": "vs. Conf.",
+           "type": "vsconf",
+           "displayName": "CONF",
+           "shortDisplayName": "CONF",
+           "description": "Conference Record",
+           "displayValue": "3-3"
+          }
+         ],
+         "logo": {
+          "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/scoreboard/lv.png",
+          "width": 500,
+          "height": 500,
+          "rel": [
+           "full",
+           "scoreboard",
+           "dark"
+          ]
+         }
+        },
+        {
+         "id": "24",
+         "uid": "s:20~l:28~t:24",
+         "team": "LA Chargers",
+         "link": "https://www.espn.com/nfl/team/_/name/lac/los-angeles-chargers",
+         "stats": [
+          {
+           "name": "differential",
+           "type": "differential",
+           "displayName": "Point Differential",
+           "shortDisplayName": "DIFF",
+           "description": "Point Differential",
+           "abbreviation": "DIFF",
+           "value": -76.0,
+           "displayValue": "-76"
+          },
+          {
+           "name": "gamesBehind",
+           "type": "gamesbehind",
+           "displayName": "Games Back",
+           "shortDisplayName": "GB",
+           "description": "Games Back",
+           "abbreviation": "GB",
+           "value": 5.5,
+           "displayValue": "5.5"
+          },
+          {
+           "name": "losses",
+           "type": "losses",
+           "displayName": "Losses",
+           "shortDisplayName": "L",
+           "description": "Losses",
+           "abbreviation": "L",
+           "value": 7.0,
+           "displayValue": "7"
+          },
+          {
+           "name": "playoffSeed",
+           "type": "playoffseed",
+           "displayName": "Position",
+           "shortDisplayName": "POS",
+           "description": "Playoff Seed",
+           "abbreviation": "SEED",
+           "value": 16.0,
+           "displayValue": "16"
+          },
+          {
+           "name": "pointDifferential",
+           "type": "pointdifferential",
+           "displayName": "Point Differential",
+           "shortDisplayName": "DIFF",
+           "description": "Point Differential",
+           "abbreviation": "DIFF",
+           "value": -76.0,
+           "displayValue": "-76"
+          },
+          {
+           "name": "pointsAgainst",
+           "type": "pointsagainst",
+           "displayName": "Points Against",
+           "shortDisplayName": "PA",
+           "description": "Total Points Against",
+           "abbreviation": "PA",
+           "value": 175.0,
+           "displayValue": "175"
+          },
+          {
+           "name": "pointsFor",
+           "type": "pointsfor",
+           "displayName": "Points For",
+           "shortDisplayName": "PF",
+           "description": "Total Points For",
+           "abbreviation": "PF",
+           "value": 99.0,
+           "displayValue": "99"
+          },
+          {
+           "name": "streak",
+           "type": "streak",
+           "displayName": "Streak",
+           "shortDisplayName": "STRK",
+           "description": "Current Streak",
+           "abbreviation": "STRK",
+           "value": -7.0,
+           "displayValue": "L7"
+          },
+          {
+           "name": "ties",
+           "type": "ties",
+           "displayName": "Ties",
+           "shortDisplayName": "T",
+           "description": "Ties",
+           "abbreviation": "T",
+           "value": 0.0,
+           "displayValue": "0"
+          },
+          {
+           "name": "winPercent",
+           "type": "winpercent",
+           "displayName": "Win Percentage",
+           "shortDisplayName": "PCT",
+           "description": "Winning Percentage",
+           "abbreviation": "PCT",
+           "value": 0.0,
+           "displayValue": ".000"
+          },
+          {
+           "name": "wins",
+           "type": "wins",
+           "displayName": "Wins",
+           "shortDisplayName": "W",
+           "description": "Wins",
+           "abbreviation": "W",
+           "value": 0.0,
+           "displayValue": "0"
+          },
+          {
+           "name": "divisionLosses",
+           "type": "divisionlosses",
+           "displayName": "Division Losses",
+           "shortDisplayName": "DL",
+           "description": "Division Losses",
+           "abbreviation": "DL",
+           "value": 3.0,
+           "displayValue": "3"
+          },
+          {
+           "name": "divisionRecord",
+           "type": "divisionrecord",
+           "displayName": "Division record",
+           "shortDisplayName": "DIV",
+           "description": "Division Record",
+           "abbreviation": "DIV",
+           "value": 0.0,
+           "displayValue": "0-3"
+          },
+          {
+           "name": "divisionTies",
+           "type": "divisionties",
+           "displayName": "Division Tie ",
+           "shortDisplayName": "DT",
+           "description": "Division Tie ",
+           "abbreviation": "DT",
+           "value": 0.0,
+           "displayValue": "0.000"
+          },
+          {
+           "name": "divisionWins",
+           "type": "divisionwins",
+           "displayName": "Division Wins ",
+           "shortDisplayName": "DW",
+           "description": "Division Winning ",
+           "abbreviation": "DW",
+           "value": 0.0,
+           "displayValue": "0.000"
+          },
+          {
+           "name": "lockedDivRank",
+           "type": "lockeddivrank",
+           "displayName": "Locked Div Rank",
+           "shortDisplayName": "LDR",
+           "description": "Locked Div Rank",
+           "abbreviation": "LDR",
+           "value": 0.0,
+           "displayValue": "0"
+          },
+          {
+           "name": "overall",
+           "type": "total",
+           "abbreviation": "Any",
+           "displayValue": "0-7"
+          },
+          {
+           "name": "Home",
+           "type": "home",
+           "displayName": "Home",
+           "shortDisplayName": "HOME",
+           "description": "Home Record",
+           "displayValue": "0-3"
+          },
+          {
+           "name": "Road",
+           "type": "road",
+           "displayName": "Road",
+           "shortDisplayName": "AWAY",
+           "description": "Away Record",
+           "displayValue": "0-4"
+          },
+          {
+           "name": "vs. Div.",
+           "type": "vsdiv",
+           "displayName": "DIV",
+           "shortDisplayName": "DIV",
+           "description": "Division Record",
+           "displayValue": "0-3"
+          },
+          {
+           "name": "vs. Conf.",
+           "type": "vsconf",
+           "displayName": "CONF",
+           "shortDisplayName": "CONF",
+           "description": "Conference Record",
+           "displayValue": "0-4"
+          }
+         ],
+         "logo": {
+          "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/scoreboard/lac.png",
+          "width": 500,
+          "height": 500,
+          "rel": [
+           "full",
+           "scoreboard",
+           "dark"
+          ]
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "videos": [
+  {
+   "source": "espn",
+   "id": 50353729,
+   "headline": "Broncos stop Mahomes, Chiefs at goal line for the win",
+   "title": "Broncos stop Mahomes, Chiefs at goal line for the win",
+   "caption": "Broncos stop Mahomes, Chiefs at goal line for the win",
+   "description": "Broncos stop Mahomes, Chiefs at goal line for the win ",
+   "premium": false,
+   "ad": {
+    "sport": "nfl",
+    "bundle": "nfl_one_plays"
+   },
+   "tracking": {
+    "sportName": "football",
+    "leagueName": "NFL",
+    "coverageType": "OnePlay",
+    "trackingName": "NFL_One-Play (Broncos stop Mahomes, Chiefs at goal line for the win ) 2026/11/01 ESHEET",
+    "trackingId": "dm_20261101_NFL_broncos_stop_mahomes_chiefs_at_goal_line_for_the_win_"
+   },
+   "cerebroId": "6ae7dded0f7b3f07ac9524ee",
+   "lastModified": "2026-11-02T05:22:34.000+00:00",
+   "originalPublishDate": "2026-11-02T00:48:46.000+00:00",
+   "timeRestrictions": {
+    "embargoDate": "2026-11-02T00:48:43.000+00:00",
+    "expirationDate": "2026-11-04T00:48:00.000+00:00"
+   },
+   "deviceRestrictions": {
+    "type": "whitelist",
+    "devices": [
+     "settop",
+     "tablet",
+     "handset",
+     "ipad",
+     "desktop"
+    ]
+   },
+   "syndicatable": true,
+   "duration": 46,
+   "categories": [
+    {
+     "id": 2432,
+     "uid": "s:20~l:28~t:7",
+     "description": "Denver Broncos",
+     "type": "team",
+     "sportId": 28,
+     "team": {
+      "id": 7,
+      "abbreviation": "DEN",
+      "links": {
+       "web": {
+        "teams": {
+         "href": "https://www.espn.com/nfl/team/_/name/den/denver-broncos"
+        }
+       },
+       "mobile": {
+        "teams": {
+         "href": "https://www.espn.com/nfl/team/_/name/den/denver-broncos"
+        }
+       }
+      }
+     }
+    },
+    {
+     "id": 2496,
+     "uid": "s:20~l:28~t:12",
+     "description": "Kansas City Chiefs",
+     "type": "team",
+     "sportId": 28,
+     "team": {
+      "id": 12,
+      "abbreviation": "KC",
+      "links": {
+       "web": {
+        "teams": {
+         "href": "https://www.espn.com/nfl/team/_/name/kc/kansas-city-chiefs"
+        }
+       },
+       "mobile": {
+        "teams": {
+         "href": "https://www.espn.com/nfl/team/_/name/kc/kansas-city-chiefs"
+        }
+       }
+      }
+     }
+    },
+    {
+     "id": 9572,
+     "uid": "s:20~l:28",
+     "description": "NFL",
+     "type": "league",
+     "sportId": 28,
+     "leagueId": 28,
+     "league": {
+      "id": 28,
+      "abbreviation": "NFL",
+      "links": {
+       "web": {},
+       "mobile": {}
+      }
+     }
+    },
+    {
+     "id": 711827,
+     "description": "3 Star Rating",
+     "type": "editorialindicator"
+    },
+    {
+     "id": 435274,
+     "uid": "s:20~l:28~a:4039064",
+     "description": "Malcolm Roach",
+     "type": "athlete",
+     "sportId": 28,
+     "athleteId": 4039064,
+     "athlete": {
+      "id": 4039064,
+      "links": {
+       "web": {
+        "athletes": {
+         "href": "https://www.espn.com/nfl/player/_/id/4039064/malcolm-roach"
+        }
+       },
+       "mobile": {
+        "athletes": {
+         "href": "https://www.espn.com/nfl/player/_/id/4039064/malcolm-roach"
+        }
+       }
+      }
+     }
+    },
+    {
+     "id": 166867,
+     "uid": "s:20~l:28~a:3139477",
+     "description": "Patrick Mahomes",
+     "type": "athlete",
+     "sportId": 28,
+     "athleteId": 3139477,
+     "athlete": {
+      "id": 3139477,
+      "links": {
+       "web": {
+        "athletes": {
+         "href": "https://www.espn.com/nfl/player/_/id/3139477/patrick-mahomes"
+        }
+       },
+       "mobile": {
+        "athletes": {
+         "href": "https://www.espn.com/nfl/player/_/id/3139477/patrick-mahomes"
+        }
+       }
+      }
+     }
+    },
+    {
+     "id": 730035,
+     "description": "Verts - Exclude Content",
+     "type": "editorialindicator"
+    },
+    {
+     "uid": "s:20~l:28~e:401873033",
+     "description": "Kansas City Chiefs @ Denver Broncos",
+     "type": "event"
+    }
+   ],
+   "posterImages": {
+    "square": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1101/d038f0ff7de54a7f91ea4e1a3b4c25d51193/d038f0ff7de54a7f91ea4e1a3b4c25d51193_1x1.jpg"
+    },
+    "default": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1101/d038f0ff7de54a7f91ea4e1a3b4c25d51193/d038f0ff7de54a7f91ea4e1a3b4c25d51193_default.jpg",
+     "width": 576,
+     "height": 324
+    },
+    "firstFrame": {
+     "href": "https://cmp-espn.media.dssott.com/opp/img/espn/wsc/2026/1102/d038f0ff-7de5-4a7f-91ea-4e1a3b4c25d5/d038f0ff-7de5-4a7f-91ea-4e1a3b4c25d5/thumb-1-w720-h406-f4.jpg"
+    },
+    "wide": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1101/d038f0ff7de54a7f91ea4e1a3b4c25d51193/d038f0ff7de54a7f91ea4e1a3b4c25d51193_5x2.jpg"
+    },
+    "vertical": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1101/d038f0ff7de54a7f91ea4e1a3b4c25d51193/d038f0ff7de54a7f91ea4e1a3b4c25d51193_9x16.jpg"
+    },
+    "full": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1101/d038f0ff7de54a7f91ea4e1a3b4c25d51193/d038f0ff7de54a7f91ea4e1a3b4c25d51193.jpg"
+    },
+    "verticalFirstFrame": {
+     "href": "https://cmp-espn.media.dssott.com/opp/img/espn/9x16/wsc/2026/1102/d038f0ff-7de5-4a7f-91ea-4e1a3b4c25d5/d038f0ff-7de5-4a7f-91ea-4e1a3b4c25d5/thumb-1-w406-h720-f4.jpg"
+    }
+   },
+   "images": [
+    {
+     "width": 576,
+     "height": 324,
+     "url": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1101/d038f0ff7de54a7f91ea4e1a3b4c25d51193/d038f0ff7de54a7f91ea4e1a3b4c25d51193.jpg",
+     "name": "Poster Image"
+    }
+   ],
+   "thumbnail": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1101/d038f0ff7de54a7f91ea4e1a3b4c25d51193/d038f0ff7de54a7f91ea4e1a3b4c25d51193.jpg",
+   "links": {
+    "sportscenter": {
+     "href": "sportscenter://x-callback-url/showVideo?videoID=50353729&videoDSI=576de72cb22cf"
+    },
+    "web": {
+     "href": "https://www.espn.com/video/clip/_/id/50353729/broncos-stop-mahomes-chiefs-goal-line-win",
+     "self": {
+      "href": "https://www.espn.com/video/clip/_/id/50353729/broncos-stop-mahomes-chiefs-goal-line-win"
+     }
+    },
+    "mobile": {
+     "href": "https://watch.auth.api.espn.com/video/auth/brightcove/848dcd69-d075-4906-9ea3-b56ac258d0f1/asset?UMADPARAMreferer=https://www.espn.com/video/clip/_/id/50353729/broncos-stop-mahomes-chiefs-goal-line-win",
+     "alert": {
+      "href": "https://m.espn.com/general/video/videoAlert?vid=50353729"
+     },
+     "progressiveDownload": {
+      "href": "https://watch.auth.api.espn.com/video/auth/brightcove/848dcd69-d075-4906-9ea3-b56ac258d0f1/asset?UMADPARAMreferer=https://www.espn.com/video/clip/_/id/50353729/broncos-stop-mahomes-chiefs-goal-line-win"
+     },
+     "source": {
+      "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1102/d038f0ff-7de5-4a7f-91ea-4e1a3b4c25d5/d038f0ff-7de5-4a7f-91ea-4e1a3b4c25d5.mp4"
+     },
+     "streaming": {
+      "href": "https://watch.auth.api.espn.com/video/auth/brightcove/848dcd69-d075-4906-9ea3-b56ac258d0f1/asset?UMADPARAMreferer=https://www.espn.com/video/clip/_/id/50353729/broncos-stop-mahomes-chiefs-goal-line-win"
+     }
+    },
+    "api": {
+     "artwork": {
+      "href": "https://artwork.api.espn.com/artwork/collections/media/848dcd69-d075-4906-9ea3-b56ac258d0f1"
+     },
+     "self": {
+      "href": "https://content.core.api.espn.com/v1/video/clips/50353729"
+     }
+    },
+    "source": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1102/d038f0ff-7de5-4a7f-91ea-4e1a3b4c25d5/d038f0ff-7de5-4a7f-91ea-4e1a3b4c25d5.mp4",
+     "flash": {
+      "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1102/d038f0ff-7de5-4a7f-91ea-4e1a3b4c25d5/d038f0ff-7de5-4a7f-91ea-4e1a3b4c25d5.mp4"
+     },
+     "full": {
+      "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1102/d038f0ff-7de5-4a7f-91ea-4e1a3b4c25d5/d038f0ff-7de5-4a7f-91ea-4e1a3b4c25d5.mp4"
+     },
+     "mezzanine": {
+      "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1102/d038f0ff-7de5-4a7f-91ea-4e1a3b4c25d5/d038f0ff-7de5-4a7f-91ea-4e1a3b4c25d5.mp4"
+     },
+     "HD": {
+      "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1102/d038f0ff-7de5-4a7f-91ea-4e1a3b4c25d5/d038f0ff-7de5-4a7f-91ea-4e1a3b4c25d5.mp4"
+     },
+     "HLS": {
+      "href": "https://cmp-espn.media.dssott.com/opp/hls/espn/wsc/2026/1102/d038f0ff-7de5-4a7f-91ea-4e1a3b4c25d5/d038f0ff-7de5-4a7f-91ea-4e1a3b4c25d5/playlist.m3u8",
+      "HD": {
+       "href": "https://cmp-espn.media.dssott.com/opp/hls/espn/wsc/2026/1102/d038f0ff-7de5-4a7f-91ea-4e1a3b4c25d5/d038f0ff-7de5-4a7f-91ea-4e1a3b4c25d5/playlist.m3u8"
+      }
+     }
+    }
+   }
+  },
+  {
+   "source": "espn",
+   "id": 50352104,
+   "headline": "Patrick Mahomes finds Emmett Johnson who takes off for 73-yard TD",
+   "title": "Patrick Mahomes finds Emmett Johnson who takes off for 73-yard TD",
+   "caption": "Patrick Mahomes finds Emmett Johnson who takes off for 73-yard TD",
+   "description": "Patrick Mahomes finds Emmett Johnson who takes off for 73-yard TD",
+   "premium": false,
+   "ad": {
+    "sport": "nfl",
+    "bundle": "nfl_one_plays"
+   },
+   "tracking": {
+    "sportName": "football",
+    "leagueName": "NFL",
+    "coverageType": "OnePlay",
+    "trackingName": "NFL_One-Play (Patrick Mahomes to Emmett Johnson who takes off for 73-yard TD) 2026/11/01 ESHEET",
+    "trackingId": "dm_20261101_NFL_live_on_cbs_patrick_mahomes_fires_absolute_dart_for_73yard_td_"
+   },
+   "cerebroId": "6ae7c1ac3da0f53a9064c927",
+   "lastModified": "2026-11-02T05:23:22.000+00:00",
+   "originalPublishDate": "2026-11-01T22:48:12.000+00:00",
+   "timeRestrictions": {
+    "embargoDate": "2026-11-01T22:48:11.000+00:00",
+    "expirationDate": "2026-11-03T22:48:00.000+00:00"
+   },
+   "deviceRestrictions": {
+    "type": "whitelist",
+    "devices": [
+     "settop",
+     "tablet",
+     "handset",
+     "ipad",
+     "desktop"
+    ]
+   },
+   "syndicatable": true,
+   "duration": 27,
+   "categories": [
+    {
+     "id": 2432,
+     "uid": "s:20~l:28~t:7",
+     "description": "Denver Broncos",
+     "type": "team",
+     "sportId": 28,
+     "team": {
+      "id": 7,
+      "abbreviation": "DEN",
+      "links": {
+       "web": {
+        "teams": {
+         "href": "https://www.espn.com/nfl/team/_/name/den/denver-broncos"
+        }
+       },
+       "mobile": {
+        "teams": {
+         "href": "https://www.espn.com/nfl/team/_/name/den/denver-broncos"
+        }
+       }
+      }
+     }
+    },
+    {
+     "id": 2496,
+     "uid": "s:20~l:28~t:12",
+     "description": "Kansas City Chiefs",
+     "type": "team",
+     "sportId": 28,
+     "team": {
+      "id": 12,
+      "abbreviation": "KC",
+      "links": {
+       "web": {
+        "teams": {
+         "href": "https://www.espn.com/nfl/team/_/name/kc/kansas-city-chiefs"
+        }
+       },
+       "mobile": {
+        "teams": {
+         "href": "https://www.espn.com/nfl/team/_/name/kc/kansas-city-chiefs"
+        }
+       }
+      }
+     }
+    },
+    {
+     "id": 166867,
+     "uid": "s:20~l:28~a:3139477",
+     "description": "Patrick Mahomes",
+     "type": "athlete",
+     "sportId": 28,
+     "athleteId": 3139477,
+     "athlete": {
+      "id": 3139477,
+      "links": {
+       "web": {
+        "athletes": {
+         "href": "https://www.espn.com/nfl/player/_/id/3139477/patrick-mahomes"
+        }
+       },
+       "mobile": {
+        "athletes": {
+         "href": "https://www.espn.com/nfl/player/_/id/3139477/patrick-mahomes"
+        }
+       }
+      }
+     }
+    },
+    {
+     "id": 9572,
+     "uid": "s:20~l:28",
+     "description": "NFL",
+     "type": "league",
+     "sportId": 28,
+     "leagueId": 28,
+     "league": {
+      "id": 28,
+      "abbreviation": "NFL",
+      "links": {
+       "web": {},
+       "mobile": {}
+      }
+     }
+    },
+    {
+     "id": 12024,
+     "uid": "s:20~l:3080",
+     "description": "Fantasy NFL",
+     "type": "league",
+     "sportId": 3080,
+     "leagueId": 3080,
+     "league": {
+      "id": 3080,
+      "abbreviation": "NFLFD"
+     }
+    },
+    {
+     "id": 711827,
+     "description": "3 Star Rating",
+     "type": "editorialindicator"
+    },
+    {
+     "id": 730035,
+     "description": "Verts - Exclude Content",
+     "type": "editorialindicator"
+    },
+    {
+     "uid": "s:20~l:28~e:401873033",
+     "description": "Kansas City Chiefs @ Denver Broncos",
+     "type": "event"
+    }
+   ],
+   "posterImages": {
+    "square": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1101/68c485a3154f4b27af60d5f6013352db1075/68c485a3154f4b27af60d5f6013352db1075_1x1.jpg"
+    },
+    "default": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1101/68c485a3154f4b27af60d5f6013352db1075/68c485a3154f4b27af60d5f6013352db1075_default.jpg",
+     "width": 576,
+     "height": 324
+    },
+    "firstFrame": {
+     "href": "https://cmp-espn.media.dssott.com/opp/img/espn/wsc/2026/1101/68c485a3-154f-4b27-af60-d5f6013352db/68c485a3-154f-4b27-af60-d5f6013352db/thumb-1-w720-h406-f4.jpg"
+    },
+    "wide": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1101/68c485a3154f4b27af60d5f6013352db1075/68c485a3154f4b27af60d5f6013352db1075_5x2.jpg"
+    },
+    "vertical": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1101/68c485a3154f4b27af60d5f6013352db1075/68c485a3154f4b27af60d5f6013352db1075_9x16.jpg"
+    },
+    "full": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1101/68c485a3154f4b27af60d5f6013352db1075/68c485a3154f4b27af60d5f6013352db1075.jpg"
+    },
+    "verticalFirstFrame": {
+     "href": "https://cmp-espn.media.dssott.com/opp/img/espn/9x16/wsc/2026/1101/68c485a3-154f-4b27-af60-d5f6013352db/68c485a3-154f-4b27-af60-d5f6013352db/thumb-1-w406-h720-f4.jpg"
+    }
+   },
+   "images": [
+    {
+     "width": 576,
+     "height": 324,
+     "url": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1101/68c485a3154f4b27af60d5f6013352db1075/68c485a3154f4b27af60d5f6013352db1075.jpg",
+     "name": "Poster Image"
+    }
+   ],
+   "thumbnail": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1101/68c485a3154f4b27af60d5f6013352db1075/68c485a3154f4b27af60d5f6013352db1075.jpg",
+   "links": {
+    "sportscenter": {
+     "href": "sportscenter://x-callback-url/showVideo?videoID=50352104&videoDSI=08f72e7a71b96"
+    },
+    "web": {
+     "href": "https://www.espn.com/video/clip/_/id/50352104/patrick-mahomes-finds-emmett-johnson-takes-73-yard-td",
+     "self": {
+      "href": "https://www.espn.com/video/clip/_/id/50352104/patrick-mahomes-finds-emmett-johnson-takes-73-yard-td"
+     }
+    },
+    "mobile": {
+     "href": "https://watch.auth.api.espn.com/video/auth/brightcove/ead675ca-6281-4718-9e7b-ab326c318b55/asset?UMADPARAMreferer=https://www.espn.com/video/clip/_/id/50352104/patrick-mahomes-finds-emmett-johnson-takes-73-yard-td",
+     "alert": {
+      "href": "https://m.espn.com/general/video/videoAlert?vid=50352104"
+     },
+     "progressiveDownload": {
+      "href": "https://watch.auth.api.espn.com/video/auth/brightcove/ead675ca-6281-4718-9e7b-ab326c318b55/asset?UMADPARAMreferer=https://www.espn.com/video/clip/_/id/50352104/patrick-mahomes-finds-emmett-johnson-takes-73-yard-td"
+     },
+     "source": {
+      "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1101/68c485a3-154f-4b27-af60-d5f6013352db/68c485a3-154f-4b27-af60-d5f6013352db.mp4"
+     },
+     "streaming": {
+      "href": "https://watch.auth.api.espn.com/video/auth/brightcove/ead675ca-6281-4718-9e7b-ab326c318b55/asset?UMADPARAMreferer=https://www.espn.com/video/clip/_/id/50352104/patrick-mahomes-finds-emmett-johnson-takes-73-yard-td"
+     }
+    },
+    "api": {
+     "artwork": {
+      "href": "https://artwork.api.espn.com/artwork/collections/media/ead675ca-6281-4718-9e7b-ab326c318b55"
+     },
+     "self": {
+      "href": "https://content.core.api.espn.com/v1/video/clips/50352104"
+     }
+    },
+    "source": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1101/68c485a3-154f-4b27-af60-d5f6013352db/68c485a3-154f-4b27-af60-d5f6013352db.mp4",
+     "flash": {
+      "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1101/68c485a3-154f-4b27-af60-d5f6013352db/68c485a3-154f-4b27-af60-d5f6013352db.mp4"
+     },
+     "full": {
+      "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1101/68c485a3-154f-4b27-af60-d5f6013352db/68c485a3-154f-4b27-af60-d5f6013352db.mp4"
+     },
+     "mezzanine": {
+      "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1101/68c485a3-154f-4b27-af60-d5f6013352db/68c485a3-154f-4b27-af60-d5f6013352db.mp4"
+     },
+     "HD": {
+      "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1101/68c485a3-154f-4b27-af60-d5f6013352db/68c485a3-154f-4b27-af60-d5f6013352db.mp4"
+     },
+     "HLS": {
+      "href": "https://cmp-espn.media.dssott.com/opp/hls/espn/wsc/2026/1101/68c485a3-154f-4b27-af60-d5f6013352db/68c485a3-154f-4b27-af60-d5f6013352db/playlist.m3u8",
+      "HD": {
+       "href": "https://cmp-espn.media.dssott.com/opp/hls/espn/wsc/2026/1101/68c485a3-154f-4b27-af60-d5f6013352db/68c485a3-154f-4b27-af60-d5f6013352db/playlist.m3u8"
+      }
+     }
+    }
+   }
+  },
+  {
+   "source": "espn",
+   "id": 50274245,
+   "headline": "Mahomes and Kelce the Chiefs dynamic duo",
+   "title": "Mahomes and Kelce the Chiefs dynamic duo",
+   "caption": "Mahomes and Kelce the Chiefs dynamic duo",
+   "description": "Mahomes and Kelce the Chiefs dynamic duo",
+   "premium": false,
+   "ad": {
+    "sport": "nfl",
+    "bundle": "nfl_studio_analysis"
+   },
+   "tracking": {
+    "sportName": "football",
+    "leagueName": "NFL",
+    "coverageType": "Interview",
+    "trackingName": "COM_NFL Interview (Mahomes and Kelce the Chiefs dynamic duo) 2026/10/25 SNCD",
+    "trackingId": "dm_261025_Mahomes_Kelce_Interview"
+   },
+   "cerebroId": "6add8d4699dbbd75729fdd21",
+   "lastModified": "2026-10-25T16:20:13.000+00:00",
+   "originalPublishDate": "2026-10-25T05:01:58.000+00:00",
+   "timeRestrictions": {
+    "embargoDate": "2026-10-25T04:48:36.000+00:00",
+    "expirationDate": "2027-02-16T04:48:00.000+00:00"
+   },
+   "deviceRestrictions": {
+    "type": "whitelist",
+    "devices": [
+     "settop",
+     "tablet",
+     "handset",
+     "ipad",
+     "desktop"
+    ]
+   },
+   "syndicatable": true,
+   "duration": 189,
+   "categories": [
+    {
+     "id": 2496,
+     "uid": "s:20~l:28~t:12",
+     "description": "Kansas City Chiefs",
+     "type": "team",
+     "sportId": 28,
+     "team": {
+      "id": 12,
+      "abbreviation": "KC",
+      "links": {
+       "web": {
+        "teams": {
+         "href": "https://www.espn.com/nfl/team/_/name/kc/kansas-city-chiefs"
+        }
+       },
+       "mobile": {
+        "teams": {
+         "href": "https://www.espn.com/nfl/team/_/name/kc/kansas-city-chiefs"
+        }
+       }
+      }
+     }
+    },
+    {
+     "id": 9572,
+     "uid": "s:20~l:28",
+     "description": "NFL",
+     "type": "league",
+     "sportId": 28,
+     "leagueId": 28,
+     "league": {
+      "id": 28,
+      "abbreviation": "NFL",
+      "links": {
+       "web": {},
+       "mobile": {}
+      }
+     }
+    },
+    {
+     "id": 166867,
+     "uid": "s:20~l:28~a:3139477",
+     "description": "Patrick Mahomes",
+     "type": "athlete",
+     "sportId": 28,
+     "athleteId": 3139477,
+     "athlete": {
+      "id": 3139477,
+      "links": {
+       "web": {
+        "athletes": {
+         "href": "https://www.espn.com/nfl/player/_/id/3139477/patrick-mahomes"
+        }
+       },
+       "mobile": {
+        "athletes": {
+         "href": "https://www.espn.com/nfl/player/_/id/3139477/patrick-mahomes"
+        }
+       }
+      }
+     }
+    },
+    {
+     "id": 115523,
+     "uid": "s:20~l:28~a:15847",
+     "description": "Travis Kelce",
+     "type": "athlete",
+     "sportId": 28,
+     "athleteId": 15847,
+     "athlete": {
+      "id": 15847,
+      "links": {
+       "web": {
+        "athletes": {
+         "href": "https://www.espn.com/nfl/player/_/id/15847/travis-kelce"
+        }
+       },
+       "mobile": {
+        "athletes": {
+         "href": "https://www.espn.com/nfl/player/_/id/15847/travis-kelce"
+        }
+       }
+      }
+     }
+    }
+   ],
+   "posterImages": {
+    "square": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1025/dm_261025_Mahomes_Kelce_Interview/dm_261025_Mahomes_Kelce_Interview_1x1.jpg"
+    },
+    "default": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1025/dm_261025_Mahomes_Kelce_Interview/dm_261025_Mahomes_Kelce_Interview_default.jpg",
+     "width": 576,
+     "height": 324
+    },
+    "firstFrame": {
+     "href": "https://cmp-espn.media.dssott.com/opp/img/espn/2026/1025/dm_261025_Mahomes_Kelce_Interview/dm_261025_Mahomes_Kelce_Interview/thumb-1-w720-h406-f4.jpg"
+    },
+    "wide": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1025/dm_261025_Mahomes_Kelce_Interview/dm_261025_Mahomes_Kelce_Interview_5x2.jpg"
+    },
+    "full": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1025/dm_261025_Mahomes_Kelce_Interview/dm_261025_Mahomes_Kelce_Interview.jpg"
+    }
+   },
+   "images": [
+    {
+     "width": 576,
+     "height": 324,
+     "url": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1025/dm_261025_Mahomes_Kelce_Interview/dm_261025_Mahomes_Kelce_Interview.jpg",
+     "name": "Poster Image"
+    }
+   ],
+   "thumbnail": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1025/dm_261025_Mahomes_Kelce_Interview/dm_261025_Mahomes_Kelce_Interview.jpg",
+   "links": {
+    "sportscenter": {
+     "href": "sportscenter://x-callback-url/showVideo?videoID=50274245&videoDSI=eaa78bfa1d33f"
+    },
+    "web": {
+     "href": "https://www.espn.com/video/clip/_/id/50274245/mahomes-kelce-chiefs-dynamic-duo",
+     "self": {
+      "href": "https://www.espn.com/video/clip/_/id/50274245/mahomes-kelce-chiefs-dynamic-duo"
+     }
+    },
+    "mobile": {
+     "href": "https://watch.auth.api.espn.com/video/auth/brightcove/f37044bb-c822-40c7-96e5-8e2f64c28076/asset?UMADPARAMreferer=https://www.espn.com/video/clip/_/id/50274245/mahomes-kelce-chiefs-dynamic-duo",
+     "alert": {
+      "href": "https://m.espn.com/general/video/videoAlert?vid=50274245"
+     },
+     "progressiveDownload": {
+      "href": "https://watch.auth.api.espn.com/video/auth/brightcove/f37044bb-c822-40c7-96e5-8e2f64c28076/asset?UMADPARAMreferer=https://www.espn.com/video/clip/_/id/50274245/mahomes-kelce-chiefs-dynamic-duo"
+     },
+     "source": {
+      "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1025/dm_261025_Mahomes_Kelce_Interview/dm_261025_Mahomes_Kelce_Interview.mp4"
+     },
+     "streaming": {
+      "href": "https://watch.auth.api.espn.com/video/auth/brightcove/f37044bb-c822-40c7-96e5-8e2f64c28076/asset?UMADPARAMreferer=https://www.espn.com/video/clip/_/id/50274245/mahomes-kelce-chiefs-dynamic-duo"
+     }
+    },
+    "api": {
+     "artwork": {
+      "href": "https://artwork.api.espn.com/artwork/collections/media/f37044bb-c822-40c7-96e5-8e2f64c28076"
+     },
+     "self": {
+      "href": "https://content.core.api.espn.com/v1/video/clips/50274245"
+     }
+    },
+    "source": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1025/dm_261025_Mahomes_Kelce_Interview/dm_261025_Mahomes_Kelce_Interview.mp4",
+     "flash": {
+      "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1025/dm_261025_Mahomes_Kelce_Interview/dm_261025_Mahomes_Kelce_Interview.mp4"
+     },
+     "full": {
+      "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1025/dm_261025_Mahomes_Kelce_Interview/dm_261025_Mahomes_Kelce_Interview.mp4"
+     },
+     "mezzanine": {
+      "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1025/dm_261025_Mahomes_Kelce_Interview/dm_261025_Mahomes_Kelce_Interview.mp4"
+     },
+     "HD": {
+      "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1025/dm_261025_Mahomes_Kelce_Interview/dm_261025_Mahomes_Kelce_Interview.mp4"
+     },
+     "HLS": {
+      "href": "https://cmp-espn.media.dssott.com/opp/hls/espn/2026/1025/dm_261025_Mahomes_Kelce_Interview/dm_261025_Mahomes_Kelce_Interview/playlist.m3u8",
+      "HD": {
+       "href": "https://cmp-espn.media.dssott.com/opp/hls/espn/2026/1025/dm_261025_Mahomes_Kelce_Interview/dm_261025_Mahomes_Kelce_Interview/playlist.m3u8"
+      }
+     }
+    }
+   }
+  },
+  {
+   "source": "espn",
+   "id": 50066989,
+   "headline": "McCourty: I feel like an idiot for doubting Mahomes, Chiefs",
+   "title": "McCourty: I feel like an idiot for doubting Mahomes, Chiefs",
+   "caption": "McCourty: I feel like an idiot for doubting Mahomes, Chiefs",
+   "description": "McCourty: I feel like an idiot for doubting Mahomes, Chiefs",
+   "premium": false,
+   "ad": {
+    "sport": "nfl",
+    "bundle": "nfl_studio_analysis"
+   },
+   "tracking": {
+    "sportName": "football",
+    "leagueName": "NFL",
+    "coverageType": "Analysis",
+    "trackingName": "COM_NFL Analysis (McCourty: I feel like an idiot for doubting Mahomes, Chiefs) 2026/09/30 GetUp",
+    "trackingId": "dm_NFL_chiefs_talk_rev"
+   },
+   "cerebroId": "6abd0b2c4bf4c005207e6233",
+   "lastModified": "2026-09-30T13:30:33.000+00:00",
+   "originalPublishDate": "2026-09-30T13:14:21.000+00:00",
+   "timeRestrictions": {
+    "embargoDate": "2026-09-30T13:14:20.000+00:00"
+   },
+   "deviceRestrictions": {
+    "type": "whitelist",
+    "devices": [
+     "settop",
+     "tablet",
+     "handset",
+     "ipad",
+     "desktop"
+    ]
+   },
+   "syndicatable": true,
+   "duration": 65,
+   "categories": [
+    {
+     "id": 9572,
+     "uid": "s:20~l:28",
+     "description": "NFL",
+     "type": "league",
+     "sportId": 28,
+     "leagueId": 28,
+     "league": {
+      "id": 28,
+      "abbreviation": "NFL",
+      "links": {
+       "web": {},
+       "mobile": {}
+      }
+     }
+    },
+    {
+     "id": 756046,
+     "description": "Get Up!",
+     "type": "series"
+    },
+    {
+     "id": 166867,
+     "uid": "s:20~l:28~a:3139477",
+     "description": "Patrick Mahomes",
+     "type": "athlete",
+     "sportId": 28,
+     "athleteId": 3139477,
+     "athlete": {
+      "id": 3139477,
+      "links": {
+       "web": {
+        "athletes": {
+         "href": "https://www.espn.com/nfl/player/_/id/3139477/patrick-mahomes"
+        }
+       },
+       "mobile": {
+        "athletes": {
+         "href": "https://www.espn.com/nfl/player/_/id/3139477/patrick-mahomes"
+        }
+       }
+      }
+     }
+    },
+    {
+     "id": 529577,
+     "uid": "s:20~l:28~a:4567048",
+     "description": "Kenneth Walker III",
+     "type": "athlete",
+     "sportId": 28,
+     "athleteId": 4567048,
+     "athlete": {
+      "id": 4567048,
+      "links": {
+       "web": {
+        "athletes": {
+         "href": "https://www.espn.com/nfl/player/_/id/4567048/kenneth-walker-iii"
+        }
+       },
+       "mobile": {
+        "athletes": {
+         "href": "https://www.espn.com/nfl/player/_/id/4567048/kenneth-walker-iii"
+        }
+       }
+      }
+     }
+    },
+    {
+     "id": 2496,
+     "uid": "s:20~l:28~t:12",
+     "description": "Kansas City Chiefs",
+     "type": "team",
+     "sportId": 28,
+     "team": {
+      "id": 12,
+      "abbreviation": "KC",
+      "links": {
+       "web": {
+        "teams": {
+         "href": "https://www.espn.com/nfl/team/_/name/kc/kansas-city-chiefs"
+        }
+       },
+       "mobile": {
+        "teams": {
+         "href": "https://www.espn.com/nfl/team/_/name/kc/kansas-city-chiefs"
+        }
+       }
+      }
+     }
+    },
+    {
+     "id": 730035,
+     "description": "Verts - Exclude Content",
+     "type": "editorialindicator"
+    },
+    {
+     "uid": "s:20~l:28~e:401872976",
+     "description": "Kansas City Chiefs @ Las Vegas Raiders",
+     "type": "event"
+    }
+   ],
+   "posterImages": {
+    "square": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0930/ss_20260930_091422435_3679817563/ss_20260930_091422435_3679817563_1x1.jpg"
+    },
+    "default": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0930/ss_20260930_091422435_3679817563/ss_20260930_091422435_3679817563_default.jpg",
+     "width": 576,
+     "height": 324
+    },
+    "firstFrame": {
+     "href": "https://cmp-espn.media.dssott.com/opp/img/espn/2026/0930/ss_20260930_091422435_3679817/ss_20260930_091422435_3679817/thumb-1-w720-h406-f4.jpg"
+    },
+    "wide": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0930/ss_20260930_091422435_3679817563/ss_20260930_091422435_3679817563_5x2.jpg"
+    },
+    "full": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0930/ss_20260930_091422435_3679817563/ss_20260930_091422435_3679817563.jpg"
+    }
+   },
+   "images": [
+    {
+     "width": 576,
+     "height": 324,
+     "url": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0930/ss_20260930_091422435_3679817563/ss_20260930_091422435_3679817563.jpg",
+     "name": "Poster Image"
+    }
+   ],
+   "thumbnail": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/0930/ss_20260930_091422435_3679817563/ss_20260930_091422435_3679817563.jpg",
+   "links": {
+    "sportscenter": {
+     "href": "sportscenter://x-callback-url/showVideo?videoID=50066989&videoDSI=1bb9808675a7d"
+    },
+    "web": {
+     "href": "https://www.espn.com/video/clip/_/id/50066989/feel-idiot-doubting-mahomes-chiefs",
+     "self": {
+      "href": "https://www.espn.com/video/clip/_/id/50066989/feel-idiot-doubting-mahomes-chiefs"
+     }
+    },
+    "mobile": {
+     "href": "https://watch.auth.api.espn.com/video/auth/brightcove/e8ba7ba7-313f-434d-a6c2-83ef9e9b860b/asset?UMADPARAMreferer=https://www.espn.com/video/clip/_/id/50066989/feel-idiot-doubting-mahomes-chiefs",
+     "alert": {
+      "href": "https://m.espn.com/general/video/videoAlert?vid=50066989"
+     },
+     "progressiveDownload": {
+      "href": "https://watch.auth.api.espn.com/video/auth/brightcove/e8ba7ba7-313f-434d-a6c2-83ef9e9b860b/asset?UMADPARAMreferer=https://www.espn.com/video/clip/_/id/50066989/feel-idiot-doubting-mahomes-chiefs"
+     },
+     "source": {
+      "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/0930/ss_20260930_091422435_3679817/ss_20260930_091422435_3679817.mp4"
+     },
+     "streaming": {
+      "href": "https://watch.auth.api.espn.com/video/auth/brightcove/e8ba7ba7-313f-434d-a6c2-83ef9e9b860b/asset?UMADPARAMreferer=https://www.espn.com/video/clip/_/id/50066989/feel-idiot-doubting-mahomes-chiefs"
+     }
+    },
+    "api": {
+     "artwork": {
+      "href": "https://artwork.api.espn.com/artwork/collections/media/e8ba7ba7-313f-434d-a6c2-83ef9e9b860b"
+     },
+     "self": {
+      "href": "https://content.core.api.espn.com/v1/video/clips/50066989"
+     }
+    },
+    "source": {
+     "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/0930/ss_20260930_091422435_3679817/ss_20260930_091422435_3679817.mp4",
+     "flash": {
+      "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/0930/ss_20260930_091422435_3679817/ss_20260930_091422435_3679817.mp4"
+     },
+     "full": {
+      "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/0930/ss_20260930_091422435_3679817/ss_20260930_091422435_3679817.mp4"
+     },
+     "mezzanine": {
+      "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/0930/ss_20260930_091422435_3679817/ss_20260930_091422435_3679817.mp4"
+     },
+     "HD": {
+      "href": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/0930/ss_20260930_091422435_3679817/ss_20260930_091422435_3679817.mp4"
+     },
+     "HLS": {
+      "href": "https://cmp-espn.media.dssott.com/opp/hls/espn/2026/0930/ss_20260930_091422435_3679817/ss_20260930_091422435_3679817/playlist.m3u8",
+      "HD": {
+       "href": "https://cmp-espn.media.dssott.com/opp/hls/espn/2026/0930/ss_20260930_091422435_3679817/ss_20260930_091422435_3679817/playlist.m3u8"
+      }
+     }
+    }
+   }
+  }
+ ]
+}

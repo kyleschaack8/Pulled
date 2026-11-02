@@ -1,0 +1,957 @@
+{
+ "count": 1,
+ "pageIndex": 1,
+ "pageSize": 50,
+ "pageCount": 1,
+ "items": [
+  {
+   "id": "33192",
+   "uuid": "e3e39e69-2861-f5b5-49be-b0880534c802",
+   "guid": "e3e39e69-2861-f5b5-49be-b0880534c802",
+   "displayName": "Aaron Judge",
+   "shortName": "A. Judge",
+   "type": "player",
+   "sport": "baseball",
+   "league": "mlb",
+   "leagueRelationships": [
+    {
+     "type": "league",
+     "displayName": "MLB",
+     "core": {
+      "id": "10",
+      "uid": "s:1~l:10",
+      "name": "Major League Baseball",
+      "displayName": "MLB",
+      "abbreviation": "MLB",
+      "slug": "mlb",
+      "isTournament": false,
+      "season": {
+       "year": 2026,
+       "startDate": "2026-02-19T08:00:00.000+00:00",
+       "endDate": "2026-11-12T07:59:00.000+00:00",
+       "type": {
+        "id": "3",
+        "type": 3,
+        "name": "Postseason",
+        "abbreviation": "post",
+        "slug": "post-season",
+        "startDate": "2026-09-29T07:00:00.000+00:00",
+        "endDate": "2026-11-12T07:59:00.000+00:00",
+        "hasGroups": false,
+        "hasStandings": false,
+        "hasLegs": false,
+        "weeks": {},
+        "year": 2026
+       },
+       "types": {
+        "count": 4,
+        "pageIndex": 1,
+        "pageSize": 4,
+        "pageCount": 1,
+        "items": [
+         {
+          "id": "1",
+          "type": 1,
+          "name": "Spring Training",
+          "abbreviation": "pre",
+          "slug": "preseason",
+          "startDate": "2026-02-19T08:00:00.000+00:00",
+          "endDate": "2026-03-25T06:59:00.000+00:00",
+          "hasGroups": false,
+          "hasStandings": true,
+          "hasLegs": false,
+          "weeks": {},
+          "year": 2026
+         },
+         {
+          "id": "2",
+          "type": 2,
+          "name": "Regular Season",
+          "abbreviation": "reg",
+          "slug": "regular-season",
+          "startDate": "2026-03-25T07:00:00.000+00:00",
+          "endDate": "2026-09-29T06:59:00.000+00:00",
+          "hasGroups": false,
+          "hasStandings": true,
+          "hasLegs": false,
+          "week": {
+           "number": 27,
+           "startDate": "2026-09-23T07:00:00.000+00:00",
+           "endDate": "2026-09-30T06:59:00.000+00:00",
+           "text": "Week 27"
+          },
+          "weeks": {},
+          "year": 2026
+         },
+         {
+          "id": "3",
+          "type": 3,
+          "name": "Postseason",
+          "abbreviation": "post",
+          "slug": "post-season",
+          "startDate": "2026-09-29T07:00:00.000+00:00",
+          "endDate": "2026-11-12T07:59:00.000+00:00",
+          "hasGroups": false,
+          "hasStandings": false,
+          "hasLegs": false,
+          "weeks": {},
+          "year": 2026
+         },
+         {
+          "id": "4",
+          "type": 4,
+          "name": "Off Season",
+          "abbreviation": "off",
+          "slug": "off-season",
+          "startDate": "2026-11-12T08:00:00.000+00:00",
+          "endDate": "2027-02-18T07:59:00.000+00:00",
+          "hasGroups": false,
+          "hasStandings": false,
+          "hasLegs": false,
+          "weeks": {},
+          "year": 2026
+         }
+        ]
+       },
+       "displayName": "2026"
+      },
+      "seasons": {},
+      "logos": [
+       {
+        "href": "https://a.espncdn.com/i/teamlogos/leagues/500/mlb.png",
+        "width": 500,
+        "height": 500,
+        "rel": [
+         "full",
+         "default"
+        ]
+       },
+       {
+        "href": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500-dark/mlb.png&w=500&h=500&transparent=true",
+        "width": 500,
+        "height": 500,
+        "rel": [
+         "full",
+         "dark"
+        ]
+       }
+      ],
+      "links": [
+       {
+        "language": "en",
+        "rel": [
+         "index",
+         "desktop",
+         "league"
+        ],
+        "href": "https://www.espn.com/mlb/",
+        "text": "Index",
+        "shortText": "Index",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "index",
+         "sportscenter",
+         "app",
+         "league"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:1~l:10",
+        "text": "Index",
+        "shortText": "Index",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "schedule",
+         "desktop",
+         "league"
+        ],
+        "href": "https://www.espn.com/mlb/schedule",
+        "text": "Schedule",
+        "shortText": "Schedule",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "schedule",
+         "sportscenter",
+         "app",
+         "league"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:1~l:10&section=scores",
+        "text": "Schedule",
+        "shortText": "Schedule",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "standings",
+         "desktop",
+         "league"
+        ],
+        "href": "https://www.espn.com/mlb/standings",
+        "text": "Standings",
+        "shortText": "Standings",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "standings",
+         "sportscenter",
+         "app",
+         "league"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:1~l:10&section=standings",
+        "text": "Standings",
+        "shortText": "Standings",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "rankings",
+         "desktop",
+         "league"
+        ],
+        "href": "https://www.espn.com/mlb/rankings",
+        "text": "Rankings",
+        "shortText": "Rankings",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "rankings",
+         "sportscenter",
+         "app",
+         "league"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:1~l:10&section=rankings",
+        "text": "Rankings",
+        "shortText": "Rankings",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "scores",
+         "desktop",
+         "league"
+        ],
+        "href": "https://www.espn.com/mlb/scoreboard",
+        "text": "Scores",
+        "shortText": "Scores",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "scores",
+         "sportscenter",
+         "app",
+         "league"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:1~l:10&section=scores",
+        "text": "Scores",
+        "shortText": "Scores",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "stats",
+         "desktop",
+         "league"
+        ],
+        "href": "https://www.espn.com/mlb/stats",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "stats",
+         "sportscenter",
+         "app",
+         "league"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:1~l:10&section=stats",
+        "text": "Stats",
+        "shortText": "Stats",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "teams",
+         "desktop",
+         "league"
+        ],
+        "href": "https://www.espn.com/mlb/teams",
+        "text": "Teams",
+        "shortText": "Teams",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "athletes",
+         "desktop",
+         "league"
+        ],
+        "href": "https://www.espn.com/mlb/players",
+        "text": "Players",
+        "shortText": "Players",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "injuries",
+         "desktop",
+         "league"
+        ],
+        "href": "https://www.espn.com/mlb/injuries",
+        "text": "Injuries",
+        "shortText": "Injuries",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "odds",
+         "desktop",
+         "league"
+        ],
+        "href": "https://www.espn.com/mlb/odds",
+        "text": "Odds",
+        "shortText": "Odds",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "odds",
+         "sportscenter",
+         "app",
+         "league"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:1~l:10&section=odds",
+        "text": "Odds",
+        "shortText": "Odds",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "playoff-bracket",
+         "desktop",
+         "league"
+        ],
+        "href": "https://www.espn.com/mlb/playoff-bracket",
+        "text": "Bracket",
+        "shortText": "Bracket",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "playoff-bracket",
+         "sportscenter",
+         "app",
+         "league"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:1~l:10&section=bracket",
+        "text": "Bracket",
+        "shortText": "Bracket",
+        "isExternal": false,
+        "isPremium": false
+       }
+      ],
+      "franchises": {},
+      "midsizeName": "MLB",
+      "shortName": "MLB",
+      "events": {},
+      "gender": "MALE",
+      "calendar": {}
+     }
+    }
+   ],
+   "teamRelationships": [
+    {
+     "type": "team",
+     "displayName": "New York Yankees",
+     "core": {
+      "id": "10",
+      "uid": "s:1~l:10~t:10",
+      "guid": "2b9cedf3-ce60-0bcf-fafe-8cd055255685",
+      "slug": "new-york-yankees",
+      "location": "New York",
+      "name": "Yankees",
+      "abbreviation": "NYY",
+      "displayName": "New York Yankees",
+      "shortDisplayName": "Yankees",
+      "color": "132448",
+      "alternateColor": "c4ced4",
+      "isActive": true,
+      "isAllStar": false,
+      "logos": [
+       {
+        "href": "https://a.espncdn.com/i/teamlogos/mlb/500/nyy.png",
+        "width": 500,
+        "height": 500,
+        "rel": [
+         "full",
+         "default"
+        ]
+       },
+       {
+        "href": "https://a.espncdn.com/i/teamlogos/mlb/500-dark/nyy.png",
+        "width": 500,
+        "height": 500,
+        "rel": [
+         "full",
+         "dark"
+        ]
+       },
+       {
+        "href": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/nyy.png",
+        "width": 500,
+        "height": 500,
+        "rel": [
+         "full",
+         "scoreboard"
+        ]
+       },
+       {
+        "href": "https://a.espncdn.com/i/teamlogos/mlb/500-dark/scoreboard/nyy.png",
+        "width": 500,
+        "height": 500,
+        "rel": [
+         "full",
+         "scoreboard",
+         "dark"
+        ]
+       },
+       {
+        "href": "https://a.espncdn.com/guid/2b9cedf3-ce60-0bcf-fafe-8cd055255685/logos/primary_logo_on_white_color.png",
+        "width": 4096,
+        "height": 4096,
+        "rel": [
+         "full",
+         "primary_logo_on_white_color"
+        ]
+       },
+       {
+        "href": "https://a.espncdn.com/guid/2b9cedf3-ce60-0bcf-fafe-8cd055255685/logos/primary_logo_on_black_color.png",
+        "width": 4096,
+        "height": 4096,
+        "rel": [
+         "full",
+         "primary_logo_on_black_color"
+        ]
+       },
+       {
+        "href": "https://a.espncdn.com/guid/2b9cedf3-ce60-0bcf-fafe-8cd055255685/logos/primary_logo_on_primary_color.png",
+        "width": 4096,
+        "height": 4096,
+        "rel": [
+         "full",
+         "primary_logo_on_primary_color"
+        ]
+       },
+       {
+        "href": "https://a.espncdn.com/guid/2b9cedf3-ce60-0bcf-fafe-8cd055255685/logos/primary_logo_on_secondary_color.png",
+        "width": 4096,
+        "height": 4096,
+        "rel": [
+         "full",
+         "primary_logo_on_secondary_color"
+        ]
+       },
+       {
+        "href": "https://a.espncdn.com/guid/2b9cedf3-ce60-0bcf-fafe-8cd055255685/logos/primary_logo_black.png",
+        "width": 4096,
+        "height": 4096,
+        "rel": [
+         "full",
+         "primary_logo_black"
+        ]
+       },
+       {
+        "href": "https://a.espncdn.com/guid/2b9cedf3-ce60-0bcf-fafe-8cd055255685/logos/primary_logo_white.png",
+        "width": 4096,
+        "height": 4096,
+        "rel": [
+         "full",
+         "primary_logo_white"
+        ]
+       },
+       {
+        "href": "https://a.espncdn.com/guid/2b9cedf3-ce60-0bcf-fafe-8cd055255685/logos/secondary_logo_on_white_color.png",
+        "width": 4096,
+        "height": 4096,
+        "rel": [
+         "full",
+         "secondary_logo_on_white_color"
+        ]
+       },
+       {
+        "href": "https://a.espncdn.com/guid/2b9cedf3-ce60-0bcf-fafe-8cd055255685/logos/secondary_logo_on_black_color.png",
+        "width": 4096,
+        "height": 4096,
+        "rel": [
+         "full",
+         "secondary_logo_on_black_color"
+        ]
+       },
+       {
+        "href": "https://a.espncdn.com/guid/2b9cedf3-ce60-0bcf-fafe-8cd055255685/logos/secondary_logo_on_primary_color.png",
+        "width": 4096,
+        "height": 4096,
+        "rel": [
+         "full",
+         "secondary_logo_on_primary_color"
+        ]
+       },
+       {
+        "href": "https://a.espncdn.com/guid/2b9cedf3-ce60-0bcf-fafe-8cd055255685/logos/secondary_logo_on_secondary_color.png",
+        "width": 4096,
+        "height": 4096,
+        "rel": [
+         "full",
+         "secondary_logo_on_secondary_color"
+        ]
+       },
+       {
+        "href": "https://a.espncdn.com/guid/2b9cedf3-ce60-0bcf-fafe-8cd055255685/logos/secondary_logo_black.png",
+        "width": 4096,
+        "height": 4096,
+        "rel": [
+         "full",
+         "secondary_logo_black"
+        ]
+       },
+       {
+        "href": "https://a.espncdn.com/guid/2b9cedf3-ce60-0bcf-fafe-8cd055255685/logos/secondary_logo_white.png",
+        "width": 4096,
+        "height": 4096,
+        "rel": [
+         "full",
+         "secondary_logo_white"
+        ]
+       }
+      ],
+      "links": [
+       {
+        "language": "en",
+        "rel": [
+         "clubhouse",
+         "desktop",
+         "team"
+        ],
+        "href": "https://www.espn.com/mlb/team/_/name/nyy/new-york-yankees",
+        "text": "Clubhouse",
+        "shortText": "Clubhouse",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "roster",
+         "desktop",
+         "team"
+        ],
+        "href": "https://www.espn.com/mlb/team/roster/_/name/nyy/new-york-yankees",
+        "text": "Roster",
+        "shortText": "Roster",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "roster",
+         "sportscenter",
+         "app",
+         "team"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:1~l:10~t:10&section=roster",
+        "text": "Roster",
+        "shortText": "Roster",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "stats",
+         "desktop",
+         "team"
+        ],
+        "href": "https://www.espn.com/mlb/team/stats/_/name/nyy/new-york-yankees",
+        "text": "Statistics",
+        "shortText": "Statistics",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "stats",
+         "sportscenter",
+         "app",
+         "team"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:1~l:10~t:10&section=stats",
+        "text": "Statistics",
+        "shortText": "Statistics",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "schedule",
+         "desktop",
+         "team"
+        ],
+        "href": "https://www.espn.com/mlb/team/schedule/_/name/nyy",
+        "text": "Schedule",
+        "shortText": "Schedule",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "schedule",
+         "sportscenter",
+         "app",
+         "team"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:1~l:10~t:10&section=scores",
+        "text": "Schedule",
+        "shortText": "Schedule",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "photos",
+         "desktop",
+         "team"
+        ],
+        "href": "https://www.espn.com/mlb/team/photos/_/name/nyy",
+        "text": "photos",
+        "shortText": "photos",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "tickets",
+         "desktop",
+         "team"
+        ],
+        "href": "https://www.vividseats.com/new-york-yankees-tickets--sports-mlb-baseball/performer/607?wsUser=717",
+        "text": "Tickets",
+        "shortText": "Tickets",
+        "isExternal": true,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "transactions",
+         "desktop",
+         "team"
+        ],
+        "href": "https://www.espn.com/mlb/team/transactions/_/name/nyy",
+        "text": "Transactions",
+        "shortText": "Transactions",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "injuries",
+         "desktop",
+         "team"
+        ],
+        "href": "https://www.espn.com/mlb/team/injuries/_/name/nyy",
+        "text": "Injuries",
+        "shortText": "Injuries",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "depthchart",
+         "desktop",
+         "team"
+        ],
+        "href": "https://www.espn.com/mlb/team/depth/_/name/nyy",
+        "text": "Depth Chart",
+        "shortText": "Depth Chart",
+        "isExternal": false,
+        "isPremium": false
+       },
+       {
+        "language": "en",
+        "rel": [
+         "depthchart",
+         "sportscenter",
+         "app",
+         "team"
+        ],
+        "href": "sportscenter://x-callback-url/showClubhouse?uid=s:1~l:10~t:10&section=depthchart",
+        "text": "Depth Chart",
+        "shortText": "Depth Chart",
+        "isExternal": false,
+        "isPremium": false
+       }
+      ],
+      "groups": {},
+      "coaches": {},
+      "record": {},
+      "athletes": {},
+      "ranks": {},
+      "franchise": {}
+     }
+    }
+   ],
+   "jersey": "99",
+   "position": {
+    "id": "9",
+    "name": "Right Field",
+    "displayName": "Right Fielder",
+    "abbreviation": "RF",
+    "leaf": true,
+    "parent": {
+     "leaf": false
+    },
+    "slug": "right-field"
+   },
+   "relevance": "1500220",
+   "isActive": true,
+   "isRetired": false,
+   "defaultLeagueSlug": "mlb",
+   "label": "MLB - New York Yankees",
+   "uid": "s:1~l:10~a:33192",
+   "headshot": {
+    "href": "https://a.espncdn.com/i/headshots/mlb/players/full/33192.png",
+    "alt": "Aaron Judge"
+   },
+   "links": [
+    {
+     "language": "en",
+     "rel": [
+      "playercard",
+      "desktop",
+      "athlete"
+     ],
+     "href": "https://www.espn.com/mlb/player/_/id/33192",
+     "text": "Player Card",
+     "shortText": "Player Card",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "stats",
+      "desktop",
+      "athlete"
+     ],
+     "href": "https://www.espn.com/mlb/player/stats/_/id/33192/aaron-judge",
+     "text": "Stats",
+     "shortText": "Stats",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "stats",
+      "sportscenter",
+      "app",
+      "athlete"
+     ],
+     "href": "sportscenter://x-callback-url/showClubhouse?uid=s:1~l:10~a:33192&section=stats",
+     "text": "Stats",
+     "shortText": "Stats",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "splits",
+      "desktop",
+      "athlete"
+     ],
+     "href": "https://www.espn.com/mlb/player/splits/_/id/33192/aaron-judge",
+     "text": "Splits",
+     "shortText": "Splits",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "gamelog",
+      "desktop",
+      "athlete"
+     ],
+     "href": "https://www.espn.com/mlb/player/gamelog/_/id/33192/aaron-judge",
+     "text": "Game Log",
+     "shortText": "Game Log",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "gamelog",
+      "sportscenter",
+      "app",
+      "athlete"
+     ],
+     "href": "sportscenter://x-callback-url/showClubhouse?uid=s:1~l:10~a:33192&section=gamelog",
+     "text": "Game Log",
+     "shortText": "Game Log",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "news",
+      "desktop",
+      "athlete"
+     ],
+     "href": "https://www.espn.com/mlb/player/news/_/id/33192/aaron-judge",
+     "text": "News",
+     "shortText": "News",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "news",
+      "sportscenter",
+      "app",
+      "athlete"
+     ],
+     "href": "sportscenter://x-callback-url/showClubhouse?uid=s:1~l:10~a:33192&section=news",
+     "text": "News",
+     "shortText": "News",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "bio",
+      "desktop",
+      "athlete"
+     ],
+     "href": "https://www.espn.com/mlb/player/bio/_/id/33192/aaron-judge",
+     "text": "Bio",
+     "shortText": "Bio",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "bio",
+      "sportscenter",
+      "app",
+      "athlete"
+     ],
+     "href": "sportscenter://x-callback-url/showClubhouse?uid=s:1~l:10~a:33192&section=bio",
+     "text": "Bio",
+     "shortText": "Bio",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "overview",
+      "desktop",
+      "athlete"
+     ],
+     "href": "https://www.espn.com/mlb/player/_/id/33192/aaron-judge",
+     "text": "Overview",
+     "shortText": "Overview",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "overview",
+      "sportscenter",
+      "app",
+      "athlete"
+     ],
+     "href": "sportscenter://x-callback-url/showClubhouse?uid=s:1~l:10~a:33192",
+     "text": "Overview",
+     "shortText": "Overview",
+     "isExternal": false,
+     "isPremium": false
+    },
+    {
+     "language": "en",
+     "rel": [
+      "batvspitch",
+      "desktop",
+      "athlete"
+     ],
+     "href": "https://www.espn.com/mlb/player/batvspitch/_/id/33192/aaron-judge",
+     "text": "Bat vs Pitch",
+     "shortText": "Bat vs Pitch",
+     "isExternal": false,
+     "isPremium": false
+    }
+   ],
+   "includeSponsor": false,
+   "showKey": false,
+   "isLocked": false
+  }
+ ]
+}
