@@ -48,6 +48,10 @@
      "url": "https://www.espn.com/mlb/story/_/id/50058710/aaron-judge-not-yankees-roster-alwcs-source-confirms"
     }
    ],
+   "nextGame": {
+    "date": "2026-10-08T00:00",
+    "name": "TB @ NYY"
+   },
    "note": {
     "date": "Wed Oct 21",
     "headline": "Yankees general manager Brian Cashman said Wednesday that Judge has a follow-up exam scheduled with Dr. Gregory Pearl regarding his rib, Bryan Hoch of MLB.com reports.",
@@ -93,6 +97,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/50256507/steelers-rodgers-backs-nfl-paris-game-recent-unrest"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-01T18:00",
+    "name": "CLE @ PIT"
+   },
    "note": {
     "date": "Sun Nov 01",
     "headline": "Rodgers completed 13 of 25 passes for 172 yards with no touchdowns and one interception in the Steelers' 27-6 win over the Browns on Sunday.",
@@ -138,6 +146,10 @@
      "url": "https://www.espn.com/video/clip/_/id/50198870/anthony-davis-fights-defender-1"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T00:30",
+    "name": "WSH @ ORL"
+   },
    "note": {
     "date": "Mon Nov 02",
     "headline": "Davis contributed 27 points (12-17 FG, 1-1 3Pt, 2-2 FT), nine rebounds, three steals and one assist across 34 minutes in Monday's 103-94 win over the Magic.",
@@ -183,6 +195,10 @@
      "url": "https://www.espn.com/nba/story/_/id/50302115/timberwolves-anthony-edwards-miss-2-months-arthroscopic-knee-procedure"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T01:00",
+    "name": "MIL @ MIN"
+   },
    "note": {
     "date": "Thu Oct 29",
     "headline": "Edwards underwent a successful arthroscopic procedure on his right knee Thursday, the Timberwolves announced.",
@@ -228,6 +244,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/50158033/raiders-rb-ashton-jeanty-active-patriots"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-01T18:00",
+    "name": "LV @ NYJ"
+   },
    "note": {
     "date": "Sun Nov 01",
     "headline": "Jeanty rushed twice for nine yards while catching three of four targets for 64 yards in Sunday's 38-33 win over the Jets.",
@@ -273,6 +293,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/50114045/mnf-falcons-saints-bijan-robinson"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-01T18:00",
+    "name": "ATL @ TB"
+   },
    "note": {
     "date": "Sun Nov 01",
     "headline": "Robinson rushed 19 times for 76 yards and failed to bring in his only target in the Falcons' 16-0 loss to the Buccaneers on Sunday.",
@@ -318,6 +342,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/50177580/broncos-bo-nix-says-needs-simplify-approach-amid-rocky-start"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-01T21:25",
+    "name": "KC @ DEN"
+   },
    "note": {
     "date": "Sun Nov 01",
     "headline": "Nix completed 20 of 32 passes for 222 yards and two touchdowns in Sunday's 28-24 win over Kansas City. He added four rushing yards on three carries and threw a two-point conversion to Jaylen Waddle.",
@@ -326,6 +354,10 @@
   },
   "bobby-witt-jr": {
    "news": [],
+   "nextGame": {
+    "date": "2026-09-27T19:10",
+    "name": "CLE @ KC"
+   },
    "note": {
     "date": "Sat Sep 26",
     "headline": "Witt went 2-for-4 with two runs scored and a stolen base in Saturday's 11-5 loss to the Guardians.",
@@ -371,6 +403,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/50049442/raiders-brock-bowers-shines-return-knee-procedure"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-01T18:00",
+    "name": "LV @ NYJ"
+   },
    "note": {
     "date": "Sun Nov 01",
     "headline": "Bowers caught seven of 10 targets for 92 yards and two touchdowns in Sunday's 38-33 win over the Jets.",
@@ -410,6 +446,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/50005196/san-francisco-49ers-brock-purdy-2026-season-hot-start-expectations"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-08T21:25",
+    "name": "LV @ SF"
+   },
    "note": {
     "date": "Sun Oct 25",
     "headline": "Purdy completed 27 of 40 passes for 288 yards with one touchdown and two interceptions and added two carries for five yards in the 49ers' 29-20 loss to the Falcons on Sunday.",
@@ -431,6 +471,10 @@
      "url": "https://www.espn.com/mlb/story/_/id/50071368/alec-bohm-home-run-caps-phillies-rally-forces-game-3-vs-braves"
     }
    ],
+   "nextGame": {
+    "date": "2026-10-02T00:00",
+    "name": "PHI @ ATL"
+   },
    "note": {
     "date": "Sun Sep 27",
     "headline": "Harper went 1-for-5 with a solo home run in Sunday's 7-3 win over Tampa Bay.",
@@ -476,14 +520,24 @@
      "url": "https://www.espn.com/video/clip/_/id/50262565/cade-cunningham-denies-miami-heat-swat"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T00:30",
+    "name": "DET @ CHA"
+   },
    "note": {
     "date": "Mon Nov 02",
     "headline": "Cunningham tallied 33 points (13-20 FG, 4-7 3Pt, 3-4 FT), five rebounds, seven assists and five steals in 27 minutes during Detroit's 124-91 victory over Charlotte on Monday.",
-    "story": "It only took 27 minutes for Cunningham to record a new season high in scoring and steals, as he accounted for a third of Detroit's 15 total swipes on the night. Monday marked Cunningham's second 30-plus-point outing on the year, and he's now scored 30 or more in two of his last three games. He'll continue providing fantasy contributions across the board for the 6-1 Pistons."
+    "story": "It only took 27 minutes for Cunningham to record a new season high in scoring and steals, as he accounted for a third of Detroit's 15 total swipes on the night. Monday marked Cunningham's second 30-plus-point outing on the year, with both of them coming over his last three games. He'll continue providing fantasy contributions across the board for the 6-1 Pistons."
    }
   },
   "caleb-williams": {
    "news": [
+    {
+     "date": "2026-11-03",
+     "desc": "Caleb Williams wore all-black Caddix cleats after being fined by the NFL for wearing cleats with an \"unauthorized logo\" in weeks 6 and 7.",
+     "title": "Bears' Williams dims cleat controversy with all-black custom pair",
+     "url": "https://www.espn.com/nfl/story/_/id/50367609/chicago-bears-williams-dims-controversy-surrounding-cleats-all-black-custom-pair"
+    },
     {
      "date": "2026-11-03",
      "desc": "Caleb Williams fires a dart to Luther Burden III for a Bears TD",
@@ -513,18 +567,16 @@
      "desc": "Bears quarterback Caleb Williams said Wednesday he will continue to sport the Caddix cleats he was fined $11,941 for wearing during Chicago's Week 6 win at Atlanta -- a fine that he has appealed, according to a source.",
      "title": "Bears' Caleb Williams to continue wearing Caddix 'smart cleats' despite fine",
      "url": "https://www.espn.com/nfl/story/_/id/50311661/bears-qb-caleb-williams-continue-wearing-caddix-cleats-fine"
-    },
-    {
-     "date": "2026-10-23",
-     "desc": "Orlovsky: It's 'scary' we still haven't seen the best version of Caleb Williams yet",
-     "title": "Orlovsky: It's 'scary' we still haven't seen the best version of Caleb Williams yet",
-     "url": "https://www.espn.com/video/clip/_/id/50257788/scary-seen-best-version-caleb-williams-yet"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T01:15",
+    "name": "CHI @ SEA"
+   },
    "note": {
-    "date": "Thu Oct 22",
-    "headline": "Williams completed 22 of 33 passes for 308 yards with two touchdowns and no interceptions while rushing five times for 18 yards in the Bears' 30-24 win over the Patriots on Thursday.",
-    "story": "Williams spearheaded another prolific performance for the Bears offense, leading his squad to another 30-point tally while eclipsing the 300-yard mark for the second time in five days. He tied his season high with 9.3 yards per attempt, and he accomplished his stellar numbers while focusing on a tight pool of five targets. The 2024 first overall pick's two touchdown passes went to Luther Burden (24 yards) and Colston Loveland (12 yards), marking Williams' first multi-TD tally since Week 1. Williams appears to be clicking on all cylinders in his second season in head coach Ben Johnson's aggress"
+    "date": "Mon Nov 02",
+    "headline": "Williams completed 24 of 34 passes for 247 yards with one touchdown and no interceptions and rushed twice for one yard in the Bears' 34-17 win over the Seahawks on Monday night.",
+    "story": "Williams helped set the tone for the Bears' statement road victory by leading a 17-play, 80-yard march that absorbed 8:32 of the first quarter, one that the third-year signal-caller capped off with a one-yard touchdown pass to Luther Burden. Williams then managed the game effectively from that point forward, avoiding mistakes while leaning on a workhorse performance from D'Andre Swift (27 carries, three touchdowns) and an often dominating effort from his defense. Williams now has a three-game streak of interception-free performances and is up to 1,267 passing yards through five contests headin"
    }
   },
   "cam-ward": {
@@ -566,6 +618,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/49785594/tennessee-titans-cam-ward-putting-job-line-robert-saleh"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-01T18:00",
+    "name": "TEN @ CIN"
+   },
    "note": {
     "date": "Sun Nov 01",
     "headline": "Ward completed 26 of 40 passes for 304 yards and two touchdowns in Sunday's 43-36 overtime loss to the Bengals. He added seven rushing attempts for 41 yards, lost a fumble, ran in a two-point conversion and threw a successful two-point conversion.",
@@ -611,6 +667,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/50005134/nfl-dallas-cowboys-ceedee-lamb-george-pickens"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-01T18:00",
+    "name": "ARI @ DAL"
+   },
    "note": {
     "date": "Sun Nov 01",
     "headline": "Lamb recorded seven catches (on 11 targets) for 58 yards during Sunday's 33-30 overtime loss to the Cardinals.",
@@ -644,6 +704,10 @@
      "url": "https://www.espn.com/nba/story/_/id/49001812/thunder-gm-sam-presti-defends-chet-holmgren-shai-gilgeous-alexander"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T00:00",
+    "name": "OKC @ CLE"
+   },
    "note": {
     "date": "Fri Oct 30",
     "headline": "Holmgren underwent a biological treatment Friday to address a small patellar tendon tear and will miss at least 8-10 weeks, Nick Crain of Slam reports.",
@@ -671,6 +735,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/49935565/san-francisco-49ers-christian-mccaffrey-kaelon-black-running-back-balance"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-08T21:25",
+    "name": "LV @ SF"
+   },
    "note": {
     "date": "Mon Oct 26",
     "headline": "McCaffrey is dealing with a mild hamstring strain rather than a quadriceps injury, and the 49ers believe he'll be ready following the team's Week 8 bye, David Lombardi of SF Standard reports.",
@@ -710,6 +778,10 @@
      "url": "https://www.espn.com/fantasy/football/story/_/id/50126170/fantasy-football-streamers-last-minute-pickups-week-5"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-08T21:05",
+    "name": "HOU @ LAC"
+   },
    "note": {
     "date": "Sun Oct 25",
     "headline": "Stroud completed 17 of 28 passes for 153 yards and two touchdowns in Sunday's 27-21 overtime loss to the Giants. He added two rushing attempts for four yards and threw a successful two-point conversion.",
@@ -755,6 +827,10 @@
      "url": "https://www.espn.com/mlb/story/_/id/47401858/clayton-kershaw-los-angeles-dodgers-fifth-baby-chloe-peach"
     }
    ],
+   "nextGame": {
+    "date": "2026-10-16T00:00",
+    "name": "MIL @ LAD"
+   },
    "note": {
     "date": "Sat Oct 04",
     "headline": "Kershaw is included on the Dodgers' NLDS roster.",
@@ -800,6 +876,10 @@
      "url": "https://www.espn.com/video/clip/_/id/50294484/cooper-flagg-delivers-crunch-lead-mavs-victory"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T01:00",
+    "name": "SAC @ DAL"
+   },
    "note": {
     "date": "Fri Oct 30",
     "headline": "Flagg finished Friday's 116-111 win over the Rockets with 33 points (13-19 FG, 0-4 3Pt, 7-10 FT), nine rebounds, six assists, two steals and one block across 39 minutes.",
@@ -808,6 +888,10 @@
   },
   "corbin-carroll": {
    "news": [],
+   "nextGame": {
+    "date": "2026-09-27T19:10",
+    "name": "ARI @ SD"
+   },
    "note": {
     "date": "Thu Sep 24",
     "headline": "Carroll went 1-for-4 with a triple and two RBI in Wednesday's 5-3 win over Colorado.",
@@ -817,10 +901,10 @@
   "damian-lillard": {
    "news": [
     {
-     "date": "2026-10-31",
+     "date": "2026-11-03",
      "desc": "Damian Lillard gets the hoop and the harm",
      "title": "Damian Lillard gets the hoop and the harm",
-     "url": "https://www.espn.com/video/clip/_/id/50339790/damian-lillard-gets-hoop-harm"
+     "url": "https://www.espn.com/video/clip/_/id/50364914/damian-lillard-gets-hoop-harm"
     },
     {
      "date": "2026-10-28",
@@ -853,6 +937,10 @@
      "url": "https://www.espn.com/video/clip/_/id/50244324/damian-lillard-delivers-first-triple-return-blazers"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T02:00",
+    "name": "POR @ DEN"
+   },
    "note": {
     "date": "Sat Oct 31",
     "headline": "Lillard produced 22 points (6-17 FG, 3-10 3Pt, 7-8 FT), five rebounds, four assists, one block and two steals over 27 minutes during Saturday's 112-90 victory over the Jazz.",
@@ -898,10 +986,14 @@
      "url": "https://www.espn.com/nba/story/_/id/49099949/devin-booker-phoenix-suns-nba-jersey-number-no-1-change-no-15"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T03:00",
+    "name": "PHX @ GS"
+   },
    "note": {
-    "date": "Sat Oct 31",
-    "headline": "Booker totaled 20 points (7-19 FG, 3-7 3Pt, 3-4 FT), two rebounds, five assists and two steals in 39 minutes during Friday's 127-120 loss to Denver.",
-    "story": "Booker struggled with his shot on his 30th birthday, but Miles Bridges, Dillon Brooks and Collin Gillespie picked up the slack. The star guard also committed four turnovers and played a team-high 39 minutes as Phoenix fell to 1-3. The Suns need more efficiency from their franchise player, and he'll look for a better night Monday against the Warriors."
+    "date": "Mon Nov 02",
+    "headline": "Booker finished with 26 points (8-18 FG, 2-4 3Pt, 8-8 FT), three rebounds and five assists in 35 minutes during Monday's 116-113 loss to Golden State.",
+    "story": "Booker turned in a solid offensive night, which included a perfect showing from the charity stripe. He led his team in scoring, but it wasn't quite enough to steal a victory. Booker has scored 20 or more points in four of his first five appearances of the 2026-27 season."
    }
   },
   "donovan-mitchell": {
@@ -943,6 +1035,10 @@
      "url": "https://www.espn.com/nba/story/_/id/50076885/cavs-donovan-mitchell-signs-new-multi-year-deal-adidas"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T00:00",
+    "name": "OKC @ CLE"
+   },
    "note": {
     "date": "Mon Nov 02",
     "headline": "Mitchell totaled 17 points (6-17 FG, 4-9 3Pt, 1-4 FT), five rebounds and 11 assists in 36 minutes during Monday's 117-112 loss to the Thunder.",
@@ -976,6 +1072,10 @@
      "url": "https://www.espn.com/fantasy/football/story/_/page/FFSundayHighLows-50160964/nfl-week-5-fantasy-football-winners-losers-injuries-rankings-more"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-01T21:25",
+    "name": "NE @ MIA"
+   },
    "note": {
     "date": "Sun Nov 01",
     "headline": "Maye completed 16 of 20 passes for 199 yards and two touchdowns in Sunday's 24-19 win over the Dolphins. He added five rushing yards and a TD on eight carries.",
@@ -1021,10 +1121,14 @@
      "url": "https://www.espn.com/video/clip/_/id/50263328/dylan-harper-goes-flying-poster-dunk"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T01:30",
+    "name": "UTAH @ SA"
+   },
    "note": {
-    "date": "Thu Oct 29",
-    "headline": "Harper racked up 13 points (4-17 FG, 2-4 3Pt, 3-3 FT), five rebounds, eight assists and one steal in 37 minutes during Wednesday's 117-111 overtime victory over Utah.",
-    "story": "Harper struggled with his shot, connecting on just four of 17 field-goal attempts, but compensated with a season-high eight assists. The second-year guard has started all five games this season and has scored at least 13 points in each contest. Harper's 37 minutes marked a season high, and his growing playmaking contributions are encouraging for his fantasy outlook."
+    "date": "Mon Nov 02",
+    "headline": "Harper finished with 17 points (6-10 FG, 1-2 3Pt, 4-5 FT), seven rebounds, eight assists and two steals in 27 minutes during Monday's 119-97 win over the Jazz.",
+    "story": "Harper led his team in scoring in what turned out to be a well-balanced attack from San Antonio. The Rutgers product continues to produce across the board and is averaging 17.0 points, 6.3 rebounds, 7.0 assists and 1.5 steals over his last four games."
    }
   },
   "elly-de-la-cruz": {
@@ -1036,6 +1140,10 @@
      "url": "https://www.espn.com/mlb/story/_/id/50030238/de-la-cruz-becomes-4th-reds-player-achieve-30-homer-30-steal-season"
     }
    ],
+   "nextGame": {
+    "date": "2026-09-27T19:07",
+    "name": "CIN @ TOR"
+   },
    "note": {
     "date": "Fri Sep 25",
     "headline": "De La Cruz went 1-for-4 with a two-run double and a steal during the Reds' 6-5 loss to the Blue Jays on Friday.",
@@ -1057,6 +1165,10 @@
      "url": "https://www.espn.com/mlb/story/_/id/50064499/padres-pummel-cubs-tatis-leadoff-blast-king-gem-game-1"
     }
    ],
+   "nextGame": {
+    "date": "2026-10-08T02:00",
+    "name": "MIL @ SD"
+   },
    "note": {
     "date": "Sun Sep 27",
     "headline": "Tatis is not in the lineup for Sunday's tilt versus the Diamondbacks.",
@@ -1078,6 +1190,10 @@
      "url": "https://www.espn.com/mlb/story/_/id/50044380/francisco-lindor-hits-300th-career-home-run-mets-finale"
     }
    ],
+   "nextGame": {
+    "date": "2026-09-27T17:05",
+    "name": "NYM @ WSH"
+   },
    "note": {
     "date": "Mon Sep 28",
     "headline": "Lindor went 2-for-4 with a solo home run and an additional run scored in Sunday's 6-4 loss to the Nationals.",
@@ -1086,6 +1202,18 @@
   },
   "giannis-antetokounmpo": {
    "news": [
+    {
+     "date": "2026-11-03",
+     "desc": "Luka Doncic's volcanic scoring spree continued Monday with 42 points in the Lakers' 138-117 win over the Heat, prompting Giannis Antetokounmpo to call him \"one of the best scorers to play this game.\"",
+     "title": "Luka scores 42 points, earns high praise from Giannis as hot streak continues",
+     "url": "https://www.espn.com/nba/story/_/id/50366831/luka-doncic-earns-praise-giannis-antetokounmpo-hot-streak-continues-lakers-win-vs-heat"
+    },
+    {
+     "date": "2026-11-03",
+     "desc": "Giannis Antetokounmpo gets the basket plus the foul",
+     "title": "Giannis Antetokounmpo fights off defender for and-1",
+     "url": "https://www.espn.com/video/clip/_/id/50364743/giannis-antetokounmpo-fights-defender-1"
+    },
     {
      "date": "2026-11-03",
      "desc": "Giannis Antetokounmpo gets up for the beautiful dunk",
@@ -1109,24 +1237,16 @@
      "desc": "Giannis Antetokounmpo gets the hoop and the harm",
      "title": "Giannis Antetokounmpo gets the hoop and the harm",
      "url": "https://www.espn.com/video/clip/_/id/50332355/giannis-antetokounmpo-gets-hoop-harm"
-    },
-    {
-     "date": "2026-10-31",
-     "desc": "Giannis Antetokounmpo gets the hoop and the harm",
-     "title": "Giannis Antetokounmpo somehow gets the and-1 to fall",
-     "url": "https://www.espn.com/video/clip/_/id/50332046/giannis-antetokounmpo-somehow-gets-1-fall"
-    },
-    {
-     "date": "2026-10-29",
-     "desc": "Giannis Antetokounmpo blows by multiple defenders on his way to big jam",
-     "title": "Giannis Antetokounmpo blows by multiple defenders on his way to big jam",
-     "url": "https://www.espn.com/video/clip/_/id/50314680/giannis-antetokounmpo-blows-multiple-defenders-way-big-jam"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T03:00",
+    "name": "MIA @ LAL"
+   },
    "note": {
-    "date": "Fri Oct 30",
-    "headline": "Antetokounmpo racked up 31 points (13-18 FG, 1-2 3Pt, 4-6 FT), 17 rebounds, 10 assists and one block across 31 minutes in Friday's 145-125 win over the Pacers.",
-    "story": "Antetokounmpo turned in an extremely efficient shooting performance en route to a game-high scoring total. The superstar forward also led all players in rebounds while finishing second in assists, securing his second triple-double of the season. He's reached the 30-point threshold in three of his six regular-season outings and is now shooting 59.1 percent from the field on the campaign."
+    "date": "Mon Nov 02",
+    "headline": "Antetokounmpo collected 30 points (10-17 FG, 0-3 3Pt, 10-15 FT), 12 rebounds, seven assists, one steal and two blocks in 34 minutes during Monday's 138-117 loss to the Lakers.",
+    "story": "Antetokounmpo delivered yet another strong all-around performance, posting his second straight 30-point showing while making his presence felt on the boards. He also made an impact as a playmaker by tying Davion Mitchell for the team lead in dimes. Antetokounmpo is averaging 28.4 points, 12.3 rebounds and 5.7 assists through his first seven games with Miami."
    }
   },
   "gunnar-henderson": {
@@ -1183,6 +1303,10 @@
      "url": "https://www.espn.com/video/clip/_/id/50199596/ja-morant-1-bucket"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T02:00",
+    "name": "POR @ DEN"
+   },
    "note": {
     "date": "Fri Oct 30",
     "headline": "Morant has been diagnosed with a Grade 2 left hamstring strain and is expected to miss four weeks, Portland announced Friday.",
@@ -1216,6 +1340,10 @@
      "url": "https://www.espn.com/mlb/story/_/id/50105344/jackson-chourio-walk-single-lifts-brewers-2-0-nlds-edge"
     }
    ],
+   "nextGame": {
+    "date": "2026-10-29T00:00",
+    "name": "MIL @ TB"
+   },
    "note": {
     "date": "Mon Oct 26",
     "headline": "Chourio went 4-for-5 with a double, a stolen base, an RBI and two runs in Game 3 of the World Series against the Rays on Monday.",
@@ -1282,6 +1410,10 @@
      "url": "https://www.espn.com/nba/story/_/id/50284920/jalen-brunson-knicks-sputtering-offense-amid-0-3-start-says-everything-falls-my-shoulders"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T00:30",
+    "name": "BKN @ NY"
+   },
    "note": {
     "date": "Mon Nov 02",
     "headline": "Brunson collected 19 points (6-16 FG, 4-11 3Pt, 3-6 FT), two rebounds and six assists in 34 minutes during Monday's 103-90 win over Brooklyn.",
@@ -1327,6 +1459,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/50239029/roger-goodell-nfl-welcomes-probe-hurts-medical-care"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-02T01:20",
+    "name": "PHI @ WSH"
+   },
    "note": {
     "date": "Mon Oct 19",
     "headline": "Hurts (calf) is expected to be held out of football activities for multiple months and miss the rest of the season after new imaging over the weekend revealed several blood clots in his lungs, Tom Pelissero of Netflix reports.",
@@ -1372,6 +1508,10 @@
      "url": "https://www.espn.com/fantasy/football/story/_/id/49950210/espn-nfl-fantasy-football-knockout-league-picks-strategy-adds"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-01T18:00",
+    "name": "TEN @ CIN"
+   },
    "note": {
     "date": "Sun Nov 01",
     "headline": "Chase secured 11 of 16 targets for 141 yards and a touchdown in the Bengals' 43-36 overtime win over the Titans on Sunday.",
@@ -1405,6 +1545,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/50177238/parsons-qb-daniels-probably-cost-my-man-dan-quinn-job"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-02T01:20",
+    "name": "PHI @ WSH"
+   },
    "note": {
     "date": "Sun Nov 01",
     "headline": "Daniels completed 16 of 29 passes for 217 yards and a touchdown while rushing twice for 23 yards in Sunday's 27-10 win over the Eagles.",
@@ -1442,18 +1586,16 @@
      "desc": "On Big Day with Peter Schrager, Peter Schrager, Domonique Foxworth, Steve Smith Sr. and Brian Windhorst weigh in on the Jaylen Brown and Jayson Tatum drama and the New York Knicks being 0-3 to start the season.",
      "title": "Jayson Tatum vs. Jaylen Brown: Is it beef or is it nothing?",
      "url": "https://www.espn.com/video/clip/_/id/50289181/beef-nothing"
-    },
-    {
-     "date": "2026-10-25",
-     "desc": "In the latest turn in the relationship between former teammates, Jaylen Brown said Jayson Tatum should \"stay ready at all times\" while denying the two have beef.",
-     "title": "76ers' Jaylen Brown claims no beef but says Jayson Tatum has 'hell of a PR team'",
-     "url": "https://www.espn.com/nba/story/_/id/50273329/76ers-brown-claims-no-beef-says-tatum-stay-ready-all-s"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T01:30",
+    "name": "BOS @ HOU"
+   },
    "note": {
-    "date": "Sun Nov 01",
-    "headline": "Tatum racked up 32 points (8-19 FG, 1-5 3Pt, 15-17 FT), four rebounds, seven assists and two blocks over 34 minutes during Sunday's 108-97 victory over the Magic.",
-    "story": "Tatum went back to the locker room after bumping heads with Jamal Cain in the first quarter, but the Celtics' superstar was able to return and recorded his third 30-plus point outing of the season. Tatum made another massive impact from the charity stripe, attempting 17 or more free throws for the second time in 2026-27, and has now dished out at least six assists in every contest. His struggles from beyond the arc continued, however, but he'll continue providing contributions across the board as the unquestioned leader in Boston."
+    "date": "Mon Nov 02",
+    "headline": "Tatum totaled 19 points (5-16 FG, 1-7 3Pt, 8-8 FT), six rebounds, nine assists and one steal in 32 minutes during Monday's 109-93 loss to Houston.",
+    "story": "Tatum struggled to get his shot to fall but still managed to lead Boston in scoring. He's hitting at a clip of 23.1 percent from deep over his last four matchups, though that hasn't prevented him from tallying 20-plus points in three of the four showings. Tatum has also managed to find success as a playmaker, as he's now averaging 7.9 dimes in seven games this season."
    }
   },
   "joe-burrow": {
@@ -1495,6 +1637,10 @@
      "url": "https://www.espn.com/fantasy/football/story/_/page/FFSundayHighLows-50280888/nfl-week-7-fantasy-football-winners-losers-injuries-rankings-more"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-01T18:00",
+    "name": "TEN @ CIN"
+   },
    "note": {
     "date": "Sun Nov 01",
     "headline": "Burrow completed 38 of 48 passes for 462 yards with five touchdowns and three interceptions and added three carries for 10 yards and another score in the Bengals' 43-36 overtime win over the Titans on Sunday.",
@@ -1540,6 +1686,10 @@
      "url": "https://www.espn.com/video/clip/_/id/50273192/joel-embiid-stuffs-stat-sheet-triple-double-win-bucks"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T00:30",
+    "name": "CHI @ PHI"
+   },
    "note": {
     "date": "Mon Nov 02",
     "headline": "Embiid (foot) is available for Monday's game against the Bulls, Austin Krell of OnPattison.com reports.",
@@ -1585,6 +1735,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/50230871/bills-qb-josh-allen-good-bad-bye"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-01T18:00",
+    "name": "BAL @ BUF"
+   },
    "note": {
     "date": "Sun Nov 01",
     "headline": "Allen completed 21 of 34 passes for 289 yards, two touchdowns and one interception in Sunday's 36-10 win over the Ravens. He added 30 rushing yards and a rushing touchdown on seven rushing attempts.",
@@ -1606,6 +1760,10 @@
      "url": "https://www.espn.com/mlb/story/_/id/49763386/mets-activate-juan-soto-calf-strain-injured-list"
     }
    ],
+   "nextGame": {
+    "date": "2026-09-27T17:05",
+    "name": "NYM @ WSH"
+   },
    "note": {
     "date": "Sun Sep 27",
     "headline": "Soto (hand) is in the starting lineup for Sunday's game against the Nationals.",
@@ -1621,6 +1779,10 @@
      "url": "https://www.espn.com/mlb/story/_/id/49395063/seattle-mariners-welcome-julio-rodriguez-back-lineup"
     }
    ],
+   "nextGame": {
+    "date": "2026-09-27T19:10",
+    "name": "LAA @ SEA"
+   },
    "note": {
     "date": "Thu Sep 24",
     "headline": "Rodriguez went 2-for-4 with a two-run home run in Thursday's 6-4 loss to the Angels.",
@@ -1666,6 +1828,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/50016633/herbert-shuts-leadership-questions-amid-chargers-0-2-start"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-01T21:05",
+    "name": "LAC @ LAR"
+   },
    "note": {
     "date": "Sun Nov 01",
     "headline": "Herbert completed 24 of 32 passes for 257 yards with no touchdowns and two interceptions while rushing four times for 15 yards in the Chargers' 24-9 loss to the Rams on Sunday. He also committed a fumble that remained with the Chargers.",
@@ -1705,6 +1871,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/50128245/vikings-justin-jefferson-says-plan-play-week-5-vs-saints"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-01T18:00",
+    "name": "MIN @ DET"
+   },
    "note": {
     "date": "Sun Nov 01",
     "headline": "Jefferson brought in five of nine targets for 33 yards and a touchdown in the Vikings' 19-15 loss to the Lions on Sunday.",
@@ -1744,6 +1914,10 @@
      "url": "https://www.espn.com/nba/story/_/id/50054070/clippers-apologize-fans-vow-move-leonard-investigation"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T03:00",
+    "name": "TOR @ LAC"
+   },
    "note": {
     "date": "Thu Oct 29",
     "headline": "Leonard (knee) is expected to be sidelined for at least three to four weeks, Chris Haynes of NBA TV reports.",
@@ -1789,6 +1963,10 @@
      "url": "https://www.espn.com/video/clip/_/id/50272266/kevin-durant-elevates-slam-dunk"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T01:30",
+    "name": "BOS @ HOU"
+   },
    "note": {
     "date": "Fri Oct 30",
     "headline": "Durant finished with 28 points (9-20 FG, 1-6 3Pt, 9-13 FT), five rebounds and one assist over 37 minutes in Friday's 116-111 loss to Dallas.",
@@ -1834,6 +2012,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/50299565/inside-complicated-injury-history-ravens-lamar-jackson"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-01T18:00",
+    "name": "BAL @ BUF"
+   },
    "note": {
     "date": "Sun Nov 01",
     "headline": "Ravens head coach Jesse Minter said after Sunday's 36-10 loss to the Bills that Jackson will undergo surgery to address his right thumb injury and will be placed on injured reserve,  Brian Wacker of The Baltimore Sun reports.",
@@ -1842,6 +2024,12 @@
   },
   "lamelo-ball": {
    "news": [
+    {
+     "date": "2026-11-03",
+     "desc": "LaMelo Ball drops 34-point game for Timberwolves",
+     "title": "LaMelo Ball drops 34-point game for Timberwolves",
+     "url": "https://www.espn.com/video/clip/_/id/50364608/lamelo-ball-drops-34-point-game-timberwolves"
+    },
     {
      "date": "2026-11-03",
      "desc": "LaMelo Ball buries 3-pointer against Milwaukee Bucks",
@@ -1871,14 +2059,12 @@
      "desc": "LaMelo Ball buries 3-pointer against Milwaukee Bucks",
      "title": "LaMelo Ball buries 3-pointer against Milwaukee Bucks",
      "url": "https://www.espn.com/video/clip/_/id/50362759/lamelo-ball-buries-3-pointer-milwaukee-bucks"
-    },
-    {
-     "date": "2026-10-31",
-     "desc": "LaMelo Ball drains 3-pointer vs. LA Clippers",
-     "title": "LaMelo Ball drills 3-pointer vs. LA Clippers",
-     "url": "https://www.espn.com/video/clip/_/id/50332628/lamelo-ball-drills-3-pointer-vs-la-clippers"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T01:00",
+    "name": "MIL @ MIN"
+   },
    "note": {
     "date": "Mon Nov 02",
     "headline": "Ball tallied 34 points (12-21 FG, 6-13 3Pt, 4-5 FT), six rebounds, three assists and one steal in 33 minutes during Monday's 112-100 win over Milwaukee.",
@@ -1887,6 +2073,12 @@
   },
   "lebron-james": {
    "news": [
+    {
+     "date": "2026-11-03",
+     "desc": "LeBron James took a sip of a fan's wine during the 76ers 126-107 win over the Bulls, saying he wanted to try \"how good it was.\"",
+     "title": "LeBron James takes sip of wine after crashing into 76ers fan",
+     "url": "https://www.espn.com/nba/story/_/id/50365929/lebron-james-takes-sip-wine-crashing-76ers-fan"
+    },
     {
      "date": "2026-11-03",
      "desc": "LeBron James pretends to sip fan's drink",
@@ -1906,7 +2098,7 @@
      "url": "https://www.espn.com/video/clip/_/id/50362512/lebron-james-elevates-dunk"
     },
     {
-     "date": "2026-11-02",
+     "date": "2026-11-03",
      "desc": "In 2024, Bronny James joined his father LeBron on the Los Angeles Lakers. Take a closer look at the highest-scoring father-son duos in NBA history.",
      "title": "Which NBA father-son duos have the most points?",
      "url": "https://www.espn.com/nba/story/_/id/41571864/most-nba-points-father-son-duo"
@@ -1916,14 +2108,12 @@
      "desc": "LeBron James and Joel Embiid are out for the Sixers on Saturday in the second game of a back-to-back. It's the first time Philly is without both players at the same time.",
      "title": "76ers' LeBron James, Joel Embiid sit against Hornets",
      "url": "https://www.espn.com/nba/story/_/id/50337638/lebron-james-joel-embiid-76ers-vs-hornets"
-    },
-    {
-     "date": "2026-10-31",
-     "desc": "LeBron James rescued Philadelphia late against the Knicks in what coach Nick Nurse called his best game as a Sixer.",
-     "title": "LeBron James shines vs. Knicks in 'his best game' with 76ers",
-     "url": "https://www.espn.com/nba/story/_/id/50333418/lebron-james-shines-vs-knicks-best-game-76ers"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T00:30",
+    "name": "CHI @ PHI"
+   },
    "note": {
     "date": "Sun Nov 01",
     "headline": "James is not listed on Philadelphia's injury report for Monday's game against the Bulls.",
@@ -1932,6 +2122,30 @@
   },
   "luka-doncic": {
    "news": [
+    {
+     "date": "2026-11-03",
+     "desc": "Luka Doncic's volcanic scoring spree continued Monday with 42 points in the Lakers' 138-117 win over the Heat, prompting Giannis Antetokounmpo to call him \"one of the best scorers to play this game.\"",
+     "title": "Luka scores 42 points, earns high praise from Giannis as hot streak continues",
+     "url": "https://www.espn.com/nba/story/_/id/50366831/luka-doncic-earns-praise-giannis-antetokounmpo-hot-streak-continues-lakers-win-vs-heat"
+    },
+    {
+     "date": "2026-11-03",
+     "desc": "Luka Doncic's 42-point double-double leads Lakers to victory",
+     "title": "Luka Doncic's 42-point double-double leads Lakers to victory",
+     "url": "https://www.espn.com/video/clip/_/id/50366043/luka-doncic-42-point-double-double-leads-lakers-victory"
+    },
+    {
+     "date": "2026-11-03",
+     "desc": "Luka Doncic gets the basket plus the foul",
+     "title": "Luka Doncic gets the basket plus the foul",
+     "url": "https://www.espn.com/video/clip/_/id/50365993/luka-doncic-gets-basket-plus-foul"
+    },
+    {
+     "date": "2026-11-03",
+     "desc": "Luka Doncic nails the 3-point shot vs. Miami Heat",
+     "title": "Luka Doncic nails the 3-point shot vs. Miami Heat",
+     "url": "https://www.espn.com/video/clip/_/id/50365402/luka-doncic-nails-3-point-shot-vs-miami-heat"
+    },
     {
      "date": "2026-11-03",
      "desc": "Luka Doncic knocks down the 3-point shot",
@@ -1943,36 +2157,16 @@
      "desc": "Luka Doncic scored 45 points Sunday in the Lakers' 131-125 win over the Raptors, but it was his defensive impact that drew the most praise.",
      "title": "Luka Doncic touts his improved defense, draws praise from Lakers, Raptors",
      "url": "https://www.espn.com/nba/story/_/id/50356293/lakers-luka-doncic-touts-improved-defense-win-vs-raptors"
-    },
-    {
-     "date": "2026-11-02",
-     "desc": "Luka Doncic all smiles after 45-point performance lifts Lakers past Raptors",
-     "title": "Luka Doncic all smiles after 45-point performance lifts Lakers past Raptors",
-     "url": "https://www.espn.com/video/clip/_/id/50355572/luka-doncic-all-smiles-45-point-performance-lifts-lakers-raptors"
-    },
-    {
-     "date": "2026-11-02",
-     "desc": "Luka Doncic easily sinks deep 3",
-     "title": "Luka Doncic easily sinks deep 3",
-     "url": "https://www.espn.com/video/clip/_/id/50355085/luka-doncic-easily-sinks-deep-3"
-    },
-    {
-     "date": "2026-11-02",
-     "desc": "Luka Doncic nails the 3-pointer vs. Toronto Raptors",
-     "title": "Luka Doncic nails the 3-pointer vs. Toronto Raptors",
-     "url": "https://www.espn.com/video/clip/_/id/50354792/luka-doncic-nails-3-pointer-vs-toronto-raptors"
-    },
-    {
-     "date": "2026-10-31",
-     "desc": "Luka Doncic drains fadeaway 3-pointer",
-     "title": "Luka Doncic drains fadeaway 3-pointer",
-     "url": "https://www.espn.com/video/clip/_/id/50333194/luka-doncic-drains-fadeaway-3-pointer"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T03:00",
+    "name": "MIA @ LAL"
+   },
    "note": {
-    "date": "Sun Nov 01",
-    "headline": "Doncic posted 45 points (12-23 FG, 8-12 3Pt, 13-13 FT), 15 rebounds, six assists, five steals and one block over 35 minutes in a 131-125 win over the Raptors on Sunday.",
-    "story": "Doncic set the tone early with a sensational first quarter, when he logged 16 points and four of his game-high six steals. He scored at least eight points in each of the next three quarters and also grabbed a season-high 15 boards en route to his second double-double of the 2026-27 campaign. Doncic has three games of 40-plus points this season and is averaging 37.7 points, 8.2 rebounds, 7.3 assists, 5.8 threes, 1.8 steals and 0.8 blocks over 35.8 minutes per game."
+    "date": "Mon Nov 02",
+    "headline": "Doncic erupted for 42 points (14-24 FG, 6-15 3Pt, 8-10 FT), seven rebounds, 13 assists and two steals across 36 minutes in Monday's 138-117 victory over Miami.",
+    "story": "Doncic has now eclipsed the 40-point mark in two consecutive games, as he's combined for 87 points over that stretch. The Lakers superstar led all players in scoring, three-pointers, made field goals, and assists in LA's second straight win. Doncic has topped 40-plus points in four of his seven regular-season outings, including a season-high 52 points in a win over the Jazz on Oct. 25. During that five-game span, he's averaging 43.4 ppg with 6.8 three-pointers, 8.4 rebounds and 8.6 assists in 36.6 minutes per."
    }
   },
   "malik-nabers": {
@@ -2014,6 +2208,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/49934374/giants-wr-malik-nabers-knee-active-opener-vs-cowboys"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-08T18:00",
+    "name": "NYG @ PHI"
+   },
    "note": {
     "date": "Sun Oct 25",
     "headline": "Nabers caught seven of nine targets for 111 yards in Sunday's 27-21 overtime win over the Texans.",
@@ -2059,6 +2257,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/50148192/why-marvin-harrison-trade-texans-cardinals"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-08T21:05",
+    "name": "HOU @ LAC"
+   },
    "note": {
     "date": "Sun Oct 25",
     "headline": "Harrison caught one of four targets for a six-yard touchdown in Sunday's 27-21 overtime loss to the Giants.",
@@ -2080,6 +2282,10 @@
      "url": "https://www.espn.com/mlb/story/_/id/49798568/mike-trout-needed-sale-angels-fresh-start"
     }
    ],
+   "nextGame": {
+    "date": "2026-09-27T19:10",
+    "name": "LAA @ SEA"
+   },
    "note": {
     "date": "Mon Sep 28",
     "headline": "Angels interim general manager John Mozeliak said Monday that Trout approached him about playing left field and designated hitter next season, Jeff Fletcher of The Orange County Register reports.",
@@ -2088,6 +2294,10 @@
   },
   "mookie-betts": {
    "news": [],
+   "nextGame": {
+    "date": "2026-10-16T00:00",
+    "name": "MIL @ LAD"
+   },
    "note": {
     "date": "Fri Sep 25",
     "headline": "Betts went 3-for-5 with a double, a walk and a run scored in Thursday's 4-2 loss to the Padres.",
@@ -2133,6 +2343,10 @@
      "url": "https://www.espn.com/video/clip/_/id/50272808/nikola-jokic-fights-defender-1"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T02:00",
+    "name": "POR @ DEN"
+   },
    "note": {
     "date": "Sat Oct 31",
     "headline": "Jokic posted 18 points (8-13 FG, 0-1 3Pt, 2-2 FT), seven rebounds, 10 assists and three steals in 37 minutes during Friday's 127-120 win over Phoenix.",
@@ -2178,6 +2392,10 @@
      "url": "https://www.espn.com/nba/story/_/id/40424508/nba-draft-top-pick-fashion-wembanyama-lebron"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T00:30",
+    "name": "WSH @ ORL"
+   },
    "note": {
     "date": "Sat Oct 24",
     "headline": "Banchero is expected to be sidelined for the next four-to-six weeks due to a right high-ankle sprain, Shams Charania of ESPN reports.",
@@ -2223,6 +2441,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/50215969/chiefs-patrick-mahomes-ties-tom-brady-fastest-100-career-wins"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-01T21:25",
+    "name": "KC @ DEN"
+   },
    "note": {
     "date": "Sun Nov 01",
     "headline": "Mahomes completed 30 of 41 passes for 321 yards and three touchdowns in Sunday's 28-24 loss to the Broncos. He added six rushing yards on two carries.",
@@ -2268,6 +2490,10 @@
      "url": "https://www.espn.com/mlb/story/_/id/49590096/paul-skenes-exits-65-pitches-amid-latest-velocity-drop"
     }
    ],
+   "nextGame": {
+    "date": "2026-09-27T19:10",
+    "name": "PIT @ DET"
+   },
    "note": {
     "date": "Thu Sep 24",
     "headline": "Skenes did not factor into the decision Thursday, allowing one run on three hits and two walks over 6.1 innings against the Cardinals. He struck out eight.",
@@ -2346,6 +2572,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/50098838/sources-rams-intend-limit-puka-nacua-workload"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-01T21:05",
+    "name": "LAC @ LAR"
+   },
    "note": {
     "date": "Sun Nov 01",
     "headline": "Nacua secured 11 of 12 targets for 80 yards and a touchdown in the Rams' 24-9 win over the Chargers on Sunday.",
@@ -2391,6 +2621,10 @@
      "url": "https://www.espn.com/mlb/story/_/id/48680767/red-sox-roman-anthony-hand-checked-boston"
     }
    ],
+   "nextGame": {
+    "date": "2026-10-01T00:00",
+    "name": "BOS @ NYY"
+   },
    "note": {
     "date": "Mon Oct 05",
     "headline": "Red Sox chief baseball officer Craig Breslow said Monday that Anthony is not expected to require surgery on his injured right hand, Chris Cotillo of MassLive.com reports.",
@@ -2418,6 +2652,10 @@
      "url": "https://www.espn.com/mlb/story/_/id/49758679/slumping-acuna-shifts-cleanup-sparks-braves-3-hit-night"
     }
    ],
+   "nextGame": {
+    "date": "2026-10-07T22:00",
+    "name": "LAD @ ATL"
+   },
    "note": {
     "date": "Thu Oct 29",
     "headline": "Atlanta exercised Acuna's $17 million club option for the 2027 season Thursday.",
@@ -2463,6 +2701,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/50294604/eagles-saquon-barkley-hobbled-highly-efficient-gutsy-losing-effort-vs-cowboys"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-02T01:20",
+    "name": "PHI @ WSH"
+   },
    "note": {
     "date": "Mon Nov 02",
     "headline": "Barkley said after Sunday's 27-10 loss to the Commanders that he has received assurances from the Eagles front office that he will remain with the team beyond the Nov. 10 trade deadline, Tim McManus of ESPN.com reports. \"The whole time my mindset was, we have a little issue going on right now and I feel like I'm the type of player and the type of leader that can help us get out of it,\" Barkley said. \"And I want to be one of the reasons why we fix it.\"",
@@ -2496,6 +2738,10 @@
      "url": "https://www.espn.com/nba/story/_/id/50255402/gilgeous-alexander-record-20-point-streak-ends-thunder-win"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T00:00",
+    "name": "OKC @ CLE"
+   },
    "note": {
     "date": "Mon Nov 02",
     "headline": "Gilgeous-Alexander posted 43 points (14-35 FG, 4-8 3Pt, 11-12 FT), eight assists, three rebounds, two steals and one block across 39 minutes in Monday's 117-112 win over the Cavaliers.",
@@ -2529,6 +2775,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/49593705/browns-name-watson-starting-qb-preseason-opener"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-01T18:00",
+    "name": "CLE @ PIT"
+   },
    "note": {
     "date": "Sun Oct 25",
     "headline": "Sanders is active as the Browns' backup quarterback for Sunday's game against the Titans.",
@@ -2574,6 +2824,10 @@
      "url": "https://www.espn.com/mlb/story/_/id/50177824/ohtani-dodgers-game-3-nlcs-lineup-roberts-says"
     }
    ],
+   "nextGame": {
+    "date": "2026-10-16T00:00",
+    "name": "MIL @ LAD"
+   },
    "note": {
     "date": "Wed Oct 21",
     "headline": "Dodgers president of baseball operations Andrew Friedman said Wednesday that Ohtani will not require offseason surgery on his left knee or right biceps, Katie Woo of The Athletic reports.",
@@ -2582,6 +2836,12 @@
   },
   "stephen-curry": {
    "news": [
+    {
+     "date": "2026-11-03",
+     "desc": "Stephen Curry buries triple vs. Phoenix Suns",
+     "title": "Stephen Curry nails the trey vs. Phoenix Suns",
+     "url": "https://www.espn.com/video/clip/_/id/50365454/stephen-curry-nails-trey-vs-phoenix-suns"
+    },
     {
      "date": "2026-10-31",
      "desc": "Behind a theatrical 31 points from Stephen Curry, the Warriors roared back for a 112-95 win over the Lakers.",
@@ -2611,18 +2871,16 @@
      "desc": "Stephen Curry exploded for 44 points to lead the Warriors to their second straight win Wednesday night in a 119-114 victory over the Timberwolves.",
      "title": "Stephen Curry torches Wolves for 44 as Warriors win 2nd straight after 0-3 start",
      "url": "https://www.espn.com/nba/story/_/id/50315043/stephen-curry-torches-wolves-44-warriors-win-2nd-straight"
-    },
-    {
-     "date": "2026-10-29",
-     "desc": "Stephen Curry gets the basket plus the foul",
-     "title": "Stephen Curry gets the basket plus the foul",
-     "url": "https://www.espn.com/video/clip/_/id/50313109/stephen-curry-gets-basket-plus-foul"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T03:00",
+    "name": "PHX @ GS"
+   },
    "note": {
     "date": "Mon Nov 02",
-    "headline": "Curry (rest) is available Monday against the Suns.",
-    "story": "After getting a planned maintenance day Sunday for the first leg of this back-to-back set, Curry is ready to roll. Looking ahead, Golden State's next back-to-back set begins Nov. 18."
+    "headline": "Curry posted 34 points (9-21 FG, 5-13 3Pt, 11-12 FT), six rebounds, seven assists and one steal across 33 minutes during Golden State's 116-113 win over Phoenix.",
+    "story": "Curry dazzled in his return from a one-game absence, as the 38-year-old got the night off in the Warriors' first night of a back-to-back on Sunday. He finished as the team leader in minutes while tallying game-highs in scoring and three-pointers, helping Golden State earn a fifth straight victory after starting the season 0-3. The Warriors only play two more games this week, so Curry will likely suit up for the remaining tilts, both of which are at home."
    }
   },
   "travis-hunter": {
@@ -2664,6 +2922,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/50046645/travis-hunter-happy-help-jags-first-nfl-interception"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-01T18:00",
+    "name": "IND @ JAX"
+   },
    "note": {
     "date": "Mon Nov 02",
     "headline": "Hunter failed to catch his lone target in Sunday's 42-7 win over the Colts. He added five rushing yards on one attempt.",
@@ -2691,6 +2953,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/50015353/how-chiefs-te-travis-kelce-wedding-taylor-swift-football-shape"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-01T21:25",
+    "name": "KC @ DEN"
+   },
    "note": {
     "date": "Sun Nov 01",
     "headline": "Kelce caught five of seven targets for 67 yards in Sunday's 28-24 loss to the Broncos.",
@@ -2736,6 +3002,10 @@
      "url": "https://www.espn.com/nfl/story/_/id/50109680/tyreek-hill-expected-sign-team-soon-agent-says"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-01T21:25",
+    "name": "NE @ MIA"
+   },
    "note": {
     "date": "Wed Oct 14",
     "headline": "Hill's (knee) agent, Drew Rosenhaus, said Wednesday that he remains in contact with multiple teams, but \"nothing is imminent\" with regard to his client potentially finalizing a deal, Adam Schefter of ESPN reports. \"He's continuing his rehab with the goal of being on a team in the immediate future,\" Rosenhaus told Schefter.",
@@ -2781,6 +3051,10 @@
      "url": "https://www.espn.com/video/clip/_/id/50244008/tyrese-haliburton-rocks-rim-slam-dunk"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T00:30",
+    "name": "ATL @ IND"
+   },
    "note": {
     "date": "Wed Oct 28",
     "headline": "Haliburton (hamstring) will miss at least the next two weeks of action, Shams Charania of ESPN reports.",
@@ -2826,6 +3100,10 @@
      "url": "https://www.espn.com/video/clip/_/id/50342995/victor-wembanyama-fights-defender-1"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T01:30",
+    "name": "UTAH @ SA"
+   },
    "note": {
     "date": "Sat Oct 31",
     "headline": "Wembanyama finished Saturday's 121-111 win over the Timberwolves with 43 points (17-34 FG, 3-8 3Pt, 6-9 FT), seven rebounds, four assists, six blocks and one steal over 33 minutes.",
@@ -2871,6 +3149,10 @@
      "url": "https://www.espn.com/mlb/story/_/id/49620028/blue-jays-place-1b-vladimir-guerrero-jr-7-day-concussion-il"
     }
    ],
+   "nextGame": {
+    "date": "2026-09-27T19:07",
+    "name": "CIN @ TOR"
+   },
    "note": {
     "date": "Sun Oct 11",
     "headline": "Guerrero has undergone laser-eye surgery since the end of the regular season.",
@@ -2879,6 +3161,10 @@
   },
   "wyatt-langford": {
    "news": [],
+   "nextGame": {
+    "date": "2026-09-27T19:10",
+    "name": "TEX @ MIN"
+   },
    "note": {
     "date": "Sun Sep 20",
     "headline": "Langford went 1-for-2 with two walks, an RBI, a stolen base and two runs scored in Saturday's 6-2 win over Toronto.",
@@ -2900,6 +3186,10 @@
      "url": "https://www.espn.com/mlb/story/_/id/50121334/yoshinobu-yamamoto-enrique-hernandez-freddie-freeman-lead-dodgers-2-1-nlds-lead-vs-braves"
     }
    ],
+   "nextGame": {
+    "date": "2026-10-16T00:00",
+    "name": "MIL @ LAD"
+   },
    "note": {
     "date": "Tue Oct 13",
     "headline": "Yamamoto didn't factor into the decision Monday in Milwaukee after giving up three runs on four hits with one strikeout and two walks across 2.2 innings during Game 2 of the NLCS.",
@@ -2945,13 +3235,17 @@
      "url": "https://www.espn.com/video/clip/_/id/50244192/zion-williamson-1-bucket"
     }
    ],
+   "nextGame": {
+    "date": "2026-11-03T01:00",
+    "name": "NO @ MEM"
+   },
    "note": {
-    "date": "Sun Nov 01",
-    "headline": "Williamson chipped in 15 points (5-8 FG, 5-8 FT), six rebounds, four assists and three steals across 30 minutes during Saturday's 121-99 win over the Hawks.",
-    "story": "Williamson scored 10 of his 15 points in the first half, and his three steals were second-most on the Pelicans behind Saddiq Bey (four). Williamson has opened the season shooting at a 64.4 percent rate, which as it stands would be a career high. He'll finish the month of October having averaged 20.7 points, 4.3 rebounds, 2.5 assists and 3.2 steals over 31.7 minutes per game."
+    "date": "Mon Nov 02",
+    "headline": "Williamson closed Monday's 135-134 overtime win over the Grizzlies with 25 points (9-15 FG, 7-9 FT), 11 rebounds and four assists across 35 minutes.",
+    "story": "Williamson scorched the nets from inside the arc Monday, finishing with a team- and season-high-tying 25 points. The big man also grabbed a game-best 11 boards, securing his first double-double of the season. Williamson has been highly efficient to start the season and has scored at least 22 points in five of his seven regular-season outings. However, his streak of multi-steal games to begin the campaign ended at six Monday."
    }
   }
  },
  "source": "ESPN public feeds (unofficial)",
- "updated": "2026-11-03T03:55Z"
+ "updated": "2026-11-03T11:09Z"
 }
