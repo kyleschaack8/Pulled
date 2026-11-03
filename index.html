@@ -246,6 +246,59 @@ a.gp:hover { background: var(--raise); }
 .mtable th[scope="row"] a, .mtable td a { color: var(--fg); text-decoration: none; font-weight: 600; }
 .mtable th[scope="row"] .gtags { margin-top: 4px; }
 @media (max-width: 560px) { .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } .gimg { padding: 12px 10px 6px; } .gimg .thumb { width: 74%; } .gbody { padding: 2px 10px 10px; } .gp { grid-template-columns: 1fr auto; } .gp .gc { grid-column: 2; } .gfoot svg { display: none; } }
+.feed-wrap { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 24px; align-items: start; }
+.feed-main { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.feed-side { display: flex; flex-direction: column; gap: 14px; position: sticky; top: 84px; }
+.side-box { display: flex; flex-direction: column; gap: 10px; }
+.side-card { display: flex; gap: 10px; align-items: center; text-decoration: none; color: var(--fg); }
+@media (max-width: 900px) { .feed-wrap { grid-template-columns: minmax(0, 1fr); } .feed-side { position: static; } }
+@media (min-width: 901px) { .btn.feed-post-btn { display: none; } }
+.post { border: 1px solid var(--line); border-radius: 16px; background: var(--surface); overflow: hidden; min-width: 0; }
+.post-h { display: flex; align-items: center; gap: 10px; padding: 14px 16px 0; }
+.post-who { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--fg); flex: 1; min-width: 0; font-size: 14.5px; line-height: 1.3; }
+.post-verb { color: var(--muted); }
+.post-time { display: block; font-size: 12px; color: var(--faint); }
+.post-b { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 18px; padding: 14px 16px; }
+.post-media { display: block; aspect-ratio: 5 / 7; width: 150px; }
+.post-media > svg, .post-media > img { display: block; width: 100%; height: 100%; }
+.post-info { display: flex; flex-direction: column; gap: 6px; min-width: 0; align-items: flex-start; }
+.post-card { font-weight: 800; font-size: 17px; color: var(--fg); text-decoration: none; line-height: 1.25; }
+.post-player { font-size: 13px; color: var(--muted); text-decoration: none; }
+.post-val { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; font-size: 15px; font-weight: 600; }
+.post-cap { margin: 4px 0 0; font-size: 15px; line-height: 1.5; }
+.post-a { display: flex; align-items: center; gap: 4px; padding: 6px 10px 10px; border-top: 1px solid var(--line); flex-wrap: wrap; }
+.pa { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 10px; border-radius: 9px; border: 0; background: none; color: var(--muted); font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer; text-decoration: none; }
+.pa:hover { background: var(--raise); color: var(--fg); }
+.pa.on { color: var(--accent); }
+.btn.sm { min-height: 36px; padding: 0 12px; font-size: 13px; }
+.post-c { border-top: 1px solid var(--line); padding: 12px 16px; display: flex; flex-direction: column; gap: 10px; background: var(--bg); }
+.cmt { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; line-height: 1.45; }
+.cmt-new { display: flex; gap: 8px; }
+.cmt-in, .msg-compose input { flex: 1; min-height: 40px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); padding: 0 12px; font: inherit; font-size: 14px; }
+.stag.k-pulled { color: #C6F432; border-color: rgba(198,244,50,.35); }
+.stag.k-graded { color: #FFD25E; border-color: rgba(255,210,94,.35); }
+.stag.k-bought { color: #7CC4FF; border-color: rgba(124,196,255,.35); }
+.stag.k-sale { color: #FF9F5A; border-color: rgba(255,159,90,.4); }
+.stag.k-trade { color: #D39BFF; border-color: rgba(211,155,255,.4); }
+@media (max-width: 560px) { .post-b { grid-template-columns: 104px minmax(0, 1fr); gap: 12px; } .post-media { width: 104px; } .pa-l { display: none; } }
+.msgs { display: grid; grid-template-columns: 300px minmax(0, 1fr); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: var(--surface); min-height: 520px; }
+.msg-list { border-right: 1px solid var(--line); display: flex; flex-direction: column; }
+.msg-row { display: flex; gap: 10px; align-items: center; padding: 12px 14px; text-decoration: none; color: var(--fg); border-bottom: 1px solid var(--line); font-size: 14px; }
+.msg-row.on, .msg-row:hover { background: var(--raise); }
+.msg-prev { display: block; color: var(--muted); font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin-left: 6px; vertical-align: 1px; }
+.msg-pane { display: flex; flex-direction: column; min-width: 0; }
+.msg-empty { align-items: center; justify-content: center; padding: 24px; text-align: center; }
+.msg-head { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+.msg-back { display: none; color: var(--muted); text-decoration: none; font-size: 20px; padding: 4px 8px; }
+.msg-body { flex: 1; display: flex; flex-direction: column; gap: 8px; padding: 16px; overflow-y: auto; max-height: 460px; }
+.bubble { max-width: 78%; padding: 10px 14px; border-radius: 16px 16px 16px 4px; background: var(--raise); font-size: 14.5px; line-height: 1.45; align-self: flex-start; }
+.bubble.me { align-self: flex-end; background: var(--accent); color: var(--accent-ink); border-radius: 16px 16px 4px 16px; }
+.msg-note { font-size: 12px; color: var(--faint); text-align: center; margin: 4px 0 0; }
+.msg-compose { display: flex; gap: 8px; padding: 12px; border-top: 1px solid var(--line); }
+@media (max-width: 760px) { .msgs { grid-template-columns: 1fr; } .msg-list { border-right: 0; } .msg-list.has-open { display: none; } .msg-back { display: inline-block; } .msgs:not(:has(.msg-list.has-open)) .msg-empty { display: none; } }
+.prof-stats { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; color: var(--muted); }
+.prof-stats b { color: var(--fg); font-size: 16px; }
 .lede { margin: 0; color: var(--muted); font-size: 17px; max-width: 62ch; }
 .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); }
 .section { display: flex; flex-direction: column; gap: 14px; }
@@ -338,11 +391,12 @@ td.best { color: var(--fg); font-weight: 600; }
       <div id="gresults" class="gresults" role="listbox" aria-label="Search results" hidden></div>
     </div>
     <nav class="nav" aria-label="Main">
-      <a href="#home" data-nav="home">Home</a>
+      <a href="#home" data-nav="home">Feed</a>
+      <a href="#market" data-nav="market">Market</a>
       <a href="#browse" data-nav="browse">Browse</a>
       <a href="#movers" data-nav="movers">Movers</a>
-      <a href="#compare" data-nav="compare">Compare</a>
       <a href="#collectors" data-nav="collectors">Collectors</a>
+      <a href="#messages" data-nav="messages">Messages<span class="count" id="msgCount"></span></a>
       <a href="#collection" data-nav="collection">My collection<span class="count" id="colCount"></span></a>
       <a href="#build" data-nav="build">Build log</a>
     </nav>
@@ -427,7 +481,7 @@ let CARDS = [
 ];
 let CARD = Object.fromEntries(CARDS.map(c => [c.id, c]));
 
-const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', pView: 'index', pUnit: 'pct', pGrade: 'All', pType: 'All', pVol: 'on', pEvents: 'on', pHidden: {}, pLayout: 'gallery', pQuery: '', pFor: '', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '', collSport: 'All', f: F0(), fLimit: 48, fMore: {}, fOpen: false, collQuery: '', collAvail: 'avail', collSort: 'matches', offerFor: null, trade: null, moversRange: '1M', moversSport: 'All', moversGrade: 'All', moversMin: '3', moversView: 'cards', homeSport: 'All' };
+const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', pView: 'index', pUnit: 'pct', pGrade: 'All', pType: 'All', pVol: 'on', pEvents: 'on', pHidden: {}, pLayout: 'gallery', pQuery: '', pFor: '', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '', collSport: 'All', f: F0(), fLimit: 48, fMore: {}, fOpen: false, collQuery: '', collAvail: 'avail', collSort: 'matches', offerFor: null, trade: null, moversRange: '1M', moversSport: 'All', moversGrade: 'All', moversMin: '3', moversView: 'cards', homeSport: 'All', feedTab: 'foryou', feedLimit: 10, openComments: null, draft: { card: '', kind: 'pulled', caption: '', ask: '', photo: null } };
 const charts = {};
 
 /* ---------- real data from data/*.json (built by the "Build card data" robot) ---------- */
@@ -563,7 +617,7 @@ function getCol() { try { const v = JSON.parse(localStorage.getItem('pulled-coll
 function setCol(ids) { try { localStorage.setItem('pulled-collection', JSON.stringify(ids)); } catch (e) {} memCol = ids; updateCount(); }
 let memCol = getCol();
 function col() { return memCol; }
-function updateCount() { $('#colCount').textContent = col().length ? col().length : ''; }
+function updateCount() { $('#colCount').textContent = col().length ? col().length : ''; const mc = $('#msgCount'); if (mc) { try { const u = unreadCount(); mc.textContent = u ? u : ''; } catch (e) { mc.textContent = ''; } } }
 
 /* combined player trend: % change weighted by how often each card sells */
 function playerTrend(pid, range) {
@@ -1624,6 +1678,7 @@ const BUILD = {
     ['Card pages', 'Price chart with game, injury and news markers, sales volume and key stats.'],
     ['Auto-written "Why it moved"', 'Generated from price, sales and event data. No manual writing.'],
     ['Compare tool', 'Up to four cards on price, sales volume and graded population.'],
+    ['Social feed', 'Pulled is now a social network for collectors: a feed of pulls, purchases, grades, sales and trade bait with real values on every card; follow collectors, like, comment, wishlist, buy or offer and trade from any post; Post a pull; Messages; profiles with followers and posts. Sample collectors for now; saved in this browser.'],
     ['Brand logo', 'Retro wax-pack logo (a card being pulled from a pack) in heritage navy, cream and red, with the PULLED wordmark in the header, plus a matching favicon and app icon. Files in images/brand/.'],
     ['Player card market', 'Market snapshot (value, 12-month high, monthly sales, cheapest way in, top, hottest and most traded card, PSA 10 premium), a chart you can switch between combined, raw vs PSA 10 and each card, in % or $, filtered by grade and type, with sales volume and news markers, plus a card gallery or table with raw and PSA 10 prices side by side.'],
     ['Player profiles', 'Every player page has a short bio, the 3 things that move his cards most, and live signals from Pulled data: season phase, injuries, 3-month trend, PSA 10 premium and sales volume.'],
@@ -1918,7 +1973,8 @@ function viewCollector(id) {
       <a href="#collectors" style="color:var(--muted);text-decoration:none;font-weight:600;font-size:14px">← All collectors</a>
       <div class="row" style="gap:16px">${cAvatar(c, 72)}<div style="display:flex;flex-direction:column;gap:6px;min-width:0"><h1>@${esc(c.handle)}</h1>
         <div class="row" style="gap:8px"><span class="tag">Sample profile</span><span style="color:var(--muted)">${c.fav === 'All' ? 'All sports' : esc(c.fav)} · collecting since ${c.since} · ${c.trades} trades completed</span></div></div></div>
-      <div class="row"><a class="btn primary" href="#trade-${c.id}" data-act="suggest" data-id="${c.id}">Propose a trade</a>${m.score ? `<span style="color:var(--accent);font-weight:600;font-size:14px">${esc(matchText(m))}</span>` : ''}</div>
+      <div class="prof-stats"><span><b>${followerCount(c)}</b> followers</span><span><b>${collectorPosts(c).length}</b> posts</span><span><b>${c.trades}</b> trades</span></div>
+      <div class="row"><button type="button" class="btn${isFollowing(c.id) ? '' : ' primary'}" data-act="follow" data-id="${c.id}" aria-pressed="${isFollowing(c.id)}">${isFollowing(c.id) ? 'Following' : 'Follow'}</button><a class="btn" href="#messages-${c.id}">Message</a><a class="btn" href="#trade-${c.id}" data-act="suggest" data-id="${c.id}">Propose a trade</a>${m.score ? `<span style="color:var(--accent);font-weight:600;font-size:14px">${esc(matchText(m))}</span>` : ''}</div>
     </div>
     <div class="tiles">
       <div class="tile"><span class="k">Collection value</span><span class="v">${money(collValue(c))}</span></div>
@@ -1927,6 +1983,7 @@ function viewCollector(id) {
       <div class="tile"><span class="k">Cards</span><span class="v">${c.items.length}</span></div>
     </div>
     ${of ? offerPanel(c, of) : ''}
+    ${collectorPosts(c).length ? `<div class="section"><h2>Posts</h2>${collectorPosts(c).map(p => postCard(p, { noFollow: true })).join('')}</div>` : ''}
     <div class="section"><h2>Collection</h2><div class="list">${items.map(x => { const cd = CARD[x.id], [lab, cl] = STATUS[x.status];
       return `<div class="item" style="flex-wrap:wrap">${flameThumb(cd, cardVisual(cd))}<div class="main"><a class="title" href="#card-${cd.id}" style="color:var(--fg);text-decoration:none">${esc(cd.name)}</a><span class="sub">${esc(PLAYERS[cd.p].name)} · ${esc(cd.detail)} · market ${money(last(cd.price))}</span><div class="row" style="gap:6px;margin-top:4px"><span class="stag ${cl}">${lab}${x.status === 'sale' ? ' · ' + money(x.ask) : ''}</span>${want.has(x.id) ? '<span class="stag st-match">On your wishlist</span>' : ''}</div></div>
         ${x.status === 'sale' ? `<button type="button" class="btn" data-act="offerOpen" data-cid="${c.id}" data-id="${cd.id}">Make offer</button>` : x.status === 'trade' ? `<a class="btn" href="#trade-${c.id}" data-act="tradeFor" data-cid="${c.id}" data-id="${cd.id}">Trade for it</a>` : ''}</div>`; }).join('')}</div></div>
@@ -2215,17 +2272,238 @@ function gClose() { const inp = $('#gq'); inp.value = ''; gs.items = []; gs.acti
 })();
 
 /* ---------- router ---------- */
+/* ---------- social: feed, posts, follows, comments, messages (prototype) ----------
+   Sample collectors and their posts are made up; every card, price and trend is real data.
+   Likes, follows, comments, your posts and messages are saved in this browser until accounts exist. */
+function getObj(key) { try { const v = JSON.parse(localStorage.getItem(key) || '{}'); return v && typeof v === 'object' && !Array.isArray(v) ? v : {}; } catch (e) { return {}; } }
+function setObj(key, v) { try { localStorage.setItem(key, JSON.stringify(v)); } catch (e) {} }
+let memFollows = getList('pulled-follows'), memLikes = getList('pulled-likes'), memMyPosts = getList('pulled-posts'),
+  memComments = getObj('pulled-comments'), memDMs = getObj('pulled-dms'), memRead = getList('pulled-read');
+const ME = { id: 'me', handle: 'you', hue: 82, me: true };
+const isFollowing = id => memFollows.includes(id);
+function toggleFollow(id) { memFollows = isFollowing(id) ? memFollows.filter(x => x !== id) : [...memFollows, id]; setList('pulled-follows', memFollows); }
+function avatarFor(who, size) {
+  if (who.me) return `<span class="cav" style="--h:${who.hue};width:${size}px;height:${size}px;font-size:${Math.round(size * 0.32)}px" aria-hidden="true">You</span>`;
+  return cAvatar(who, size);
+}
+const VERB = { pulled: 'pulled', bought: 'picked up', graded: 'got back a', sale: 'listed for sale', trade: 'is open to trading' };
+const KIND_LABEL = { pulled: 'Pulled', bought: 'Picked up', graded: 'Graded', sale: 'For sale', trade: 'Open to trade' };
+function captionFor(kind, cd, r) {
+  const p = PLAYERS[cd.p], s = p.short, m = monthChange(cd);
+  const up = m > 3 ? ` Up ${Math.round(m)}% this month too.` : m < -3 ? ` Bought the dip, down ${Math.round(-m)}% this month.` : '';
+  const pick = a => a[Math.floor(r() * a.length)];
+  if (kind === 'pulled') return pick([`Hobby box finally paid off. ${s} rookie!`, `Did not expect this one tonight. ${s} RC out of a single pack.`, `Last pack of the box and there it was.`, `Ripped a blaster on my lunch break and pulled ${s}.`]) + up;
+  if (kind === 'bought') return pick([`Added to the PC. Been chasing this ${s} for a while.`, `Card show pickup. Talked them down a little.`, `Couldn't pass on this ${s} at this price.`]) + up;
+  if (kind === 'graded') return pick([`Grades are back! ${s} came back a gem.`, `Sent it in and crossed my fingers. Worth the wait.`, `PSA 10. Centering was perfect on this one.`]);
+  if (kind === 'sale') return pick([`Thinning out the collection. Priced right around recent sales, offers welcome.`, `Moving this ${s} to fund a bigger pickup. DM me.`, `Open to offers, have the comps if you want them.`]);
+  return pick([`Looking to move this ${s} for something in my wishlist. Check my profile.`, `Trade bait. Want ${p.sport} rookies back.`, `Would rather trade than sell. Send me what you've got.`]);
+}
+const SAMPLE_COMMENTS = [
+  (cd) => `Clean copy. What did you pay?`, (cd) => `That card is ${monthChange(cd) >= 0 ? 'up' : 'down'} ${Math.abs(monthChange(cd)).toFixed(0)}% this month. Nice timing.`,
+  (cd) => `Would you take a trade for it?`, (cd) => `Monster pull.`, (cd) => `Centering looks great, send it in.`,
+  (cd) => `${PLAYERS[cd.p].short} cards have been on fire lately.`, (cd) => `I've been chasing this exact one.`, (cd) => `Congrats, that's a keeper.`
+];
+let SOC = null;
+function samplePosts() {
+  if (SOC && SOC.cards === CARDS) return SOC.list;
+  const r = rng(1234567), list = [];
+  collectors().forEach((c, ci) => {
+    const n = 3 + (ci % 2);
+    c.items.slice(0, n).forEach((x, k) => {
+      const cd = CARD[x.id]; if (!cd) return;
+      const kind = x.status === 'sale' ? 'sale' : x.status === 'trade' && k % 2 ? 'trade' : cd.tags.includes('Graded') ? 'graded' : k === 0 ? 'pulled' : r() < 0.5 ? 'pulled' : 'bought';
+      const hours = 1 + Math.floor(r() * 96);
+      const others = collectors().filter(o => o.id !== c.id);
+      const nc = Math.floor(r() * 4);
+      const comments = Array.from({ length: nc }, () => ({ who: others[Math.floor(r() * others.length)].id, text: SAMPLE_COMMENTS[Math.floor(r() * SAMPLE_COMMENTS.length)](cd), h: Math.max(0, hours - 1 - Math.floor(r() * hours)) }));
+      list.push({ id: `p-${c.id}-${k}`, who: c.id, card: cd.id, kind, ask: x.ask, caption: captionFor(kind, cd, r), hours, likes: 3 + Math.floor(r() * 180), comments });
+    });
+  });
+  list.sort((a, b) => a.hours - b.hours);
+  SOC = { cards: CARDS, list };
+  return list;
+}
+function myPosts() { return memMyPosts.filter(p => CARD[p.card]); }
+function allPosts() {
+  const mine = myPosts().map(p => ({ ...p, who: 'me', hours: Math.max(0, (Date.now() - p.t) / 36e5), likes: 0, comments: [] }));
+  return [...mine, ...samplePosts()];
+}
+function whoOf(id) { return id === 'me' ? ME : collector(id); }
+function timeAgo(h) { return h < 1 ? 'just now' : h < 24 ? `${Math.floor(h)}h ago` : `${Math.floor(h / 24)}d ago`; }
+const ICON = {
+  heart: '<svg width="18" height="18" viewBox="0 0 24 24" fill="FILL" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.3 8.4 3 5 6.4 5c2 0 3.3 1.1 4.1 2.3h3C14.3 6.1 15.6 5 17.6 5 21 5 22.7 8.4 21.2 11.4 19 15.6 12 20 12 20z"/></svg>',
+  chat: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>',
+  dm: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M21 3L10 14M21 3l-7 18-4-7-7-4z"/></svg>',
+  star: '<svg width="18" height="18" viewBox="0 0 24 24" fill="FILL" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>'
+};
+function postCard(p, opts = {}) {
+  const who = whoOf(p.who), cd = CARD[p.card]; if (!who || !cd) return '';
+  const pl = PLAYERS[cd.p], m = monthChange(cd), liked = memLikes.includes(p.id), wished = wishlist().includes(cd.id);
+  const extra = memComments[p.id] || [], cmts = [...p.comments, ...extra], open = state.openComments === p.id;
+  const prof = who.me ? '#collection' : `#collector-${who.id}`;
+  const media = p.photo ? `<img src="${p.photo}" alt="Photo of ${esc(cd.name)}" style="width:100%;height:100%;object-fit:cover;border-radius:10px">` : cardVisual(cd);
+  return `<article class="post" aria-label="Post by @${esc(who.handle)}">
+    <header class="post-h"><a href="${prof}" class="post-who">${avatarFor(who, 40)}<span><b>@${esc(who.handle)}</b> <span class="post-verb">${VERB[p.kind]}</span><span class="post-time">${timeAgo(p.hours)}${who.me ? '' : ' · sample collector'}</span></span></a>
+      ${who.me || opts.noFollow ? '' : `<button type="button" class="chip sm" data-act="follow" data-id="${who.id}" aria-pressed="${isFollowing(who.id)}">${isFollowing(who.id) ? 'Following' : 'Follow'}</button>`}</header>
+    <div class="post-b">
+      <a class="post-media${hotRank(cd.id) ? ' flame' : coldRank(cd.id) ? ' frost' : ''}" href="#card-${cd.id}"${hotRank(cd.id) ? ' data-fire="s"' : coldRank(cd.id) ? ' data-ice="s"' : ''}>${media}</a>
+      <div class="post-info">
+        <span class="stag k-${p.kind}">${KIND_LABEL[p.kind]}${p.kind === 'sale' && p.ask ? ' · ' + money(p.ask) : ''}</span>
+        <a class="post-card" href="#card-${cd.id}">${esc(cd.name)}</a>
+        <a class="post-player" href="#player-${cd.p}">${esc(pl.name)} · ${esc(cd.detail)}</a>
+        <div class="post-val"><span class="num">${money(last(cd.price))}</span><span class="num ${cls(m)}">${fmtPct(m)} 1M</span>${hotTag(cd.id)}</div>
+        ${p.caption ? `<p class="post-cap">${esc(p.caption)}</p>` : ''}
+      </div>
+    </div>
+    <footer class="post-a">
+      <button type="button" class="pa${liked ? ' on' : ''}" data-act="like" data-id="${p.id}" aria-pressed="${liked}">${ICON.heart.replace('FILL', liked ? 'currentColor' : 'none')}<span>${p.likes + (liked ? 1 : 0)}</span><span class="sr">likes</span></button>
+      <button type="button" class="pa" data-act="comments" data-id="${p.id}" aria-expanded="${open}">${ICON.chat}<span>${cmts.length}</span><span class="sr">comments</span></button>
+      ${who.me ? '' : `<a class="pa" href="#messages-${who.id}">${ICON.dm}<span>Message</span></a>`}
+      <button type="button" class="pa${wished ? ' on' : ''}" data-act="toggleWish" data-id="${cd.id}" aria-pressed="${wished}">${ICON.star.replace('FILL', wished ? 'currentColor' : 'none')}<span class="pa-l">${wished ? 'On wishlist' : 'Wishlist'}</span></button>
+      <span style="flex:1"></span>
+      ${!who.me && p.kind === 'sale' ? `<a class="btn primary sm" href="#collector-${who.id}" data-act="offerOpen" data-cid="${who.id}" data-id="${cd.id}">Buy or offer</a>` : ''}
+      ${!who.me && (p.kind === 'trade' || p.kind === 'sale') ? `<a class="btn sm" href="#trade-${who.id}" data-act="tradeFor" data-cid="${who.id}" data-id="${cd.id}">Trade</a>` : ''}
+    </footer>
+    ${open ? `<div class="post-c">${cmts.map(c => { const w = c.who === 'me' ? ME : collector(c.who); return w ? `<div class="cmt">${avatarFor(w, 28)}<div><b>@${esc(w.handle)}</b> ${esc(c.text)}</div></div>` : ''; }).join('')}
+      <div class="cmt-new"><label for="cmt-${p.id}" class="sr">Add a comment</label><input id="cmt-${p.id}" class="cmt-in" type="text" maxlength="280" placeholder="Add a comment" data-post="${p.id}" autocomplete="off"><button type="button" class="btn sm" data-act="addComment" data-id="${p.id}">Post</button></div></div>` : ''}
+  </article>`;
+}
+function feedSidebar() {
+  const sug = collectors().filter(c => !isFollowing(c.id)).slice(0, 4);
+  const hot = CARDS.filter(c => hotRank(c.id)).sort((a, b) => hotRank(a.id) - hotRank(b.id)).slice(0, 4);
+  return `<aside class="feed-side">
+    <div class="panel side-box"><span style="font-weight:700">Pulled something good?</span><span style="color:var(--muted);font-size:14px">Share it. Pulled adds the card's real market value and trend automatically.</span><a class="btn primary" href="#post">Post a pull</a></div>
+    <div class="panel side-box"><span class="eyebrow">Collectors to follow</span>${sug.length ? sug.map(c => `<div class="row" style="gap:10px;flex-wrap:nowrap"><a href="#collector-${c.id}" class="row" style="gap:10px;flex-wrap:nowrap;flex:1;min-width:0;text-decoration:none;color:var(--fg)">${cAvatar(c, 34)}<span style="min-width:0"><b style="font-size:14px">@${esc(c.handle)}</b><span style="display:block;font-size:12px;color:var(--faint)">${c.fav === 'All' ? 'All sports' : esc(c.fav)} · ${money(collValue(c))}</span></span></a><button type="button" class="chip sm" data-act="follow" data-id="${c.id}" aria-pressed="false">Follow</button></div>`).join('') : '<span style="font-size:13px;color:var(--muted)">You follow everyone. Nice.</span>'}<a href="#collectors" style="font-size:13px;color:var(--accent);font-weight:600;text-decoration:none">See all collectors</a></div>
+    ${hot.length ? `<div class="panel side-box"><span class="eyebrow">Hot right now</span>${hot.map(c => `<a class="side-card" href="#card-${c.id}"><span class="thumb" style="width:34px;height:48px">${cardVisual(c)}</span><span style="flex:1;min-width:0"><b style="font-size:13px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(PLAYERS[c.p].name)}</b><span style="font-size:12px;color:var(--faint);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(c.name)}</span></span><span class="num up" style="font-size:13px">${fmtPct(monthChange(c))}</span></a>`).join('')}<a href="#movers" style="font-size:13px;color:var(--accent);font-weight:600;text-decoration:none">All movers</a></div>` : ''}
+  </aside>`;
+}
+function viewFeed() {
+  const tab = state.feedTab;
+  let posts = allPosts();
+  if (tab === 'following') posts = posts.filter(p => p.who === 'me' || isFollowing(p.who));
+  if (tab === 'sale') posts = posts.filter(p => p.kind === 'sale');
+  if (tab === 'trade') posts = posts.filter(p => p.kind === 'trade' || p.kind === 'sale');
+  const shown = posts.slice(0, state.feedLimit);
+  return `<div class="view">
+    <div class="feed-wrap">
+      <div class="feed-main">
+        <div class="row between" style="gap:12px"><div><h1 style="font-size:clamp(26px,4vw,34px)">Your feed</h1><p style="margin:4px 0 0;color:var(--muted)">What collectors are pulling, selling and trading, with real prices on every card.</p></div><a class="btn primary feed-post-btn" href="#post">Post a pull</a></div>
+        <div class="alert info"><div><div style="font-weight:700">Sample collectors</div><div style="color:var(--muted);font-size:14px">These collectors and posts are made up so you can try the feed. Every card, price and trend is real. Your likes, follows, comments and posts are saved in this browser.</div></div></div>
+        ${segBtns('feedTab', [['foryou', 'For you'], ['following', `Following${memFollows.length ? ' (' + memFollows.length + ')' : ''}`], ['sale', 'For sale'], ['trade', 'Trade bait']], tab)}
+        ${shown.length ? shown.map(p => postCard(p)).join('') : `<div class="panel empty"><h2>${tab === 'following' ? 'Follow some collectors' : 'Nothing here yet'}</h2><p class="lede" style="max-width:40ch">${tab === 'following' ? 'Follow collectors from the feed or the list on the right and their posts show up here.' : 'Check back soon.'}</p></div>`}
+        ${posts.length > shown.length ? `<button type="button" class="btn" data-act="feedMore">Show more posts</button>` : ''}
+      </div>
+      ${feedSidebar()}
+    </div>
+  </div>`;
+}
+
+/* post a pull */
+function viewPost() {
+  const d = state.draft, mineIds = col();
+  const opt = c => `<option value="${c.id}"${c.id === d.card ? ' selected' : ''}>${esc(PLAYERS[c.p].name)} · ${esc(c.name)} · ${esc(c.detail)}</option>`;
+  const cd = CARD[d.card];
+  return `<div class="view">
+    <div class="section" style="padding-top:8px"><a href="#home" style="color:var(--muted);text-decoration:none;font-weight:600;font-size:14px">← Feed</a><h1>Post a pull</h1><p class="lede">Share a card you pulled, bought, graded, or want to sell or trade. Pulled adds its real value and trend.</p></div>
+    <div class="cols">
+      <div class="panel" style="display:flex;flex-direction:column;gap:14px">
+        <label for="pcCard" style="font-weight:600">Which card?</label>
+        <select id="pcCard" style="min-height:46px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:0 10px;max-width:100%">
+          <option value="">Choose a card</option>
+          ${mineIds.length ? `<optgroup label="My collection">${mineIds.map(id => CARD[id]).filter(Boolean).map(opt).join('')}</optgroup>` : ''}
+          <optgroup label="All tracked cards">${[...CARDS].sort((a, b) => PLAYERS[a.p].name.localeCompare(PLAYERS[b.p].name)).map(opt).join('')}</optgroup>
+        </select>
+        <span style="font-weight:600">What happened?</span>
+        <div class="chips">${Object.entries(KIND_LABEL).map(([k, l]) => `<button type="button" class="chip" data-act="draftKind" data-id="${k}" aria-pressed="${d.kind === k}">${l}</button>`).join('')}</div>
+        ${d.kind === 'sale' ? `<label for="pcAsk" style="font-weight:600">Asking price ($)</label><input id="pcAsk" type="number" min="1" step="1" inputmode="numeric" value="${esc(d.ask || (cd ? Math.round(last(cd.price)) : ''))}" style="min-height:46px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:0 12px;max-width:200px">${cd ? `<span style="font-size:13px;color:var(--muted)">Market value is ${money(last(cd.price))} from recent sales.</span>` : ''}` : ''}
+        <label for="pcCaption" style="font-weight:600">Caption</label>
+        <textarea id="pcCaption" rows="3" maxlength="280" placeholder="Tell the story. Where'd you pull it?" style="border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:10px 12px;font:inherit;resize:vertical">${esc(d.caption)}</textarea>
+        <label for="pcPhoto" class="btn" style="cursor:pointer;align-self:flex-start">${d.photo ? 'Change photo' : 'Add your own photo (optional)'}</label>
+        <input id="pcPhoto" type="file" accept="image/*" hidden>
+        <div class="row"><button type="button" class="btn primary" data-act="publishPost"${cd ? '' : ' disabled'}>Post to feed</button><a class="btn" href="#home">Cancel</a></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px"><span class="eyebrow">Preview</span>
+        ${cd ? postCard({ id: 'draft', who: 'me', card: cd.id, kind: d.kind, ask: d.kind === 'sale' ? Math.max(1, Math.round(+d.ask || last(cd.price))) : null, caption: d.caption, photo: d.photo, hours: 0, likes: 0, comments: [] }, { noFollow: true }) : '<div class="panel" style="color:var(--muted)">Pick a card to see your post.</div>'}
+      </div>
+    </div>
+  </div>`;
+}
+function resizePhoto(file, cb) {
+  if (!file || !/^image\//.test(file.type)) return;
+  const fr = new FileReader();
+  fr.onload = () => { const img = new Image(); img.onload = () => { const s = Math.min(1, 640 / Math.max(img.width, img.height)); const cv = document.createElement('canvas'); cv.width = Math.round(img.width * s); cv.height = Math.round(img.height * s); cv.getContext('2d').drawImage(img, 0, 0, cv.width, cv.height); cb(cv.toDataURL('image/jpeg', 0.8)); }; img.src = fr.result; };
+  fr.readAsDataURL(file);
+}
+
+/* messages */
+function seededThreads() {
+  const cs = collectors();
+  const pick = (c, i) => CARD[(c.items[i] || c.items[0]).id];
+  return [
+    { cid: cs[0].id, h: 2, msgs: [[0, `Hey! Saw you've been looking at ${PLAYERS[pick(cs[0], 0).p].short} cards. I have the ${pick(cs[0], 0).name} if you're interested.`]] },
+    { cid: cs[3].id, h: 9, msgs: [[0, `Thanks for the follow. Open to trades on anything marked "Open to trade" on my profile.`]] },
+    { cid: cs[5].id, h: 30, msgs: [[0, `Would you do ${money(Math.round(last(pick(cs[5], 1).price) * 0.95))} for the ${PLAYERS[pick(cs[5], 1).p].short}? That's right around recent sales.`]] }
+  ].filter(t => collector(t.cid));
+}
+function threads() {
+  const seeded = seededThreads(), ids = new Set(seeded.map(t => t.cid));
+  const all = seeded.map(t => ({ cid: t.cid, msgs: [...t.msgs.map(([me, text]) => ({ me: !!me, text, h: t.h })), ...(memDMs[t.cid] || []).map(m => ({ ...m, h: (Date.now() - m.t) / 36e5 }))] }));
+  Object.keys(memDMs).filter(id => !ids.has(id) && collector(id)).forEach(id => all.push({ cid: id, msgs: memDMs[id].map(m => ({ ...m, h: (Date.now() - m.t) / 36e5 })) }));
+  return all.sort((a, b) => last(a.msgs).h - last(b.msgs).h);
+}
+const unreadCount = () => seededThreads().filter(t => !memRead.includes(t.cid)).length;
+function viewMessages(cid) {
+  const ts = threads();
+  if (cid && !memRead.includes(cid)) { memRead = [...memRead, cid]; setList('pulled-read', memRead); }
+  const t = cid ? (ts.find(x => x.cid === cid) || { cid, msgs: [] }) : null, c = cid ? collector(cid) : null;
+  if (cid && !c) return notFound();
+  const list = `<div class="msg-list${cid ? ' has-open' : ''}">${ts.length ? ts.map(x => { const w = collector(x.cid), lm = last(x.msgs), unread = !memRead.includes(x.cid);
+      return `<a class="msg-row${x.cid === cid ? ' on' : ''}" href="#messages-${x.cid}">${cAvatar(w, 40)}<span style="flex:1;min-width:0"><b>@${esc(w.handle)}</b>${unread ? '<span class="dot" aria-label="unread"></span>' : ''}<span class="msg-prev">${lm.me ? 'You: ' : ''}${esc(lm.text)}</span></span><span class="post-time">${timeAgo(lm.h)}</span></a>`; }).join('') : '<p style="color:var(--muted);padding:12px">No messages yet.</p>'}</div>`;
+  const pane = t ? `<div class="msg-pane">
+      <div class="msg-head"><a href="#messages" class="msg-back" aria-label="Back to messages">←</a><a href="#collector-${c.id}" class="row" style="gap:10px;text-decoration:none;color:var(--fg)">${cAvatar(c, 36)}<span><b>@${esc(c.handle)}</b><span style="display:block;font-size:12px;color:var(--faint)">Sample collector · ${c.trades} trades</span></span></a><span style="flex:1"></span><a class="btn sm" href="#trade-${c.id}" data-act="suggest" data-id="${c.id}">Propose trade</a></div>
+      <div class="msg-body">${t.msgs.length ? t.msgs.map(m => `<div class="bubble${m.me ? ' me' : ''}">${esc(m.text)}</div>`).join('') : `<p style="color:var(--muted);text-align:center;margin:auto">Start a conversation with @${esc(c.handle)}.</p>`}
+        ${t.msgs.some(m => m.me) ? '<p class="msg-note">Sample collectors can\'t reply yet. Real conversations arrive with accounts.</p>' : ''}</div>
+      <div class="msg-compose"><label for="msgIn" class="sr">Message @${esc(c.handle)}</label><input id="msgIn" type="text" maxlength="500" placeholder="Message @${esc(c.handle)}" autocomplete="off" data-cid="${c.id}"><button type="button" class="btn primary" data-act="sendMsg" data-id="${c.id}">Send</button></div>
+    </div>` : `<div class="msg-pane msg-empty"><p style="color:var(--muted)">Pick a conversation, or message a collector from their profile or a post.</p></div>`;
+  return `<div class="view"><div class="section" style="padding-top:8px"><h1>Messages</h1></div><div class="msgs">${list}${pane}</div></div>`;
+}
+function sendMsg(cid) {
+  const i = $('#msgIn'); const text = i && i.value ? i.value.trim() : ''; if (!text) return;
+  memDMs = { ...memDMs, [cid]: [...(memDMs[cid] || []), { me: true, text, t: Date.now() }] }; setObj('pulled-dms', memDMs);
+  render(); const n = $('#msgIn'); if (n) n.focus();
+}
+function addComment(pid) {
+  const i = document.getElementById('cmt-' + pid); const text = i && i.value ? i.value.trim() : ''; if (!text) return;
+  memComments = { ...memComments, [pid]: [...(memComments[pid] || []), { who: 'me', text }] }; setObj('pulled-comments', memComments);
+  render(); const n = document.getElementById('cmt-' + pid); if (n) n.focus();
+}
+function publishPost() {
+  const d = state.draft, cd = CARD[d.card]; if (!cd) return;
+  const p = { id: 'm-' + Date.now(), card: cd.id, kind: d.kind, caption: d.caption.trim(), ask: d.kind === 'sale' ? Math.max(1, Math.round(+d.ask || last(cd.price))) : null, photo: d.photo || null, t: Date.now() };
+  memMyPosts = [p, ...memMyPosts].slice(0, 40);
+  try { localStorage.setItem('pulled-posts', JSON.stringify(memMyPosts)); } catch (e) { memMyPosts = memMyPosts.map(x => ({ ...x, photo: null })); setList('pulled-posts', memMyPosts); }
+  if (['pulled', 'bought', 'graded'].includes(d.kind) && !col().includes(cd.id)) setCol([...col(), cd.id]);
+  state.draft = { card: '', kind: 'pulled', caption: '', ask: '', photo: null }; state.feedTab = 'foryou';
+  toast('Posted to your feed'); location.hash = 'home';
+}
+function collectorPosts(c) { return samplePosts().filter(p => p.who === c.id); }
+const followerCount = c => 40 + (c.trades * 7) % 900 + (isFollowing(c.id) ? 1 : 0);
+
 function render() {
   const h = (location.hash || '#home').slice(1);
   Object.keys(charts).forEach(k => delete charts[k]);
   let html, nav = '';
-  if (h === 'home' || h === '') { html = viewHome(); nav = 'home'; }
+  if (h === 'home' || h === '') { html = viewFeed(); nav = 'home'; }
+  else if (h === 'market') { html = viewHome(); nav = 'market'; }
+  else if (h === 'post') { html = viewPost(); nav = 'home'; }
+  else if (h === 'messages') { html = viewMessages(null); nav = 'messages'; }
+  else if (h.startsWith('messages-')) { html = viewMessages(h.slice(9)); nav = 'messages'; }
   else if (h.startsWith('player-')) html = viewPlayer(h.slice(7));
   else if (h.startsWith('card-')) html = viewCard(h.slice(5));
   else if (h === 'compare') { html = viewCompare(); nav = 'compare'; }
   else if (h === 'movers') { html = viewMovers(); nav = 'movers'; }
   else if (h === 'browse') { html = viewBrowse(); nav = 'browse'; }
-  else if (h === 'collection') { html = viewCollection(); nav = 'collection'; }
+  else if (h === 'collection') { html = viewCollection(); nav = 'collection'; const mp = allPosts().filter(x => x.who === 'me'); if (mp.length) html = html.replace(/<\/div>\s*$/, `<div class="section"><div class="row between"><h2>Your posts</h2><a class="btn sm" href="#post">Post a pull</a></div>${mp.map(x => postCard(x)).join('')}</div></div>`); }
   else if (h === 'collectors') { html = viewCollectors(); nav = 'collectors'; }
   else if (h.startsWith('collector-')) { html = viewCollector(h.slice(10)); nav = 'collectors'; }
   else if (h.startsWith('trade-')) { html = viewTrade(h.slice(6)); nav = 'collectors'; }
@@ -2251,6 +2529,13 @@ function render() {
   const ms = $('#minSales'); if (ms) ms.addEventListener('change', e => { state.moversMin = e.target.value; render(); });
   const pq = $('#pq');
   if (pq && pq.addEventListener) pq.addEventListener('input', e => { state.pQuery = e.target.value; const pos = e.target.selectionStart; render(); const n = $('#pq'); if (n) { n.focus(); try { n.setSelectionRange(pos, pos); } catch (err) {} } });
+  const mi = $('#msgIn'); if (mi && mi.addEventListener) { mi.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); sendMsg(mi.dataset.cid); } }); const mb = document.querySelector('.msg-body'); if (mb) mb.scrollTop = mb.scrollHeight; }
+  document.querySelectorAll('.cmt-in').forEach(el => el.addEventListener && el.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); addComment(el.dataset.post); } }));
+  const pcc = $('#pcCard'); if (pcc && pcc.addEventListener) pcc.addEventListener('change', e => { state.draft = { ...state.draft, card: e.target.value, ask: '' }; render(); });
+  const pca = $('#pcCaption'); if (pca && pca.addEventListener) pca.addEventListener('input', e => { state.draft.caption = e.target.value; });
+  if (pca && pca.addEventListener) pca.addEventListener('change', () => render());
+  const pk = $('#pcAsk'); if (pk && pk.addEventListener) pk.addEventListener('change', e => { state.draft.ask = e.target.value; render(); });
+  const pph = $('#pcPhoto'); if (pph && pph.addEventListener) pph.addEventListener('change', e => resizePhoto(e.target.files[0], url => { state.draft = { ...state.draft, photo: url }; render(); }));
   const sort = $('#sort'); if (sort) sort.addEventListener('change', e => { state.playerSort = e.target.value; render(); });
   const photo = $('#photo'); if (photo) photo.addEventListener('change', e => handlePhoto(e.target.files[0], e.target.dataset.id));
   const add = $('#addCompare'); if (add) add.addEventListener('change', e => { if (e.target.value) { state.compareIds.push(e.target.value); render(); } });
@@ -2261,6 +2546,14 @@ document.addEventListener('click', e => {
   if (s) { state[s.dataset.set] = s.dataset.val; render(); return; }
   const a = e.target.closest('[data-act]'); if (!a) return;
   const id = a.dataset.id;
+  if (a.dataset.act === 'follow') { const was = isFollowing(id); toggleFollow(id); toast(was ? 'Unfollowed' : 'Following @' + (collector(id) || {}).handle); render(); }
+  if (a.dataset.act === 'like') { memLikes = memLikes.includes(id) ? memLikes.filter(x => x !== id) : [...memLikes, id]; setList('pulled-likes', memLikes); render(); }
+  if (a.dataset.act === 'comments') { state.openComments = state.openComments === id ? null : id; render(); const n = document.getElementById('cmt-' + id); if (n && state.openComments === id) n.focus(); }
+  if (a.dataset.act === 'addComment') addComment(id);
+  if (a.dataset.act === 'feedMore') { state.feedLimit += 10; render(); }
+  if (a.dataset.act === 'sendMsg') sendMsg(id);
+  if (a.dataset.act === 'draftKind') { state.draft = { ...state.draft, kind: id }; render(); }
+  if (a.dataset.act === 'publishPost') publishPost();
   if (a.dataset.act === 'browsePlayer') { const pl = PLAYERS[id]; if (pl) { state.f = { ...F0(), player: [pl.name], view: state.f.view || 'grid' }; state.fLimit = 48; state.fOpen = false; } if (location.hash === '#browse') render(); }
   if (a.dataset.act === 'toChart') { state.playerRange = '1Y'; state.pView = 'index'; render(); const el = document.getElementById('pchart'); if (el && el.scrollIntoView) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   if (a.dataset.act === 'pHide') { state.pHidden = { ...state.pHidden, [id]: !state.pHidden[id] }; render(); }
