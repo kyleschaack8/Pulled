@@ -495,6 +495,7 @@ td.best { color: var(--fg); font-weight: 600; }
       <a href="#messages" data-nav="messages">Messages<span class="count" id="msgCount"></span></a>
       <a href="#collection" data-nav="collection">My collection<span class="count" id="colCount"></span></a>
       <a href="#build" data-nav="build">Build log</a>
+      <a href="#community" data-nav="community" id="navReview" style="display:none">Review<span class="count" id="revCount"></span></a>
       <a href="#account" data-nav="account" id="navAcct">Sign in</a>
     </nav>
   </div>
@@ -719,7 +720,8 @@ function getCol() { try { const v = JSON.parse(localStorage.getItem('pulled-coll
 function setCol(ids) { try { localStorage.setItem('pulled-collection', JSON.stringify(ids)); } catch (e) {} memCol = ids; updateCount(); if (typeof syncList === 'function') syncList('have', ids); }
 let memCol = getCol();
 function col() { return memCol; }
-function updateCount() { $('#colCount').textContent = col().length ? col().length : ''; const mc = $('#msgCount'); if (mc) { try { const u = unreadCount(); mc.textContent = u ? u : ''; } catch (e) { mc.textContent = ''; } } }
+function updateCount() { try { const rv = $('#navReview'); if (rv && rv.style) { rv.style.display = CLOUD.admin ? '' : 'none'; const rc = $('#revCount'); if (rc && CLOUD.admin) { const n = allSubs().filter(s => s.status === 'pending').length; rc.textContent = n ? n : ''; } } } catch (e) {}
+  $('#colCount').textContent = col().length ? col().length : ''; const mc = $('#msgCount'); if (mc) { try { const u = unreadCount(); mc.textContent = u ? u : ''; } catch (e) { mc.textContent = ''; } } }
 
 /* combined player trend: % change weighted by how often each card sells */
 function playerTrend(pid, range) {
@@ -2695,7 +2697,7 @@ function viewAdd() {
   const matches = d.step >= 2 ? catalogMatches(d) : [];
   const ready = d.front && d.player.trim() && (d.year || d.number || d.brand);
   return `<div class="view">
-    <div class="section" style="padding-top:8px"><h1>Scan a card</h1><p class="lede">Snap your card, check the details, and add it. If Pulled already tracks it, it goes straight into your collection. If not, you add it to the catalog for everyone.</p></div>
+    <div class="section" style="padding-top:8px"><div class="row between" style="gap:12px"><h1>Scan a card</h1><a class="btn sm" href="#community">Community catalog${(() => { const n = allSubs().filter(s => s.status === 'pending').length; return n ? ` (${n} in review)` : ''; })()}</a></div><p class="lede">Snap your card, check the details, and add it. If Pulled already tracks it, it goes straight into your collection. If not, you add it to the catalog for everyone.</p></div>
     <div class="add-steps">${['Photo', 'Details', 'Add'].map((s, i) => `<span class="${d.step > i ? 'on' : ''}">${i + 1}. ${s}</span>`).join('')}</div>
     <div class="cols">
       <div class="panel" style="display:flex;flex-direction:column;gap:14px">
@@ -3237,7 +3239,7 @@ async function cloudReview(id, status) {
   const r = await sb.from('submissions').update({ status }).eq('key', row.key);
   if (r.error) return toast("Couldn't save that review.");
   CLOUD.subs.forEach(x => { if (x.key === row.key) x.status = status; });
-  toast(status === 'approved' ? 'Approved' : 'Rejected'); render();
+  toast(status === 'approved' ? 'Approved' : 'Rejected'); render(); updateCount();
 }
 
 /* member profiles */
@@ -3373,7 +3375,7 @@ function render() {
   else if (h === 'market') { html = viewHome(); nav = 'market'; }
   else if (h === 'post') { html = viewPost(); nav = 'home'; }
   else if (h === 'add') { html = viewAdd(); nav = 'add'; }
-  else if (h === 'community') { html = viewCommunity(); nav = 'add'; }
+  else if (h === 'community') { html = viewCommunity(); nav = CLOUD.admin ? 'community' : 'add'; }
   else if (h === 'messages') { html = viewMessages(null); nav = 'messages'; }
   else if (h.startsWith('messages-')) { html = viewMessages(h.slice(9)); nav = 'messages'; }
   else if (h.startsWith('player-')) html = viewPlayer(h.slice(7));
