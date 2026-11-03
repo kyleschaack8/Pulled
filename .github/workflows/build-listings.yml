@@ -1,0 +1,47 @@
+name: Build eBay listings
+
+# Live eBay listings (supply and asking prices) for every tracked card -> data/listings.json.
+# Needs the EBAY_CLIENT_ID and EBAY_CLIENT_SECRET secrets. Runs daily; can also be run by hand.
+
+on:
+  schedule:
+    - cron: "41 11 * * *"   # daily, about 4-5am Boise time
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ebay-listings
+  cancel-in-progress: false
+
+jobs:
+  listings:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build listings
+        env:
+          EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+          EBAY_CAMPAIGN_ID: ${{ secrets.EBAY_CAMPAIGN_ID }}
+        run: python tools/build_listings.py
+
+      - name: Save to the repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898469+github-actions[bot]@users.noreply.github.com"
+          git add data/listings.json
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Update eBay listings"
+            git pull --rebase origin main
+            git push
+          fi

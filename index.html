@@ -600,7 +600,7 @@ function lastName(name) { const w = name.replace(/,?\s+Jr\.?$/, '').split(' '); 
 async function loadRealData() {
   try {
     const get = f => fetch('data/' + f, { cache: 'no-store' }).then(r => (r.ok ? r.json() : null));
-    const [pl, cd, pr, sj, lg, pf, nw] = await Promise.all([get('players.json'), get('cards.json'), get('prices.json'), get('stats.json').catch(() => null), get('legends.json').catch(() => null), get('profiles.json').catch(() => null), get('news.json').catch(() => null)]);
+    const [pl, cd, pr, sj, lg, pf, nw, ls] = await Promise.all([get('players.json'), get('cards.json'), get('prices.json'), get('stats.json').catch(() => null), get('legends.json').catch(() => null), get('profiles.json').catch(() => null), get('news.json').catch(() => null), get('listings.json').catch(() => null)]);
     const SJ = (sj && sj.players) || {}, LG = (lg && lg.players) || {};
     if (!pl || !cd || !pr || !Array.isArray(cd.cards) || !cd.cards.length || !Array.isArray(pr.months)) return;
     const players = {}, cards = [];
@@ -632,6 +632,7 @@ async function loadRealData() {
       applyStats(players[p.id], SJ[p.id] || (LG[p.id] && { ...LG[p.id], statsLabel: 'Career totals', awards: [...(LG[p.id].hof ? [['Hall of Fame class of ' + LG[p.id].hof, '']] : []), ...(LG[p.id].awards || [])] }), p);
     });
     if (pf && pf.players) PROFILES = pf.players;
+    if (ls && ls.cards) { LISTINGS = ls.cards; LISTINGS_UPDATED = String(ls.updated || '').slice(0, 10); }
     if (nw && nw.players) { NEWS = nw.players; NEWS_UPDATED = String(nw.updated || '').slice(0, 10); }
     PLAYERS = players; CARDS = cards.filter(c => players[c.p]); CARD = Object.fromEntries(CARDS.map(c => [c.id, c]));
     PARTIAL = String(pr.months[pr.months.length - 1]) === new Date().toISOString().slice(0, 7);
@@ -1675,6 +1676,7 @@ function viewCard(id) {
       </div>
     </div>
     <div class="why"><span class="eyebrow">Why it moved · auto-written</span><p>${esc(whyItMoved(c))}</p></div>
+    ${listingPanel(c)}
     <div class="panel section">
       <div class="row between"><h2>Price vs. performance</h2>${segBtns('cardRange', [['3M', '3M'], ['6M', '6M'], ['1Y', '1Y']], state.cardRange)}</div>
       ${lineChart('ch-card', { series: [{ name: 'Sale price', values: prices, color: 'var(--fg)', area: true }], labels, fmt: money, events: evs })}
@@ -1779,6 +1781,7 @@ const BUILD = {
     ['Card pages', 'Price chart with game, injury and news markers, sales volume and key stats.'],
     ['Auto-written "Why it moved"', 'Generated from price, sales and event data. No manual writing.'],
     ['Compare tool', 'Up to four cards on price, sales volume and graded population.'],
+    ['eBay listings', 'Robot for the eBay Browse API (needs EBAY_CLIENT_ID and EBAY_CLIENT_SECRET secrets): daily active listings per card, split raw / PSA 10, with lowest and typical asking price, supply vs. sales, and the cheapest listings linked on card pages.'],
     ['What\'s happening now', 'Player pages: plain-English situation report (health, form, card market, next game), recent ESPN headlines tagged by impact (injury, trade, contract, award, milestone), the latest player note, and what could move his cards next. Retired players get legacy factors and anniversaries. News refreshes nightly with the stats robot.'],
     ['Card insights', 'Player pages: Pulled Score (momentum, liquidity, stability, performance), momentum signal, risk and biggest drop, liquidity, vs. similar players, career stage, return calculator, grading calculator, price alerts, performance vs. price, upcoming key dates, fair price ranges. Population, supply and exact sales come with new data sources.'],
     ['Scan & add cards', 'Scan page (camera on phones, Scan button bottom-right): photo front and back, Read card fills in player, year, brand, number, rookie, auto, numbered and grade from the printed text, matches against tracked cards, or submits a new card to the community catalog review queue. Saved in this browser until there is a shared database.'],
@@ -2882,10 +2885,11 @@ function insightsSection(pid, p, cs) {
       <div class="panel ins-box"><h3 class="ins-h">Performance vs. price</h3><b class="ins-big ${tone(perf.tone)}">${perf.label}</b><p class="ins-p">${perf.note}</p>${(p.stats || []).length ? `<div class="chips">${p.stats.map(([k, v, r]) => `<span class="tag">${esc(k)} ${esc(v)}${r ? ' · ' + esc(r) : ''}</span>`).join('')}</div>` : ''}<span class="ins-fine">Game-by-game reactions (how much his cards move after a big game or an injury) come with daily game logs.</span></div>
       <div class="panel ins-box"><h3 class="ins-h">Coming up</h3><p class="ins-p">Moments that usually move ${p.sport} card prices.</p>${ev.length ? `<div class="ev-list">${ev.map(e => `<div class="ev-row"><span class="ev-when">${esc(e.when)}</span><span>${esc(e.t)}</span></div>`).join('')}</div>` : '<p class="ins-p">No key dates tracked yet.</p>'}</div>
     </div>
+    ${(() => { const sp = playerSupply(cs); if (!sp) return ''; const [l, t, n] = sp.read; return `<div class="panel ins-box"><h3 class="ins-h">Supply vs. demand</h3><b class="ins-big ${tone(t)}">${l}</b><p class="ins-p">${sp.count} copies of his tracked cards are listed on eBay right now, and about ${sp.per} sold last month. ${n}</p><span class="ins-fine">Open any card to see its cheapest listings.</span></div>`; })()}
     <div class="ins-2">${fairRanges(cs)}
       <div class="panel ins-box"><h3 class="ins-h">Coming soon</h3>
         <div class="soon"><b>Population report</b><span>How many PSA 10s and 9s exist, and the gem rate. Needs PSA population data.</span></div>
-        <div class="soon"><b>Supply vs. demand</b><span>Copies listed for sale right now vs. copies selling each month. Needs live listings data.</span></div>
+        ${(() => { const sp = playerSupply(cs); return sp ? '' : '<div class="soon"><b>Supply vs. demand</b><span>Copies listed for sale right now vs. copies selling each month. Needs live listings data.</span></div>'; })()}
         <div class="soon"><b>Exact sale prices</b><span>Every individual sale, not just monthly typical prices, for tighter price ranges.</span></div>
       </div>
     </div>`;
@@ -2952,6 +2956,35 @@ function situationSection(pid, p, cs) {
       <div class="sit-box"><h3>What could move his cards next</h3><div class="sit-watch">${watch.slice(0, 5).map(([t, h, s]) => `<div class="sit-w"><span class="sit-ar sit-${t}" aria-hidden="true">${arrow(t)}</span><div><b>${esc(h)}</b><span>${esc(s)}</span></div></div>`).join('')}</div></div>
     </div>
   </div>`;
+}
+
+/* ---------- live eBay listings (data/listings.json, from the eBay Browse API robot) ---------- */
+let LISTINGS = {}, LISTINGS_UPDATED = '';
+function listingFor(c) { const L = LISTINGS[baseId(c)]; return L ? L[isPSA(c) ? 'psa10' : 'raw'] : null; }
+function supplyRead(count, perMonth) {
+  if (!perMonth) return count ? ['Plenty listed, few sales', 'flat', 'Copies are listed but rarely sell, so buyers have leverage.'] : ['No listings, no sales', 'flat', 'Very little market activity right now.'];
+  const m = count / perMonth;
+  return m < 1 ? ['Tight supply', 'up', `About ${m.toFixed(1)} months of listings at the current sales pace. Tight supply tends to push prices up.`]
+    : m <= 3 ? ['Balanced', 'flat', `About ${m.toFixed(1)} months of listings at the current sales pace.`]
+    : ['Lots of supply', 'down', `About ${m.toFixed(1)} months of listings at the current sales pace. Heavy supply tends to hold prices down.`];
+}
+function listingPanel(c) {
+  const L = listingFor(c); if (!L) return '';
+  const mk = last(c.price), si = PARTIAL ? 2 : 1, per = c.sales[c.sales.length - si] || 0, [lab, t, note] = supplyRead(L.count, per);
+  const vs = L.typical ? pct(mk, L.typical) : null;
+  return `<div class="panel ins-box" id="listings">
+    <div class="row between"><h3 class="ins-h">On eBay right now</h3><span class="sit-upd">${LISTINGS_UPDATED ? 'Updated ' + esc(fmtDay(LISTINGS_UPDATED)) : ''}</span></div>
+    ${L.count ? `<div class="tiles"><div class="tile"><span class="k">Listed</span><span class="v">${L.count}</span>${L.auctions ? `<span class="k">${L.auctions} auction${L.auctions > 1 ? 's' : ''}</span>` : ''}</div><div class="tile"><span class="k">Lowest ask</span><span class="v">${money(L.low)}</span></div><div class="tile"><span class="k">Typical ask</span><span class="v">${money(L.typical)}</span>${vs != null ? `<span class="k">${Math.abs(vs) < 3 ? 'about market value' : `${Math.abs(vs).toFixed(0)}% ${vs > 0 ? 'above' : 'below'} market`}</span>` : ''}</div><div class="tile"><span class="k">Supply</span><span class="v" style="font-size:16px">${lab}</span></div></div>
+      <p class="ins-p">${esc(note)}</p>
+      <div class="sit-news">${L.cheapest.map(x => `<a class="sit-item" href="${esc(x.url)}" target="_blank" rel="noopener sponsored"><b>${money(x.price)}${x.auction ? ' · auction' : ''}</b><span class="sit-desc">${esc(x.title)}</span><span class="sit-date">View on eBay${x.ends && x.auction ? ' · ends ' + esc(fmtDay(x.ends)) : ''}</span></a>`).join('')}</div>`
+      : '<p class="ins-p">No matching listings on eBay right now.</p>'}
+    <span class="ins-fine">Asking prices from active eBay listings that match this card. Asking prices are often higher than what cards actually sell for.</span>
+  </div>`;
+}
+function playerSupply(cs) {
+  const si = PARTIAL ? 2 : 1; let count = 0, per = 0, any = false;
+  cs.forEach(c => { const L = listingFor(c); if (L) { any = true; count += L.count; per += c.sales[c.sales.length - si] || 0; } });
+  return any ? { count, per, read: supplyRead(count, per) } : null;
 }
 
 function render() {
