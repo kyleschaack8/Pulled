@@ -1548,10 +1548,10 @@ function viewPlayer(pid) {
         </div>
         </div>
       </div>`; })()}
+      ${aboutSection(pid, p, cs)}
       ${cs.length ? (() => { const y = combined(cs, '1Y').change, b = basket(cs, '1Y'); return `<button type="button" class="pchg" data-act="toChart" title="See the price chart"><span class="k">Card value · last 12 months</span><span class="v num ${cls(y)}">${fmtPct(y)}</span><span class="s">across ${cs.length} tracked prices · one of each now <b>${money(last(b))}</b></span><span class="go">See chart ↓</span></button>`; })() : ''}
     </div>
     ${cs.length ? marketCards(pid, p, cs) : ''}
-    <div class="section">${aboutSection(pid, p, cs)}</div>
 
     ${playerMarket(pid, p, cs)}
 
