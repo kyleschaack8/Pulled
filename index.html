@@ -299,6 +299,13 @@ a.gp:hover { background: var(--raise); }
 @media (max-width: 760px) { .msgs { grid-template-columns: 1fr; } .msg-list { border-right: 0; } .msg-list.has-open { display: none; } .msg-back { display: inline-block; } .msgs:not(:has(.msg-list.has-open)) .msg-empty { display: none; } }
 .prof-stats { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; color: var(--muted); }
 .prof-stats b { color: var(--fg); font-size: 16px; }
+.auth-wrap { max-width: 480px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; width: 100%; }
+.auth-form { display: flex; flex-direction: column; gap: 14px; }
+.auth-form .af textarea { border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); padding: 10px 12px; font: inherit; font-size: 15px; font-weight: 500; resize: vertical; }
+.auth-msg { font-size: 14px; padding: 10px 12px; border-radius: 10px; background: var(--raise); color: var(--fg); }
+.auth-msg.err { color: var(--down, #c0392b); }
+.auth-alt { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.linkbtn { background: none; border: 0; padding: 6px 0; color: var(--accent); font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; min-height: 36px; }
 .fab { display: none; position: fixed; right: 18px; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); width: 60px; height: 60px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,.45); z-index: 15; }
 @media (max-width: 760px) { .fab { display: inline-flex; } }
 .add-steps { display: flex; gap: 8px; flex-wrap: wrap; font-size: 13px; font-weight: 700; color: var(--faint); }
@@ -488,6 +495,7 @@ td.best { color: var(--fg); font-weight: 600; }
       <a href="#messages" data-nav="messages">Messages<span class="count" id="msgCount"></span></a>
       <a href="#collection" data-nav="collection">My collection<span class="count" id="colCount"></span></a>
       <a href="#build" data-nav="build">Build log</a>
+      <a href="#account" data-nav="account" id="navAcct">Sign in</a>
     </nav>
   </div>
 </header>
@@ -571,7 +579,7 @@ let CARDS = [
 ];
 let CARD = Object.fromEntries(CARDS.map(c => [c.id, c]));
 
-const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', pView: 'index', pUnit: 'pct', pGrade: 'All', pType: 'All', pVol: 'on', pEvents: 'on', pHidden: {}, pLayout: 'gallery', pQuery: '', pFor: '', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '', collSport: 'All', f: F0(), fLimit: 48, fMore: {}, fOpen: false, collQuery: '', collAvail: 'avail', collSort: 'matches', offerFor: null, trade: null, moversRange: '1M', moversSport: 'All', moversGrade: 'All', moversMin: '3', moversView: 'cards', homeSport: 'All', feedTab: 'foryou', feedLimit: 10, openComments: null, draft: { card: '', kind: 'pulled', caption: '', ask: '', photo: null }, add: D0(), addBusy: '', addOcrSrc: null, insTab: 'overview', gcCard: '', gcCost: 40, gcChance: 30, alCard: '' };
+const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', pView: 'index', pUnit: 'pct', pGrade: 'All', pType: 'All', pVol: 'on', pEvents: 'on', pHidden: {}, pLayout: 'gallery', pQuery: '', pFor: '', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '', collSport: 'All', f: F0(), fLimit: 48, fMore: {}, fOpen: false, collQuery: '', collAvail: 'avail', collSort: 'matches', offerFor: null, trade: null, moversRange: '1M', moversSport: 'All', moversGrade: 'All', moversMin: '3', moversView: 'cards', homeSport: 'All', feedTab: 'foryou', feedLimit: 10, openComments: null, draft: { card: '', kind: 'pulled', caption: '', ask: '', photo: null }, add: D0(), addBusy: '', addOcrSrc: null, insTab: 'overview', gcCard: '', gcCost: 40, gcChance: 30, alCard: '', auth: { mode: 'signin', email: '', handle: '', fav: 'All', busy: false, msg: '', err: '' }, authNext: '', posting: false };
 const charts = {};
 
 /* ---------- real data from data/*.json (built by the "Build card data" robot) ---------- */
@@ -708,7 +716,7 @@ function toast(msg) { const t = $('#toast'); t.textContent = msg; t.hidden = fal
 
 /* collection (this browser only) */
 function getCol() { try { const v = JSON.parse(localStorage.getItem('pulled-collection') || '[]'); return Array.isArray(v) ? v.filter(id => CARD[id]) : []; } catch (e) { return []; } }
-function setCol(ids) { try { localStorage.setItem('pulled-collection', JSON.stringify(ids)); } catch (e) {} memCol = ids; updateCount(); }
+function setCol(ids) { try { localStorage.setItem('pulled-collection', JSON.stringify(ids)); } catch (e) {} memCol = ids; updateCount(); if (typeof syncList === 'function') syncList('have', ids); }
 let memCol = getCol();
 function col() { return memCol; }
 function updateCount() { $('#colCount').textContent = col().length ? col().length : ''; const mc = $('#msgCount'); if (mc) { try { const u = unreadCount(); mc.textContent = u ? u : ''; } catch (e) { mc.textContent = ''; } } }
@@ -1781,6 +1789,7 @@ const BUILD = {
     ['Card pages', 'Price chart with game, injury and news markers, sales volume and key stats.'],
     ['Auto-written "Why it moved"', 'Generated from price, sales and event data. No manual writing.'],
     ['Compare tool', 'Up to four cards on price, sales volume and graded population.'],
+    ['Accounts (Supabase)', 'Sign up and sign in with email. Posts, likes, comments, follows, private messages, collections, wishlists and scanned-card submissions are saved to a shared database (supabase/setup.sql) with row level security, so everyone sees the same feed and only you can change your things. Sample collectors stay in the mix until more members join.'],
     ['eBay listings', 'Robot for the eBay Browse API (needs EBAY_CLIENT_ID and EBAY_CLIENT_SECRET secrets): daily active listings per card, split raw / PSA 10, with lowest and typical asking price, supply vs. sales, and the cheapest listings linked on card pages.'],
     ['What\'s happening now', 'Player pages: plain-English situation report (health, form, card market, next game), recent ESPN headlines tagged by impact (injury, trade, contract, award, milestone), the latest player note, and what could move his cards next. Retired players get legacy factors and anniversaries. News refreshes nightly with the stats robot.'],
     ['Card insights', 'Player pages: Pulled Score (momentum, liquidity, stability, performance), momentum signal, risk and biggest drop, liquidity, vs. similar players, career stage, return calculator, grading calculator, price alerts, performance vs. price, upcoming key dates, fair price ranges. Population, supply and exact sales come with new data sources.'],
@@ -1894,7 +1903,7 @@ function getList(key) { try { const v = JSON.parse(localStorage.getItem(key) || 
 function setList(key, v) { try { localStorage.setItem(key, JSON.stringify(v)); } catch (e) {} }
 let memWish = getList('pulled-wishlist'), memOffers = getList('pulled-offers');
 function wishlist() { return memWish.filter(id => CARD[id]); }
-function setWish(ids) { memWish = ids; setList('pulled-wishlist', ids); }
+function setWish(ids) { memWish = ids; setList('pulled-wishlist', ids); if (typeof syncList === 'function') syncList('want', ids); }
 function offers() { return memOffers; }
 function addOffer(o) { memOffers = [{ ...o, at: new Date().toISOString().slice(0, 10) }, ...memOffers].slice(0, 30); setList('pulled-offers', memOffers); }
 
@@ -2047,7 +2056,8 @@ function viewCollectors() {
   const sports = ['All', ...new Set(Object.values(PLAYERS).map(p => p.sport))];
   return `<div class="view">
     <div class="section" style="padding-top:8px"><h1>Collectors</h1><p class="lede">See what other collectors own, find cards you want, and build trades checked against real sales.</p></div>
-    <div class="alert info"><div><div style="font-weight:700">These are sample collectors</div><div style="color:var(--muted);font-size:14px">The profiles are made up so you can try trading and offers. Their cards and prices are real. Real collectors arrive with accounts.</div></div></div>
+    ${members().length ? `<div class="section"><h2>Pulled members</h2>${memberGrid(members().slice(0, 24))}</div>` : ''}
+    <div class="alert info"><div><div style="font-weight:700">${members().length ? 'Below: sample collectors' : 'These are sample collectors'}</div><div style="color:var(--muted);font-size:14px">The sample profiles are made up so you can try trading and offers. Their cards and prices are real.${CLOUD.ok && !signedIn() ? ' <a href="#login" data-act="authMode" data-id="signup" style="color:var(--accent);font-weight:600">Create an account</a> to show up as a real collector.' : ''}</div></div></div>
     <div class="section" style="gap:10px">
       <div class="search" style="max-width:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--faint)" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
         <label for="cq" class="sr">Search collectors, players and cards</label><input id="cq" type="search" placeholder="Search collectors, or a player, card or set (e.g. Josh Allen, Prizm, PSA 10)" value="${state.collQuery === WISH_Q ? '' : esc(state.collQuery)}" autocomplete="off"></div>
@@ -2070,6 +2080,7 @@ function viewCollectors() {
 }
 
 function viewCollector(id) {
+  if (CLOUD.users[id]) return viewMember(CLOUD.users[id]);
   const c = collector(id); if (!c) return notFound();
   const mine = new Set(col()), want = new Set(wishlist()), m = matchFor(c);
   const order = { sale: 0, trade: 1, keep: 2 };
@@ -2387,7 +2398,7 @@ function setObj(key, v) { try { localStorage.setItem(key, JSON.stringify(v)); } 
 let memFollows = getList('pulled-follows'), memLikes = getList('pulled-likes'), memMyPosts = getList('pulled-posts'),
   memComments = getObj('pulled-comments'), memDMs = getObj('pulled-dms'), memRead = getList('pulled-read');
 const ME = { id: 'me', handle: 'you', hue: 82, me: true };
-const isFollowing = id => memFollows.includes(id);
+const isFollowing = id => (CLOUD.users[id] ? followsCloud(id) : memFollows.includes(id));
 function toggleFollow(id) { memFollows = isFollowing(id) ? memFollows.filter(x => x !== id) : [...memFollows, id]; setList('pulled-follows', memFollows); }
 function avatarFor(who, size) {
   if (who.me) return `<span class="cav" style="--h:${who.hue};width:${size}px;height:${size}px;font-size:${Math.round(size * 0.32)}px" aria-hidden="true">You</span>`;
@@ -2432,10 +2443,10 @@ function samplePosts() {
 }
 function myPosts() { return memMyPosts.filter(p => CARD[p.card]); }
 function allPosts() {
-  const mine = myPosts().map(p => ({ ...p, who: 'me', hours: Math.max(0, (Date.now() - p.t) / 36e5), likes: 0, comments: [] }));
-  return [...mine, ...samplePosts()];
+  const mine = signedIn() ? [] : myPosts().map(p => ({ ...p, who: 'me', hours: Math.max(0, (Date.now() - p.t) / 36e5), likes: 0, comments: [] }));
+  return [...cloudPosts(), ...mine, ...samplePosts()].sort((a, b) => a.hours - b.hours);
 }
-function whoOf(id) { return id === 'me' ? ME : collector(id); }
+function whoOf(id) { return id === 'me' ? ME : (CLOUD.users[id] || collector(id)); }
 function timeAgo(h) { return h < 1 ? 'just now' : h < 24 ? `${Math.floor(h)}h ago` : `${Math.floor(h / 24)}d ago`; }
 const ICON = {
   heart: '<svg width="18" height="18" viewBox="0 0 24 24" fill="FILL" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.3 8.4 3 5 6.4 5c2 0 3.3 1.1 4.1 2.3h3C14.3 6.1 15.6 5 17.6 5 21 5 22.7 8.4 21.2 11.4 19 15.6 12 20 12 20z"/></svg>',
@@ -2445,12 +2456,12 @@ const ICON = {
 };
 function postCard(p, opts = {}) {
   const who = whoOf(p.who), cd = CARD[p.card]; if (!who || !cd) return '';
-  const pl = PLAYERS[cd.p], m = monthChange(cd), liked = memLikes.includes(p.id), wished = wishlist().includes(cd.id);
-  const extra = memComments[p.id] || [], cmts = [...p.comments, ...extra], open = state.openComments === p.id;
-  const prof = who.me ? '#collection' : `#collector-${who.id}`;
+  const pl = PLAYERS[cd.p], m = monthChange(cd), liked = p.real ? likedCloud(p.id) : memLikes.includes(p.id), wished = wishlist().includes(cd.id);
+  const extra = p.real ? [] : memComments[p.id] || [], cmts = [...p.comments, ...extra], open = state.openComments === p.id;
+  const prof = who.real ? `#collector-${who.id}` : who.me ? '#collection' : `#collector-${who.id}`;
   const media = p.photo ? `<img src="${p.photo}" alt="Photo of ${esc(cd.name)}" style="width:100%;height:100%;object-fit:cover;border-radius:10px">` : cardVisual(cd);
   return `<article class="post" aria-label="Post by @${esc(who.handle)}">
-    <header class="post-h"><a href="${prof}" class="post-who">${avatarFor(who, 40)}<span><b>@${esc(who.handle)}</b> <span class="post-verb">${VERB[p.kind]}</span><span class="post-time">${timeAgo(p.hours)}${who.me ? '' : ' · sample collector'}</span></span></a>
+    <header class="post-h"><a href="${prof}" class="post-who">${avatarFor(who, 40)}<span><b>@${esc(who.handle)}</b> <span class="post-verb">${VERB[p.kind]}</span><span class="post-time">${timeAgo(p.hours)}${who.me || who.real ? '' : ' · sample collector'}</span></span></a>
       ${who.me || opts.noFollow ? '' : `<button type="button" class="chip sm" data-act="follow" data-id="${who.id}" aria-pressed="${isFollowing(who.id)}">${isFollowing(who.id) ? 'Following' : 'Follow'}</button>`}</header>
     <div class="post-b">
       <a class="post-media${hotRank(cd.id) ? ' flame' : coldRank(cd.id) ? ' frost' : ''}" href="#card-${cd.id}"${hotRank(cd.id) ? ' data-fire="s"' : coldRank(cd.id) ? ' data-ice="s"' : ''}>${media}</a>
@@ -2468,19 +2479,21 @@ function postCard(p, opts = {}) {
       ${who.me ? '' : `<a class="pa" href="#messages-${who.id}">${ICON.dm}<span>Message</span></a>`}
       <button type="button" class="pa${wished ? ' on' : ''}" data-act="toggleWish" data-id="${cd.id}" aria-pressed="${wished}">${ICON.star.replace('FILL', wished ? 'currentColor' : 'none')}<span class="pa-l">${wished ? 'On wishlist' : 'Wishlist'}</span></button>
       <span style="flex:1"></span>
-      ${!who.me && p.kind === 'sale' ? `<a class="btn primary sm" href="#collector-${who.id}" data-act="offerOpen" data-cid="${who.id}" data-id="${cd.id}">Buy or offer</a>` : ''}
-      ${!who.me && (p.kind === 'trade' || p.kind === 'sale') ? `<a class="btn sm" href="#trade-${who.id}" data-act="tradeFor" data-cid="${who.id}" data-id="${cd.id}">Trade</a>` : ''}
+      ${who.real && !who.me && (p.kind === 'sale' || p.kind === 'trade') ? `<a class="btn primary sm" href="#messages-${who.id}">${p.kind === 'sale' ? 'Message to buy' : 'Message to trade'}</a>` : ''}
+      ${!who.me && !who.real && p.kind === 'sale' ? `<a class="btn primary sm" href="#collector-${who.id}" data-act="offerOpen" data-cid="${who.id}" data-id="${cd.id}">Buy or offer</a>` : ''}
+      ${!who.me && !who.real && (p.kind === 'trade' || p.kind === 'sale') ? `<a class="btn sm" href="#trade-${who.id}" data-act="tradeFor" data-cid="${who.id}" data-id="${cd.id}">Trade</a>` : ''}
+      ${who.me && p.real && p.id !== 'draft' ? `<button type="button" class="btn sm" data-act="delPost" data-id="${p.id}">Delete</button>` : ''}
     </footer>
-    ${open ? `<div class="post-c">${cmts.map(c => { const w = c.who === 'me' ? ME : collector(c.who); return w ? `<div class="cmt">${avatarFor(w, 28)}<div><b>@${esc(w.handle)}</b> ${esc(c.text)}</div></div>` : ''; }).join('')}
+    ${open ? `<div class="post-c">${cmts.map(c => { const w = whoOf(c.who); return w ? `<div class="cmt">${avatarFor(w, 28)}<div><b>@${esc(w.handle)}</b> ${esc(c.text)}</div></div>` : ''; }).join('')}
       <div class="cmt-new"><label for="cmt-${p.id}" class="sr">Add a comment</label><input id="cmt-${p.id}" class="cmt-in" type="text" maxlength="280" placeholder="Add a comment" data-post="${p.id}" autocomplete="off"><button type="button" class="btn sm" data-act="addComment" data-id="${p.id}">Post</button></div></div>` : ''}
   </article>`;
 }
 function feedSidebar() {
-  const sug = collectors().filter(c => !isFollowing(c.id)).slice(0, 4);
+  const sug = [...members().filter(u => !isFollowing(u.id)), ...collectors().filter(c => !isFollowing(c.id))].slice(0, 4);
   const hot = CARDS.filter(c => hotRank(c.id)).sort((a, b) => hotRank(a.id) - hotRank(b.id)).slice(0, 4);
   return `<aside class="feed-side">
     <div class="panel side-box"><span style="font-weight:700">Pulled something good?</span><span style="color:var(--muted);font-size:14px">Share it. Pulled adds the card's real market value and trend automatically.</span><a class="btn primary" href="#post">Post a pull</a><a class="btn" href="#add">Scan a card</a></div>
-    <div class="panel side-box"><span class="eyebrow">Collectors to follow</span>${sug.length ? sug.map(c => `<div class="row" style="gap:10px;flex-wrap:nowrap"><a href="#collector-${c.id}" class="row" style="gap:10px;flex-wrap:nowrap;flex:1;min-width:0;text-decoration:none;color:var(--fg)">${cAvatar(c, 34)}<span style="min-width:0"><b style="font-size:14px">@${esc(c.handle)}</b><span style="display:block;font-size:12px;color:var(--faint)">${c.fav === 'All' ? 'All sports' : esc(c.fav)} · ${money(collValue(c))}</span></span></a><button type="button" class="chip sm" data-act="follow" data-id="${c.id}" aria-pressed="false">Follow</button></div>`).join('') : '<span style="font-size:13px;color:var(--muted)">You follow everyone. Nice.</span>'}<a href="#collectors" style="font-size:13px;color:var(--accent);font-weight:600;text-decoration:none">See all collectors</a></div>
+    <div class="panel side-box"><span class="eyebrow">Collectors to follow</span>${sug.length ? sug.map(c => `<div class="row" style="gap:10px;flex-wrap:nowrap"><a href="#collector-${c.id}" class="row" style="gap:10px;flex-wrap:nowrap;flex:1;min-width:0;text-decoration:none;color:var(--fg)">${cAvatar(c, 34)}<span style="min-width:0"><b style="font-size:14px">@${esc(c.handle)}</b><span style="display:block;font-size:12px;color:var(--faint)">${c.fav === 'All' ? 'All sports' : esc(c.fav)}${c.real ? ' · member' : ' · ' + money(collValue(c))}</span></span></a><button type="button" class="chip sm" data-act="follow" data-id="${c.id}" aria-pressed="false">Follow</button></div>`).join('') : '<span style="font-size:13px;color:var(--muted)">You follow everyone. Nice.</span>'}<a href="#collectors" style="font-size:13px;color:var(--accent);font-weight:600;text-decoration:none">See all collectors</a></div>
     ${hot.length ? `<div class="panel side-box"><span class="eyebrow">Hot right now</span>${hot.map(c => `<a class="side-card" href="#card-${c.id}"><span class="thumb" style="width:34px;height:48px">${cardVisual(c)}</span><span style="flex:1;min-width:0"><b style="font-size:13px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(PLAYERS[c.p].name)}</b><span style="font-size:12px;color:var(--faint);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(c.name)}</span></span><span class="num up" style="font-size:13px">${fmtPct(monthChange(c))}</span></a>`).join('')}<a href="#movers" style="font-size:13px;color:var(--accent);font-weight:600;text-decoration:none">All movers</a></div>` : ''}
   </aside>`;
 }
@@ -2495,7 +2508,7 @@ function viewFeed() {
     <div class="feed-wrap">
       <div class="feed-main">
         <div class="row between" style="gap:12px"><div><h1 style="font-size:clamp(26px,4vw,34px)">Your feed</h1><p style="margin:4px 0 0;color:var(--muted)">What collectors are pulling, selling and trading, with real prices on every card.</p></div><a class="btn primary feed-post-btn" href="#post">Post a pull</a></div>
-        <div class="alert info"><div><div style="font-weight:700">Sample collectors</div><div style="color:var(--muted);font-size:14px">These collectors and posts are made up so you can try the feed. Every card, price and trend is real. Your likes, follows, comments and posts are saved in this browser.</div></div></div>
+        ${signedIn() ? (members().length < 8 ? `<div class="alert info"><div><div style="font-weight:700">Pulled is just getting started</div><div style="color:var(--muted);font-size:14px">Posts from real members show up here with everyone else's. Until more collectors join, sample collectors (marked "sample collector") keep the feed busy. Their cards and prices are real.</div></div></div>` : '') : `<div class="alert info"><div><div style="font-weight:700">${CLOUD.ok ? 'Join Pulled' : 'Sample collectors'}</div><div style="color:var(--muted);font-size:14px">${CLOUD.ok ? 'Create a free account to post your pulls, follow collectors and message them. Posts marked "sample collector" are made up so the feed is never empty; every card, price and trend is real.' : 'These collectors and posts are made up so you can try the feed. Every card, price and trend is real. Your likes, follows, comments and posts are saved in this browser.'}</div>${CLOUD.ok ? '<div class="row" style="margin-top:10px"><a class="btn primary sm" href="#login" data-act="authMode" data-id="signup">Create account</a><a class="btn sm" href="#login" data-act="authMode" data-id="signin">Sign in</a></div>' : ''}</div></div>`}
         ${segBtns('feedTab', [['foryou', 'For you'], ['following', `Following${memFollows.length ? ' (' + memFollows.length + ')' : ''}`], ['sale', 'For sale'], ['trade', 'Trade bait']], tab)}
         ${shown.length ? shown.map(p => postCard(p)).join('') : `<div class="panel empty"><h2>${tab === 'following' ? 'Follow some collectors' : 'Nothing here yet'}</h2><p class="lede" style="max-width:40ch">${tab === 'following' ? 'Follow collectors from the feed or the list on the right and their posts show up here.' : 'Check back soon.'}</p></div>`}
         ${posts.length > shown.length ? `<button type="button" class="btn" data-act="feedMore">Show more posts</button>` : ''}
@@ -2527,7 +2540,7 @@ function viewPost() {
         <textarea id="pcCaption" rows="3" maxlength="280" placeholder="Tell the story. Where'd you pull it?" style="border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:10px 12px;font:inherit;resize:vertical">${esc(d.caption)}</textarea>
         <label for="pcPhoto" class="btn" style="cursor:pointer;align-self:flex-start">${d.photo ? 'Change photo' : 'Add your own photo (optional)'}</label>
         <input id="pcPhoto" type="file" accept="image/*" hidden>
-        <div class="row"><button type="button" class="btn primary" data-act="publishPost"${cd ? '' : ' disabled'}>Post to feed</button><a class="btn" href="#home">Cancel</a></div>
+        <div class="row"><button type="button" class="btn primary" data-act="publishPost"${cd && !state.posting ? '' : ' disabled'}>${state.posting ? 'Posting…' : CLOUD.ok && !signedIn() ? 'Sign in to post' : 'Post to feed'}</button><a class="btn" href="#home">Cancel</a></div>
       </div>
       <div style="display:flex;flex-direction:column;gap:10px"><span class="eyebrow">Preview</span>
         ${cd ? postCard({ id: 'draft', who: 'me', card: cd.id, kind: d.kind, ask: d.kind === 'sale' ? Math.max(1, Math.round(+d.ask || last(cd.price))) : null, caption: d.caption, photo: d.photo, hours: 0, likes: 0, comments: [] }, { noFollow: true }) : '<div class="panel" style="color:var(--muted)">Pick a card to see your post.</div>'}
@@ -2553,39 +2566,45 @@ function seededThreads() {
   ].filter(t => collector(t.cid));
 }
 function threads() {
-  const seeded = seededThreads(), ids = new Set(seeded.map(t => t.cid));
+  const seeded = signedIn() && cloudThreads().length ? [] : seededThreads(), ids = new Set(seeded.map(t => t.cid));
   const all = seeded.map(t => ({ cid: t.cid, msgs: [...t.msgs.map(([me, text]) => ({ me: !!me, text, h: t.h })), ...(memDMs[t.cid] || []).map(m => ({ ...m, h: (Date.now() - m.t) / 36e5 }))] }));
   Object.keys(memDMs).filter(id => !ids.has(id) && collector(id)).forEach(id => all.push({ cid: id, msgs: memDMs[id].map(m => ({ ...m, h: (Date.now() - m.t) / 36e5 })) }));
-  return all.sort((a, b) => last(a.msgs).h - last(b.msgs).h);
+  return [...cloudThreads(), ...all].sort((a, b) => last(a.msgs).h - last(b.msgs).h);
 }
-const unreadCount = () => seededThreads().filter(t => !memRead.includes(t.cid)).length;
+const threadUnread = t => (t.real ? t.msgs.some(m => !m.read) : !memRead.includes(t.cid));
+const unreadCount = () => (signedIn() && cloudThreads().length ? 0 : seededThreads().filter(t => !memRead.includes(t.cid)).length) + cloudUnread();
 function viewMessages(cid) {
   const ts = threads();
-  if (cid && !memRead.includes(cid)) { memRead = [...memRead, cid]; setList('pulled-read', memRead); }
-  const t = cid ? (ts.find(x => x.cid === cid) || { cid, msgs: [] }) : null, c = cid ? collector(cid) : null;
-  if (cid && !c) return notFound();
-  const list = `<div class="msg-list${cid ? ' has-open' : ''}">${ts.length ? ts.map(x => { const w = collector(x.cid), lm = last(x.msgs), unread = !memRead.includes(x.cid);
+  const c = cid ? whoOf(cid) : null;
+  if (cid && (!c || c.me)) return notFound();
+  if (c && c.real) { if (!signedIn()) return `<div class="view"><div class="section" style="padding-top:8px"><h1>Messages</h1></div><div class="panel empty"><h2>Sign in to message @${esc(c.handle)}</h2><p class="lede" style="max-width:40ch">Messages are private between you and the other collector.</p><div class="row" style="justify-content:center"><a class="btn primary" href="#login" data-act="authMode" data-id="signin">Sign in</a><a class="btn" href="#login" data-act="authMode" data-id="signup">Create account</a></div></div></div>`; markRead(cid); }
+  else if (cid && !memRead.includes(cid)) { memRead = [...memRead, cid]; setList('pulled-read', memRead); }
+  const t = cid ? (ts.find(x => x.cid === cid) || { cid, msgs: [] }) : null;
+  const list = `<div class="msg-list${cid ? ' has-open' : ''}">${ts.length ? ts.map(x => { const w = whoOf(x.cid), lm = last(x.msgs), unread = threadUnread(x);
       return `<a class="msg-row${x.cid === cid ? ' on' : ''}" href="#messages-${x.cid}">${cAvatar(w, 40)}<span style="flex:1;min-width:0"><b>@${esc(w.handle)}</b>${unread ? '<span class="dot" aria-label="unread"></span>' : ''}<span class="msg-prev">${lm.me ? 'You: ' : ''}${esc(lm.text)}</span></span><span class="post-time">${timeAgo(lm.h)}</span></a>`; }).join('') : '<p style="color:var(--muted);padding:12px">No messages yet.</p>'}</div>`;
   const pane = t ? `<div class="msg-pane">
-      <div class="msg-head"><a href="#messages" class="msg-back" aria-label="Back to messages">←</a><a href="#collector-${c.id}" class="row" style="gap:10px;text-decoration:none;color:var(--fg)">${cAvatar(c, 36)}<span><b>@${esc(c.handle)}</b><span style="display:block;font-size:12px;color:var(--faint)">Sample collector · ${c.trades} trades</span></span></a><span style="flex:1"></span><a class="btn sm" href="#trade-${c.id}" data-act="suggest" data-id="${c.id}">Propose trade</a></div>
+      <div class="msg-head"><a href="#messages" class="msg-back" aria-label="Back to messages">←</a><a href="#collector-${c.id}" class="row" style="gap:10px;text-decoration:none;color:var(--fg)">${cAvatar(c, 36)}<span><b>@${esc(c.handle)}</b><span style="display:block;font-size:12px;color:var(--faint)">${c.real ? `Member${c.since ? ' since ' + esc(c.since) : ''}` : `Sample collector · ${c.trades} trades`}</span></span></a><span style="flex:1"></span>${c.real ? '' : `<a class="btn sm" href="#trade-${c.id}" data-act="suggest" data-id="${c.id}">Propose trade</a>`}</div>
       <div class="msg-body">${t.msgs.length ? t.msgs.map(m => `<div class="bubble${m.me ? ' me' : ''}">${esc(m.text)}</div>`).join('') : `<p style="color:var(--muted);text-align:center;margin:auto">Start a conversation with @${esc(c.handle)}.</p>`}
-        ${t.msgs.some(m => m.me) ? '<p class="msg-note">Sample collectors can\'t reply yet. Real conversations arrive with accounts.</p>' : ''}</div>
+        ${!c.real && t.msgs.some(m => m.me) ? '<p class="msg-note">Sample collectors can\'t reply yet. Real conversations arrive with accounts.</p>' : ''}</div>
       <div class="msg-compose"><label for="msgIn" class="sr">Message @${esc(c.handle)}</label><input id="msgIn" type="text" maxlength="500" placeholder="Message @${esc(c.handle)}" autocomplete="off" data-cid="${c.id}"><button type="button" class="btn primary" data-act="sendMsg" data-id="${c.id}">Send</button></div>
     </div>` : `<div class="msg-pane msg-empty"><p style="color:var(--muted)">Pick a conversation, or message a collector from their profile or a post.</p></div>`;
   return `<div class="view"><div class="section" style="padding-top:8px"><h1>Messages</h1></div><div class="msgs">${list}${pane}</div></div>`;
 }
 function sendMsg(cid) {
   const i = $('#msgIn'); const text = i && i.value ? i.value.trim() : ''; if (!text) return;
+  if (CLOUD.users[cid]) return cloudSend(cid, text);
   memDMs = { ...memDMs, [cid]: [...(memDMs[cid] || []), { me: true, text, t: Date.now() }] }; setObj('pulled-dms', memDMs);
   render(); const n = $('#msgIn'); if (n) n.focus();
 }
 function addComment(pid) {
   const i = document.getElementById('cmt-' + pid); const text = i && i.value ? i.value.trim() : ''; if (!text) return;
+  if (isCloudPost(pid)) return cloudComment(pid, text);
   memComments = { ...memComments, [pid]: [...(memComments[pid] || []), { who: 'me', text }] }; setObj('pulled-comments', memComments);
   render(); const n = document.getElementById('cmt-' + pid); if (n) n.focus();
 }
 function publishPost() {
   const d = state.draft, cd = CARD[d.card]; if (!cd) return;
+  if (CLOUD.ok) return cloudPublish();
   const p = { id: 'm-' + Date.now(), card: cd.id, kind: d.kind, caption: d.caption.trim(), ask: d.kind === 'sale' ? Math.max(1, Math.round(+d.ask || last(cd.price))) : null, photo: d.photo || null, t: Date.now() };
   memMyPosts = [p, ...memMyPosts].slice(0, 40);
   try { localStorage.setItem('pulled-posts', JSON.stringify(memMyPosts)); } catch (e) { memMyPosts = memMyPosts.map(x => ({ ...x, photo: null })); setList('pulled-posts', memMyPosts); }
@@ -2594,7 +2613,7 @@ function publishPost() {
   toast('Posted to your feed'); location.hash = 'home';
 }
 function collectorPosts(c) { return samplePosts().filter(p => p.who === c.id); }
-const followerCount = c => 40 + (c.trades * 7) % 900 + (isFollowing(c.id) ? 1 : 0);
+const followerCount = c => (c.real ? CLOUD.follows.filter(f => f.followee === c.id).length : 40 + (c.trades * 7) % 900 + (isFollowing(c.id) ? 1 : 0));
 
 /* ---------- scan & add a card: collectors build the catalog (prototype) ----------
    Photo + details -> match against the catalog -> add to collection, or submit as a new card for review.
@@ -2706,23 +2725,23 @@ function viewAdd() {
       ${matches.length ? `<h2>Is it one of these?</h2><p style="margin:0;color:var(--muted);font-size:14px">Pulled already tracks these ${esc(d.player)} cards. Pick yours to add it with real prices.</p>
         <div class="list">${matches.map(c => `<div class="item" style="flex-wrap:wrap">${flameThumb(c, cardVisual(c))}<div class="main"><span class="title">${esc(c.name)}</span><span class="sub">${esc(PLAYERS[c.p].name)} · ${esc(c.detail)} · ${money(last(c.price))}</span></div><button type="button" class="btn primary sm" data-act="addMatch" data-id="${c.id}">This is my card</button></div>`).join('')}</div>
         <span style="font-size:14px;color:var(--muted)">Not listed? Add it as a new card below.</span>` : d.player.trim() ? `<div class="alert info"><div><div style="font-weight:700">New to Pulled</div><div style="color:var(--muted);font-size:14px">We don't track this card yet. Add it and it goes to review, then joins the catalog for everyone. Prices start filling in as sales come in.</div></div></div>` : ''}
-      <div class="row"><button type="button" class="btn${matches.length ? '' : ' primary'}" data-act="submitCard"${ready ? '' : ' disabled'}>Add as a new card</button>${ready ? '' : '<span style="font-size:13px;color:var(--faint)">Needs a front photo, the player, and the year, brand or card number.</span>'}</div>
+      <div class="row"><button type="button" class="btn${matches.length ? '' : ' primary'}" data-act="submitCard"${ready && !busy ? '' : ' disabled'}>${CLOUD.ok && !signedIn() ? 'Sign in to add this card' : 'Add as a new card'}</button>${ready ? '' : '<span style="font-size:13px;color:var(--faint)">Needs a front photo, the player, and the year, brand or card number.</span>'}</div>
     </div>` : ''}
-    ${memSubs.length ? `<div class="section"><div class="row between"><h2>Your submissions</h2><a class="btn sm" href="#community">Community catalog</a></div>${subList(memSubs.slice(0, 4), false)}</div>` : ''}
+    ${(() => { const ms = CLOUD.ok ? cloudSubs().filter(s => s.mine) : memSubs; return ms.length ? `<div class="section"><div class="row between"><h2>Your submissions</h2><a class="btn sm" href="#community">Community catalog</a></div>${subList(ms.slice(0, 4), false)}</div>` : ''; })()}
   </div>`;
 }
 const SUB_STATUS = { pending: ['In review', 'st-trade'], approved: ['Added to catalog', 'st-sale'], rejected: ['Not added', 'st-keep'] };
 function subList(list, review) {
   return `<div class="list">${list.map(s => { const [l, c] = SUB_STATUS[s.status] || SUB_STATUS.pending;
     return `<div class="item" style="flex-wrap:wrap"><div class="thumb">${s.front ? `<img src="${s.front}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:4px">` : ''}</div><div class="main"><span class="title">${esc(s.player)} · ${esc(subTitle(s))}</span><span class="sub">${esc(subDetail(s))} · added ${esc(s.at)}</span><div class="row" style="gap:6px;margin-top:4px"><span class="stag ${c}">${l}</span>${s.confirms ? `<span class="stag">${s.confirms} matching submission${s.confirms > 1 ? 's' : ''}</span>` : ''}</div></div>
-      ${review && s.status === 'pending' ? `<div class="row" style="gap:6px"><button type="button" class="btn primary sm" data-act="subApprove" data-id="${s.id}">Approve</button><button type="button" class="btn sm" data-act="subReject" data-id="${s.id}">Reject</button></div>` : ''}</div>`; }).join('')}</div>`;
+      ${review && canReview() && s.status === 'pending' ? `<div class="row" style="gap:6px"><button type="button" class="btn primary sm" data-act="subApprove" data-id="${s.id}">Approve</button><button type="button" class="btn sm" data-act="subReject" data-id="${s.id}">Reject</button></div>` : ''}</div>`; }).join('')}</div>`;
 }
 function viewCommunity() {
-  const pend = memSubs.filter(s => s.status === 'pending'), done = memSubs.filter(s => s.status !== 'pending');
+  const subs = allSubs(), pend = subs.filter(s => s.status === 'pending'), done = subs.filter(s => s.status !== 'pending');
   return `<div class="view">
     <div class="section" style="padding-top:8px"><h1>Community catalog</h1><p class="lede">Cards collectors have added. New cards are reviewed before they join the catalog, so the data stays clean.</p></div>
-    <div class="tiles"><div class="tile"><span class="k">In review</span><span class="v">${pend.length}</span></div><div class="tile"><span class="k">Added to catalog</span><span class="v">${memSubs.filter(s => s.status === 'approved').length}</span></div><div class="tile"><span class="k">Tracked cards</span><span class="v">${CARDS.length}</span></div></div>
-    <div class="alert info"><div><div style="font-weight:700">Review queue (prototype)</div><div style="color:var(--muted);font-size:14px">This is the moderator view. Once Pulled has a shared database, every collector's submissions land here, and a card can be approved automatically when several collectors submit the same one.</div></div></div>
+    <div class="tiles"><div class="tile"><span class="k">In review</span><span class="v">${pend.length}</span></div><div class="tile"><span class="k">Added to catalog</span><span class="v">${subs.filter(s => s.status === 'approved').length}</span></div><div class="tile"><span class="k">Tracked cards</span><span class="v">${CARDS.length}</span></div></div>
+    ${CLOUD.ok ? `<div class="alert info"><div><div style="font-weight:700">How review works</div><div style="color:var(--muted);font-size:14px">Every collector's submissions land here. When several collectors submit the same card, it shows as matching submissions, and a moderator approves it into the catalog.${CLOUD.admin ? ' You are a moderator, so you can approve or reject cards below.' : ''}</div></div></div>` : `<div class="alert info"><div><div style="font-weight:700">Review queue (prototype)</div><div style="color:var(--muted);font-size:14px">This is the moderator view. Once Pulled has a shared database, every collector's submissions land here, and a card can be approved automatically when several collectors submit the same one.</div></div></div>`}
     <div class="section"><div class="row between"><h2>Waiting for review</h2><a class="btn primary sm" href="#add">Scan a card</a></div>${pend.length ? subList(pend, true) : '<p style="margin:0;color:var(--muted)">Nothing waiting. Scan a card to add one.</p>'}</div>
     ${done.length ? `<div class="section"><h2>Reviewed</h2>${subList(done, false)}</div>` : ''}
   </div>`;
@@ -2730,6 +2749,7 @@ function viewCommunity() {
 function submitCard() {
   const d = state.add; if (!d.front || !d.player.trim()) return;
   const key = [norm(d.player), d.year, norm(d.brand), String(d.number).replace(/^#/, '').toLowerCase(), norm(d.parallel)].join('|');
+  if (CLOUD.ok) return cloudSubmit(key);
   const dup = memSubs.find(s => s.key === key && s.status === 'pending');
   if (dup) { dup.confirms = (dup.confirms || 1) + 1; saveSubs(); toast('Already in review. Your copy counts as a confirmation.'); }
   else {
@@ -2987,6 +3007,364 @@ function playerSupply(cs) {
   return any ? { count, per, read: supplyRead(count, per) } : null;
 }
 
+/* ---------- accounts & shared data (Supabase) ----------
+   The publishable key is public by design: row level security in the database decides who can read or change what
+   (see supabase/setup.sql). If the database can't be reached, the site keeps working the old way, saved in this browser. */
+const SB_URL = 'https://cdctzruholyxjvlhsxxv.supabase.co', SB_KEY = 'sb_publishable_H3oxOspBYC7z62qGg8FdoQ_XBTWidWh';
+const SB_LIB = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.js';
+const PHOTO_BASE = SB_URL + '/storage/v1/object/public/photos/';
+const HANDLE_RE = /^[A-Za-z0-9_]{3,20}$/, FAVS = ['All', 'NBA', 'NFL', 'MLB', 'NHL', 'Soccer'];
+let sb = null, ME_ID = null, ME_EMAIL = '', MSG_CH = null;
+const CLOUD = { ok: false, tried: false, users: {}, posts: [], likes: {}, comments: {}, follows: [], items: {}, msgs: [], subs: [], admin: false };
+const okPhoto = u => (typeof u === 'string' && u.startsWith(PHOTO_BASE) && !/["'<>\s\\]/.test(u) ? u : null);
+const signedIn = () => !!(CLOUD.ok && ME_ID && CLOUD.users[ME_ID]);
+const meUser = () => (ME_ID && CLOUD.users[ME_ID]) || null;
+const hoursSince = t => Math.max(0, (Date.now() - new Date(t).getTime()) / 36e5);
+const isMine = p => p.who === 'me' || (!!ME_ID && p.who === ME_ID);
+function asUser(r) { return { id: r.id, handle: r.handle, bio: r.bio || '', fav: FAVS.includes(r.fav) ? r.fav : 'All', hue: Math.abs(+r.hue || 0) % 360, since: String(r.created_at || '').slice(0, 4), real: true, me: r.id === ME_ID }; }
+function needLogin(what) { toast(`Sign in to ${what}`); state.authNext = (location.hash || '#home').slice(1); location.hash = 'login'; }
+function renderSafe() {
+  if (/^#(login|account)/.test(location.hash || '') && (document.getElementById('authForm') || document.getElementById('acctForm'))) { updateNavAccount(); return; }
+  const a = document.activeElement, id = a && a.id, v = a && typeof a.value === 'string' && a.type !== 'file' ? a.value : null;
+  render();
+  if (id) { const n = document.getElementById(id); if (n && n.focus) { if (v != null && n.value !== v) n.value = v; n.focus(); } }
+}
+function loadSupabase() {
+  if (window.supabase && window.supabase.createClient) return Promise.resolve(window.supabase);
+  return new Promise((ok, no) => { const s = document.createElement('script'); s.src = SB_LIB; s.onload = () => (window.supabase ? ok(window.supabase) : no(new Error('lib'))); s.onerror = () => no(new Error('load')); document.head.appendChild(s); });
+}
+async function initCloud() {
+  try {
+    const lib = await loadSupabase();
+    sb = lib.createClient(SB_URL, SB_KEY);
+    const { data } = await sb.auth.getSession();
+    const s = data && data.session; ME_ID = s ? s.user.id : null; ME_EMAIL = s ? s.user.email || '' : '';
+    sb.auth.onAuthStateChange((ev, session) => {
+      const id = session ? session.user.id : null; ME_EMAIL = session ? session.user.email || '' : '';
+      if (id === ME_ID) return;
+      ME_ID = id;
+      setTimeout(() => loadCloud().then(() => mergeLocalCollection()), 0);
+    });
+    await loadCloud();
+    mergeLocalCollection();
+  } catch (e) { CLOUD.ok = false; CLOUD.tried = true; renderSafe(); }
+}
+async function loadCloud() {
+  const q = p => p.then(r => { if (r.error) throw r.error; return r.data || []; });
+  try {
+    const [profiles, posts, follows, items, subs] = await Promise.all([
+      q(sb.from('profiles').select('id,handle,bio,fav,hue,created_at').order('created_at').limit(2000)),
+      q(sb.from('posts').select('id,user_id,card,kind,caption,ask,photo_url,created_at').order('created_at', { ascending: false }).limit(200)),
+      q(sb.from('follows').select('follower,followee').limit(10000)),
+      q(sb.from('items').select('user_id,card,list,status,ask').limit(20000)),
+      q(sb.from('submissions').select('id,user_id,key,fields,front_url,back_url,status,created_at').order('created_at', { ascending: false }).limit(400))
+    ]);
+    const ids = posts.map(p => p.id);
+    const [likes, comments] = ids.length ? await Promise.all([
+      q(sb.from('likes').select('post_id,user_id').in('post_id', ids).limit(50000)),
+      q(sb.from('comments').select('id,post_id,user_id,body,created_at').in('post_id', ids).order('created_at').limit(10000))
+    ]) : [[], []];
+    let msgs = [], admin = false;
+    if (ME_ID) {
+      msgs = await q(sb.from('messages').select('id,sender,recipient,body,created_at,read_at').order('created_at').limit(2000));
+      const r = await sb.rpc('is_admin'); admin = !r.error && r.data === true;
+    }
+    CLOUD.users = Object.fromEntries(profiles.map(r => [r.id, asUser(r)]));
+    CLOUD.posts = posts; CLOUD.follows = follows; CLOUD.subs = subs; CLOUD.msgs = msgs; CLOUD.admin = admin;
+    CLOUD.likes = {}; likes.forEach(l => { (CLOUD.likes[l.post_id] = CLOUD.likes[l.post_id] || new Set()).add(l.user_id); });
+    CLOUD.comments = {}; comments.forEach(c => { (CLOUD.comments[c.post_id] = CLOUD.comments[c.post_id] || []).push(c); });
+    CLOUD.items = {}; items.forEach(x => { (CLOUD.items[x.user_id] = CLOUD.items[x.user_id] || []).push(x); });
+    CLOUD.ok = true;
+    subscribeMessages();
+  } catch (e) { CLOUD.ok = false; if (typeof console !== 'undefined') console.warn('Pulled accounts unavailable:', e && (e.message || e.code)); }
+  CLOUD.tried = true;
+  updateNavAccount(); updateCount(); renderSafe();
+}
+function updateNavAccount() { const a = $('#navAcct'); if (a) a.textContent = signedIn() ? '@' + meUser().handle : 'Sign in'; }
+async function uploadPhoto(dataUrl, tag) {
+  if (!dataUrl || !/^data:image\/(jpeg|png|webp);base64,/.test(dataUrl)) return null;
+  const blob = await (await fetch(dataUrl)).blob();
+  const path = `${ME_ID}/${tag}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}.jpg`;
+  const r = await sb.storage.from('photos').upload(path, blob, { contentType: blob.type || 'image/jpeg', upsert: false });
+  if (r.error) throw r.error;
+  return okPhoto(sb.storage.from('photos').getPublicUrl(path).data.publicUrl);
+}
+
+/* posts, likes, comments, follows */
+function cloudPosts() {
+  if (!CLOUD.ok) return [];
+  return CLOUD.posts.filter(p => CARD[p.card] && CLOUD.users[p.user_id]).map(p => {
+    const ls = CLOUD.likes[p.id] || new Set(), mine = !!ME_ID && ls.has(ME_ID);
+    return { id: p.id, who: p.user_id, card: p.card, kind: p.kind, ask: p.ask, caption: p.caption || '', photo: okPhoto(p.photo_url), hours: hoursSince(p.created_at), likes: ls.size - (mine ? 1 : 0), comments: (CLOUD.comments[p.id] || []).filter(c => CLOUD.users[c.user_id]).map(c => ({ who: c.user_id, text: c.body, id: c.id })), real: true };
+  });
+}
+const isCloudPost = id => CLOUD.ok && CLOUD.posts.some(p => p.id === id);
+const likedCloud = id => !!ME_ID && !!(CLOUD.likes[id] && CLOUD.likes[id].has(ME_ID));
+async function cloudLike(id) {
+  if (!signedIn()) return needLogin('like posts');
+  const s = CLOUD.likes[id] = CLOUD.likes[id] || new Set(), had = s.has(ME_ID);
+  had ? s.delete(ME_ID) : s.add(ME_ID); renderSafe();
+  const r = had ? await sb.from('likes').delete().eq('post_id', id).eq('user_id', ME_ID) : await sb.from('likes').insert({ post_id: id, user_id: ME_ID });
+  if (r.error && r.error.code !== '23505') { had ? s.add(ME_ID) : s.delete(ME_ID); toast("Couldn't save that. Try again."); renderSafe(); }
+}
+async function cloudComment(pid, text) {
+  if (!signedIn()) return needLogin('comment');
+  const r = await sb.from('comments').insert({ post_id: pid, user_id: ME_ID, body: text.slice(0, 280) }).select('id,post_id,user_id,body,created_at').single();
+  if (r.error) return toast("Couldn't post your comment. Try again.");
+  (CLOUD.comments[pid] = CLOUD.comments[pid] || []).push(r.data);
+  render(); const n = document.getElementById('cmt-' + pid); if (n) n.focus();
+}
+async function cloudDeletePost(id) {
+  const r = await sb.from('posts').delete().eq('id', id).eq('user_id', ME_ID);
+  if (r.error) return toast("Couldn't delete that post.");
+  CLOUD.posts = CLOUD.posts.filter(p => p.id !== id); toast('Post deleted'); render();
+}
+const followsCloud = id => !!ME_ID && CLOUD.follows.some(f => f.follower === ME_ID && f.followee === id);
+async function cloudFollow(id) {
+  if (!signedIn()) return needLogin('follow collectors');
+  if (id === ME_ID) return;
+  const had = followsCloud(id), u = CLOUD.users[id];
+  CLOUD.follows = had ? CLOUD.follows.filter(f => !(f.follower === ME_ID && f.followee === id)) : [...CLOUD.follows, { follower: ME_ID, followee: id }];
+  toast(had ? 'Unfollowed' : 'Following @' + u.handle); renderSafe();
+  const r = had ? await sb.from('follows').delete().eq('follower', ME_ID).eq('followee', id) : await sb.from('follows').insert({ follower: ME_ID, followee: id });
+  if (r.error && r.error.code !== '23505') { CLOUD.follows = had ? [...CLOUD.follows, { follower: ME_ID, followee: id }] : CLOUD.follows.filter(f => !(f.follower === ME_ID && f.followee === id)); toast("Couldn't save that. Try again."); renderSafe(); }
+}
+async function cloudPublish() {
+  if (!signedIn()) return needLogin('post');
+  const d = state.draft, cd = CARD[d.card]; if (!cd || state.posting) return;
+  state.posting = true; render();
+  try {
+    const photo_url = d.photo ? await uploadPhoto(d.photo, 'post') : null;
+    const row = { user_id: ME_ID, card: cd.id, kind: d.kind, caption: d.caption.trim().slice(0, 280), ask: d.kind === 'sale' ? Math.max(1, Math.round(+d.ask || last(cd.price))) : null, photo_url };
+    const r = await sb.from('posts').insert(row).select('id,user_id,card,kind,caption,ask,photo_url,created_at').single();
+    if (r.error) throw r.error;
+    CLOUD.posts = [r.data, ...CLOUD.posts];
+    if (['pulled', 'bought', 'graded'].includes(d.kind) && !col().includes(cd.id)) setCol([...col(), cd.id]);
+    state.draft = { card: '', kind: 'pulled', caption: '', ask: '', photo: null }; state.feedTab = 'foryou'; state.posting = false;
+    toast('Posted to your feed'); location.hash = 'home';
+  } catch (e) { state.posting = false; render(); toast("Couldn't post that. Check your connection and try again."); }
+}
+
+/* collections: what you own and want, saved to your account */
+const cloudList = (uid, list) => (CLOUD.items[uid] || []).filter(x => x.list === list && CARD[x.card]).map(x => x.card);
+async function syncList(list, ids) {
+  if (!signedIn()) return;
+  const cur = new Set(cloudList(ME_ID, list)), next = new Set(ids);
+  const add = [...next].filter(id => !cur.has(id)), del = [...cur].filter(id => !next.has(id));
+  if (!add.length && !del.length) return;
+  const mine = (CLOUD.items[ME_ID] || []).filter(x => x.list !== list || next.has(x.card));
+  add.forEach(card => mine.push({ user_id: ME_ID, card, list, status: 'keep', ask: null }));
+  CLOUD.items[ME_ID] = mine;
+  try {
+    if (add.length) { const r = await sb.from('items').upsert(add.map(card => ({ user_id: ME_ID, card, list })), { onConflict: 'user_id,card,list', ignoreDuplicates: true }); if (r.error) throw r.error; }
+    if (del.length) { const r = await sb.from('items').delete().eq('user_id', ME_ID).eq('list', list).in('card', del); if (r.error) throw r.error; }
+  } catch (e) { toast("Couldn't save to your account. Check your connection."); }
+}
+function mergeLocalCollection() {
+  if (!signedIn()) return;
+  const have = [...new Set([...cloudList(ME_ID, 'have'), ...col()])].filter(id => CARD[id]);
+  const want = [...new Set([...cloudList(ME_ID, 'want'), ...wishlist()])].filter(id => CARD[id]);
+  setCol(have); setWish(want); renderSafe();
+}
+
+/* private messages */
+function cloudThreads() {
+  if (!signedIn()) return [];
+  const by = {};
+  CLOUD.msgs.forEach(m => { const other = m.sender === ME_ID ? m.recipient : m.sender; if (!CLOUD.users[other] || other === ME_ID) return; (by[other] = by[other] || []).push({ me: m.sender === ME_ID, text: m.body, h: hoursSince(m.created_at), read: !!m.read_at || m.sender === ME_ID }); });
+  return Object.entries(by).map(([cid, msgs]) => ({ cid, msgs, real: true }));
+}
+const cloudUnread = () => cloudThreads().filter(t => t.msgs.some(m => !m.read)).length;
+function markRead(cid) {
+  if (!signedIn()) return;
+  const now = new Date().toISOString(); let any = false;
+  CLOUD.msgs.forEach(m => { if (m.sender === cid && m.recipient === ME_ID && !m.read_at) { m.read_at = now; any = true; } });
+  if (any) { sb.from('messages').update({ read_at: now }).eq('sender', cid).eq('recipient', ME_ID).is('read_at', null).then(() => {}, () => {}); setTimeout(updateCount, 0); }
+}
+async function cloudSend(cid, text) {
+  if (!signedIn()) return needLogin('send messages');
+  const r = await sb.from('messages').insert({ sender: ME_ID, recipient: cid, body: text.slice(0, 1000) }).select('id,sender,recipient,body,created_at,read_at').single();
+  if (r.error) return toast("Couldn't send. Try again.");
+  CLOUD.msgs.push(r.data); render(); const n = $('#msgIn'); if (n) n.focus();
+}
+function subscribeMessages() {
+  if (MSG_CH) { try { sb.removeChannel(MSG_CH); } catch (e) {} MSG_CH = null; }
+  if (!ME_ID || !sb.channel) return;
+  MSG_CH = sb.channel('dm-' + ME_ID).on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'messages', filter: 'recipient=eq.' + ME_ID }, async ({ new: m }) => {
+    if (!m || CLOUD.msgs.some(x => x.id === m.id)) return;
+    if (!CLOUD.users[m.sender]) { const r = await sb.from('profiles').select('id,handle,bio,fav,hue,created_at').eq('id', m.sender).maybeSingle(); if (r.data) CLOUD.users[r.data.id] = asUser(r.data); }
+    CLOUD.msgs.push(m);
+    if (location.hash === '#messages-' + m.sender) markRead(m.sender);
+    updateCount();
+    if (/^#messages/.test(location.hash || '')) renderSafe(); else toast('New message from @' + ((CLOUD.users[m.sender] || {}).handle || 'a collector'));
+  }).subscribe();
+}
+
+/* scanned-card submissions, shared by everyone */
+function cloudSubs() {
+  const by = {};
+  CLOUD.subs.forEach(r => { (by[r.key] = by[r.key] || []).push(r); });
+  return Object.values(by).map(rows => {
+    rows.sort((a, b) => String(a.created_at).localeCompare(String(b.created_at)));
+    const r = rows[0], f = r.fields && typeof r.fields === 'object' ? r.fields : {};
+    const pick = k => (typeof f[k] === 'string' ? f[k].slice(0, 80) : '');
+    return { id: r.id, key: r.key, player: pick('player') || 'Unknown player', sport: pick('sport'), year: pick('year'), brand: pick('brand'), set: pick('set'), number: pick('number'), parallel: pick('parallel'), serial: pick('serial'), rookie: !!f.rookie, auto: !!f.auto, relic: !!f.relic, graded: !!f.graded, grader: pick('grader'), grade: pick('grade'),
+      front: okPhoto(r.front_url), back: okPhoto(r.back_url), status: rows.some(x => x.status === 'approved') ? 'approved' : rows.every(x => x.status === 'rejected') ? 'rejected' : 'pending',
+      confirms: rows.length, at: String(r.created_at).slice(0, 10), mine: !!ME_ID && rows.some(x => x.user_id === ME_ID) };
+  }).sort((a, b) => b.at.localeCompare(a.at));
+}
+const allSubs = () => (CLOUD.ok ? cloudSubs() : memSubs);
+const canReview = () => !CLOUD.ok || CLOUD.admin;
+async function cloudSubmit(key) {
+  if (!signedIn()) return needLogin('add cards to the catalog');
+  if (state.addBusy) return;
+  const d = state.add;
+  state.addBusy = 'Uploading your card…'; render();
+  try {
+    const [front_url, back_url] = await Promise.all([uploadPhoto(d.front, 'front'), d.back ? uploadPhoto(d.back, 'back') : null]);
+    const fields = {}; ['player', 'sport', 'year', 'brand', 'set', 'number', 'parallel', 'serial', 'grader', 'grade'].forEach(k => { fields[k] = String(d[k] || '').trim().slice(0, 80); }); ['rookie', 'auto', 'relic', 'graded'].forEach(k => { fields[k] = !!d[k]; });
+    const r = await sb.from('submissions').insert({ user_id: ME_ID, key: key.slice(0, 300), fields, front_url, back_url }).select('id,user_id,key,fields,front_url,back_url,status,created_at').single();
+    state.addBusy = '';
+    if (r.error) { if (r.error.code === '23505') { toast("You've already submitted this card."); render(); return; } throw r.error; }
+    CLOUD.subs = [r.data, ...CLOUD.subs];
+    const others = CLOUD.subs.filter(x => x.key === r.data.key).length - 1;
+    toast(others ? 'Already in review. Your copy counts as a confirmation.' : 'Card submitted for review. Thanks for building the catalog!');
+    state.add = D0(); state.addOcrSrc = null; location.hash = 'community';
+  } catch (e) { state.addBusy = ''; render(); toast("Couldn't upload that. Check your connection and try again."); }
+}
+async function cloudReview(id, status) {
+  const row = CLOUD.subs.find(x => x.id === id); if (!row || !CLOUD.admin) return;
+  const r = await sb.from('submissions').update({ status }).eq('key', row.key);
+  if (r.error) return toast("Couldn't save that review.");
+  CLOUD.subs.forEach(x => { if (x.key === row.key) x.status = status; });
+  toast(status === 'approved' ? 'Approved' : 'Rejected'); render();
+}
+
+/* member profiles */
+function viewMember(u) {
+  const have = cloudList(u.id, 'have').map(id => CARD[id]), want = cloudList(u.id, 'want').map(id => CARD[id]);
+  const posts = allPosts().filter(p => p.who === u.id), mine = new Set(col()), wish = new Set(wishlist());
+  const value = have.reduce((s, c) => s + last(c.price), 0), following = CLOUD.follows.filter(f => f.follower === u.id).length;
+  const row = (c, tag) => `<div class="row" style="gap:8px;flex-wrap:nowrap"><div style="flex:1;min-width:0">${cardItem(c)}</div>${tag || ''}</div>`;
+  return `<div class="view">
+    <div class="section" style="padding-top:8px">
+      <a href="#collectors" style="color:var(--muted);text-decoration:none;font-weight:600;font-size:14px">← All collectors</a>
+      <div class="row" style="gap:16px;flex-wrap:nowrap">${cAvatar(u, 72)}<div style="display:flex;flex-direction:column;gap:6px;min-width:0"><h1 style="overflow-wrap:anywhere">@${esc(u.handle)}</h1>
+        <span style="color:var(--muted)">${u.fav === 'All' ? 'All sports' : esc(u.fav)}${u.since ? ` · member since ${esc(u.since)}` : ''}</span></div></div>
+      ${u.bio ? `<p style="margin:0;max-width:60ch">${esc(u.bio)}</p>` : ''}
+      <div class="prof-stats"><span><b>${followerCount(u)}</b> followers</span><span><b>${following}</b> following</span><span><b>${posts.length}</b> posts</span></div>
+      <div class="row">${u.me ? `<a class="btn" href="#account">Edit profile</a><a class="btn primary" href="#post">Post a pull</a>` : `<button type="button" class="btn${isFollowing(u.id) ? '' : ' primary'}" data-act="follow" data-id="${u.id}" aria-pressed="${isFollowing(u.id)}">${isFollowing(u.id) ? 'Following' : 'Follow'}</button><a class="btn" href="#messages-${u.id}">Message</a>`}</div>
+    </div>
+    <div class="tiles">
+      <div class="tile"><span class="k">Collection value</span><span class="v">${money(value)}</span></div>
+      <div class="tile"><span class="k">Cards</span><span class="v">${have.length}</span></div>
+      <div class="tile"><span class="k">Wishlist</span><span class="v">${want.length}</span></div>
+    </div>
+    ${posts.length ? `<div class="section"><h2>Posts</h2>${posts.map(p => postCard(p, { noFollow: true })).join('')}</div>` : ''}
+    <div class="section"><h2>Collection</h2>${have.length ? `<div class="list">${have.map(c => row(c, !u.me && wish.has(c.id) ? '<span class="stag st-match">On your wishlist</span>' : '')).join('')}</div>` : `<p style="margin:0;color:var(--muted)">${u.me ? 'Add cards from any card page and they show up here for other collectors.' : 'No cards added yet.'}</p>`}</div>
+    ${want.length ? `<div class="section"><h2>Wishlist</h2><p style="margin:0;color:var(--muted);font-size:14px">Cards @${esc(u.handle)} is looking for.</p><div class="list">${want.map(c => row(c, !u.me && mine.has(c.id) ? '<span class="stag st-match">You own this</span>' : '')).join('')}</div></div>` : ''}
+  </div>`;
+}
+const members = () => (CLOUD.ok ? Object.values(CLOUD.users).filter(u => u.id !== ME_ID) : []);
+function memberGrid(list) {
+  return `<div class="grid">${list.map(u => { const n = cloudList(u.id, 'have'); return `<a class="pcard" href="#collector-${u.id}"><div class="row" style="gap:12px;flex-wrap:nowrap">${cAvatar(u, 48)}<div style="min-width:0"><div style="font-size:17px;font-weight:700;overflow-wrap:anywhere">@${esc(u.handle)}</div><div style="font-size:13px;color:var(--faint)">${u.fav === 'All' ? 'All sports' : esc(u.fav)}${u.since ? ` · member since ${esc(u.since)}` : ''}</div></div></div>
+    <div class="row between"><span class="num" style="font-size:20px;font-weight:600">${money(n.reduce((s, id) => s + last(CARD[id].price), 0))}</span><span style="font-size:13px;color:var(--muted)">${n.length} card${n.length === 1 ? '' : 's'}</span></div>
+    ${u.bio ? `<span style="font-size:13px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(u.bio)}</span>` : ''}</a>`; }).join('')}</div>`;
+}
+
+/* sign in, sign up, account */
+function viewLogin() {
+  if (signedIn()) return viewAccount();
+  const a = state.auth, mode = a.mode;
+  if (!CLOUD.ok) return `<div class="view"><div class="section" style="padding-top:8px"><h1>Sign in</h1></div><div class="panel empty"><h2>${CLOUD.tried ? 'Accounts are offline right now' : 'Loading…'}</h2><p class="lede" style="max-width:44ch">${CLOUD.tried ? "Pulled couldn't reach the account server. Everything else still works, saved in this browser. Try again in a bit." : 'Connecting to Pulled accounts.'}</p></div></div>`;
+  const title = mode === 'signup' ? 'Create your account' : mode === 'reset' ? 'Reset your password' : 'Sign in';
+  return `<div class="view"><div class="auth-wrap">
+    <div class="section" style="padding-top:8px"><h1>${title}</h1><p class="lede">${mode === 'signup' ? 'Share your pulls, follow collectors, message them, and keep your collection on every device.' : mode === 'reset' ? "Enter your email and we'll send you a link to set a new password." : 'Welcome back.'}</p></div>
+    <form class="panel auth-form" id="authForm" novalidate>
+      <label class="af"><span>Email</span><input id="auEmail" type="email" autocomplete="email" required value="${esc(a.email)}" inputmode="email"></label>
+      ${mode !== 'reset' ? `<label class="af"><span>Password${mode === 'signup' ? ' (at least 8 characters)' : ''}</span><input id="auPw" type="password" autocomplete="${mode === 'signup' ? 'new-password' : 'current-password'}" required minlength="${mode === 'signup' ? 8 : 6}"></label>` : ''}
+      ${mode === 'signup' ? `<label class="af"><span>Handle (3–20 letters, numbers or _)</span><input id="auHandle" type="text" autocomplete="username" required maxlength="20" value="${esc(a.handle)}" placeholder="e.g. BoiseBreaks"></label>
+        <label class="af"><span>Favorite sport</span><select id="auFav">${FAVS.map(f => `<option value="${f}"${f === a.fav ? ' selected' : ''}>${f === 'All' ? 'All sports' : f}</option>`).join('')}</select></label>` : ''}
+      ${a.err ? `<div class="auth-msg err" role="alert">${esc(a.err)}</div>` : ''}${a.msg ? `<div class="auth-msg" role="status">${esc(a.msg)}</div>` : ''}
+      <button type="submit" class="btn primary"${a.busy ? ' disabled' : ''}>${a.busy ? 'One moment…' : mode === 'signup' ? 'Create account' : mode === 'reset' ? 'Send reset link' : 'Sign in'}</button>
+      <div class="auth-alt">${mode === 'signin' ? `<button type="button" class="linkbtn" data-act="authMode" data-id="signup">New to Pulled? Create an account</button><button type="button" class="linkbtn" data-act="authMode" data-id="reset">Forgot password?</button>` : `<button type="button" class="linkbtn" data-act="authMode" data-id="signin">Already have an account? Sign in</button>`}</div>
+    </form></div></div>`;
+}
+function viewAccount() {
+  if (!signedIn()) return viewLogin();
+  const u = meUser(), a = state.auth;
+  return `<div class="view"><div class="auth-wrap">
+    <div class="section" style="padding-top:8px"><div class="row" style="gap:14px;flex-wrap:nowrap">${cAvatar(u, 60)}<div style="min-width:0"><h1 style="overflow-wrap:anywhere">@${esc(u.handle)}</h1><span style="color:var(--muted);font-size:14px;overflow-wrap:anywhere">${esc(ME_EMAIL)}</span></div></div></div>
+    <form class="panel auth-form" id="acctForm" novalidate>
+      <h2 style="font-size:20px">Your profile</h2>
+      <label class="af"><span>Handle</span><input id="acHandle" type="text" maxlength="20" required value="${esc(u.handle)}" autocomplete="username"></label>
+      <label class="af"><span>Bio (optional, 160 characters)</span><textarea id="acBio" rows="3" maxlength="160" placeholder="What do you collect?">${esc(u.bio)}</textarea></label>
+      <label class="af"><span>Favorite sport</span><select id="acFav">${FAVS.map(f => `<option value="${f}"${f === u.fav ? ' selected' : ''}>${f === 'All' ? 'All sports' : f}</option>`).join('')}</select></label>
+      ${a.err ? `<div class="auth-msg err" role="alert">${esc(a.err)}</div>` : ''}
+      <div class="row"><button type="submit" class="btn primary"${a.busy ? ' disabled' : ''}>${a.busy ? 'Saving…' : 'Save profile'}</button><a class="btn" href="#collector-${u.id}">View my profile</a></div>
+    </form>
+    <div class="row"><a class="btn" href="#collection">My collection</a><a class="btn" href="#messages">Messages</a><button type="button" class="btn" data-act="signOut">Sign out</button></div>
+  </div></div>`;
+}
+async function doAuth() {
+  const v = id => { const n = document.getElementById(id); return n && typeof n.value === 'string' ? n.value : ''; };
+  const a = state.auth, mode = a.mode, email = v('auEmail').trim(), pw = v('auPw');
+  a.email = email; a.err = ''; a.msg = '';
+  if (mode === 'signup') { a.handle = v('auHandle').trim(); a.fav = v('auFav') || 'All'; }
+  const fail = msg => { a.err = msg; a.busy = false; render(); };
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return fail('Enter a valid email address.');
+  if (mode !== 'reset' && pw.length < (mode === 'signup' ? 8 : 6)) return fail(mode === 'signup' ? 'Use a password with at least 8 characters.' : 'Enter your password.');
+  if (mode === 'signup' && !HANDLE_RE.test(a.handle)) return fail('Handles are 3 to 20 letters, numbers or underscores, with no spaces.');
+  a.busy = true; render();
+  const site = location.origin + location.pathname;
+  try {
+    if (mode === 'reset') {
+      const r = await sb.auth.resetPasswordForEmail(email, { redirectTo: site + '#account' });
+      if (r.error) return fail(r.error.message || "Couldn't send the email. Try again.");
+      a.busy = false; a.msg = 'If that email has an account, a reset link is on its way.'; return render();
+    }
+    if (mode === 'signup') {
+      const taken = await sb.from('profiles').select('id').ilike('handle', a.handle.replace(/_/g, '\\_')).limit(1);
+      if (!taken.error && taken.data && taken.data.length) return fail('That handle is taken. Try another.');
+      const r = await sb.auth.signUp({ email, password: pw, options: { data: { handle: a.handle, fav: a.fav }, emailRedirectTo: site } });
+      if (r.error) return fail(/registered|exists/i.test(r.error.message || '') ? 'That email already has an account. Sign in instead.' : r.error.message || "Couldn't create your account.");
+      if (!r.data || !r.data.session) { a.busy = false; a.msg = `Almost done. We sent a confirmation link to ${email}. Open it, then sign in.`; a.mode = 'signin'; return render(); }
+      await afterSignIn(r.data.session); toast(`Welcome to Pulled, @${(meUser() || {}).handle || a.handle}!`);
+    } else {
+      const r = await sb.auth.signInWithPassword({ email, password: pw });
+      if (r.error) return fail(/confirm/i.test(r.error.message || '') ? 'Confirm your email first. Check your inbox for the link.' : "That email and password don't match.");
+      await afterSignIn(r.data.session); toast(`Signed in as @${(meUser() || {}).handle || 'you'}`);
+    }
+  } catch (e) { return fail("Couldn't reach Pulled accounts. Check your connection."); }
+  a.busy = false; a.err = ''; a.msg = '';
+  const next = state.authNext && !/^(login|account)/.test(state.authNext) ? state.authNext : 'home'; state.authNext = '';
+  location.hash = next;
+}
+async function afterSignIn(session) {
+  if (!session) return;
+  ME_ID = session.user.id; ME_EMAIL = session.user.email || '';
+  await loadCloud(); mergeLocalCollection();
+}
+async function saveAccount() {
+  const v = id => { const n = document.getElementById(id); return n && typeof n.value === 'string' ? n.value : ''; };
+  const a = state.auth, handle = v('acHandle').trim(), bio = v('acBio').trim().slice(0, 160), fav = FAVS.includes(v('acFav')) ? v('acFav') : 'All';
+  a.err = '';
+  if (!HANDLE_RE.test(handle)) { a.err = 'Handles are 3 to 20 letters, numbers or underscores, with no spaces.'; return render(); }
+  a.busy = true; render();
+  const r = await sb.from('profiles').update({ handle, bio, fav }).eq('id', ME_ID).select('id,handle,bio,fav,hue,created_at').single();
+  a.busy = false;
+  if (r.error) { a.err = r.error.code === '23505' ? 'That handle is taken. Try another.' : "Couldn't save. Try again."; return render(); }
+  CLOUD.users[ME_ID] = asUser(r.data); updateNavAccount(); toast('Profile saved'); render();
+}
+async function signOut() {
+  try { await sb.auth.signOut(); } catch (e) {}
+  ME_ID = null; ME_EMAIL = ''; CLOUD.msgs = []; CLOUD.admin = false;
+  if (MSG_CH) { try { sb.removeChannel(MSG_CH); } catch (e) {} MSG_CH = null; }
+  Object.values(CLOUD.users).forEach(u => { u.me = false; });
+  setCol([]); setWish([]); /* their cards stay in their account; don't leave them on a shared browser */
+  updateNavAccount(); updateCount(); toast('Signed out'); location.hash = 'home'; render();
+}
+
 function render() {
   const h = (location.hash || '#home').slice(1);
   Object.keys(charts).forEach(k => delete charts[k]);
@@ -3003,11 +3381,13 @@ function render() {
   else if (h === 'compare') { html = viewCompare(); nav = 'compare'; }
   else if (h === 'movers') { html = viewMovers(); nav = 'movers'; }
   else if (h === 'browse') { html = viewBrowse(); nav = 'browse'; }
-  else if (h === 'collection') { html = viewCollection(); nav = 'collection'; const mp = allPosts().filter(x => x.who === 'me'); if (mp.length) html = html.replace(/<\/div>\s*$/, `<div class="section"><div class="row between"><h2>Your posts</h2><a class="btn sm" href="#post">Post a pull</a></div>${mp.map(x => postCard(x)).join('')}</div></div>`); }
+  else if (h === 'collection') { html = viewCollection(); nav = 'collection'; const mp = allPosts().filter(isMine); if (mp.length) html = html.replace(/<\/div>\s*$/, `<div class="section"><div class="row between"><h2>Your posts</h2><a class="btn sm" href="#post">Post a pull</a></div>${mp.map(x => postCard(x)).join('')}</div></div>`); }
   else if (h === 'collectors') { html = viewCollectors(); nav = 'collectors'; }
   else if (h.startsWith('collector-')) { html = viewCollector(h.slice(10)); nav = 'collectors'; }
   else if (h.startsWith('trade-')) { html = viewTrade(h.slice(6)); nav = 'collectors'; }
   else if (h === 'build') { html = viewBuild(); nav = 'build'; }
+  else if (h === 'login') { html = viewLogin(); nav = 'account'; }
+  else if (h === 'account') { html = viewAccount(); nav = 'account'; }
   else html = notFound();
   $('#app').innerHTML = html;
   document.querySelectorAll('[data-nav]').forEach(a => { if (a.dataset.nav === nav) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
@@ -3053,6 +3433,12 @@ document.addEventListener('click', e => {
   if (s) { state[s.dataset.set] = s.dataset.val; render(); return; }
   const a = e.target.closest('[data-act]'); if (!a) return;
   const id = a.dataset.id;
+  if (a.dataset.act === 'authMode') { const st = state.auth, em = document.getElementById('auEmail'), hd = document.getElementById('auHandle'); if (em) st.email = em.value; if (hd) st.handle = hd.value; st.mode = id; st.err = ''; st.msg = ''; if (location.hash !== '#login') return; render(); const f = document.getElementById('auEmail'); if (f && f.focus) f.focus(); return; }
+  if (a.dataset.act === 'signOut') { signOut(); return; }
+  if (a.dataset.act === 'delPost') { if (isCloudPost(id)) cloudDeletePost(id); return; }
+  if (a.dataset.act === 'follow' && CLOUD.users[id]) { cloudFollow(id); return; }
+  if (a.dataset.act === 'like' && isCloudPost(id)) { cloudLike(id); return; }
+  if ((a.dataset.act === 'subApprove' || a.dataset.act === 'subReject') && CLOUD.ok) { cloudReview(id, a.dataset.act === 'subApprove' ? 'approved' : 'rejected'); return; }
   if (a.dataset.act === 'follow') { const was = isFollowing(id); toggleFollow(id); toast(was ? 'Unfollowed' : 'Following @' + (collector(id) || {}).handle); render(); }
   if (a.dataset.act === 'like') { memLikes = memLikes.includes(id) ? memLikes.filter(x => x !== id) : [...memLikes, id]; setList('pulled-likes', memLikes); render(); }
   if (a.dataset.act === 'comments') { state.openComments = state.openComments === id ? null : id; render(); const n = document.getElementById('cmt-' + id); if (n && state.openComments === id) n.focus(); }
@@ -3106,9 +3492,10 @@ document.addEventListener('click', e => {
   if (a.dataset.act === 'compareThis') { if (!state.compareIds.includes(id)) state.compareIds = [id, ...state.compareIds.filter(x => x !== id)].slice(0, 4); else state.compareIds = [id, ...state.compareIds.filter(x => x !== id)]; location.hash = 'compare'; }
 });
 window.addEventListener('hashchange', () => { render(); window.scrollTo(0, 0); });
+document.addEventListener('submit', e => { const f = e.target; if (!f || !f.id) return; if (f.id === 'authForm') { e.preventDefault(); doAuth(); } if (f.id === 'acctForm') { e.preventDefault(); saveAccount(); } });
 render();
 loadRepoImages();
-loadRealData();
+loadRealData().finally(() => initCloud());
 </script>
 </body>
 </html>
