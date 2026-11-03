@@ -380,6 +380,13 @@ a.sit-item[href]:hover { background: var(--raise); }
 .sit-w { display: grid; grid-template-columns: 22px 1fr; gap: 10px; padding: 10px 12px; border-bottom: 1px solid var(--line); font-size: 14px; }
 .sit-w b { display: block; } .sit-w span { display: block; color: var(--muted); font-size: 13px; line-height: 1.45; }
 .sit-ar { font-size: 12px; line-height: 20px; text-align: center; } .sit-ar.sit-up { color: var(--up); } .sit-ar.sit-down { color: var(--down); } .sit-ar.sit-flat { color: #FFD25E; }
+.pl-layout { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 24px; align-items: start; }
+.pl-main { display: flex; flex-direction: column; gap: 28px; min-width: 0; }
+.pl-side { position: sticky; top: 140px; max-height: calc(100vh - 156px); overflow-y: auto; border-radius: 16px; scrollbar-width: thin; }
+.pl-side .sit-cols { grid-template-columns: minmax(0, 1fr); }
+.pl-side .sit-sum { font-size: 15px; }
+.sit-mobile { display: none; }
+@media (max-width: 1000px) { .pl-layout { grid-template-columns: minmax(0, 1fr); } .pl-side { display: none; } .sit-mobile { display: block; } }
 .lede { margin: 0; color: var(--muted); font-size: 17px; max-width: 62ch; }
 .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); }
 .section { display: flex; flex-direction: column; gap: 14px; }
@@ -1610,10 +1617,14 @@ function viewPlayer(pid) {
         </div>
         </div>
       </div>`; })()}
+    </div>
+    <div class="pl-layout">
+    <div class="pl-main">
+    <div class="section">
       ${aboutBio(pid, p, cs)}
-      ${situationSection(pid, p, cs)}
       ${cs.length ? (() => { const y = combined(cs, '1Y').change, b = basket(cs, '1Y'); return `<button type="button" class="pchg" data-act="toChart" title="See the price chart"><span class="k">Card value · last 12 months</span><span class="v num ${cls(y)}">${fmtPct(y)}</span><span class="s">across ${cs.length} tracked prices · one of each now <b>${money(last(b))}</b></span><span class="go">See chart ↓</span></button>`; })() : ''}
     </div>
+    <div class="sit-mobile">${situationSection(pid, p, cs)}</div>
     ${cs.length ? marketCards(pid, p, cs) : ''}
     ${insightsSection(pid, p, cs)}
 
@@ -1628,6 +1639,9 @@ function viewPlayer(pid) {
     </div>
 
     ${aboutDrivers(pid, p, cs)}
+    </div>
+    <aside class="pl-side" aria-label="What's happening now">${situationSection(pid, p, cs)}</aside>
+    </div>
   </div>`;
 }
 
