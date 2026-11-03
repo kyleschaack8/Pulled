@@ -365,12 +365,12 @@
      [
       "REB",
       "9.2",
-      "Tied-10th"
+      "Tied-11th"
      ],
      [
       "AST",
       "2.2",
-      "Tied-130th"
+      "Tied-129th"
      ],
      [
       "FG%",
@@ -1414,22 +1414,22 @@
      [
       "PTS",
       "22.2",
-      "Tied-22nd"
+      "23rd"
      ],
      [
       "REB",
       "5.5",
-      "Tied-77th"
+      "Tied-78th"
      ],
      [
       "AST",
       "7.2",
-      "12th"
+      "13th"
      ],
      [
       "FG%",
       "45.0",
-      "90th"
+      "Tied-87th"
      ]
     ]
    },
@@ -2362,7 +2362,7 @@
      [
       "REB",
       "6.0",
-      "Tied-61st"
+      "Tied-62nd"
      ],
      [
       "AST",
@@ -2372,7 +2372,7 @@
      [
       "FG%",
       "55.7",
-      "17th"
+      "16th"
      ]
     ]
    },
@@ -2590,17 +2590,17 @@
      [
       "REB",
       "4.0",
-      "Tied-126th"
+      "Tied-128th"
      ],
      [
       "AST",
       "3.6",
-      "Tied-67th"
+      "68th"
      ],
      [
       "FG%",
       "38.9",
-      "122nd"
+      "123rd"
      ]
     ]
    },
@@ -2628,7 +2628,7 @@
    "career": [
     [
      "PTS",
-     "24.5"
+     "24.6"
     ],
     [
      "REB",
@@ -2689,12 +2689,12 @@
      [
       "PTS",
       "22.3",
-      "21st"
+      "22nd"
      ],
      [
       "REB",
       "3.8",
-      "Tied-148th"
+      "Tied-149th"
      ],
      [
       "AST",
@@ -2798,17 +2798,17 @@
      [
       "REB",
       "5.3",
-      "Tied-81st"
+      "Tied-82nd"
      ],
      [
       "AST",
       "4.5",
-      "Tied-48th"
+      "Tied-50th"
      ],
      [
       "FG%",
       "48.9",
-      "Tied-50th"
+      "Tied-51st"
      ]
     ]
    },
@@ -3032,17 +3032,17 @@
      [
       "PTS",
       "18.5",
-      "47th"
+      "Tied-47th"
      ],
      [
       "REB",
       "5.5",
-      "Tied-77th"
+      "Tied-78th"
      ],
      [
       "AST",
       "4.8",
-      "Tied-44th"
+      "Tied-46th"
      ],
      [
       "FG%",
@@ -3451,7 +3451,7 @@
      [
       "PTS",
       "28.2",
-      "4th"
+      "5th"
      ],
      [
       "REB",
@@ -3461,12 +3461,12 @@
      [
       "AST",
       "5.5",
-      "Tied-33rd"
+      "Tied-32nd"
      ],
      [
       "FG%",
       "58.6",
-      "10th"
+      "9th"
      ]
     ]
    },
@@ -3671,17 +3671,17 @@
      [
       "REB",
       "2.5",
-      "Tied-214th"
+      "Tied-220th"
      ],
      [
       "AST",
       "5.5",
-      "Tied-33rd"
+      "Tied-32nd"
      ],
      [
       "FG%",
       "54.2",
-      "22nd"
+      "20th"
      ]
     ]
    },
@@ -3981,17 +3981,17 @@
      [
       "REB",
       "2.8",
-      "Tied-198th"
+      "Tied-204th"
      ],
      [
       "AST",
       "5.2",
-      "Tied-40th"
+      "Tied-39th"
      ],
      [
       "FG%",
       "39.5",
-      "119th"
+      "120th"
      ]
     ]
    },
@@ -4446,7 +4446,7 @@
    "career": [
     [
      "PTS",
-     "23.5"
+     "23.6"
     ],
     [
      "REB",
@@ -4507,12 +4507,12 @@
      [
       "PTS",
       "28.3",
-      "6th"
+      "4th"
      ],
      [
       "REB",
       "6.0",
-      "57th"
+      "Tied-62nd"
      ],
      [
       "AST",
@@ -4522,7 +4522,7 @@
      [
       "FG%",
       "43.2",
-      "100th"
+      "101st"
      ]
     ]
    },
@@ -4732,13 +4732,6 @@
    "draft": "2014: Rd 1, Pk 3 (PHI)",
    "espnId": "3059318",
    "experience": "11th Season",
-   "injury": {
-    "comment": "Embiid (foot) is questionable to suit up for Monday's game against the Bulls.",
-    "date": "2026-11-01",
-    "returnDate": "2026-11-02",
-    "status": "Day-To-Day",
-    "type": "Foot"
-   },
    "jersey": "21",
    "position": "C",
    "season": [
@@ -4779,7 +4772,7 @@
      [
       "REB",
       "9.4",
-      "9th"
+      "10th"
      ],
      [
       "AST",
@@ -5642,7 +5635,7 @@
      [
       "REB",
       "5.6",
-      "76th"
+      "77th"
      ],
      [
       "AST",
@@ -5652,7 +5645,7 @@
      [
       "FG%",
       "51.1",
-      "36th"
+      "37th"
      ]
     ]
    },
@@ -5699,7 +5692,7 @@
    "espnId": "3916387",
    "experience": "9th Season",
    "injury": {
-    "comment": "Jackson is slated to have surgery to address his right thumb injury and will be placed on injured reserve, per coach Jesse Minter,  Brian Wacker of The Baltimore Sun reports.",
+    "comment": "Ravens head coach Jesse Minter said after Sunday's 36-10 loss to the Bills that Jackson will undergo surgery to address his right thumb injury and will be placed on injured reserve,  Brian Wacker of The Baltimore Sun reports.",
     "date": "2026-11-01",
     "returnDate": "2026-12-13",
     "status": "Out",
@@ -5892,7 +5885,7 @@
      [
       "PTS",
       "14.4",
-      "Tied-83rd"
+      "Tied-84th"
      ],
      [
       "REB",
@@ -5902,12 +5895,12 @@
      [
       "AST",
       "6.3",
-      "21st"
+      "22nd"
      ],
      [
       "FG%",
       "39.3",
-      "120th"
+      "121st"
      ]
     ]
    },
@@ -6008,22 +6001,22 @@
      [
       "PTS",
       "16.4",
-      "60th"
+      "Tied-59th"
      ],
      [
       "REB",
       "7.0",
-      "Tied-41st"
+      "Tied-44th"
      ],
      [
       "AST",
       "7.0",
-      "Tied-13th"
+      "Tied-14th"
      ],
      [
       "FG%",
       "44.9",
-      "91st"
+      "89th"
      ]
     ]
    },
@@ -6075,7 +6068,7 @@
     ],
     [
      "3P%",
-     "35.3"
+     "35.4"
     ],
     [
      "STL",
@@ -6125,17 +6118,17 @@
      [
       "REB",
       "8.2",
-      "Tied-49th"
+      "Tied-22nd"
      ],
      [
       "AST",
       "7.3",
-      "7th"
+      "Tied-9th"
      ],
      [
       "FG%",
       "48.2",
-      "66th"
+      "60th"
      ]
     ]
    },
@@ -6690,12 +6683,12 @@
      [
       "PTS",
       "21.2",
-      "31st"
+      "30th"
      ],
      [
       "REB",
       "9.8",
-      "7th"
+      "8th"
      ],
      [
       "AST",
@@ -7732,12 +7725,12 @@
      [
       "AST",
       "3.3",
-      "Tied-74th"
+      "Tied-75th"
      ],
      [
       "FG%",
       "46.5",
-      "77th"
+      "74th"
      ]
     ]
    },
@@ -8036,13 +8029,6 @@
    "draft": "2009: Rd 1, Pk 7 (GS)",
    "espnId": "3975",
    "experience": "18th Season",
-   "injury": {
-    "comment": "Curry (rest) won't play Sunday against the Clippers, Brett Siegel of ClutchPoints.com reports.",
-    "date": "2026-10-31",
-    "returnDate": "2026-11-02",
-    "status": "Out",
-    "type": "Rest"
-   },
    "jersey": "30",
    "position": "G",
    "season": [
@@ -8083,12 +8069,12 @@
      [
       "REB",
       "3.8",
-      "Tied-141st"
+      "Tied-146th"
      ],
      [
       "AST",
       "4.0",
-      "Tied-58th"
+      "Tied-59th"
      ],
      [
       "FG%",
@@ -8526,7 +8512,7 @@
      [
       "FG%",
       "51.6",
-      "33rd"
+      "34th"
      ]
     ]
    },
@@ -8627,7 +8613,7 @@
      [
       "PTS",
       "28.0",
-      "5th"
+      "6th"
      ],
      [
       "REB",
@@ -8642,7 +8628,7 @@
      [
       "FG%",
       "48.5",
-      "56th"
+      "57th"
      ]
     ]
    },
@@ -9030,22 +9016,22 @@
      [
       "PTS",
       "20.7",
-      "Tied-36th"
+      "Tied-35th"
      ],
      [
       "REB",
       "4.3",
-      "Tied-111th"
+      "Tied-112th"
      ],
      [
       "AST",
       "2.5",
-      "Tied-112th"
+      "Tied-110th"
      ],
      [
       "FG%",
       "64.4",
-      "7th"
+      "6th"
      ]
     ]
    },
@@ -9056,5 +9042,5 @@
   }
  },
  "source": "ESPN public data feeds (unofficial; replace with a licensed provider before launch)",
- "updated": "2026-11-02T11:13Z"
+ "updated": "2026-11-03T03:55Z"
 }
