@@ -1340,19 +1340,17 @@ function liveDrivers(pid, p, cs) {
   }
   return out;
 }
-function aboutSection(pid, p, cs) {
-  const pr = PROFILES[pid];
-  const bio = pr && pr.bio ? pr.bio : p.summary;
-  const written = pr && pr.drivers ? pr.drivers : [];
-  const live = liveDrivers(pid, p, cs);
-  if (!written.length && !live.length) return `<p class="lede">${esc(bio)}</p>`;
-  return `<div class="about" style="--ta:${esc(p.color || '#8d94a3')}">
-    <div class="about-bio"><span class="eyebrow">Who he is</span><p>${esc(bio)}</p>
-      ${pr && p.summary && cs.length ? `<span style="font-size:13px;color:var(--faint)">${esc(p.summary)}</span>` : ''}
-      ${live.length ? `<div class="drivers" style="margin-top:6px"><h3>Right now <span class="drv-live">● LIVE</span></h3>${live.map(([i, k, t, d]) => `<div class="drv"><div class="drv-i ${k}">${esc(i)}</div><div><b>${esc(t)}</b><span>${esc(d)}</span></div></div>`).join('')}</div>` : ''}
-    </div>
+function aboutBio(pid, p, cs) {
+  const pr = PROFILES[pid], bio = pr && pr.bio ? pr.bio : p.summary;
+  return `<div class="about-bio"><span class="eyebrow">Who he is</span><p>${esc(bio)}</p>${pr && p.summary && cs.length ? `<span style="font-size:13px;color:var(--faint)">${esc(p.summary)}</span>` : ''}</div>`;
+}
+function aboutDrivers(pid, p, cs) {
+  const pr = PROFILES[pid], written = pr && pr.drivers ? pr.drivers : [], live = liveDrivers(pid, p, cs);
+  if (!written.length && !live.length) return '';
+  return `<div class="section"><div class="about" style="--ta:${esc(p.color || '#8d94a3')}">
+    ${live.length ? `<div class="drivers"><h3>Right now <span class="drv-live">● LIVE</span></h3>${live.map(([i, k, t, d]) => `<div class="drv"><div class="drv-i ${k}">${esc(i)}</div><div><b>${esc(t)}</b><span>${esc(d)}</span></div></div>`).join('')}</div>` : '<div></div>'}
     ${written.length ? `<div class="drivers"><h3>What moves his cards</h3>${written.map(([t, d], n) => `<div class="drv"><div class="drv-i">${n + 1}</div><div><b>${esc(t)}</b><span>${esc(d)}</span></div></div>`).join('')}</div>` : ''}
-  </div>`;
+  </div></div>`;
 }
 
 /* ---------- player card market: snapshot, filterable chart, card gallery ---------- */
@@ -1548,10 +1546,11 @@ function viewPlayer(pid) {
         </div>
         </div>
       </div>`; })()}
-      ${aboutSection(pid, p, cs)}
+      ${aboutBio(pid, p, cs)}
       ${cs.length ? (() => { const y = combined(cs, '1Y').change, b = basket(cs, '1Y'); return `<button type="button" class="pchg" data-act="toChart" title="See the price chart"><span class="k">Card value · last 12 months</span><span class="v num ${cls(y)}">${fmtPct(y)}</span><span class="s">across ${cs.length} tracked prices · one of each now <b>${money(last(b))}</b></span><span class="go">See chart ↓</span></button>`; })() : ''}
     </div>
     ${cs.length ? marketCards(pid, p, cs) : ''}
+    ${aboutDrivers(pid, p, cs)}
 
     ${playerMarket(pid, p, cs)}
 
