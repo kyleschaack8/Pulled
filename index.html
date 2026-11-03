@@ -1550,7 +1550,6 @@ function viewPlayer(pid) {
       ${cs.length ? (() => { const y = combined(cs, '1Y').change, b = basket(cs, '1Y'); return `<button type="button" class="pchg" data-act="toChart" title="See the price chart"><span class="k">Card value · last 12 months</span><span class="v num ${cls(y)}">${fmtPct(y)}</span><span class="s">across ${cs.length} tracked prices · one of each now <b>${money(last(b))}</b></span><span class="go">See chart ↓</span></button>`; })() : ''}
     </div>
     ${cs.length ? marketCards(pid, p, cs) : ''}
-    ${aboutDrivers(pid, p, cs)}
 
     ${playerMarket(pid, p, cs)}
 
@@ -1562,6 +1561,7 @@ function viewPlayer(pid) {
       <div class="alert ${p.note.kind}"><div><div style="font-weight:700">${esc(p.note.title)}</div><div style="color:var(--muted);font-size:14px">${esc(p.note.text)}</div></div></div>
     </div>
 
+    ${aboutDrivers(pid, p, cs)}
   </div>`;
 }
 
