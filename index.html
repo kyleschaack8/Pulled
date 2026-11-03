@@ -299,6 +299,26 @@ a.gp:hover { background: var(--raise); }
 @media (max-width: 760px) { .msgs { grid-template-columns: 1fr; } .msg-list { border-right: 0; } .msg-list.has-open { display: none; } .msg-back { display: inline-block; } .msgs:not(:has(.msg-list.has-open)) .msg-empty { display: none; } }
 .prof-stats { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; color: var(--muted); }
 .prof-stats b { color: var(--fg); font-size: 16px; }
+.fab { display: none; position: fixed; right: 18px; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); width: 60px; height: 60px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,.45); z-index: 15; }
+@media (max-width: 760px) { .fab { display: inline-flex; } }
+.add-steps { display: flex; gap: 8px; flex-wrap: wrap; font-size: 13px; font-weight: 700; color: var(--faint); }
+.add-steps span { padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); }
+.add-steps span.on { color: var(--accent-ink); background: var(--accent); border-color: var(--accent); }
+.add-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.add-photo { display: flex; flex-direction: column; gap: 8px; align-items: stretch; }
+.add-photo img { width: 100%; aspect-ratio: 5 / 7; object-fit: cover; border-radius: 10px; border: 1px solid var(--line); }
+.add-drop { aspect-ratio: 5 / 7; border: 2px dashed var(--line); border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center; padding: 10px; color: var(--muted); cursor: pointer; font-size: 13px; }
+.add-drop:hover { border-color: var(--accent); color: var(--fg); }
+.add-drop b { color: var(--fg); font-size: 15px; }
+.add-busy { display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--muted); }
+.spin { width: 18px; height: 18px; border-radius: 50%; border: 3px solid var(--line); border-top-color: var(--accent); animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.af-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 480px) { .af-grid { grid-template-columns: 1fr; } }
+.af { display: flex; flex-direction: column; gap: 4px; font-size: 13px; font-weight: 600; color: var(--muted); min-width: 0; }
+.af input, .af select { min-height: 44px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); padding: 0 12px; font: inherit; font-size: 15px; font-weight: 500; }
+.ocr { white-space: pre-wrap; font-size: 12px; color: var(--muted); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px; max-height: 160px; overflow: auto; }
+.panel[aria-disabled="true"] { opacity: .55; }
 .lede { margin: 0; color: var(--muted); font-size: 17px; max-width: 62ch; }
 .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); }
 .section { display: flex; flex-direction: column; gap: 14px; }
@@ -392,6 +412,7 @@ td.best { color: var(--fg); font-weight: 600; }
     </div>
     <nav class="nav" aria-label="Main">
       <a href="#home" data-nav="home">Feed</a>
+      <a href="#add" data-nav="add">Scan</a>
       <a href="#market" data-nav="market">Market</a>
       <a href="#browse" data-nav="browse">Browse</a>
       <a href="#movers" data-nav="movers">Movers</a>
@@ -404,6 +425,7 @@ td.best { color: var(--fg); font-weight: 600; }
 </header>
 <div class="wrap"><div class="notice" id="dataNotice">TEST SITE · SAMPLE DATA · PRICES AND STATS ARE ILLUSTRATIVE, NOT REAL</div></div>
 <main class="wrap" id="app"></main>
+<a class="fab" href="#add" id="fab" aria-label="Scan a card"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></a>
 <div class="toast" id="toast" hidden></div>
 
 <script>
@@ -481,7 +503,7 @@ let CARDS = [
 ];
 let CARD = Object.fromEntries(CARDS.map(c => [c.id, c]));
 
-const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', pView: 'index', pUnit: 'pct', pGrade: 'All', pType: 'All', pVol: 'on', pEvents: 'on', pHidden: {}, pLayout: 'gallery', pQuery: '', pFor: '', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '', collSport: 'All', f: F0(), fLimit: 48, fMore: {}, fOpen: false, collQuery: '', collAvail: 'avail', collSort: 'matches', offerFor: null, trade: null, moversRange: '1M', moversSport: 'All', moversGrade: 'All', moversMin: '3', moversView: 'cards', homeSport: 'All', feedTab: 'foryou', feedLimit: 10, openComments: null, draft: { card: '', kind: 'pulled', caption: '', ask: '', photo: null } };
+const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', pView: 'index', pUnit: 'pct', pGrade: 'All', pType: 'All', pVol: 'on', pEvents: 'on', pHidden: {}, pLayout: 'gallery', pQuery: '', pFor: '', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '', collSport: 'All', f: F0(), fLimit: 48, fMore: {}, fOpen: false, collQuery: '', collAvail: 'avail', collSort: 'matches', offerFor: null, trade: null, moversRange: '1M', moversSport: 'All', moversGrade: 'All', moversMin: '3', moversView: 'cards', homeSport: 'All', feedTab: 'foryou', feedLimit: 10, openComments: null, draft: { card: '', kind: 'pulled', caption: '', ask: '', photo: null }, add: D0(), addBusy: '', addOcrSrc: null };
 const charts = {};
 
 /* ---------- real data from data/*.json (built by the "Build card data" robot) ---------- */
@@ -1678,6 +1700,7 @@ const BUILD = {
     ['Card pages', 'Price chart with game, injury and news markers, sales volume and key stats.'],
     ['Auto-written "Why it moved"', 'Generated from price, sales and event data. No manual writing.'],
     ['Compare tool', 'Up to four cards on price, sales volume and graded population.'],
+    ['Scan & add cards', 'Scan page (camera on phones, Scan button bottom-right): photo front and back, Read card fills in player, year, brand, number, rookie, auto, numbered and grade from the printed text, matches against tracked cards, or submits a new card to the community catalog review queue. Saved in this browser until there is a shared database.'],
     ['Social feed', 'Pulled is now a social network for collectors: a feed of pulls, purchases, grades, sales and trade bait with real values on every card; follow collectors, like, comment, wishlist, buy or offer and trade from any post; Post a pull; Messages; profiles with followers and posts. Sample collectors for now; saved in this browser.'],
     ['Brand logo', 'Retro wax-pack logo (a card being pulled from a pack) in heritage navy, cream and red, with the PULLED wordmark in the header, plus a matching favicon and app icon. Files in images/brand/.'],
     ['Player card market', 'Market snapshot (value, 12-month high, monthly sales, cheapest way in, top, hottest and most traded card, PSA 10 premium), a chart you can switch between combined, raw vs PSA 10 and each card, in % or $, filtered by grade and type, with sales volume and news markers, plus a card gallery or table with raw and PSA 10 prices side by side.'],
@@ -2372,7 +2395,7 @@ function feedSidebar() {
   const sug = collectors().filter(c => !isFollowing(c.id)).slice(0, 4);
   const hot = CARDS.filter(c => hotRank(c.id)).sort((a, b) => hotRank(a.id) - hotRank(b.id)).slice(0, 4);
   return `<aside class="feed-side">
-    <div class="panel side-box"><span style="font-weight:700">Pulled something good?</span><span style="color:var(--muted);font-size:14px">Share it. Pulled adds the card's real market value and trend automatically.</span><a class="btn primary" href="#post">Post a pull</a></div>
+    <div class="panel side-box"><span style="font-weight:700">Pulled something good?</span><span style="color:var(--muted);font-size:14px">Share it. Pulled adds the card's real market value and trend automatically.</span><a class="btn primary" href="#post">Post a pull</a><a class="btn" href="#add">Scan a card</a></div>
     <div class="panel side-box"><span class="eyebrow">Collectors to follow</span>${sug.length ? sug.map(c => `<div class="row" style="gap:10px;flex-wrap:nowrap"><a href="#collector-${c.id}" class="row" style="gap:10px;flex-wrap:nowrap;flex:1;min-width:0;text-decoration:none;color:var(--fg)">${cAvatar(c, 34)}<span style="min-width:0"><b style="font-size:14px">@${esc(c.handle)}</b><span style="display:block;font-size:12px;color:var(--faint)">${c.fav === 'All' ? 'All sports' : esc(c.fav)} · ${money(collValue(c))}</span></span></a><button type="button" class="chip sm" data-act="follow" data-id="${c.id}" aria-pressed="false">Follow</button></div>`).join('') : '<span style="font-size:13px;color:var(--muted)">You follow everyone. Nice.</span>'}<a href="#collectors" style="font-size:13px;color:var(--accent);font-weight:600;text-decoration:none">See all collectors</a></div>
     ${hot.length ? `<div class="panel side-box"><span class="eyebrow">Hot right now</span>${hot.map(c => `<a class="side-card" href="#card-${c.id}"><span class="thumb" style="width:34px;height:48px">${cardVisual(c)}</span><span style="flex:1;min-width:0"><b style="font-size:13px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(PLAYERS[c.p].name)}</b><span style="font-size:12px;color:var(--faint);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(c.name)}</span></span><span class="num up" style="font-size:13px">${fmtPct(monthChange(c))}</span></a>`).join('')}<a href="#movers" style="font-size:13px;color:var(--accent);font-weight:600;text-decoration:none">All movers</a></div>` : ''}
   </aside>`;
@@ -2489,6 +2512,150 @@ function publishPost() {
 function collectorPosts(c) { return samplePosts().filter(p => p.who === c.id); }
 const followerCount = c => 40 + (c.trades * 7) % 900 + (isFollowing(c.id) ? 1 : 0);
 
+/* ---------- scan & add a card: collectors build the catalog (prototype) ----------
+   Photo + details -> match against the catalog -> add to collection, or submit as a new card for review.
+   "Read card" uses on-device text recognition (Tesseract.js, loaded only when used) to pre-fill fields.
+   Submissions are saved in this browser until there is a shared database. */
+let memSubs = getList('pulled-submissions');
+function saveSubs() { try { localStorage.setItem('pulled-submissions', JSON.stringify(memSubs)); } catch (e) { memSubs = memSubs.map(s => ({ ...s, back: null })); setList('pulled-submissions', memSubs); toast('Storage is full, so back photos were dropped'); } }
+const BRANDS = ['Topps Chrome', 'Topps', 'Bowman Chrome', 'Bowman', 'Panini Prizm', 'Prizm', 'Donruss Optic', 'Optic', 'Donruss', 'Select', 'Mosaic', 'National Treasures', 'Contenders', 'Upper Deck', 'Fleer', 'Score', 'Leaf', 'Stadium Club', 'Hoops', 'Prestige', 'Finest', 'Heritage', 'Flawless', 'Immaculate', 'SP Authentic', 'Exquisite'];
+const GRADERS = ['PSA', 'BGS', 'SGC', 'CGC'];
+function D0() { return { front: null, back: null, player: '', sport: '', year: '', brand: '', set: '', number: '', parallel: '', rookie: false, auto: false, relic: false, serial: '', graded: false, grader: 'PSA', grade: '10', ocr: '', step: 1 }; }
+function photoTo(file, max, cb) {
+  if (!file || !/^image\//.test(file.type)) { toast('Choose an image file'); return; }
+  const fr = new FileReader();
+  fr.onload = () => { const img = new Image(); img.onload = () => { const s = Math.min(1, max / Math.max(img.width, img.height)); const cv = document.createElement('canvas'); cv.width = Math.round(img.width * s); cv.height = Math.round(img.height * s); cv.getContext('2d').drawImage(img, 0, 0, cv.width, cv.height); cb(cv.toDataURL('image/jpeg', 0.82)); }; img.onerror = () => toast("That image couldn't be read. Try a JPG or PNG."); img.src = fr.result; };
+  fr.readAsDataURL(file);
+}
+/* load the text reader only when someone taps "Read card" */
+let TESS = null;
+function loadTesseract() {
+  if (window.Tesseract) return Promise.resolve(window.Tesseract);
+  if (TESS) return TESS;
+  TESS = new Promise((ok, no) => { const s = document.createElement('script'); s.src = 'https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js'; s.onload = () => ok(window.Tesseract); s.onerror = () => { TESS = null; no(new Error('load')); }; document.head.appendChild(s); });
+  return TESS;
+}
+const norm = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+function guessFromText(text) {
+  const t = norm(text), out = {};
+  const players = Object.values(PLAYERS).map(p => p).filter(p => { const parts = norm(p.name).split(/\s+/); const lastN = parts[parts.length - 1].replace(/[^a-z]/g, ''); return lastN.length > 2 && t.includes(lastN); });
+  const full = players.find(p => t.includes(norm(p.name)));
+  const pl = full || (players.length === 1 ? players[0] : null);
+  if (pl) { out.player = pl.name; out.sport = pl.sport; }
+  const yr = (text.match(/\b(19[5-9]\d|20[0-3]\d)(-\d{2})?\b/) || [])[0]; if (yr) out.year = yr;
+  const num = (text.match(/(?:#|No\.?\s?)\s?([A-Z]{0,4}-?\d{1,4})/i) || [])[1]; if (num) out.number = num.toUpperCase();
+  const br = BRANDS.find(b => t.includes(norm(b))); if (br) out.brand = br;
+  if (/\brookie\b|\brc\b/i.test(text)) out.rookie = true;
+  if (/autograph|\bauto\b|signature/i.test(text)) out.auto = true;
+  const ser = (text.match(/\b\d{1,3}\s?\/\s?(\d{1,4})\b/) || [])[1]; if (ser) out.serial = ser;
+  const g = (text.match(/\b(PSA|BGS|SGC|CGC)\b[^\d]{0,12}(10|9\.5|[1-9](?:\.5)?)\b/i)); if (g) { out.graded = true; out.grader = g[1].toUpperCase(); out.grade = g[2]; }
+  return out;
+}
+async function readCard() {
+  const d = state.add; if (!d.front) return;
+  state.addBusy = 'Loading the card reader…'; render();
+  try {
+    const T = await loadTesseract();
+    state.addBusy = 'Reading the card…'; render();
+    const res = await T.recognize(state.addOcrSrc || d.front, 'eng');
+    const text = (res && res.data && res.data.text) || '';
+    const g = guessFromText(text);
+    const filled = Object.keys(g).filter(k => !d[k] || d[k] === false);
+    filled.forEach(k => { d[k] = g[k]; });
+    d.ocr = text.trim().slice(0, 400);
+    state.addBusy = ''; d.step = 2; render();
+    toast(filled.length ? `Filled in ${filled.length} detail${filled.length > 1 ? 's' : ''} from the photo. Check them.` : "Couldn't read enough text. Fill in the details below.");
+  } catch (e) {
+    state.addBusy = ''; d.step = 2; render(); toast("The card reader isn't available right now. Fill in the details below.");
+  }
+}
+function catalogMatches(d) {
+  const p = norm(d.player).trim(); if (!p) return [];
+  const pid = Object.keys(PLAYERS).find(id => norm(PLAYERS[id].name) === p) || Object.keys(PLAYERS).find(id => norm(PLAYERS[id].name).includes(p) || p.includes(norm(lastName(PLAYERS[id].name))));
+  if (!pid) return [];
+  const yr = String(d.year || '').slice(0, 4), num = String(d.number || '').replace(/^#/, '').toLowerCase(), br = norm(d.brand);
+  return CARDS.filter(c => c.p === pid && (d.graded ? c.tags.includes('Graded') : !c.tags.includes('Graded'))).map(c => {
+    let sc = 1; const nm = norm(c.name);
+    if (yr && c.name.startsWith(yr)) sc += 3;
+    if (num && nm.includes('#' + num)) sc += 4;
+    if (br && br.split(' ').some(w => w.length > 2 && nm.includes(w))) sc += 2;
+    return { c, sc };
+  }).filter(x => x.sc > 1 || !(yr || num || br)).sort((a, b) => b.sc - a.sc).slice(0, 4).map(x => x.c);
+}
+function subTitle(s) { return [s.year, s.brand, s.set, s.number ? '#' + String(s.number).replace(/^#/, '') : ''].filter(Boolean).join(' ') || 'Untitled card'; }
+function subDetail(s) { return [s.parallel, s.rookie ? 'Rookie' : '', s.auto ? 'Auto' : '', s.relic ? 'Relic' : '', s.serial ? '/' + s.serial : '', s.graded ? `${s.grader} ${s.grade}` : 'Raw'].filter(Boolean).join(' · '); }
+function viewAdd() {
+  const d = state.add, busy = state.addBusy;
+  const inp = (id, label, val, ph, extra = '') => `<label class="af"><span>${label}</span><input id="${id}" class="add-in" data-k="${id.slice(2)}" type="text" value="${esc(val || '')}" placeholder="${esc(ph)}" autocomplete="off" ${extra}></label>`;
+  const chk = (k, label) => `<button type="button" class="chip" data-act="addToggle" data-id="${k}" aria-pressed="${!!d[k]}">${label}</button>`;
+  const photoBox = (side, label) => `<div class="add-photo">${d[side] ? `<img src="${d[side]}" alt="${label} of your card"><button type="button" class="btn sm" data-act="addClear" data-id="${side}">Retake</button>` : `<label class="add-drop" for="ph-${side}"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><b>${label}</b><span>Take a photo or choose one</span></label>`}<input id="ph-${side}" type="file" accept="image/*" capture="environment" data-side="${side}" class="add-file" hidden></div>`;
+  const matches = d.step >= 2 ? catalogMatches(d) : [];
+  const ready = d.front && d.player.trim() && (d.year || d.number || d.brand);
+  return `<div class="view">
+    <div class="section" style="padding-top:8px"><h1>Scan a card</h1><p class="lede">Snap your card, check the details, and add it. If Pulled already tracks it, it goes straight into your collection. If not, you add it to the catalog for everyone.</p></div>
+    <div class="add-steps">${['Photo', 'Details', 'Add'].map((s, i) => `<span class="${d.step > i ? 'on' : ''}">${i + 1}. ${s}</span>`).join('')}</div>
+    <div class="cols">
+      <div class="panel" style="display:flex;flex-direction:column;gap:14px">
+        <div class="add-photos">${photoBox('front', 'Front')}${photoBox('back', 'Back (optional)')}</div>
+        ${busy ? `<div class="add-busy" role="status"><span class="spin" aria-hidden="true"></span>${esc(busy)}</div>` : d.front ? `<div class="row"><button type="button" class="btn primary" data-act="readCard">Read card from photo</button><button type="button" class="btn" data-act="addStep" data-id="2">Fill in myself</button></div><span style="font-size:12.5px;color:var(--faint)">Reading the card picks up printed text like the name, year, set and card number. It works best on a flat, well-lit photo. Always double-check.</span>` : `<span style="font-size:14px;color:var(--muted)">Lay the card flat in good light. Back photos help reviewers confirm the card number and set.</span>`}
+      </div>
+      <div class="panel" style="display:flex;flex-direction:column;gap:12px"${d.step < 2 ? ' aria-disabled="true"' : ''}>
+        <h2 style="font-size:20px">Card details</h2>
+        <div class="af-grid">
+          ${inp('a-player', 'Player', d.player, 'e.g. Josh Allen', 'list="playerList"')}
+          <label class="af"><span>Sport</span><select id="a-sport" class="add-in" data-k="sport">${['', 'NBA', 'NFL', 'MLB', 'NHL', 'Soccer', 'Other'].map(s => `<option value="${s}"${s === d.sport ? ' selected' : ''}>${s || 'Choose'}</option>`).join('')}</select></label>
+          ${inp('a-year', 'Year', d.year, 'e.g. 2018 or 2003-04', 'inputmode="numeric"')}
+          ${inp('a-brand', 'Brand', d.brand, 'e.g. Panini Prizm', 'list="brandList"')}
+          ${inp('a-set', 'Set or insert (optional)', d.set, 'e.g. Base, Rated Rookie')}
+          ${inp('a-number', 'Card number', d.number, 'e.g. 205')}
+          ${inp('a-parallel', 'Parallel (optional)', d.parallel, 'e.g. Silver, Gold Refractor')}
+          ${inp('a-serial', 'Numbered to (optional)', d.serial, 'e.g. 99 for /99', 'inputmode="numeric"')}
+        </div>
+        <div class="chips">${chk('rookie', 'Rookie')}${chk('auto', 'Autograph')}${chk('relic', 'Patch or relic')}${chk('graded', 'Graded')}</div>
+        ${d.graded ? `<div class="row" style="gap:10px"><label class="af" style="flex:0 0 140px"><span>Grader</span><select id="a-grader" class="add-in" data-k="grader">${GRADERS.map(g => `<option${g === d.grader ? ' selected' : ''}>${g}</option>`).join('')}</select></label><label class="af" style="flex:0 0 120px"><span>Grade</span><input id="a-grade" class="add-in" data-k="grade" type="text" inputmode="decimal" value="${esc(d.grade)}"></label></div>` : ''}
+        <datalist id="playerList">${Object.values(PLAYERS).map(p => `<option value="${esc(p.name)}">`).join('')}</datalist>
+        <datalist id="brandList">${BRANDS.map(b => `<option value="${esc(b)}">`).join('')}</datalist>
+        ${d.ocr ? `<details><summary style="font-size:13px;color:var(--muted);cursor:pointer">Text read from the photo</summary><pre class="ocr">${esc(d.ocr)}</pre></details>` : ''}
+      </div>
+    </div>
+    ${d.step >= 2 ? `<div class="section">
+      ${matches.length ? `<h2>Is it one of these?</h2><p style="margin:0;color:var(--muted);font-size:14px">Pulled already tracks these ${esc(d.player)} cards. Pick yours to add it with real prices.</p>
+        <div class="list">${matches.map(c => `<div class="item" style="flex-wrap:wrap">${flameThumb(c, cardVisual(c))}<div class="main"><span class="title">${esc(c.name)}</span><span class="sub">${esc(PLAYERS[c.p].name)} · ${esc(c.detail)} · ${money(last(c.price))}</span></div><button type="button" class="btn primary sm" data-act="addMatch" data-id="${c.id}">This is my card</button></div>`).join('')}</div>
+        <span style="font-size:14px;color:var(--muted)">Not listed? Add it as a new card below.</span>` : d.player.trim() ? `<div class="alert info"><div><div style="font-weight:700">New to Pulled</div><div style="color:var(--muted);font-size:14px">We don't track this card yet. Add it and it goes to review, then joins the catalog for everyone. Prices start filling in as sales come in.</div></div></div>` : ''}
+      <div class="row"><button type="button" class="btn${matches.length ? '' : ' primary'}" data-act="submitCard"${ready ? '' : ' disabled'}>Add as a new card</button>${ready ? '' : '<span style="font-size:13px;color:var(--faint)">Needs a front photo, the player, and the year, brand or card number.</span>'}</div>
+    </div>` : ''}
+    ${memSubs.length ? `<div class="section"><div class="row between"><h2>Your submissions</h2><a class="btn sm" href="#community">Community catalog</a></div>${subList(memSubs.slice(0, 4), false)}</div>` : ''}
+  </div>`;
+}
+const SUB_STATUS = { pending: ['In review', 'st-trade'], approved: ['Added to catalog', 'st-sale'], rejected: ['Not added', 'st-keep'] };
+function subList(list, review) {
+  return `<div class="list">${list.map(s => { const [l, c] = SUB_STATUS[s.status] || SUB_STATUS.pending;
+    return `<div class="item" style="flex-wrap:wrap"><div class="thumb">${s.front ? `<img src="${s.front}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:4px">` : ''}</div><div class="main"><span class="title">${esc(s.player)} · ${esc(subTitle(s))}</span><span class="sub">${esc(subDetail(s))} · added ${esc(s.at)}</span><div class="row" style="gap:6px;margin-top:4px"><span class="stag ${c}">${l}</span>${s.confirms ? `<span class="stag">${s.confirms} matching submission${s.confirms > 1 ? 's' : ''}</span>` : ''}</div></div>
+      ${review && s.status === 'pending' ? `<div class="row" style="gap:6px"><button type="button" class="btn primary sm" data-act="subApprove" data-id="${s.id}">Approve</button><button type="button" class="btn sm" data-act="subReject" data-id="${s.id}">Reject</button></div>` : ''}</div>`; }).join('')}</div>`;
+}
+function viewCommunity() {
+  const pend = memSubs.filter(s => s.status === 'pending'), done = memSubs.filter(s => s.status !== 'pending');
+  return `<div class="view">
+    <div class="section" style="padding-top:8px"><h1>Community catalog</h1><p class="lede">Cards collectors have added. New cards are reviewed before they join the catalog, so the data stays clean.</p></div>
+    <div class="tiles"><div class="tile"><span class="k">In review</span><span class="v">${pend.length}</span></div><div class="tile"><span class="k">Added to catalog</span><span class="v">${memSubs.filter(s => s.status === 'approved').length}</span></div><div class="tile"><span class="k">Tracked cards</span><span class="v">${CARDS.length}</span></div></div>
+    <div class="alert info"><div><div style="font-weight:700">Review queue (prototype)</div><div style="color:var(--muted);font-size:14px">This is the moderator view. Once Pulled has a shared database, every collector's submissions land here, and a card can be approved automatically when several collectors submit the same one.</div></div></div>
+    <div class="section"><div class="row between"><h2>Waiting for review</h2><a class="btn primary sm" href="#add">Scan a card</a></div>${pend.length ? subList(pend, true) : '<p style="margin:0;color:var(--muted)">Nothing waiting. Scan a card to add one.</p>'}</div>
+    ${done.length ? `<div class="section"><h2>Reviewed</h2>${subList(done, false)}</div>` : ''}
+  </div>`;
+}
+function submitCard() {
+  const d = state.add; if (!d.front || !d.player.trim()) return;
+  const key = [norm(d.player), d.year, norm(d.brand), String(d.number).replace(/^#/, '').toLowerCase(), norm(d.parallel)].join('|');
+  const dup = memSubs.find(s => s.key === key && s.status === 'pending');
+  if (dup) { dup.confirms = (dup.confirms || 1) + 1; saveSubs(); toast('Already in review. Your copy counts as a confirmation.'); }
+  else {
+    const { step, ocr, ...fields } = d;
+    memSubs = [{ id: 's-' + Date.now(), key, ...fields, player: d.player.trim(), status: 'pending', confirms: 1, at: new Date().toISOString().slice(0, 10) }, ...memSubs].slice(0, 60);
+    saveSubs(); toast('Card submitted for review. Thanks for building the catalog!');
+  }
+  state.add = D0(); location.hash = 'community';
+}
+
 function render() {
   const h = (location.hash || '#home').slice(1);
   Object.keys(charts).forEach(k => delete charts[k]);
@@ -2496,6 +2663,8 @@ function render() {
   if (h === 'home' || h === '') { html = viewFeed(); nav = 'home'; }
   else if (h === 'market') { html = viewHome(); nav = 'market'; }
   else if (h === 'post') { html = viewPost(); nav = 'home'; }
+  else if (h === 'add') { html = viewAdd(); nav = 'add'; }
+  else if (h === 'community') { html = viewCommunity(); nav = 'add'; }
   else if (h === 'messages') { html = viewMessages(null); nav = 'messages'; }
   else if (h.startsWith('messages-')) { html = viewMessages(h.slice(9)); nav = 'messages'; }
   else if (h.startsWith('player-')) html = viewPlayer(h.slice(7));
@@ -2536,6 +2705,9 @@ function render() {
   if (pca && pca.addEventListener) pca.addEventListener('change', () => render());
   const pk = $('#pcAsk'); if (pk && pk.addEventListener) pk.addEventListener('change', e => { state.draft.ask = e.target.value; render(); });
   const pph = $('#pcPhoto'); if (pph && pph.addEventListener) pph.addEventListener('change', e => resizePhoto(e.target.files[0], url => { state.draft = { ...state.draft, photo: url }; render(); }));
+  document.querySelectorAll('.add-in').forEach(el => { if (!el.addEventListener) return; el.addEventListener('input', e => { state.add[el.dataset.k] = e.target.value; }); el.addEventListener('change', e => { state.add[el.dataset.k] = e.target.value; if (state.add.step < 2) state.add.step = 2; setTimeout(() => { const fid = document.activeElement && document.activeElement.id; render(); const n = fid && document.getElementById(fid); if (n && n.focus) n.focus(); }, 0); }); });
+  document.querySelectorAll('.add-file').forEach(el => el.addEventListener && el.addEventListener('change', e => { const f = e.target.files[0], side = el.dataset.side; if (!f) return; if (side === 'front') photoTo(f, 1400, big => { state.addOcrSrc = big; }); photoTo(f, side === 'front' ? 640 : 480, url => { state.add[side] = url; render(); }); }));
+  const fab = $('#fab'); if (fab && fab.style) fab.style.display = /^#(add|post|messages)/.test(location.hash || '') ? 'none' : '';
   const sort = $('#sort'); if (sort) sort.addEventListener('change', e => { state.playerSort = e.target.value; render(); });
   const photo = $('#photo'); if (photo) photo.addEventListener('change', e => handlePhoto(e.target.files[0], e.target.dataset.id));
   const add = $('#addCompare'); if (add) add.addEventListener('change', e => { if (e.target.value) { state.compareIds.push(e.target.value); render(); } });
@@ -2554,6 +2726,13 @@ document.addEventListener('click', e => {
   if (a.dataset.act === 'sendMsg') sendMsg(id);
   if (a.dataset.act === 'draftKind') { state.draft = { ...state.draft, kind: id }; render(); }
   if (a.dataset.act === 'publishPost') publishPost();
+  if (a.dataset.act === 'addStep') { state.add.step = +id; render(); }
+  if (a.dataset.act === 'addClear') { state.add[id] = null; if (id === 'front') { state.addOcrSrc = null; state.add.step = 1; } render(); }
+  if (a.dataset.act === 'addToggle') { state.add[id] = !state.add[id]; render(); }
+  if (a.dataset.act === 'readCard') readCard();
+  if (a.dataset.act === 'addMatch') { if (!col().includes(id)) setCol([...col(), id]); state.draft = { card: id, kind: 'pulled', caption: '', ask: '', photo: state.add.front }; state.add = D0(); state.addOcrSrc = null; toast('Added to My collection. Share it?'); location.hash = 'post'; }
+  if (a.dataset.act === 'submitCard') submitCard();
+  if (a.dataset.act === 'subApprove' || a.dataset.act === 'subReject') { const s = memSubs.find(x => x.id === id); if (s) { s.status = a.dataset.act === 'subApprove' ? 'approved' : 'rejected'; saveSubs(); toast(s.status === 'approved' ? 'Approved' : 'Rejected'); render(); } }
   if (a.dataset.act === 'browsePlayer') { const pl = PLAYERS[id]; if (pl) { state.f = { ...F0(), player: [pl.name], view: state.f.view || 'grid' }; state.fLimit = 48; state.fOpen = false; } if (location.hash === '#browse') render(); }
   if (a.dataset.act === 'toChart') { state.playerRange = '1Y'; state.pView = 'index'; render(); const el = document.getElementById('pchart'); if (el && el.scrollIntoView) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   if (a.dataset.act === 'pHide') { state.pHidden = { ...state.pHidden, [id]: !state.pHidden[id] }; render(); }
