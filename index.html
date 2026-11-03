@@ -2890,7 +2890,7 @@ function insightsSection(pid, p, cs) {
       </div>
     </div>`;
   return `<div class="section" id="insights">
-    <div class="row between" style="align-items:flex-end;gap:12px"><div><h2>Card insights</h2><p style="margin:2px 0 0;color:var(--muted);font-size:14px">Everything that shapes what ${esc(p.short)}'s cards are worth, in plain English.</p></div>${segBtns('insTab', [['overview', 'Overview'], ['tools', 'Tools'], ['context', 'Context']], tab)}</div>
+    <div class="row between" style="align-items:flex-end;gap:12px"><div><h2>Card insights</h2><p style="margin:2px 0 0;color:var(--muted);font-size:14px">Everything that shapes what ${esc(p.short)}'s cards are worth.</p></div>${segBtns('insTab', [['overview', 'Overview'], ['tools', 'Tools'], ['context', 'Context']], tab)}</div>
     ${tab === 'tools' ? tools : tab === 'context' ? context : overview}
   </div>`;
 }

@@ -1,6 +1,6 @@
 # Pulled
 
-Sports card prices, explained. Pulled tracks card prices next to player stats, injuries and news, and tells you in plain English why your cards move.
+Sports card prices, explained. Pulled tracks card prices next to player stats, injuries and news, and tells you why your cards move.
 
 **Live test site:** https://kyleschaack8.github.io/Pulled/ (sample data)
 **Landing page:** https://kyleschaack8.github.io/Pulled/landing/

@@ -27,7 +27,7 @@ Collectors watch games in one app and check card prices in another, then guess a
 ## What makes it different
 
 1. Price and performance on one chart
-2. "Why it moved" in plain English
+2. "Why it moved" explanations
 3. Full player profiles next to the cards
 4. Player-wide card market index
 5. Looks ahead, not just back
