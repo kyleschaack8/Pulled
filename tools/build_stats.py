@@ -154,6 +154,19 @@ def _articles(o, out=None, depth=0):
     return out
 
 
+def _find_events(o, depth=0):
+    if depth > 5:
+        return
+    if isinstance(o, dict):
+        if o.get("date") and (o.get("shortName") or o.get("name")):
+            yield o
+        for v in o.values():
+            yield from _find_events(v, depth + 1)
+    elif isinstance(o, list):
+        for v in o:
+            yield from _find_events(v, depth + 1)
+
+
 def _clean_html(s):
     import re
     return re.sub(r"<[^>]+>", "", s or "").replace("&nbsp;", " ").replace("&amp;", "&").strip()
@@ -187,7 +200,12 @@ def news_for(p, aid, ov):
                        "date": (note.get("published") or note.get("lastModified") or "")[:10]}
     ng = (ov or {}).get("nextGame") or {}
     evs = ng.get("events") if isinstance(ng, dict) else None
+    if isinstance(evs, dict):
+        evs = list(evs.values())
     ev = (evs or [ng])[0] if (evs or ng) else None
+    if isinstance(ev, dict) and not (ev.get("date") or ev.get("name") or ev.get("shortName")):
+        found = [a for a in _find_events(ng)]
+        ev = found[0] if found else None
     if isinstance(ev, dict) and (ev.get("date") or ev.get("name") or ev.get("shortName")):
         rec["nextGame"] = {"name": ev.get("shortName") or ev.get("name") or "", "date": (ev.get("date") or "")[:16]}
     return rec

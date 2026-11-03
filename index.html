@@ -2884,7 +2884,7 @@ function insightsSection(pid, p, cs) {
 /* ---------- what's happening now: plain-English situation report + recent news + what could move his cards ---------- */
 let NEWS = {}, NEWS_UPDATED = '';
 const NEWS_TAGS = [
-  ['Injury', /injur|surgery|sprain|strain|torn|tear|fracture|concussion|hamstring|ankle|knee|out for|ruled out|questionable|doubtful|injured list|\bIL\b|day-to-day|setback/i, 'down'],
+  ['Injury', /injur|surgery|sprain|strain(?!ed)|torn|fracture|concussion|hamstring|ankle(?!-break)|\bknee\b|out for|ruled out|questionable|doubtful|injured list|\bIL\b|day-to-day|setback/i, 'down'],
   ['Suspension', /suspend|suspension/i, 'down'],
   ['Trade talk', /\btrade[ds]?\b|trading block|deadline deal|acquire/i, 'flat'],
   ['Contract', /contract|extension|re-sign|signs with|free agen|max deal/i, 'flat'],
@@ -2918,7 +2918,7 @@ function situationSection(pid, p, cs) {
   if (perf && p.status === 'active') sents.push(perf.note);
   // market
   if (d) {
-    const dir = v => v >= 0 ? `up ${Math.abs(v).toFixed(0)}%` : `down ${Math.abs(v).toFixed(0)}%`;
+    const dir = v => Math.abs(v) < 1 ? 'about flat' : v >= 0 ? `up ${Math.abs(v).toFixed(0)}%` : `down ${Math.abs(v).toFixed(0)}%`;
     sents.push(`His cards are ${dir(d.ch1)} over the last month and ${dir(d.ch3)} over 3 months, with about ${d.perMonth} sales last month${d.prevAvg ? ` (${d.perMonth >= d.prevAvg ? 'busier' : 'quieter'} than usual)` : ''}.`);
     if (hotRank(cs.slice().sort((a, b) => monthChange(b) - monthChange(a))[0].id)) watch.push(['up', 'Hot streak', 'One of his cards is among the top risers this month. Momentum can attract more buyers, or cool off fast.']);
   }
@@ -2934,7 +2934,7 @@ function situationSection(pid, p, cs) {
     <p class="sit-sum">${sents.map(esc).join(' ')}</p>
     ${n.note && (n.note.headline || n.note.story) ? `<div class="sit-note"><b>${esc(n.note.headline || 'Latest update')}</b>${n.note.story ? `<span>${esc(n.note.story)}</span>` : ''}${n.note.date ? `<span class="sit-date">${esc(fmtDay(n.note.date))}</span>` : ''}</div>` : ''}
     <div class="sit-cols">
-      <div class="sit-box"><h3>Recent news</h3>${tagged.length ? `<div class="sit-news">${tagged.map(({ a, tag }) => `<a class="sit-item"${a.url ? ` href="${esc(a.url)}" target="_blank" rel="noopener"` : ''}>${tag ? `<span class="stag sit-${tag.tone}">${esc(tag.label)}</span>` : ''}<b>${esc(a.title)}</b>${a.desc ? `<span class="sit-desc">${esc(a.desc)}</span>` : ''}<span class="sit-date">${esc(fmtDay(a.date))}${a.url ? ' · ESPN' : ''}</span></a>`).join('')}</div>` : `<p class="ins-p">${p.status === 'active' ? 'No headlines in the last few days.' : 'No recent headlines. For retired players, quiet news is normal.'}</p>`}</div>
+      <div class="sit-box"><h3>Recent news</h3>${tagged.length ? `<div class="sit-news">${tagged.map(({ a, tag }) => `<a class="sit-item"${a.url ? ` href="${esc(a.url)}" target="_blank" rel="noopener"` : ''}>${tag ? `<span class="stag sit-${tag.tone}">${esc(tag.label)}</span>` : ''}<b>${esc(a.title)}</b>${a.desc && a.desc.toLowerCase() !== a.title.toLowerCase() ? `<span class="sit-desc">${esc(a.desc)}</span>` : ''}<span class="sit-date">${esc(fmtDay(a.date))}${a.url ? ' · ESPN' : ''}</span></a>`).join('')}</div>` : `<p class="ins-p">${p.status === 'active' ? 'No headlines in the last few days.' : 'No recent headlines. For retired players, quiet news is normal.'}</p>`}</div>
       <div class="sit-box"><h3>What could move his cards next</h3><div class="sit-watch">${watch.slice(0, 5).map(([t, h, s]) => `<div class="sit-w"><span class="sit-ar sit-${t}" aria-hidden="true">${arrow(t)}</span><div><b>${esc(h)}</b><span>${esc(s)}</span></div></div>`).join('')}</div></div>
     </div>
   </div>`;
