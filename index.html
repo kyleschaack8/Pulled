@@ -319,6 +319,45 @@ a.gp:hover { background: var(--raise); }
 .af input, .af select { min-height: 44px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); padding: 0 12px; font: inherit; font-size: 15px; font-weight: 500; }
 .ocr { white-space: pre-wrap; font-size: 12px; color: var(--muted); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px; max-height: 160px; overflow: auto; }
 .panel[aria-disabled="true"] { opacity: .55; }
+.ins-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; }
+.ins-score { display: flex; gap: 18px; align-items: center; }
+.ins-score svg { flex-shrink: 0; }
+.ins-big { display: block; font-size: 24px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; margin: 2px 0 4px; }
+.ins-parts { display: flex; flex-direction: column; gap: 12px; justify-content: center; }
+.ins-bar { display: flex; flex-direction: column; gap: 4px; font-size: 14px; font-weight: 600; }
+.bar { height: 8px; border-radius: 99px; background: var(--raise); overflow: hidden; }
+.bar i { display: block; height: 100%; border-radius: 99px; }
+.ins-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.ins-tile { border: 1px solid var(--line); border-radius: 14px; background: var(--surface); padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; border-top: 3px solid var(--line); min-width: 0; }
+.ins-tile.ins-up { border-top-color: var(--up); } .ins-tile.ins-down { border-top-color: var(--down); } .ins-tile.ins-flat { border-top-color: #FFD25E; }
+.ins-k { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); display: inline-flex; align-items: center; gap: 6px; }
+.ins-v { font-size: 19px; font-weight: 800; letter-spacing: -0.01em; }
+.ins-n { font-size: 13.5px; color: var(--muted); line-height: 1.45; }
+.ins-help { display: inline-grid; place-items: center; width: 16px; height: 16px; border-radius: 50%; border: 1px solid var(--line); font-size: 10px; color: var(--muted); cursor: help; text-transform: none; letter-spacing: 0; }
+.ins-2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; }
+.ins-box { display: flex; flex-direction: column; gap: 10px; }
+.ins-h { margin: 0; font-size: 17px; }
+.ins-p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.5; }
+.ins-fine { font-size: 12px; color: var(--faint); line-height: 1.45; }
+.ins-up .ins-v, .ins-big.ins-up { color: var(--up); } .ins-big.ins-down { color: var(--down); } .ins-big.ins-flat { color: #FFD25E; }
+.ins-sel, .ins-box input[type=number] { min-height: 42px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); padding: 0 10px; font: inherit; font-size: 14px; max-width: 100%; }
+.ins-box input[type=range] { accent-color: var(--accent); min-height: 32px; }
+.gc-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; align-items: end; }
+.gc-row b.num { display: block; font-size: 20px; }
+.gc-out { border-radius: 12px; padding: 12px 14px; background: var(--raise); display: flex; flex-direction: column; gap: 4px; font-size: 14px; line-height: 1.5; color: var(--muted); border-left: 4px solid #FFD25E; }
+.gc-out > b { font-size: 17px; color: var(--fg); }
+.gc-out.ins-up { border-left-color: var(--up); } .gc-out.ins-down { border-left-color: var(--down); }
+.al-list, .ev-list, .fr-list { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.al-row, .ev-row, .fr-row { display: flex; gap: 10px; align-items: center; padding: 10px 12px; border-bottom: 1px solid var(--line); font-size: 13.5px; flex-wrap: wrap; }
+.al-row:last-child, .ev-row:last-child, .fr-row:last-child { border-bottom: 0; }
+.al-row > span:first-child { flex: 1; min-width: 160px; }
+.ev-when { font-weight: 700; color: var(--accent); min-width: 92px; }
+.fr-name { flex: 1 1 180px; font-weight: 600; }
+.fr-cell { display: flex; flex-direction: column; min-width: 96px; } .fr-cell.faint { color: var(--faint); justify-content: center; }
+.soon { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; border: 1px dashed var(--line); border-radius: 10px; font-size: 13.5px; color: var(--muted); }
+.soon b { color: var(--fg); }
+@media (max-width: 860px) { .ins-top, .ins-2 { grid-template-columns: minmax(0, 1fr); } .ins-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .ins-grid { grid-template-columns: minmax(0, 1fr); } .ins-score { flex-direction: column; text-align: center; } }
 .lede { margin: 0; color: var(--muted); font-size: 17px; max-width: 62ch; }
 .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); }
 .section { display: flex; flex-direction: column; gap: 14px; }
@@ -503,7 +542,7 @@ let CARDS = [
 ];
 let CARD = Object.fromEntries(CARDS.map(c => [c.id, c]));
 
-const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', pView: 'index', pUnit: 'pct', pGrade: 'All', pType: 'All', pVol: 'on', pEvents: 'on', pHidden: {}, pLayout: 'gallery', pQuery: '', pFor: '', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '', collSport: 'All', f: F0(), fLimit: 48, fMore: {}, fOpen: false, collQuery: '', collAvail: 'avail', collSort: 'matches', offerFor: null, trade: null, moversRange: '1M', moversSport: 'All', moversGrade: 'All', moversMin: '3', moversView: 'cards', homeSport: 'All', feedTab: 'foryou', feedLimit: 10, openComments: null, draft: { card: '', kind: 'pulled', caption: '', ask: '', photo: null }, add: D0(), addBusy: '', addOcrSrc: null };
+const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', pView: 'index', pUnit: 'pct', pGrade: 'All', pType: 'All', pVol: 'on', pEvents: 'on', pHidden: {}, pLayout: 'gallery', pQuery: '', pFor: '', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '', collSport: 'All', f: F0(), fLimit: 48, fMore: {}, fOpen: false, collQuery: '', collAvail: 'avail', collSort: 'matches', offerFor: null, trade: null, moversRange: '1M', moversSport: 'All', moversGrade: 'All', moversMin: '3', moversView: 'cards', homeSport: 'All', feedTab: 'foryou', feedLimit: 10, openComments: null, draft: { card: '', kind: 'pulled', caption: '', ask: '', photo: null }, add: D0(), addBusy: '', addOcrSrc: null, insTab: 'overview', gcCard: '', gcCost: 40, gcChance: 30, alCard: '' };
 const charts = {};
 
 /* ---------- real data from data/*.json (built by the "Build card data" robot) ---------- */
@@ -555,7 +594,7 @@ async function loadRealData() {
     (pl.players || []).forEach(p => {
       const pc = cards.filter(c => c.p === p.id).length;
       players[p.id] = {
-        short: lastName(p.name), name: p.name, sport: p.sport, team: '', pos: p.pos, num: initials(p.name), status: p.status,
+        short: lastName(p.name), name: p.name, rookieYear: p.rookieYear, sport: p.sport, team: '', pos: p.pos, num: initials(p.name), status: p.status,
         summary: pc ? `${p.status === 'active' ? 'Active' : 'Retired'} ${p.sport} ${p.pos}. Pulled tracks ${pc} of his ${p.rookieYear} rookie-year cards, raw and PSA 10, from real completed sales.` : `${p.status === 'active' ? 'Active' : 'Retired'} ${p.sport} ${p.pos}. Rookie cards from ${p.rookieYear}.`,
         stats: [], statsLabel: p.status === 'active' ? 'Stats' : 'Career', extra: '',
         note: { kind: 'info', title: p.status === 'active' ? 'Stats and injuries' : 'Career and legacy', text: p.status === 'active' ? 'Team, current stats, projections and injury updates arrive when the sports data feed is connected.' : 'Career stats and legacy events (Hall of Fame news, anniversaries) arrive with the sports data feed.' },
@@ -573,6 +612,7 @@ async function loadRealData() {
     const n = $('#dataNotice');
     if (n) n.textContent = `REAL SALES DATA FROM CARDSIGHT AI · ${Object.keys(PLAYERS).length} PLAYERS · ${CARDS.length} CARDS · PRICES UPDATED ${String(pr.updated || '').slice(0, 10)}${sj && sj.updated ? ' · STATS UPDATED ' + String(sj.updated).slice(0, 10) : ''}`;
     render();
+    try { checkAlerts(); } catch (e) {}
   } catch (e) { /* keep sample data */ }
 }
 
@@ -599,6 +639,7 @@ function applyStats(P, s, p) {
     if (s.statsLabel) P.tableLabel = s.statsLabel;
   }
   P.awards = (s.awards || []).filter(a => a[0]);
+  P.experience = s.experience || '';
   P.extra = [s.experience, s.draft ? 'Drafted ' + s.draft : ''].filter(Boolean).join(' · ');
   if (s.injury && s.injury.status) {
     const back = s.injury.returnDate ? ` Expected back around ${s.injury.returnDate}.` : '';
@@ -1550,6 +1591,7 @@ function viewPlayer(pid) {
       ${cs.length ? (() => { const y = combined(cs, '1Y').change, b = basket(cs, '1Y'); return `<button type="button" class="pchg" data-act="toChart" title="See the price chart"><span class="k">Card value · last 12 months</span><span class="v num ${cls(y)}">${fmtPct(y)}</span><span class="s">across ${cs.length} tracked prices · one of each now <b>${money(last(b))}</b></span><span class="go">See chart ↓</span></button>`; })() : ''}
     </div>
     ${cs.length ? marketCards(pid, p, cs) : ''}
+    ${insightsSection(pid, p, cs)}
 
     ${playerMarket(pid, p, cs)}
 
@@ -1699,6 +1741,7 @@ const BUILD = {
     ['Card pages', 'Price chart with game, injury and news markers, sales volume and key stats.'],
     ['Auto-written "Why it moved"', 'Generated from price, sales and event data. No manual writing.'],
     ['Compare tool', 'Up to four cards on price, sales volume and graded population.'],
+    ['Card insights', 'Player pages: Pulled Score (momentum, liquidity, stability, performance), momentum signal, risk and biggest drop, liquidity, vs. similar players, career stage, return calculator, grading calculator, price alerts, performance vs. price, upcoming key dates, fair price ranges. Population, supply and exact sales come with new data sources.'],
     ['Scan & add cards', 'Scan page (camera on phones, Scan button bottom-right): photo front and back, Read card fills in player, year, brand, number, rookie, auto, numbered and grade from the printed text, matches against tracked cards, or submits a new card to the community catalog review queue. Saved in this browser until there is a shared database.'],
     ['Social feed', 'Pulled is now a social network for collectors: a feed of pulls, purchases, grades, sales and trade bait with real values on every card; follow collectors, like, comment, wishlist, buy or offer and trade from any post; Post a pull; Messages; profiles with followers and posts. Sample collectors for now; saved in this browser.'],
     ['Brand logo', 'Retro wax-pack logo (a card being pulled from a pack) in heritage navy, cream and red, with the PULLED wordmark in the header, plus a matching favicon and app icon. Files in images/brand/.'],
@@ -2655,6 +2698,164 @@ function submitCard() {
   state.add = D0(); location.hash = 'community';
 }
 
+/* ---------- card insights: Pulled Score, risk, liquidity, peers, grading, alerts, context ---------- */
+const clamp = (v, a = 0, b = 100) => Math.max(a, Math.min(b, v));
+const ordNum = s => { const m = /(\d+)/.exec(String(s || '')); return m ? +m[1] : null; };
+function salesSeries(cs) { return Array.from({ length: 12 }, (_, t) => cs.reduce((s, c) => s + (c.sales[t] || 0), 0)); }
+function insightData(pid, p, cs) {
+  const idx = combined(cs, '1Y').series.map(v => 1 + v / 100), b = basket(cs, '1Y'), sales = salesSeries(cs);
+  const first = Math.max(0, sales.findIndex(v => v > 0));
+  const live = idx.slice(first);
+  const rets = live.slice(1).map((v, i) => (v / live[i] - 1) * 100);
+  const mean = rets.reduce((a, v) => a + v, 0) / (rets.length || 1);
+  const vol = Math.sqrt(rets.reduce((a, v) => a + (v - mean) ** 2, 0) / (rets.length || 1));
+  let peak = live[0], dd = 0; live.forEach(v => { peak = Math.max(peak, v); dd = Math.min(dd, (v / peak - 1) * 100); });
+  const now = last(b), avg3 = avg(b.slice(-3)), avg12 = avg(b.slice(first)), hi = Math.max(...b.slice(first)), lo = Math.min(...b.slice(first));
+  const ch1 = pct(b[b.length - 2], now), ch3 = combined(cs, '3M').change, ch6 = combined(cs, '6M').change, ch12 = combined(cs, '1Y').change;
+  const si = PARTIAL ? 2 : 1, perMonth = sales[sales.length - si], prevAvg = avg(sales.slice(first, sales.length - si)) || 0;
+  const ranks = (p.stats || []).map(x => ordNum(x[2])).filter(x => x);
+  const best = [...ranks].sort((a, b) => a - b).slice(0, 2), avgRank = best.length ? avg(best) : null;
+  return { idx, b, sales, first, vol, dd, now, avg3, avg12, hi, lo, ch1, ch3, ch6, ch12, perMonth, prevAvg, avgRank };
+}
+function pulledScore(d, p) {
+  const momentum = clamp(50 + d.ch3 * 1.2 + d.ch1 * 0.6);
+  const liquidity = clamp(Math.log10(d.perMonth + 1) / Math.log10(80) * 100);
+  const stability = clamp(100 - d.vol * 3.2 + d.dd * 0.6);
+  const performance = p.status !== 'active' ? (p.awards && p.awards.some(a => /hall of fame/i.test(a[0])) ? 85 : 70) : d.avgRank == null ? 50 : clamp(100 * Math.exp(-(d.avgRank - 1) / 20));
+  const total = Math.round(momentum * 0.35 + liquidity * 0.25 + stability * 0.2 + performance * 0.2);
+  const label = total >= 80 ? 'Strong' : total >= 62 ? 'Good' : total >= 45 ? 'Mixed' : 'Weak';
+  return { total, label, parts: [['Momentum', momentum, 'Where prices are heading lately'], ['Easy to sell', liquidity, 'How often his cards sell'], ['Price stability', stability, 'How calm the price has been'], [p.status === 'active' ? 'Performance' : 'Legacy', performance, p.status === 'active' ? 'How he ranks in the league this season' : 'Career honors and Hall of Fame status']] };
+}
+let PEERS = null;
+function peerTable() {
+  if (PEERS && PEERS.cards === CARDS) return PEERS.rows;
+  const rows = Object.keys(PLAYERS).map(id => { const cs = CARDS.filter(c => c.p === id); return cs.length ? { id, sport: PLAYERS[id].sport, pos: PLAYERS[id].pos, ch: combined(cs, '1Y').change } : null; }).filter(Boolean);
+  PEERS = { cards: CARDS, rows }; return rows;
+}
+function peerInfo(pid, p, ch) {
+  const rows = peerTable(), sp = rows.filter(r => r.sport === p.sport), pos = sp.filter(r => r.pos === p.pos);
+  const rank = [...sp].sort((a, b) => b.ch - a.ch).findIndex(r => r.id === pid) + 1;
+  const grp = pos.length >= 3 ? pos : sp, gname = pos.length >= 3 ? `${p.sport} ${p.pos}s` : `${p.sport} players`;
+  return { rank, of: sp.length, gname, gavg: avg(grp.map(r => r.ch)), diff: ch - avg(grp.map(r => r.ch)) };
+}
+function careerStage(p) {
+  if (p.status !== 'active') return { label: 'Retired', note: 'No games left to move the price. Legacy news, anniversaries and Hall of Fame moments drive these cards.', tone: 'flat' };
+  const yrs = ordNum(p.experience) || (new Date().getFullYear() - (p.rookieYear || new Date().getFullYear()) + 1);
+  const pos = String(p.pos || '');
+  const [early, prime] = p.sport === 'NFL' ? (/RB/.test(pos) ? [3, 6] : /QB/.test(pos) ? [3, 12] : [3, 8]) : p.sport === 'NBA' ? [3, 12] : [3, 10];
+  if (yrs <= early) return { label: 'Early career', note: `Year ${yrs}. Prices swing hard on every game, and a breakout season can multiply values.`, tone: 'up' };
+  if (yrs <= prime) return { label: 'Prime years', note: `Year ${yrs}. Peak seasons and awards usually happen now, which tends to support prices.`, tone: 'up' };
+  return { label: 'Late career', note: `Year ${yrs}. Prices lean on legacy. Retirement news and milestones can still spark demand${/RB/.test(pos) ? ', but running backs usually decline sooner' : ''}.`, tone: 'flat' };
+}
+function performanceCheck(d, p) {
+  if (p.status !== 'active') return { label: 'Legacy player', note: 'Performance is locked in. Watch Hall of Fame news and anniversaries.', tone: 'flat' };
+  if (d.avgRank == null) return { label: 'Not enough stats yet', note: 'League rankings appear here once he has played enough this season.', tone: 'flat' };
+  const good = d.avgRank <= 12, up = d.ch3 > 5, down = d.ch3 < -5, lvl = d.avgRank <= 5 ? 'top 5' : d.avgRank <= 12 ? 'top 12' : d.avgRank <= 25 ? 'around the top 25' : 'below the top 25';
+  if (good && up) return { label: 'Price matches performance', note: `He's playing at a ${lvl} level in key stats and his cards are rising with it.`, tone: 'up' };
+  if (good && !up) return { label: 'Possible buy window', note: `He's playing at a ${lvl} level, but his cards haven't caught up yet.`, tone: 'up' };
+  if (!good && up) return { label: 'Hype may be priced in', note: `His cards are rising faster than his ${lvl} stat rankings. Prices could cool if play doesn't improve.`, tone: 'down' };
+  return { label: down ? 'Struggling on both' : 'Quiet stretch', note: `He's ranking ${lvl} in key stats and his cards are ${down ? 'falling' : 'flat'}.`, tone: down ? 'down' : 'flat' };
+}
+function upcomingEvents(p) {
+  const m = new Date().getMonth() + 1;
+  const cal = p.status !== 'active' ? {
+    MLB: [[1, 'Hall of Fame vote announced'], [7, 'Hall of Fame induction weekend']], NBA: [[4, 'Hall of Fame class announced'], [9, 'Hall of Fame enshrinement']], NFL: [[2, 'Hall of Fame class announced'], [8, 'Hall of Fame enshrinement']] }[p.sport] || []
+    : {
+    NFL: [[1, 'Playoffs begin'], [2, 'Super Bowl and season awards'], [3, 'Free agency opens'], [4, 'NFL Draft'], [9, 'Season kicks off'], [11, 'Trade deadline'], [12, 'Playoff race']],
+    NBA: [[2, 'Trade deadline and All-Star weekend'], [4, 'Playoffs begin'], [5, 'Season awards'], [6, 'NBA Finals and Draft'], [7, 'Free agency'], [10, 'Season tips off']],
+    MLB: [[3, 'Opening Day'], [7, 'All-Star Game and trade deadline'], [10, 'Postseason'], [11, 'MVP and Cy Young awards'], [12, 'Free agency and trades']] }[p.sport] || [];
+  const ahead = cal.map(([mm, t]) => ({ mm, t, d: (mm - m + 12) % 12 })).sort((a, b) => a.d - b.d).slice(0, 4);
+  return ahead.map(e => ({ when: e.d === 0 ? 'This month' : e.d === 1 ? 'Next month' : MON[e.mm - 1], t: e.t }));
+}
+function getAlerts() { return getList('pulled-alerts'); }
+function checkAlerts() {
+  const al = getAlerts(); let hit = 0;
+  al.forEach(a => { const c = CARD[a.card]; if (!c || a.fired) return; const v = last(c.price); if ((a.dir === 'below' && v <= a.price) || (a.dir === 'above' && v >= a.price)) { a.fired = new Date().toISOString().slice(0, 10); hit++; } });
+  if (hit) { setList('pulled-alerts', al); toast(`${hit} price alert${hit > 1 ? 's' : ''} triggered. See the player page.`); }
+}
+const tone = t => t === 'up' ? 'ins-up' : t === 'down' ? 'ins-down' : 'ins-flat';
+function insTile(label, value, note, t, help) {
+  return `<div class="ins-tile ${tone(t)}"><span class="ins-k">${label}${help ? `<span class="ins-help" title="${esc(help)}" aria-label="${esc(help)}" tabindex="0">?</span>` : ''}</span><span class="ins-v">${value}</span><span class="ins-n">${note}</span></div>`;
+}
+function scoreRing(n, size = 132) {
+  const r = 52, c = 2 * Math.PI * r, col = n >= 62 ? 'var(--up)' : n >= 45 ? '#FFD25E' : 'var(--down)';
+  return `<svg width="${size}" height="${size}" viewBox="0 0 120 120" role="img" aria-label="Pulled Score ${n} out of 100"><circle cx="60" cy="60" r="${r}" fill="none" stroke="var(--line)" stroke-width="10"/><circle cx="60" cy="60" r="${r}" fill="none" stroke="${col}" stroke-width="10" stroke-linecap="round" stroke-dasharray="${(c * n / 100).toFixed(1)} ${c.toFixed(1)}" transform="rotate(-90 60 60)"/><text x="60" y="66" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-weight="700" font-size="30" fill="var(--fg)">${n}</text><text x="60" y="84" text-anchor="middle" font-size="10" fill="var(--faint)" font-family="Inter Tight, sans-serif">of 100</text></svg>`;
+}
+function gradingCalc(cs) {
+  const groups = cardGroups(cs).filter(g => g.raw && g.psa);
+  if (!groups.length) return `<div class="panel ins-box"><h3 class="ins-h">Is it worth grading?</h3><p class="ins-p">Needs a card with both raw and PSA 10 prices.</p></div>`;
+  const g = groups.find(x => x.id === state.gcCard) || [...groups].sort((a, b) => b.sales - a.sales)[0];
+  const raw = last(g.raw.price), ten = last(g.psa.price), cost = +state.gcCost || 0, chance = clamp(+state.gcChance || 0, 0, 100) / 100;
+  const gain = ten - raw - cost, ev = chance * (ten - raw) - cost, be = ten - raw > 0 ? cost / (ten - raw) * 100 : 100;
+  const verdict = ev > raw * 0.25 ? ['Worth grading', 'ins-up'] : ev > 0 ? ['Maybe, if it looks clean', 'ins-flat'] : ['Probably not worth it', 'ins-down'];
+  return `<div class="panel ins-box">
+    <h3 class="ins-h">Is it worth grading?</h3>
+    <label class="af"><span>Card</span><select id="gcCard" class="ins-sel">${groups.map(x => `<option value="${x.id}"${x.id === g.id ? ' selected' : ''}>${esc(x.name)}</option>`).join('')}</select></label>
+    <div class="gc-row"><div><span class="ins-k">Raw value</span><b class="num">${money(raw)}</b></div><div><span class="ins-k">PSA 10 value</span><b class="num">${money(ten)}</b></div></div>
+    <div class="gc-row">
+      <label class="af"><span>Grading + shipping cost ($)</span><input id="gcCost" type="number" min="0" step="1" inputmode="numeric" value="${cost}"></label>
+      <label class="af"><span>Chance it gets a 10: <b id="gcChanceV">${Math.round(chance * 100)}%</b></span><input id="gcChance" type="range" min="0" max="100" step="5" value="${Math.round(chance * 100)}"></label>
+    </div>
+    <div class="gc-out ${verdict[1]}"><b>${verdict[0]}</b><span>If it gets a 10 you'd gain about <b class="num">${money(Math.max(0, gain))}</b>${gain < 0 ? ' (the cost is more than the jump)' : ''}. Counting the odds, the expected gain is <b class="num">${ev >= 0 ? money(ev) : '−' + money(-ev)}</b>. You break even if the chance of a 10 is above <b>${Math.min(100, Math.round(be))}%</b>.</span></div>
+    <span class="ins-fine">Assumes a card that misses a 10 is worth about its raw price. Real odds depend on centering, corners and surface.</span>
+  </div>`;
+}
+function alertsBox(cs) {
+  const al = getAlerts().filter(a => cs.some(c => c.id === a.card));
+  const opts = [...cs].sort((a, b) => last(b.price) - last(a.price));
+  const sel = CARD[state.alCard] && cs.includes(CARD[state.alCard]) ? CARD[state.alCard] : opts[0];
+  return `<div class="panel ins-box">
+    <h3 class="ins-h">Price alerts</h3>
+    <label class="af"><span>Card</span><select id="alCard" class="ins-sel">${opts.map(c => `<option value="${c.id}"${c.id === sel.id ? ' selected' : ''}>${esc(c.name)} · ${esc(c.detail)} · ${money(last(c.price))}</option>`).join('')}</select></label>
+    <div class="gc-row"><label class="af"><span>Tell me when it goes</span><select id="alDir" class="ins-sel"><option value="below">below</option><option value="above">above</option></select></label><label class="af"><span>Price ($)</span><input id="alPrice" type="number" min="1" step="1" inputmode="numeric" value="${Math.round(last(sel.price) * 0.9)}"></label></div>
+    <button type="button" class="btn primary sm" data-act="addAlert">Set alert</button>
+    ${al.length ? `<div class="al-list">${al.map(a => `<div class="al-row"><span>${esc(CARD[a.card].name)} · ${esc(CARD[a.card].detail)} <b>${a.dir} ${money(a.price)}</b></span>${a.fired ? `<span class="stag st-sale">Triggered ${esc(a.fired)}</span>` : '<span class="stag">Watching</span>'}<button type="button" class="linkbtn" data-act="delAlert" data-id="${a.id}" aria-label="Remove alert">Remove</button></div>`).join('')}</div>` : ''}
+    <span class="ins-fine">Alerts are checked each time prices update. Phone and email alerts come with accounts.</span>
+  </div>`;
+}
+function fairRanges(cs) {
+  const groups = cardGroups(cs).sort((a, b) => b.sales - a.sales).slice(0, 6);
+  const rng3 = c => { const v = c.price.slice(-4).filter((x, i, arr) => c.sales.slice(-4)[i] > 0); const xs = v.length ? v : c.price.slice(-3); return [Math.min(...xs), Math.max(...xs)]; };
+  return `<div class="panel ins-box"><h3 class="ins-h">Fair price range</h3><p class="ins-p">Typical prices from recent months of sales. Paying near the low end is a good deal.</p>
+    <div class="fr-list">${groups.map(g => `<div class="fr-row"><span class="fr-name">${esc(g.name)}</span>${[['Raw', g.raw], ['PSA 10', g.psa]].map(([l, c]) => { if (!c) return `<span class="fr-cell faint">${l} —</span>`; const [lo, hi] = rng3(c); const mf = v => v < 10000 ? moneyFull(v) : money(v); return `<span class="fr-cell"><span class="ins-k">${l}</span><b class="num">${lo === hi ? mf(lo) : mf(lo) + '–' + mf(hi)}</b></span>`; }).join('')}</div>`).join('')}</div></div>`;
+}
+function insightsSection(pid, p, cs) {
+  if (!cs.length) return '';
+  const d = insightData(pid, p, cs), sc = pulledScore(d, p), peer = peerInfo(pid, p, d.ch12), stage = careerStage(p), perf = performanceCheck(d, p), ev = upcomingEvents(p);
+  const mom = d.now >= d.hi * 0.98 ? ['At a 12-month high', 'Prices are at their best level of the year.', 'up'] : d.now > d.avg3 && d.avg3 > d.avg12 ? ['Heating up', 'Above its 3-month and 12-month averages.', 'up'] : d.now < d.avg3 && d.avg3 < d.avg12 ? ['Cooling off', 'Below its 3-month and 12-month averages.', 'down'] : d.now > d.avg12 ? ['Holding up', 'Above its 12-month average, but cooler lately.', 'flat'] : ['Below average', 'Under its 12-month average.', 'down'];
+  const risk = d.vol < 6 ? ['Steady', 'up'] : d.vol < 14 ? ['Moves some', 'flat'] : ['Wild swings', 'down'];
+  const liq = d.perMonth >= 40 ? ['Easy to sell', 'up'] : d.perMonth >= 10 ? ['Sells regularly', 'flat'] : ['Hard to sell', 'down'];
+  const tab = state.insTab;
+  const overview = `<div class="ins-top">
+      <div class="panel ins-score">${scoreRing(sc.total)}<div><span class="ins-k">Pulled Score</span><b class="ins-big">${sc.label}</b><p class="ins-p">A 0–100 rating that blends price momentum, how easily his cards sell, price stability and ${p.status === 'active' ? 'how he is playing' : 'his legacy'}.</p></div></div>
+      <div class="panel ins-parts">${sc.parts.map(([n, v, h]) => `<div class="ins-bar"><div class="row between"><span>${n}</span><b class="num">${Math.round(v)}</b></div><div class="bar"><i style="width:${Math.round(v)}%;background:${v >= 62 ? 'var(--up)' : v >= 45 ? '#FFD25E' : 'var(--down)'}"></i></div><span class="ins-n">${h}</span></div>`).join('')}</div>
+    </div>
+    <div class="ins-grid">
+      ${insTile('Momentum', mom[0], mom[1], mom[2], 'Compares today\'s price to its 3-month and 12-month averages.')}
+      ${insTile('Risk', risk[0], `Typical monthly swing about ${d.vol.toFixed(0)}%. Biggest drop ${Math.abs(d.dd).toFixed(0)}% from a high.`, risk[1], 'Volatility is how much the price moves month to month. Biggest drop is the largest fall from a high in the past year.')}
+      ${insTile('Liquidity', liq[0], `About ${d.perMonth} sales last month${d.prevAvg ? `, ${d.perMonth >= d.prevAvg ? 'above' : 'below'} his usual ${Math.round(d.prevAvg)}` : ''}.`, liq[1], 'More sales means you can buy or sell quickly at a fair price.')}
+      ${insTile(`vs. ${peer.gname}`, `${peer.diff >= 0 ? 'Beating' : 'Trailing'} by ${Math.abs(peer.diff).toFixed(0)} pts`, `${fmtPct(d.ch12, false)} this year vs. ${fmtPct(peer.gavg, false)} average. Ranks #${peer.rank} of ${peer.of} ${p.sport} players.`, peer.diff >= 0 ? 'up' : 'down', 'Compares his 12-month card change to similar players Pulled tracks.')}
+      ${insTile('Career stage', stage.label, stage.note, stage.tone)}
+      ${insTile('If you bought a year ago', `${money(d.b[0])} → ${money(d.now)}`, `One of each tracked card. 3 months ${fmtPct(d.ch3, false)} · 6 months ${fmtPct(d.ch6, false)} · 1 year ${fmtPct(d.ch12, false)}.`, d.ch12 >= 0 ? 'up' : 'down')}
+    </div>`;
+  const tools = `<div class="ins-2">${gradingCalc(cs)}${alertsBox(cs)}</div>`;
+  const context = `<div class="ins-2">
+      <div class="panel ins-box"><h3 class="ins-h">Performance vs. price</h3><b class="ins-big ${tone(perf.tone)}">${perf.label}</b><p class="ins-p">${perf.note}</p>${(p.stats || []).length ? `<div class="chips">${p.stats.map(([k, v, r]) => `<span class="tag">${esc(k)} ${esc(v)}${r ? ' · ' + esc(r) : ''}</span>`).join('')}</div>` : ''}<span class="ins-fine">Game-by-game reactions (how much his cards move after a big game or an injury) come with daily game logs.</span></div>
+      <div class="panel ins-box"><h3 class="ins-h">Coming up</h3><p class="ins-p">Moments that usually move ${p.sport} card prices.</p>${ev.length ? `<div class="ev-list">${ev.map(e => `<div class="ev-row"><span class="ev-when">${esc(e.when)}</span><span>${esc(e.t)}</span></div>`).join('')}</div>` : '<p class="ins-p">No key dates tracked yet.</p>'}</div>
+    </div>
+    <div class="ins-2">${fairRanges(cs)}
+      <div class="panel ins-box"><h3 class="ins-h">Coming soon</h3>
+        <div class="soon"><b>Population report</b><span>How many PSA 10s and 9s exist, and the gem rate. Needs PSA population data.</span></div>
+        <div class="soon"><b>Supply vs. demand</b><span>Copies listed for sale right now vs. copies selling each month. Needs live listings data.</span></div>
+        <div class="soon"><b>Exact sale prices</b><span>Every individual sale, not just monthly typical prices, for tighter price ranges.</span></div>
+      </div>
+    </div>`;
+  return `<div class="section" id="insights">
+    <div class="row between" style="align-items:flex-end;gap:12px"><div><h2>Card insights</h2><p style="margin:2px 0 0;color:var(--muted);font-size:14px">Everything that shapes what ${esc(p.short)}'s cards are worth, in plain English.</p></div>${segBtns('insTab', [['overview', 'Overview'], ['tools', 'Tools'], ['context', 'Context']], tab)}</div>
+    ${tab === 'tools' ? tools : tab === 'context' ? context : overview}
+  </div>`;
+}
+
 function render() {
   const h = (location.hash || '#home').slice(1);
   Object.keys(charts).forEach(k => delete charts[k]);
@@ -2707,6 +2908,10 @@ function render() {
   document.querySelectorAll('.add-in').forEach(el => { if (!el.addEventListener) return; el.addEventListener('input', e => { state.add[el.dataset.k] = e.target.value; }); el.addEventListener('change', e => { state.add[el.dataset.k] = e.target.value; if (state.add.step < 2) state.add.step = 2; setTimeout(() => { const fid = document.activeElement && document.activeElement.id; render(); const n = fid && document.getElementById(fid); if (n && n.focus) n.focus(); }, 0); }); });
   document.querySelectorAll('.add-file').forEach(el => el.addEventListener && el.addEventListener('change', e => { const f = e.target.files[0], side = el.dataset.side; if (!f) return; if (side === 'front') photoTo(f, 1400, big => { state.addOcrSrc = big; }); photoTo(f, side === 'front' ? 640 : 480, url => { state.add[side] = url; render(); }); }));
   const fab = $('#fab'); if (fab && fab.style) fab.style.display = /^#(add|post|messages)/.test(location.hash || '') ? 'none' : '';
+  const gcc = $('#gcCard'); if (gcc && gcc.addEventListener) gcc.addEventListener('change', e => { state.gcCard = e.target.value; render(); });
+  const gco = $('#gcCost'); if (gco && gco.addEventListener) gco.addEventListener('change', e => { state.gcCost = Math.max(0, Math.round(+e.target.value || 0)); render(); });
+  const gch = $('#gcChance'); if (gch && gch.addEventListener) { gch.addEventListener('input', e => { const v = $('#gcChanceV'); if (v) v.textContent = e.target.value + '%'; }); gch.addEventListener('change', e => { state.gcChance = +e.target.value; render(); }); }
+  const alc = $('#alCard'); if (alc && alc.addEventListener) alc.addEventListener('change', e => { state.alCard = e.target.value; render(); });
   const sort = $('#sort'); if (sort) sort.addEventListener('change', e => { state.playerSort = e.target.value; render(); });
   const photo = $('#photo'); if (photo) photo.addEventListener('change', e => handlePhoto(e.target.files[0], e.target.dataset.id));
   const add = $('#addCompare'); if (add) add.addEventListener('change', e => { if (e.target.value) { state.compareIds.push(e.target.value); render(); } });
@@ -2725,6 +2930,8 @@ document.addEventListener('click', e => {
   if (a.dataset.act === 'sendMsg') sendMsg(id);
   if (a.dataset.act === 'draftKind') { state.draft = { ...state.draft, kind: id }; render(); }
   if (a.dataset.act === 'publishPost') publishPost();
+  if (a.dataset.act === 'addAlert') { const c = $('#alCard'), d = $('#alDir'), pr = $('#alPrice'); const price = Math.round(+(pr && pr.value) || 0); if (c && price > 0) { const al = getAlerts(); al.unshift({ id: 'a-' + Date.now(), card: c.value, dir: d ? d.value : 'below', price }); setList('pulled-alerts', al.slice(0, 50)); toast('Alert set'); render(); } }
+  if (a.dataset.act === 'delAlert') { setList('pulled-alerts', getAlerts().filter(x => x.id !== id)); render(); }
   if (a.dataset.act === 'addStep') { state.add.step = +id; render(); }
   if (a.dataset.act === 'addClear') { state.add[id] = null; if (id === 'front') { state.addOcrSrc = null; state.add.step = 1; } render(); }
   if (a.dataset.act === 'addToggle') { state.add[id] = !state.add[id]; render(); }
