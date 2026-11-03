@@ -358,6 +358,28 @@ a.gp:hover { background: var(--raise); }
 .soon b { color: var(--fg); }
 @media (max-width: 860px) { .ins-top, .ins-2 { grid-template-columns: minmax(0, 1fr); } .ins-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 520px) { .ins-grid { grid-template-columns: minmax(0, 1fr); } .ins-score { flex-direction: column; text-align: center; } }
+.sit { border: 1px solid var(--line); border-radius: 16px; background: var(--surface); padding: 16px 18px; display: flex; flex-direction: column; gap: 12px; }
+.sit-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.sit-upd { font-size: 12px; color: var(--faint); }
+.sit-sum { margin: 0; font-size: 16px; line-height: 1.6; }
+.sit-note { display: flex; flex-direction: column; gap: 4px; border-left: 3px solid var(--accent); padding: 4px 0 4px 12px; font-size: 14px; color: var(--muted); line-height: 1.5; }
+.sit-note b { color: var(--fg); }
+.sit-cols { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 14px; }
+@media (max-width: 860px) { .sit-cols { grid-template-columns: minmax(0, 1fr); } }
+.sit-box { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.sit-box h3 { margin: 0; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); }
+.sit-news, .sit-watch { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.sit-item { display: flex; flex-direction: column; gap: 3px; align-items: flex-start; padding: 10px 12px; border-bottom: 1px solid var(--line); color: var(--fg); text-decoration: none; font-size: 14px; line-height: 1.4; }
+.sit-item:last-child, .sit-w:last-child { border-bottom: 0; }
+a.sit-item[href]:hover { background: var(--raise); }
+.sit-desc { color: var(--muted); font-size: 13px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.sit-date { font-size: 12px; color: var(--faint); }
+.stag.sit-up { color: var(--up); border-color: color-mix(in srgb, var(--up) 40%, transparent); }
+.stag.sit-down { color: var(--down); border-color: color-mix(in srgb, var(--down) 40%, transparent); }
+.stag.sit-flat { color: #FFD25E; border-color: rgba(255,210,94,.4); }
+.sit-w { display: grid; grid-template-columns: 22px 1fr; gap: 10px; padding: 10px 12px; border-bottom: 1px solid var(--line); font-size: 14px; }
+.sit-w b { display: block; } .sit-w span { display: block; color: var(--muted); font-size: 13px; line-height: 1.45; }
+.sit-ar { font-size: 12px; line-height: 20px; text-align: center; } .sit-ar.sit-up { color: var(--up); } .sit-ar.sit-down { color: var(--down); } .sit-ar.sit-flat { color: #FFD25E; }
 .lede { margin: 0; color: var(--muted); font-size: 17px; max-width: 62ch; }
 .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); }
 .section { display: flex; flex-direction: column; gap: 14px; }
@@ -571,7 +593,7 @@ function lastName(name) { const w = name.replace(/,?\s+Jr\.?$/, '').split(' '); 
 async function loadRealData() {
   try {
     const get = f => fetch('data/' + f, { cache: 'no-store' }).then(r => (r.ok ? r.json() : null));
-    const [pl, cd, pr, sj, lg, pf] = await Promise.all([get('players.json'), get('cards.json'), get('prices.json'), get('stats.json').catch(() => null), get('legends.json').catch(() => null), get('profiles.json').catch(() => null)]);
+    const [pl, cd, pr, sj, lg, pf, nw] = await Promise.all([get('players.json'), get('cards.json'), get('prices.json'), get('stats.json').catch(() => null), get('legends.json').catch(() => null), get('profiles.json').catch(() => null), get('news.json').catch(() => null)]);
     const SJ = (sj && sj.players) || {}, LG = (lg && lg.players) || {};
     if (!pl || !cd || !pr || !Array.isArray(cd.cards) || !cd.cards.length || !Array.isArray(pr.months)) return;
     const players = {}, cards = [];
@@ -603,6 +625,7 @@ async function loadRealData() {
       applyStats(players[p.id], SJ[p.id] || (LG[p.id] && { ...LG[p.id], statsLabel: 'Career totals', awards: [...(LG[p.id].hof ? [['Hall of Fame class of ' + LG[p.id].hof, '']] : []), ...(LG[p.id].awards || [])] }), p);
     });
     if (pf && pf.players) PROFILES = pf.players;
+    if (nw && nw.players) { NEWS = nw.players; NEWS_UPDATED = String(nw.updated || '').slice(0, 10); }
     PLAYERS = players; CARDS = cards.filter(c => players[c.p]); CARD = Object.fromEntries(CARDS.map(c => [c.id, c]));
     PARTIAL = String(pr.months[pr.months.length - 1]) === new Date().toISOString().slice(0, 7);
     MONTHS = pr.months.map(m => MON[parseInt(m.slice(5, 7), 10) - 1] + (m.slice(5, 7) === '01' ? " '" + m.slice(2, 4) : ''));
@@ -1588,6 +1611,7 @@ function viewPlayer(pid) {
         </div>
       </div>`; })()}
       ${aboutBio(pid, p, cs)}
+      ${situationSection(pid, p, cs)}
       ${cs.length ? (() => { const y = combined(cs, '1Y').change, b = basket(cs, '1Y'); return `<button type="button" class="pchg" data-act="toChart" title="See the price chart"><span class="k">Card value · last 12 months</span><span class="v num ${cls(y)}">${fmtPct(y)}</span><span class="s">across ${cs.length} tracked prices · one of each now <b>${money(last(b))}</b></span><span class="go">See chart ↓</span></button>`; })() : ''}
     </div>
     ${cs.length ? marketCards(pid, p, cs) : ''}
@@ -1741,6 +1765,7 @@ const BUILD = {
     ['Card pages', 'Price chart with game, injury and news markers, sales volume and key stats.'],
     ['Auto-written "Why it moved"', 'Generated from price, sales and event data. No manual writing.'],
     ['Compare tool', 'Up to four cards on price, sales volume and graded population.'],
+    ['What\'s happening now', 'Player pages: plain-English situation report (health, form, card market, next game), recent ESPN headlines tagged by impact (injury, trade, contract, award, milestone), the latest player note, and what could move his cards next. Retired players get legacy factors and anniversaries. News refreshes nightly with the stats robot.'],
     ['Card insights', 'Player pages: Pulled Score (momentum, liquidity, stability, performance), momentum signal, risk and biggest drop, liquidity, vs. similar players, career stage, return calculator, grading calculator, price alerts, performance vs. price, upcoming key dates, fair price ranges. Population, supply and exact sales come with new data sources.'],
     ['Scan & add cards', 'Scan page (camera on phones, Scan button bottom-right): photo front and back, Read card fills in player, year, brand, number, rookie, auto, numbered and grade from the printed text, matches against tracked cards, or submits a new card to the community catalog review queue. Saved in this browser until there is a shared database.'],
     ['Social feed', 'Pulled is now a social network for collectors: a feed of pulls, purchases, grades, sales and trade bait with real values on every card; follow collectors, like, comment, wishlist, buy or offer and trade from any post; Post a pull; Messages; profiles with followers and posts. Sample collectors for now; saved in this browser.'],
@@ -2853,6 +2878,65 @@ function insightsSection(pid, p, cs) {
   return `<div class="section" id="insights">
     <div class="row between" style="align-items:flex-end;gap:12px"><div><h2>Card insights</h2><p style="margin:2px 0 0;color:var(--muted);font-size:14px">Everything that shapes what ${esc(p.short)}'s cards are worth, in plain English.</p></div>${segBtns('insTab', [['overview', 'Overview'], ['tools', 'Tools'], ['context', 'Context']], tab)}</div>
     ${tab === 'tools' ? tools : tab === 'context' ? context : overview}
+  </div>`;
+}
+
+/* ---------- what's happening now: plain-English situation report + recent news + what could move his cards ---------- */
+let NEWS = {}, NEWS_UPDATED = '';
+const NEWS_TAGS = [
+  ['Injury', /injur|surgery|sprain|strain|torn|tear|fracture|concussion|hamstring|ankle|knee|out for|ruled out|questionable|doubtful|injured list|\bIL\b|day-to-day|setback/i, 'down'],
+  ['Suspension', /suspend|suspension/i, 'down'],
+  ['Trade talk', /\btrade[ds]?\b|trading block|deadline deal|acquire/i, 'flat'],
+  ['Contract', /contract|extension|re-sign|signs with|free agen|max deal/i, 'flat'],
+  ['Award', /\bMVP\b|All-Star|Pro Bowl|All-Pro|Cy Young|Rookie of the|Player of the (Week|Month)|award|All-NBA/i, 'up'],
+  ['Milestone', /record|career-high|milestone|\b\d{3,5}(st|nd|rd|th)\b|historic|first player|franchise record/i, 'up'],
+  ['Big game', /\b([3-9]\d)[- ]point|\btouchdowns?\b|\bhomers?\b|home run|triple-double|walk-off|grand slam|game-winning|career night/i, 'up'],
+  ['Retirement', /retire/i, 'flat'],
+  ['Hall of Fame', /hall of fame/i, 'up']
+];
+function newsTag(a) { const t = a.title + ' ' + a.desc; const m = NEWS_TAGS.find(([, re]) => re.test(t)); return m ? { label: m[0], tone: m[2] } : null; }
+function fmtDay(s) { if (!s) return ''; const d = new Date(s.length <= 10 ? s + 'T12:00:00' : s); return isNaN(d) ? s : d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }); }
+function situationSection(pid, p, cs) {
+  const n = NEWS[pid] || {}, news = (n.news || []).slice(0, 4), lg = (typeof LEGENDS !== 'undefined' && LEGENDS[pid]) || null;
+  const d = cs.length ? insightData(pid, p, cs) : null, perf = d ? performanceCheck(d, p) : null;
+  const yearNow = new Date().getFullYear(), sents = [], watch = [];
+  // status
+  if (p.status !== 'active') {
+    const hof = (p.awards || []).map(a => /Hall of Fame class of (\d{4})/.exec(a[0])).find(Boolean);
+    sents.push(`${p.name} is retired${hof ? ` and was inducted into the Hall of Fame in ${hof[1]}` : ''}, so there are no games to move his cards. Demand comes from collectors who grew up watching him, legacy news and big auction sales.`);
+    const yrs = p.rookieYear ? yearNow - p.rookieYear : 0;
+    if (yrs && yrs % 5 === 0) watch.push(['up', `${yrs}-year anniversary of his rookie season this year`, 'Round-number anniversaries bring articles, documentaries and renewed buying.']);
+    if (hof) { const hy = yearNow - +hof[1]; if (hy > 0 && hy % 5 === 0) watch.push(['up', `${hy} years since his Hall of Fame induction`, 'Anniversary coverage tends to lift interest.']); }
+    watch.push(['flat', 'Record auction sales', 'A big sale of one of his top cards often lifts prices across his whole market.']);
+    watch.push(['flat', 'Documentaries and media', 'New films, series and tributes have caused some of the biggest jumps for legends.']);
+  } else if (p.injured || (p.note && p.note.kind === 'warn')) {
+    sents.push(`${p.name} is currently ${p.note && p.note.title ? p.note.title.replace(/^Injury report:\s*/i, 'listed as ').replace(/\s*\(.*\)$/, '') : 'injured'}${p.note && p.note.text ? `: ${p.note.text.replace(/\s+$/, '').replace(/\.?$/, '.')}` : '.'} Injuries usually push card prices down until there's a clear return date.`);
+    watch.push(['down', 'Injury updates', 'A return date or a setback can move his cards quickly in either direction.']);
+  } else {
+    sents.push(`${p.name} is healthy and active${p.team ? ` with the ${p.team}` : ''}.`);
+  }
+  if (perf && p.status === 'active') sents.push(perf.note);
+  // market
+  if (d) {
+    const dir = v => v >= 0 ? `up ${Math.abs(v).toFixed(0)}%` : `down ${Math.abs(v).toFixed(0)}%`;
+    sents.push(`His cards are ${dir(d.ch1)} over the last month and ${dir(d.ch3)} over 3 months, with about ${d.perMonth} sales last month${d.prevAvg ? ` (${d.perMonth >= d.prevAvg ? 'busier' : 'quieter'} than usual)` : ''}.`);
+    if (hotRank(cs.slice().sort((a, b) => monthChange(b) - monthChange(a))[0].id)) watch.push(['up', 'Hot streak', 'One of his cards is among the top risers this month. Momentum can attract more buyers, or cool off fast.']);
+  }
+  // next up
+  if (n.nextGame && n.nextGame.name) { sents.push(`Next game: ${n.nextGame.name}${n.nextGame.date ? ` on ${fmtDay(n.nextGame.date)}` : ''}.`); watch.push(['flat', `Next game: ${n.nextGame.name}`, 'Big performances bring short spikes, especially in prime-time or playoff games.']); }
+  upcomingEvents(p).slice(0, 2).forEach(e => watch.push(['flat', `${e.when}: ${e.t}`, 'Key dates on the calendar that usually move prices.']));
+  const tagged = news.map(a => ({ a, tag: newsTag(a) }));
+  const seenTags = new Set();
+  tagged.forEach(({ tag }) => { if (tag && !seenTags.has(tag.label) && ['Trade talk', 'Contract', 'Suspension', 'Retirement'].includes(tag.label)) { seenTags.add(tag.label); watch.unshift([tag.tone, `${tag.label} in the news`, tag.label === 'Contract' ? 'New deals and free agency change where he plays, which can widen or shrink his buyer base.' : tag.label === 'Trade talk' ? 'A move to a bigger market or a contender usually lifts demand.' : tag.label === 'Suspension' ? 'Missed games and bad headlines usually weigh on prices.' : 'Retirement talk often brings a wave of legacy buying.']); } });
+  const arrow = t => t === 'up' ? '▲' : t === 'down' ? '▼' : '◆';
+  return `<div class="sit">
+    <div class="sit-head"><span class="eyebrow">What's happening now</span>${NEWS_UPDATED ? `<span class="sit-upd">Updated ${esc(fmtDay(NEWS_UPDATED))}</span>` : ''}</div>
+    <p class="sit-sum">${sents.map(esc).join(' ')}</p>
+    ${n.note && (n.note.headline || n.note.story) ? `<div class="sit-note"><b>${esc(n.note.headline || 'Latest update')}</b>${n.note.story ? `<span>${esc(n.note.story)}</span>` : ''}${n.note.date ? `<span class="sit-date">${esc(fmtDay(n.note.date))}</span>` : ''}</div>` : ''}
+    <div class="sit-cols">
+      <div class="sit-box"><h3>Recent news</h3>${tagged.length ? `<div class="sit-news">${tagged.map(({ a, tag }) => `<a class="sit-item"${a.url ? ` href="${esc(a.url)}" target="_blank" rel="noopener"` : ''}>${tag ? `<span class="stag sit-${tag.tone}">${esc(tag.label)}</span>` : ''}<b>${esc(a.title)}</b>${a.desc ? `<span class="sit-desc">${esc(a.desc)}</span>` : ''}<span class="sit-date">${esc(fmtDay(a.date))}${a.url ? ' · ESPN' : ''}</span></a>`).join('')}</div>` : `<p class="ins-p">${p.status === 'active' ? 'No headlines in the last few days.' : 'No recent headlines. For retired players, quiet news is normal.'}</p>`}</div>
+      <div class="sit-box"><h3>What could move his cards next</h3><div class="sit-watch">${watch.slice(0, 5).map(([t, h, s]) => `<div class="sit-w"><span class="sit-ar sit-${t}" aria-hidden="true">${arrow(t)}</span><div><b>${esc(h)}</b><span>${esc(s)}</span></div></div>`).join('')}</div></div>
+    </div>
   </div>`;
 }
 
