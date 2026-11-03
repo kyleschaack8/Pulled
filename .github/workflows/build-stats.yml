@@ -1,6 +1,6 @@
 name: Build player stats
 
-# Team, season and career stats, and injury status for every player (data/stats.json).
+# Team, season and career stats, injury status (data/stats.json) and recent news (data/news.json) for every player.
 # Uses no CardSight calls. Runs nightly; can also be run by hand from the Actions tab.
 
 on:

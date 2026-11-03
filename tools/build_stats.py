@@ -127,6 +127,72 @@ def lookup_id(player, cache):
     return None  # not cached, so it's retried next run
 
 
+# ---------- recent news (what's happening with each player) ----------
+def _articles(o, out=None, depth=0):
+    """Find article-like dicts anywhere in a response."""
+    out = [] if out is None else out
+    if depth > 6:
+        return out
+    if isinstance(o, dict):
+        t = o.get("headline") or (o.get("displayName") if str(o.get("type", "")).lower() in ("article", "story", "dstory", "media", "recap", "preview") else None)
+        if t and isinstance(t, str):
+            links = o.get("links") or o.get("link") or {}
+            url = ""
+            if isinstance(links, dict):
+                w = links.get("web") or {}
+                url = w.get("href", "") if isinstance(w, dict) else (w if isinstance(w, str) else "")
+            elif isinstance(links, str):
+                url = links
+            out.append({"title": t.strip(), "desc": (o.get("description") or o.get("story") or "")[:400].strip(),
+                        "date": (o.get("published") or o.get("lastModified") or o.get("date") or "")[:10], "url": url})
+        for v in o.values():
+            if isinstance(v, (dict, list)):
+                _articles(v, out, depth + 1)
+    elif isinstance(o, list):
+        for v in o:
+            _articles(v, out, depth + 1)
+    return out
+
+
+def _clean_html(s):
+    import re
+    return re.sub(r"<[^>]+>", "", s or "").replace("&nbsp;", " ").replace("&amp;", "&").strip()
+
+
+def news_for(p, aid, ov):
+    last = simple(p["name"].replace(" Jr.", "").split()[-1])
+    seen, items = set(), []
+    def add(lst):
+        for a in lst:
+            key = a["title"].lower()
+            if key in seen or not a["title"]:
+                continue
+            text = simple(a["title"] + " " + a["desc"])
+            if last and last not in text:
+                continue
+            seen.add(key)
+            a["desc"] = _clean_html(a["desc"])
+            items.append(a)
+    if ov:
+        add(_articles(ov.get("news")))
+    if len(items) < 3:
+        q = urllib.parse.quote(p["name"])
+        res = get(f"https://site.web.api.espn.com/apis/common/v3/search?query={q}&limit=12&type=article") or {}
+        add(_articles(res))
+    items.sort(key=lambda a: a["date"], reverse=True)
+    rec = {"news": items[:6]}
+    note = (ov or {}).get("rotowire") or {}
+    if isinstance(note, dict) and (note.get("headline") or note.get("story")):
+        rec["note"] = {"headline": _clean_html(note.get("headline")), "story": _clean_html(note.get("story") or note.get("description"))[:600],
+                       "date": (note.get("published") or note.get("lastModified") or "")[:10]}
+    ng = (ov or {}).get("nextGame") or {}
+    evs = ng.get("events") if isinstance(ng, dict) else None
+    ev = (evs or [ng])[0] if (evs or ng) else None
+    if isinstance(ev, dict) and (ev.get("date") or ev.get("name") or ev.get("shortName")):
+        rec["nextGame"] = {"name": ev.get("shortName") or ev.get("name") or "", "date": (ev.get("date") or "")[:16]}
+    return rec
+
+
 def pick(labels, values, wanted):
     """Values for the wanted labels (first occurrence), keeping order."""
     out = []
@@ -148,10 +214,17 @@ def build():
     cache = load("espn_ids.json", {})
     out = {"source": "ESPN public data feeds (unofficial; replace with a licensed provider before launch)",
            "updated": time.strftime("%Y-%m-%dT%H:%MZ", time.gmtime()), "players": {}}
+    news = {"source": "ESPN public feeds (unofficial)", "updated": out["updated"], "players": {}}
     for p in players:
         aid = lookup_id(p, cache)
         if not aid:
             print(f"- {p['name']}: not found")
+            try:
+                n = news_for(p, None, None)
+                if n.get("news"):
+                    news["players"][p["id"]] = n
+            except Exception as e:  # noqa: BLE001
+                print(f"    news failed: {e}")
             continue
         urls = endpoints(p["sport"], aid)
         ath = (get(urls["athlete"]) or {}).get("athlete") or {}
@@ -188,8 +261,17 @@ def build():
                 rec[key] = pick(labels, splits[name], want)[:6]
         rec["awards"] = [[a.get("name"), a.get("displayCount") or ""] for a in (ov.get("awards") or [])][:6]
         out["players"][p["id"]] = rec
+        try:
+            n = news_for(p, aid, ov)
+            if not news.get("overviewKeys"):
+                news["overviewKeys"] = sorted(ov.keys()) if isinstance(ov, dict) else []
+            news["players"][p["id"]] = n
+        except Exception as e:  # noqa: BLE001
+            print(f"    news failed: {e}")
         print(f"- {p['name']}: {rec['team'] or 'no team'} {rec['jersey']} season={bool(rec.get('season'))} career={bool(rec.get('career'))} injury={rec.get('injury', {}).get('status', '-')}")
     (DATA / "stats.json").write_text(json.dumps(out, indent=1, ensure_ascii=False, sort_keys=True))
+    (DATA / "news.json").write_text(json.dumps(news, indent=1, ensure_ascii=False, sort_keys=True))
+    print(f"News saved for {sum(1 for v in news['players'].values() if v.get('news'))} players.")
     (DATA / "espn_ids.json").write_text(json.dumps(cache, indent=1, sort_keys=True))
     found = len(out["players"])
     print(f"\nStats saved for {found} of {len(players)} players.")
