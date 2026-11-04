@@ -56,7 +56,7 @@
    ],
    "draft": "2013: Rd 1, Pk 32 (NYY)",
    "espnId": "33192",
-   "experience": "11th Season",
+   "experience": "10th Season",
    "jersey": "99",
    "position": "RF",
    "season": [
@@ -311,11 +311,11 @@
     ],
     [
      "FG%",
-     "52.1"
+     "52.2"
     ],
     [
      "3P%",
-     "29.5"
+     "29.6"
     ],
     [
      "STL",
@@ -360,22 +360,22 @@
      [
       "PTS",
       "23.0",
-      "20th"
+      "Tied-20th"
      ],
      [
       "REB",
       "9.1",
-      "Tied-11th"
+      "13th"
      ],
      [
       "AST",
       "2.0",
-      "Tied-129th"
+      "Tied-144th"
      ],
      [
       "FG%",
       "48.0",
-      "94th"
+      "60th"
      ]
     ]
    },
@@ -486,7 +486,7 @@
      [
       "FG%",
       "48.1",
-      "61st"
+      "59th"
      ]
     ]
    },
@@ -904,7 +904,7 @@
    ],
    "draft": "",
    "espnId": "42403",
-   "experience": "5th Season",
+   "experience": "4th Season",
    "jersey": "7",
    "position": "SS",
    "season": [
@@ -1274,7 +1274,7 @@
    ],
    "draft": "2010: Rd 1, Pk 1 (WSH)",
    "espnId": "30951",
-   "experience": "15th Season",
+   "experience": "14th Season",
    "jersey": "3",
    "position": "1B",
    "season": [
@@ -1369,7 +1369,7 @@
     ],
     [
      "3P%",
-     "33.9"
+     "34.0"
     ],
     [
      "STL",
@@ -1414,22 +1414,22 @@
      [
       "PTS",
       "23.7",
-      "23rd"
+      "15th"
      ],
      [
       "REB",
       "5.4",
-      "Tied-78th"
+      "Tied-84th"
      ],
      [
       "AST",
       "7.1",
-      "13th"
+      "12th"
      ],
      [
       "FG%",
       "48.3",
-      "Tied-87th"
+      "57th"
      ]
     ]
    },
@@ -2334,11 +2334,11 @@
     ],
     [
      "FG%",
-     "47.4"
+     "47.0"
     ],
     [
      "3P%",
-     "29.3"
+     "28.8"
     ],
     [
      "STL",
@@ -2382,23 +2382,23 @@
     "stats": [
      [
       "PTS",
-      "26.8",
-      "7th"
+      "25.2",
+      "11th"
      ],
      [
       "REB",
-      "6.0",
-      "Tied-62nd"
+      "5.7",
+      "74th"
      ],
      [
       "AST",
-      "6.6",
+      "6.5",
       "16th"
      ],
      [
       "FG%",
-      "55.7",
-      "16th"
+      "48.6",
+      "53rd"
      ]
     ]
    },
@@ -2459,7 +2459,7 @@
    ],
    "draft": "",
    "espnId": "42404",
-   "experience": "5th Season",
+   "experience": "4th Season",
    "jersey": "7",
    "position": "RF",
    "season": [
@@ -2611,22 +2611,22 @@
      [
       "PTS",
       "19.3",
-      "Tied-44th"
+      "43rd"
      ],
      [
       "REB",
       "4.3",
-      "Tied-128th"
+      "116th"
      ],
      [
       "AST",
       "4.0",
-      "68th"
+      "Tied-62nd"
      ],
      [
       "FG%",
       "39.8",
-      "123rd"
+      "118th"
      ]
     ]
    },
@@ -2715,22 +2715,22 @@
      [
       "PTS",
       "23.0",
-      "22nd"
+      "Tied-20th"
      ],
      [
       "REB",
       "3.6",
-      "Tied-149th"
+      "Tied-153rd"
      ],
      [
       "AST",
       "5.2",
-      "36th"
+      "Tied-35th"
      ],
      [
       "FG%",
       "48.8",
-      "Tied-39th"
+      "51st"
      ]
     ]
    },
@@ -2758,7 +2758,7 @@
    "career": [
     [
      "PTS",
-     "25.1"
+     "25.0"
     ],
     [
      "REB",
@@ -2819,22 +2819,22 @@
      [
       "PTS",
       "21.9",
-      "19th"
+      "Tied-23rd"
      ],
      [
       "REB",
       "5.3",
-      "Tied-82nd"
+      "Tied-87th"
      ],
      [
       "AST",
       "5.4",
-      "Tied-50th"
+      "Tied-28th"
      ],
      [
       "FG%",
       "46.8",
-      "Tied-51st"
+      "67th"
      ]
     ]
    },
@@ -2997,7 +2997,7 @@
    "career": [
     [
      "PTS",
-     "12.3"
+     "12.4"
     ],
     [
      "REB",
@@ -3005,15 +3005,15 @@
     ],
     [
      "AST",
-     "3.9"
+     "4.0"
     ],
     [
      "FG%",
-     "50.1"
+     "50.2"
     ],
     [
      "3P%",
-     "34.3"
+     "34.5"
     ],
     [
      "STL",
@@ -3058,22 +3058,22 @@
      [
       "PTS",
       "18.3",
-      "Tied-47th"
+      "48th"
      ],
      [
       "REB",
       "5.7",
-      "Tied-78th"
+      "73rd"
      ],
      [
       "AST",
       "5.3",
-      "Tied-46th"
+      "Tied-30th"
      ],
      [
       "FG%",
       "48.5",
-      "Tied-67th"
+      "55th"
      ]
     ]
    },
@@ -3113,7 +3113,7 @@
    ],
    "draft": "",
    "espnId": "4917694",
-   "experience": "4th Season",
+   "experience": "3rd Season",
    "jersey": "44",
    "position": "SS",
    "season": [
@@ -3217,7 +3217,7 @@
    ],
    "draft": "",
    "espnId": "35983",
-   "experience": "7th Season",
+   "experience": "6th Season",
    "jersey": "23",
    "position": "RF",
    "season": [
@@ -3325,7 +3325,7 @@
    ],
    "draft": "2011: Rd 1, Pk 8 (CLE)",
    "espnId": "32129",
-   "experience": "12th Season",
+   "experience": "11th Season",
    "jersey": "12",
    "position": "SS",
    "season": [
@@ -3442,6 +3442,13 @@
    "draft": "2013: Rd 1, Pk 15 (MIL)",
    "espnId": "3032977",
    "experience": "14th Season",
+   "injury": {
+    "comment": "Antetokounmpo is probable to play Wednesday against the Clippers due to a sprained right wrist.",
+    "date": "2026-11-04",
+    "returnDate": "2026-11-04",
+    "status": "Day-To-Day",
+    "type": "Wrist"
+   },
    "jersey": "7",
    "position": "F",
    "season": [
@@ -3477,22 +3484,22 @@
      [
       "PTS",
       "28.4",
-      "5th"
+      "Tied-4th"
      ],
      [
       "REB",
       "12.3",
-      "Tied-3rd"
+      "3rd"
      ],
      [
       "AST",
       "5.7",
-      "Tied-32nd"
+      "22nd"
      ],
      [
       "FG%",
       "58.6",
-      "9th"
+      "11th"
      ]
     ]
    },
@@ -3541,7 +3548,7 @@
    ],
    "draft": "",
    "espnId": "42507",
-   "experience": "5th Season",
+   "experience": "4th Season",
    "jersey": "2",
    "position": "SS",
    "season": [
@@ -3692,22 +3699,22 @@
      [
       "PTS",
       "15.8",
-      "69th"
+      ""
      ],
      [
       "REB",
       "2.5",
-      "Tied-220th"
+      ""
      ],
      [
       "AST",
       "5.5",
-      "Tied-32nd"
+      ""
      ],
      [
       "FG%",
       "54.2",
-      "20th"
+      "19th"
      ]
     ]
    },
@@ -3752,7 +3759,7 @@
    ],
    "draft": "",
    "espnId": "4917869",
-   "experience": "3rd Season",
+   "experience": "2nd Season",
    "jersey": "11",
    "position": "LF",
    "season": [
@@ -3843,7 +3850,7 @@
    ],
    "draft": "2022: Rd 1, Pk 1 (BAL)",
    "espnId": "5080633",
-   "experience": "3rd Season",
+   "experience": "2nd Season",
    "injury": {
     "comment": "Holliday will undergo left wrist surgery next week, Jake Rill of MLB.com reports.",
     "date": "2026-10-23",
@@ -4007,17 +4014,17 @@
      [
       "REB",
       "2.7",
-      "Tied-204th"
+      "Tied-212th"
      ],
      [
       "AST",
       "5.3",
-      "Tied-39th"
+      "Tied-30th"
      ],
      [
       "FG%",
       "39.3",
-      "120th"
+      "122nd"
      ]
     ]
    },
@@ -4484,7 +4491,7 @@
     ],
     [
      "FG%",
-     "45.8"
+     "45.7"
     ],
     [
      "3P%",
@@ -4498,6 +4505,13 @@
    "draft": "2017: Rd 1, Pk 3 (BOS)",
    "espnId": "4065648",
    "experience": "10th Season",
+   "injury": {
+    "comment": "Tatum will be rested Wednesday against the Bucks, Jack Simone of BostonSportsJournal.com reports.",
+    "date": "2026-11-04",
+    "returnDate": "2026-11-06",
+    "status": "Out",
+    "type": "Rest"
+   },
    "jersey": "0",
    "position": "F",
    "season": [
@@ -4533,7 +4547,7 @@
      [
       "PTS",
       "27.0",
-      "4th"
+      "8th"
      ],
      [
       "REB",
@@ -4543,12 +4557,12 @@
      [
       "AST",
       "7.9",
-      "6th"
+      "Tied-5th"
      ],
      [
       "FG%",
       "41.8",
-      "101st"
+      "104th"
      ]
     ]
    },
@@ -4732,7 +4746,7 @@
    "career": [
     [
      "PTS",
-     "27.6"
+     "27.5"
     ],
     [
      "REB",
@@ -4744,7 +4758,7 @@
     ],
     [
      "FG%",
-     "50.0"
+     "49.9"
     ],
     [
      "3P%",
@@ -4793,22 +4807,22 @@
      [
       "PTS",
       "18.5",
-      "Tied-44th"
+      "Tied-45th"
      ],
      [
       "REB",
       "9.2",
-      "10th"
+      "12th"
      ],
      [
       "AST",
       "4.8",
-      "Tied-37th"
+      "Tied-49th"
      ],
      [
       "FG%",
       "40.7",
-      "Tied-113th"
+      "112th"
      ]
     ]
    },
@@ -5009,7 +5023,7 @@
    ],
    "draft": "",
    "espnId": "36969",
-   "experience": "9th Season",
+   "experience": "8th Season",
    "jersey": "22",
    "position": "LF",
    "season": [
@@ -5117,7 +5131,7 @@
    ],
    "draft": "",
    "espnId": "41044",
-   "experience": "5th Season",
+   "experience": "4th Season",
    "jersey": "44",
    "position": "CF",
    "season": [
@@ -5499,8 +5513,8 @@
    "espnId": "6450",
    "experience": "16th Season",
    "injury": {
-    "comment": "Leonard (knee) is expected to be sidelined for at least three to four weeks, Chris Haynes of NBA TV reports.",
-    "date": "2026-10-29",
+    "comment": "Leonard has completed treatment to reduce swelling in his left knee and he will be re-evaluated in one week, Brett Siegel of ClutchPoints.com reports.",
+    "date": "2026-11-04",
     "returnDate": "2026-11-23",
     "status": "Out",
     "type": "Knee"
@@ -5656,22 +5670,22 @@
      [
       "PTS",
       "20.8",
-      "Tied-24th"
+      "32nd"
      ],
      [
       "REB",
       "5.3",
-      "77th"
+      "89th"
      ],
      [
       "AST",
       "3.1",
-      "81st"
+      "87th"
      ],
      [
       "FG%",
       "53.1",
-      "37th"
+      "Tied-22nd"
      ]
     ]
    },
@@ -5911,22 +5925,22 @@
      [
       "PTS",
       "16.9",
-      "Tied-84th"
+      "57th"
      ],
      [
       "REB",
       "3.6",
-      "174th"
+      "Tied-151st"
      ],
      [
       "AST",
       "5.9",
-      "22nd"
+      "21st"
      ],
      [
       "FG%",
       "42.7",
-      "121st"
+      "101st"
      ]
     ]
    },
@@ -6027,22 +6041,22 @@
      [
       "PTS",
       "16.2",
-      "Tied-59th"
+      "65th"
      ],
      [
       "REB",
       "7.0",
-      "Tied-44th"
+      "Tied-39th"
      ],
      [
       "AST",
       "7.3",
-      "Tied-14th"
+      "Tied-10th"
      ],
      [
       "FG%",
       "45.1",
-      "89th"
+      "Tied-84th"
      ]
     ]
    },
@@ -6149,12 +6163,12 @@
      [
       "AST",
       "8.1",
-      "Tied-9th"
+      "3rd"
      ],
      [
       "FG%",
       "49.7",
-      "60th"
+      "44th"
      ]
     ]
    },
@@ -6441,7 +6455,7 @@
    ],
    "draft": "2009: Rd 1, Pk 25 (LAA)",
    "espnId": "30836",
-   "experience": "16th Season",
+   "experience": "15th Season",
    "jersey": "27",
    "position": "CF",
    "season": [
@@ -6557,7 +6571,7 @@
    ],
    "draft": "2011: Rd 5, Pk 172 (BOS)",
    "espnId": "33039",
-   "experience": "13th Season",
+   "experience": "12th Season",
    "jersey": "50",
    "position": "SS",
    "season": [
@@ -6709,12 +6723,12 @@
      [
       "PTS",
       "22.0",
-      "30th"
+      "22nd"
      ],
      [
       "REB",
       "9.7",
-      "8th"
+      "10th"
      ],
      [
       "AST",
@@ -6724,7 +6738,7 @@
      [
       "FG%",
       "47.2",
-      "Tied-63rd"
+      "64th"
      ]
     ]
    },
@@ -7040,7 +7054,7 @@
    ],
    "draft": "2023: Rd 1, Pk 1 (PIT)",
    "espnId": "4719507",
-   "experience": "3rd Season",
+   "experience": "2nd Season",
    "jersey": "30",
    "position": "SP",
    "season": [
@@ -7144,7 +7158,7 @@
    ],
    "draft": "2016: Rd 2, Pk 64 (NYM)",
    "espnId": "37498",
-   "experience": "8th Season",
+   "experience": "7th Season",
    "jersey": "25",
    "position": "1B",
    "season": [
@@ -7346,7 +7360,7 @@
    ],
    "draft": "",
    "espnId": "5080767",
-   "experience": "2nd Season",
+   "experience": "Rookie",
    "injury": {
     "comment": "Red Sox chief baseball officer Craig Breslow said Monday that Anthony is not expected to require surgery on his injured right hand, Chris Cotillo of MassLive.com reports.",
     "date": "2026-10-05",
@@ -7469,7 +7483,7 @@
    ],
    "draft": "",
    "espnId": "36185",
-   "experience": "9th Season",
+   "experience": "8th Season",
    "jersey": "13",
    "position": "RF",
    "season": [
@@ -7692,11 +7706,11 @@
     ],
     [
      "FG%",
-     "50.8"
+     "50.7"
     ],
     [
      "3P%",
-     "35.8"
+     "35.9"
     ],
     [
      "STL",
@@ -7741,22 +7755,22 @@
      [
       "PTS",
       "28.4",
-      "9th"
+      "Tied-4th"
      ],
      [
       "REB",
       "4.3",
-      "Tied-105th"
+      "Tied-117th"
      ],
      [
       "AST",
       "4.0",
-      "Tied-75th"
+      "Tied-62nd"
      ],
      [
       "FG%",
       "45.1",
-      "74th"
+      "Tied-84th"
      ]
     ]
    },
@@ -7938,7 +7952,7 @@
    ],
    "draft": "",
    "espnId": "39832",
-   "experience": "9th Season",
+   "experience": "8th Season",
    "jersey": "17",
    "position": "DH",
    "season": [
@@ -8090,22 +8104,22 @@
      [
       "PTS",
       "30.0",
-      "3rd"
+      "2nd"
      ],
      [
       "REB",
       "4.2",
-      "Tied-146th"
+      "Tied-123rd"
      ],
      [
       "AST",
       "4.5",
-      "Tied-59th"
+      "54th"
      ],
      [
       "FG%",
       "46.8",
-      "62nd"
+      "68th"
      ]
     ]
    },
@@ -8538,7 +8552,7 @@
      [
       "FG%",
       "51.6",
-      "34th"
+      "33rd"
      ]
     ]
    },
@@ -8578,7 +8592,7 @@
    "career": [
     [
      "PTS",
-     "23.6"
+     "23.5"
     ],
     [
      "REB",
@@ -8590,11 +8604,11 @@
     ],
     [
      "FG%",
-     "48.4"
+     "48.3"
     ],
     [
      "3P%",
-     "34.0"
+     "33.9"
     ],
     [
      "STL",
@@ -8639,7 +8653,7 @@
      [
       "PTS",
       "25.7",
-      "6th"
+      "10th"
      ],
      [
       "REB",
@@ -8649,12 +8663,12 @@
      [
       "AST",
       "3.3",
-      "Tied-82nd"
+      "Tied-83rd"
      ],
      [
       "FG%",
       "46.9",
-      "57th"
+      "66th"
      ]
     ]
    },
@@ -8719,7 +8733,7 @@
    ],
    "draft": "",
    "espnId": "35002",
-   "experience": "8th Season",
+   "experience": "7th Season",
    "jersey": "27",
    "position": "1B",
    "season": [
@@ -8810,7 +8824,7 @@
    ],
    "draft": "2023: Rd 1, Pk 4 (TEX)",
    "espnId": "4719324",
-   "experience": "3rd Season",
+   "experience": "2nd Season",
    "jersey": "36",
    "position": "LF",
    "season": [
@@ -8910,7 +8924,7 @@
    ],
    "draft": "",
    "espnId": "4872587",
-   "experience": "3rd Season",
+   "experience": "2nd Season",
    "jersey": "18",
    "position": "SP",
    "season": [
@@ -9001,7 +9015,7 @@
     ],
     [
      "STL",
-     "1.1"
+     "1.0"
     ]
    ],
    "draft": "2019: Rd 1, Pk 1 (NO)",
@@ -9042,22 +9056,22 @@
      [
       "PTS",
       "21.3",
-      "Tied-35th"
+      "29th"
      ],
      [
       "REB",
       "5.3",
-      "Tied-112th"
+      "Tied-87th"
      ],
      [
       "AST",
       "2.7",
-      "Tied-110th"
+      "Tied-102nd"
      ],
      [
       "FG%",
       "63.6",
-      "6th"
+      "7th"
      ]
     ]
    },
@@ -9068,5 +9082,5 @@
   }
  },
  "source": "ESPN public data feeds (unofficial; replace with a licensed provider before launch)",
- "updated": "2026-11-03T11:09Z"
+ "updated": "2026-11-04T18:02Z"
 }
