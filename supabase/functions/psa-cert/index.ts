@@ -41,21 +41,26 @@ Deno.serve(async (req: Request) => {
   const used = await admin.from('psa_certs').select('cert', { count: 'exact', head: true }).gte('fetched_at', since);
   if ((used.count ?? 0) >= DAILY_LIMIT) return hit ? json({ cert, found: hit.found, data: hit.data, saved: true }) : json({ error: 'limit' }, 429);
 
-  const token = Deno.env.get('PSA_TOKEN');
+  // tolerate stray spaces, quotes or a pasted "bearer " in the secret
+  const token = (Deno.env.get('PSA_TOKEN') || '').trim().replace(/^bearer\s+/i, '').replace(/^["']+|["']+$/g, '').trim();
   if (!token) return json({ error: 'setup' }, 500);
 
   let res: Response;
   try {
-    res = await fetch('https://api.psacard.com/publicapi/cert/GetByCertNumber/' + cert, { headers: { Authorization: 'bearer ' + token } });
-  } catch (_) {
+    res = await fetch('https://api.psacard.com/publicapi/cert/GetByCertNumber/' + cert, {
+      headers: { Authorization: 'bearer ' + token, Accept: 'application/json', 'User-Agent': 'Pulled/1.0 (sports card tracker; +https://kyleschaack8.github.io/Pulled/)' },
+    });
+  } catch (e) {
+    console.log('PSA request failed:', String(e));
     return json({ error: 'psa' }, 502);
   }
   let body: any = null;
   try { body = await res.json(); } catch (_) { /* not json */ }
   const c = body && body.PSACert;
-  if (res.status === 429) return json({ error: 'limit' }, 429);
-  if (res.status === 401 || res.status === 403 || (res.status >= 500 && !c)) return json({ error: 'token' }, 502);
-  if (!res.ok && res.status !== 404 && !c) return json({ error: 'psa' }, 502);
+  if (!c) console.log('PSA replied', res.status, JSON.stringify(body).slice(0, 300), '| token length', token.length);
+  if (res.status === 429) return json({ error: 'limit', psaStatus: 429 }, 429);
+  if (res.status === 401 || res.status === 403 || (res.status >= 500 && !c)) return json({ error: 'token', psaStatus: res.status }, 502);
+  if (!res.ok && res.status !== 404 && !c) return json({ error: 'psa', psaStatus: res.status }, 502);
 
   const found = !!(c && c.CertNumber);
   const data = found ? Object.fromEntries(KEEP.filter((k) => c[k] !== undefined && c[k] !== null).map((k) => [k, typeof c[k] === 'string' ? c[k].slice(0, 120) : c[k]])) : null;

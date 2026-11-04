@@ -3403,10 +3403,10 @@ async function verifyCert(raw) {
   try {
     const r = await sb.functions.invoke(PSA_FN, { body: { cert } });
     if (r.error) {
-      const ctx = r.error.context; let code = '';
-      try { code = ctx && ctx.json ? (await ctx.json()).error : ''; } catch (e) {}
+      const ctx = r.error.context; let code = '', ps = 0;
+      try { const j = ctx && ctx.json ? await ctx.json() : {}; code = j.error || ''; ps = +j.psaStatus || 0; } catch (e) {}
       if (!code && ctx && ctx.status === 404) return { err: "PSA checks aren't switched on yet." };
-      return { err: PSA_ERR[code] || PSA_ERR.psa };
+      return { err: (PSA_ERR[code] || PSA_ERR.psa) + (ps ? ` (PSA code ${ps})` : '') };
     }
     const d = r.data || {};
     const rec = { cert, found: !!d.found, data: d.data && typeof d.data === 'object' ? d.data : null };
