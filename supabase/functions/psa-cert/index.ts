@@ -54,12 +54,16 @@ Deno.serve(async (req: Request) => {
     console.log('PSA request failed:', String(e));
     return json({ error: 'psa' }, 502);
   }
+  const text = await res.text().catch(() => '');
   let body: any = null;
-  try { body = await res.json(); } catch (_) { /* not json */ }
+  try { body = JSON.parse(text); } catch (_) { /* not json */ }
   const c = body && body.PSACert;
-  if (!c) console.log('PSA replied', res.status, JSON.stringify(body).slice(0, 300), '| token length', token.length);
+  // a firewall page (Cloudflare etc.) instead of PSA's own answer means PSA is blocking this server
+  const firewall = !!res.headers.get('cf-mitigated') || /cloudflare|attention required|just a moment|access denied|request blocked/i.test(body ? '' : text);
+  if (!c) console.log('PSA replied', res.status, '| server', res.headers.get('server'), '| cf-ray', res.headers.get('cf-ray'), '| firewall', firewall, '| token length', token.length, '| body', text.replace(/\s+/g, ' ').slice(0, 300));
   if (res.status === 429) return json({ error: 'limit', psaStatus: 429 }, 429);
-  if (res.status === 401 || res.status === 403 || (res.status >= 500 && !c)) return json({ error: 'token', psaStatus: res.status }, 502);
+  if (firewall) return json({ error: 'blocked', psaStatus: res.status }, 502);
+  if (res.status === 401 || res.status === 403 || (res.status >= 500 && !c)) return json({ error: 'token', psaStatus: res.status, psaSays: body ? String(body.ServerMessage || body.Message || body.message || '').slice(0, 140) : '' }, 502);
   if (!res.ok && res.status !== 404 && !c) return json({ error: 'psa', psaStatus: res.status }, 502);
 
   const found = !!(c && c.CertNumber);

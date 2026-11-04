@@ -3393,7 +3393,7 @@ async function signOut() {
 
 /* PSA cert checks: the psa-cert function holds the PSA token and saves every lookup (see supabase/functions/psa-cert) */
 const PSA_FN = 'clever-handler'; /* the Supabase function slug that runs supabase/functions/psa-cert/index.ts */
-const PSA_ERR = { limit: "Pulled has used today's PSA lookups. Try again tomorrow.", setup: "PSA checks are almost ready. The PSA token still needs to be added in Supabase.", token: 'PSA turned down the connection. The PSA token may need to be renewed.', signin: 'Sign in to check PSA certs.', cert: 'Enter the cert number from the slab label (6 to 10 digits).', psa: "Couldn't reach PSA right now. Try again in a bit." };
+const PSA_ERR = { limit: "Pulled has used today's PSA lookups. Try again tomorrow.", setup: "PSA checks are almost ready. The PSA token still needs to be added in Supabase.", token: 'PSA turned down the connection. The PSA token may need to be renewed.', signin: 'Sign in to check PSA certs.', cert: 'Enter the cert number from the slab label (6 to 10 digits).', psa: "Couldn't reach PSA right now. Try again in a bit.", blocked: "PSA's firewall is blocking the server Pulled checks from, so PSA needs to allow it." };
 async function verifyCert(raw) {
   const cert = String(raw || '').replace(/\D/g, '');
   if (!/^\d{6,10}$/.test(cert)) return { err: PSA_ERR.cert };
@@ -3404,9 +3404,10 @@ async function verifyCert(raw) {
     const r = await sb.functions.invoke(PSA_FN, { body: { cert } });
     if (r.error) {
       const ctx = r.error.context; let code = '', ps = 0;
-      try { const j = ctx && ctx.json ? await ctx.json() : {}; code = j.error || ''; ps = +j.psaStatus || 0; } catch (e) {}
+      let says = '';
+      try { const j = ctx && ctx.json ? await ctx.json() : {}; code = j.error || ''; ps = +j.psaStatus || 0; says = typeof j.psaSays === 'string' ? j.psaSays : ''; } catch (e) {}
       if (!code && ctx && ctx.status === 404) return { err: "PSA checks aren't switched on yet." };
-      return { err: (PSA_ERR[code] || PSA_ERR.psa) + (ps ? ` (PSA code ${ps})` : '') };
+      return { err: (PSA_ERR[code] || PSA_ERR.psa) + (ps ? ` (PSA code ${ps}${says ? ': ' + says : ''})` : '') };
     }
     const d = r.data || {};
     const rec = { cert, found: !!d.found, data: d.data && typeof d.data === 'object' ? d.data : null };
