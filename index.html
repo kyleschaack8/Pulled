@@ -3392,6 +3392,7 @@ async function signOut() {
 }
 
 /* PSA cert checks: the psa-cert function holds the PSA token and saves every lookup (see supabase/functions/psa-cert) */
+const PSA_FN = 'clever-handler'; /* the Supabase function slug that runs supabase/functions/psa-cert/index.ts */
 const PSA_ERR = { limit: "Pulled has used today's PSA lookups. Try again tomorrow.", setup: "PSA checks are almost ready. The PSA token still needs to be added in Supabase.", token: 'PSA turned down the connection. The PSA token may need to be renewed.', signin: 'Sign in to check PSA certs.', cert: 'Enter the cert number from the slab label (6 to 10 digits).', psa: "Couldn't reach PSA right now. Try again in a bit." };
 async function verifyCert(raw) {
   const cert = String(raw || '').replace(/\D/g, '');
@@ -3400,7 +3401,7 @@ async function verifyCert(raw) {
   if (!CLOUD.ok) return { err: "PSA checks need Pulled accounts, which aren't reachable right now." };
   if (!signedIn()) return { login: true };
   try {
-    const r = await sb.functions.invoke('psa-cert', { body: { cert } });
+    const r = await sb.functions.invoke(PSA_FN, { body: { cert } });
     if (r.error) {
       const ctx = r.error.context; let code = '';
       try { code = ctx && ctx.json ? (await ctx.json()).error : ''; } catch (e) {}
