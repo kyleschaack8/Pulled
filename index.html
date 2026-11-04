@@ -299,6 +299,11 @@ a.gp:hover { background: var(--raise); }
 @media (max-width: 760px) { .msgs { grid-template-columns: 1fr; } .msg-list { border-right: 0; } .msg-list.has-open { display: none; } .msg-back { display: inline-block; } .msgs:not(:has(.msg-list.has-open)) .msg-empty { display: none; } }
 .prof-stats { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; color: var(--muted); }
 .prof-stats b { color: var(--fg); font-size: 16px; }
+.psa-panel { display: flex; flex-direction: column; gap: 12px; }
+.psa-in { flex: 1; min-width: 0; min-height: 44px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); padding: 0 12px; font: inherit; font-size: 16px; }
+.psa-res { display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--line); padding-top: 12px; }
+.psa-ok { color: var(--up, #2ecc71); font-weight: 700; font-size: 14px; }
+.psa-badge { text-decoration: none; color: var(--up, #2ecc71); border-color: currentColor; }
 .auth-wrap { max-width: 480px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; width: 100%; }
 .auth-form { display: flex; flex-direction: column; gap: 14px; }
 .auth-form .af textarea { border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); padding: 10px 12px; font: inherit; font-size: 15px; font-weight: 500; resize: vertical; }
@@ -580,7 +585,7 @@ let CARDS = [
 ];
 let CARD = Object.fromEntries(CARDS.map(c => [c.id, c]));
 
-const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', pView: 'index', pUnit: 'pct', pGrade: 'All', pType: 'All', pVol: 'on', pEvents: 'on', pHidden: {}, pLayout: 'gallery', pQuery: '', pFor: '', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '', collSport: 'All', f: F0(), fLimit: 48, fMore: {}, fOpen: false, collQuery: '', collAvail: 'avail', collSort: 'matches', offerFor: null, trade: null, moversRange: '1M', moversSport: 'All', moversGrade: 'All', moversMin: '3', moversView: 'cards', homeSport: 'All', feedTab: 'foryou', feedLimit: 10, openComments: null, draft: { card: '', kind: 'pulled', caption: '', ask: '', photo: null }, add: D0(), addBusy: '', addOcrSrc: null, insTab: 'overview', gcCard: '', gcCost: 40, gcChance: 30, alCard: '', auth: { mode: 'signin', email: '', handle: '', fav: 'All', busy: false, msg: '', err: '' }, authNext: '', posting: false };
+const state = { playerRange: '1Y', playerFilter: 'All', playerSort: 'value-desc', pView: 'index', pUnit: 'pct', pGrade: 'All', pType: 'All', pVol: 'on', pEvents: 'on', pHidden: {}, pLayout: 'gallery', pQuery: '', pFor: '', cardRange: '1Y', compareIds: ['curry-chrome-ref', 'wemby-silver', 'mahomes-silver'], compareMetric: 'price', compareView: 'pct', compareRange: '1Y', homeQuery: '', collSport: 'All', f: F0(), fLimit: 48, fMore: {}, fOpen: false, collQuery: '', collAvail: 'avail', collSort: 'matches', offerFor: null, trade: null, moversRange: '1M', moversSport: 'All', moversGrade: 'All', moversMin: '3', moversView: 'cards', homeSport: 'All', feedTab: 'foryou', feedLimit: 10, openComments: null, draft: { card: '', kind: 'pulled', caption: '', ask: '', photo: null }, add: D0(), addBusy: '', addOcrSrc: null, insTab: 'overview', gcCard: '', gcCost: 40, gcChance: 30, alCard: '', auth: { mode: 'signin', email: '', handle: '', fav: 'All', busy: false, msg: '', err: '' }, authNext: '', posting: false, psa: { cert: '', busy: false, res: null, err: '' } };
 const charts = {};
 
 /* ---------- real data from data/*.json (built by the "Build card data" robot) ---------- */
@@ -1791,6 +1796,7 @@ const BUILD = {
     ['Card pages', 'Price chart with game, injury and news markers, sales volume and key stats.'],
     ['Auto-written "Why it moved"', 'Generated from price, sales and event data. No manual writing.'],
     ['Compare tool', 'Up to four cards on price, sales volume and graded population.'],
+    ['PSA cert check', 'Members enter a slab cert number on the Scan page; the psa-cert Supabase function (supabase/functions/psa-cert) asks the PSA Public API, keeps the PSA token private, and saves each lookup so a cert is only checked once. Shows grade and population, fills in the card details, and adds a PSA verified badge with the pop count to posts.'],
     ['Accounts (Supabase)', 'Sign up and sign in with email. Posts, likes, comments, follows, private messages, collections, wishlists and scanned-card submissions are saved to a shared database (supabase/setup.sql) with row level security, so everyone sees the same feed and only you can change your things. Sample collectors stay in the mix until more members join.'],
     ['eBay listings', 'Robot for the eBay Browse API (needs EBAY_CLIENT_ID and EBAY_CLIENT_SECRET secrets): daily active listings per card, split raw / PSA 10, with lowest and typical asking price, supply vs. sales, and the cheapest listings linked on card pages.'],
     ['What\'s happening now', 'Player pages: plain-English situation report (health, form, card market, next game), recent ESPN headlines tagged by impact (injury, trade, contract, award, milestone), the latest player note, and what could move his cards next. Retired players get legacy factors and anniversaries. News refreshes nightly with the stats robot.'],
@@ -2468,7 +2474,7 @@ function postCard(p, opts = {}) {
     <div class="post-b">
       <a class="post-media${hotRank(cd.id) ? ' flame' : coldRank(cd.id) ? ' frost' : ''}" href="#card-${cd.id}"${hotRank(cd.id) ? ' data-fire="s"' : coldRank(cd.id) ? ' data-ice="s"' : ''}>${media}</a>
       <div class="post-info">
-        <span class="stag k-${p.kind}">${KIND_LABEL[p.kind]}${p.kind === 'sale' && p.ask ? ' · ' + money(p.ask) : ''}</span>
+        <div class="row" style="gap:6px"><span class="stag k-${p.kind}">${KIND_LABEL[p.kind]}${p.kind === 'sale' && p.ask ? ' · ' + money(p.ask) : ''}</span>${p.cert ? psaBadge(p.cert) : ''}</div>
         <a class="post-card" href="#card-${cd.id}">${esc(cd.name)}</a>
         <a class="post-player" href="#player-${cd.p}">${esc(pl.name)} · ${esc(cd.detail)}</a>
         <div class="post-val"><span class="num">${money(last(cd.price))}</span><span class="num ${cls(m)}">${fmtPct(m)} 1M</span>${hotTag(cd.id)}</div>
@@ -2538,6 +2544,7 @@ function viewPost() {
         <span style="font-weight:600">What happened?</span>
         <div class="chips">${Object.entries(KIND_LABEL).map(([k, l]) => `<button type="button" class="chip" data-act="draftKind" data-id="${k}" aria-pressed="${d.kind === k}">${l}</button>`).join('')}</div>
         ${d.kind === 'sale' ? `<label for="pcAsk" style="font-weight:600">Asking price ($)</label><input id="pcAsk" type="number" min="1" step="1" inputmode="numeric" value="${esc(d.ask || (cd ? Math.round(last(cd.price)) : ''))}" style="min-height:46px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:0 12px;max-width:200px">${cd ? `<span style="font-size:13px;color:var(--muted)">Market value is ${money(last(cd.price))} from recent sales.</span>` : ''}` : ''}
+        ${cd && CLOUD.ok && (cd.tags.includes('Graded') || ['graded', 'sale', 'trade'].includes(d.kind)) ? `<label for="pcCert" style="font-weight:600">PSA cert number (optional)</label><input id="pcCert" type="text" inputmode="numeric" maxlength="12" autocomplete="off" value="${esc(d.cert || '')}" placeholder="e.g. 12345678" style="min-height:46px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:0 12px;max-width:240px"><span style="font-size:13px;color:var(--muted)">Adds a ✓ PSA verified badge. Pulled checks the number with PSA when you post.</span>` : ''}
         <label for="pcCaption" style="font-weight:600">Caption</label>
         <textarea id="pcCaption" rows="3" maxlength="280" placeholder="Tell the story. Where'd you pull it?" style="border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:10px 12px;font:inherit;resize:vertical">${esc(d.caption)}</textarea>
         <label for="pcPhoto" class="btn" style="cursor:pointer;align-self:flex-start">${d.photo ? 'Change photo' : 'Add your own photo (optional)'}</label>
@@ -2698,6 +2705,7 @@ function viewAdd() {
   const ready = d.front && d.player.trim() && (d.year || d.number || d.brand);
   return `<div class="view">
     <div class="section" style="padding-top:8px"><div class="row between" style="gap:12px"><h1>Scan a card</h1><a class="btn sm" href="#community">Community catalog${(() => { const n = allSubs().filter(s => s.status === 'pending').length; return n ? ` (${n} in review)` : ''; })()}</a></div><p class="lede">Snap your card, check the details, and add it. If Pulled already tracks it, it goes straight into your collection. If not, you add it to the catalog for everyone.</p></div>
+    ${psaBox()}
     <div class="add-steps">${['Photo', 'Details', 'Add'].map((s, i) => `<span class="${d.step > i ? 'on' : ''}">${i + 1}. ${s}</span>`).join('')}</div>
     <div class="cols">
       <div class="panel" style="display:flex;flex-direction:column;gap:14px">
@@ -3017,7 +3025,7 @@ const SB_LIB = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/
 const PHOTO_BASE = SB_URL + '/storage/v1/object/public/photos/';
 const HANDLE_RE = /^[A-Za-z0-9_]{3,20}$/, FAVS = ['All', 'NBA', 'NFL', 'MLB', 'NHL', 'Soccer'];
 let sb = null, ME_ID = null, ME_EMAIL = '', MSG_CH = null;
-const CLOUD = { ok: false, tried: false, users: {}, posts: [], likes: {}, comments: {}, follows: [], items: {}, msgs: [], subs: [], admin: false };
+const CLOUD = { ok: false, tried: false, psa: false, certs: {}, users: {}, posts: [], likes: {}, comments: {}, follows: [], items: {}, msgs: [], subs: [], admin: false };
 const okPhoto = u => (typeof u === 'string' && u.startsWith(PHOTO_BASE) && !/["'<>\s\\]/.test(u) ? u : null);
 const signedIn = () => !!(CLOUD.ok && ME_ID && CLOUD.users[ME_ID]);
 const meUser = () => (ME_ID && CLOUD.users[ME_ID]) || null;
@@ -3056,7 +3064,7 @@ async function loadCloud() {
   try {
     const [profiles, posts, follows, items, subs] = await Promise.all([
       q(sb.from('profiles').select('id,handle,bio,fav,hue,created_at').order('created_at').limit(2000)),
-      q(sb.from('posts').select('id,user_id,card,kind,caption,ask,photo_url,created_at').order('created_at', { ascending: false }).limit(200)),
+      loadPosts(q),
       q(sb.from('follows').select('follower,followee').limit(10000)),
       q(sb.from('items').select('user_id,card,list,status,ask').limit(20000)),
       q(sb.from('submissions').select('id,user_id,key,fields,front_url,back_url,status,created_at').order('created_at', { ascending: false }).limit(400))
@@ -3066,12 +3074,15 @@ async function loadCloud() {
       q(sb.from('likes').select('post_id,user_id').in('post_id', ids).limit(50000)),
       q(sb.from('comments').select('id,post_id,user_id,body,created_at').in('post_id', ids).order('created_at').limit(10000))
     ]) : [[], []];
+    const certIds = [...new Set(posts.map(p => p.psa_cert).filter(Boolean))];
+    const certs = CLOUD.psa && certIds.length ? await q(sb.from('psa_certs').select('cert,found,data').in('cert', certIds)).catch(() => []) : [];
     let msgs = [], admin = false;
     if (ME_ID) {
       msgs = await q(sb.from('messages').select('id,sender,recipient,body,created_at,read_at').order('created_at').limit(2000));
       const r = await sb.rpc('is_admin'); admin = !r.error && r.data === true;
     }
     CLOUD.users = Object.fromEntries(profiles.map(r => [r.id, asUser(r)]));
+    certs.forEach(c => { CLOUD.certs[c.cert] = c; });
     CLOUD.posts = posts; CLOUD.follows = follows; CLOUD.subs = subs; CLOUD.msgs = msgs; CLOUD.admin = admin;
     CLOUD.likes = {}; likes.forEach(l => { (CLOUD.likes[l.post_id] = CLOUD.likes[l.post_id] || new Set()).add(l.user_id); });
     CLOUD.comments = {}; comments.forEach(c => { (CLOUD.comments[c.post_id] = CLOUD.comments[c.post_id] || []).push(c); });
@@ -3081,6 +3092,12 @@ async function loadCloud() {
   } catch (e) { CLOUD.ok = false; if (typeof console !== 'undefined') console.warn('Pulled accounts unavailable:', e && (e.message || e.code)); }
   CLOUD.tried = true;
   updateNavAccount(); updateCount(); renderSafe();
+}
+const POST_COLS = 'id,user_id,card,kind,caption,ask,photo_url,created_at';
+async function loadPosts(q) {
+  const get = cols => q(sb.from('posts').select(cols).order('created_at', { ascending: false }).limit(200));
+  try { const r = await get(POST_COLS + ',psa_cert'); CLOUD.psa = true; return r; }
+  catch (e) { CLOUD.psa = false; return get(POST_COLS); }
 }
 function updateNavAccount() { const a = $('#navAcct'); if (a) a.textContent = signedIn() ? '@' + meUser().handle : 'Sign in'; }
 async function uploadPhoto(dataUrl, tag) {
@@ -3097,7 +3114,7 @@ function cloudPosts() {
   if (!CLOUD.ok) return [];
   return CLOUD.posts.filter(p => CARD[p.card] && CLOUD.users[p.user_id]).map(p => {
     const ls = CLOUD.likes[p.id] || new Set(), mine = !!ME_ID && ls.has(ME_ID);
-    return { id: p.id, who: p.user_id, card: p.card, kind: p.kind, ask: p.ask, caption: p.caption || '', photo: okPhoto(p.photo_url), hours: hoursSince(p.created_at), likes: ls.size - (mine ? 1 : 0), comments: (CLOUD.comments[p.id] || []).filter(c => CLOUD.users[c.user_id]).map(c => ({ who: c.user_id, text: c.body, id: c.id })), real: true };
+    return { id: p.id, who: p.user_id, card: p.card, kind: p.kind, ask: p.ask, caption: p.caption || '', photo: okPhoto(p.photo_url), cert: /^\d{6,10}$/.test(p.psa_cert || '') ? p.psa_cert : null, hours: hoursSince(p.created_at), likes: ls.size - (mine ? 1 : 0), comments: (CLOUD.comments[p.id] || []).filter(c => CLOUD.users[c.user_id]).map(c => ({ who: c.user_id, text: c.body, id: c.id })), real: true };
   });
 }
 const isCloudPost = id => CLOUD.ok && CLOUD.posts.some(p => p.id === id);
@@ -3135,14 +3152,21 @@ async function cloudPublish() {
   if (!signedIn()) return needLogin('post');
   const d = state.draft, cd = CARD[d.card]; if (!cd || state.posting) return;
   state.posting = true; render();
+  const cert = String(d.cert || '').replace(/\D/g, '');
+  if (cert) {
+    const v = await verifyCert(cert);
+    const bad = v.login ? 'Sign in to check PSA certs.' : v.err || certMismatch(v.ok.data, cd);
+    if (bad) { state.posting = false; render(); toast(bad); return; }
+  }
   try {
     const photo_url = d.photo ? await uploadPhoto(d.photo, 'post') : null;
     const row = { user_id: ME_ID, card: cd.id, kind: d.kind, caption: d.caption.trim().slice(0, 280), ask: d.kind === 'sale' ? Math.max(1, Math.round(+d.ask || last(cd.price))) : null, photo_url };
-    const r = await sb.from('posts').insert(row).select('id,user_id,card,kind,caption,ask,photo_url,created_at').single();
+    if (cert && CLOUD.psa) row.psa_cert = cert;
+    const r = await sb.from('posts').insert(row).select(POST_COLS + (CLOUD.psa ? ',psa_cert' : '')).single();
     if (r.error) throw r.error;
     CLOUD.posts = [r.data, ...CLOUD.posts];
     if (['pulled', 'bought', 'graded'].includes(d.kind) && !col().includes(cd.id)) setCol([...col(), cd.id]);
-    state.draft = { card: '', kind: 'pulled', caption: '', ask: '', photo: null }; state.feedTab = 'foryou'; state.posting = false;
+    state.draft = { card: '', kind: 'pulled', caption: '', ask: '', photo: null, cert: '' }; state.feedTab = 'foryou'; state.posting = false;
     toast('Posted to your feed'); location.hash = 'home';
   } catch (e) { state.posting = false; render(); toast("Couldn't post that. Check your connection and try again."); }
 }
@@ -3367,6 +3391,77 @@ async function signOut() {
   updateNavAccount(); updateCount(); toast('Signed out'); location.hash = 'home'; render();
 }
 
+/* PSA cert checks: the psa-cert function holds the PSA token and saves every lookup (see supabase/functions/psa-cert) */
+const PSA_ERR = { limit: "Pulled has used today's PSA lookups. Try again tomorrow.", setup: "PSA checks are almost ready. The PSA token still needs to be added in Supabase.", token: 'PSA turned down the connection. The PSA token may need to be renewed.', signin: 'Sign in to check PSA certs.', cert: 'Enter the cert number from the slab label (6 to 10 digits).', psa: "Couldn't reach PSA right now. Try again in a bit." };
+async function verifyCert(raw) {
+  const cert = String(raw || '').replace(/\D/g, '');
+  if (!/^\d{6,10}$/.test(cert)) return { err: PSA_ERR.cert };
+  if (CLOUD.certs[cert] && CLOUD.certs[cert].found) return { ok: CLOUD.certs[cert] };
+  if (!CLOUD.ok) return { err: "PSA checks need Pulled accounts, which aren't reachable right now." };
+  if (!signedIn()) return { login: true };
+  try {
+    const r = await sb.functions.invoke('psa-cert', { body: { cert } });
+    if (r.error) {
+      const ctx = r.error.context; let code = '';
+      try { code = ctx && ctx.json ? (await ctx.json()).error : ''; } catch (e) {}
+      if (!code && ctx && ctx.status === 404) return { err: "PSA checks aren't switched on yet." };
+      return { err: PSA_ERR[code] || PSA_ERR.psa };
+    }
+    const d = r.data || {};
+    const rec = { cert, found: !!d.found, data: d.data && typeof d.data === 'object' ? d.data : null };
+    CLOUD.certs[cert] = rec;
+    return rec.found && rec.data ? { ok: rec } : { err: `PSA has no record of cert ${cert}. Check the number on the label.` };
+  } catch (e) { return { err: PSA_ERR.psa }; }
+}
+const psaStr = v => (v == null ? '' : String(v)).slice(0, 120);
+function psaGrade(d) { const m = /(10|[1-9](?:\.5)?)\s*$/.exec(psaStr(d && d.CardGrade).trim()); return m ? m[1] : ''; }
+const titleish = s => psaStr(s).toLowerCase().replace(/(^|[\s\-.'(\/])([a-z])/g, (m, a, b) => a + b.toUpperCase());
+function psaTitle(d) { return [psaStr(d.Year), titleish(d.Brand), titleish(d.Subject), d.CardNumber ? '#' + psaStr(d.CardNumber) : ''].filter(Boolean).join(' '); }
+function certMismatch(d, cd) {
+  if (!d || !cd) return '';
+  const g = psaGrade(d), subj = norm(d.Subject), ln = norm(lastName(PLAYERS[cd.p].name)).replace(/[^a-z]/g, '');
+  if (ln.length > 2 && !subj.replace(/[^a-z]/g, '').includes(ln)) return `That cert is for ${titleish(d.Subject) || 'a different card'}, not ${PLAYERS[cd.p].name}.`;
+  if (/PSA 10/.test(cd.detail) && g && g !== '10') return `That cert is a PSA ${g}, but you picked the PSA 10 version of this card.`;
+  if (!/PSA/.test(cd.detail) && g) return `That cert is a graded PSA ${g}. Pick the PSA 10 version of the card, or post it without the cert.`;
+  return '';
+}
+function psaBadge(cert) {
+  const c = CLOUD.certs[cert]; if (!c || !c.found || !c.data) return '';
+  const pop = +c.data.TotalPopulation;
+  return `<a class="stag psa-badge" href="https://www.psacard.com/cert/${esc(cert)}" target="_blank" rel="noopener" title="Checked with PSA: ${esc(psaTitle(c.data))}">✓ PSA verified${pop > 0 ? ' · Pop ' + pop.toLocaleString() : ''}</a>`;
+}
+function psaBox() {
+  const st = state.psa, c = st.res, d = c && c.data;
+  const result = d ? `<div class="psa-res">
+      <div class="row between" style="gap:8px"><span class="psa-ok">✓ Verified by PSA</span><a href="https://www.psacard.com/cert/${esc(c.cert)}" target="_blank" rel="noopener" style="font-size:13px;color:var(--accent);font-weight:600;text-decoration:none">View on PSA ↗</a></div>
+      <b style="font-size:16px">${esc(psaTitle(d))}</b>${d.Variety ? `<span style="color:var(--muted);font-size:14px">${esc(titleish(d.Variety))}</span>` : ''}
+      <div class="tiles"><div class="tile"><span class="k">Grade</span><span class="v">${esc(psaStr(d.CardGrade) || '—')}</span></div><div class="tile"><span class="k">Pop at this grade</span><span class="v">${+d.TotalPopulation >= 0 && d.TotalPopulation != null ? (+d.TotalPopulation).toLocaleString() : '—'}</span></div><div class="tile"><span class="k">Graded higher</span><span class="v">${+d.PopulationHigher >= 0 && d.PopulationHigher != null ? (+d.PopulationHigher).toLocaleString() : '—'}</span></div></div>
+      <span style="font-size:13px;color:var(--muted)">${+d.TotalPopulation > 0 ? (+d.TotalPopulation < 100 ? 'A low population. Few copies exist at this grade, which supports a higher price.' : +d.TotalPopulation < 1000 ? 'A moderate population at this grade.' : 'A high population. Many copies exist at this grade, so price depends on demand.') : ''}</span>
+      <div class="row"><button type="button" class="btn primary sm" data-act="psaUse">Use these details</button></div></div>` : '';
+  return `<div class="panel psa-panel">
+    <div><b>Graded by PSA?</b><span style="display:block;color:var(--muted);font-size:14px">Enter the cert number from the slab label. Pulled checks it with PSA and fills in the card for you.</span></div>
+    <div class="row" style="gap:8px;flex-wrap:nowrap"><label for="psaIn" class="sr">PSA cert number</label><input id="psaIn" class="psa-in" type="text" inputmode="numeric" maxlength="12" autocomplete="off" placeholder="Cert number, e.g. 12345678" value="${esc(st.cert)}"><button type="button" class="btn" data-act="psaCheck"${st.busy ? ' disabled' : ''}>${st.busy ? 'Checking…' : 'Check'}</button></div>
+    ${st.err ? `<div class="auth-msg err" role="alert">${esc(st.err)}</div>` : ''}${result}
+  </div>`;
+}
+async function psaCheck() {
+  const st = state.psa, n = document.getElementById('psaIn');
+  if (n && typeof n.value === 'string') st.cert = n.value;
+  if (st.busy) return;
+  st.busy = true; st.err = ''; st.res = null; render();
+  const v = await verifyCert(st.cert);
+  st.busy = false;
+  if (v.login) { render(); return needLogin('check PSA certs'); }
+  if (v.err) st.err = v.err; else st.res = v.ok;
+  render();
+}
+function psaUse() {
+  const d = state.psa.res && state.psa.res.data; if (!d) return;
+  const a = state.add, sub = titleish(d.Subject), pl = Object.values(PLAYERS).find(p => norm(sub).includes(norm(lastName(p.name)).replace(/[^a-z]/g, '')) && norm(lastName(p.name)).length > 2);
+  Object.assign(a, { player: pl ? pl.name : sub, sport: pl ? pl.sport : a.sport, year: psaStr(d.Year), brand: titleish(d.Brand), number: psaStr(d.CardNumber), parallel: titleish(d.Variety), graded: true, grader: 'PSA', grade: psaGrade(d) || a.grade, psaCert: state.psa.res.cert, step: Math.max(a.step || 1, 2) });
+  toast('Filled in from PSA. Check the details below.'); render();
+}
+
 function render() {
   const h = (location.hash || '#home').slice(1);
   Object.keys(charts).forEach(k => delete charts[k]);
@@ -3416,6 +3511,8 @@ function render() {
   const pcc = $('#pcCard'); if (pcc && pcc.addEventListener) pcc.addEventListener('change', e => { state.draft = { ...state.draft, card: e.target.value, ask: '' }; render(); });
   const pca = $('#pcCaption'); if (pca && pca.addEventListener) pca.addEventListener('input', e => { state.draft.caption = e.target.value; });
   if (pca && pca.addEventListener) pca.addEventListener('change', () => render());
+  const pce = $('#pcCert'); if (pce && pce.addEventListener) pce.addEventListener('input', e => { state.draft.cert = e.target.value; });
+  const psi = $('#psaIn'); if (psi && psi.addEventListener) { psi.addEventListener('input', e => { state.psa.cert = e.target.value; }); psi.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); psaCheck(); } }); }
   const pk = $('#pcAsk'); if (pk && pk.addEventListener) pk.addEventListener('change', e => { state.draft.ask = e.target.value; render(); });
   const pph = $('#pcPhoto'); if (pph && pph.addEventListener) pph.addEventListener('change', e => resizePhoto(e.target.files[0], url => { state.draft = { ...state.draft, photo: url }; render(); }));
   document.querySelectorAll('.add-in').forEach(el => { if (!el.addEventListener) return; el.addEventListener('input', e => { state.add[el.dataset.k] = e.target.value; }); el.addEventListener('change', e => { state.add[el.dataset.k] = e.target.value; if (state.add.step < 2) state.add.step = 2; setTimeout(() => { const fid = document.activeElement && document.activeElement.id; render(); const n = fid && document.getElementById(fid); if (n && n.focus) n.focus(); }, 0); }); });
@@ -3437,6 +3534,8 @@ document.addEventListener('click', e => {
   const id = a.dataset.id;
   if (a.dataset.act === 'authMode') { const st = state.auth, em = document.getElementById('auEmail'), hd = document.getElementById('auHandle'); if (em) st.email = em.value; if (hd) st.handle = hd.value; st.mode = id; st.err = ''; st.msg = ''; if (location.hash !== '#login') return; render(); const f = document.getElementById('auEmail'); if (f && f.focus) f.focus(); return; }
   if (a.dataset.act === 'signOut') { signOut(); return; }
+  if (a.dataset.act === 'psaCheck') { psaCheck(); return; }
+  if (a.dataset.act === 'psaUse') { psaUse(); return; }
   if (a.dataset.act === 'delPost') { if (isCloudPost(id)) cloudDeletePost(id); return; }
   if (a.dataset.act === 'follow' && CLOUD.users[id]) { cloudFollow(id); return; }
   if (a.dataset.act === 'like' && isCloudPost(id)) { cloudLike(id); return; }
@@ -3455,7 +3554,7 @@ document.addEventListener('click', e => {
   if (a.dataset.act === 'addClear') { state.add[id] = null; if (id === 'front') { state.addOcrSrc = null; state.add.step = 1; } render(); }
   if (a.dataset.act === 'addToggle') { state.add[id] = !state.add[id]; render(); }
   if (a.dataset.act === 'readCard') readCard();
-  if (a.dataset.act === 'addMatch') { if (!col().includes(id)) setCol([...col(), id]); state.draft = { card: id, kind: 'pulled', caption: '', ask: '', photo: state.add.front }; state.add = D0(); state.addOcrSrc = null; toast('Added to My collection. Share it?'); location.hash = 'post'; }
+  if (a.dataset.act === 'addMatch') { if (!col().includes(id)) setCol([...col(), id]); state.draft = { card: id, kind: state.add.psaCert ? 'graded' : 'pulled', caption: '', ask: '', photo: state.add.front, cert: state.add.psaCert || '' }; state.psa = { cert: '', busy: false, res: null, err: '' }; state.add = D0(); state.addOcrSrc = null; toast('Added to My collection. Share it?'); location.hash = 'post'; }
   if (a.dataset.act === 'submitCard') submitCard();
   if (a.dataset.act === 'subApprove' || a.dataset.act === 'subReject') { const s = memSubs.find(x => x.id === id); if (s) { s.status = a.dataset.act === 'subApprove' ? 'approved' : 'rejected'; saveSubs(); toast(s.status === 'approved' ? 'Approved' : 'Rejected'); render(); } }
   if (a.dataset.act === 'browsePlayer') { const pl = PLAYERS[id]; if (pl) { state.f = { ...F0(), player: [pl.name], view: state.f.view || 'grid' }; state.fLimit = 48; state.fOpen = false; } if (location.hash === '#browse') render(); }
