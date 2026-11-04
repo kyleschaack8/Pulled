@@ -29,10 +29,11 @@ CID = os.environ.get("EBAY_CLIENT_ID", "").strip()
 SECRET = os.environ.get("EBAY_CLIENT_SECRET", "").strip()
 CAMPAIGN = os.environ.get("EBAY_CAMPAIGN_ID", "").strip()
 CATEGORY = "261328"  # Sports Trading Card Singles (eBay US)
-GRADED = re.compile(r"\b(PSA|BGS|SGC|CGC|BECKETT|GRADED|HGA|CSG)\b", re.I)
+GRADED = re.compile(r"\b(PSA|BGS|SGC|CGC|BECKETT|GRADED|HGA|CSG|ARENA|TAG|ISA|KSA|GMA|MNT)\b", re.I)
+OTHER_GRADER = re.compile(r"\b(BGS|SGC|CGC|BECKETT|HGA|CSG|ARENA|TAG|ISA|KSA|GMA|MNT)\b", re.I)
 PSA10 = re.compile(r"\bPSA\s*-?\s*10\b|\bPSA\s*GEM\s*(MT|MINT)\s*10\b", re.I)
-PARALLEL = re.compile(r"\b(silver|gold|red|blue|green|orange|purple|pink|black|white|bronze|holo|refractor|xfractor|mojo|shimmer|wave|cracked ice|hyper|disco|camo|tie[- ]dye|neon|auto|autograph|patch|relic|jersey|sp|ssp|variation|image variation|parallel)\b|/\s?\d{1,4}\b", re.I)
-JUNK = re.compile(r"\b(LOT|LOTS|REPRINT|RP|CUSTOM|DIGITAL|PICK|CHOOSE|YOU PICK|COMPLETE SET|TEAM SET)\b", re.I)
+PARALLEL = re.compile(r"\b(silver|gold|red|blue|green|orange|purple|pink|black|white|bronze|holo|refractor|xfractor|mojo|shimmer|wave|cracked ice|hyper|disco|camo|tie[- ]dye|neon|auto|autograph|autographed|signed|patch|relic|jersey|sp|ssp|variation|image variation|parallel|chrome|rainbow|foil|lazer|laser|tri[- ]?colou?r|velocity|scope|fast break|choice|sapphire|atomic|prizm)\b|/\s?\d{1,4}\b", re.I)
+JUNK = re.compile(r"\b(LOT|LOTS|REPRINT|RP|CUSTOM|DIGITAL|PICK|CHOOSE|YOU PICK|COMPLETE SET|TEAM SET|SLAB PACK|MYSTERY|REPACK|PROJECT 2020|PROJECT 70|BEN BALLER|ART CARD|PROXY|FACSIMILE)\b", re.I)
 
 
 def token():
@@ -70,9 +71,11 @@ def matches(title, card, last):
     if num and not re.search(r"(#|no\.?\s?|\s)" + re.escape(num) + r"\b", t):
         return False
     base = (card.get("title", "") + " " + card.get("release", "") + " " + card.get("set", "")).lower()
-    m = PARALLEL.search(title)
-    if m and m.group(0).lower() not in base:
-        return False
+    # every special-version word in the title must also be in the card's own name (so a Chrome card can say Chrome)
+    for m in PARALLEL.finditer(title):
+        w = m.group(0).lower()
+        if re.sub(r"[\s-]", "", w) not in re.sub(r"[\s-]", "", base):
+            return False
     yr = str(card.get("year") or "")[:4]
     if yr and yr not in t and (yr[2:] + "-") not in t:
         return False
@@ -113,7 +116,7 @@ def build():
                 continue
             rec = {"title": title[:120], "price": price, "url": it.get("itemAffiliateWebUrl") or it.get("itemWebUrl") or "",
                    "auction": "AUCTION" in (it.get("buyingOptions") or []), "ends": (it.get("itemEndDate") or "")[:16]}
-            if PSA10.search(title):
+            if PSA10.search(title) and not OTHER_GRADER.search(title):
                 psa.append(rec)
             elif not GRADED.search(title):
                 raw.append(rec)
