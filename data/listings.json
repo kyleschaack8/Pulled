@@ -7,7 +7,7 @@
      {
       "auction": false,
       "ends": "",
-      "price": 522.53,
+      "price": 525.38,
       "title": "Giannis Antetokounmpo 2013 Panini Prizm #290 Rookie RC PSA 10 GEM MINT",
       "url": "https://www.ebay.com/itm/198768833305?_skw=Giannis+Antetokounmpo+2013+Panini+Prizm+290&hash=item2e478bb319:g:L0wAAeSw~9lq3bNT"
      },
@@ -27,7 +27,7 @@
      }
     ],
     "count": 26,
-    "low": 522.53,
+    "low": 525.38,
     "typical": 699.0
    },
    "query": "Giannis Antetokounmpo 2013 Panini Prizm 290",
@@ -98,7 +98,7 @@
      {
       "auction": false,
       "ends": "",
-      "price": 6.42,
+      "price": 6.44,
       "title": "2014-15 Panini Donruss JOEL EMBIID #3 The Rookies  RC  Color Match 76ers",
       "url": "https://www.ebay.com/itm/177671854260?_skw=Joel+Embiid+2014+Donruss+3&hash=item295e1158b4:g:2M0AAeSw1NdpPXh1"
      },
@@ -112,14 +112,14 @@
      {
       "auction": false,
       "ends": "",
-      "price": 10.03,
-      "title": "2014-15 Panini Donruss The Rookies Joel Embiid #3 RC 17a5",
-      "url": "https://www.ebay.com/itm/237133329913?_skw=Joel+Embiid+2014+Donruss+3&hash=item37363f75f9:g:NPIAAeSwQQtq1uSm"
+      "price": 10.0,
+      "title": "Joel Embiid 2014-15 Donruss #3 Philadelphia 76ers",
+      "url": "https://www.ebay.com/itm/920109336395?_skw=Joel+Embiid+2014+Donruss+3&hash=itemd63aca474b:g:2ksAAeSw585q7MuM"
      }
     ],
-    "count": 40,
-    "low": 6.42,
-    "typical": 19.11
+    "count": 42,
+    "low": 6.44,
+    "typical": 18.02
    }
   },
   "0c85aa98-e224-4333-981d-a474ebf89127": {
@@ -173,14 +173,14 @@
      {
       "auction": false,
       "ends": "",
-      "price": 6.99,
-      "title": "2018 Topps Chrome Update #HMT98 Juan Soto",
-      "url": "https://www.ebay.com/itm/267793061417?_skw=Juan+Soto+2018+Topps+Chrome+Update+HMT98&hash=item3e59b5d629:g:IlUAAeSwvuBqszeo"
+      "price": 5.99,
+      "title": "2018 Topps Chrome Update Target Exclusive Debut Juan Soto #HMT98 Rookie RC f2v",
+      "url": "https://www.ebay.com/itm/237152038890?_skw=Juan+Soto+2018+Topps+Chrome+Update+HMT98&hash=item37375cefea:g:my4AAeSw8dVq5BiM"
      }
     ],
-    "count": 45,
+    "count": 44,
     "low": 1.99,
-    "typical": 9.99
+    "typical": 10.49
    }
   },
   "0e7fda20-efa1-495e-ac0d-7bebd9b014a1": {
@@ -204,12 +204,12 @@
      {
       "auction": false,
       "ends": "",
-      "price": 499.95,
-      "title": "2018 Panini Donruss Josh Allen #304 PSA 10",
-      "url": "https://www.ebay.com/itm/840089731214?_skw=Josh+Allen+2018+Donruss+304&hash=itemc39940008e:g:UQAAAeSwk3pq6krY"
+      "price": 499.0,
+      "title": "JOSH ALLEN 2018 PANINI DONRUSS #304 PSA 10",
+      "url": "https://www.ebay.com/itm/178555010362?_skw=Josh+Allen+2018+Donruss+304&hash=item2992b53d3a:g:DsYAAeSwTRhqwrP1"
      }
     ],
-    "count": 8,
+    "count": 9,
     "low": 495.0,
     "typical": 499.99
    },
@@ -239,18 +239,26 @@
       "url": "https://www.ebay.com/itm/377586730184?_skw=Josh+Allen+2018+Donruss+304&hash=item57e9ec44c8:g:8oMAAeSw249q2GHZ"
      }
     ],
-    "count": 24,
+    "count": 22,
     "low": 124.99,
-    "typical": 177.5
+    "typical": 182.5
    }
   },
   "1622b88c-fbb3-4c0a-8ee9-661b99a50c0e": {
    "psa10": {
     "auctions": 0,
-    "cheapest": [],
-    "count": 0,
-    "low": null,
-    "typical": null
+    "cheapest": [
+     {
+      "auction": false,
+      "ends": "",
+      "price": 700.0,
+      "title": "2011 Bowman  Draft Mike Trout #101 Rookie RC PSA 10",
+      "url": "https://www.ebay.com/itm/327440211872?_skw=Mike+Trout+2011+Bowman+Draft+Picks+%26+Prospects+101&hash=item4c3cf51fa0:g:M6EAAeSwETZq69-o"
+     }
+    ],
+    "count": 1,
+    "low": 700.0,
+    "typical": 700.0
    },
    "query": "Mike Trout 2011 Bowman Draft Picks & Prospects 101",
    "raw": {
@@ -344,13 +352,6 @@
      {
       "auction": false,
       "ends": "",
-      "price": 13799.99,
-      "title": "2003 Topps Chrome LeBron James #111 PSA 10 🔥🐐",
-      "url": "https://www.ebay.com/itm/336874168560?_skw=LeBron+James+2003+Topps+Chrome+111&hash=item4e6f43e0f0:g:pPAAAeSw~kxq598l"
-     },
-     {
-      "auction": false,
-      "ends": "",
       "price": 14800.0,
       "title": "2003 Topps Chrome - #111 LeBron James - PSA 10 (JUST GRADED!!)",
       "url": "https://www.ebay.com/itm/407338041732?_skw=LeBron+James+2003+Topps+Chrome+111&hash=item5ed73d4184:g:8n4AAeSweqdq6nw0"
@@ -361,11 +362,18 @@
       "price": 14999.0,
       "title": "2003 TOPPS CHROME #111 LEBRON JAMES ROOKIE RC PSA 10",
       "url": "https://www.ebay.com/itm/117473968930?_skw=LeBron+James+2003+Topps+Chrome+111&hash=item1b59fe8322:g:jv4AAeSwaHNqsz-s"
+     },
+     {
+      "auction": false,
+      "ends": "",
+      "price": 15500.0,
+      "title": "2003 TOPPS CHROME #111 LEBRON JAMES ROOKIE RC PSA 10",
+      "url": "https://www.ebay.com/itm/307259127501?_skw=LeBron+James+2003+Topps+Chrome+111&hash=item478a1236cd:g:wMMAAeSwA21q5jNF"
      }
     ],
-    "count": 4,
-    "low": 13799.99,
-    "typical": 14899.5
+    "count": 3,
+    "low": 14800.0,
+    "typical": 14999.0
    },
    "query": "LeBron James 2003 Topps Chrome 111",
    "raw": {
@@ -419,14 +427,14 @@
      {
       "auction": false,
       "ends": "",
-      "price": 101.02,
+      "price": 101.57,
       "title": "2014 Panini Prizm #253 Joel Embiid Philadelphia 76ers RC Rookie PSA 10 -AU STOCK",
       "url": "https://www.ebay.com/itm/880043061377?_skw=Joel+Embiid+2014+Panini+Prizm+253&hash=itemcce6a77081:g:RBkAAeSwAxBp8Wpj"
      }
     ],
-    "count": 7,
+    "count": 8,
     "low": 95.0,
-    "typical": 115.24
+    "typical": 152.62
    },
    "query": "Joel Embiid 2014 Panini Prizm 253",
    "raw": {
@@ -442,21 +450,21 @@
      {
       "auction": false,
       "ends": "",
-      "price": 14.94,
-      "title": "2014-15 Panini Prizm #253 Joel Embiid ROOKIE RC",
-      "url": "https://www.ebay.com/itm/880065495435?_skw=Joel+Embiid+2014+Panini+Prizm+253&hash=itemcce7fdc18b:g:QmkAAeSwVZVq5MFJ"
+      "price": 19.95,
+      "title": "2014-15 Panini Prizm Joel Embiid #253 (RC) Base",
+      "url": "https://www.ebay.com/itm/840057274276?_skw=Joel+Embiid+2014+Panini+Prizm+253&hash=itemc39750bfa4:g:Wo4AAeSwGXxq3Yx1"
      },
      {
       "auction": false,
       "ends": "",
-      "price": 19.95,
-      "title": "2014-15 Panini Prizm Joel Embiid #253 (RC) Base",
-      "url": "https://www.ebay.com/itm/840057274276?_skw=Joel+Embiid+2014+Panini+Prizm+253&hash=itemc39750bfa4:g:Wo4AAeSwGXxq3Yx1"
+      "price": 19.99,
+      "title": "Joel Embiid 2014-15 Panini Prizm Rookie RC #253",
+      "url": "https://www.ebay.com/itm/137901950351?_skw=Joel+Embiid+2014+Panini+Prizm+253&hash=item201b98c58f:g:1s8AAeSwObBq6zpB"
      }
     ],
-    "count": 26,
+    "count": 23,
     "low": 14.0,
-    "typical": 29.19
+    "typical": 28.4
    }
   },
   "3e670d25-4a26-47aa-841b-f853f8c62af9": {
@@ -554,9 +562,9 @@
       "url": "https://www.ebay.com/itm/156140554100?_skw=Justin+Herbert+2020+Panini+Chronicles+53&hash=item245ab3c774:g:oT0AAOSwRVBmAw9w"
      }
     ],
-    "count": 60,
+    "count": 59,
     "low": 0.99,
-    "typical": 1.67
+    "typical": 1.65
    }
   },
   "46f5551a-87f0-4845-936e-97f8ef9de1e1": {
@@ -566,23 +574,30 @@
      {
       "auction": false,
       "ends": "",
+      "price": 5999.0,
+      "title": "2003-04 Topps LeBron James Rookie RC #221 Cavaliers PSA 10 GEM MINT",
+      "url": "https://www.ebay.com/itm/267832412373?_skw=LeBron+James+2003+Topps+221&hash=item3e5c0e48d5:g:zEcAAeSwxXlq6kWJ"
+     },
+     {
+      "auction": false,
+      "ends": "",
       "price": 5999.98,
       "title": "2003-04 Topps LeBron James Rookie RC #221 Cavaliers PSA 10 GEM MINT",
       "url": "https://www.ebay.com/itm/128109658473?_skw=LeBron+James+2003+Topps+221&hash=item1dd3ee4169:g:apAAAeSwWyBqvriz"
      }
     ],
-    "count": 1,
-    "low": 5999.98,
-    "typical": 5999.98
+    "count": 2,
+    "low": 5999.0,
+    "typical": 5999.49
    },
    "query": "LeBron James 2003 Topps 221",
    "raw": {
-    "auctions": 1,
+    "auctions": 0,
     "cheapest": [
      {
       "auction": false,
       "ends": "",
-      "price": 535.33,
+      "price": 536.56,
       "title": "Lebron James 2003-04 Topps NBA Rookie Card #221 VG",
       "url": "https://www.ebay.com/itm/137866891588?_skw=LeBron+James+2003+Topps+221&hash=item201981d144:g:pVEAAeSwx3lq2osd"
      },
@@ -601,9 +616,9 @@
       "url": "https://www.ebay.com/itm/407160897243?_skw=LeBron+James+2003+Topps+221&hash=item5eccae3edb:g:xoEAAeSwj8NqiEFo"
      }
     ],
-    "count": 7,
-    "low": 535.33,
-    "typical": 1106.35
+    "count": 6,
+    "low": 536.56,
+    "typical": 875.0
    }
   },
   "4ee19345-d58b-4e4a-afce-a18b5c8cbcb3": {
@@ -652,9 +667,16 @@
      {
       "auction": false,
       "ends": "",
-      "price": 179.99,
-      "title": "2018 Score - Rookies Josh Allen #350 (RC) PSA 10",
-      "url": "https://www.ebay.com/itm/820298363073?_skw=Josh+Allen+2018+Score+350&hash=itembefd97b0c1:g:lrYAAeSwCYhq5Vq2"
+      "price": 175.0,
+      "title": "2018 Panini Score #350 Josh Allen Buffalo Bills Rookie RC PSA 10 GEM MINT",
+      "url": "https://www.ebay.com/itm/134916760694?_skw=Josh+Allen+2018+Score+350&hash=item1f69aa6476:g:L5UAAOSwTn5lvDQ~"
+     },
+     {
+      "auction": false,
+      "ends": "",
+      "price": 175.0,
+      "title": "JOSH ALLEN PSA 10 2018 SCORE ROOKIE NO. 350",
+      "url": "https://www.ebay.com/itm/265925434683?_skw=Josh+Allen+2018+Score+350&hash=item3dea641d3b:g:3ZMAAOSwJYdjQXVY"
      },
      {
       "auction": false,
@@ -662,17 +684,10 @@
       "price": 179.99,
       "title": "2018 PANINI SCORE #350 JOSH ALLEN PSA 10",
       "url": "https://www.ebay.com/itm/117494992799?_skw=Josh+Allen+2018+Score+350&hash=item1b5b3f4f9f:g:T-QAAeSwYStq5ONz"
-     },
-     {
-      "auction": false,
-      "ends": "",
-      "price": 189.99,
-      "title": "2018 Panini Score Josh Allen Base Draft RC #350 PSA 10 Gem Mint Bills SUPER HOT",
-      "url": "https://www.ebay.com/itm/960143420539?_skw=Josh+Allen+2018+Score+350&hash=itemdf8d01ec7b:g:nn8AAeSwOsFqz8q9"
      }
     ],
-    "count": 9,
-    "low": 179.99,
+    "count": 10,
+    "low": 175.0,
     "typical": 200.0
    },
    "query": "Josh Allen 2018 Score 350",
@@ -689,21 +704,21 @@
      {
       "auction": false,
       "ends": "",
-      "price": 18.0,
-      "title": "2018 Score - Rookies Josh Allen #350 (RC)",
-      "url": "https://www.ebay.com/itm/278238603141?_skw=Josh+Allen+2018+Score+350&hash=item40c8502785:g:2-cAAeSw9h1qboOd"
+      "price": 17.0,
+      "title": "2018 Panini Score Football - RC Josh Allen #350 Wyoming Cowboys",
+      "url": "https://www.ebay.com/itm/198509867821?_skw=Josh+Allen+2018+Score+350&hash=item2e381c332d:g:V5QAAeSwAzZqXWdX"
      },
      {
       "auction": false,
       "ends": "",
-      "price": 18.0,
-      "title": "JOSH ALLEN 2018 SCORE ROOKIE CARD #350 WYOMING & BUFFALO BILLS",
-      "url": "https://www.ebay.com/itm/398164438384?_skw=Josh+Allen+2018+Score+350&hash=item5cb4732d70:g:ym4AAeSwYexqUlfw"
+      "price": 17.99,
+      "title": "2018 SCORE JOSH ALLEN ROOKIE RC #350",
+      "url": "https://www.ebay.com/itm/257836622407?_skw=Josh+Allen+2018+Score+350&hash=item3c0842a247:g:hGQAAeSww49qrwbp"
      }
     ],
-    "count": 42,
+    "count": 43,
     "low": 15.0,
-    "typical": 24.99
+    "typical": 25.0
    }
   },
   "5b5670c2-3380-4649-88da-3c83f7612f1a": {
@@ -720,21 +735,21 @@
      {
       "auction": false,
       "ends": "",
-      "price": 71.5,
-      "title": "2018 Topps Archives Juan Soto #73 Rookie PSA 10",
-      "url": "https://www.ebay.com/itm/227586051565?_skw=Juan+Soto+2018+Topps+Archives+73&hash=item34fd2f8ded:g:jZgAAeSwRONq4Pf0"
+      "price": 74.0,
+      "title": "Juan Soto 2018 Topps Archives RC #73 PSA 10 Gem Mint",
+      "url": "https://www.ebay.com/itm/236913448630?_skw=Juan+Soto+2018+Topps+Archives+73&hash=item37292456b6:g:JJAAAeSwxtpqRyyg"
      },
      {
       "auction": false,
       "ends": "",
-      "price": 74.0,
-      "title": "Juan Soto 2018 Topps Archives RC #73 PSA 10 Gem Mint",
-      "url": "https://www.ebay.com/itm/236913448630?_skw=Juan+Soto+2018+Topps+Archives+73&hash=item37292456b6:g:JJAAAeSwxtpqRyyg"
+      "price": 84.5,
+      "title": "2018 TOPPS ARCHIVES #73 JUAN SOTO ROOKIE RC PSA 10",
+      "url": "https://www.ebay.com/itm/306421814727?_skw=Juan+Soto+2018+Topps+Archives+73&hash=item475829d5c7:g:JFgAAeSwyUpoiS26"
      }
     ],
-    "count": 6,
+    "count": 5,
     "low": 69.99,
-    "typical": 79.25
+    "typical": 84.5
    },
    "query": "Juan Soto 2018 Topps Archives 73",
    "raw": {
@@ -762,7 +777,7 @@
       "url": "https://www.ebay.com/itm/278377773328?_skw=Juan+Soto+2018+Topps+Archives+73&hash=item40d09bb910:g:uZQAAeSwsoRqkhVw"
      }
     ],
-    "count": 57,
+    "count": 59,
     "low": 6.25,
     "typical": 10.32
    }
@@ -774,13 +789,27 @@
      {
       "auction": false,
       "ends": "",
+      "price": 38.15,
+      "title": "2018 Topps Update #US250 Ronald Acuna Jr. PSA 10 ROOKIE RC",
+      "url": "https://www.ebay.com/itm/178496332087?_skw=Ronald+Acuna+2018+Topps+Update+US250&hash=item298f35e137:g:tpoAAeSw53JqqBy9"
+     },
+     {
+      "auction": false,
+      "ends": "",
       "price": 54.99,
       "title": "2018 Ronald Acuna Jr. Topps Update  #US250 PSA 10 Gem Mint",
       "url": "https://www.ebay.com/itm/227578972550?_skw=Ronald+Acuna+2018+Topps+Update+US250&hash=item34fcc38986:g:BR8AAeSwVxZq2lkP"
+     },
+     {
+      "auction": false,
+      "ends": "",
+      "price": 300.0,
+      "title": "Topps 2018 Update Series Ronald Acuna Jr RC #US250 PSA 10 Gem Mint",
+      "url": "https://www.ebay.com/itm/820099588249?_skw=Ronald+Acuna+2018+Topps+Update+US250&hash=itembef1bea099:g:3DoAAeSwaH5qnxZz&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7nTOgfaFtEry1y6wOQtKDk175NRGMJi9fUke9A%2FUVqsjkiVbSy2V8FOzBAoC%2Bplc343kOjNR521JqWYZcvcxpe2tluGoUKKk4eH6KCIu9moxx2OasNEu%2BgyflH9L7mp%2F5XzYpfKkZerUPyMaFueLnC1V4vrXhNJnF%2Fhs3tF1J5t9dFCmGC%2FxN4MitR2Fb0fIINvGyv76TWejYE9Kk2s3BOJgJDt%2FbJZL%2Fq2ero%2F6ePO%2BcSCGcdLurO3ZFij%2Buygr3dWrBiXNWij0m27%2FCji4fdXZV0X71bGv5EtInOOEIeEtCT%2BK%2FL%2BdF2bFBm2hIhchrM%3D"
      }
     ],
-    "count": 1,
-    "low": 54.99,
+    "count": 3,
+    "low": 38.15,
     "typical": 54.99
    },
    "query": "Ronald Acuna 2018 Topps Update US250",
@@ -809,22 +838,15 @@
       "url": "https://www.ebay.com/itm/287660149591?_skw=Ronald+Acuna+2018+Topps+Update+US250&hash=item42f9e18b57:g:1r4AAeSw1B5q1waG"
      }
     ],
-    "count": 27,
+    "count": 29,
     "low": 3.85,
-    "typical": 9.0
+    "typical": 9.99
    }
   },
   "62c1ac80-5986-4803-ab24-1929e0cc55c1": {
    "psa10": {
     "auctions": 0,
     "cheapest": [
-     {
-      "auction": false,
-      "ends": "",
-      "price": 800.0,
-      "title": "2015 PANINI DONRUSS #215 NIKOLA JOKIC ROOKIE RC PSA 10",
-      "url": "https://www.ebay.com/itm/117503586316?_skw=Nikola+Jokic+2015+Donruss+215&hash=item1b5bc2700c:g:7BsAAeSwmwRq6uPB"
-     },
      {
       "auction": false,
       "ends": "",
@@ -838,11 +860,18 @@
       "price": 1100.0,
       "title": "2015 Panini Donruss #215 Nikola Jokic PSA 10 GEM MINT - 2xMVP Champion",
       "url": "https://www.ebay.com/itm/314646639888?_skw=Nikola+Jokic+2015+Donruss+215&hash=item494266b510:g:GKEAAOSwoSNkiMxd"
+     },
+     {
+      "auction": false,
+      "ends": "",
+      "price": 1131.1,
+      "title": "2015-16 Panini Donruss Rated Nikola Jokic #215 PSA 10 GEM MT Rookie RC 0st9",
+      "url": "https://www.ebay.com/itm/336838173757?_skw=Nikola+Jokic+2015+Donruss+215&hash=item4e6d1ea43d:g:gzAAAeSwVKFqyjgr"
      }
     ],
-    "count": 10,
-    "low": 800.0,
-    "typical": 1197.49
+    "count": 9,
+    "low": 949.99,
+    "typical": 1199.99
    },
    "query": "Nikola Jokic 2015 Donruss 215",
    "raw": {
@@ -882,14 +911,7 @@
      {
       "auction": false,
       "ends": "",
-      "price": 1000.0,
-      "title": "2018 Donruss Optic - Rated Rookie Josh Allen #154 (RC) PSA 10",
-      "url": "https://www.ebay.com/itm/267832262732?_skw=Josh+Allen+2018+Donruss+Optic+154&hash=item3e5c0c004c:g:wFMAAeSwPGZq6hx-"
-     },
-     {
-      "auction": false,
-      "ends": "",
-      "price": 1029.99,
+      "price": 1089.99,
       "title": "Josh Allen 2018 Optic #154 Base Rookie PSA 10 Gem MT Buffalo Bills MVP 💎🔥💎",
       "url": "https://www.ebay.com/itm/407287841961?_skw=Josh+Allen+2018+Donruss+Optic+154&hash=item5ed43f44a9:g:o~EAAeSwGEtqzl-F"
      },
@@ -898,12 +920,19 @@
       "ends": "",
       "price": 1100.0,
       "title": "2018 Donruss Optic - Rated Rookie Josh Allen #154 (RC) PSA 10 Gem Mint Bills",
-      "url": "https://www.ebay.com/itm/307266375602?_skw=Josh+Allen+2018+Donruss+Optic+154&hash=item478a80cfb2:g:Nn4AAeSw12lq61Me&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7mJyw%2B1u2ugtjdQgq1AcJTHPg7wNIfD0alxYVzDgf4lGqqxJ8gJN4Lftvqoogfhs83kmw4jlzgUK3JkUUgkbM0q5jaa7frDvsY8uoICfLqjVJnFAp0c3pqBJxRj4DdMMVsCGrqWNeOUt%2F3bdZhfoJ%2FE9d%2Bvgh4pw09%2FW%2BlkPJYrO93ivriA%2FkrFBV48SNSYyzHFXRvdMAp3z17gSsw267h4spyLcB7TY3wSELGxVkXheolg7FZem1IZ7t7UjRhh%2FOyDqcAHGpxQV%2BWhCt9%2B9QC5LYqkcwznF9t97hp5H7cGsnSQHtw1DWs7VMxt6ki4hPU%3D"
+      "url": "https://www.ebay.com/itm/307266375602?_skw=Josh+Allen+2018+Donruss+Optic+154&hash=item478a80cfb2:g:Nn4AAeSw12lq61Me&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7mJyw%2B1u2ugtjdQgq1AcJTHPg7wNIfD0alxYVzDgf4lGqqxJ8gJN4Lftvqoogfhs83kmw4jlzgUK3JkUUgkbM0q5jaa7frDvsY8uoICfLqjVJnFAp0c3pqBJxRj4DdMMVtoURRUPMJTRs6qORWAze0CL5lk9O1z%2BZBanO%2BssxNlcdcpTnTmM64zoi7KbBhXICfpCMOWIyeRxAVvHs0ypF0uHN0Nxc9ywk%2FUYnGSzaJdWTUbALDCWZcVIGN0b%2BLDyx4fCpoW%2BnmDiqys1f6AcJWS9FvdZVzkJ2FFyQcxJQp6gjP1l%2Bc%2BcVVYBOUxlF6TcYo%3D"
+     },
+     {
+      "auction": false,
+      "ends": "",
+      "price": 1100.0,
+      "title": "Josh Allen 2018 Donruss Optic Rated Rookie PSA 10 #154 (RC)",
+      "url": "https://www.ebay.com/itm/227569139210?_skw=Josh+Allen+2018+Donruss+Optic+154&hash=item34fc2d7e0a:g:eeIAAeSwyQVq0Uay"
      }
     ],
     "count": 12,
-    "low": 1000.0,
-    "typical": 1137.99
+    "low": 1089.99,
+    "typical": 1185.49
    },
    "query": "Josh Allen 2018 Donruss Optic 154",
    "raw": {
@@ -931,9 +960,9 @@
       "url": "https://www.ebay.com/itm/327438427426?_skw=Josh+Allen+2018+Donruss+Optic+154&hash=item4c3cd9e522:g:segAAeSwAGdq6qRs"
      }
     ],
-    "count": 6,
+    "count": 7,
     "low": 325.0,
-    "typical": 433.5
+    "typical": 450.0
    }
   },
   "68684d71-fda7-4ac3-bfdc-d91ac5d11122": {
@@ -970,15 +999,22 @@
       "url": "https://www.ebay.com/itm/960071220363?_skw=LeBron+James+2003+Upper+Deck+Victory+101&hash=itemdf88b43c8b:g:y90AAeSwfyVq0QeV"
      }
     ],
-    "count": 45,
+    "count": 46,
     "low": 23.0,
-    "typical": 56.03
+    "typical": 60.0
    }
   },
   "69079f8d-a5c6-417b-9344-58cfb2dc4eb2": {
    "psa10": {
     "auctions": 0,
     "cheapest": [
+     {
+      "auction": false,
+      "ends": "",
+      "price": 178.85,
+      "title": "Topps 2011 Bowman's Best Prospects RC Mike Trout #BBP9 Angels PSA 10",
+      "url": "https://www.ebay.com/itm/880026296384?_skw=Mike+Trout+2011+Bowman+BBP9&hash=itemcce5a7a040:g:WgQAAeSwQV1q1A-G"
+     },
      {
       "auction": false,
       "ends": "",
@@ -992,18 +1028,11 @@
       "price": 199.95,
       "title": "Mike Trout 2011 Bowman's Best Baseball Rookie Card #BBP9 PSA 10 Gem Mint",
       "url": "https://www.ebay.com/itm/316816595118?_skw=Mike+Trout+2011+Bowman+BBP9&hash=item49c3bd98ae:g:RcMAAeSwAx5qIeKg"
-     },
-     {
-      "auction": false,
-      "ends": "",
-      "price": 199.99,
-      "title": "2011 Bowman's Best Prospects Mike Trout #BBP9 PSA 10 Gem Mint Los Angeles Angels",
-      "url": "https://www.ebay.com/itm/156847260136?_skw=Mike+Trout+2011+Bowman+BBP9&hash=item2484d341e8:g:yIQAAeSw-MNn7WoU"
      }
     ],
-    "count": 20,
-    "low": 189.99,
-    "typical": 324.13
+    "count": 21,
+    "low": 178.85,
+    "typical": 300.0
    },
    "query": "Mike Trout 2011 Bowman BBP9",
    "raw": {
@@ -1031,15 +1060,22 @@
       "url": "https://www.ebay.com/itm/800688236260?_skw=Mike+Trout+2011+Bowman+BBP9&hash=itemba6cbce6e4:g:fpUAAeSw34pqr1zT"
      }
     ],
-    "count": 24,
+    "count": 25,
     "low": 30.0,
-    "typical": 81.04
+    "typical": 87.08
    }
   },
   "6b45d67b-60e4-4270-b7ec-9297a484a22c": {
    "psa10": {
     "auctions": 0,
     "cheapest": [
+     {
+      "auction": false,
+      "ends": "",
+      "price": 49.99,
+      "title": "2020 Panini Prizm Justin Herbert Rookie Base #325 Chargers PSA 10 64185116",
+      "url": "https://www.ebay.com/itm/168761185438?_skw=Justin+Herbert+2020+Panini+Prizm+325&hash=item274af3549e:g:pE4AAeSwkhlqwobo"
+     },
      {
       "auction": false,
       "ends": "",
@@ -1055,21 +1091,14 @@
       "url": "https://www.ebay.com/itm/117495641860?_skw=Justin+Herbert+2020+Panini+Prizm+325&hash=item1b5b493704:g:ktcAAeSw0MBq5S3O"
      }
     ],
-    "count": 2,
-    "low": 56.0,
-    "typical": 62.99
+    "count": 3,
+    "low": 49.99,
+    "typical": 56.0
    },
    "query": "Justin Herbert 2020 Panini Prizm 325",
    "raw": {
     "auctions": 0,
     "cheapest": [
-     {
-      "auction": false,
-      "ends": "",
-      "price": 4.99,
-      "title": "Panini 2020 Prizm Football Justin Herbert Los Angeles Chargers RC Base #325",
-      "url": "https://www.ebay.com/itm/920103245744?_skw=Justin+Herbert+2020+Panini+Prizm+325&hash=itemd63a6d57b0:g:b-YAAeSwsJJq6uFz"
-     },
      {
       "auction": false,
       "ends": "",
@@ -1083,11 +1112,18 @@
       "price": 5.44,
       "title": "2020 Panini Prizm Justin Herbert #325 Base RC Los Angeles Chargers NFL",
       "url": "https://www.ebay.com/itm/800822426998?_skw=Justin+Herbert+2020+Panini+Prizm+325&hash=itemba74bc7d76:g:KlkAAeSwUOdq2Rw1"
+     },
+     {
+      "auction": false,
+      "ends": "",
+      "price": 6.99,
+      "title": "2020 Panini Prizm - Rookie Justin Herbert #325 (RC) - Chargers",
+      "url": "https://www.ebay.com/itm/820274886808?_skw=Justin+Herbert+2020+Panini+Prizm+325&hash=itembefc317898:g:MKoAAeSwO3Rq3W2G"
      }
     ],
-    "count": 17,
+    "count": 18,
     "low": 4.99,
-    "typical": 8.0
+    "typical": 10.0
    }
   },
   "6bb87200-e8cd-4437-88b3-5d2626d314a5": {
@@ -1136,7 +1172,7 @@
       "ends": "",
       "price": 4.84,
       "title": "2018 Panini Donruss Optic Rated Rookie Ronald Acuna Jr #63 Rookie RC 08t3",
-      "url": "https://www.ebay.com/itm/336829364851?_skw=Ronald+Acuna+2018+Donruss+Optic+63&hash=item4e6c983a73:g:uqIAAeSwr9Jqw-w6"
+      "url": "https://www.ebay.com/itm/336881948783?_skw=Ronald+Acuna+2018+Donruss+Optic+63&hash=item4e6fba986f:g:gawAAeSw3EBq7Mvk"
      },
      {
       "auction": false,
@@ -1146,9 +1182,9 @@
       "url": "https://www.ebay.com/itm/377495572382?_skw=Ronald+Acuna+2018+Donruss+Optic+63&hash=item57e47d4f9e:g:3CkAAeSwy4NqqG6T"
      }
     ],
-    "count": 19,
+    "count": 18,
     "low": 4.0,
-    "typical": 7.84
+    "typical": 7.79
    }
   },
   "779c9bea-a3b5-476f-9538-2927a8619859": {
@@ -1165,19 +1201,19 @@
      {
       "auction": false,
       "ends": "",
-      "price": 800.0,
-      "title": "Panini 2018 Prizm Josh Allen #205 RC Base Set Buffalo Bills PSA 10 GEM MT",
-      "url": "https://www.ebay.com/itm/407330991699?_skw=Josh+Allen+2018+Panini+Prizm+205&hash=item5ed6d1ae53:g:cZgAAeSwODVq1kvu"
+      "price": 824.99,
+      "title": "2018 Panini Prizm #205 JOSH ALLEN RC Bills PSA 10",
+      "url": "https://www.ebay.com/itm/840076330509?_skw=Josh+Allen+2018+Panini+Prizm+205&hash=itemc39873860d:g:T7EAAeSw73tq5RTX"
      },
      {
       "auction": false,
       "ends": "",
-      "price": 824.99,
-      "title": "2018 Panini Prizm #205 JOSH ALLEN RC Bills PSA 10",
-      "url": "https://www.ebay.com/itm/840076330509?_skw=Josh+Allen+2018+Panini+Prizm+205&hash=itemc39873860d:g:T7EAAeSw73tq5RTX"
+      "price": 845.0,
+      "title": "2018 Panini Prizm Josh Allen #205 Rookie PSA 10 Buffalo Bills",
+      "url": "https://www.ebay.com/itm/257803800724?_skw=Josh+Allen+2018+Panini+Prizm+205&hash=item3c064dd094:g:q~YAAeSwTqJq1Bg5"
      }
     ],
-    "count": 10,
+    "count": 9,
     "low": 800.0,
     "typical": 850.0
    },
@@ -1276,18 +1312,10 @@
   "902c552f-e2ae-4b73-9035-2dfdc8d98d7a": {
    "psa10": {
     "auctions": 0,
-    "cheapest": [
-     {
-      "auction": false,
-      "ends": "",
-      "price": 59.99,
-      "title": "Justin Herbert 2020 Panini Donruss Optic #153 Rookie RC PSA 10",
-      "url": "https://www.ebay.com/itm/407295948111?_skw=Justin+Herbert+2020+Donruss+Optic+153&hash=item5ed4baf54f:g:oD4AAeSwh3NqjzTb"
-     }
-    ],
-    "count": 1,
-    "low": 59.99,
-    "typical": 59.99
+    "cheapest": [],
+    "count": 0,
+    "low": null,
+    "typical": null
    },
    "query": "Justin Herbert 2020 Donruss Optic 153",
    "raw": {
@@ -1315,22 +1343,15 @@
       "url": "https://www.ebay.com/itm/366704806671?_skw=Justin+Herbert+2020+Donruss+Optic+153&hash=item55614f4b0f:g:G4IAAeSwG1ZqvuLr"
      }
     ],
-    "count": 22,
+    "count": 23,
     "low": 5.95,
-    "typical": 10.76
+    "typical": 10.95
    }
   },
   "95363662-33bf-440c-afdb-88c3939e351d": {
    "psa10": {
     "auctions": 0,
     "cheapest": [
-     {
-      "auction": false,
-      "ends": "",
-      "price": 355.6,
-      "title": "Panini 2018 Prizm Lamar Jackson RC #212 PSA 10 (Cert 64004502)",
-      "url": "https://www.ebay.com/itm/128173258412?_skw=Lamar+Jackson+2018+Panini+Prizm+212&hash=item1dd7b8b6ac:g:MrYAAeSw5KRq6jH7"
-     },
      {
       "auction": false,
       "ends": "",
@@ -1343,12 +1364,12 @@
       "ends": "",
       "price": 599.99,
       "title": "Graded 2018 Panini Prizm Lamar Jackson #212 Rookie RC Card PSA 10 Gem",
-      "url": "https://www.ebay.com/itm/147531486968?_skw=Lamar+Jackson+2018+Panini+Prizm+212&hash=item22598fd6f8:g:ZkEAAeSwF5BqkNky&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7lKkhOyNRrFVY9%2B9bksyauh87Xcpzf9J0jUslf0VIRJDJQsI2MZ3WfYbt4WWTMSanhj9l6JCR0LcL9Sl55%2B70JkKHTB50jB7GQp%2BTaWufB9O4Y%2FM2VjZMQu%2BPnJ9S6xX8j%2FyThRzrgi5uXmQAkRGlme3L731IeLzP9Qsrk2O8yKd1UUBSfmZLLlyG%2BLdecmjD6P4YMdem%2FQGHsG4ngHDJlF4hVX5zlxRVDEdzfHyNfpj6MEl37yaUxtiVtLNIxYPGibBE8hTc6rM6VSmaiw9XPUmBHBYvJnYAYpksFV6X4sfl1waKKx6U3zEcrygc9YqPA%3D"
+      "url": "https://www.ebay.com/itm/147531486968?_skw=Lamar+Jackson+2018+Panini+Prizm+212&hash=item22598fd6f8:g:ZkEAAeSwF5BqkNky&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7lKkhOyNRrFVY9%2B9bksyauhE63YGY2VGaP3DKDm08E%2FmJwj3mHBtJysuVHSrSg4npn4beCDjyUxSwcni0Khh26TOpDIM173ZnTfQzzZ60%2FvfMX90blcPH4Byedb%2FlCSG0723eIYgfbgQBoHzHxjaKjrH5tqwEVID2mEeFtCA77QXbPC1a9n3M63gwDHdqna3fl2TbNa9jvw%2BaCnr1h9TCD7ThCLjZiwNvt2%2FPIoiI%2ByjqJ15hGffpIpYS1M5UAXkULEOk%2BCQyPsZxQdOifv5GKjJPUPDgEi4loRi%2FIMtA3Dtd4%2BmyKRMSoz1TIRmTR45l0%3D"
      }
     ],
-    "count": 3,
-    "low": 355.6,
-    "typical": 394.99
+    "count": 2,
+    "low": 394.99,
+    "typical": 497.49
    },
    "query": "Lamar Jackson 2018 Panini Prizm 212",
    "raw": {
@@ -1371,12 +1392,12 @@
      {
       "auction": false,
       "ends": "",
-      "price": 34.99,
-      "title": "2018 Panini Prizm Rookie Lamar Jackson #212 (RC) Nice!",
-      "url": "https://www.ebay.com/itm/287593132093?_skw=Lamar+Jackson+2018+Panini+Prizm+212&hash=item42f5e2f03d:g:SLkAAeSwhzVqodi4"
+      "price": 33.0,
+      "title": "2018 Panini Prizm Lamar Jackson #212 Base Rookie Card Baltimore Ravens",
+      "url": "https://www.ebay.com/itm/920106750524?_skw=Lamar+Jackson+2018+Panini+Prizm+212&hash=itemd63aa2d23c:g:PikAAeSwxYJq6-na"
      }
     ],
-    "count": 21,
+    "count": 22,
     "low": 29.99,
     "typical": 39.99
    }
@@ -1407,9 +1428,9 @@
       "url": "https://www.ebay.com/itm/900018553535?_skw=Lamar+Jackson+2018+Score+352&hash=itemd18d4942bf:g:keEAAeSwAsVq0pdH"
      }
     ],
-    "count": 8,
+    "count": 9,
     "low": 49.99,
-    "typical": 72.5
+    "typical": 75.0
    },
    "query": "Lamar Jackson 2018 Score 352",
    "raw": {
@@ -1437,9 +1458,9 @@
       "url": "https://www.ebay.com/itm/960153358791?_skw=Lamar+Jackson+2018+Score+352&hash=itemdf8d9991c7:g:EC4AAeSwdV1q6yyR"
      }
     ],
-    "count": 69,
+    "count": 71,
     "low": 3.99,
-    "typical": 5.22
+    "typical": 5.53
    }
   },
   "96f7eaa7-7c0b-4284-95ac-056d5b923893": {
@@ -1510,6 +1531,13 @@
      {
       "auction": false,
       "ends": "",
+      "price": 999.99,
+      "title": "Nikola Jokic 2015 Panini Prizm RC Rookie #335 PSA 10 Gem Mint Denver Nuggets",
+      "url": "https://www.ebay.com/itm/407340782299?_skw=Nikola+Jokic+2015+Panini+Prizm+335&hash=item5ed76712db:g:VYsAAeSwzOlq68sY"
+     },
+     {
+      "auction": false,
+      "ends": "",
       "price": 1000.0,
       "title": "2015 Panini Prizm Nikola Jokic Rookie #335 PSA 10",
       "url": "https://www.ebay.com/itm/227580218558?_skw=Nikola+Jokic+2015+Panini+Prizm+335&hash=item34fcd68cbe:g:QNIAAeSw50Zq23NL"
@@ -1520,18 +1548,11 @@
       "price": 1080.0,
       "title": "2015 Panini Prizm Nikola Jokic Rookie #335 PSA 10",
       "url": "https://www.ebay.com/itm/366703709759?_skw=Nikola+Jokic+2015+Panini+Prizm+335&hash=item55613e8e3f:g:jvYAAeSwkN1qvkr6"
-     },
-     {
-      "auction": false,
-      "ends": "",
-      "price": 1150.0,
-      "title": "2015 Panini Prizm Nikola Jokic Rookie #335 PSA 10",
-      "url": "https://www.ebay.com/itm/137800283335?_skw=Nikola+Jokic+2015+Panini+Prizm+335&hash=item20158974c7:g:DtcAAeSw955qvksh"
      }
     ],
-    "count": 9,
-    "low": 1000.0,
-    "typical": 1312.0
+    "count": 11,
+    "low": 999.99,
+    "typical": 1299.99
    },
    "query": "Nikola Jokic 2015 Panini Prizm 335",
    "raw": {
@@ -1601,28 +1622,28 @@
      {
       "auction": false,
       "ends": "",
-      "price": 169.0,
-      "title": "Upper Deck 2009-10 Basketball Star Rookie Stephen Curry #234 Warriors Z Magpro",
-      "url": "https://www.ebay.com/itm/237143859559?_skw=Stephen+Curry+2009+Upper+Deck+234&hash=item3736e02167:g:U10AAeSw991q3kfN"
-     },
-     {
-      "auction": false,
-      "ends": "",
       "price": 200.0,
       "title": "2009-10 Upper Deck “Star Rookies” Stephen Curry #234 (RC)",
-      "url": "https://www.ebay.com/itm/267832189803?_skw=Stephen+Curry+2009+Upper+Deck+234&hash=item3e5c0ae36b:g:4ZQAAeSwc7hq6A1h"
+      "url": "https://www.ebay.com/itm/267834521252?_skw=Stephen+Curry+2009+Upper+Deck+234&hash=item3e5c2e76a4:g:4ZQAAeSwc7hq6A1h"
      },
      {
       "auction": false,
       "ends": "",
       "price": 200.0,
       "title": "Upper Deck 2009-10 Star Rookies Stephen Curry Rookie Base Card #234",
-      "url": "https://www.ebay.com/itm/800861481885?_skw=Stephen+Curry+2009+Upper+Deck+234&hash=itemba77106b9d:g:sTsAAeSwsKZq5rTl"
+      "url": "https://www.ebay.com/itm/800880789198?_skw=Stephen+Curry+2009+Upper+Deck+234&hash=itemba783706ce:g:sTsAAeSwsKZq5rTl"
+     },
+     {
+      "auction": false,
+      "ends": "",
+      "price": 200.0,
+      "title": "2009-10 Upper Deck - Star Rookies Stephen Curry #234 (RC)",
+      "url": "https://www.ebay.com/itm/358537550388?_skw=Stephen+Curry+2009+Upper+Deck+234&hash=item537a80da34:g:tQsAAeSwwplp~4nj"
      }
     ],
-    "count": 20,
-    "low": 169.0,
-    "typical": 278.0
+    "count": 19,
+    "low": 200.0,
+    "typical": 295.0
    }
   },
   "a73bbc75-1a41-4023-9251-f4243c013952": {
@@ -1635,18 +1656,11 @@
       "price": 5500.0,
       "title": "LeBron James 2003 Bowman #123 ROOKIE PSA 10 🐐💎📈",
       "url": "https://www.ebay.com/itm/960136509415?_skw=LeBron+James+2003+Bowman+123&hash=itemdf8c9877e7:g:QuYAAeSwu5FqsifQ"
-     },
-     {
-      "auction": false,
-      "ends": "",
-      "price": 5750.0,
-      "title": "2003 Lebron James Bowman PSA 10 #123 RC ",
-      "url": "https://www.ebay.com/itm/267828368770?_skw=LeBron+James+2003+Bowman+123&hash=item3e5bd09582:g:mZQAAeSwc8Nq5ORG"
      }
     ],
-    "count": 2,
+    "count": 1,
     "low": 5500.0,
-    "typical": 5625.0
+    "typical": 5500.0
    },
    "query": "LeBron James 2003 Bowman 123",
    "raw": {
@@ -1655,33 +1669,33 @@
      {
       "auction": false,
       "ends": "",
-      "price": 450.0,
+      "price": 425.0,
       "title": "Topps 2003-04 Bowman Rookies & Stars LeBron James #123 Rookie Cavaliers",
-      "url": "https://www.ebay.com/itm/336864275630?_skw=LeBron+James+2003+Bowman+123&hash=item4e6eacecae:g:micAAeSw73tq35DN&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7n1Oowq8FM%2FP1D65rs%2BOgv9eikj51YpG69JaP71uqUVMdLMNF4ykb7mz3z4UGMmLGrCyC%2BsFlbSXnjJ6BYQwndioVKutCJZkHF6IbkBjWdvxw21up2LFxOEeyRclQU0vD1pdnoVXhkr9K%2BhCcGFwDTdJq%2FmErlHD%2FcCBWdWcvnx3vBIIgS3Dz6SQDoZJ2P0cIZrE7hPATr3qt1EQIIcsEUXYzsoFggE8ytYHIxllWMdTIugEli7cHHinedeNapo1J7K34213dIMUh9rkhtyqyUzVxZ56xkMtq%2FEplh%2FSLyglwgNwIULhTLARCWtRYj39Kw%3D"
+      "url": "https://www.ebay.com/itm/336864275630?_skw=LeBron+James+2003+Bowman+123&hash=item4e6eacecae:g:micAAeSw73tq35DN&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7n1Oowq8FM%2FP1D65rs%2BOgv9eikj51YpG69JaP71uqUVMdLMNF4ykb7mz3z4UGMmLGrCyC%2BsFlbSXnjJ6BYQwndioVKutCJZkHF6IbkBjWdvxw21up2LFxOEeyRclQU0vD3dg1GWfCZx8z9rZ8j5MIzNodRL7L2NY4guKDm97n%2FH8fRaNjM4eGMXNbnCYP0I7ODVsJ2%2F8QQsxU%2FxoGbguu2mf6pYN0z9W8lxLms6saSX22VjEbhpJsD7ei7XjTf1uxiC44avGA5LFVeYCmQ8OmwO9cu%2FXHWPDEjRgi6x3bJpcoF1sA20RfBs%2BVQD3uoDIKQ%3D"
+     },
+     {
+      "auction": false,
+      "ends": "",
+      "price": 490.0,
+      "title": "2003-04 Bowman Rookies & Stars Rookies LeBron James RC #123 Cavaliers Base",
+      "url": "https://www.ebay.com/itm/267779717372?_skw=LeBron+James+2003+Bowman+123&hash=item3e58ea38fc:g:fZoAAeSwgRBqoE~E"
      },
      {
       "auction": false,
       "ends": "",
       "price": 550.0,
       "title": "Bowman Rookies & Stars 2003-04 LeBron James Rookie #123 Cleveland Cavaliers NBA",
-      "url": "https://www.ebay.com/itm/407247794428?_skw=LeBron+James+2003+Bowman+123&hash=item5ed1dc30fc:g:fCkAAeSw6HFquBOj&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7l0648CT4ooBXCWLEFqoUstfii%2B4Ds8hSW2FQ%2B%2BIXafn5yy9WUzJzbvTtuYy02HgSOlVTlbRq8L9iuGEyBD0IpCWQLqkrev2otoyBAyo5zKefJbk171gw6PHiy0pYANKhe%2BJrV7my638A%2BdNDcqaPz%2FhrvG5I%2BmyceR5BI5mpeGdjYNV1lKdVZ0K48YpekHdMTJ%2FmOLCxMMoq3qje%2BDzJiuQ3TYcdudMdjOVe5lpsB%2BR4mMCJYb9jfDou0Zm8WmebXWTnfHFfjRGUI914BoEyYDZVfOFQddD3TKbMTMq0VtBd%2FFoEOXm4Qp0AHbeGjBgUg%3D"
-     },
-     {
-      "auction": false,
-      "ends": "",
-      "price": 600.0,
-      "title": "2003 Bowman #123 LeBron James",
-      "url": "https://www.ebay.com/itm/128165912192?_skw=LeBron+James+2003+Bowman+123&hash=item1dd7489e80:g:2j8AAeSwevJq5buD"
+      "url": "https://www.ebay.com/itm/407247794428?_skw=LeBron+James+2003+Bowman+123&hash=item5ed1dc30fc:g:fCkAAeSw6HFquBOj&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7l0648CT4ooBXCWLEFqoUstfii%2B4Ds8hSW2FQ%2B%2BIXafn5yy9WUzJzbvTtuYy02HgSOlVTlbRq8L9iuGEyBD0IpCWQLqkrev2otoyBAyo5zKefJbk171gw6PHiy0pYANKhfiWP813pCz%2FXFPVfOkcbJKG4NFUIfZ5ivIHfeW9FBgExH5tgeEkqwspu%2FykB%2F3AV1yzvkW5Mdl2Bt6gEhWLf2%2FgiKr0U4ROKqCScg4He86rEzaKVNwSK9jFMbJbHL0vYPzy9bjROnH9TtQi8f5U2GY6XYdLWDNm8N54Ci%2BhK2JutwI7l2RQgYrh7BJC33TG38%3D"
      }
     ],
-    "count": 10,
-    "low": 450.0,
-    "typical": 925.0
+    "count": 11,
+    "low": 425.0,
+    "typical": 899.99
    }
   },
   "aa845dcf-5c88-4ad7-9e0c-786d60c34545": {
    "psa10": {
-    "auctions": 0,
+    "auctions": 1,
     "cheapest": [
      {
       "auction": false,
@@ -1698,16 +1712,16 @@
       "url": "https://www.ebay.com/itm/327378904089?_skw=Ronald+Acuna+2018+Topps+Chrome+Update+HMT31&hash=item4c394da419:g:YHYAAeSwzF9quuE6"
      },
      {
-      "auction": false,
-      "ends": "",
+      "auction": true,
+      "ends": "2026-11-10T02:11",
       "price": 42.0,
       "title": "2018 Topps Chrome Update Ronald Acuna Jr Rookie Debut HMT31 PSA Gem Mint 10",
-      "url": "https://www.ebay.com/itm/960151473750?_skw=Ronald+Acuna+2018+Topps+Chrome+Update+HMT31&hash=itemdf8d7cce56:g:KisAAeSwndNq6ppQ"
+      "url": "https://www.ebay.com/itm/960155710607?_skw=Ronald+Acuna+2018+Topps+Chrome+Update+HMT31&hash=itemdf8dbd748f:g:KisAAeSwndNq6ppQ"
      }
     ],
-    "count": 10,
+    "count": 11,
     "low": 35.99,
-    "typical": 53.99
+    "typical": 57.99
    },
    "query": "Ronald Acuna 2018 Topps Chrome Update HMT31",
    "raw": {
@@ -1735,9 +1749,9 @@
       "url": "https://www.ebay.com/itm/178505928042?_skw=Ronald+Acuna+2018+Topps+Chrome+Update+HMT31&hash=item298fc84d6a:g:M-MAAeSwAetqrF~K"
      }
     ],
-    "count": 39,
+    "count": 41,
     "low": 1.99,
-    "typical": 7.5
+    "typical": 7.99
    }
   },
   "ba794de0-51d3-4d5b-ac86-dc20f3d95f63": {
@@ -1747,7 +1761,7 @@
      {
       "auction": false,
       "ends": "",
-      "price": 160.24,
+      "price": 161.12,
       "title": "Giannis Antetokounmpo 2013 Panini Prestige #175 Rookie RC PSA 10",
       "url": "https://www.ebay.com/itm/198768808771?_skw=Giannis+Antetokounmpo+2013+Panini+Prestige+175&hash=item2e478b5343:g:3-EAAeSwVVRqwkjR"
      },
@@ -1766,21 +1780,14 @@
       "url": "https://www.ebay.com/itm/327229693406?_skw=Giannis+Antetokounmpo+2013+Panini+Prestige+175&hash=item4c3068ddde:g:3H8AAeSwt5tqO2F2"
      }
     ],
-    "count": 6,
-    "low": 160.24,
-    "typical": 222.0
+    "count": 7,
+    "low": 161.12,
+    "typical": 234.99
    },
    "query": "Giannis Antetokounmpo 2013 Panini Prestige 175",
    "raw": {
     "auctions": 0,
     "cheapest": [
-     {
-      "auction": false,
-      "ends": "",
-      "price": 20.0,
-      "title": "2013-14 Panini Prestige - Giannis Antetokounmpo #175 (RC)",
-      "url": "https://www.ebay.com/itm/307260766933?_skw=Giannis+Antetokounmpo+2013+Panini+Prestige+175&hash=item478a2b3ad5:g:jr4AAeSwSYRq548O"
-     },
      {
       "auction": false,
       "ends": "",
@@ -1794,11 +1801,18 @@
       "price": 24.99,
       "title": "Panini Prestige 2013-14 Giannis Antetokounmpo RC Base #175 Bucks NBA",
       "url": "https://www.ebay.com/itm/820228533222?_skw=Giannis+Antetokounmpo+2013+Panini+Prestige+175&hash=itembef96e2be6:g:3~QAAeSwFhRqy~H1"
+     },
+     {
+      "auction": false,
+      "ends": "",
+      "price": 25.0,
+      "title": "2013-14 Panini Prestige - Giannis Antetokounmpo #175 (RC)",
+      "url": "https://www.ebay.com/itm/920098271302?_skw=Giannis+Antetokounmpo+2013+Panini+Prestige+175&hash=itemd63a217046:g:ApEAAeSwx~Zq6QcW"
      }
     ],
-    "count": 41,
-    "low": 20.0,
-    "typical": 42.23
+    "count": 40,
+    "low": 24.99,
+    "typical": 44.99
    }
   },
   "bee4e4b6-e71c-43c5-8859-a0db8739517a": {
@@ -1808,21 +1822,14 @@
      {
       "auction": false,
       "ends": "",
-      "price": 650.0,
-      "title": "2015 PANINI SELECT #128 NIKOLA JOKIC ROOKIE RC PSA 10",
-      "url": "https://www.ebay.com/itm/307264364672?_skw=Nikola+Jokic+2015+Panini+Select+128&hash=item478a622080:g:PKMAAeSwxIhq6XtD"
-     },
-     {
-      "auction": false,
-      "ends": "",
       "price": 1250.0,
       "title": "2015 PANINI SELECT #128 NIKOLA JOKIC ROOKIE RC PSA 10",
       "url": "https://www.ebay.com/itm/900059792120?_skw=Nikola+Jokic+2015+Panini+Select+128&hash=itemd18fbe82f8:g:TgwAAeSw1mtq6N9L"
      }
     ],
-    "count": 2,
-    "low": 650.0,
-    "typical": 950.0
+    "count": 1,
+    "low": 1250.0,
+    "typical": 1250.0
    },
    "query": "Nikola Jokic 2015 Panini Select 128",
    "raw": {
@@ -1831,7 +1838,7 @@
      {
       "auction": false,
       "ends": "",
-      "price": 285.51,
+      "price": 286.16,
       "title": "2015 Nikola Jokic #128 RC   [11134]",
       "url": "https://www.ebay.com/itm/267691960888?_skw=Nikola+Jokic+2015+Panini+Select+128&hash=item3e53af2a38:g:zXgAAeSwY6BqJOKS"
      },
@@ -1851,7 +1858,7 @@
      }
     ],
     "count": 4,
-    "low": 285.51,
+    "low": 286.16,
     "typical": 347.5
    }
   },
@@ -1881,21 +1888,14 @@
       "url": "https://www.ebay.com/itm/168823237358?_skw=Juan+Soto+2018+Topps+Update+US300&hash=item274ea62aee:g:o6kAAeSwi1tq4j67"
      }
     ],
-    "count": 3,
+    "count": 4,
     "low": 39.99,
-    "typical": 40.0
+    "typical": 42.5
    },
    "query": "Juan Soto 2018 Topps Update US300",
    "raw": {
     "auctions": 0,
     "cheapest": [
-     {
-      "auction": false,
-      "ends": "",
-      "price": 5.49,
-      "title": "2018 Topps Update #US300 Juan Soto Nationals RC",
-      "url": "https://www.ebay.com/itm/407337878542?_skw=Juan+Soto+2018+Topps+Update+US300&hash=item5ed73ac40e:g:wTwAAeSwn5pq6mtT"
-     },
      {
       "auction": false,
       "ends": "",
@@ -1909,10 +1909,17 @@
       "price": 7.5,
       "title": "Topps 2018 Update Series Rookie Base Juan Soto #US300 Nationals Vertical",
       "url": "https://www.ebay.com/itm/820289155403?_skw=Juan+Soto+2018+Topps+Update+US300&hash=itembefd0b314b:g:z~QAAeSwSwpq4m1f"
+     },
+     {
+      "auction": false,
+      "ends": "",
+      "price": 8.0,
+      "title": "2018 Topps Update #US300 Juan Soto",
+      "url": "https://www.ebay.com/itm/800791075943?_skw=Juan+Soto+2018+Topps+Update+US300&hash=itemba72de1c67:g:-1MAAeSwj99qzj2o"
      }
     ],
     "count": 18,
-    "low": 5.49,
+    "low": 7.3,
     "typical": 10.0
    }
   },
@@ -1931,27 +1938,27 @@
      {
       "auction": false,
       "ends": "",
-      "price": 4.99,
-      "title": "2014-15 Hoops #263 Joel Embiid",
-      "url": "https://www.ebay.com/itm/860107105113?_skw=Joel+Embiid+2014+NBA+Hoops+263&hash=itemc84260e359:g:J~sAAeSwQyNq6RAm"
+      "price": 6.5,
+      "title": "Panini 2014-15 NBA Hoops Joel Embiid Rookie Base #263 Philadelphia 76ers",
+      "url": "https://www.ebay.com/itm/820229035501?_skw=Joel+Embiid+2014+NBA+Hoops+263&hash=itembef975d5ed:g:nLwAAeSwtcpqzB3S"
      },
      {
       "auction": false,
       "ends": "",
-      "price": 5.0,
-      "title": "Panini 2014-15 NBA Hoops Joel Embiid 76ers RC Rookie Card #263 NBA",
-      "url": "https://www.ebay.com/itm/137874791650?_skw=Joel+Embiid+2014+NBA+Hoops+263&hash=item2019fa5ce2:g:vioAAeSwf5Bq3naI"
+      "price": 6.57,
+      "title": "2014-15 Panini NBA Hoops Joel Embiid #263 Rookie RC e0r",
+      "url": "https://www.ebay.com/itm/257812835025?_skw=Joel+Embiid+2014+NBA+Hoops+263&hash=item3c06d7aad1:g:Q0MAAeSw7Uhq2tGY"
      },
      {
       "auction": false,
       "ends": "",
-      "price": 6.0,
-      "title": "2014-15 Panini Nba Hoops - Joel Embiid #263 (RC)",
-      "url": "https://www.ebay.com/itm/206671615358?_skw=Joel+Embiid+2014+NBA+Hoops+263&hash=item301e96957e:g:PAYAAeSwhbRq6T75"
+      "price": 6.79,
+      "title": "2014-15 Panini NBA Hoops Joel Embiid RC Philadelphia 76ers #263 *EXC",
+      "url": "https://www.ebay.com/itm/306137903774?_skw=Joel+Embiid+2014+NBA+Hoops+263&hash=item47473db29e:g:GI4AAeSwf0xnvSSh"
      }
     ],
-    "count": 44,
-    "low": 4.99,
+    "count": 42,
+    "low": 6.5,
     "typical": 9.99
    }
   },
@@ -1978,12 +1985,12 @@
       "ends": "",
       "price": 50.0,
       "title": "2018 Topps Allen & Ginter Ronald Acuna Jr. ROOKIE #207 PSA 10 GEM MINT",
-      "url": "https://www.ebay.com/itm/358121540867?_skw=Ronald+Acuna+2018+Topps+Allen+%26+Ginter+207&hash=item5361b50d03:g:oAoAAeSwtJ1ocCns&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7kwIzXrF0ldfojkgw07am%2Bv0yptbvWTNWWIno1EkVKqpH5hm%2FA33sRlZN3OCU%2FRO0Gz%2FcMZbjtpog%2BnRnUPmwNTgGToAN%2FFv3XWzzcjlBXjLBiz3aFx16wNGUOk8PIpjWH7doqJIyc4QHrSUaKKgoWoGVsVn4gYptiXljYh0RhptbWccBORAoNJBPdSORNXiHZ%2FNm6Whbu0pDmIMgHQqSYa7wvKJ21e2Gt32dhpOxOR5FThlsjy%2BXJw8WcXSgNnpidS4HHsBx5w9BbgdwXOfYyF5H%2F2UEe2LvjWfAksg4n7f45e8WgwzeiBWBR1uAKnAw7ZrtdcRvOwjEkHGyfTxsoT"
+      "url": "https://www.ebay.com/itm/358121540867?_skw=Ronald+Acuna+2018+Topps+Allen+%26+Ginter+207&hash=item5361b50d03:g:oAoAAeSwtJ1ocCns&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7kwIzXrF0ldfojkgw07am%2Bv4zTb8eCtFSpkuUg1nscLTqZWHdHs41neGg%2BRd%2BfbZxjOsr5k8ZtHHPAJ83N78biBncoJHiylN9Y2EpcTl10jdWYB96j%2B0skQxCKIMcaUHHi%2BfXRx3rBaZXLnvxwGdBD%2BM9D2ULyGMivQZaPPnl7KgVt0FyV6eGcLYDkU91djqWdcvqw8SFRryqUtSOBdtlnj%2FnCIxzowiQMOgi3SuOWN4eGr0we%2F7EeU0Fc%2BrOkAVxifG1tsVFz5RCRs1PUa%2BcTpw%2Be%2B6Cv0LplpnM7Wkmz7i9sDg4x9ltf93UrPZOp%2FphEiYLZg0ZVqpENIcKPC8kfb"
      }
     ],
-    "count": 8,
+    "count": 9,
     "low": 40.0,
-    "typical": 60.0
+    "typical": 70.0
    },
    "query": "Ronald Acuna 2018 Topps Allen & Ginter 207",
    "raw": {
@@ -2072,7 +2079,7 @@
       "url": "https://www.ebay.com/itm/287312181290?_skw=Justin+Herbert+2020+Panini+Absolute+167&hash=item42e523f82a:g:4QYAAeSwm6Zp-TDP"
      }
     ],
-    "count": 66,
+    "count": 67,
     "low": 0.99,
     "typical": 1.99
    }
@@ -2194,7 +2201,7 @@
       "url": "https://www.ebay.com/itm/168814714224?_skw=Juan+Soto+2018+Bowman%27s+Best+29&hash=item274e241d70:g:0bgAAeSw26lq3Wid"
      }
     ],
-    "count": 32,
+    "count": 30,
     "low": 9.99,
     "typical": 19.99
    }
@@ -2236,6 +2243,13 @@
      {
       "auction": false,
       "ends": "",
+      "price": 126.75,
+      "title": "Panini 2013-14 Select Giannis Antetokounmpo Rookie #178 Milwaukee Bucks",
+      "url": "https://www.ebay.com/itm/198772780335?_skw=Giannis+Antetokounmpo+2013+Panini+Select+178&hash=item2e47c7ed2f:g:gjQAAeSwaTFq67CO"
+     },
+     {
+      "auction": false,
+      "ends": "",
       "price": 135.0,
       "title": "2013-14 Panini Select - Giannis Antetokounmpo #178 (RC)",
       "url": "https://www.ebay.com/itm/147654850505?_skw=Giannis+Antetokounmpo+2013+Panini+Select+178&hash=item2260ea37c9:g:IG8AAeSwI5Fq4Xrq"
@@ -2246,18 +2260,11 @@
       "price": 140.0,
       "title": "2013-14 Panini Select Giannis Antetokounmpo #178 Rookie Card RC Bucks Heat",
       "url": "https://www.ebay.com/itm/377317724224?_skw=Giannis+Antetokounmpo+2013+Panini+Select+178&hash=item57d9e39040:g:44kAAeSwC1VqSSn7"
-     },
-     {
-      "auction": false,
-      "ends": "",
-      "price": 148.05,
-      "title": "2013-14 Panini Select Giannis Antetokounmpo #178 Rookie RC 1i9",
-      "url": "https://www.ebay.com/itm/237149220500?_skw=Giannis+Antetokounmpo+2013+Panini+Select+178&hash=item373731ee94:g:6xEAAeSwrBhq4kOR"
      }
     ],
-    "count": 17,
-    "low": 135.0,
-    "typical": 214.05
+    "count": 18,
+    "low": 126.75,
+    "typical": 211.3
    }
   },
   "f1661f13-de6e-469b-9cd6-d36fb04c718b": {
@@ -2275,18 +2282,18 @@
       "auction": false,
       "ends": "",
       "price": 199.99,
-      "title": "2013-14 NBA Hoops - Giannis Antetokounmpo #275 (RC) PSA 10",
-      "url": "https://www.ebay.com/itm/840069644860?_skw=Giannis+Antetokounmpo+2013+NBA+Hoops+275&hash=itemc3980d823c:g:GskAAeSwXolq4nVb"
+      "title": "Panini 2013-14 NBA Hoops Giannis Antetokounmpo #275 RC PSA 10 46594921",
+      "url": "https://www.ebay.com/itm/860113877291?_skw=Giannis+Antetokounmpo+2013+NBA+Hoops+275&hash=itemc842c8392b:g:wwwAAeSw12lq67Ea"
      },
      {
       "auction": false,
       "ends": "",
       "price": 199.99,
-      "title": "2013-14 Panini Hoops Giannis Antetokounmpo #275 RC Bucks PSA 10",
-      "url": "https://www.ebay.com/itm/257812765748?_skw=Giannis+Antetokounmpo+2013+NBA+Hoops+275&hash=item3c06d69c34:g:MfMAAeSwnAVq2sL4"
+      "title": "2013-14 NBA Hoops - Giannis Antetokounmpo #275 (RC) PSA 10",
+      "url": "https://www.ebay.com/itm/840069644860?_skw=Giannis+Antetokounmpo+2013+NBA+Hoops+275&hash=itemc3980d823c:g:GskAAeSwXolq4nVb"
      }
     ],
-    "count": 9,
+    "count": 10,
     "low": 170.0,
     "typical": 224.99
    },
@@ -2294,13 +2301,6 @@
    "raw": {
     "auctions": 0,
     "cheapest": [
-     {
-      "auction": false,
-      "ends": "",
-      "price": 26.0,
-      "title": "Giannis Antetokounmpo 2013-14 NBA Hoops Basketball Rookie #275 RC Mint Bucks",
-      "url": "https://www.ebay.com/itm/377600185124?_skw=Giannis+Antetokounmpo+2013+NBA+Hoops+275&hash=item57eab99324:g:af8AAeSwxrdq4BoD"
-     },
      {
       "auction": false,
       "ends": "",
@@ -2313,11 +2313,18 @@
       "ends": "",
       "price": 34.0,
       "title": "Panini 2013-14 Hoops Giannis Antetokounmpo Rookie Milwaukee Bucks #275",
-      "url": "https://www.ebay.com/itm/840075201374?_skw=Giannis+Antetokounmpo+2013+NBA+Hoops+275&hash=itemc398624b5e:g:74cAAeSwG2Vqzv6c&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7mHt17jiLLXLpvyMjnP6Nf8n62LCoLK3suieYAUP%2Flev3Q2SeRfBDflumMNVv4FkYCy%2BlYRM%2BlF1xrZbhuADtFzNG%2BiTux1wz5LhAD3w6OAyT4ow%2FIKGPjgkZjwZpdjgl3wdYbFtKN0H1YelHXDHiwPk296ldQOtk5%2FqPaXanzUDYaBtS4BS5jBP3hUJk7udAjyzhqcNcvcFxrER%2BuXh5Fd%2BOjFPTE3bTzQXaVlFOjJkK9ynJM0AFrCTKxYyGEjv7pCp2K1G6Jj2qKumchtuO6YJH9iEyZjqqwlusc96VXH5VtQ0%2Fa6%2BJ7YfOvQsyRcHV8Vs57E5GmAOAf6kPp92OeF"
+      "url": "https://www.ebay.com/itm/840075201374?_skw=Giannis+Antetokounmpo+2013+NBA+Hoops+275&hash=itemc398624b5e:g:74cAAeSwG2Vqzv6c&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7mHt17jiLLXLpvyMjnP6Nf8n62LCoLK3suieYAUP%2Flev3Q2SeRfBDflumMNVv4FkYCy%2BlYRM%2BlF1xrZbhuADtFzNG%2BiTux1wz5LhAD3w6OAyT4ow%2FIKGPjgkZjwZpdjgl0Qx9eIgaHV%2F2KFyYKp2UGpyugu4IGCz4onx8mrBYHZWFgRhK%2F604R2A0uBKGN11sOZiw054XSrkw8SI1WM%2BC681Vc65flUXgy6qfk9YcLLGgNtOtE2KATtVDSTIhU1V8bdomTgAZxkUOhkM824XRuj1eBR23gUI8nrIZCS5HoZa%2BAnAOauwzGJuoT2t5daZX0m9KCxUuuFzSI0Mz5wJrV%2B"
+     },
+     {
+      "auction": false,
+      "ends": "",
+      "price": 39.9,
+      "title": "Giannis Antetokounmpo 2013-14 NBA Hoops Basketball Rookie #275 RC Mint Bucks",
+      "url": "https://www.ebay.com/itm/198747668412?_skw=Giannis+Antetokounmpo+2013+NBA+Hoops+275&hash=item2e4648bfbc:g:6mEAAeSwSMRq36MG"
      }
     ],
-    "count": 32,
-    "low": 26.0,
+    "count": 30,
+    "low": 32.0,
     "typical": 55.0
    }
   },
@@ -2360,7 +2367,7 @@
       "ends": "",
       "price": 1200.0,
       "title": "Topps 2009-10 Stephen Curry Rookie Card #321 Golden State Warriors NBA",
-      "url": "https://www.ebay.com/itm/920100733892?_skw=Stephen+Curry+2009+Topps+321&hash=itemd63a4703c4:g:gV8AAeSw8jhq6ddw&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7n%2F%2BPtxlz2zA3ufzD6WHAxK6Bv8xVwqAFv5pkL4XNUUFgHJJ8wKl4PCByI9hMUgXRpxYxAG513ONoizwog%2BvgJoweR5AojpGLhUmWuUowi8dUHDOG1JQkOLO9NxPOGL79UqOvwxDfvPTppUXoj4wogXmXd70w%2BFz0ymlonfbfzz2tLgTi3NX%2F3qeg0Y7g1E81%2BLXILUakNWFwHGkJh58fifpbZNmorrDKXqCeHjegzM%2FhlEan1GtVw5TqdCG8jjtLhuYVV2%2FNS7R7Jd3JB1hU9pDMKAYh2x10N3ab0WINeENAc7Qb5VpOaE9SsWDMOVDCU%3D"
+      "url": "https://www.ebay.com/itm/920100733892?_skw=Stephen+Curry+2009+Topps+321&hash=itemd63a4703c4:g:gV8AAeSw8jhq6ddw&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7n%2F%2BPtxlz2zA3ufzD6WHAxK6Bv8xVwqAFv5pkL4XNUUFgHJJ8wKl4PCByI9hMUgXRpxYxAG513ONoizwog%2BvgJoweR5AojpGLhUmWuUowi8dUHDOG1JQkOLO9NxPOGL79WP6xB08bmc7JX1vd2k2VpLpuoG9Npklz%2FKJ1kGlT5Ca0XZ1nse609Eh3Bb3Fp4Op0WGqPYk%2Ftq5zPKK%2BaRMZhzD9FT0UIeAgQcIxT9f%2B94xSnNeWRlCX%2FQNfZK%2B2%2FF00QNWHHIM22rdHX24WKHDgDsFuOM1DsiI29%2FTMhiP0fK2eTWqly1urEjvBp8P1CxBTQ%3D"
      },
      {
       "auction": false,
@@ -2374,12 +2381,12 @@
       "ends": "",
       "price": 2499.0,
       "title": "Topps 2009-10 Stephen Curry #321 RC Golden State Warriors Base Set",
-      "url": "https://www.ebay.com/itm/257829939093?_skw=Stephen+Curry+2009+Topps+321&hash=item3c07dca795:g:YNkAAeSwKVJq6Gz~&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7k3h%2FkwFJ1BSlqrxD3fv4CfHjQZv8WQ0sY0qJKZTk5voI60ghBR338LIQ2XRB5tQyw0eDTcGKh4B8rGcK0Oeix6x4noleWXvZHW%2Bc5AKTlVXS2ldcczxdIfWQ6t9mPBmwAVKnQ0DK8Vph3I0Uie4XCHMyokJHHzs%2BfnWoJqNOAZ5icLC64diaGN8Gawz%2FVKAeb59OB42XY1JMlwqVUHj3MK8XanvzQ2YRikOMm9S211VvINS4UGgeQpMMkOywVR8vosCNmEIEmUfoik9qwhs6bzvEbpCZeVKGxt3WWGUMUSqsvT099YWBNhnctkeM1o64E%3D"
+      "url": "https://www.ebay.com/itm/257829939093?_skw=Stephen+Curry+2009+Topps+321&hash=item3c07dca795:g:YNkAAeSwKVJq6Gz~&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7k3h%2FkwFJ1BSlqrxD3fv4CfHjQZv8WQ0sY0qJKZTk5voI60ghBR338LIQ2XRB5tQyw0eDTcGKh4B8rGcK0Oeix6x4noleWXvZHW%2Bc5AKTlVXS2ldcczxdIfWQ6t9mPBmwDYWCWIKZkRQ%2FKfxErBKv5Z1KUYI6Gn0xs3g4bNMbNOgWD2S2TnbGWuYIBYS5Se6dAHrW939ipFnQAPgbabpm3Ct%2B%2BYufL5ijuJwnfEoKx7aFcxfE5fChWWHRp774UiKvYI62mXRctfCR354OfJc6EzEFrobXMPU2W9HfyvSi1EorQlfKJbf8q2fOPJdTHBFsU%3D"
      }
     ],
-    "count": 13,
+    "count": 14,
     "low": 1200.0,
-    "typical": 3950.0
+    "typical": 3975.0
    }
   },
   "fbbde729-5afe-412e-b612-8bde026f0827": {
@@ -2435,7 +2442,7 @@
       "ends": "",
       "price": 50.0,
       "title": "Panini 2018 Donruss Optic Rated Rookie Insert Lamar Jackson #167 Ravens",
-      "url": "https://www.ebay.com/itm/366764220162?_skw=Lamar+Jackson+2018+Donruss+Optic+167&hash=item5564d9df02:g:6doAAeSwtgFq4IPO&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7lLOiT9D%2B41sudGoUaVHFJv1GdN%2FOtcLi5BL0E9uSo06ScpWJhupBUXT2awI2Uw46IFkROKDQYQ%2Fwws9ap9INrcbYRfnWFd8S6ZKgRLIGYOpkqjyzc8m87MhBW25QgXTqq6waUmJoXGKMW5V%2B28ChBE1CBfHB3%2BrDAdNQQ3v3nbnzMHGmpMuHNE4Yvq4eiiahjyYfF9%2BxVjKMVb%2FsYSwTBjJM793YgLdLYpKmgW%2BJz%2BDRxgIHjoQVyu7gghY2vYuE59RbdnyyUo1GDXEOt2J7jCUS8wN9ufL4t9FkzbwHVVz85VxgxB5SmmJq%2B5%2BBtALkA%3D"
+      "url": "https://www.ebay.com/itm/366764220162?_skw=Lamar+Jackson+2018+Donruss+Optic+167&hash=item5564d9df02:g:6doAAeSwtgFq4IPO&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7lLOiT9D%2B41sudGoUaVHFJv1GdN%2FOtcLi5BL0E9uSo06ScpWJhupBUXT2awI2Uw46IFkROKDQYQ%2Fwws9ap9INrcbYRfnWFd8S6ZKgRLIGYOpkqjyzc8m87MhBW25QgXTqqFD7XfPWiWDbAc8CYEZfrcFjPN2pc4PfrGWd5cNMGmpOUD3i2m57JKq2vK0IZSM44lzytYCq3cErzIzlopv2VbSTHvCv1zPEAL3RWl7m3IgD6LD%2BYgiusk7UQk3e40iGDgvZIpD%2BFxuwwyOc%2FLKDiS3qdA0X4ARUigwxJkZWqZDKuspEfZKaXcS4kG0LBwtP0%3D"
      }
     ],
     "count": 11,
@@ -2464,12 +2471,12 @@
      {
       "auction": false,
       "ends": "",
-      "price": 977.87,
-      "title": "Mike Trout 2011 Topps Update #US175 Rookie RC PSA 10 GEM MINT",
-      "url": "https://www.ebay.com/itm/137684442744?_skw=Mike+Trout+2011+Topps+Update+US175&hash=item200ea1de78:g:tQMAAeSwvEZqjke2"
+      "price": 999.0,
+      "title": "2011 Topps Update Series - Mike Trout #US175 (RC) PSA 10",
+      "url": "https://www.ebay.com/itm/206653219726?_skw=Mike+Trout+2011+Topps+Update+US175&hash=item301d7de38e:g:Pf4AAeSwA21q3j4W"
      }
     ],
-    "count": 11,
+    "count": 10,
     "low": 949.99,
     "typical": 1000.0
    },
@@ -2480,16 +2487,16 @@
      {
       "auction": false,
       "ends": "",
-      "price": 230.0,
-      "title": "Topps 2011 Update Series Mike Trout #US175 Rookie Base Card Los Angeles Angels",
-      "url": "https://www.ebay.com/itm/147666685247?_skw=Mike+Trout+2011+Topps+Update+US175&hash=item22619ecd3f:g:N1sAAeSwJSVq65GB"
+      "price": 215.0,
+      "title": "2011 Topps Update Series Mike Trout #US175 (RC)",
+      "url": "https://www.ebay.com/itm/287697506642?_skw=Mike+Trout+2011+Topps+Update+US175&hash=item42fc1b9152:g:SKIAAeSwQxxq54zY"
      },
      {
       "auction": false,
       "ends": "",
       "price": 230.0,
-      "title": "2011 Topps Update Series Mike Trout #US175 (RC)",
-      "url": "https://www.ebay.com/itm/287697506642?_skw=Mike+Trout+2011+Topps+Update+US175&hash=item42fc1b9152:g:SKIAAeSwQxxq54zY"
+      "title": "Topps 2011 Update Series Mike Trout #US175 Rookie Base Card Los Angeles Angels",
+      "url": "https://www.ebay.com/itm/147666685247?_skw=Mike+Trout+2011+Topps+Update+US175&hash=item22619ecd3f:g:N1sAAeSwJSVq65GB"
      },
      {
       "auction": false,
@@ -2499,12 +2506,12 @@
       "url": "https://www.ebay.com/itm/377588778532?_skw=Mike+Trout+2011+Topps+Update+US175&hash=item57ea0b8624:g:lecAAeSwQxJq2X7u"
      }
     ],
-    "count": 20,
-    "low": 230.0,
-    "typical": 340.0
+    "count": 19,
+    "low": 215.0,
+    "typical": 330.0
    }
   }
  },
  "source": "eBay Browse API (active listings, eBay US)",
- "updated": "2026-11-04T20:30Z"
+ "updated": "2026-11-05T18:57Z"
 }
