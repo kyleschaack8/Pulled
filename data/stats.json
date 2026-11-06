@@ -244,7 +244,7 @@
      [
       "YDS",
       "1,871",
-      "10th"
+      "11th"
      ],
      [
       "TD",
@@ -325,6 +325,13 @@
    "draft": "2012: Rd 1, Pk 1 (NO)",
    "espnId": "6583",
    "experience": "15th Season",
+   "injury": {
+    "comment": "Davis is questionable for Friday's game against the Hawks due to a right ankle sprain, Josh Robbins of The Athletic reports.",
+    "date": "2026-11-05",
+    "returnDate": "2026-11-06",
+    "status": "Day-To-Day",
+    "type": "Ankle"
+   },
    "jersey": "23",
    "position": "F",
    "season": [
@@ -365,12 +372,12 @@
      [
       "REB",
       "9.3",
-      "12th"
+      "13th"
      ],
      [
       "AST",
       "2.1",
-      "Tied-133rd"
+      "Tied-134th"
      ],
      [
       "FG%",
@@ -850,8 +857,8 @@
      ],
      [
       "QBR",
-      "48.6",
-      "24th"
+      "49.0",
+      "23rd"
      ]
     ]
    },
@@ -1051,7 +1058,7 @@
      [
       "REC",
       "41",
-      "Tied-16th"
+      "Tied-17th"
      ],
      [
       "YDS",
@@ -1194,7 +1201,7 @@
      [
       "YDS",
       "1,748",
-      "15th"
+      "16th"
      ],
      [
       "TD",
@@ -1424,12 +1431,12 @@
      [
       "AST",
       "7.6",
-      "Tied-8th"
+      "Tied-9th"
      ],
      [
       "FG%",
       "47.2",
-      "65th"
+      "66th"
      ]
     ]
    },
@@ -1571,8 +1578,8 @@
      ],
      [
       "QBR",
-      "77.0",
-      "2nd"
+      "76.9",
+      "3rd"
      ]
     ]
    },
@@ -1714,7 +1721,7 @@
      ],
      [
       "QBR",
-      "48.5",
+      "48.2",
       "25th"
      ]
     ]
@@ -1980,8 +1987,8 @@
    "espnId": "3117251",
    "experience": "10th Season",
    "injury": {
-    "comment": "McCaffrey (hamstring) will not participate in Wednesday's practice, Cam Inman of Bay Area News Group reports.",
-    "date": "2026-11-04",
+    "comment": "McCaffrey (hamstring) was a limited participant at Thursday's practice, Sam Warren of The Athletic reports.",
+    "date": "2026-11-05",
     "returnDate": "2026-11-08",
     "status": "Questionable",
     "type": "Hamstring"
@@ -2064,7 +2071,7 @@
      [
       "AVG",
       "4.6",
-      "15th"
+      "14th"
      ]
     ]
    },
@@ -2197,7 +2204,7 @@
      [
       "YDS",
       "1,867",
-      "11th"
+      "12th"
      ],
      [
       "TD",
@@ -2211,7 +2218,7 @@
      ],
      [
       "QBR",
-      "68.9",
+      "69.2",
       "7th"
      ]
     ]
@@ -2388,7 +2395,7 @@
      [
       "REB",
       "6.3",
-      "58th"
+      "59th"
      ],
      [
       "AST",
@@ -2398,7 +2405,7 @@
      [
       "FG%",
       "46.8",
-      "68th"
+      "70th"
      ]
     ]
    },
@@ -2611,17 +2618,17 @@
      [
       "PTS",
       "20.1",
-      "39th"
+      "38th"
      ],
      [
       "REB",
       "4.1",
-      "Tied-122nd"
+      "Tied-121st"
      ],
      [
       "AST",
       "4.1",
-      "Tied-60th"
+      "Tied-59th"
      ],
      [
       "FG%",
@@ -2674,7 +2681,7 @@
     ],
     [
      "STL",
-     "0.8"
+     "0.9"
     ]
    ],
    "draft": "2015: Rd 1, Pk 13 (PHX)",
@@ -2685,27 +2692,27 @@
    "season": [
     [
      "PTS",
-     "24.7"
+     "25.4"
     ],
     [
      "REB",
-     "3.2"
+     "2.9"
     ],
     [
      "AST",
-     "4.7"
+     "5.1"
     ],
     [
      "FG%",
-     "48.5"
+     "48.8"
     ],
     [
      "3P%",
-     "32.1"
+     "36.1"
     ],
     [
      "STL",
-     "0.5"
+     "0.9"
     ]
    ],
    "statsLabel": "Stats",
@@ -2714,23 +2721,23 @@
     "stats": [
      [
       "PTS",
-      "24.7",
-      "12th"
+      "25.4",
+      "Tied-11th"
      ],
      [
       "REB",
-      "3.2",
-      "180th"
+      "2.9",
+      "Tied-205th"
      ],
      [
       "AST",
-      "4.7",
-      "Tied-46th"
+      "5.1",
+      "34th"
      ],
      [
       "FG%",
-      "48.5",
-      "52nd"
+      "48.8",
+      "48th"
      ]
     ]
    },
@@ -2824,7 +2831,7 @@
      [
       "REB",
       "5.0",
-      "Tied-94th"
+      "Tied-97th"
      ],
      [
       "AST",
@@ -2834,7 +2841,7 @@
      [
       "FG%",
       "48.4",
-      "53rd"
+      "52nd"
      ]
     ]
    },
@@ -2976,8 +2983,8 @@
      ],
      [
       "QBR",
-      "76.5",
-      "5th"
+      "76.8",
+      "4th"
      ]
     ]
    },
@@ -3058,7 +3065,7 @@
      [
       "PTS",
       "18.6",
-      "Tied-48th"
+      "48th"
      ],
      [
       "REB",
@@ -3420,7 +3427,7 @@
     ],
     [
      "REB",
-     "9.9"
+     "10.0"
     ],
     [
      "AST",
@@ -3447,27 +3454,27 @@
    "season": [
     [
      "PTS",
-     "28.3"
+     "27.3"
     ],
     [
      "REB",
-     "12.5"
+     "12.7"
     ],
     [
      "AST",
-     "5.8"
+     "5.6"
     ],
     [
      "FG%",
-     "56.2"
+     "56.0"
     ],
     [
      "3P%",
-     "21.1"
+     "20.8"
     ],
     [
      "STL",
-     "1.0"
+     "0.9"
     ]
    ],
    "statsLabel": "Stats",
@@ -3476,22 +3483,22 @@
     "stats": [
      [
       "PTS",
-      "28.3",
-      "5th"
+      "27.3",
+      "7th"
      ],
      [
       "REB",
-      "12.5",
+      "12.7",
       "3rd"
      ],
      [
       "AST",
-      "5.8",
-      "Tied-25th"
+      "5.6",
+      "27th"
      ],
      [
       "FG%",
-      "56.2",
+      "56.0",
       "13th"
      ]
     ]
@@ -4007,17 +4014,17 @@
      [
       "REB",
       "2.6",
-      "Tied-214th"
+      "Tied-210th"
      ],
      [
       "AST",
       "5.1",
-      "Tied-34th"
+      "Tied-35th"
      ],
      [
       "FG%",
       "41.4",
-      "106th"
+      "105th"
      ]
     ]
    },
@@ -4171,7 +4178,7 @@
      ],
      [
       "QBR",
-      "58.1",
+      "59.1",
       "19th"
      ]
     ]
@@ -4278,7 +4285,7 @@
      [
       "YDS",
       "492",
-      "18th"
+      "19th"
      ],
      [
       "TD",
@@ -4435,7 +4442,7 @@
      ],
      [
       "QBR",
-      "63.8",
+      "63.6",
       "11th"
      ]
     ]
@@ -4498,13 +4505,6 @@
    "draft": "2017: Rd 1, Pk 3 (BOS)",
    "espnId": "4065648",
    "experience": "10th Season",
-   "injury": {
-    "comment": "Tatum will be rested Wednesday against the Bucks, Jack Simone of BostonSportsJournal.com reports.",
-    "date": "2026-11-05",
-    "returnDate": "2026-11-06",
-    "status": "Day-To-Day",
-    "type": "Rest"
-   },
    "jersey": "0",
    "position": "F",
    "season": [
@@ -4550,12 +4550,12 @@
      [
       "AST",
       "7.9",
-      "Tied-6th"
+      "Tied-7th"
      ],
      [
       "FG%",
       "41.8",
-      "104th"
+      "103rd"
      ]
     ]
    },
@@ -4702,8 +4702,8 @@
      ],
      [
       "QBR",
-      "76.9",
-      "4th"
+      "77.3",
+      "2nd"
      ]
     ]
    },
@@ -4810,12 +4810,12 @@
      [
       "AST",
       "4.4",
-      "57th"
+      "Tied-55th"
      ],
      [
       "FG%",
       "41.3",
-      "107th"
+      "106th"
      ]
     ]
    },
@@ -4948,7 +4948,7 @@
      [
       "YDS",
       "1,793",
-      "14th"
+      "15th"
      ],
      [
       "TD",
@@ -4962,8 +4962,8 @@
      ],
      [
       "QBR",
-      "76.9",
-      "3rd"
+      "76.7",
+      "5th"
      ]
     ]
    },
@@ -5322,7 +5322,7 @@
      ],
      [
       "QBR",
-      "32.6",
+      "32.5",
       "30th"
      ]
     ]
@@ -5424,17 +5424,17 @@
      [
       "REC",
       "28",
-      "Tied-52nd"
+      "Tied-54th"
      ],
      [
       "YDS",
       "335",
-      "43rd"
+      "45th"
      ],
      [
       "TD",
       "4",
-      "Tied-13th"
+      "Tied-14th"
      ],
      [
       "AVG",
@@ -5668,12 +5668,12 @@
      [
       "REB",
       "5.2",
-      "91st"
+      "92nd"
      ],
      [
       "AST",
       "3.0",
-      "Tied-88th"
+      "Tied-90th"
      ],
      [
       "FG%",
@@ -5725,10 +5725,10 @@
    "espnId": "3916387",
    "experience": "9th Season",
    "injury": {
-    "comment": "Ravens head coach Jesse Minter said after Sunday's 36-10 loss to the Bills that Jackson will undergo surgery to address his right thumb injury and will be placed on injured reserve,  Brian Wacker of The Baltimore Sun reports.",
-    "date": "2026-11-01",
+    "comment": "The Ravens have officially placed Jackson (thumb) on injured reserve.",
+    "date": "2026-11-05",
     "returnDate": "2026-12-13",
-    "status": "Out",
+    "status": "Injured Reserve",
     "type": "Thumb"
    },
    "jersey": "8",
@@ -5762,11 +5762,11 @@
    "projected": [
     [
      "YDS",
-     "2,055"
+     "1,827"
     ],
     [
      "TD",
-     "13"
+     "11"
     ],
     [
      "INT",
@@ -5782,7 +5782,7 @@
     ],
     [
      "CAR",
-     "40"
+     "36"
     ]
    ],
    "season": [
@@ -5832,7 +5832,7 @@
      ],
      [
       "QBR",
-      "82.4",
+      "82.2",
       ""
      ]
     ]
@@ -5918,7 +5918,7 @@
      [
       "PTS",
       "17.2",
-      "57th"
+      "58th"
      ],
      [
       "REB",
@@ -6034,12 +6034,12 @@
      [
       "PTS",
       "15.7",
-      "69th"
+      "70th"
      ],
      [
       "REB",
       "7.4",
-      "32nd"
+      "33rd"
      ],
      [
       "AST",
@@ -6049,7 +6049,7 @@
      [
       "FG%",
       "45.7",
-      "80th"
+      "79th"
      ]
     ]
    },
@@ -6156,12 +6156,12 @@
      [
       "AST",
       "8.0",
-      "5th"
+      "6th"
      ],
      [
       "FG%",
       "49.5",
-      "46th"
+      "45th"
      ]
     ]
    },
@@ -6194,6 +6194,13 @@
    "draft": "2024: Rd 1, Pk 6 (NYG)",
    "espnId": "4595348",
    "experience": "3rd Season",
+   "injury": {
+    "comment": "Nabers (knee) was catching passes during Friday's walkthrough and \"should be 'good' to go\" For Sunday's game against the Eagles, Ryan Dunleavy of the New York Post reports.",
+    "date": "2026-11-06",
+    "returnDate": "2026-11-08",
+    "status": "Questionable",
+    "type": "Knee"
+   },
    "jersey": "1",
    "last5": [
     [
@@ -6979,7 +6986,7 @@
      [
       "YDS",
       "1,795",
-      "13th"
+      "14th"
      ],
      [
       "TD",
@@ -6993,8 +7000,8 @@
      ],
      [
       "QBR",
-      "67.4",
-      "8th"
+      "67.3",
+      "9th"
      ]
     ]
    },
@@ -7570,8 +7577,8 @@
    "espnId": "3929630",
    "experience": "9th Season",
    "injury": {
-    "comment": "Barkley (hamstring/back) officially didn't practice Wednesday.",
-    "date": "2026-11-04",
+    "comment": "Barkley (hamstring/back) is practicing again Friday, Dave Zangaro of NBC Sports Philadelphia reports.",
+    "date": "2026-11-06",
     "returnDate": "2026-11-08",
     "status": "Questionable",
     "type": "Hamstring"
@@ -7770,7 +7777,7 @@
      [
       "FG%",
       "44.7",
-      "85th"
+      "84th"
      ]
     ]
    },
@@ -8074,23 +8081,23 @@
    "season": [
     [
      "PTS",
-     "30.0"
+     "29.9"
     ],
     [
      "REB",
-     "4.2"
+     "3.7"
     ],
     [
      "AST",
-     "4.5"
+     "4.4"
     ],
     [
      "FG%",
-     "46.8"
+     "46.9"
     ],
     [
      "3P%",
-     "42.9"
+     "44.0"
     ],
     [
      "STL",
@@ -8103,22 +8110,22 @@
     "stats": [
      [
       "PTS",
-      "30.0",
+      "29.9",
       "3rd"
      ],
      [
       "REB",
-      "4.2",
-      "121st"
+      "3.7",
+      "146th"
      ],
      [
       "AST",
-      "4.5",
-      "Tied-50th"
+      "4.4",
+      "Tied-55th"
      ],
      [
       "FG%",
-      "46.8",
+      "46.9",
       "69th"
      ]
     ]
@@ -8134,7 +8141,7 @@
    "career": [
     [
      "YDS",
-     "374"
+     "373"
     ],
     [
      "TD",
@@ -8142,7 +8149,7 @@
     ],
     [
      "REC",
-     "34"
+     "35"
     ],
     [
      "CAR",
@@ -8156,7 +8163,7 @@
    "last5": [
     [
      "YDS",
-     "68"
+     "67"
     ],
     [
      "TD",
@@ -8164,7 +8171,7 @@
     ],
     [
      "REC",
-     "5"
+     "6"
     ],
     [
      "CAR",
@@ -8175,7 +8182,7 @@
    "projected": [
     [
      "YDS",
-     "185"
+     "159"
     ],
     [
      "TD",
@@ -8187,13 +8194,13 @@
     ],
     [
      "CAR",
-     "5"
+     "4"
     ]
    ],
    "season": [
     [
      "YDS",
-     "76"
+     "75"
     ],
     [
      "TD",
@@ -8201,7 +8208,7 @@
     ],
     [
      "REC",
-     "6"
+     "7"
     ],
     [
      "CAR",
@@ -8214,12 +8221,12 @@
     "stats": [
      [
       "REC",
-      "6",
+      "7",
       ""
      ],
      [
       "YDS",
-      "76",
+      "75",
       ""
      ],
      [
@@ -8229,7 +8236,7 @@
      ],
      [
       "AVG",
-      "12.7",
+      "10.7",
       ""
      ]
     ]
@@ -8263,13 +8270,6 @@
    "draft": "2013: Rd 3, Pk 63 (KC)",
    "espnId": "15847",
    "experience": "14th Season",
-   "injury": {
-    "comment": "Kelce (ankle) was listed as limited in Wednesday's practice.",
-    "date": "2026-11-04",
-    "returnDate": "2026-11-08",
-    "status": "Questionable",
-    "type": "Ankle"
-   },
    "jersey": "87",
    "last5": [
     [
@@ -8333,7 +8333,7 @@
      [
       "REC",
       "29",
-      "Tied-47th"
+      "Tied-49th"
      ],
      [
       "YDS",
@@ -8348,7 +8348,7 @@
      [
       "AVG",
       "14.1",
-      "28th"
+      "29th"
      ]
     ]
    },
@@ -8670,7 +8670,7 @@
      [
       "AST",
       "3.1",
-      "Tied-85th"
+      "Tied-86th"
      ],
      [
       "FG%",
@@ -9063,17 +9063,17 @@
      [
       "PTS",
       "21.5",
-      "Tied-29th"
+      "29th"
      ],
      [
       "REB",
       "5.1",
-      "Tied-92nd"
+      "Tied-95th"
      ],
      [
       "AST",
       "2.6",
-      "Tied-107th"
+      "Tied-108th"
      ],
      [
       "FG%",
@@ -9089,5 +9089,5 @@
   }
  },
  "source": "ESPN public data feeds (unofficial; replace with a licensed provider before launch)",
- "updated": "2026-11-05T18:05Z"
+ "updated": "2026-11-06T17:31Z"
 }

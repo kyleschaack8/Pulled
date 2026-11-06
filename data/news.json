@@ -151,9 +151,9 @@
     "name": "WSH @ ATL"
    },
    "note": {
-    "date": "Wed Nov 04",
-    "headline": "Davis finished with 26 points (12-19 FG, 0-1 3Pt, 2-2 FT), 10 rebounds, three assists and three blocks over 30 minutes in Wednesday's 120-105 loss to Atlanta.",
-    "story": "Davis got off to a hot start Wednesday night. He kept it going through most of the contest, though he cooled off in the fourth quarter. Still, it was a quality showing for the multi-time All-Star, who is now averaging 23.4 points, 9.3 rebounds, 2.1 assists, 1.4 steals and 1.1 blocks across 33.0 minutes per outing in eight regular-season appearances."
+    "date": "Thu Nov 05",
+    "headline": "Davis is questionable for Friday's game against the Hawks due to a right ankle sprain, Josh Robbins of The Athletic reports.",
+    "story": "Davis picked up the ankle injury during Wednesday's matchup against Atlanta but managed to stay in the game and finish with 26 points in 30 minutes. The Wizards will likely monitor him closely in shootaround and pregame warmups to determine if he suits up Friday evening."
    }
   },
   "anthony-edwards": {
@@ -208,7 +208,7 @@
   "ashton-jeanty": {
    "news": [
     {
-     "date": "2026-11-04",
+     "date": "2026-11-05",
      "desc": "Breaking down the matchup upside and downside for Dak Prescott, Ashton Jeanty, Jonah Coleman, Nico Collins, Ladd McConkey, Omar Cooper Jr., Chig Okonkwo and Greg Dulcich.",
      "title": "Facts vs. Feelings: Dissecting eight potential lineup conundrums for Week 9",
      "url": "https://www.espn.com/fantasy/football/story/_/id/50378429/facts-feelings-fantasy-advice-week-9"
@@ -258,7 +258,13 @@
    "news": [
     {
      "date": "2026-11-05",
-     "desc": "Falcons running back Bijan Robinson framed it, Sunday's game against the Bengals at Madrid's historic Santiago Bernabeu Stadium could be a catalyst for an Atlanta team trying to reshape its season.",
+     "desc": "Will Week 9 be a bounce-back game for Bijan Robinson and fantasy managers?",
+     "title": "Will Week 9 be a bounce-back game for Bijan Robinson and fantasy managers?",
+     "url": "https://www.espn.com/video/clip/_/id/50390859/will-week-9-bounce-back-game-bijan-robinson-fantasy-managers"
+    },
+    {
+     "date": "2026-11-05",
+     "desc": "The way Falcons running back Bijan Robinson framed it, Sunday's game against the Bengals at Madrid's historic Santiago Bernabeu Stadium could be a catalyst for an Atlanta team trying to reshape its season.",
      "title": "Bijan Robinson says win in Madrid could swing Falcons' season",
      "url": "https://www.espn.com/nfl/story/_/id/50390044/bijan-robinson-says-win-madrid-wing-falcons-season"
     },
@@ -285,12 +291,6 @@
      "desc": "Malik Nabers, Kenneth Walker III and Trevor Lawrence came up big in Week 6, while Bijan Robinson, Derrick Henry and Kyren Williams underwhelmed.",
      "title": "Week 6 winners and losers: Lawrence, Walker III impress; Robinson, Henry disappoint",
      "url": "https://www.espn.com/fantasy/football/story/_/page/FFSundayHighLows-50213364/nfl-week-6-fantasy-football-winners-losers-injuries-rankings-more"
-    },
-    {
-     "date": "2026-10-08",
-     "desc": "Baltimore is facing the NFL's most electric running back under the lights on Sunday night.",
-     "title": "'A loaded question': How do the Ravens plan to stop Bijan Robinson?",
-     "url": "https://www.espn.com/nfl/story/_/id/50118457/how-do-baltimore-ravens-plan-stop-bijan-robinson-week-5"
     }
    ],
    "nextGame": {
@@ -305,6 +305,12 @@
   },
   "bo-nix": {
    "news": [
+    {
+     "date": "2026-11-06",
+     "desc": "Denver's QB is ready to heat up, and the Rams RB duo and Bengals top two WRs could finish in the top 10.",
+     "title": "Don't be surprised if ... Nix gets hot, both Rams RBs star, Higgins outdoes Chase",
+     "url": "https://www.espn.com/fantasy/football/story/_/id/50390704/fantasy-football-start-sit-sleepers-breakouts-week-9"
+    },
     {
      "date": "2026-10-30",
      "desc": "Can the Broncos slow Kenneth Walker III? Can the Chiefs' pass rush fluster Bo Nix? Answering the biggest questions in Sunday's AFC West showdown.",
@@ -334,12 +340,6 @@
      "desc": "Broncos quarterback Bo Nix said Tuesday he can find solutions if he can simplify his approach: \"Making it simple, making things 1-2-3, and let's play fast and let's roll.\"",
      "title": "Broncos' Bo Nix says he needs to simplify approach, play faster amid rocky start",
      "url": "https://www.espn.com/nfl/story/_/id/50177580/broncos-bo-nix-says-needs-simplify-approach-amid-rocky-start"
-    },
-    {
-     "date": "2026-10-13",
-     "desc": "Changing playcallers wasn't an immediate fix for the Broncos' offense, which still suffers from a lack of big plays and a QB who hasn't found his rhythm.",
-     "title": "Broncos offense searching for more big plays, ready for Bo Nix to 'let it rip'",
-     "url": "https://www.espn.com/nfl/story/_/id/50167288/broncos-quarterback-bo-nix-struggles-slower-progressions"
     }
    ],
    "nextGame": {
@@ -533,6 +533,12 @@
   "caleb-williams": {
    "news": [
     {
+     "date": "2026-11-06",
+     "desc": "How the Bucs' defense could create problems for Caleb Williams",
+     "title": "How the Bucs' defense could create problems for Caleb Williams",
+     "url": "https://www.espn.com/video/clip/_/id/50399574/how-bucs-defense-create-problems-caleb-williams"
+    },
+    {
      "date": "2026-11-04",
      "desc": "Why Dopp is going against Caleb Williams in Week 9",
      "title": "Why Dopp is going against Caleb Williams in Week 9",
@@ -561,12 +567,6 @@
      "desc": "Caleb Williams believes in his custom Caddix cleats, a source told NFL Network, and won't cover the logo in accordance with league rules out of principle.",
      "title": "Bears QB Caleb Williams won't 'spat' custom cleats out of principle, source says",
      "url": "https://www.espn.com/nfl/story/_/id/50343312/source-caleb-williams-spat-cleats-principle"
-    },
-    {
-     "date": "2026-10-30",
-     "desc": "The NFL fined Caleb Williams $23,882 for sporting Caddix cleats in Week 7, a source confirmed to ESPN on Thursday.",
-     "title": "Source: Bears quarterback Caleb Williams fined again for cleats",
-     "url": "https://www.espn.com/nfl/story/_/id/50323203/bears-quarterback-caleb-williams-fined-again-cleats"
     }
    ],
    "nextGame": {
@@ -728,9 +728,9 @@
     "name": "LV @ SF"
    },
    "note": {
-    "date": "Wed Nov 04",
-    "headline": "McCaffrey (hamstring) said Wednesday that he has a chance to practice this week and play Sunday against the Raiders, Nick Wagoner of ESPN.com reports.",
-    "story": "McCaffrey toughed out what eventually was revealed to be a mild left hamstring strain during a Week 7 loss in Atlanta, when he finished with 13 touches for 100 yards from scrimmage and one rushing TD. With the benefit of a Week 8 bye, he said Wednesday that he feels \"great,\" but chances for on-field work await for him Thursday and Friday."
+    "date": "Thu Nov 05",
+    "headline": "McCaffrey (hamstring) was a limited participant at Thursday's practice, Sam Warren of The Athletic reports.",
+    "story": "McCaffrey followed up Wednesday's lack of activity with some on-field work one day later, but he may need to practice fully Friday in order to avoid a designation for Sunday's game against the Raiders. He's tending to a left hamstring injury from a Week 7 loss in Atlanta, when he managed just a 52 percent snap share and churned out 100 yards from scrimmage and a rushing TD on 13 touches."
    }
   },
   "cj-stroud": {
@@ -877,7 +877,7 @@
    "note": {
     "date": "Thu Nov 05",
     "headline": "Flagg notched 19 points (7-19 FG, 0-3 3Pt, 5-7 FT), 10 rebounds and five assists in 40 minutes during Wednesday's 112-111 loss to the Spurs.",
-    "story": "The double-double was the second of the season for Flagg, and his first involving rebounds. The second-year star is taking a step forward from his Rookie of the Year campaign, averaging 24.3 points, 6.3 boards, 6.3 assists, 2.1 steals, 1.0 threes and 0.9 blocks over seven games, and there's still plenty of room for growth in his skills -- Flagg is shooting just 21.2 percent from beyond the arc."
+    "story": "The double-double was the second of the season for Flagg, and his first involving rebounds. The second-year star is taking a step forward from his Rookie of the Year campaign, averaging 24.3 points, 6.3 boards, 6.3 assists, 2.1 steals, 1.0 threes and 0.9 blocks over seven games, and there's still plenty of room for growth in his skills. Flagg is shooting just 21.2 percent from beyond the arc."
    }
   },
   "corbin-carroll": {
@@ -944,6 +944,12 @@
   "devin-booker": {
    "news": [
     {
+     "date": "2026-11-06",
+     "desc": "Devin Booker buries 3-pointer against Orlando Magic",
+     "title": "Devin Booker buries 3-pointer against Orlando Magic",
+     "url": "https://www.espn.com/video/clip/_/id/50395999/devin-booker-buries-3-pointer-orlando-magic"
+    },
+    {
      "date": "2026-11-05",
      "desc": "Devin Booker somehow gets the and-1 to fall",
      "title": "Devin Booker somehow gets the and-1 to fall",
@@ -975,13 +981,13 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-06T02:00",
-    "name": "ORL @ PHX"
+    "date": "2026-11-08T02:00",
+    "name": "HOU @ PHX"
    },
    "note": {
-    "date": "Wed Nov 04",
-    "headline": "Booker finished with 33 points (9-19 FG, 2-8 3Pt, 13-13 FT), one rebound, two assists and two turnovers across 34 minutes in Wednesday's 132-119 loss to the Trail Blazers.",
-    "story": "Booker briefly exited Wednesday's game after taking a shot to the face from Robert Williams on a drive to the hoop, but he was able to play through it and told Duane Rankin of The Arizona Republic that he was \"okay\" after the game. It sounds like Booker should be fine for Thursday's meeting with the Magic."
+    "date": "Thu Nov 05",
+    "headline": "Booker posted 30 points (11-22 FG, 4-8 3Pt, 4-4 FT), one rebound, eight assists and three steals in 34 minutes during Thursday's 117-104 win over the Magic.",
+    "story": "Booker was aggressive in hunting his shot Thursday, willing the Suns to an easy victory to snap a four-game losing streak. He's gone for 30-plus points in consecutive outings now, scoring 89 total over his last three showings. Booker has hit multiple three-pointers in four straight contests, as he's averaging 27.3 points and 2.8 triples since his three-point, seven-assist performance against the Thunder on Oct. 26."
    }
   },
   "donovan-mitchell": {
@@ -1030,7 +1036,7 @@
    "note": {
     "date": "Thu Nov 05",
     "headline": "Mitchell ended Wednesday's 124-116 loss to Oklahoma City with 27 points (10-17 FG, 5-10 3Pt, 2-2 FT), three rebounds, six assists and one steal across 33 minutes.",
-    "story": "Mitchell paced Cleveland in scoring, shooting 58.8 percent from the field while knocking down five three-pointers. The star guard also distributed six assists and committed just two turnovers, providing efficient offensive production against the 2024-25 champions. He remains one of Cleveland's primary scoring options alongside James Harden."
+    "story": "Mitchell led Cleveland in scoring, shooting 58.8 percent from the field while knocking down five three-pointers. The star guard also distributed six assists and committed just two turnovers, providing efficient offensive production against the 2024-25 champions. He remains one of Cleveland's primary scoring options alongside James Harden."
    }
   },
   "drake-maye": {
@@ -1185,6 +1191,18 @@
   "giannis-antetokounmpo": {
    "news": [
     {
+     "date": "2026-11-06",
+     "desc": "Former Bucks coach Doc Rivers said Giannis Antetokounmpo \"didn't want to be the bad guy\" when he was trying to seek a trade out of Milwaukee last season.",
+     "title": "Doc Rivers: Giannis 'didn't want to be the bad guy' when seeking Bucks exit",
+     "url": "https://www.espn.com/nba/story/_/id/50399276/doc-rivers-giannis-antetokounmpo-bucks-exit-coaching-star"
+    },
+    {
+     "date": "2026-11-06",
+     "desc": "Giannis Antetokounmpo with the and-1 bucket",
+     "title": "Giannis Antetokounmpo with the and-1 bucket",
+     "url": "https://www.espn.com/video/clip/_/id/50396636/giannis-antetokounmpo-1-bucket"
+    },
+    {
      "date": "2026-11-05",
      "desc": "Giannis Antetokounmpo denies LA Clippers with block",
      "title": "Giannis Antetokounmpo with the massive swat at the rim",
@@ -1207,28 +1225,16 @@
      "desc": "Luka Doncic's volcanic scoring spree continued Monday with 42 points in the Lakers' 138-117 win over the Heat, prompting Giannis Antetokounmpo to call him \"one of the best scorers to play this game.\"",
      "title": "Luka scores 42 points, earns high praise from Giannis as hot streak continues",
      "url": "https://www.espn.com/nba/story/_/id/50366831/luka-doncic-earns-praise-giannis-antetokounmpo-hot-streak-continues-lakers-win-vs-heat"
-    },
-    {
-     "date": "2026-11-03",
-     "desc": "Giannis Antetokounmpo gets the basket plus the foul",
-     "title": "Giannis Antetokounmpo fights off defender for and-1",
-     "url": "https://www.espn.com/video/clip/_/id/50364743/giannis-antetokounmpo-fights-defender-1"
-    },
-    {
-     "date": "2026-11-03",
-     "desc": "Giannis Antetokounmpo gets up for the beautiful dunk",
-     "title": "Giannis Antetokounmpo gets up for the beautiful dunk",
-     "url": "https://www.espn.com/video/clip/_/id/50364438/giannis-antetokounmpo-gets-beautiful-dunk"
     }
    ],
    "nextGame": {
-    "date": "2026-11-06T03:00",
-    "name": "MIA @ GS"
+    "date": "2026-11-09T02:00",
+    "name": "MIA @ SAC"
    },
    "note": {
-    "date": "Wed Nov 04",
-    "headline": "Antetokounmpo (wrist) is available for Wednesday's game against the Clippers.",
-    "story": "As expected, Antetokounmpo will shed his probable tag due to a right wrist sprain, keeping his record of perfect attendance this season alive. The superstar forward has posted two double-doubles and two triple-doubles over the last four games, averaging 28.5 points, 15.5 rebounds, 7.8 assists and 1.8 combined steals-plus-blocks over 33.8 minutes per game during that span."
+    "date": "Thu Nov 05",
+    "headline": "Antetokounmpo tallied 20 points (7-13 FG, 1-5 3Pt, 5-7 FT), 14 rebounds and four assists across 31 minutes during Thursday's 120-100 loss to the Warriors.",
+    "story": "Antetokounmpo now has six straight regular-season outings with a double-double. He's been stellar to begin his tenure in Miami, and prior to Thursday night's defeat, the Heat had won three of the previous four games. Over Antetokounmpo's last six contests, he's averaging 26.8 points, 15.0 rebounds and 6.8 assists to go along with 1.3 blocks."
    }
   },
   "gunnar-henderson": {
@@ -1356,6 +1362,12 @@
   "jalen-brunson": {
    "news": [
     {
+     "date": "2026-11-06",
+     "desc": "The New York Knicks' star made his \"Law & Order: SVU\" appearance official Thursday.",
+     "title": "Jalen Brunson guest stars on 'Law & Order: SVU' alongside Mariska Hargitay",
+     "url": "https://www.espn.com/nba/story/_/id/49967701/new-york-knicks-jalen-brunson-law-order-svu-guest-appearance-mariska-hargitay"
+    },
+    {
      "date": "2026-11-05",
      "desc": "Jalen Brunson drains trey vs. Chicago Bulls",
      "title": "Jalen Brunson drains trey vs. Chicago Bulls",
@@ -1384,12 +1396,6 @@
      "desc": "Brunson gets the best of Maxey in a one-on-one matchup",
      "title": "Brunson gets the best of Maxey in a one-on-one matchup",
      "url": "https://www.espn.com/video/clip/_/id/50332249/brunson-gets-best-maxey-one-one-matchup"
-    },
-    {
-     "date": "2026-10-29",
-     "desc": "Jalen Brunson takes over with 38-point performance in Knicks' win",
-     "title": "Jalen Brunson takes over with 38-point performance in Knicks' win",
-     "url": "https://www.espn.com/video/clip/_/id/50313630/jalen-brunson-takes-38-point-performance-knicks-win"
     }
    ],
    "nextGame": {
@@ -1569,9 +1575,9 @@
     "name": "BOS @ CHA"
    },
    "note": {
-    "date": "Wed Nov 04",
-    "headline": "Tatum will be rested Wednesday against the Bucks, Jack Simone of BostonSportsJournal.com reports.",
-    "story": "The writing was on the wall for this one with the Celtics looking to get Tatum some planned rest. There's been no report of an injury, to be clear. Paul George, who is coming off a maintenance day himself, is in line for a big bump in usage Wednesday."
+    "date": "Thu Nov 05",
+    "headline": "Tatum (rest) is off the injury report for Friday's game versus Charlotte, per Taylor Snow of the Celtics' official site.",
+    "story": "Tatum is ready to suit back up following a rest day Wednesday against the Bucks. The star forward's presence will force either Hugo Gonzalez or Sam Hauser to shift back to a bench role Friday."
    }
   },
   "joe-burrow": {
@@ -1817,6 +1823,18 @@
   "justin-jefferson": {
    "news": [
     {
+     "date": "2026-11-06",
+     "desc": "Yates implores Wentz, Vikings to get Jefferson back on track in Week 9",
+     "title": "Yates implores Wentz, Vikings to get Jefferson back on track in Week 9",
+     "url": "https://www.espn.com/video/clip/_/id/50400151/yates-implores-wentz-vikings-get-jefferson-back-track-week-9"
+    },
+    {
+     "date": "2026-11-05",
+     "desc": "Speaking for the first time since his frustrations overflowed in Detroit, Justin Jefferson said of the Vikings' offense: \"We've got to figure out that answer and figure it out fast.\"",
+     "title": "Justin Jefferson high on Vikings' offensive potential, doesn't want to waste it",
+     "url": "https://www.espn.com/nfl/story/_/id/50393433/justin-jefferson-says-vikings-need-figure-offense"
+    },
+    {
      "date": "2026-11-02",
      "desc": "Justin Jefferson declined to speak with reporters after Sunday's loss, and coach Kevin O'Connell and QB Kyler Murray acknowledged the receiver's disposition.",
      "title": "Vikings acknowledge Justin Jefferson's frustration: Must get him the ball",
@@ -1839,18 +1857,6 @@
      "desc": "Vikings receiver Justin Jefferson returned to practice Wednesday on a limited basis for the first time since spraining his left ankle 10 days ago and appeared optimistic that he will play Sunday at New Orleans.",
      "title": "Vikings' Justin Jefferson says plan is to play vs. Saints",
      "url": "https://www.espn.com/nfl/story/_/id/50128245/vikings-justin-jefferson-says-plan-play-week-5-vs-saints"
-    },
-    {
-     "date": "2026-10-02",
-     "desc": "Vikings WR Justin Jefferson won't play against the Dolphins because of a sprained left ankle, but coach Kevin O'Connell is hopeful he can return in Week 5 vs. the Saints.",
-     "title": "Vikings' Justin Jefferson out vs. Dolphins with ankle injury",
-     "url": "https://www.espn.com/nfl/story/_/id/50086081/vikings-justin-jefferson-vs-dolphins-ankle-injury"
-    },
-    {
-     "date": "2026-09-29",
-     "desc": "Tristan H. Cockcroft lists the most common players on eliminated teams and finds how much FAB to spend this week.",
-     "title": "Knockout league pickups: Josh Allen, Justin Jefferson among big names available in Week 4",
-     "url": "https://www.espn.com/fantasy/football/story/_/id/50052708/espn-nfl-fantasy-football-knockout-league-picks-week-4-strategy-adds"
     }
    ],
    "nextGame": {
@@ -1964,10 +1970,10 @@
   "lamar-jackson": {
    "news": [
     {
-     "date": "2026-11-05",
-     "desc": "With Baltimore's offense in disarray, should you bench Derrick Henry against Jacksonville on Thursday night?",
-     "title": "Fantasy buzz: Sit Henry? Start Dulcich? Matchup tips for TNF and Week 9",
-     "url": "https://www.espn.com/fantasy/football/story/_/id/40699880/fantasy-football-injuries-position-battles-nfl-news-analysis"
+     "date": "2026-11-06",
+     "desc": "The Ravens say one of the worst stretches in team history cannot be pinned on the loss of the injured Lamar Jackson.",
+     "title": "Ravens refuse to blame historic rut on loss of Lamar Jackson",
+     "url": "https://www.espn.com/nfl/story/_/id/50397437/ravens-refuse-blame-historic-rut-loss-lamar-jackson"
     },
     {
      "date": "2026-11-02",
@@ -2005,13 +2011,25 @@
     "name": "JAX @ BAL"
    },
    "note": {
-    "date": "Sun Nov 01",
-    "headline": "Ravens head coach Jesse Minter said after Sunday's 36-10 loss to the Bills that Jackson will undergo surgery to address his right thumb injury and will be placed on injured reserve,  Brian Wacker of The Baltimore Sun reports.",
-    "story": "According to Wacker, Minter added that Jackson's injury could be season-ending, with a more definitive timeline likely to be provided once surgery is completed. The injury is another tough break for Jackson, who had missed the previous three contests due to a left high-ankle sprain before departing after playing just one snap in Sunday's loss. With backup Tyler Huntley (toe) also exiting the loss to the Bills with an injury, Baltimore's quarterback situation is in flux heading into a Thursday night matchup with the Jaguars. Third-string quarterback Joe Fagnano finished up Sunday's contest, tho"
+    "date": "Thu Nov 05",
+    "headline": "The Ravens have officially placed Jackson (thumb) on injured reserve.",
+    "story": "Prior to Thursday night's game against the Jaguars, the Ravens made a trio of moves to re-shape their Week 9 QB corps. Along with Jackson, Tyler Huntley (toe) landed on IR, while Austin Reed was added to the team's active roster. As a result, Joe Fagnano (Thursday's starter), Kedon Slovis and Austin Reed are available to face Jacksonville, and then in the coming days Jacoby Brissett will be on his way to Baltimore via a looming trade with the Cardinals. Jackson will miss his team's next four games, at a minimum, and it's possible that his injury could be season ending, an outcome that is alrea"
    }
   },
   "lamelo-ball": {
    "news": [
+    {
+     "date": "2026-11-06",
+     "desc": "Andre Snellings examines whether Ty Jerome is likely to keep up his tremendous start to the season.",
+     "title": "Fantasy basketball's biggest surprise: What to make of Ty Jerome's hot start",
+     "url": "https://www.espn.com/fantasy/basketball/story/_/id/50390769/fantasy-basketball-ty-jerome-surprises-scoring-breakout"
+    },
+    {
+     "date": "2026-11-06",
+     "desc": "Nearly 25 years ago, LeBron won over Philly for the first time -- inside one of the most iconic basketball arenas in the world.",
+     "title": "Inside LeBron's first game in Philly -- more than two decades ago",
+     "url": "https://www.espn.com/nba/story/_/id/50389727/lebron-james-palestra-maureece-rice-philadelphia"
+    },
     {
      "date": "2026-11-05",
      "desc": "Eric Moody highlights which rookies are standing out in the early part of the NBA season, and which are worth rostering now or down the road.",
@@ -2035,18 +2053,6 @@
      "desc": "LaMelo Ball gets the basket plus the foul",
      "title": "LaMelo Ball gets the basket plus the foul",
      "url": "https://www.espn.com/video/clip/_/id/50363230/lamelo-ball-gets-basket-plus-foul"
-    },
-    {
-     "date": "2026-11-03",
-     "desc": "LaMelo Ball nails the 3 vs. Milwaukee Bucks",
-     "title": "LaMelo Ball hits the 3-point shot Milwaukee Bucks",
-     "url": "https://www.espn.com/video/clip/_/id/50363140/lamelo-ball-hits-3-point-shot-milwaukee-bucks"
-    },
-    {
-     "date": "2026-11-03",
-     "desc": "LaMelo Ball nails the 3-pointer vs. Milwaukee Bucks",
-     "title": "LaMelo Ball nails the 3-pointer vs. Milwaukee Bucks",
-     "url": "https://www.espn.com/video/clip/_/id/50362761/lamelo-ball-nails-3-pointer-vs-milwaukee-bucks"
     }
    ],
    "nextGame": {
@@ -2062,16 +2068,22 @@
   "lebron-james": {
    "news": [
     {
+     "date": "2026-11-06",
+     "desc": "James holds a 9-4 record with averages of 29.6 points, 8.5 rebounds and 6.9 assists per game on 54% shooting in Cleveland as an opponent.",
+     "title": "LeBron James vs. Cleveland: Top performances against Cavaliers",
+     "url": "https://www.espn.com/nba/story/_/id/42078248/lebron-james-notable-games-opponent-cleveland"
+    },
+    {
+     "date": "2026-11-06",
+     "desc": "In 2024, Bronny James joined his father LeBron on the Los Angeles Lakers. Take a closer look at the highest-scoring father-son duos in NBA history.",
+     "title": "Which NBA father-son duos have the most points?",
+     "url": "https://www.espn.com/nba/story/_/id/41571864/most-nba-points-father-son-duo"
+    },
+    {
      "date": "2026-11-05",
      "desc": "LeBron James is aiming to get a sports betting app to stop using his likeness without authorization, a spokesperson for the 76ers star told Front Office Sports.",
      "title": "LeBron James' reps send cease-and-desist letter to 'Bron AI' sports betting app",
      "url": "https://www.espn.com/nba/story/_/id/50390289/lebron-james-reps-send-cease-desist-bron-ai-app"
-    },
-    {
-     "date": "2026-11-05",
-     "desc": "In 2024, Bronny James joined his father LeBron on the Los Angeles Lakers. Take a closer look at the highest-scoring father-son duos in NBA history.",
-     "title": "Which NBA father-son duos have the most points?",
-     "url": "https://www.espn.com/nba/story/_/id/41571864/most-nba-points-father-son-duo"
     },
     {
      "date": "2026-11-05",
@@ -2090,12 +2102,6 @@
      "desc": "LeBron James pretends to sip fan's drink",
      "title": "LeBron James pretends to sip fan's drink",
      "url": "https://www.espn.com/video/clip/_/id/50364121/lebron-james-pretends-sip-fan-drink"
-    },
-    {
-     "date": "2026-11-03",
-     "desc": "LeBron James fights off defender for and-1",
-     "title": "LeBron James fights off defender for and-1",
-     "url": "https://www.espn.com/video/clip/_/id/50363809/lebron-james-fights-defender-1"
     }
    ],
    "nextGame": {
@@ -2110,6 +2116,12 @@
   },
   "luka-doncic": {
    "news": [
+    {
+     "date": "2026-11-05",
+     "desc": "Jason Kidd: Luka Doncic is on a different level this season",
+     "title": "Jason Kidd: Luka Doncic is on a different level this season",
+     "url": "https://www.espn.com/video/clip/_/id/50392002/luka-doncic-different-level-season"
+    },
     {
      "date": "2026-11-05",
      "desc": "By dropping another 40 points Wednesday, Luka Doncic joined Kobe Bryant and Elgin Baylor as the only Lakers to ever score 35-plus points in six straight games.",
@@ -2139,12 +2151,6 @@
      "desc": "Shams to McAfee: Luka Doncic has been a treat to watch",
      "title": "Shams to McAfee: Luka Doncic has been a treat to watch",
      "url": "https://www.espn.com/video/clip/_/id/50370515/luka-doncic-treat-watch"
-    },
-    {
-     "date": "2026-11-03",
-     "desc": "Updated fantasy basketball rankings for points leagues, with Luka Doncic and Cooper Flagg both moving on up.",
-     "title": "Fantasy basketball points league rankings update: Doncic, Flagg on the rise",
-     "url": "https://www.espn.com/fantasy/basketball/story/_/id/49960162/fantasy-basketball-points-league-rankings-2026-27-nba-season"
     }
    ],
    "nextGame": {
@@ -2201,9 +2207,9 @@
     "name": "NYG @ PHI"
    },
    "note": {
-    "date": "Sun Oct 25",
-    "headline": "Nabers caught seven of nine targets for 111 yards in Sunday's 27-21 overtime win over the Texans.",
-    "story": "The switch from Jameis Winston to J.J. McCarthy at quarterback for the Giants hasn't slowed Nabers down at all, and the team's No. 1 wideout extended his streak of games with over 100 receiving yards to four. During that surge, Nabers has delivered a 36-509-2 line on 51 targets, as he puts his injury-marred sophomore NFL campaign firmly behind him. He'll try to not to lose his momentum during the bye before facing the Eagles in Week 9."
+    "date": "Fri Nov 06",
+    "headline": "Nabers (knee) was catching passes during Friday's walkthrough and \"should be 'good' to go\" For Sunday's game against the Eagles, Ryan Dunleavy of the New York Post reports.",
+    "story": "After sitting out Thursday's practice due to the knee issue, Nabers appears to be trending in the right direction for Sunday's game at Philadelphia. Still, the Giants' final injury report will provide the clearest indication of whether the wide receiver takes a designation into the weekend."
    }
   },
   "marvin-harrison-jr": {
@@ -2295,7 +2301,7 @@
   "nikola-jokic": {
    "news": [
     {
-     "date": "2026-11-05",
+     "date": "2026-11-06",
      "desc": "Denver's roster was never built to overcome any slippage from its three-time MVP.",
      "title": "Could Denver overcome a 'down' year from Nikola Jokic? Absolutely not",
      "url": "https://www.espn.com/nba/story/_/id/50371585/nikola-jokic-mvp-denver-nuggets-struggles"
@@ -2338,7 +2344,7 @@
    "note": {
     "date": "Thu Nov 05",
     "headline": "Jokic delivered 32 points (13-19 FG, 0-1 3Pt, 6-7 FT), 10 rebounds, 11 assists and three steals across 30 minutes in Wednesday's 128-109 win over the Raptors.",
-    "story": "Jokic secured his third triple-double of the season and the 201st of his career before the end of the third quarter, allowing him to sit out the final period. Jokic continues to provide exceptional production across multiple categories, maintaining his status among fantasy basketball's most valuable players. His playmaking has been particularly stellar, as he has delivered 10 or more assists in five of his seven appearances so far."
+    "story": "Jokic secured his third triple-double of the season, and the 201st of his career, before the end of the third quarter, allowing him to sit out the final period with a big lead. Jokic continues to provide exceptional production across multiple categories, maintaining his status among fantasy basketball's most valuable players. His playmaking has been particularly stellar, as he has delivered 10 or more assists in five of his seven appearances so far."
    }
   },
   "paolo-banchero": {
@@ -2381,8 +2387,8 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-06T02:00",
-    "name": "ORL @ PHX"
+    "date": "2026-11-08T01:30",
+    "name": "ORL @ GS"
    },
    "note": {
     "date": "Sat Oct 24",
@@ -2688,9 +2694,9 @@
     "name": "NYG @ PHI"
    },
    "note": {
-    "date": "Wed Nov 04",
-    "headline": "Barkley (hamstring/back) officially didn't practice Wednesday.",
-    "story": "Barkley's DNP to begin Week 9 prep was forecast by his lack of presence during the open portion of Wednesday's session. He continues to deal with the hamstring and back injuries that bothered him last week, but he still was able to play this past Sunday at Washington, log a 32 percent snap share and turn 14 touches into 54 yards from scrimmage and one TD. If he follows a similar practice regimen as last week, Barkley also will sit out Thursday before returning as a limited participant Friday."
+    "date": "Thu Nov 05",
+    "headline": "Barkley (hamstring/back) practiced in a limited capacity Thursday.",
+    "story": "Barkley followed up Wednesday's DNP with some activity one day later as he deals with lingering hamstring and back injuries. Friday's practice report will determine if he enters the weekend with a designation for Sunday's game against the Giants. While playing through those health concerns this past Sunday in Washington, Barkley logged a 32 percent snap share and racked up 14 touches for 54 yards from scrimmage and one rushing TD."
    }
   },
   "shai-gilgeous-alexander": {
@@ -2738,6 +2744,12 @@
   },
   "shedeur-sanders": {
    "news": [
+    {
+     "date": "2026-11-06",
+     "desc": "Stephen A.: Shedeur Sanders' Week 9 start is a big opportunity",
+     "title": "Stephen A.: Shedeur Sanders' Week 9 start is a big opportunity",
+     "url": "https://www.espn.com/video/clip/_/id/50399865/shedeur-sanders-week-9-start-big-opportunity"
+    },
     {
      "date": "2026-11-04",
      "desc": "Jason McCourty: This is Shedeur Sanders' opportunity to show what he can do",
@@ -2819,6 +2831,24 @@
   "stephen-curry": {
    "news": [
     {
+     "date": "2026-11-06",
+     "desc": "On First Take, Stephen A. Smith, Gerald McCoy and Cam'ron join Shae Cornette to share thoughts on the Golden State Warriors, along with Doc Rivers making comments about Giannis Antetokounmpo.",
+     "title": "Stephen A. says the championship window is STILL OPEN for Steph Curry & the Warriors",
+     "url": "https://www.espn.com/video/clip/_/id/50399737/stephen-says-championship-window-open-steph-curry-warriors"
+    },
+    {
+     "date": "2026-11-06",
+     "desc": "Steph Curry shows off the range on trey for Warriors",
+     "title": "Steph Curry shows off the range on trey for Warriors",
+     "url": "https://www.espn.com/video/clip/_/id/50396877/steph-curry-shows-range-trey-warriors"
+    },
+    {
+     "date": "2026-11-06",
+     "desc": "Stephen Curry shows off the range on 3",
+     "title": "Stephen Curry hits the triple vs. Miami Heat",
+     "url": "https://www.espn.com/video/clip/_/id/50395944/stephen-curry-hits-triple-vs-miami-heat"
+    },
+    {
      "date": "2026-11-03",
      "desc": "Stephen Curry buries triple vs. Phoenix Suns",
      "title": "Stephen Curry nails the trey vs. Phoenix Suns",
@@ -2835,42 +2865,24 @@
      "desc": "Curry puts on a dribbling clinic vs. Doncic on way to a triple",
      "title": "Curry puts on a dribbling clinic vs. Doncic on way to a triple",
      "url": "https://www.espn.com/video/clip/_/id/50333380/curry-puts-dribbling-clinic-vs-doncic-way-triple"
-    },
-    {
-     "date": "2026-10-31",
-     "desc": "Stephen Curry hits the shimmy after a 3-pointer",
-     "title": "Stephen Curry hits the shimmy after a 3-pointer",
-     "url": "https://www.espn.com/video/clip/_/id/50332985/stephen-curry-hits-shimmy-3-pointer"
-    },
-    {
-     "date": "2026-10-31",
-     "desc": "Steph Curry splashes a trey for the Warriors",
-     "title": "Steph Curry splashes a trey for the Warriors",
-     "url": "https://www.espn.com/video/clip/_/id/50332754/steph-curry-splashes-trey-warriors"
-    },
-    {
-     "date": "2026-10-29",
-     "desc": "Stephen Curry exploded for 44 points to lead the Warriors to their second straight win Wednesday night in a 119-114 victory over the Timberwolves.",
-     "title": "Stephen Curry torches Wolves for 44 as Warriors win 2nd straight after 0-3 start",
-     "url": "https://www.espn.com/nba/story/_/id/50315043/stephen-curry-torches-wolves-44-warriors-win-2nd-straight"
     }
    ],
    "nextGame": {
-    "date": "2026-11-06T03:00",
-    "name": "MIA @ GS"
+    "date": "2026-11-08T01:30",
+    "name": "ORL @ GS"
    },
    "note": {
-    "date": "Mon Nov 02",
-    "headline": "Curry posted 34 points (9-21 FG, 5-13 3Pt, 11-12 FT), six rebounds, seven assists and one steal across 33 minutes during Golden State's 116-113 win over Phoenix on Monday.",
-    "story": "Curry dazzled in his return from a one-game absence, as the 38-year-old got the night off in the Warriors' first night of a back-to-back on Sunday. He finished as the team leader in minutes while tallying game-high figures in scoring and three-pointers, helping Golden State earn a fifth straight victory after starting the season 0-3. The Warriors only play two more games this week, so Curry will likely suit up for the remaining tilts, both of which are at home."
+    "date": "Thu Nov 05",
+    "headline": "Curry tallied 29 points (9-19 FG, 6-12 3Pt, 5-5 FT), one rebound, four assists and one steal in 28 minutes during Thursday's 120-100 win over Miami.",
+    "story": "Curry enjoyed a strong night from beyond the arc, where he scored 18 of his 29 points. He also led the Warriors in scoring despite staying under the 30-minute threshold. The sharpshooter narrowly missed his fourth consecutive showing with 30-plus points, which is a mark he likely would've hit if not for a lopsided score down the stretch. Even so, Curry continues to put up strong showings as both a scorer and playmaker in the early going of the 2026-27 campaign, as he is now averaging 29.9 points, 4.4 assists and 4.7 made treys through seven games."
    }
   },
   "travis-hunter": {
    "news": [
     {
-     "date": "2026-11-02",
+     "date": "2026-11-06",
      "desc": "Every week, we will look at how many snaps the two-way corner/receiver plays on offense and defense. Is there a trend in his usage?",
-     "title": "Tracking Jaguars CB/WR Travis Hunter's 2026 season: He is returning punts, too?",
+     "title": "Tracking Jaguars CB/WR Travis Hunter's 2026 season: Snaps on offense, defense",
      "url": "https://www.espn.com/nfl/story/_/id/50043976/jacksonville-jaguars-travis-hunter-stats-snaps-tracker"
     },
     {
@@ -2940,9 +2952,9 @@
     "name": "NYJ @ KC"
    },
    "note": {
-    "date": "Wed Nov 04",
-    "headline": "Kelce (ankle) was listed as limited in Wednesday's practice.",
-    "story": "Kelce logged a limited session this past Thursday before practicing fully a day later. He then approached Week 8 action without an injury designation, en route to recording a 78 percent offensive snap share and catching five of his seven targets for 67 yards in the Chiefs' 28-24 loss to the Broncos. Chances are, the tight end's listed limitations Wednesday were maintenance-related, and he will now have two more chances to work fully ahead of Sunday's game against the Jets."
+    "date": "Thu Nov 05",
+    "headline": "Kelce (ankle) was a full participant in Wednesday's practice.",
+    "story": "Kelce was deemed a limited participant Wednesday, but the tight end's full participation Thursday paves the way for him to be in uniform Sunday against the Jets. Over his last two games, the Chiefs' leader in catches and receiving yards has amassed nine catches (on 15 targets) for 111 yards with a TD, and as long as he stays healthy he'll merit weekly fantasy lineup consideration."
    }
   },
   "tyreek-hill": {
@@ -3216,12 +3228,12 @@
     "name": "MIN @ NO"
    },
    "note": {
-    "date": "Mon Nov 02",
-    "headline": "Williamson closed Monday's 135-134 overtime win over the Grizzlies with 25 points (9-15 FG, 7-9 FT), 11 rebounds and four assists across 35 minutes.",
-    "story": "Williamson scorched the nets from inside the arc Monday, finishing with a team- and season-high-tying 25 points. The big man also grabbed a game-best 11 boards, securing his first double-double of the season. Williamson has been highly efficient to start the season and has scored at least 22 points in five of his seven regular-season outings. However, his streak of multi-steal games to begin the campaign ended at six Monday."
+    "date": "Thu Nov 05",
+    "headline": "Williamson registered 23 points (6-14 FG, 11-13 FT), four rebounds, two assists, two blocks and one steal in 38 minutes during Wednesday's 120-113 overtime victory over the Jazz.",
+    "story": "Williamson led New Orleans in scoring despite an unusually inefficient night from the field, compensating by making 11 of 13 free throws. He also matched his season high with two blocks, providing valuable defensive production. Williamson has now scored at least 23 points in consecutive games, combining for 48 points while attempting 22 free throws over that span."
    }
   }
  },
  "source": "ESPN public feeds (unofficial)",
- "updated": "2026-11-05T18:05Z"
+ "updated": "2026-11-06T17:31Z"
 }
