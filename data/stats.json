@@ -326,9 +326,9 @@
    "espnId": "6583",
    "experience": "15th Season",
    "injury": {
-    "comment": "Davis is questionable for Friday's game against the Hawks due to a right ankle sprain, Josh Robbins of The Athletic reports.",
-    "date": "2026-11-05",
-    "returnDate": "2026-11-06",
+    "comment": "Davis (ankle) is listed as out for Friday's game against the Hawks.",
+    "date": "2026-11-07",
+    "returnDate": "2026-11-07",
     "status": "Day-To-Day",
     "type": "Ankle"
    },
@@ -377,12 +377,12 @@
      [
       "AST",
       "2.1",
-      "Tied-134th"
+      "Tied-131st"
      ],
      [
       "FG%",
       "50.0",
-      "Tied-37th"
+      "Tied-33rd"
      ]
     ]
    },
@@ -493,7 +493,7 @@
      [
       "FG%",
       "48.1",
-      "55th"
+      "50th"
      ]
     ]
    },
@@ -1421,12 +1421,12 @@
      [
       "PTS",
       "24.0",
-      "14th"
+      "13th"
      ],
      [
       "REB",
       "5.6",
-      "Tied-76th"
+      "78th"
      ],
      [
       "AST",
@@ -1436,7 +1436,7 @@
      [
       "FG%",
       "47.2",
-      "66th"
+      "62nd"
      ]
     ]
    },
@@ -1986,13 +1986,6 @@
    "draft": "2017: Rd 1, Pk 8 (CAR)",
    "espnId": "3117251",
    "experience": "10th Season",
-   "injury": {
-    "comment": "McCaffrey (hamstring) was a limited participant at Thursday's practice, Sam Warren of The Athletic reports.",
-    "date": "2026-11-05",
-    "returnDate": "2026-11-08",
-    "status": "Questionable",
-    "type": "Hamstring"
-   },
    "jersey": "23",
    "last5": [
     [
@@ -2333,7 +2326,7 @@
     ],
     [
      "REB",
-     "6.6"
+     "6.7"
     ],
     [
      "AST",
@@ -2360,27 +2353,27 @@
    "season": [
     [
      "PTS",
-     "24.3"
+     "23.9"
     ],
     [
      "REB",
-     "6.3"
+     "6.8"
     ],
     [
      "AST",
-     "6.3"
+     "6.4"
     ],
     [
      "FG%",
-     "46.8"
+     "46.5"
     ],
     [
      "3P%",
-     "21.2"
+     "21.6"
     ],
     [
      "STL",
-     "2.1"
+     "2.3"
     ]
    ],
    "statsLabel": "Stats",
@@ -2389,23 +2382,23 @@
     "stats": [
      [
       "PTS",
-      "24.3",
-      "13th"
+      "23.9",
+      "14th"
      ],
      [
       "REB",
-      "6.3",
-      "59th"
+      "6.8",
+      "Tied-44th"
      ],
      [
       "AST",
-      "6.3",
-      "Tied-17th"
+      "6.4",
+      "18th"
      ],
      [
       "FG%",
-      "46.8",
-      "70th"
+      "46.5",
+      "68th"
      ]
     ]
    },
@@ -2467,6 +2460,13 @@
    "draft": "",
    "espnId": "42404",
    "experience": "5th Season",
+   "injury": {
+    "comment": "Carroll went 1-for-4 with a triple and two RBI in Wednesday's 5-3 win over Colorado.",
+    "date": "2026-11-06",
+    "returnDate": "2027-03-01",
+    "status": "Out",
+    "type": "Elbow"
+   },
    "jersey": "7",
    "position": "RF",
    "season": [
@@ -2588,11 +2588,11 @@
    "season": [
     [
      "PTS",
-     "20.1"
+     "20.4"
     ],
     [
      "REB",
-     "4.1"
+     "3.6"
     ],
     [
      "AST",
@@ -2600,11 +2600,11 @@
     ],
     [
      "FG%",
-     "42.0"
+     "41.6"
     ],
     [
      "3P%",
-     "31.7"
+     "32.9"
     ],
     [
      "STL",
@@ -2617,23 +2617,23 @@
     "stats": [
      [
       "PTS",
-      "20.1",
-      "38th"
+      "20.4",
+      "37th"
      ],
      [
       "REB",
-      "4.1",
-      "Tied-121st"
+      "3.6",
+      "151st"
      ],
      [
       "AST",
       "4.1",
-      "Tied-59th"
+      "60th"
      ],
      [
       "FG%",
-      "42.0",
-      "100th"
+      "41.6",
+      "98th"
      ]
     ]
    },
@@ -2722,7 +2722,7 @@
      [
       "PTS",
       "25.4",
-      "Tied-11th"
+      "Tied-10th"
      ],
      [
       "REB",
@@ -2737,7 +2737,7 @@
      [
       "FG%",
       "48.8",
-      "48th"
+      "44th"
      ]
     ]
    },
@@ -2796,27 +2796,27 @@
    "season": [
     [
      "PTS",
-     "22.5"
+     "22.6"
     ],
     [
      "REB",
-     "5.0"
+     "5.2"
     ],
     [
      "AST",
-     "5.5"
+     "5.8"
     ],
     [
      "FG%",
-     "48.4"
+     "47.3"
     ],
     [
      "3P%",
-     "41.1"
+     "38.7"
     ],
     [
      "STL",
-     "1.1"
+     "1.2"
     ]
    ],
    "statsLabel": "Stats",
@@ -2825,23 +2825,23 @@
     "stats": [
      [
       "PTS",
-      "22.5",
-      "22nd"
+      "22.6",
+      "20th"
      ],
      [
       "REB",
-      "5.0",
-      "Tied-97th"
+      "5.2",
+      "Tied-89th"
      ],
      [
       "AST",
-      "5.5",
-      "28th"
+      "5.8",
+      "26th"
      ],
      [
       "FG%",
-      "48.4",
-      "52nd"
+      "47.3",
+      "60th"
      ]
     ]
    },
@@ -3004,7 +3004,7 @@
    "career": [
     [
      "PTS",
-     "12.5"
+     "12.6"
     ],
     [
      "REB",
@@ -3020,7 +3020,7 @@
     ],
     [
      "3P%",
-     "34.6"
+     "34.8"
     ],
     [
      "STL",
@@ -3035,15 +3035,15 @@
    "season": [
     [
      "PTS",
-     "18.6"
+     "18.7"
     ],
     [
      "REB",
-     "5.6"
+     "5.2"
     ],
     [
      "AST",
-     "4.6"
+     "4.4"
     ],
     [
      "FG%",
@@ -3051,11 +3051,11 @@
     ],
     [
      "3P%",
-     "37.0"
+     "37.9"
     ],
     [
      "STL",
-     "1.0"
+     "0.9"
     ]
    ],
    "statsLabel": "Stats",
@@ -3064,23 +3064,23 @@
     "stats": [
      [
       "PTS",
-      "18.6",
-      "48th"
+      "18.7",
+      "49th"
      ],
      [
       "REB",
-      "5.6",
-      "Tied-76th"
+      "5.2",
+      "Tied-89th"
      ],
      [
       "AST",
-      "4.6",
-      "Tied-48th"
+      "4.4",
+      "Tied-52nd"
      ],
      [
       "FG%",
       "50.0",
-      "Tied-37th"
+      "Tied-33rd"
      ]
     ]
    },
@@ -3484,7 +3484,7 @@
      [
       "PTS",
       "27.3",
-      "7th"
+      "6th"
      ],
      [
       "REB",
@@ -3494,12 +3494,12 @@
      [
       "AST",
       "5.6",
-      "27th"
+      "28th"
      ],
      [
       "FG%",
       "56.0",
-      "13th"
+      "12th"
      ]
     ]
    },
@@ -3714,7 +3714,7 @@
      [
       "FG%",
       "54.2",
-      "19th"
+      ""
      ]
     ]
    },
@@ -4009,12 +4009,12 @@
      [
       "PTS",
       "25.6",
-      "Tied-9th"
+      "9th"
      ],
      [
       "REB",
       "2.6",
-      "Tied-210th"
+      "Tied-212th"
      ],
      [
       "AST",
@@ -4024,7 +4024,7 @@
      [
       "FG%",
       "41.4",
-      "105th"
+      "102nd"
      ]
     ]
    },
@@ -4491,7 +4491,7 @@
     ],
     [
      "FG%",
-     "45.7"
+     "45.8"
     ],
     [
      "3P%",
@@ -4510,27 +4510,27 @@
    "season": [
     [
      "PTS",
-     "27.0"
+     "27.9"
     ],
     [
      "REB",
-     "6.0"
+     "6.3"
     ],
     [
      "AST",
-     "7.9"
+     "8.0"
     ],
     [
      "FG%",
-     "41.8"
+     "43.3"
     ],
     [
      "3P%",
-     "22.9"
+     "28.6"
     ],
     [
      "STL",
-     "0.7"
+     "0.8"
     ]
    ],
    "statsLabel": "Stats",
@@ -4539,23 +4539,23 @@
     "stats": [
      [
       "PTS",
-      "27.0",
-      "8th"
+      "27.9",
+      "5th"
      ],
      [
       "REB",
-      "6.0",
-      "Tied-67th"
+      "6.3",
+      "Tied-60th"
      ],
      [
       "AST",
-      "7.9",
-      "Tied-7th"
+      "8.0",
+      "6th"
      ],
      [
       "FG%",
-      "41.8",
-      "103rd"
+      "43.3",
+      "90th"
      ]
     ]
    },
@@ -4770,27 +4770,27 @@
    "season": [
     [
      "PTS",
-     "19.6"
+     "17.9"
     ],
     [
      "REB",
-     "10.0"
+     "9.6"
     ],
     [
      "AST",
-     "4.4"
+     "4.0"
     ],
     [
      "FG%",
-     "41.3"
+     "38.1"
     ],
     [
      "3P%",
-     "11.5"
+     "10.7"
     ],
     [
      "STL",
-     "0.7"
+     "0.6"
     ]
    ],
    "statsLabel": "Stats",
@@ -4799,23 +4799,23 @@
     "stats": [
      [
       "PTS",
-      "19.6",
-      "42nd"
+      "17.9",
+      "53rd"
      ],
      [
       "REB",
-      "10.0",
-      "9th"
+      "9.6",
+      "11th"
      ],
      [
       "AST",
-      "4.4",
-      "Tied-55th"
+      "4.0",
+      "Tied-63rd"
      ],
      [
       "FG%",
-      "41.3",
-      "106th"
+      "38.1",
+      "117th"
      ]
     ]
    },
@@ -5663,22 +5663,22 @@
      [
       "PTS",
       "20.8",
-      "37th"
+      "34th"
      ],
      [
       "REB",
       "5.2",
-      "92nd"
+      "Tied-89th"
      ],
      [
       "AST",
       "3.0",
-      "Tied-90th"
+      "Tied-88th"
      ],
      [
       "FG%",
       "52.7",
-      "24th"
+      "22nd"
      ]
     ]
    },
@@ -5888,27 +5888,27 @@
    "season": [
     [
      "PTS",
-     "17.2"
+     "17.7"
     ],
     [
      "REB",
-     "3.4"
+     "3.3"
     ],
     [
      "AST",
-     "5.9"
+     "6.1"
     ],
     [
      "FG%",
-     "43.8"
+     "44.1"
     ],
     [
      "3P%",
-     "38.5"
+     "38.4"
     ],
     [
      "STL",
-     "1.9"
+     "1.7"
     ]
    ],
    "statsLabel": "Stats",
@@ -5917,23 +5917,23 @@
     "stats": [
      [
       "PTS",
-      "17.2",
-      "58th"
+      "17.7",
+      "54th"
      ],
      [
       "REB",
-      "3.4",
-      "Tied-159th"
+      "3.3",
+      "175th"
      ],
      [
       "AST",
-      "5.9",
-      "22nd"
+      "6.1",
+      "21st"
      ],
      [
       "FG%",
-      "43.8",
-      "92nd"
+      "44.1",
+      "86th"
      ]
     ]
    },
@@ -5985,7 +5985,7 @@
     ],
     [
      "FG%",
-     "50.7"
+     "50.6"
     ],
     [
      "3P%",
@@ -6004,7 +6004,7 @@
    "season": [
     [
      "PTS",
-     "15.7"
+     "14.8"
     ],
     [
      "REB",
@@ -6012,19 +6012,19 @@
     ],
     [
      "AST",
-     "7.4"
+     "6.9"
     ],
     [
      "FG%",
-     "45.7"
+     "43.3"
     ],
     [
      "3P%",
-     "26.1"
+     "22.2"
     ],
     [
      "STL",
-     "1.4"
+     "1.5"
     ]
    ],
    "statsLabel": "Stats",
@@ -6033,23 +6033,23 @@
     "stats": [
      [
       "PTS",
-      "15.7",
-      "70th"
+      "14.8",
+      "75th"
      ],
      [
       "REB",
       "7.4",
-      "33rd"
+      "Tied-33rd"
      ],
      [
       "AST",
-      "7.4",
-      "11th"
+      "6.9",
+      "14th"
      ],
      [
       "FG%",
-      "45.7",
-      "79th"
+      "43.3",
+      "91st"
      ]
     ]
    },
@@ -6116,27 +6116,27 @@
    "season": [
     [
      "PTS",
-     "38.5"
+     "40.1"
     ],
     [
      "REB",
-     "8.1"
+     "7.8"
     ],
     [
      "AST",
-     "8.0"
+     "7.7"
     ],
     [
      "FG%",
-     "49.5"
+     "49.8"
     ],
     [
      "3P%",
-     "43.1"
+     "41.9"
     ],
     [
      "STL",
-     "1.8"
+     "1.7"
     ]
    ],
    "statsLabel": "Stats",
@@ -6145,23 +6145,23 @@
     "stats": [
      [
       "PTS",
-      "38.5",
+      "40.1",
       "1st"
      ],
      [
       "REB",
-      "8.1",
+      "7.8",
       "25th"
      ],
      [
       "AST",
-      "8.0",
-      "6th"
+      "7.7",
+      "8th"
      ],
      [
       "FG%",
-      "49.5",
-      "45th"
+      "49.8",
+      "40th"
      ]
     ]
    },
@@ -6194,13 +6194,6 @@
    "draft": "2024: Rd 1, Pk 6 (NYG)",
    "espnId": "4595348",
    "experience": "3rd Season",
-   "injury": {
-    "comment": "Nabers (knee) was catching passes during Friday's walkthrough and \"should be 'good' to go\" For Sunday's game against the Eagles, Ryan Dunleavy of the New York Post reports.",
-    "date": "2026-11-06",
-    "returnDate": "2026-11-08",
-    "status": "Questionable",
-    "type": "Knee"
-   },
    "jersey": "1",
    "last5": [
     [
@@ -6723,12 +6716,12 @@
      [
       "PTS",
       "23.4",
-      "Tied-16th"
+      "17th"
      ],
      [
       "REB",
       "9.7",
-      "11th"
+      "9th"
      ],
      [
       "AST",
@@ -6738,7 +6731,7 @@
      [
       "FG%",
       "50.4",
-      "35th"
+      "31st"
      ]
     ]
    },
@@ -7576,13 +7569,6 @@
    "draft": "2018: Rd 1, Pk 2 (NYG)",
    "espnId": "3929630",
    "experience": "9th Season",
-   "injury": {
-    "comment": "Barkley (hamstring/back) is practicing again Friday, Dave Zangaro of NBC Sports Philadelphia reports.",
-    "date": "2026-11-06",
-    "returnDate": "2026-11-08",
-    "status": "Questionable",
-    "type": "Hamstring"
-   },
    "jersey": "26",
    "last5": [
     [
@@ -7732,23 +7718,23 @@
    "season": [
     [
      "PTS",
-     "30.1"
+     "29.9"
     ],
     [
      "REB",
-     "4.3"
+     "4.1"
     ],
     [
      "AST",
-     "4.5"
+     "4.4"
     ],
     [
      "FG%",
-     "44.7"
+     "45.3"
     ],
     [
      "3P%",
-     "35.6"
+     "37.5"
     ],
     [
      "STL",
@@ -7761,23 +7747,23 @@
     "stats": [
      [
       "PTS",
-      "30.1",
+      "29.9",
       "2nd"
      ],
      [
       "REB",
-      "4.3",
-      "Tied-116th"
+      "4.1",
+      "Tied-124th"
      ],
      [
       "AST",
-      "4.5",
-      "Tied-50th"
+      "4.4",
+      "Tied-52nd"
      ],
      [
       "FG%",
-      "44.7",
-      "84th"
+      "45.3",
+      "80th"
      ]
     ]
    },
@@ -8116,17 +8102,17 @@
      [
       "REB",
       "3.7",
-      "146th"
+      "Tied-143rd"
      ],
      [
       "AST",
       "4.4",
-      "Tied-55th"
+      "Tied-54th"
      ],
      [
       "FG%",
       "46.9",
-      "69th"
+      "65th"
      ]
     ]
    },
@@ -8384,7 +8370,7 @@
    "injury": {
     "comment": "Hill's (knee) agent, Drew Rosenhaus, said Wednesday that he remains in contact with multiple teams, but \"nothing is imminent\" with regard to his client potentially finalizing a deal, Adam Schefter of ESPN reports. \"He's continuing his rehab with the goal of being on a team in the immediate future,\" Rosenhaus told Schefter.",
     "date": "2026-10-14",
-    "returnDate": "2026-11-08",
+    "returnDate": "2026-11-15",
     "status": "Questionable",
     "type": "Knee - ACL"
    },
@@ -8611,11 +8597,11 @@
     ],
     [
      "FG%",
-     "48.4"
+     "48.5"
     ],
     [
      "3P%",
-     "33.8"
+     "33.9"
     ],
     [
      "STL",
@@ -8630,27 +8616,27 @@
    "season": [
     [
      "PTS",
-     "29.0"
+     "29.1"
     ],
     [
      "REB",
-     "12.4"
+     "12.6"
     ],
     [
      "AST",
-     "3.1"
+     "3.0"
     ],
     [
      "FG%",
-     "48.6"
+     "49.2"
     ],
     [
      "3P%",
-     "24.0"
+     "28.6"
     ],
     [
      "STL",
-     "1.4"
+     "1.2"
     ]
    ],
    "statsLabel": "Stats",
@@ -8659,23 +8645,23 @@
     "stats": [
      [
       "PTS",
-      "29.0",
+      "29.1",
       "4th"
      ],
      [
       "REB",
-      "12.4",
+      "12.6",
       "4th"
      ],
      [
       "AST",
-      "3.1",
-      "Tied-86th"
+      "3.0",
+      "Tied-88th"
      ],
      [
       "FG%",
-      "48.6",
-      "51st"
+      "49.2",
+      "42nd"
      ]
     ]
    },
@@ -9002,7 +8988,7 @@
    "career": [
     [
      "PTS",
-     "23.8"
+     "23.7"
     ],
     [
      "REB",
@@ -9022,7 +9008,7 @@
     ],
     [
      "STL",
-     "1.0"
+     "1.1"
     ]
    ],
    "draft": "2019: Rd 1, Pk 1 (NO)",
@@ -9033,19 +9019,19 @@
    "season": [
     [
      "PTS",
-     "21.5"
+     "20.6"
     ],
     [
      "REB",
-     "5.1"
+     "5.4"
     ],
     [
      "AST",
-     "2.6"
+     "2.8"
     ],
     [
      "FG%",
-     "60.8"
+     "59.8"
     ],
     [
      "3P%",
@@ -9053,7 +9039,7 @@
     ],
     [
      "STL",
-     "2.5"
+     "2.4"
     ]
    ],
    "statsLabel": "Stats",
@@ -9062,23 +9048,23 @@
     "stats": [
      [
       "PTS",
-      "21.5",
-      "29th"
+      "20.6",
+      "36th"
      ],
      [
       "REB",
-      "5.1",
-      "Tied-95th"
+      "5.4",
+      "83rd"
      ],
      [
       "AST",
-      "2.6",
-      "Tied-108th"
+      "2.8",
+      "Tied-96th"
      ],
      [
       "FG%",
-      "60.8",
-      "8th"
+      "59.8",
+      "6th"
      ]
     ]
    },
@@ -9089,5 +9075,5 @@
   }
  },
  "source": "ESPN public data feeds (unofficial; replace with a licensed provider before launch)",
- "updated": "2026-11-06T17:31Z"
+ "updated": "2026-11-07T16:29Z"
 }
