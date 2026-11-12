@@ -307,7 +307,7 @@
     ],
     [
      "AST",
-     "2.6"
+     "2.5"
     ],
     [
      "FG%",
@@ -330,23 +330,23 @@
    "season": [
     [
      "PTS",
-     "25.7"
+     "25.2"
     ],
     [
      "REB",
-     "9.7"
+     "10.0"
     ],
     [
      "AST",
-     "2.0"
+     "1.8"
     ],
     [
      "FG%",
-     "53.3"
+     "51.3"
     ],
     [
      "3P%",
-     "37.5"
+     "33.3"
     ],
     [
      "STL",
@@ -359,23 +359,23 @@
     "stats": [
      [
       "PTS",
-      "25.7",
+      "25.2",
       "13th"
      ],
      [
       "REB",
-      "9.7",
-      "12th"
+      "10.0",
+      "10th"
      ],
      [
       "AST",
-      "2.0",
-      "Tied-147th"
+      "1.8",
+      "164th"
      ],
      [
       "FG%",
-      "53.3",
-      "13th"
+      "51.3",
+      "25th"
      ]
     ]
    },
@@ -486,7 +486,7 @@
      [
       "FG%",
       "48.1",
-      "55th"
+      "56th"
      ]
     ]
    },
@@ -864,15 +864,15 @@
    "active": true,
    "awards": [
     [
+     "All-MLB 1st Team",
+     "3x"
+    ],
+    [
      "Gold Glove",
      "2x"
     ],
     [
      "Silver Slugger",
-     "2x"
-    ],
-    [
-     "All-MLB 1st Team",
      "2x"
     ]
    ],
@@ -1414,22 +1414,22 @@
      [
       "PTS",
       "22.3",
-      "21st"
+      "23rd"
      ],
      [
       "REB",
       "5.2",
-      "Tied-90th"
+      "Tied-87th"
      ],
      [
       "AST",
       "7.6",
-      "8th"
+      "9th"
      ],
      [
       "FG%",
       "46.2",
-      "68th"
+      "70th"
      ]
     ]
    },
@@ -2376,12 +2376,12 @@
      [
       "PTS",
       "25.9",
-      "Tied-10th"
+      "12th"
      ],
      [
       "REB",
       "6.9",
-      "40th"
+      "38th"
      ],
      [
       "AST",
@@ -2550,7 +2550,7 @@
    "career": [
     [
      "PTS",
-     "25.1"
+     "25.0"
     ],
     [
      "REB",
@@ -2562,7 +2562,7 @@
     ],
     [
      "FG%",
-     "43.9"
+     "43.8"
     ],
     [
      "3P%",
@@ -2581,7 +2581,7 @@
    "season": [
     [
      "PTS",
-     "20.0"
+     "19.8"
     ],
     [
      "REB",
@@ -2589,15 +2589,15 @@
     ],
     [
      "AST",
-     "4.3"
+     "4.2"
     ],
     [
      "FG%",
-     "43.4"
+     "42.7"
     ],
     [
      "3P%",
-     "34.9"
+     "33.3"
     ],
     [
      "STL",
@@ -2610,23 +2610,23 @@
     "stats": [
      [
       "PTS",
-      "20.0",
-      "Tied-39th"
+      "19.8",
+      "39th"
      ],
      [
       "REB",
       "3.2",
-      "Tied-186th"
+      "Tied-185th"
      ],
      [
       "AST",
-      "4.3",
-      "Tied-56th"
+      "4.2",
+      "59th"
      ],
      [
       "FG%",
-      "43.4",
-      "90th"
+      "42.7",
+      "102nd"
      ]
     ]
    },
@@ -2715,12 +2715,12 @@
      [
       "PTS",
       "25.1",
-      "15th"
+      "14th"
      ],
      [
       "REB",
       "2.7",
-      "214th"
+      "Tied-212th"
      ],
      [
       "AST",
@@ -2730,7 +2730,7 @@
      [
       "FG%",
       "48.3",
-      "52nd"
+      "53rd"
      ]
     ]
    },
@@ -2770,7 +2770,7 @@
     ],
     [
      "FG%",
-     "45.3"
+     "45.4"
     ],
     [
      "3P%",
@@ -2793,7 +2793,7 @@
     ],
     [
      "REB",
-     "4.8"
+     "5.0"
     ],
     [
      "AST",
@@ -2801,11 +2801,11 @@
     ],
     [
      "FG%",
-     "48.0"
+     "48.5"
     ],
     [
      "3P%",
-     "38.5"
+     "37.6"
     ],
     [
      "STL",
@@ -2819,22 +2819,22 @@
      [
       "PTS",
       "22.8",
-      "19th"
+      "21st"
      ],
      [
       "REB",
-      "4.8",
-      "Tied-106th"
+      "5.0",
+      "Tied-93rd"
      ],
      [
       "AST",
       "5.5",
-      "29th"
+      "Tied-28th"
      ],
      [
       "FG%",
-      "48.0",
-      "57th"
+      "48.5",
+      "52nd"
      ]
     ]
    },
@@ -2997,7 +2997,7 @@
    "career": [
     [
      "PTS",
-     "12.6"
+     "12.7"
     ],
     [
      "REB",
@@ -3005,15 +3005,15 @@
     ],
     [
      "AST",
-     "3.9"
+     "4.0"
     ],
     [
      "FG%",
-     "50.6"
+     "50.3"
     ],
     [
      "3P%",
-     "34.1"
+     "34.4"
     ],
     [
      "STL",
@@ -3036,19 +3036,19 @@
     ],
     [
      "AST",
-     "4.4"
+     "4.8"
     ],
     [
      "FG%",
-     "51.0"
+     "49.7"
     ],
     [
      "3P%",
-     "33.3"
+     "35.0"
     ],
     [
      "STL",
-     "0.7"
+     "1.0"
     ]
    ],
    "statsLabel": "Stats",
@@ -3058,22 +3058,22 @@
      [
       "PTS",
       "18.0",
-      "Tied-49th"
+      "Tied-50th"
      ],
      [
       "REB",
       "5.4",
-      "Tied-84th"
+      "Tied-78th"
      ],
      [
       "AST",
-      "4.4",
-      "Tied-52nd"
+      "4.8",
+      "42nd"
      ],
      [
       "FG%",
-      "51.0",
-      "26th"
+      "49.7",
+      "41st"
      ]
     ]
    },
@@ -3084,7 +3084,12 @@
   },
   "elly-de-la-cruz": {
    "active": true,
-   "awards": [],
+   "awards": [
+    [
+     "All-MLB 2nd Team",
+     "1x"
+    ]
+   ],
    "career": [
     [
      "HR",
@@ -3177,15 +3182,15 @@
    "active": true,
    "awards": [
     [
+     "All-MLB 1st Team",
+     "3x"
+    ],
+    [
      "Gold Glove",
      "2x"
     ],
     [
      "Silver Slugger",
-     "2x"
-    ],
-    [
-     "All-MLB 1st Team",
      "2x"
     ]
    ],
@@ -3487,12 +3492,12 @@
      [
       "AST",
       "5.2",
-      "Tied-32nd"
+      "Tied-33rd"
      ],
      [
       "FG%",
       "56.7",
-      "9th"
+      "11th"
      ]
     ]
    },
@@ -3721,6 +3726,10 @@
    "awards": [
     [
      "Gold Glove",
+     "1x"
+    ],
+    [
+     "All-MLB 1st Team",
      "1x"
     ]
    ],
@@ -3972,7 +3981,7 @@
    "season": [
     [
      "PTS",
-     "25.9"
+     "26.0"
     ],
     [
      "REB",
@@ -3984,11 +3993,11 @@
     ],
     [
      "FG%",
-     "42.0"
+     "43.0"
     ],
     [
      "3P%",
-     "36.6"
+     "36.7"
     ],
     [
      "STL",
@@ -4001,8 +4010,8 @@
     "stats": [
      [
       "PTS",
-      "25.9",
-      "Tied-10th"
+      "26.0",
+      "11th"
      ],
      [
       "REB",
@@ -4012,12 +4021,12 @@
      [
       "AST",
       "5.2",
-      "31st"
+      "Tied-33rd"
      ],
      [
       "FG%",
-      "42.0",
-      "101st"
+      "43.0",
+      "97th"
      ]
     ]
    },
@@ -4488,7 +4497,7 @@
     ],
     [
      "3P%",
-     "36.8"
+     "36.7"
     ],
     [
      "STL",
@@ -4503,27 +4512,27 @@
    "season": [
     [
      "PTS",
-     "26.5"
+     "26.3"
     ],
     [
      "REB",
-     "6.0"
+     "6.1"
     ],
     [
      "AST",
-     "7.4"
+     "7.5"
     ],
     [
      "FG%",
-     "42.5"
+     "41.3"
     ],
     [
      "3P%",
-     "32.4"
+     "30.6"
     ],
     [
      "STL",
-     "0.7"
+     "0.6"
     ]
    ],
    "statsLabel": "Stats",
@@ -4532,23 +4541,23 @@
     "stats": [
      [
       "PTS",
-      "26.5",
-      "8th"
+      "26.3",
+      "7th"
      ],
      [
       "REB",
-      "6.0",
-      "Tied-63rd"
+      "6.1",
+      "Tied-59th"
      ],
      [
       "AST",
-      "7.4",
+      "7.5",
       "11th"
      ],
      [
       "FG%",
-      "42.5",
-      "100th"
+      "41.3",
+      "109th"
      ]
     ]
    },
@@ -4758,6 +4767,13 @@
    "draft": "2014: Rd 1, Pk 3 (PHI)",
    "espnId": "3059318",
    "experience": "11th Season",
+   "injury": {
+    "comment": "Embiid (foot) remains questionable for Thursday's game against the Raptors, but he participated in the team's morning shootaround, Ky Carlin of USA Today reports.",
+    "date": "2026-11-12",
+    "returnDate": "2026-11-12",
+    "status": "Day-To-Day",
+    "type": "Foot"
+   },
    "jersey": "21",
    "position": "C",
    "season": [
@@ -4793,22 +4809,22 @@
      [
       "PTS",
       "17.7",
-      "53rd"
+      "54th"
      ],
      [
       "REB",
       "9.3",
-      "13th"
+      "14th"
      ],
      [
       "AST",
       "3.8",
-      "Tied-72nd"
+      "Tied-70th"
      ],
      [
       "FG%",
       "37.0",
-      "120th"
+      "126th"
      ]
     ]
    },
@@ -5506,8 +5522,8 @@
    "espnId": "6450",
    "experience": "16th Season",
    "injury": {
-    "comment": "Leonard (knee) is continuing the reconditioning process, and another update will be provided in one week, Blake Murphy of Sportsnet.ca reports.",
-    "date": "2026-11-10",
+    "comment": "Head coach Darko Rajakovic said Wednesday that Leonard (knee) is doing individual on-court work and is progressing well, Michael Grange of Sportsnet.ca reports.",
+    "date": "2026-11-11",
     "returnDate": "2026-11-23",
     "status": "Out",
     "type": "Knee"
@@ -5633,23 +5649,23 @@
    "season": [
     [
      "PTS",
-     "21.0"
+     "20.9"
     ],
     [
      "REB",
-     "6.3"
+     "6.1"
     ],
     [
      "AST",
-     "3.5"
+     "3.6"
     ],
     [
      "FG%",
-     "49.6"
+     "49.4"
     ],
     [
      "3P%",
-     "35.7"
+     "34.8"
     ],
     [
      "STL",
@@ -5662,23 +5678,23 @@
     "stats": [
      [
       "PTS",
-      "21.0",
-      "Tied-34th"
+      "20.9",
+      "33rd"
      ],
      [
       "REB",
-      "6.3",
-      "Tied-56th"
+      "6.1",
+      "63rd"
      ],
      [
       "AST",
-      "3.5",
-      "Tied-80th"
+      "3.6",
+      "Tied-77th"
      ],
      [
       "FG%",
-      "49.6",
-      "40th"
+      "49.4",
+      "44th"
      ]
     ]
    },
@@ -5923,17 +5939,17 @@
      [
       "REB",
       "3.3",
-      "Tied-179th"
+      "Tied-175th"
      ],
      [
       "AST",
       "6.0",
-      "20th"
+      "21st"
      ],
      [
       "FG%",
       "44.9",
-      "Tied-82nd"
+      "86th"
      ]
     ]
    },
@@ -5999,6 +6015,13 @@
    "draft": "2003: Rd 1, Pk 1 (CLE)",
    "espnId": "1966",
    "experience": "24th Season",
+   "injury": {
+    "comment": "James (back) is out for Thursday's game against Toronto.",
+    "date": "2026-11-12",
+    "returnDate": "2026-11-15",
+    "status": "Out",
+    "type": "Back"
+   },
    "jersey": "23",
    "position": "F",
    "season": [
@@ -6039,17 +6062,17 @@
      [
       "REB",
       "7.2",
-      "Tied-34th"
+      "35th"
      ],
      [
       "AST",
       "6.5",
-      "Tied-17th"
+      "17th"
      ],
      [
       "FG%",
       "43.2",
-      "93rd"
+      "94th"
      ]
     ]
    },
@@ -6111,28 +6134,35 @@
    "draft": "2018: Rd 1, Pk 3 (ATL)",
    "espnId": "3945274",
    "experience": "9th Season",
+   "injury": {
+    "comment": "Doncic finished Wednesday's 123-112 win over the Bucks with 32 points (10-25 FG, 5-12 3Pt, 7-10 FT), five rebounds, five assists and three steals across 32 minutes. He exited to the locker room late in the fourth quarter due to an apparent right ankle injury and did not return, Thuc Nhi Nguyen of the Los Angeles Times reports.",
+    "date": "2026-11-12",
+    "returnDate": "2026-11-15",
+    "status": "Day-To-Day",
+    "type": "Ankle"
+   },
    "jersey": "77",
    "position": "G",
    "season": [
     [
      "PTS",
-     "39.3"
+     "38.6"
     ],
     [
      "REB",
-     "7.8"
+     "7.5"
     ],
     [
      "AST",
-     "7.9"
+     "7.6"
     ],
     [
      "FG%",
-     "49.8"
+     "48.9"
     ],
     [
      "3P%",
-     "40.7"
+     "40.8"
     ],
     [
      "STL",
@@ -6145,23 +6175,23 @@
     "stats": [
      [
       "PTS",
-      "39.3",
+      "38.6",
       "1st"
      ],
      [
       "REB",
-      "7.8",
-      "24th"
+      "7.5",
+      "Tied-26th"
      ],
      [
       "AST",
-      "7.9",
-      "6th"
+      "7.6",
+      "8th"
      ],
      [
       "FG%",
-      "49.8",
-      "39th"
+      "48.9",
+      "48th"
      ]
     ]
    },
@@ -6305,6 +6335,13 @@
    "draft": "2024: Rd 1, Pk 4 (ARI)",
    "espnId": "4432708",
    "experience": "3rd Season",
+   "injury": {
+    "comment": "Harrison (hamstring) was limited in Wednesday's practice, Jonathan M. Alexander of the Houston Chronicle reports.",
+    "date": "2026-11-11",
+    "returnDate": "2026-11-15",
+    "status": "Questionable",
+    "type": "Hamstring"
+   },
    "jersey": "18",
    "last5": [
     [
@@ -6686,7 +6723,7 @@
    "season": [
     [
      "PTS",
-     "23.1"
+     "23.5"
     ],
     [
      "REB",
@@ -6694,19 +6731,19 @@
     ],
     [
      "AST",
-     "9.1"
+     "9.0"
     ],
     [
      "FG%",
-     "48.8"
+     "50.0"
     ],
     [
      "3P%",
-     "22.5"
+     "23.3"
     ],
     [
      "STL",
-     "1.9"
+     "1.8"
     ]
    ],
    "statsLabel": "Stats",
@@ -6715,8 +6752,8 @@
     "stats": [
      [
       "PTS",
-      "23.1",
-      "17th"
+      "23.5",
+      "Tied-16th"
      ],
      [
       "REB",
@@ -6725,13 +6762,13 @@
      ],
      [
       "AST",
-      "9.1",
+      "9.0",
       "1st"
      ],
      [
       "FG%",
-      "48.8",
-      "Tied-47th"
+      "50.0",
+      "Tied-34th"
      ]
     ]
    },
@@ -6893,11 +6930,11 @@
    "espnId": "3139477",
    "experience": "10th Season",
    "injury": {
-    "comment": "Chiefs coach Andy Reid said Monday that Mahomes (elbow) is considered day-to-day as this Sunday's game against the Falcons approaches, Sam McDowell of The Kansas City Star reports.",
-    "date": "2026-11-09",
-    "returnDate": "2026-11-15",
+    "comment": "Mahomes (right elbow/knee) was a full participant in Wednesday's practice.",
+    "date": "2026-11-11",
+    "returnDate": "",
     "status": "Questionable",
-    "type": "Elbow"
+    "type": ""
    },
    "jersey": "15",
    "last5": [
@@ -7118,15 +7155,15 @@
    "active": true,
    "awards": [
     [
+     "All-MLB 1st Team",
+     "2x"
+    ],
+    [
      "Silver Slugger",
      "1x"
     ],
     [
      "Rookie of the Year",
-     "1x"
-    ],
-    [
-     "All-MLB 1st Team",
      "1x"
     ]
    ],
@@ -7243,10 +7280,10 @@
    "espnId": "4426515",
    "experience": "4th Season",
    "injury": {
-    "comment": "doubtful",
-    "date": "2026-11-11",
-    "returnDate": "2026-11-15",
-    "status": "Doubtful",
+    "comment": "out",
+    "date": "2026-11-12",
+    "returnDate": "2026-12-13",
+    "status": "Out",
     "type": "Knee - MCL"
    },
    "jersey": "12",
@@ -7717,7 +7754,7 @@
     ],
     [
      "3P%",
-     "36.0"
+     "35.9"
     ],
     [
      "STL",
@@ -7732,7 +7769,7 @@
    "season": [
     [
      "PTS",
-     "29.5"
+     "29.7"
     ],
     [
      "REB",
@@ -7740,7 +7777,7 @@
     ],
     [
      "AST",
-     "4.7"
+     "4.5"
     ],
     [
      "FG%",
@@ -7748,7 +7785,7 @@
     ],
     [
      "3P%",
-     "37.0"
+     "33.8"
     ],
     [
      "STL",
@@ -7761,23 +7798,23 @@
     "stats": [
      [
       "PTS",
-      "29.5",
-      "4th"
+      "29.7",
+      "3rd"
      ],
      [
       "REB",
       "4.3",
-      "Tied-121st"
+      "Tied-122nd"
      ],
      [
       "AST",
-      "4.7",
-      "45th"
+      "4.5",
+      "Tied-49th"
      ],
      [
       "FG%",
       "45.3",
-      "75th"
+      "80th"
      ]
     ]
    },
@@ -8050,7 +8087,7 @@
    "career": [
     [
      "PTS",
-     "24.9"
+     "24.8"
     ],
     [
      "REB",
@@ -8076,24 +8113,31 @@
    "draft": "2009: Rd 1, Pk 7 (GS)",
    "espnId": "3975",
    "experience": "18th Season",
+   "injury": {
+    "comment": "Curry has been diagnosed with an oblique abdominal tear and will be re-evaluated in two weeks, Shams Charania of ESPN reports.",
+    "date": "2026-11-12",
+    "returnDate": "2026-12-01",
+    "status": "Out",
+    "type": "Abdomen"
+   },
    "jersey": "30",
    "position": "G",
    "season": [
     [
      "PTS",
-     "30.6"
+     "27.8"
     ],
     [
      "REB",
-     "4.1"
+     "3.7"
     ],
     [
      "AST",
-     "4.3"
+     "3.9"
     ],
     [
      "FG%",
-     "50.3"
+     "50.0"
     ],
     [
      "3P%",
@@ -8101,7 +8145,7 @@
     ],
     [
      "STL",
-     "1.0"
+     "0.9"
     ]
    ],
    "statsLabel": "Stats",
@@ -8110,23 +8154,23 @@
     "stats": [
      [
       "PTS",
-      "30.6",
-      "2nd"
+      "27.8",
+      "4th"
      ],
      [
       "REB",
-      "4.1",
-      "Tied-128th"
+      "3.7",
+      "Tied-141st"
      ],
      [
       "AST",
-      "4.3",
-      "Tied-54th"
+      "3.9",
+      "68th"
      ],
      [
       "FG%",
-      "50.3",
-      "32nd"
+      "50.0",
+      "Tied-34th"
      ]
     ]
    },
@@ -8503,9 +8547,9 @@
    "espnId": "4396993",
    "experience": "7th Season",
    "injury": {
-    "comment": "Haliburton (hamstring) is progressing well but does not have a timetable to return, Dustin Dopirak of The Indianapolis Star reports.",
-    "date": "2026-11-07",
-    "returnDate": "2026-11-13",
+    "comment": "Head coach Rick Carlisle said Wednesday that Haliburton (hamstring) will miss at least 10 more days, Alex Golden of SI.com reports.",
+    "date": "2026-11-11",
+    "returnDate": "2026-11-22",
     "status": "Out",
     "type": "Hamstring"
    },
@@ -8611,7 +8655,7 @@
     ],
     [
      "FG%",
-     "48.7"
+     "48.8"
     ],
     [
      "3P%",
@@ -8630,27 +8674,27 @@
    "season": [
     [
      "PTS",
-     "30.1"
+     "30.3"
     ],
     [
      "REB",
-     "11.9"
+     "11.7"
     ],
     [
      "AST",
-     "3.0"
+     "2.8"
     ],
     [
      "FG%",
-     "52.9"
+     "54.3"
     ],
     [
      "3P%",
-     "32.3"
+     "32.4"
     ],
     [
      "STL",
-     "1.1"
+     "1.2"
     ]
    ],
    "statsLabel": "Stats",
@@ -8659,23 +8703,23 @@
     "stats": [
      [
       "PTS",
-      "30.1",
-      "3rd"
+      "30.3",
+      "2nd"
      ],
      [
       "REB",
-      "11.9",
+      "11.7",
       "5th"
      ],
      [
       "AST",
-      "3.0",
-      "Tied-94th"
+      "2.8",
+      "Tied-98th"
      ],
      [
       "FG%",
-      "52.9",
-      "16th"
+      "54.3",
+      "15th"
      ]
     ]
    },
@@ -8895,6 +8939,10 @@
    "active": true,
    "awards": [
     [
+     "All-MLB 2nd Team",
+     "1x"
+    ],
+    [
      "World Series MVP",
      "1x"
     ],
@@ -9002,7 +9050,7 @@
    "career": [
     [
      "PTS",
-     "23.7"
+     "23.8"
     ],
     [
      "REB",
@@ -9018,7 +9066,7 @@
     ],
     [
      "3P%",
-     "33.0"
+     "33.6"
     ],
     [
      "STL",
@@ -9033,27 +9081,27 @@
    "season": [
     [
      "PTS",
-     "21.0"
+     "21.7"
     ],
     [
      "REB",
-     "5.3"
+     "5.2"
     ],
     [
      "AST",
-     "2.7"
+     "2.6"
     ],
     [
      "FG%",
-     "62.8"
+     "62.2"
     ],
     [
      "3P%",
-     "42.9"
+     "50.0"
     ],
     [
      "STL",
-     "2.2"
+     "2.0"
     ]
    ],
    "statsLabel": "Stats",
@@ -9062,22 +9110,22 @@
     "stats": [
      [
       "PTS",
-      "21.0",
-      "Tied-34th"
+      "21.7",
+      "28th"
      ],
      [
       "REB",
-      "5.3",
-      "Tied-86th"
+      "5.2",
+      "90th"
      ],
      [
       "AST",
-      "2.7",
+      "2.6",
       "Tied-106th"
      ],
      [
       "FG%",
-      "62.8",
+      "62.2",
       "5th"
      ]
     ]
@@ -9089,5 +9137,5 @@
   }
  },
  "source": "ESPN public data feeds (unofficial; replace with a licensed provider before launch)",
- "updated": "2026-11-11T17:55Z"
+ "updated": "2026-11-12T18:22Z"
 }
