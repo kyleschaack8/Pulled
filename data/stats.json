@@ -258,7 +258,7 @@
      ],
      [
       "QBR",
-      "47.7",
+      "47.8",
       "25th"
      ]
     ]
@@ -307,7 +307,7 @@
     ],
     [
      "AST",
-     "2.5"
+     "2.6"
     ],
     [
      "FG%",
@@ -315,7 +315,7 @@
     ],
     [
      "3P%",
-     "29.6"
+     "29.5"
     ],
     [
      "STL",
@@ -330,23 +330,23 @@
    "season": [
     [
      "PTS",
-     "25.2"
+     "25.6"
     ],
     [
      "REB",
-     "10.0"
+     "10.5"
     ],
     [
      "AST",
-     "1.8"
+     "2.0"
     ],
     [
      "FG%",
-     "51.3"
+     "52.4"
     ],
     [
      "3P%",
-     "33.3"
+     "32.1"
     ],
     [
      "STL",
@@ -359,23 +359,23 @@
     "stats": [
      [
       "PTS",
-      "25.2",
-      "13th"
+      "25.6",
+      "12th"
      ],
      [
       "REB",
-      "10.0",
-      "10th"
+      "10.5",
+      "Tied-8th"
      ],
      [
       "AST",
-      "1.8",
-      "164th"
+      "2.0",
+      "Tied-143rd"
      ],
      [
       "FG%",
-      "51.3",
-      "25th"
+      "52.4",
+      "18th"
      ]
     ]
    },
@@ -486,7 +486,7 @@
      [
       "FG%",
       "48.1",
-      "56th"
+      "57th"
      ]
     ]
    },
@@ -582,7 +582,7 @@
      [
       "CAR",
       "114",
-      "18th"
+      "19th"
      ],
      [
       "YDS",
@@ -850,7 +850,7 @@
      ],
      [
       "QBR",
-      "48.9",
+      "49.0",
       "24th"
      ]
     ]
@@ -1051,22 +1051,22 @@
      [
       "REC",
       "48",
-      "Tied-13th"
+      "Tied-14th"
      ],
      [
       "YDS",
       "658",
-      "9th"
+      "10th"
      ],
      [
       "TD",
       "6",
-      "Tied-5th"
+      "Tied-6th"
      ],
      [
       "AVG",
       "13.7",
-      "30th"
+      "29th"
      ]
     ]
    },
@@ -1353,7 +1353,7 @@
    "career": [
     [
      "PTS",
-     "22.5"
+     "22.6"
     ],
     [
      "REB",
@@ -1361,11 +1361,11 @@
     ],
     [
      "AST",
-     "7.9"
+     "8.0"
     ],
     [
      "FG%",
-     "45.0"
+     "45.1"
     ],
     [
      "3P%",
@@ -1384,7 +1384,7 @@
    "season": [
     [
      "PTS",
-     "22.3"
+     "25.0"
     ],
     [
      "REB",
@@ -1392,19 +1392,19 @@
     ],
     [
      "AST",
-     "7.6"
+     "7.9"
     ],
     [
      "FG%",
-     "46.2"
+     "48.5"
     ],
     [
      "3P%",
-     "29.2"
+     "31.4"
     ],
     [
      "STL",
-     "1.6"
+     "1.5"
     ]
    ],
    "statsLabel": "Stats",
@@ -1413,8 +1413,8 @@
     "stats": [
      [
       "PTS",
-      "22.3",
-      "23rd"
+      "25.0",
+      "14th"
      ],
      [
       "REB",
@@ -1423,13 +1423,13 @@
      ],
      [
       "AST",
-      "7.6",
-      "9th"
+      "7.9",
+      "Tied-5th"
      ],
      [
       "FG%",
-      "46.2",
-      "70th"
+      "48.5",
+      "Tied-53rd"
      ]
     ]
    },
@@ -1562,7 +1562,7 @@
      [
       "TD",
       "8",
-      "Tied-21st"
+      "Tied-22nd"
      ],
      [
       "INT",
@@ -1700,7 +1700,7 @@
      [
       "YDS",
       "1,483",
-      "23rd"
+      "24th"
      ],
      [
       "TD",
@@ -1714,8 +1714,8 @@
      ],
      [
       "QBR",
-      "49.0",
-      "22nd"
+      "49.1",
+      "21st"
      ]
     ]
    },
@@ -1826,7 +1826,7 @@
      [
       "AVG",
       "12.9",
-      "41st"
+      "40th"
      ]
     ]
    },
@@ -2042,12 +2042,12 @@
      [
       "CAR",
       "102",
-      "Tied-22nd"
+      "Tied-23rd"
      ],
      [
       "YDS",
       "457",
-      "18th"
+      "19th"
      ],
      [
       "TD",
@@ -2200,11 +2200,11 @@
      [
       "INT",
       "2",
-      "Tied-2nd"
+      "Tied-1st"
      ],
      [
       "QBR",
-      "73.2",
+      "73.3",
       "6th"
      ]
     ]
@@ -2315,7 +2315,7 @@
    "career": [
     [
      "PTS",
-     "21.7"
+     "21.5"
     ],
     [
      "REB",
@@ -2331,7 +2331,7 @@
     ],
     [
      "3P%",
-     "29.5"
+     "29.6"
     ],
     [
      "STL",
@@ -2346,7 +2346,7 @@
    "season": [
     [
      "PTS",
-     "25.9"
+     "24.6"
     ],
     [
      "REB",
@@ -2354,15 +2354,15 @@
     ],
     [
      "AST",
-     "6.9"
+     "6.5"
     ],
     [
      "FG%",
-     "50.0"
+     "49.5"
     ],
     [
      "3P%",
-     "29.2"
+     "30.0"
     ],
     [
      "STL",
@@ -2375,23 +2375,23 @@
     "stats": [
      [
       "PTS",
-      "25.9",
-      "12th"
+      "24.6",
+      "16th"
      ],
      [
       "REB",
       "6.9",
-      "38th"
+      "Tied-36th"
      ],
      [
       "AST",
-      "6.9",
-      "Tied-15th"
+      "6.5",
+      "16th"
      ],
      [
       "FG%",
-      "50.0",
-      "Tied-34th"
+      "49.5",
+      "44th"
      ]
     ]
    },
@@ -2611,17 +2611,17 @@
      [
       "PTS",
       "19.8",
-      "39th"
+      "38th"
      ],
      [
       "REB",
       "3.2",
-      "Tied-185th"
+      "Tied-183rd"
      ],
      [
       "AST",
       "4.2",
-      "59th"
+      "57th"
      ],
      [
       "FG%",
@@ -2685,27 +2685,27 @@
    "season": [
     [
      "PTS",
-     "25.1"
+     "25.5"
     ],
     [
      "REB",
-     "2.7"
+     "2.5"
     ],
     [
      "AST",
-     "4.8"
+     "5.0"
     ],
     [
      "FG%",
-     "48.3"
+     "49.5"
     ],
     [
      "3P%",
-     "35.7"
+     "37.5"
     ],
     [
      "STL",
-     "1.0"
+     "1.2"
     ]
    ],
    "statsLabel": "Stats",
@@ -2714,23 +2714,23 @@
     "stats": [
      [
       "PTS",
-      "25.1",
-      "14th"
+      "25.5",
+      "13th"
      ],
      [
       "REB",
-      "2.7",
-      "Tied-212th"
+      "2.5",
+      "Tied-218th"
      ],
      [
       "AST",
-      "4.8",
-      "44th"
+      "5.0",
+      "Tied-36th"
      ],
      [
       "FG%",
-      "48.3",
-      "53rd"
+      "49.5",
+      "43rd"
      ]
     ]
    },
@@ -2819,22 +2819,22 @@
      [
       "PTS",
       "22.8",
-      "21st"
+      "20th"
      ],
      [
       "REB",
       "5.0",
-      "Tied-93rd"
+      "Tied-91st"
      ],
      [
       "AST",
       "5.5",
-      "Tied-28th"
+      "Tied-29th"
      ],
      [
       "FG%",
       "48.5",
-      "52nd"
+      "55th"
      ]
     ]
    },
@@ -3058,22 +3058,22 @@
      [
       "PTS",
       "18.0",
-      "Tied-50th"
+      "Tied-49th"
      ],
      [
       "REB",
       "5.4",
-      "Tied-78th"
+      "Tied-76th"
      ],
      [
       "AST",
       "4.8",
-      "42nd"
+      "43rd"
      ],
      [
       "FG%",
       "49.7",
-      "41st"
+      "40th"
      ]
     ]
    },
@@ -3447,6 +3447,13 @@
    "draft": "2013: Rd 1, Pk 15 (MIL)",
    "espnId": "3032977",
    "experience": "14th Season",
+   "injury": {
+    "comment": "Antetokounmpo (wrist) is probable for Friday's game against Cleveland.",
+    "date": "2026-11-12",
+    "returnDate": "2026-11-13",
+    "status": "Day-To-Day",
+    "type": "Wrist"
+   },
    "jersey": "7",
    "position": "F",
    "season": [
@@ -3497,7 +3504,7 @@
      [
       "FG%",
       "56.7",
-      "11th"
+      "10th"
      ]
     ]
    },
@@ -4016,7 +4023,7 @@
      [
       "REB",
       "3.1",
-      "Tied-192nd"
+      "190th"
      ],
      [
       "AST",
@@ -4026,7 +4033,7 @@
      [
       "FG%",
       "43.0",
-      "97th"
+      "98th"
      ]
     ]
    },
@@ -4171,7 +4178,7 @@
      [
       "TD",
       "8",
-      "Tied-21st"
+      "Tied-22nd"
      ],
      [
       "INT",
@@ -4282,7 +4289,7 @@
      [
       "REC",
       "53",
-      "Tied-7th"
+      "Tied-9th"
      ],
      [
       "YDS",
@@ -4297,7 +4304,7 @@
      [
       "AVG",
       "12.2",
-      "54th"
+      "52nd"
      ]
     ]
    },
@@ -4317,19 +4324,19 @@
    "career": [
     [
      "YDS",
-     "6,080"
+     "6,329"
     ],
     [
      "TD",
-     "40"
+     "43"
     ],
     [
      "INT",
-     "12"
+     "14"
     ],
     [
      "CMP%",
-     "66.0"
+     "66.2"
     ],
     [
      "RTG",
@@ -4337,7 +4344,7 @@
     ],
     [
      "CAR",
-     "237"
+     "248"
     ]
    ],
    "draft": "2024: Rd 1, Pk 2 (WSH)",
@@ -4347,60 +4354,7 @@
    "last5": [
     [
      "YDS",
-     "1,086"
-    ],
-    [
-     "TD",
-     "5"
-    ],
-    [
-     "INT",
-     "0"
-    ],
-    [
-     "CMP%",
-     "65.8"
-    ],
-    [
-     "RTG",
-     "98.7"
-    ],
-    [
-     "CAR",
-     "26"
-    ]
-   ],
-   "position": "QB",
-   "projected": [
-    [
-     "YDS",
-     "2,656"
-    ],
-    [
-     "TD",
-     "14"
-    ],
-    [
-     "INT",
-     "0"
-    ],
-    [
-     "CMP%",
-     "63.9"
-    ],
-    [
-     "RTG",
-     "97.2"
-    ],
-    [
-     "CAR",
-     "65"
-    ]
-   ],
-   "season": [
-    [
-     "YDS",
-     "1,250"
+     "1,239"
     ],
     [
      "TD",
@@ -4408,19 +4362,72 @@
     ],
     [
      "INT",
-     "0"
+     "2"
     ],
     [
      "CMP%",
-     "63.9"
+     "66.8"
     ],
     [
      "RTG",
-     "97.2"
+     "98.2"
     ],
     [
      "CAR",
-     "31"
+     "30"
+    ]
+   ],
+   "position": "QB",
+   "projected": [
+    [
+     "YDS",
+     "2,831"
+    ],
+    [
+     "TD",
+     "18"
+    ],
+    [
+     "INT",
+     "3"
+    ],
+    [
+     "CMP%",
+     "64.8"
+    ],
+    [
+     "RTG",
+     "97.1"
+    ],
+    [
+     "CAR",
+     "79"
+    ]
+   ],
+   "season": [
+    [
+     "YDS",
+     "1,499"
+    ],
+    [
+     "TD",
+     "10"
+    ],
+    [
+     "INT",
+     "2"
+    ],
+    [
+     "CMP%",
+     "64.8"
+    ],
+    [
+     "RTG",
+     "97.1"
+    ],
+    [
+     "CAR",
+     "42"
     ]
    ],
    "statsLabel": "2026 Passing",
@@ -4429,23 +4436,23 @@
     "stats": [
      [
       "YDS",
-      "1,250",
-      "27th"
+      "1,499",
+      "23rd"
      ],
      [
       "TD",
-      "7",
-      "Tied-24th"
+      "10",
+      "Tied-18th"
      ],
      [
       "INT",
-      "0",
-      "1st"
+      "2",
+      "Tied-1st"
      ],
      [
       "QBR",
-      "62.9",
-      "11th"
+      "61.3",
+      "12th"
      ]
     ]
    },
@@ -4547,7 +4554,7 @@
      [
       "REB",
       "6.1",
-      "Tied-59th"
+      "Tied-58th"
      ],
      [
       "AST",
@@ -4557,7 +4564,7 @@
      [
       "FG%",
       "41.3",
-      "109th"
+      "110th"
      ]
     ]
    },
@@ -4757,7 +4764,7 @@
     ],
     [
      "3P%",
-     "33.5"
+     "33.4"
     ],
     [
      "STL",
@@ -4767,35 +4774,28 @@
    "draft": "2014: Rd 1, Pk 3 (PHI)",
    "espnId": "3059318",
    "experience": "11th Season",
-   "injury": {
-    "comment": "Embiid (foot) remains questionable for Thursday's game against the Raptors, but he participated in the team's morning shootaround, Ky Carlin of USA Today reports.",
-    "date": "2026-11-12",
-    "returnDate": "2026-11-12",
-    "status": "Day-To-Day",
-    "type": "Foot"
-   },
    "jersey": "21",
    "position": "C",
    "season": [
     [
      "PTS",
-     "17.7"
+     "17.9"
     ],
     [
      "REB",
-     "9.3"
+     "8.8"
     ],
     [
      "AST",
-     "3.8"
+     "3.7"
     ],
     [
      "FG%",
-     "37.0"
+     "37.4"
     ],
     [
      "3P%",
-     "12.1"
+     "11.1"
     ],
     [
      "STL",
@@ -4808,22 +4808,22 @@
     "stats": [
      [
       "PTS",
-      "17.7",
-      "54th"
+      "17.9",
+      "51st"
      ],
      [
       "REB",
-      "9.3",
-      "14th"
+      "8.8",
+      "15th"
      ],
      [
       "AST",
-      "3.8",
-      "Tied-70th"
+      "3.7",
+      "70th"
      ],
      [
       "FG%",
-      "37.0",
+      "37.4",
       "126th"
      ]
     ]
@@ -5230,13 +5230,6 @@
    "draft": "2020: Rd 1, Pk 6 (LAC)",
    "espnId": "4038941",
    "experience": "7th Season",
-   "injury": {
-    "comment": "Chargers head coach Jim Harbaugh said that Herbert \"should be good to go\" for Monday's game at Baltimore after imaging on the quarterback's injured left middle finger returned negative for a fracture, ESPN.com reports.",
-    "date": "2026-11-10",
-    "returnDate": "2026-11-16",
-    "status": "Questionable",
-    "type": "Finger"
-   },
    "jersey": "10",
    "last5": [
     [
@@ -5440,7 +5433,7 @@
      [
       "REC",
       "31",
-      "Tied-53rd"
+      "Tied-54th"
      ],
      [
       "YDS",
@@ -5455,7 +5448,7 @@
      [
       "AVG",
       "12.7",
-      "Tied-44th"
+      "Tied-43rd"
      ]
     ]
    },
@@ -5684,17 +5677,17 @@
      [
       "REB",
       "6.1",
-      "63rd"
+      "61st"
      ],
      [
       "AST",
       "3.6",
-      "Tied-77th"
+      "Tied-75th"
      ],
      [
       "FG%",
       "49.4",
-      "44th"
+      "46th"
      ]
     ]
    },
@@ -5741,9 +5734,9 @@
    "espnId": "3916387",
    "experience": "9th Season",
    "injury": {
-    "comment": "Jackson, who is scheduled to undergo surgery on his injured right thumb, has told teammates he plans to return later this season, Ian Rapoport of NFL Network reports.",
-    "date": "2026-11-08",
-    "returnDate": "2026-12-13",
+    "comment": "Jackson (thumb) is \"doing well\" and is expected to be out for \"6-to-10 weeks,\" per head coach Jesse Minter.",
+    "date": "2026-11-13",
+    "returnDate": "2026-12-27",
     "status": "Injured Reserve",
     "type": "Thumb"
    },
@@ -5889,7 +5882,7 @@
     ],
     [
      "3P%",
-     "36.6"
+     "36.7"
     ],
     [
      "STL",
@@ -5904,7 +5897,7 @@
    "season": [
     [
      "PTS",
-     "18.3"
+     "18.6"
     ],
     [
      "REB",
@@ -5912,19 +5905,19 @@
     ],
     [
      "AST",
-     "6.0"
+     "6.3"
     ],
     [
      "FG%",
-     "44.9"
+     "45.9"
     ],
     [
      "3P%",
-     "38.5"
+     "40.6"
     ],
     [
      "STL",
-     "1.7"
+     "1.8"
     ]
    ],
    "statsLabel": "Stats",
@@ -5933,23 +5926,23 @@
     "stats": [
      [
       "PTS",
-      "18.3",
-      "47th"
+      "18.6",
+      "44th"
      ],
      [
       "REB",
       "3.3",
-      "Tied-175th"
+      "Tied-178th"
      ],
      [
       "AST",
-      "6.0",
-      "21st"
+      "6.3",
+      "20th"
      ],
      [
       "FG%",
-      "44.9",
-      "86th"
+      "45.9",
+      "79th"
      ]
     ]
    },
@@ -6017,9 +6010,9 @@
    "experience": "24th Season",
    "injury": {
     "comment": "James (back) is out for Thursday's game against Toronto.",
-    "date": "2026-11-12",
+    "date": "2026-11-13",
     "returnDate": "2026-11-15",
-    "status": "Out",
+    "status": "Day-To-Day",
     "type": "Back"
    },
    "jersey": "23",
@@ -6057,12 +6050,12 @@
      [
       "PTS",
       "15.1",
-      "74th"
+      "73rd"
      ],
      [
       "REB",
       "7.2",
-      "35th"
+      "33rd"
      ],
      [
       "AST",
@@ -6072,7 +6065,7 @@
      [
       "FG%",
       "43.2",
-      "94th"
+      "95th"
      ]
     ]
    },
@@ -6186,12 +6179,12 @@
      [
       "AST",
       "7.6",
-      "8th"
+      "9th"
      ],
      [
       "FG%",
       "48.9",
-      "48th"
+      "51st"
      ]
     ]
    },
@@ -6206,7 +6199,7 @@
    "career": [
     [
      "YDS",
-     "2,123"
+     "2,167"
     ],
     [
      "TD",
@@ -6214,7 +6207,7 @@
     ],
     [
      "REC",
-     "180"
+     "185"
     ],
     [
      "CAR",
@@ -6228,15 +6221,15 @@
    "last5": [
     [
      "YDS",
-     "552"
+     "484"
     ],
     [
      "TD",
-     "2"
+     "1"
     ],
     [
      "REC",
-     "41"
+     "40"
     ],
     [
      "CAR",
@@ -6247,15 +6240,15 @@
    "projected": [
     [
      "YDS",
-     "1,377"
+     "1,307"
     ],
     [
      "TD",
-     "4"
+     "3"
     ],
     [
      "REC",
-     "112"
+     "109"
     ],
     [
      "CAR",
@@ -6265,7 +6258,7 @@
    "season": [
     [
      "YDS",
-     "648"
+     "692"
     ],
     [
      "TD",
@@ -6273,7 +6266,7 @@
     ],
     [
      "REC",
-     "53"
+     "58"
     ],
     [
      "CAR",
@@ -6286,13 +6279,13 @@
     "stats": [
      [
       "REC",
-      "53",
-      "Tied-7th"
+      "58",
+      "6th"
      ],
      [
       "YDS",
-      "648",
-      "11th"
+      "692",
+      "Tied-8th"
      ],
      [
       "TD",
@@ -6301,8 +6294,8 @@
      ],
      [
       "AVG",
-      "12.2",
-      "53rd"
+      "11.9",
+      "56th"
      ]
     ]
    },
@@ -6336,8 +6329,8 @@
    "espnId": "4432708",
    "experience": "3rd Season",
    "injury": {
-    "comment": "Harrison (hamstring) was limited in Wednesday's practice, Jonathan M. Alexander of the Houston Chronicle reports.",
-    "date": "2026-11-11",
+    "comment": "Harrison (hamstring) wasn't spotted during the portion of Friday's practice open to the media, Aaron Wilson of KPRC 2 Houston reports.",
+    "date": "2026-11-13",
     "returnDate": "2026-11-15",
     "status": "Questionable",
     "type": "Hamstring"
@@ -6753,7 +6746,7 @@
      [
       "PTS",
       "23.5",
-      "Tied-16th"
+      "17th"
      ],
      [
       "REB",
@@ -6929,13 +6922,6 @@
    "draft": "2017: Rd 1, Pk 10 (KC)",
    "espnId": "3139477",
    "experience": "10th Season",
-   "injury": {
-    "comment": "Mahomes (right elbow/knee) was a full participant in Wednesday's practice.",
-    "date": "2026-11-11",
-    "returnDate": "",
-    "status": "Questionable",
-    "type": ""
-   },
    "jersey": "15",
    "last5": [
     [
@@ -7280,10 +7266,10 @@
    "espnId": "4426515",
    "experience": "4th Season",
    "injury": {
-    "comment": "out",
-    "date": "2026-11-12",
-    "returnDate": "2026-12-13",
-    "status": "Out",
+    "comment": "The Rams placed Nacua (knee) on injured reserve Thursday.",
+    "date": "2026-11-13",
+    "returnDate": "2026-12-20",
+    "status": "Injured Reserve",
     "type": "Knee - MCL"
    },
    "jersey": "12",
@@ -7693,7 +7679,7 @@
      [
       "TD",
       "3",
-      "Tied-19th"
+      "Tied-20th"
      ],
      [
       "AVG",
@@ -7804,17 +7790,17 @@
      [
       "REB",
       "4.3",
-      "Tied-122nd"
+      "Tied-120th"
      ],
      [
       "AST",
       "4.5",
-      "Tied-49th"
+      "48th"
      ],
      [
       "FG%",
       "45.3",
-      "80th"
+      "85th"
      ]
     ]
    },
@@ -8116,7 +8102,7 @@
    "injury": {
     "comment": "Curry has been diagnosed with an oblique abdominal tear and will be re-evaluated in two weeks, Shams Charania of ESPN reports.",
     "date": "2026-11-12",
-    "returnDate": "2026-12-01",
+    "returnDate": "2026-12-12",
     "status": "Out",
     "type": "Abdomen"
    },
@@ -8165,7 +8151,7 @@
      [
       "AST",
       "3.9",
-      "68th"
+      "66th"
      ],
      [
       "FG%",
@@ -8377,12 +8363,12 @@
      [
       "REC",
       "33",
-      "Tied-41st"
+      "Tied-42nd"
      ],
      [
       "YDS",
       "482",
-      "25th"
+      "26th"
      ],
      [
       "TD",
@@ -8392,7 +8378,7 @@
      [
       "AVG",
       "14.6",
-      "23rd"
+      "22nd"
      ]
     ]
    },
@@ -8709,17 +8695,17 @@
      [
       "REB",
       "11.7",
-      "5th"
+      "4th"
      ],
      [
       "AST",
       "2.8",
-      "Tied-98th"
+      "Tied-100th"
      ],
      [
       "FG%",
       "54.3",
-      "15th"
+      "14th"
      ]
     ]
    },
@@ -9111,22 +9097,22 @@
      [
       "PTS",
       "21.7",
-      "28th"
+      "26th"
      ],
      [
       "REB",
       "5.2",
-      "90th"
+      "Tied-87th"
      ],
      [
       "AST",
       "2.6",
-      "Tied-106th"
+      "108th"
      ],
      [
       "FG%",
       "62.2",
-      "5th"
+      "4th"
      ]
     ]
    },
@@ -9137,5 +9123,5 @@
   }
  },
  "source": "ESPN public data feeds (unofficial; replace with a licensed provider before launch)",
- "updated": "2026-11-12T18:22Z"
+ "updated": "2026-11-13T17:48Z"
 }
