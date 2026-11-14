@@ -257,12 +257,6 @@
      "url": "https://www.espn.com/nfl/story/_/id/50453373/sources-giants-eyed-bijan-robinson-trade-deadline"
     },
     {
-     "date": "2026-11-11",
-     "desc": "Jordan Raanan explains how steep asking prices for Jonathan Taylor and Bijan Robinson kept the Giants from making a move before the trade deadline.",
-     "title": "Why Giants' trade attempts 'just didn't happen'",
-     "url": "https://www.espn.com/video/clip/_/id/50450311/why-giants-trade-attempts-just-happen"
-    },
-    {
      "date": "2026-11-08",
      "desc": "What Adam Rank loves from Bijan Robinson's fantasy performance vs. Bengals",
      "title": "What Adam Rank loves from Bijan Robinson's fantasy performance vs. Bengals",
@@ -285,6 +279,12 @@
      "desc": "Joe Burrow, Bhayshul Tuten and Brock Bowers came up big in Week 8, while Bijan Robinson, Ashton Jeanty and Jonathan Taylor had quiet days.",
      "title": "Week 8 winners and losers: Burrow, Higgins, Chase steal the show; Falcons falter",
      "url": "https://www.espn.com/fantasy/football/story/_/page/FFSundayHighLows-50350092/nfl-week-8-fantasy-football-winners-losers-injuries-rankings-more"
+    },
+    {
+     "date": "2026-10-28",
+     "desc": "Bijan Robinson and Drake London are like brothers off the field, and on it, they're among the NFL's best.",
+     "title": "How the Falcons' two biggest stars bond off the field",
+     "url": "https://www.espn.com/nfl/story/_/id/50289473/falcons-bijan-robinson-drake-london"
     }
    ],
    "nextGame": {
@@ -491,6 +491,12 @@
   "caleb-williams": {
    "news": [
     {
+     "date": "2026-11-13",
+     "desc": "Jeffery Simmons has high praise for Caleb Williams",
+     "title": "Jeffery Simmons has high praise for Caleb Williams",
+     "url": "https://www.espn.com/video/clip/_/id/50473665/jeffery-simmons-high-praise-caleb-williams"
+    },
+    {
      "date": "2026-11-09",
      "desc": "Stephen A.: Caleb Williams' performance vs. the Bucs was a 'bad look'",
      "title": "Stephen A.: Caleb Williams' performance vs. the Bucs was a 'bad look'",
@@ -519,12 +525,6 @@
      "desc": "Caleb Williams wore all-black Caddix cleats after being fined by the NFL for wearing cleats with an \"unauthorized logo\" in weeks 6 and 7.",
      "title": "Bears' Caleb Williams dims cleat controversy with all-black custom pair",
      "url": "https://www.espn.com/nfl/story/_/id/50367609/chicago-bears-williams-dims-controversy-surrounding-cleats-all-black-custom-pair"
-    },
-    {
-     "date": "2026-11-01",
-     "desc": "Caleb Williams believes in his custom Caddix cleats, a source told NFL Network, and won't cover the logo in accordance with league rules out of principle.",
-     "title": "Bears QB Caleb Williams won't 'spat' custom cleats out of principle, source says",
-     "url": "https://www.espn.com/nfl/story/_/id/50343312/source-caleb-williams-spat-cleats-principle"
     }
    ],
    "nextGame": {
@@ -663,8 +663,8 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-14T03:30",
-    "name": "OKC @ LAC"
+    "date": "2026-11-16T02:00",
+    "name": "OKC @ SAC"
    },
    "note": {
     "date": "Fri Oct 30",
@@ -866,6 +866,18 @@
   "damian-lillard": {
    "news": [
     {
+     "date": "2026-11-14",
+     "desc": "Damian Lillard goes full 'Dame Time' with logo 3 to beat halftime buzzer",
+     "title": "Damian Lillard goes full 'Dame Time' with logo 3 to beat halftime buzzer",
+     "url": "https://www.espn.com/video/clip/_/id/50477455/damian-lillard-goes-full-dame-logo-3-beat-half-buzzer"
+    },
+    {
+     "date": "2026-11-14",
+     "desc": "Damian Lillard shows off the range on 3-point shot",
+     "title": "Damian Lillard drills 3-pointer vs. Sacramento Kings",
+     "url": "https://www.espn.com/video/clip/_/id/50477236/damian-lillard-drills-3-pointer-vs-sacramento-kings"
+    },
+    {
      "date": "2026-11-12",
      "desc": "Damian Lillard shows off the range on trey",
      "title": "Damian Lillard hits the trey vs. Oklahoma City Thunder",
@@ -888,28 +900,16 @@
      "desc": "Damian Lillard nails the 3 over two defenders",
      "title": "Damian Lillard nails the 3 over two defenders",
      "url": "https://www.espn.com/video/clip/_/id/50404948/damian-lillard-nails-3-two-defenders"
-    },
-    {
-     "date": "2026-11-07",
-     "desc": "Damian Lillard shows off his range on this trey",
-     "title": "Damian Lillard shows off his range on this trey",
-     "url": "https://www.espn.com/video/clip/_/id/50404534/damian-lillard-shows-range-trey"
-    },
-    {
-     "date": "2026-11-05",
-     "desc": "Damian Lillard with the and-1 bucket",
-     "title": "Damian Lillard somehow gets the and-1 to fall",
-     "url": "https://www.espn.com/video/clip/_/id/50385096/damian-lillard-somehow-gets-1-fall"
     }
    ],
    "nextGame": {
-    "date": "2026-11-14T03:00",
-    "name": "POR @ SAC"
+    "date": "2026-11-17T01:00",
+    "name": "POR @ MIN"
    },
    "note": {
-    "date": "Thu Nov 12",
-    "headline": "Lillard finished with 18 points (5-14 FG, 2-10 3Pt, 6-6 FT), three rebounds, three assists and a steal across 32 minutes in Wednesday's 118-108 win over the Thunder.",
-    "story": "Lillard struggled from beyond the arc, making just two of 10 three-point attempts, but his perfect free-throw shooting helped him reach at least 18 points for the sixth time in his last seven appearances. Lillard's scoring and playmaking remain valuable, although his assist numbers have been trending in the wrong direction. He has dished out five or fewer assists in four of his last five outings. In that span, Lillard has averaged 20.4 points, 1.8 rebounds and 4.4 assists per game."
+    "date": "Sat Nov 14",
+    "headline": "Lillard posted 29 points (6-18 FG, 6-13 3Pt, 11-11 FT), two rebounds and six assists across 33 minutes during Friday's 120-107 win over the Kings.",
+    "story": "Lillard added 29 points despite an inefficient night from the field, making up for it by hitting six threes and going 11-for-11 at the charity stripe. With Ja Morant (hamstring) out, the veteran has excelled, still getting the job done beyond the arc, and continued to look like his old self. Portland has now won three straight to open its six-game road trip."
    }
   },
   "devin-booker": {
@@ -952,6 +952,12 @@
   "donovan-mitchell": {
    "news": [
     {
+     "date": "2026-11-14",
+     "desc": "Donovan Mitchell gets the hoop and the harm",
+     "title": "Donovan Mitchell gets the hoop and the harm",
+     "url": "https://www.espn.com/video/clip/_/id/50476459/donovan-mitchell-gets-hoop-harm"
+    },
+    {
      "date": "2026-11-13",
      "desc": "Mitchell made two commitments this summer: his marriage and his extension with the Cavs. Now it's up to him to keep pushing Cleveland forward.",
      "title": "Donovan Mitchell's renewed faith in Cleveland fuels the Cavs' future",
@@ -980,22 +986,16 @@
      "desc": "Donovan Mitchell somehow gets the and-1 to fall",
      "title": "Donovan Mitchell gets the basket plus the foul",
      "url": "https://www.espn.com/video/clip/_/id/50415121/donovan-mitchell-gets-basket-plus-foul"
-    },
-    {
-     "date": "2026-11-05",
-     "desc": "Donovan Mitchell hits the trey vs. Oklahoma City Thunder",
-     "title": "Donovan Mitchell hits the trey vs. Oklahoma City Thunder",
-     "url": "https://www.espn.com/video/clip/_/id/50384728/donovan-mitchell-hits-trey-vs-oklahoma-city-thunder"
     }
    ],
    "nextGame": {
-    "date": "2026-11-14T01:00",
-    "name": "CLE @ MIA"
+    "date": "2026-11-15T00:30",
+    "name": "DAL @ CLE"
    },
    "note": {
-    "date": "Sat Nov 07",
-    "headline": "Mitchell provided 37 points (13-22 FG, 5-13 3Pt, 6-11 FT), four rebounds, four assists, one block and two steals across 37 minutes during Saturday's 109-97 loss to the Knicks.",
-    "story": "The counting stats were nice, but Mitchell was responsible for nearly half of his team's turnovers and uncharacteristically bricked five of his freebies. He also didn't get much help from his co-star, James Harden, who finished with seven points (2-9 FG, 1-4 3Pt, 2-2 FT), two rebounds, five assists, two blocks and two turnovers in 34 minutes. This was Cleveland's third loss over the past four games, but they'll look to get things back on track with a favorable matchup with the Hornets on Monday."
+    "date": "Sat Nov 14",
+    "headline": "Mitchell closed Friday's 133-121 loss to the Heat with 25 points (9-21 FG, 5-12 3Pt, 2-4 FT), four rebounds and seven assists in 33 minutes.",
+    "story": "Mitchell remains Cleveland's primary scoring threat, although the presence of James Harden gives the Cavaliers another established playmaker capable of handling significant offensive responsibilities. That arrangement could occasionally reduce Mitchell's assist opportunities without affecting his scoring ceiling, and he has been thriving lately, scoring 23 or more points in five of his last six appearances. As long as Mitchell remains the Cavaliers' go-to scorer, he should stay in the upper tier of fantasy guards."
    }
   },
   "drake-maye": {
@@ -1069,13 +1069,13 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-14T02:30",
-    "name": "GS @ SA"
+    "date": "2026-11-15T22:00",
+    "name": "SA @ UTAH"
    },
    "note": {
-    "date": "Wed Nov 11",
-    "headline": "Harper recorded 18 points (7-18 FG, 2-4 3Pt, 2-2 FT), 10 assists, six rebounds, four steals and one block over 36 minutes in Wednesday's 124-119 win over the Bulls.",
-    "story": "This was Harper's first career regular-season double-double, and he did it without committing a single turnover. He also set a season high in swipes and posted a plus-19 differential in the win. The Spurs have now won 10 straight, and they'll look to make it 11 in a row Friday against the Warriors."
+    "date": "Sat Nov 14",
+    "headline": "Harper had nine points (4-8 FG, 1-3 3Pt), three rebounds, four assists and one steal in 25 minutes during Friday's 123-85 victory over the Warriors.",
+    "story": "Harper played an efficient game, adding nine points and four assists without a turnover. Friday's blowout limited everyone's minutes, but his poise as a starter has been one of the quieter positives of San Antonio's hot start."
    }
   },
   "elly-de-la-cruz": {
@@ -1150,50 +1150,50 @@
   "giannis-antetokounmpo": {
    "news": [
     {
+     "date": "2026-11-14",
+     "desc": "Giannis Antetokounmpo and Bam Adebayo each scored 37 points to help the Heat top the Cavs for their sixth win in eight games.",
+     "title": "Giannis Antetokounmpo, Bam Adebayo help showcase Heat's potential in win vs. Cavs",
+     "url": "https://www.espn.com/nba/story/_/id/50477867/giannis-antetokounmpo-bam-adebayo-shine-heat-take-cavs"
+    },
+    {
+     "date": "2026-11-14",
+     "desc": "Giannis Antetokounmpo with the massive block at the rim",
+     "title": "Giannis Antetokounmpo with the massive block at the rim",
+     "url": "https://www.espn.com/video/clip/_/id/50476936/giannis-antetokounmpo-massive-block-rim"
+    },
+    {
+     "date": "2026-11-14",
+     "desc": "Giannis Antetokounmpo connects on alley-oop dunk",
+     "title": "Giannis Antetokounmpo connects on alley-oop dunk",
+     "url": "https://www.espn.com/video/clip/_/id/50476419/giannis-antetokounmpo-connects-alley-oop-dunk"
+    },
+    {
+     "date": "2026-11-14",
+     "desc": "Giannis Antetokounmpo skies for big jam",
+     "title": "Giannis Antetokounmpo skies for big jam",
+     "url": "https://www.espn.com/video/clip/_/id/50476272/giannis-antetokounmpo-skies-big-jam"
+    },
+    {
+     "date": "2026-11-14",
+     "desc": "Giannis Antetokounmpo skies for big slam dunk",
+     "title": "Giannis Antetokounmpo throws down the hammer",
+     "url": "https://www.espn.com/video/clip/_/id/50476212/giannis-antetokounmpo-throws-hammer"
+    },
+    {
      "date": "2026-11-11",
      "desc": "Giannis Antetokounmpo rocks the rim with powerful flush",
      "title": "Giannis Antetokounmpo rocks the rim with powerful flush",
      "url": "https://www.espn.com/video/clip/_/id/50449686/giannis-antetokounmpo-rocks-rim-powerful-flush"
-    },
-    {
-     "date": "2026-11-11",
-     "desc": "Giannis Antetokounmpo gets the hoop and the harm",
-     "title": "Giannis Antetokounmpo gets the hoop and the harm",
-     "url": "https://www.espn.com/video/clip/_/id/50448602/giannis-antetokounmpo-gets-hoop-harm"
-    },
-    {
-     "date": "2026-11-11",
-     "desc": "Giannis Antetokounmpo throws down powerful slam vs. Utah Jazz",
-     "title": "Giannis Antetokounmpo throws down powerful slam vs. Utah Jazz",
-     "url": "https://www.espn.com/video/clip/_/id/50448523/giannis-antetokounmpo-throws-powerful-slam-vs-utah-jazz"
-    },
-    {
-     "date": "2026-11-10",
-     "desc": "Doc Rivers said he reached out to apologize to Giannis Antetokounmpo for questioning the Miami Heat star's basketball IQ, saying he meant more that the force Antetokounmpo plays with can get \"in the way of his feel.\"",
-     "title": "Doc Rivers says he apologized to Giannis Antetokounmpo while clarifying critique",
-     "url": "https://www.espn.com/nba/story/_/id/50436679/doc-rivers-apologized-antetokounmpo-clarifies-critiques"
-    },
-    {
-     "date": "2026-11-09",
-     "desc": "Giannis Antetokounmpo said he was \"speechless\" over Doc Rivers' recent comments, adding that athletes should not be dismayed by \"bitterness or pettiness.\"",
-     "title": "Giannis Antetokounmpo 'speechless' over Doc Rivers barbs, warns against 'bitterness or pettiness'",
-     "url": "https://www.espn.com/nba/story/_/id/50432359/giannis-antetokounmpo-speechless-doc-rivers-criticism"
-    },
-    {
-     "date": "2026-11-09",
-     "desc": "At 4-6, the Heat aren't pointing fingers -- yet. But with each loss, the pressure rises on this season and next -- with Giannis' free agency looming.",
-     "title": "What's fueling the rocky start for Giannis Antetokounmpo and the Miami Heat",
-     "url": "https://www.espn.com/nba/story/_/id/50425453/miami-heat-giannis-antetokounmpo-erik-spoelstra"
     }
    ],
    "nextGame": {
-    "date": "2026-11-14T01:00",
-    "name": "CLE @ MIA"
+    "date": "2026-11-15T01:00",
+    "name": "DET @ MIA"
    },
    "note": {
-    "date": "Thu Nov 12",
-    "headline": "Antetokounmpo (wrist) is probable for Friday's game against Cleveland.",
-    "story": "The superstar forward appears on track to suit up Friday despite dealing with a wrist sprain. Barring any setbacks, Antetokounmpo should be able to handle a normal workload and will be aiming to extend his streak of double-doubles with at least 20 points and 10 rebounds to nine games."
+    "date": "Sat Nov 14",
+    "headline": "Antetokounmpo recorded 37 points (15-20 FG, 1-2 3Pt, 6-11 FT), nine rebounds, two assists and one block over 31 minutes during Friday's 133-121 victory over the Cavaliers.",
+    "story": "Antetokounmpo and Bam Adebayo combined for 74 points against Cleveland, illustrating how dangerous Miami's frontcourt pairing can be when both players are clicking. The change of scenery hasn't altered Antetokounmpo's elite scoring and rebounding potential, although his free-throw shooting remains a familiar concern in category leagues. His ability to produce dominant numbers without requiring excessive minutes continues to make him one of fantasy basketball's premier options, even if this game snapped his run of double-doubles at eight contests. He's averaging 28.8 points, 12.3 rebounds, 4.3 "
    }
   },
   "gunnar-henderson": {
@@ -1251,8 +1251,8 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-14T03:00",
-    "name": "POR @ SAC"
+    "date": "2026-11-17T01:00",
+    "name": "POR @ MIN"
    },
    "note": {
     "date": "Sat Nov 07",
@@ -1321,6 +1321,12 @@
   "jalen-brunson": {
    "news": [
     {
+     "date": "2026-11-14",
+     "desc": "Jalen Brunson lets the Pacers' bench hear if after a nasty bucket",
+     "title": "Jalen Brunson lets the Pacers' bench hear if after a nasty bucket",
+     "url": "https://www.espn.com/video/clip/_/id/50476180/jalen-brunson-lets-pacers-bench-hear-nasty-bucket"
+    },
+    {
      "date": "2026-11-12",
      "desc": "Mike Brown wasn't pleased with the free throw disparity in the Knicks' 115-107 loss to the Cavaliers, calling Jalen Brunson's lack of attempts \"alarming.\"",
      "title": "Knicks' Mike Brown questions FT disparity, Jalen Brunson's zero attempts in loss",
@@ -1349,26 +1355,26 @@
      "desc": "The New York Knicks' star made his \"Law & Order: SVU\" appearance official Thursday.",
      "title": "Jalen Brunson guest stars on 'Law & Order: SVU' alongside Mariska Hargitay",
      "url": "https://www.espn.com/nba/story/_/id/49967701/new-york-knicks-jalen-brunson-law-order-svu-guest-appearance-mariska-hargitay"
-    },
-    {
-     "date": "2026-11-05",
-     "desc": "Jalen Brunson drains trey vs. Chicago Bulls",
-     "title": "Jalen Brunson drains trey vs. Chicago Bulls",
-     "url": "https://www.espn.com/video/clip/_/id/50383905/jalen-brunson-drains-trey-vs-chicago-bulls"
     }
    ],
    "nextGame": {
-    "date": "2026-11-14T00:00",
-    "name": "NY @ IND"
+    "date": "2026-11-15T23:00",
+    "name": "NY @ TOR"
    },
    "note": {
-    "date": "Wed Nov 11",
-    "headline": "Brunson tallied 23 points (7-18 FG, 1-3 3Pt, 8-8 FT), four rebounds and two assists across 28 minutes in Tuesday's 117-85 win over the Bucks.",
-    "story": "Brunson led New York in scoring despite struggling with his shot, and it was far from the star playmaker's best performance. He also posted pedestrian numbers in rebounds and assists, with no defensive stats. The Knicks limited Brunson to just 28 minutes because of the blowout, but expect the reigning Finals MVP to be more involved moving forward. He has scored at least 30 points in three of his last six appearances."
+    "date": "Fri Nov 13",
+    "headline": "Brunson finished with 33 points (11-22 FG, 4-9 3Pt, 7-8 FT), one rebound, 11 assists, two steals and four turnovers across 36 minutes in Friday's 106-104 loss to the Pacers.",
+    "story": "Brunson led all scorers with 33 points and recorded a double-double, accounting for 11 of New York's 28 assists. He was particularly effective from beyond the arc, knocking down four triples while shooting 50 percent from the field. Despite the narrow defeat, Brunson delivered another strong fantasy performance, combining efficient scoring with elite facilitating."
    }
   },
   "jalen-hurts": {
    "news": [
+    {
+     "date": "2026-11-13",
+     "desc": "The NFL provided some additional details about the investigation into how Jalen Hurts' blood clots were handled in response to an inquiry from a U.S. senator.",
+     "title": "NFL outlines steps in Jalen Hurts investigation in letter to senator",
+     "url": "https://www.espn.com/nfl/story/_/id/50474564/nfl-outlines-aspects-jalen-hurts-investigation-senator"
+    },
     {
      "date": "2026-11-11",
      "desc": "Whether Philadelphia wants to go after its QB of the future or build up around Jalen Hurts, it has options.",
@@ -1398,12 +1404,6 @@
      "desc": "The former NFL center tells ESPN about his experience as it might provide a window into the Eagles QB's situation.",
      "title": "David Andrews' blood clot diagnosis illuminates what's going on with Jalen Hurts",
      "url": "https://www.espn.com/nfl/story/_/id/50257261/patriots-david-andrews-blood-clots-eagles-jalen-hurts"
-    },
-    {
-     "date": "2026-10-21",
-     "desc": "NFL commissioner Roger Goodell said Wednesday that the league welcomes an investigation into the Eagles' handling of Jalen Hurts' blood clots.",
-     "title": "Goodell says NFL welcomes investigation into Eagles QB Hurts' medical care",
-     "url": "https://www.espn.com/nfl/story/_/id/50239029/roger-goodell-nfl-welcomes-probe-hurts-medical-care"
     }
    ],
    "nextGame": {
@@ -1934,22 +1934,28 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-14T01:30",
-    "name": "UTAH @ HOU"
+    "date": "2026-11-16T00:00",
+    "name": "HOU @ WSH"
    },
    "note": {
-    "date": "Thu Nov 12",
-    "headline": "Durant posted 20 points (8-17 FG, 1-4 3Pt, 3-4 FT), four rebounds and five assists across 34 minutes during Wednesday's 115-108 win over the Warriors.",
-    "story": "Every member of the Houston starting five scored at least 14 points, but Durant's 20 led the way. The 38-year-old forward has scored at least 20 points in four straight games and nine of 12 to begin the season, averaging 20.9 points, 6.1 boards, 3.6 assists, 1.3 threes and 1.3 blocks as one of the top offensive options in a very balanced attack."
+    "date": "Fri Nov 13",
+    "headline": "Durant finished Friday's 125-118 win over the Jazz with 22 points (5-14 FG, 2-4 3Pt, 10-10 FT), six assists and three rebounds over 33 minutes.",
+    "story": "Durant scored 10 of his 22 points in the first quarter -- with six of those points coming from the charity stripe -- and the veteran forward finished second on the Rockets in scoring behind Alperen Sengun (43 points). Durant has scored 20-plus points in each of his last five outings, and during that stretch he has averaged 21.4 points, 6.8 rebounds and 4.8 assists over 35.1 minutes per game, although he's connected on only 41.9 percent of his field-goal attempts in that span (including 30.4 percent from three on 4.6 3PA/G)."
    }
   },
   "lamar-jackson": {
    "news": [
     {
-     "date": "2026-11-13",
+     "date": "2026-11-14",
      "desc": "Ravens coach Jesse Minter's update on Lamar Jackson's recovery process calls such timelines \"challenging to predict.\"",
-     "title": "Minter: Lamar Jackson 'doing everything' to return; QB had surgery, source says",
+     "title": "Minter: Lamar Jackson 'doing everything' to return; QB had surgery, sources say",
      "url": "https://www.espn.com/nfl/story/_/id/50472222/ravens-lamar-jackson-injury-typical-line-6-10-weeks"
+    },
+    {
+     "date": "2026-11-13",
+     "desc": "Jamison Hensley provides an update on Jackson's thumb injury post surgery, projecting a potential return as early as Week 16.",
+     "title": "When will Lamar Jackson return to the field?",
+     "url": "https://www.espn.com/video/clip/_/id/50474994/when-lamar-jackson-return-field"
     },
     {
      "date": "2026-11-13",
@@ -1974,12 +1980,6 @@
      "desc": "It's possible that Jackson's final snap with the Ravens ended with injury Sunday night.",
      "title": "Record-setting deal? Trade? A look at Lamar Jackson's cloudy future with Ravens",
      "url": "https://www.espn.com/nfl/story/_/id/50359850/look-lamar-jackson-cloudy-future-baltimore-ravens"
-    },
-    {
-     "date": "2026-11-02",
-     "desc": "Why Stephen A. doesn't think Lamar Jackson is done being a Raven",
-     "title": "Why Stephen A. doesn't think Lamar Jackson is done being a Raven",
-     "url": "https://www.espn.com/video/clip/_/id/50358868/why-stephen-think-lamar-jackson-done-being-raven"
     }
    ],
    "nextGame": {
@@ -1995,16 +1995,10 @@
   "lamelo-ball": {
    "news": [
     {
-     "date": "2026-11-13",
-     "desc": "Three decades after its release, the basketball-meets-Looney Tunes adventure remains a pop culture staple.",
-     "title": "Michael Jordan, Bugs Bunny and the lasting legacy of 'Space Jam' at 30",
-     "url": "https://www.espn.com/nba/story/_/id/50463999/space-jam-30-year-anniversary-influence"
-    },
-    {
-     "date": "2026-11-12",
-     "desc": "The fantasy basketball crew gets together to answer the biggest questions from the early part of the season.",
-     "title": "Expert fantasy hoops roundtable: Is Wemby No. 1? Plus early surprises and more",
-     "url": "https://www.espn.com/fantasy/basketball/story/_/id/50456190/fantasy-basketball-early-season-takeaways-nba"
+     "date": "2026-11-14",
+     "desc": "How the FAA ground stop threw college football into chaos",
+     "title": "How the FAA ground stop threw college football into chaos",
+     "url": "https://www.espn.com/video/clip/_/id/50480133/how-faa-ground-stop-threw-college-football-chaos"
     },
     {
      "date": "2026-11-09",
@@ -2029,6 +2023,12 @@
      "desc": "LaMelo Ball drops 34-point game for Timberwolves",
      "title": "LaMelo Ball drops 34-point game for Timberwolves",
      "url": "https://www.espn.com/video/clip/_/id/50364608/lamelo-ball-drops-34-point-game-timberwolves"
+    },
+    {
+     "date": "2026-11-03",
+     "desc": "LaMelo Ball buries 3-pointer against Milwaukee Bucks",
+     "title": "LaMelo Ball drains it from downtown",
+     "url": "https://www.espn.com/video/clip/_/id/50364307/lamelo-ball-drains-downtown"
     }
    ],
    "nextGame": {
@@ -2044,7 +2044,7 @@
   "lebron-james": {
    "news": [
     {
-     "date": "2026-11-12",
+     "date": "2026-11-14",
      "desc": "In 2024, Bronny James joined his father LeBron on the Los Angeles Lakers. Take a closer look at the highest-scoring father-son duos in NBA history.",
      "title": "Which NBA father-son duos have the most points?",
      "url": "https://www.espn.com/nba/story/_/id/41571864/most-nba-points-father-son-duo"
@@ -2134,9 +2134,9 @@
     "name": "LAL @ PHX"
    },
    "note": {
-    "date": "Wed Nov 11",
-    "headline": "Doncic finished Wednesday's 123-112 win over the Bucks with 32 points (10-25 FG, 5-12 3Pt, 7-10 FT), five rebounds, five assists and three steals across 32 minutes. He exited to the locker room late in the fourth quarter due to an apparent right ankle injury and did not return, Thuc Nhi Nguyen of the Los Angeles Times reports.",
-    "story": "Doncic didn't deliver his most efficient shooting effort, though he still led all players in scoring while knocking down a game-high-tying five triples. He has now reached the 30-point threshold in each of his last nine appearances. The superstar floor general also tied for the game-best mark in steals, logging multiple swipes for the fourth time over his last six outings. However, Doncic's status will be worth monitoring ahead of Sunday's game at Phoenix, as he landed on Kyle Kuzma's foot and exited to the locker room Wednesday."
+    "date": "Fri Nov 13",
+    "headline": "Head coach JJ Redick said Friday that Doncic (ankle) is \"fine,\" per Law Murray of The Athletic.",
+    "story": "The superstar guard exited to the locker room late in the fourth quarter of Wednesday's win over the Bucks due to an apparent right ankle injury and did not return. Doncic can be tentatively placed on the right side of the questionable marker until the Lakers release an official injury report at some point prior to Sunday's matchup in Phoenix."
    }
   },
   "malik-nabers": {
@@ -2232,9 +2232,9 @@
     "name": "HOU @ CLE"
    },
    "note": {
-    "date": "Thu Nov 12",
-    "headline": "Harrison (hamstring) didn't practice Thursday, Chris Easterling of the Akron Beacon Journal reports.",
-    "story": "Harrison was limited Wednesday, so the WR's downgrade in participation a day later clouds his status for Sunday's game against the Browns. In three outings since arriving in a trade with the Cardinals, the No. 4 overall pick in the 2024 NFL Draft has combined to catch six of his 11 targets for 60 yards and a TD in in that span."
+    "date": "Fri Nov 13",
+    "headline": "Harrison (hamstring) is ruled out for Sunday's game against the Browns.",
+    "story": "Harrison's absence leaves more snaps for some combination of Xavier Hutchinson, Kayshon Boutte and Tank Dell, all of whom were productive last week in a win over the Chargers. C.J. Stroud has been spreading the ball around and putting up big numbers in the process, with even Nico Collins seeing his target share suffer as a result. Harrison is unlikely to handle a full-time role even when he gets back to full strength."
    }
   },
   "mike-trout": {
@@ -2363,8 +2363,8 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-14T00:00",
-    "name": "MIL @ ORL"
+    "date": "2026-11-17T00:00",
+    "name": "ORL @ BOS"
    },
    "note": {
     "date": "Sat Oct 24",
@@ -2417,8 +2417,8 @@
    },
    "note": {
     "date": "Fri Nov 13",
-    "headline": "Mahomes (elbow/knee) has had \"limited swelling\" and \"limited pain\" in his right (throwing) elbow in recent days, and he is in line to start Sunday's game against the Falcons, Ian Rapoport of ESPN and NFL Network reports.",
-    "story": "Mahomes, who played through what Rapoport described as an \"elbow strain\" during the Chiefs' Week 9 win over the Jets, had an MRI that checked out fine and has practiced fully this week. As a result, he's slated to continue to helm a Kansas City passing attack that was bolstered by the trade deadline acquisition of Josh Downs, who will supplement a WR corps that also includes Rashee Rice and Xavier Worthy."
+    "headline": "Mahomes (elbow) was a full practice participant throughout the week and doesn't have an injury designation for Sunday's game at Atlanta.",
+    "story": "Mahomes made a quick return to last week's game after he was injured, and he'll make the start this Sunday against a Falcons defense that just lost safety Jessie Bates (traded to Jacksonville). The Chiefs, meanwhile, traded for wide receiver Josh Downs, who is expected to play Sunday, per coach Andy Reid. Starting right tackle Jaylon Moore (ankle) is ruled out, and running back Kenneth Walker (groin) is listed as questionable. The Chiefs may need more from Mahomes if Walker ends up inactive or limited."
    }
   },
   "paul-skenes": {
@@ -2715,13 +2715,13 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-14T03:30",
-    "name": "OKC @ LAC"
+    "date": "2026-11-16T02:00",
+    "name": "OKC @ SAC"
    },
    "note": {
-    "date": "Thu Nov 12",
-    "headline": "Gilgeous-Alexander posted 31 points (9-20 FG, 0-7 3Pt, 13-14 FT), four rebounds, two assists and a steal across 36 minutes in Wednesday's 118-108 loss to the Trail Blazers.",
-    "story": "Gilgeous-Alexander overcame a difficult perimeter shooting performance by getting to the free-throw line consistently, converting 13 of 14 attempts en route to posting a seventh consecutive game with at least 25 points. However, his two assists were unusually modest, limiting his overall fantasy production despite the strong scoring output. Fantasy managers shouldn't worry too much, as Gilgeous-Alexander remains one of the best and most reliable fantasy options."
+    "date": "Sat Nov 14",
+    "headline": "Gilgeous-Alexander finished Friday's 113-112 loss to the Clippers with 40 points (15-26 FG, 2-4 3Pt, 8-11 FT), four rebounds, five assists and one steal in 38 minutes.",
+    "story": "Gilgeous-Alexander did everything he could to carry a shorthanded Oklahoma City team, scoring 40 points and hitting a leaning three that put the Thunder up four with three minutes left. He had a chance to win it at the buzzer, but his 21-foot jumper missed, and the Thunder dropped a season-high third straight game. With Chet Holmgren (knee), Jalen Williams (leg) and Cason Wallace (shoulder) all out since late October, nearly every possession runs through him. That workload won't ease up Sunday at Sacramento."
    }
   },
   "shedeur-sanders": {
@@ -2862,8 +2862,8 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-14T02:30",
-    "name": "GS @ SA"
+    "date": "2026-11-17T01:00",
+    "name": "GS @ NO"
    },
    "note": {
     "date": "Thu Nov 12",
@@ -3040,8 +3040,8 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-14T00:00",
-    "name": "NY @ IND"
+    "date": "2026-11-15T18:00",
+    "name": "IND @ PHI"
    },
    "note": {
     "date": "Wed Nov 11",
@@ -3052,50 +3052,26 @@
   "victor-wembanyama": {
    "news": [
     {
+     "date": "2026-11-14",
+     "desc": "Victor Wembanyama and the Spurs pounced on the Warriors with an 18-0 opening run and went on to win 123-85.",
+     "title": "Victor Wembanyama, Spurs open on 18-0 run, rout Warriors for 11th straight win",
+     "url": "https://www.espn.com/nba/story/_/id/50478136/victor-wembanyama-spurs-rout-warriors-11th-straight-win"
+    },
+    {
      "date": "2026-11-10",
      "desc": "Victor Wembanyama finished with 40 points, 11 rebounds and nine blocks in just 25 minutes Monday night to lead the Spurs past the Suns 122-96 for their ninth straight win.",
      "title": "Victor Wembanyama scores 40 points in 25 minutes as Spurs win 9th straight",
      "url": "https://www.espn.com/nba/story/_/id/50440246/victor-wembanyama-scores-40-points-25-minutes-spurs-win-9th-straight"
-    },
-    {
-     "date": "2026-11-10",
-     "desc": "Victor Wembanyama skies for big dunk",
-     "title": "Victor Wembanyama gets up for the beautiful jam",
-     "url": "https://www.espn.com/video/clip/_/id/50439085/victor-wembanyama-gets-beautiful-jam"
-    },
-    {
-     "date": "2026-11-10",
-     "desc": "Victor Wembanyama denies Phoenix Suns with block",
-     "title": "Victor Wembanyama denies Phoenix Suns with stuff",
-     "url": "https://www.espn.com/video/clip/_/id/50438964/victor-wembanyama-denies-phoenix-suns-stuff"
-    },
-    {
-     "date": "2026-11-10",
-     "desc": "Victor Wembanyama gets up for alley-oop jam vs. Phoenix Suns",
-     "title": "Victor Wembanyama gets up for alley-oop jam vs. Phoenix Suns",
-     "url": "https://www.espn.com/video/clip/_/id/50438847/victor-wembanyama-gets-alley-oop-jam-vs-phoenix-suns"
-    },
-    {
-     "date": "2026-11-10",
-     "desc": "Victor Wembanyama gets the and-1 to fall",
-     "title": "Victor Wembanyama somehow gets the and-1 to fall",
-     "url": "https://www.espn.com/video/clip/_/id/50438845/victor-wembanyama-somehow-gets-1-fall"
-    },
-    {
-     "date": "2026-11-10",
-     "desc": "Victor Wembanyama rocks the rim with powerful dunk",
-     "title": "Victor Wembanyama rocks the rim with powerful dunk",
-     "url": "https://www.espn.com/video/clip/_/id/50438447/victor-wembanyama-rocks-rim-powerful-dunk"
     }
    ],
    "nextGame": {
-    "date": "2026-11-14T02:30",
-    "name": "GS @ SA"
+    "date": "2026-11-15T22:00",
+    "name": "SA @ UTAH"
    },
    "note": {
-    "date": "Thu Nov 12",
-    "headline": "Wembanyama ended Wednesday's 124-119 victory over the Bulls with 32 points (13-18 FG, 2-6 3Pt, 4-5 FT), nine rebounds, one assist, five blocks and two steals over 32 minutes.",
-    "story": "Wembanyama continued his torrid stretch, falling one rebound short of a double-double while racking up seven combined steals-plus-blocks. He has been nothing short of spectacular over the past week, highlighted by a 52-point, 24-rebound effort against Dallas and a 40-point, nine-block showing in Phoenix on Monday."
+    "date": "Sat Nov 14",
+    "headline": "Wembanyama ended with 12 points (5-11 FG, 0-2 3Pt, 2-3 FT), 12 rebounds, six assists, two blocks and one steal in 21 minutes during Friday's 123-85 win over Golden State.",
+    "story": "Wembanyama didn't need to do much Friday, and he still finished with another double-double in just 21 minutes as San Antonio blew the game open early. The outside shot wasn't falling, but he controlled the glass and found teammates, including the alley-oop that gave Castle his career high. The Spurs led by 43 in the third quarter, so the big man got a light night before Sunday's trip to Utah, which is a nice bonus during an 11-game winning streak."
    }
   },
   "vladimir-guerrero-jr": {
@@ -3187,6 +3163,12 @@
   "zion-williamson": {
    "news": [
     {
+     "date": "2026-11-14",
+     "desc": "Zion Williamson gets the and-1 to fall",
+     "title": "Zion Williamson with the and-1 bucket",
+     "url": "https://www.espn.com/video/clip/_/id/50475836/zion-williamson-1-bucket"
+    },
+    {
      "date": "2026-11-12",
      "desc": "Zion Williamson called for accountability after the Pelicans lost their fourth straight game, saying the team needed to look itself in the mirror.",
      "title": "Zion Williamson calls out Pelicans for another 'unacceptable' blowout loss",
@@ -3206,12 +3188,6 @@
     },
     {
      "date": "2026-11-05",
-     "desc": "Zion Williamson with the and-1 bucket",
-     "title": "Zion Williamson with the and-1 bucket",
-     "url": "https://www.espn.com/video/clip/_/id/50384442/zion-williamson-1-bucket"
-    },
-    {
-     "date": "2026-11-05",
      "desc": "Zion Williamson denies Utah Jazz with stuff",
      "title": "Zion Williamson with the massive swat at the rim",
      "url": "https://www.espn.com/video/clip/_/id/50384231/zion-williamson-massive-swat-rim"
@@ -3224,8 +3200,8 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-14T01:00",
-    "name": "MEM @ NO"
+    "date": "2026-11-15T00:00",
+    "name": "DEN @ NO"
    },
    "note": {
     "date": "Wed Nov 11",
@@ -3235,5 +3211,5 @@
   }
  },
  "source": "ESPN public feeds (unofficial)",
- "updated": "2026-11-13T17:48Z"
+ "updated": "2026-11-14T16:37Z"
 }

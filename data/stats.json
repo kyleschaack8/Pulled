@@ -360,22 +360,22 @@
      [
       "PTS",
       "25.6",
-      "12th"
+      "10th"
      ],
      [
       "REB",
       "10.5",
-      "Tied-8th"
+      "10th"
      ],
      [
       "AST",
       "2.0",
-      "Tied-143rd"
+      "Tied-138th"
      ],
      [
       "FG%",
       "52.4",
-      "18th"
+      "20th"
      ]
     ]
    },
@@ -486,7 +486,7 @@
      [
       "FG%",
       "48.1",
-      "57th"
+      "Tied-60th"
      ]
     ]
    },
@@ -1419,17 +1419,17 @@
      [
       "REB",
       "5.2",
-      "Tied-87th"
+      "85th"
      ],
      [
       "AST",
       "7.9",
-      "Tied-5th"
+      "6th"
      ],
      [
       "FG%",
       "48.5",
-      "Tied-53rd"
+      "Tied-56th"
      ]
     ]
    },
@@ -2381,7 +2381,7 @@
      [
       "REB",
       "6.9",
-      "Tied-36th"
+      "37th"
      ],
      [
       "AST",
@@ -2391,7 +2391,7 @@
      [
       "FG%",
       "49.5",
-      "44th"
+      "43rd"
      ]
     ]
    },
@@ -2581,23 +2581,23 @@
    "season": [
     [
      "PTS",
-     "19.8"
+     "20.6"
     ],
     [
      "REB",
-     "3.2"
+     "3.1"
     ],
     [
      "AST",
-     "4.2"
+     "4.3"
     ],
     [
      "FG%",
-     "42.7"
+     "41.7"
     ],
     [
      "3P%",
-     "33.3"
+     "34.9"
     ],
     [
      "STL",
@@ -2610,23 +2610,23 @@
     "stats": [
      [
       "PTS",
-      "19.8",
+      "20.6",
       "38th"
      ],
      [
       "REB",
-      "3.2",
-      "Tied-183rd"
+      "3.1",
+      "186th"
      ],
      [
       "AST",
-      "4.2",
-      "57th"
+      "4.3",
+      "Tied-50th"
      ],
      [
       "FG%",
-      "42.7",
-      "102nd"
+      "41.7",
+      "108th"
      ]
     ]
    },
@@ -2715,22 +2715,22 @@
      [
       "PTS",
       "25.5",
-      "13th"
+      "11th"
      ],
      [
       "REB",
       "2.5",
-      "Tied-218th"
+      "Tied-214th"
      ],
      [
       "AST",
       "5.0",
-      "Tied-36th"
+      "Tied-38th"
      ],
      [
       "FG%",
       "49.5",
-      "43rd"
+      "42nd"
      ]
     ]
    },
@@ -2770,7 +2770,7 @@
     ],
     [
      "FG%",
-     "45.4"
+     "45.3"
     ],
     [
      "3P%",
@@ -2789,27 +2789,27 @@
    "season": [
     [
      "PTS",
-     "22.8"
+     "23.0"
     ],
     [
      "REB",
-     "5.0"
+     "4.9"
     ],
     [
      "AST",
-     "5.5"
+     "5.6"
     ],
     [
      "FG%",
-     "48.5"
+     "47.9"
     ],
     [
      "3P%",
-     "37.6"
+     "38.1"
     ],
     [
      "STL",
-     "1.3"
+     "1.2"
     ]
    ],
    "statsLabel": "Stats",
@@ -2818,23 +2818,23 @@
     "stats": [
      [
       "PTS",
-      "22.8",
-      "20th"
+      "23.0",
+      "21st"
      ],
      [
       "REB",
-      "5.0",
-      "Tied-91st"
+      "4.9",
+      "96th"
      ],
      [
       "AST",
-      "5.5",
-      "Tied-29th"
+      "5.6",
+      "Tied-26th"
      ],
      [
       "FG%",
-      "48.5",
-      "55th"
+      "47.9",
+      "63rd"
      ]
     ]
    },
@@ -3028,11 +3028,11 @@
    "season": [
     [
      "PTS",
-     "18.0"
+     "17.3"
     ],
     [
      "REB",
-     "5.4"
+     "5.2"
     ],
     [
      "AST",
@@ -3044,7 +3044,7 @@
     ],
     [
      "3P%",
-     "35.0"
+     "34.9"
     ],
     [
      "STL",
@@ -3057,23 +3057,23 @@
     "stats": [
      [
       "PTS",
-      "18.0",
-      "Tied-49th"
+      "17.3",
+      "53rd"
      ],
      [
       "REB",
-      "5.4",
-      "Tied-76th"
+      "5.2",
+      "Tied-82nd"
      ],
      [
       "AST",
       "4.8",
-      "43rd"
+      "Tied-43rd"
      ],
      [
       "FG%",
       "49.7",
-      "40th"
+      "37th"
      ]
     ]
    },
@@ -3330,7 +3330,7 @@
    ],
    "draft": "2011: Rd 1, Pk 8 (CLE)",
    "espnId": "32129",
-   "experience": "12th Season",
+   "experience": "11th Season",
    "jersey": "12",
    "position": "SS",
    "season": [
@@ -3437,7 +3437,7 @@
     ],
     [
      "3P%",
-     "28.4"
+     "28.5"
     ],
     [
      "STL",
@@ -3447,39 +3447,32 @@
    "draft": "2013: Rd 1, Pk 15 (MIL)",
    "espnId": "3032977",
    "experience": "14th Season",
-   "injury": {
-    "comment": "Antetokounmpo (wrist) is probable for Friday's game against Cleveland.",
-    "date": "2026-11-12",
-    "returnDate": "2026-11-13",
-    "status": "Day-To-Day",
-    "type": "Wrist"
-   },
    "jersey": "7",
    "position": "F",
    "season": [
     [
      "PTS",
-     "27.7"
+     "28.5"
     ],
     [
      "REB",
-     "12.6"
+     "12.3"
     ],
     [
      "AST",
-     "5.2"
+     "4.9"
     ],
     [
      "FG%",
-     "56.7"
+     "58.3"
     ],
     [
      "3P%",
-     "22.2"
+     "24.1"
     ],
     [
      "STL",
-     "0.9"
+     "0.8"
     ]
    ],
    "statsLabel": "Stats",
@@ -3488,23 +3481,23 @@
     "stats": [
      [
       "PTS",
-      "27.7",
-      "5th"
+      "28.5",
+      "4th"
      ],
      [
       "REB",
-      "12.6",
+      "12.3",
       "3rd"
      ],
      [
       "AST",
-      "5.2",
-      "Tied-33rd"
+      "4.9",
+      "40th"
      ],
      [
       "FG%",
-      "56.7",
-      "10th"
+      "58.3",
+      "7th"
      ]
     ]
    },
@@ -3988,27 +3981,27 @@
    "season": [
     [
      "PTS",
-     "26.0"
+     "26.6"
     ],
     [
      "REB",
-     "3.1"
+     "2.9"
     ],
     [
      "AST",
-     "5.2"
+     "5.7"
     ],
     [
      "FG%",
-     "43.0"
+     "43.6"
     ],
     [
      "3P%",
-     "36.7"
+     "37.5"
     ],
     [
      "STL",
-     "0.6"
+     "0.8"
     ]
    ],
    "statsLabel": "Stats",
@@ -4017,23 +4010,23 @@
     "stats": [
      [
       "PTS",
-      "26.0",
-      "11th"
+      "26.6",
+      "7th"
      ],
      [
       "REB",
-      "3.1",
-      "190th"
+      "2.9",
+      "Tied-195th"
      ],
      [
       "AST",
-      "5.2",
-      "Tied-33rd"
+      "5.7",
+      "25th"
      ],
      [
       "FG%",
-      "43.0",
-      "98th"
+      "43.6",
+      "96th"
      ]
     ]
    },
@@ -4549,12 +4542,12 @@
      [
       "PTS",
       "26.3",
-      "7th"
+      "8th"
      ],
      [
       "REB",
       "6.1",
-      "Tied-58th"
+      "59th"
      ],
      [
       "AST",
@@ -4564,7 +4557,7 @@
      [
       "FG%",
       "41.3",
-      "110th"
+      "109th"
      ]
     ]
    },
@@ -4814,17 +4807,17 @@
      [
       "REB",
       "8.8",
-      "15th"
+      "16th"
      ],
      [
       "AST",
       "3.7",
-      "70th"
+      "71st"
      ],
      [
       "FG%",
       "37.4",
-      "126th"
+      "124th"
      ]
     ]
    },
@@ -5642,27 +5635,27 @@
    "season": [
     [
      "PTS",
-     "20.9"
+     "21.0"
     ],
     [
      "REB",
-     "6.1"
+     "5.8"
     ],
     [
      "AST",
-     "3.6"
+     "3.8"
     ],
     [
      "FG%",
-     "49.4"
+     "48.3"
     ],
     [
      "3P%",
-     "34.8"
+     "36.0"
     ],
     [
      "STL",
-     "0.6"
+     "0.5"
     ]
    ],
    "statsLabel": "Stats",
@@ -5671,23 +5664,23 @@
     "stats": [
      [
       "PTS",
-      "20.9",
+      "21.0",
       "33rd"
      ],
      [
       "REB",
-      "6.1",
-      "61st"
+      "5.8",
+      "66th"
      ],
      [
       "AST",
-      "3.6",
-      "Tied-75th"
+      "3.8",
+      "Tied-68th"
      ],
      [
       "FG%",
-      "49.4",
-      "46th"
+      "48.3",
+      "58th"
      ]
     ]
    },
@@ -5927,22 +5920,22 @@
      [
       "PTS",
       "18.6",
-      "44th"
+      "45th"
      ],
      [
       "REB",
       "3.3",
-      "Tied-178th"
+      "Tied-175th"
      ],
      [
       "AST",
       "6.3",
-      "20th"
+      "Tied-19th"
      ],
      [
       "FG%",
       "45.9",
-      "79th"
+      "77th"
      ]
     ]
    },
@@ -6050,22 +6043,22 @@
      [
       "PTS",
       "15.1",
-      "73rd"
+      "71st"
      ],
      [
       "REB",
       "7.2",
-      "33rd"
+      "34th"
      ],
      [
       "AST",
       "6.5",
-      "17th"
+      "Tied-17th"
      ],
      [
       "FG%",
       "43.2",
-      "95th"
+      "99th"
      ]
     ]
    },
@@ -6128,8 +6121,8 @@
    "espnId": "3945274",
    "experience": "9th Season",
    "injury": {
-    "comment": "Doncic finished Wednesday's 123-112 win over the Bucks with 32 points (10-25 FG, 5-12 3Pt, 7-10 FT), five rebounds, five assists and three steals across 32 minutes. He exited to the locker room late in the fourth quarter due to an apparent right ankle injury and did not return, Thuc Nhi Nguyen of the Los Angeles Times reports.",
-    "date": "2026-11-12",
+    "comment": "Head coach JJ Redick said Friday that Doncic (ankle) is \"fine,\" per Law Murray of The Athletic.",
+    "date": "2026-11-13",
     "returnDate": "2026-11-15",
     "status": "Day-To-Day",
     "type": "Ankle"
@@ -6174,17 +6167,17 @@
      [
       "REB",
       "7.5",
-      "Tied-26th"
+      "Tied-27th"
      ],
      [
       "AST",
       "7.6",
-      "9th"
+      "Tied-7th"
      ],
      [
       "FG%",
       "48.9",
-      "51st"
+      "49th"
      ]
     ]
    },
@@ -6329,10 +6322,10 @@
    "espnId": "4432708",
    "experience": "3rd Season",
    "injury": {
-    "comment": "Harrison (hamstring) wasn't spotted during the portion of Friday's practice open to the media, Aaron Wilson of KPRC 2 Houston reports.",
+    "comment": "Harrison (hamstring) is ruled out for Sunday's game against the Browns.",
     "date": "2026-11-13",
-    "returnDate": "2026-11-15",
-    "status": "Questionable",
+    "returnDate": "2026-11-19",
+    "status": "Out",
     "type": "Hamstring"
    },
    "jersey": "18",
@@ -6746,7 +6739,7 @@
      [
       "PTS",
       "23.5",
-      "17th"
+      "19th"
      ],
      [
       "REB",
@@ -6756,12 +6749,12 @@
      [
       "AST",
       "9.0",
-      "1st"
+      "2nd"
      ],
      [
       "FG%",
       "50.0",
-      "Tied-34th"
+      "Tied-32nd"
      ]
     ]
    },
@@ -7755,11 +7748,11 @@
    "season": [
     [
      "PTS",
-     "29.7"
+     "30.5"
     ],
     [
      "REB",
-     "4.3"
+     "4.2"
     ],
     [
      "AST",
@@ -7767,11 +7760,11 @@
     ],
     [
      "FG%",
-     "45.3"
+     "46.3"
     ],
     [
      "3P%",
-     "33.8"
+     "34.5"
     ],
     [
      "STL",
@@ -7784,23 +7777,23 @@
     "stats": [
      [
       "PTS",
-      "29.7",
-      "3rd"
+      "30.5",
+      "2nd"
      ],
      [
       "REB",
-      "4.3",
-      "Tied-120th"
+      "4.2",
+      "Tied-116th"
      ],
      [
       "AST",
       "4.5",
-      "48th"
+      "47th"
      ],
      [
       "FG%",
-      "45.3",
-      "85th"
+      "46.3",
+      "72nd"
      ]
     ]
    },
@@ -8141,7 +8134,7 @@
      [
       "PTS",
       "27.8",
-      "4th"
+      "5th"
      ],
      [
       "REB",
@@ -8151,12 +8144,12 @@
      [
       "AST",
       "3.9",
-      "66th"
+      "63rd"
      ],
      [
       "FG%",
       "50.0",
-      "Tied-34th"
+      "Tied-32nd"
      ]
     ]
    },
@@ -8645,7 +8638,7 @@
     ],
     [
      "3P%",
-     "34.1"
+     "34.0"
     ],
     [
      "STL",
@@ -8660,7 +8653,7 @@
    "season": [
     [
      "PTS",
-     "30.3"
+     "28.8"
     ],
     [
      "REB",
@@ -8668,15 +8661,15 @@
     ],
     [
      "AST",
-     "2.8"
+     "3.1"
     ],
     [
      "FG%",
-     "54.3"
+     "53.9"
     ],
     [
      "3P%",
-     "32.4"
+     "31.5"
     ],
     [
      "STL",
@@ -8689,8 +8682,8 @@
     "stats": [
      [
       "PTS",
-      "30.3",
-      "2nd"
+      "28.8",
+      "3rd"
      ],
      [
       "REB",
@@ -8699,13 +8692,13 @@
      ],
      [
       "AST",
-      "2.8",
-      "Tied-100th"
+      "3.1",
+      "Tied-90th"
      ],
      [
       "FG%",
-      "54.3",
-      "14th"
+      "53.9",
+      "15th"
      ]
     ]
    },
@@ -9048,15 +9041,15 @@
     ],
     [
      "FG%",
-     "59.2"
+     "59.1"
     ],
     [
      "3P%",
-     "33.6"
+     "33.3"
     ],
     [
      "STL",
-     "1.0"
+     "1.1"
     ]
    ],
    "draft": "2019: Rd 1, Pk 1 (NO)",
@@ -9067,7 +9060,7 @@
    "season": [
     [
      "PTS",
-     "21.7"
+     "21.8"
     ],
     [
      "REB",
@@ -9075,19 +9068,19 @@
     ],
     [
      "AST",
-     "2.6"
+     "2.8"
     ],
     [
      "FG%",
-     "62.2"
+     "60.7"
     ],
     [
      "3P%",
-     "50.0"
+     "44.4"
     ],
     [
      "STL",
-     "2.0"
+     "2.1"
     ]
    ],
    "statsLabel": "Stats",
@@ -9096,23 +9089,23 @@
     "stats": [
      [
       "PTS",
-      "21.7",
-      "26th"
+      "21.8",
+      "24th"
      ],
      [
       "REB",
       "5.2",
-      "Tied-87th"
+      "86th"
      ],
      [
       "AST",
-      "2.6",
-      "108th"
+      "2.8",
+      "Tied-103rd"
      ],
      [
       "FG%",
-      "62.2",
-      "4th"
+      "60.7",
+      "5th"
      ]
     ]
    },
@@ -9123,5 +9116,5 @@
   }
  },
  "source": "ESPN public data feeds (unofficial; replace with a licensed provider before launch)",
- "updated": "2026-11-13T17:48Z"
+ "updated": "2026-11-14T16:37Z"
 }
