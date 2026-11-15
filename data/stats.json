@@ -360,7 +360,7 @@
      [
       "PTS",
       "25.6",
-      "10th"
+      "11th"
      ],
      [
       "REB",
@@ -375,7 +375,7 @@
      [
       "FG%",
       "52.4",
-      "20th"
+      "22nd"
      ]
     ]
    },
@@ -486,7 +486,7 @@
      [
       "FG%",
       "48.1",
-      "Tied-60th"
+      "57th"
      ]
     ]
    },
@@ -1369,7 +1369,7 @@
     ],
     [
      "3P%",
-     "33.8"
+     "33.9"
     ],
     [
      "STL",
@@ -1384,7 +1384,7 @@
    "season": [
     [
      "PTS",
-     "25.0"
+     "25.7"
     ],
     [
      "REB",
@@ -1396,11 +1396,11 @@
     ],
     [
      "FG%",
-     "48.5"
+     "47.7"
     ],
     [
      "3P%",
-     "31.4"
+     "32.1"
     ],
     [
      "STL",
@@ -1413,13 +1413,13 @@
     "stats": [
      [
       "PTS",
-      "25.0",
-      "14th"
+      "25.7",
+      "10th"
      ],
      [
       "REB",
       "5.2",
-      "85th"
+      "87th"
      ],
      [
       "AST",
@@ -1428,8 +1428,8 @@
      ],
      [
       "FG%",
-      "48.5",
-      "Tied-56th"
+      "47.7",
+      "62nd"
      ]
     ]
    },
@@ -2327,11 +2327,11 @@
     ],
     [
      "FG%",
-     "47.2"
+     "47.0"
     ],
     [
      "3P%",
-     "29.6"
+     "29.0"
     ],
     [
      "STL",
@@ -2346,27 +2346,27 @@
    "season": [
     [
      "PTS",
-     "24.6"
+     "24.1"
     ],
     [
      "REB",
-     "6.9"
+     "7.0"
     ],
     [
      "AST",
-     "6.5"
+     "6.4"
     ],
     [
      "FG%",
-     "49.5"
+     "47.9"
     ],
     [
      "3P%",
-     "30.0"
+     "26.8"
     ],
     [
      "STL",
-     "2.2"
+     "2.0"
     ]
    ],
    "statsLabel": "Stats",
@@ -2375,23 +2375,23 @@
     "stats": [
      [
       "PTS",
-      "24.6",
-      "16th"
+      "24.1",
+      "17th"
      ],
      [
       "REB",
-      "6.9",
-      "37th"
+      "7.0",
+      "Tied-36th"
      ],
      [
       "AST",
-      "6.5",
-      "16th"
+      "6.4",
+      "18th"
      ],
      [
       "FG%",
-      "49.5",
-      "43rd"
+      "47.9",
+      "60th"
      ]
     ]
    },
@@ -2616,12 +2616,12 @@
      [
       "REB",
       "3.1",
-      "186th"
+      "185th"
      ],
      [
       "AST",
       "4.3",
-      "Tied-50th"
+      "Tied-51st"
      ],
      [
       "FG%",
@@ -2715,22 +2715,22 @@
      [
       "PTS",
       "25.5",
-      "11th"
+      "12th"
      ],
      [
       "REB",
       "2.5",
-      "Tied-214th"
+      "Tied-216th"
      ],
      [
       "AST",
       "5.0",
-      "Tied-38th"
+      "Tied-40th"
      ],
      [
       "FG%",
       "49.5",
-      "42nd"
+      "44th"
      ]
     ]
    },
@@ -2784,6 +2784,13 @@
    "draft": "2017: Rd 1, Pk 13 (DEN)",
    "espnId": "3908809",
    "experience": "10th Season",
+   "injury": {
+    "comment": "Mitchell (knee) has been ruled out for Saturday's game against the Mavericks.",
+    "date": "2026-11-15",
+    "returnDate": "2026-11-16",
+    "status": "Day-To-Day",
+    "type": "Knee"
+   },
    "jersey": "45",
    "position": "G",
    "season": [
@@ -2824,7 +2831,7 @@
      [
       "REB",
       "4.9",
-      "96th"
+      "95th"
      ],
      [
       "AST",
@@ -2834,7 +2841,7 @@
      [
       "FG%",
       "47.9",
-      "63rd"
+      "59th"
      ]
     ]
    },
@@ -2875,6 +2882,13 @@
    "draft": "2024: Rd 1, Pk 3 (NE)",
    "espnId": "4431452",
    "experience": "3rd Season",
+   "injury": {
+    "comment": "Maye (ankle) has been ruled out for the remainder of Sunday's game against the Lions, Doug Kyed of the Boston Herald reports.",
+    "date": "2026-11-15",
+    "returnDate": "2026-11-29",
+    "status": "Out",
+    "type": "Ankle"
+   },
    "jersey": "10",
    "last5": [
     [
@@ -3073,7 +3087,7 @@
      [
       "FG%",
       "49.7",
-      "37th"
+      "40th"
      ]
     ]
    },
@@ -3452,23 +3466,23 @@
    "season": [
     [
      "PTS",
-     "28.5"
+     "28.9"
     ],
     [
      "REB",
-     "12.3"
+     "12.5"
     ],
     [
      "AST",
-     "4.9"
+     "5.2"
     ],
     [
      "FG%",
-     "58.3"
+     "59.5"
     ],
     [
      "3P%",
-     "24.1"
+     "25.8"
     ],
     [
      "STL",
@@ -3481,22 +3495,22 @@
     "stats": [
      [
       "PTS",
-      "28.5",
-      "4th"
+      "28.9",
+      "3rd"
      ],
      [
       "REB",
-      "12.3",
+      "12.5",
       "3rd"
      ],
      [
       "AST",
-      "4.9",
-      "40th"
+      "5.2",
+      "36th"
      ],
      [
       "FG%",
-      "58.3",
+      "59.5",
       "7th"
      ]
     ]
@@ -4026,7 +4040,7 @@
      [
       "FG%",
       "43.6",
-      "96th"
+      "98th"
      ]
     ]
    },
@@ -4557,7 +4571,7 @@
      [
       "FG%",
       "41.3",
-      "109th"
+      "110th"
      ]
     ]
    },
@@ -4767,6 +4781,13 @@
    "draft": "2014: Rd 1, Pk 3 (PHI)",
    "espnId": "3059318",
    "experience": "11th Season",
+   "injury": {
+    "comment": "Embiid (right foot injury management) has been ruled out for Sunday's game against the Pacers.",
+    "date": "2026-11-14",
+    "returnDate": "2026-11-16",
+    "status": "Out",
+    "type": "Foot"
+   },
    "jersey": "21",
    "position": "C",
    "season": [
@@ -4802,7 +4823,7 @@
      [
       "PTS",
       "17.9",
-      "51st"
+      "50th"
      ],
      [
       "REB",
@@ -4817,7 +4838,7 @@
      [
       "FG%",
       "37.4",
-      "124th"
+      "127th"
      ]
     ]
    },
@@ -5665,7 +5686,7 @@
      [
       "PTS",
       "21.0",
-      "33rd"
+      "34th"
      ],
      [
       "REB",
@@ -5680,7 +5701,7 @@
      [
       "FG%",
       "48.3",
-      "58th"
+      "55th"
      ]
     ]
    },
@@ -5875,7 +5896,7 @@
     ],
     [
      "3P%",
-     "36.7"
+     "36.6"
     ],
     [
      "STL",
@@ -5894,23 +5915,23 @@
     ],
     [
      "REB",
-     "3.3"
+     "3.6"
     ],
     [
      "AST",
-     "6.3"
+     "6.2"
     ],
     [
      "FG%",
-     "45.9"
+     "43.6"
     ],
     [
      "3P%",
-     "40.6"
+     "37.6"
     ],
     [
      "STL",
-     "1.8"
+     "1.9"
     ]
    ],
    "statsLabel": "Stats",
@@ -5924,18 +5945,18 @@
      ],
      [
       "REB",
-      "3.3",
-      "Tied-175th"
+      "3.6",
+      "Tied-148th"
      ],
      [
       "AST",
-      "6.3",
-      "Tied-19th"
+      "6.2",
+      "20th"
      ],
      [
       "FG%",
-      "45.9",
-      "77th"
+      "43.6",
+      "99th"
      ]
     ]
    },
@@ -6001,13 +6022,6 @@
    "draft": "2003: Rd 1, Pk 1 (CLE)",
    "espnId": "1966",
    "experience": "24th Season",
-   "injury": {
-    "comment": "James (back) is out for Thursday's game against Toronto.",
-    "date": "2026-11-13",
-    "returnDate": "2026-11-15",
-    "status": "Day-To-Day",
-    "type": "Back"
-   },
    "jersey": "23",
    "position": "F",
    "season": [
@@ -6043,7 +6057,7 @@
      [
       "PTS",
       "15.1",
-      "71st"
+      "72nd"
      ],
      [
       "REB",
@@ -6053,12 +6067,12 @@
      [
       "AST",
       "6.5",
-      "Tied-17th"
+      "Tied-16th"
      ],
      [
       "FG%",
       "43.2",
-      "99th"
+      "103rd"
      ]
     ]
    },
@@ -6120,13 +6134,6 @@
    "draft": "2018: Rd 1, Pk 3 (ATL)",
    "espnId": "3945274",
    "experience": "9th Season",
-   "injury": {
-    "comment": "Head coach JJ Redick said Friday that Doncic (ankle) is \"fine,\" per Law Murray of The Athletic.",
-    "date": "2026-11-13",
-    "returnDate": "2026-11-15",
-    "status": "Day-To-Day",
-    "type": "Ankle"
-   },
    "jersey": "77",
    "position": "G",
    "season": [
@@ -6177,7 +6184,7 @@
      [
       "FG%",
       "48.9",
-      "49th"
+      "46th"
      ]
     ]
    },
@@ -6322,8 +6329,8 @@
    "espnId": "4432708",
    "experience": "3rd Season",
    "injury": {
-    "comment": "Harrison (hamstring) is ruled out for Sunday's game against the Browns.",
-    "date": "2026-11-13",
+    "comment": "inactive",
+    "date": "2026-11-15",
     "returnDate": "2026-11-19",
     "status": "Out",
     "type": "Hamstring"
@@ -6678,7 +6685,7 @@
    "career": [
     [
      "PTS",
-     "22.2"
+     "22.3"
     ],
     [
      "REB",
@@ -6709,27 +6716,27 @@
    "season": [
     [
      "PTS",
-     "23.5"
+     "23.7"
     ],
     [
      "REB",
-     "10.8"
+     "10.5"
     ],
     [
      "AST",
-     "9.0"
+     "9.1"
     ],
     [
      "FG%",
-     "50.0"
+     "51.0"
     ],
     [
      "3P%",
-     "23.3"
+     "25.0"
     ],
     [
      "STL",
-     "1.8"
+     "1.9"
     ]
    ],
    "statsLabel": "Stats",
@@ -6738,23 +6745,23 @@
     "stats": [
      [
       "PTS",
-      "23.5",
+      "23.7",
       "19th"
      ],
      [
       "REB",
-      "10.8",
+      "10.5",
       "7th"
      ],
      [
       "AST",
-      "9.0",
+      "9.1",
       "2nd"
      ],
      [
       "FG%",
-      "50.0",
-      "Tied-32nd"
+      "51.0",
+      "29th"
      ]
     ]
    },
@@ -7259,8 +7266,8 @@
    "espnId": "4426515",
    "experience": "4th Season",
    "injury": {
-    "comment": "The Rams placed Nacua (knee) on injured reserve Thursday.",
-    "date": "2026-11-13",
+    "comment": "Nacua (knee/toe) has an expected return date of \"mid-December,\" Ian Rapoport of NFL Network reports.",
+    "date": "2026-11-15",
     "returnDate": "2026-12-20",
     "status": "Injured Reserve",
     "type": "Knee - MCL"
@@ -7783,7 +7790,7 @@
      [
       "REB",
       "4.2",
-      "Tied-116th"
+      "Tied-117th"
      ],
      [
       "AST",
@@ -8139,7 +8146,7 @@
      [
       "REB",
       "3.7",
-      "Tied-141st"
+      "Tied-140th"
      ],
      [
       "AST",
@@ -8149,7 +8156,7 @@
      [
       "FG%",
       "50.0",
-      "Tied-32nd"
+      "Tied-33rd"
      ]
     ]
    },
@@ -8683,7 +8690,7 @@
      [
       "PTS",
       "28.8",
-      "3rd"
+      "4th"
      ],
      [
       "REB",
@@ -8693,7 +8700,7 @@
      [
       "AST",
       "3.1",
-      "Tied-90th"
+      "Tied-91st"
      ],
      [
       "FG%",
@@ -8854,7 +8861,7 @@
    ],
    "draft": "2023: Rd 1, Pk 4 (TEX)",
    "espnId": "4719324",
-   "experience": "3rd Season",
+   "experience": "2nd Season",
    "jersey": "36",
    "position": "LF",
    "season": [
@@ -9045,11 +9052,11 @@
     ],
     [
      "3P%",
-     "33.3"
+     "33.9"
     ],
     [
      "STL",
-     "1.1"
+     "1.0"
     ]
    ],
    "draft": "2019: Rd 1, Pk 1 (NO)",
@@ -9060,7 +9067,7 @@
    "season": [
     [
      "PTS",
-     "21.8"
+     "21.9"
     ],
     [
      "REB",
@@ -9068,19 +9075,19 @@
     ],
     [
      "AST",
-     "2.8"
+     "2.7"
     ],
     [
      "FG%",
-     "60.7"
+     "60.2"
     ],
     [
      "3P%",
-     "44.4"
+     "46.2"
     ],
     [
      "STL",
-     "2.1"
+     "1.9"
     ]
    ],
    "statsLabel": "Stats",
@@ -9089,23 +9096,23 @@
     "stats": [
      [
       "PTS",
-      "21.8",
-      "24th"
+      "21.9",
+      "25th"
      ],
      [
       "REB",
       "5.2",
-      "86th"
+      "Tied-82nd"
      ],
      [
       "AST",
-      "2.8",
-      "Tied-103rd"
+      "2.7",
+      "Tied-105th"
      ],
      [
       "FG%",
-      "60.7",
-      "5th"
+      "60.2",
+      "6th"
      ]
     ]
    },
@@ -9116,5 +9123,5 @@
   }
  },
  "source": "ESPN public data feeds (unofficial; replace with a licensed provider before launch)",
- "updated": "2026-11-14T16:37Z"
+ "updated": "2026-11-15T17:13Z"
 }
