@@ -153,7 +153,7 @@
    "note": {
     "date": "Sat Nov 21",
     "headline": "Davis totaled 36 points (16-26 FG, 4-9 FT), 11 rebounds and three assists in 34 minutes during Friday's 98-94 victory over the Bulls.",
-    "story": "Davis delivered his second-highest-scoring performance of the season, overwhelming Chicago's interior defense while securing his fifth double-double in his last seven appearances. His nine missed free throws were a significant drawback for category managers, but the veteran's scoring efficiency and rebounding remain major strengths. Davis continues to anchor Washington's frontcourt, and his consistent workload should keep him among the team's most reliable fantasy contributors."
+    "story": "Davis delivered his second-highest-scoring performance of the season, overwhelming Chicago's interior defense while securing his fifth double-double in his last seven appearances. His five missed free throws were a significant drawback for category managers, but the veteran's scoring efficiency and rebounding remain major strengths. Davis continues to anchor Washington's frontcourt, and his consistent workload should keep him among the team's most reliable fantasy contributors."
    }
   },
   "anthony-edwards": {
@@ -196,8 +196,8 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-22T01:00",
-    "name": "MEM @ MIN"
+    "date": "2026-11-24T00:30",
+    "name": "BKN @ MIN"
    },
    "note": {
     "date": "Thu Oct 29",
@@ -396,9 +396,9 @@
     "name": "LV @ DEN"
    },
    "note": {
-    "date": "Fri Nov 20",
-    "headline": "Bowers (ankle) said Friday that his availability for Sunday's game against the Broncos remains up in the air, Sam Warren of The Athletic reports.",
-    "story": "\"We still have some conversations to have, so we'll see,\" Bowers said. With the tight end already slated to carry a questionable tag into the weekend, his own comments don't provide added clarity about whether he'll suit up Sunday. The Raiders may wait until closer to the 4:25 p.m. ET kickoff before making a final call on Bowers' status. Jack Bech was the big winner in terms of playing time and targets after Bowers left last Sunday's game against the Seahawks."
+    "date": "Sun Nov 22",
+    "headline": "Adam Schefter of ESPN reported on Sunday NFL Countdown that \"there is not a lot of optimism\" that Bowers (ankle/quadriceps) will suit up Sunday at Denver, but the tight end is \"pushing to play.\"",
+    "story": "Bowers was in and out of last Sunday's loss to the Seahawks before exiting for good after halftime due to an ankle injury. Head coach Klint Kubiak labeled Bowers day-to-day last Monday, and he then missed Wednesday's practice before being limited Thursday and Friday and entering the weekend listed as questionable. It appears Bowers' availability will be subject to a pregame warmup, after which his status will be clarified about 90 minutes before Sunday's 4:25 p.m. ET kickoff. Fellow TE Michael Mayer will get a boost in standing if Bowers is inhibited or sidelined."
    }
   },
   "brock-purdy": {
@@ -501,9 +501,9 @@
     "name": "DET @ ATL"
    },
    "note": {
-    "date": "Fri Nov 20",
-    "headline": "Cunningham recorded 23 points (10-22 FG, 2-7 3Pt, 1-4 FT), five rebounds, nine assists and one steal over 36 minutes in Friday's 105-102 loss to the Raptors.",
-    "story": "Cunningham has been off from three-point range over the past seven games, converting just 25.6 percent of his shots from behind the arc. However, it should only be a matter of time before Detroit's star guard finds his rhythm from distance again -- he's shot 35.1 percent from long range over the prior three seasons."
+    "date": "Sat Nov 21",
+    "headline": "Cunningham (knee) is probable to play Sunday in Atlanta.",
+    "story": "Cunningham is dealing with some minor soreness in his right knee, but he's planning to play through it. Cunningham is averaging 25.6 points, 5.1 rebounds, 7.9 assists, 2.0 triples, 1.4 steals and 0.9 blocks per game this season."
    }
   },
   "caleb-williams": {
@@ -748,16 +748,16 @@
      "url": "https://www.espn.com/nfl/story/_/id/50535018/colts-texans-highlights-best-plays-moments-touchdowns"
     },
     {
-     "date": "2026-11-20",
-     "desc": "C.J. Stroud fires a 42-yard dime to Nico Collins for Texans TD",
-     "title": "C.J. Stroud fires a 42-yard dime to Nico Collins for Texans TD",
-     "url": "https://www.espn.com/video/clip/_/id/50536298/cj-stroud-fires-42-yard-dime-nico-collins-texans-td"
-    },
-    {
      "date": "2026-11-10",
      "desc": "Stroud matched his career high with five TD passes and added 384 passing yards in the win.",
      "title": "A 'confident' C.J. Stroud soaks in five-TD day against Chargers",
      "url": "https://www.espn.com/nfl/story/_/id/50434826/texans-cj-stroud-five-tds-chargers"
+    },
+    {
+     "date": "2026-11-03",
+     "desc": "Sources say C.J. Stroud turned down a deal similar to Trevor Lawrence's. He's in line for a bigger one.",
+     "title": "C.J. Stroud turned down a big contract. A bigger one awaits",
+     "url": "https://www.espn.com/nfl/story/_/id/50360444/cj-stroud-texans-contract"
     }
    ],
    "nextGame": {
@@ -822,6 +822,24 @@
   "cooper-flagg": {
    "news": [
     {
+     "date": "2026-11-22",
+     "desc": "Cooper Flagg with the and-1 bucket",
+     "title": "Cooper Flagg gets the and-1 to fall",
+     "url": "https://www.espn.com/video/clip/_/id/50558264/cooper-flagg-gets-1-fall"
+    },
+    {
+     "date": "2026-11-22",
+     "desc": "Cooper Flagg shows off the range on 3-point shot",
+     "title": "Cooper Flagg shows off the range on 3-point shot",
+     "url": "https://www.espn.com/video/clip/_/id/50557817/cooper-flagg-shows-range-3-point-shot"
+    },
+    {
+     "date": "2026-11-22",
+     "desc": "Cooper Flagg throws down the hammer",
+     "title": "Cooper Flagg throws down the hammer",
+     "url": "https://www.espn.com/video/clip/_/id/50557185/cooper-flagg-throws-hammer"
+    },
+    {
      "date": "2026-11-20",
      "desc": "The Dallas Mavericks' pop-up includes creamy peanut butter and grape jelly on white sourdough bread.",
      "title": "Mavericks lean into Cooper Flagg's peanut butter and jelly trend with pop-up",
@@ -834,33 +852,15 @@
      "url": "https://www.espn.com/video/clip/_/id/50526381/cooper-flagg-gets-hoop-harm"
     },
     {
-     "date": "2026-11-15",
-     "desc": "Cooper Flagg gets the and-1 to fall",
-     "title": "Cooper Flagg gets the and-1 to fall",
-     "url": "https://www.espn.com/video/clip/_/id/50495967/cooper-flagg-gets-1-fall"
-    },
-    {
      "date": "2026-11-13",
      "desc": "Cooper Flagg skies for big slam",
      "title": "Cooper Flagg skies for big slam",
      "url": "https://www.espn.com/video/clip/_/id/50466380/cooper-flagg-skies-big-slam"
-    },
-    {
-     "date": "2026-11-10",
-     "desc": "Dallas star Cooper Flagg, 19, authored one of the finest efforts of his young career on Monday night, stuffing the box score with 43 points, 10 rebounds, six assists, three steals and a block in the Dallas Mavericks' 125-122 win over the Indiana Pacers.",
-     "title": "'Unbelievable' Flagg finishes with 43 points as Mavericks outlast Pacers",
-     "url": "https://www.espn.com/nba/story/_/id/50440099/flagg-finishes-43-points-mavericks-outlast-pacers"
-    },
-    {
-     "date": "2026-11-10",
-     "desc": "Cooper Flagg drops 43-point double-double to lift Mavs past Pacers",
-     "title": "Cooper Flagg drops 43-point double-double to lift Mavs past Pacers",
-     "url": "https://www.espn.com/video/clip/_/id/50439442/cooper-flagg-drops-43-point-double-double-lift-mavs-pacers"
     }
    ],
    "nextGame": {
-    "date": "2026-11-22T01:00",
-    "name": "LAC @ DAL"
+    "date": "2026-11-23T00:00",
+    "name": "DAL @ UTAH"
    },
    "note": {
     "date": "Wed Nov 18",
@@ -927,13 +927,13 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-22T00:30",
-    "name": "POR @ NY"
+    "date": "2026-11-24T00:00",
+    "name": "POR @ PHI"
    },
    "note": {
-    "date": "Fri Nov 20",
-    "headline": "Lillard finished with 33 points (10-18 FG, 5-12 3Pt, 8-9 FT) and six rebounds in 35 minutes during Thursday's 124-114 win over the Bucks.",
-    "story": "Lillard delivered his first 30-point performance since March 2025, showcasing renewed scoring explosiveness against his former team. He's reached 25 points in three of his last four appearances, with 16 triples during that stretch. His scoring resurgence is encouraging, though fluctuating assists limit his fantasy consistency."
+    "date": "Sat Nov 21",
+    "headline": "Lillard amassed 15 points (5-16 FG, 1-9 3Pt, 4-4 FT), three rebounds, three assists and one block across 33 minutes during Saturday's 97-96 loss to the Knicks.",
+    "story": "Lillard struggled to find his rhythm Saturday, opening the game with seven straight misses from beyond the arc. He finally found his touch late, drilling a three-pointer to tie the game with less than a minute remaining in regulation. However, despite erasing a 26-point deficit, the Trail Blazers couldn't complete the comeback and suffered their third loss in the past four games."
    }
   },
   "devin-booker": {
@@ -1066,9 +1066,9 @@
     "name": "NE @ LAC"
    },
    "note": {
-    "date": "Fri Nov 20",
-    "headline": "Maye has suffered a fractured right fibula that won't require surgery but is expected to sideline him for some time, Adam Schefter of ESPN reports.",
-    "story": "Maye was knocked out of Week 10 action on the first possession of this past Sunday's loss to the Lions in Munich. He already was expected to miss multiple games as a result of the injury, but with a diagnosis now available, he's now in rehab mode until further notice. A return at some point down the stretch likely will depend on the Patriots remaining in the playoff race, but for the time being Tommy DeVito will be under center in place of Maye."
+    "date": "Sun Nov 22",
+    "headline": "Maye, who reportedly suffered a fractured right fibula last Sunday, is on track to miss at least six weeks, according to Ian Rapoport of NFL Network.",
+    "story": "The timetable put forth by Rapoport suggests that Maye could make a run at a late-season return, or for the postseason, should New England qualify. Given that the Patriots are already close to the limit of how many players they can designate for return from IR, per Mike Reiss and Adam Schefter of ESPN, it's no lock that the QB will land on the list, but he's nonetheless facing an absence longer than the required four games that a placement on IR would mandate. For now, Tommy DeVito has been installed as the team's starter ahead of Week 12 action, with Behren Morton also on hand. Beyond that, D"
    }
   },
   "dylan-harper": {
@@ -1111,8 +1111,8 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-22T01:00",
-    "name": "NO @ SA"
+    "date": "2026-11-24T03:00",
+    "name": "SA @ SAC"
    },
    "note": {
     "date": "Thu Nov 19",
@@ -1209,9 +1209,9 @@
     "name": "OKC @ MIA"
    },
    "note": {
-    "date": "Thu Nov 19",
-    "headline": "Antetokounmpo chipped in 27 points (7-11 FG, 0-1 3Pt, 13-16 FT), 14 rebounds, nine assists, one block and one steal across 32 minutes during Wednesday's 137-130 victory over the Bucks.",
-    "story": "Antetokounmpo nearly recorded a triple-double in his first matchup against his former team, helping Miami extend its winning streak to six games. The superstar forward has registered four consecutive double-doubles, averaging 29.5 points, 12.5 rebounds and 6.3 assists during that stretch while shooting an impressive 73.7 percent from the field. His elite efficiency and consistent contributions across multiple categories continue to make him one of fantasy basketball's most valuable players."
+    "date": "Sat Nov 21",
+    "headline": "Antetokounmpo (groin) is listed as questionable for Sunday's game against Oklahoma City, Ira Winderman of the South Florida Sun Sentinel reports.",
+    "story": "Antetokounmpo previously dealt with a wrist injury in November, and he's now working through a groin issue that puts his status for Sunday's game up in the air. He has yet to miss a game this season, but if he's not cleared to play against Oklahoma City, then Andrew Wiggins and Bobby Portis would be the top candidates to enter Miami's starting lineup."
    }
   },
   "gunnar-henderson": {
@@ -1269,8 +1269,8 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-22T00:30",
-    "name": "POR @ NY"
+    "date": "2026-11-24T00:00",
+    "name": "POR @ PHI"
    },
    "note": {
     "date": "Sat Nov 07",
@@ -1376,13 +1376,13 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-22T00:30",
-    "name": "POR @ NY"
+    "date": "2026-11-23T01:00",
+    "name": "IND @ NY"
    },
    "note": {
-    "date": "Fri Nov 20",
-    "headline": "Brunson amassed 21 points (8-20 FG, 4-5 3Pt, 1-1 FT), two rebounds, seven assists and two steals in 35 minutes during Thursday's 102-99 win over the Timberwolves.",
-    "story": "Brunson wasn't particularly efficient inside the arc, but his four three-pointers helped compensate for an 8-for-20 shooting performance. He's now scored at least 20 points in eight straight games, surpassing the 30-point mark four times over that stretch. Brunson should continue to be the alpha on the Knicks' offensive scheme, though at times he'll operate as the No. 2 option when Karl-Anthony Towns takes over, as he did Thursday."
+    "date": "Sat Nov 21",
+    "headline": "Brunson supplied 30 points (11-23 FG, 6-10 3Pt, 2-3 FT), seven rebounds and five assists over 36 minutes during Saturday's 97-96 victory over Portland.",
+    "story": "Brunson got off to a scorching hot start, drilling his first five three-point attempts while racking up 21 points on 10 shots in his first 14 minutes of play. However, his hot shooting didn't carry over after halftime, and he went scoreless in the fourth quarter. Still, his 30 points were a game high, and he helped the Knicks notch their fourth straight win."
    }
   },
   "jalen-hurts": {
@@ -1487,12 +1487,6 @@
     },
     {
      "date": "2026-11-13",
-     "desc": "Where does Jayden Daniels rank among fantasy QBs?",
-     "title": "Where does Jayden Daniels rank among fantasy QBs?",
-     "url": "https://www.espn.com/video/clip/_/id/50472192/where-does-jayden-daniels-rank-fantasy-qbs"
-    },
-    {
-     "date": "2026-11-13",
      "desc": "Commanders quarterback Jayden Daniels shook off two interceptions and multiple weeks of failed late-game drives to deliver when Washington needed him most.",
      "title": "Commanders QB Jayden Daniels finds redemption with game-winning drive",
      "url": "https://www.espn.com/nfl/story/_/id/50469451/commanders-jayden-daniels-redemption-game-winning-drive"
@@ -1514,6 +1508,12 @@
      "desc": "After falling behind 10-0 in the first half, quarterback Jayden Daniels led the Washington Commanders on a rousing rally, cruising to a 27-10 win over the Philadelphia Eagles at Northwest Stadium, an effort in which he threw for 217 yards and a touchdown.",
      "title": "Jayden Daniels, Commanders 'keep fighting through adversity,' improve to 2-4-1",
      "url": "https://www.espn.com/nfl/story/_/id/50356260/daniels-fuels-commanders-comeback-27-10-win-eagles"
+    },
+    {
+     "date": "2026-10-20",
+     "desc": "Commanders quarterback Jayden Daniels shouldn't have thrown a fourth-down pass away in the second quarter of Monday night's loss, coach Dan Quinn said.",
+     "title": "Commanders' Quinn, Daniels discuss QB's throwaway on fourth-down play",
+     "url": "https://www.espn.com/nfl/story/_/id/50231812/quinn-daniels-discuss-qb-throwaway-fourth-play"
     }
    ],
    "nextGame": {
@@ -1566,13 +1566,13 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-22T03:00",
-    "name": "BOS @ SAC"
+    "date": "2026-11-23T01:30",
+    "name": "BOS @ GS"
    },
    "note": {
-    "date": "Fri Nov 20",
-    "headline": "Tatum (rest) is listed as questionable for Saturday's game against Sacramento.",
-    "story": "Tatum might not play Saturday against the Kings, the first game of a back-to-back. If he doesn't suit up, it could result in more work for Luka Garza, Sam Hauser and Jordan Walsh."
+    "date": "Sat Nov 21",
+    "headline": "Tatum (rest) has been ruled out for Saturday's game against the Kings.",
+    "story": "Tatum will be rested for the first leg of the Celtics' back-to-back set, so he should be back on the floor for Sunday's game against the Warriors. With both Tatum and Derrick White (shoulder) sidelined, the Celtics will rely more heavily on Paul George, Payton Pritchard, Baylor Scheierman, Hugo Gonzalez and Sam Hauser to carry the scoring load against Sacramento."
    }
   },
   "joe-burrow": {
@@ -1619,13 +1619,25 @@
     "name": "CIN @ WSH"
    },
    "note": {
-    "date": "Fri Nov 20",
-    "headline": "Burrow (illness) said Friday that he's getting better, noting that he \"for sure\" feels optimistic he'll be at full strength for Monday night's game against the Commanders, Kelsey Conway of The Cincinnati Enquirer reports.",
-    "story": "Burrow is managing what the Bengals list as an illness, but the QB was a full participant in Thursday's practice and is trending toward approaching Monday night's game without a Week 11 designation. Official confirmation of that expected outcome will arrive Saturday, either way."
+    "date": "Sat Nov 21",
+    "headline": "Burrow (illness) does not have an injury designation ahead of Monday's game against the Commanders.",
+    "story": "Burrow dealt with an illness during Week 11 prep, but with no injury tag the 2020 first overall pick has been officially cleared to play Monday night -- and per ESPN.com he is confident he will do so at \"full strength.\" He's thrown at least three touchdowns in each of his last five outings, and over that span he has completed 77.6 percent of his passes for 1,624 yards, 20 touchdowns and three interceptions while turning 13 carries into 47 yards and two scores. The Bengals will face a Commanders defense that ranks 31st in the NFL in passing yards allowed per game (244.8) and 30th in red-zone to"
    }
   },
   "joel-embiid": {
    "news": [
+    {
+     "date": "2026-11-21",
+     "desc": "Joel Embiid skies for big jam",
+     "title": "Joel Embiid gets up for the beautiful jam",
+     "url": "https://www.espn.com/video/clip/_/id/50552077/joel-embiid-gets-beautiful-jam"
+    },
+    {
+     "date": "2026-11-21",
+     "desc": "Joel Embiid gets the and-1 to fall",
+     "title": "Joel Embiid gets the basket plus the foul",
+     "url": "https://www.espn.com/video/clip/_/id/50551926/joel-embiid-gets-basket-plus-foul"
+    },
     {
      "date": "2026-11-19",
      "desc": "Joel Embiid elevates for the big-time block",
@@ -1649,28 +1661,16 @@
      "desc": "Eric Karabell empties out the notebook with all that he's noticing around the NBA and what it means for fantasy.",
      "title": "Fantasy notebook: Karabell on Walker Kessler, Joel Embiid, Davion Mitchell, more",
      "url": "https://www.espn.com/fantasy/basketball/story/_/id/50512244/fantasy-basketball-trends-nba-2026-2027"
-    },
-    {
-     "date": "2026-11-17",
-     "desc": "Joel Embiid (37 points) and Jaylen Brown (31) both turned in season highs Monday night as the 76ers beat the Nets with LeBron James sidelined to improve to 12-3.",
-     "title": "Jaylen Brown banged up but combines with Joel Embiid to lead 76ers past Nets",
-     "url": "https://www.espn.com/nba/story/_/id/50508305/joel-embiid-jaylen-brown-combine-lead-76ers-nets-lebron-james-out"
-    },
-    {
-     "date": "2026-11-14",
-     "desc": "The Philadelphia 76ers ruled out center Joel Embiid for Sunday's game against the Indiana Pacers with right foot plantar fascia management, the team announced Saturday.",
-     "title": "76ers' Joel Embiid out vs. Pacers due to plantar fascia management",
-     "url": "https://www.espn.com/nba/story/_/id/50484216/76ers-joel-embiid-vs-pacers-due-plantar-fascia-management"
     }
    ],
    "nextGame": {
-    "date": "2026-11-21T18:00",
-    "name": "MIL @ PHI"
+    "date": "2026-11-24T00:00",
+    "name": "POR @ PHI"
    },
    "note": {
-    "date": "Thu Nov 19",
-    "headline": "Embiid totaled 26 points (7-18 FG, 0-1 3Pt, 12-14 FT), six rebounds, seven assists, three blocks and two steals over 36 minutes during Wednesday's 121-116 victory over the Magic.",
-    "story": "With Tyrese Maxey (foot), Jaylen Brown (hamstring) and Dean Wade (hamstring) sidelined, Embiid assumed greater offensive responsibility. His seven assists reflected increased playmaking duties, while five defensive stats bolstered his fantasy production. The expanded workload is encouraging, though his usage could normalize once Philadelphia's injured starters return."
+    "date": "Sat Nov 21",
+    "headline": "Embiid notched 26 points (7-17 FG, 0-1 3Pt, 12-14 FT), 17 rebounds, nine assists and a block across 34 minutes in Saturday's 132-29 win over the Bucks.",
+    "story": "Embiid carried the 76ers offensively, and while his shooting wasn't particularly efficient, a strong showing from the charity stripe boosted his scoring tally. The star center finished just one assist away from a triple-double and seems to be finding his form, racking up 63 points, 11 rebounds, eight assists, three steals and five blocks over his last two games. This was also his third double-double over his last eight appearances."
    }
   },
   "josh-allen": {
@@ -1995,6 +1995,12 @@
   "lamelo-ball": {
    "news": [
     {
+     "date": "2026-11-22",
+     "desc": "Jim McCormick breaks down Sunday's NBA slate, highlighting the fantasy streamers to add and bets to make.",
+     "title": "Fantasy basketball adds and NBA bets: Expect Bulls, Nuggets to score",
+     "url": "https://www.espn.com/fantasy/basketball/story/_/id/50560887/fantasy-basketball-tips-nba-betting-picks-today"
+    },
+    {
      "date": "2026-11-21",
      "desc": "Jim McCormick breaks down Saturday's NBA slate, highlighting the fantasy streamers to add and bets to make.",
      "title": "Fantasy basketball adds and NBA bets: Zero in on Acuff Jr., Queta on Saturday",
@@ -2023,17 +2029,11 @@
      "desc": "From downtown, LaMelo Ball hits the deep 3",
      "title": "From downtown, LaMelo Ball hits the deep 3",
      "url": "https://www.espn.com/video/clip/_/id/50428706/from-downtown-lamelo-ball-hits-deep-3"
-    },
-    {
-     "date": "2026-11-09",
-     "desc": "LaMelo Ball rocks the rim with powerful jam",
-     "title": "LaMelo Ball soars for big Dunk",
-     "url": "https://www.espn.com/video/clip/_/id/50428202/lamelo-ball-soars-big-dunk"
     }
    ],
    "nextGame": {
-    "date": "2026-11-22T01:00",
-    "name": "MEM @ MIN"
+    "date": "2026-11-24T00:30",
+    "name": "BKN @ MIN"
    },
    "note": {
     "date": "Fri Nov 20",
@@ -2044,50 +2044,50 @@
   "lebron-james": {
    "news": [
     {
-     "date": "2026-11-20",
-     "desc": "The legendary quarterback is a member of an exclusive list of athletes that includes LeBron James, Serena Williams and Wayne Gretzky.",
-     "title": "Tom Brady tops list of athletes who became owners",
-     "url": "https://www.espn.com/nfl/story/_/id/29553205/dwyane-wade-tom-brady-lebron-james-athletes-team-owners"
-    },
-    {
-     "date": "2026-11-20",
+     "date": "2026-11-22",
      "desc": "In 2024, Bronny James joined his father LeBron on the Los Angeles Lakers. Take a closer look at the highest-scoring father-son duos in NBA history.",
      "title": "Which NBA father-son duos have the most points?",
      "url": "https://www.espn.com/nba/story/_/id/41571864/most-nba-points-father-son-duo"
     },
     {
-     "date": "2026-11-18",
-     "desc": "NBA superstar LeBron James sued the makers of an AI sports-betting app Tuesday, saying they have deliberately violated his publicity rights and trademarks by calling it \"Bron\" and using artificially generated images of him in their marketing.",
-     "title": "76ers' LeBron James sues makers of AI sports-betting app 'Bron'",
-     "url": "https://www.espn.com/nba/story/_/id/50514699/76ers-lebron-james-sues-makers-ai-sports-betting-app-bron"
+     "date": "2026-11-21",
+     "desc": "LeBron James elevates for jam",
+     "title": "LeBron James elevates for jam",
+     "url": "https://www.espn.com/video/clip/_/id/50552919/lebron-james-elevates-jam"
     },
     {
-     "date": "2026-11-17",
-     "desc": "Joel Embiid (37 points) and Jaylen Brown (31) both turned in season highs Monday night as the 76ers beat the Nets with LeBron James sidelined to improve to 12-3.",
-     "title": "Jaylen Brown banged up but combines with Joel Embiid to lead 76ers past Nets",
-     "url": "https://www.espn.com/nba/story/_/id/50508305/joel-embiid-jaylen-brown-combine-lead-76ers-nets-lebron-james-out"
+     "date": "2026-11-21",
+     "desc": "LeBron James with the and-1 bucket",
+     "title": "LeBron James with the and-1 bucket",
+     "url": "https://www.espn.com/video/clip/_/id/50552842/lebron-james-1-bucket"
     },
     {
-     "date": "2026-11-16",
-     "desc": "LeBron James will miss Monday's game against the Nets as the 76ers continue to manage his lower back.",
-     "title": "76ers star LeBron James ruled out vs. Nets due to lower back management",
-     "url": "https://www.espn.com/nba/story/_/id/50503255/lebron-james-ruled-vs-nets-due-lower-back-management"
+     "date": "2026-11-21",
+     "desc": "LeBron James elevates for the big-time stuff",
+     "title": "LeBron James elevates for the big-time stuff",
+     "url": "https://www.espn.com/video/clip/_/id/50552340/lebron-james-elevates-big-stuff"
     },
     {
-     "date": "2026-11-16",
-     "desc": "We talked to several coaches, executives and scouts about the 11-3 Sixers in an attempt to get a consensus opinion on their start.",
-     "title": "What's working -- and not working -- for LeBron James, Philadelphia 76ers",
-     "url": "https://www.espn.com/nba/story/_/id/50490202/lebron-76ers-start-execs-big-questions"
+     "date": "2026-11-21",
+     "desc": "LeBron James gets up for the beautiful jam",
+     "title": "LeBron James gets up for the beautiful jam",
+     "url": "https://www.espn.com/video/clip/_/id/50551514/lebron-james-gets-beautiful-jam"
+    },
+    {
+     "date": "2026-11-20",
+     "desc": "The legendary quarterback is a member of an exclusive list of athletes that includes LeBron James, Serena Williams and Wayne Gretzky.",
+     "title": "Tom Brady tops list of athletes who became owners",
+     "url": "https://www.espn.com/nfl/story/_/id/29553205/dwyane-wade-tom-brady-lebron-james-athletes-team-owners"
     }
    ],
    "nextGame": {
-    "date": "2026-11-21T18:00",
-    "name": "MIL @ PHI"
+    "date": "2026-11-24T00:00",
+    "name": "POR @ PHI"
    },
    "note": {
-    "date": "Thu Nov 19",
-    "headline": "James provided 22 points (8-16 FG, 1-5 3Pt, 5-6 FT), three rebounds and six assists over 31 minutes during Wednesday's 121-116 win over the Magic.",
-    "story": "James took on additional offensive responsibility with Tyrese Maxey (foot) and Jaylen Brown (hamstring) sidelined, helping Philadelphia overcome a 17-point deficit. The veteran forward has scored at least 20 points in two of his last four appearances while continuing to provide reliable playmaking. His fantasy upside could increase if Maxey and Brown remain unavailable, though James' workload will likely continue to be monitored throughout the season."
+    "date": "Sat Nov 21",
+    "headline": "James contributed 21 points (9-14 FG, 0-1 3Pt, 3-3 FT), six rebounds, six assists, one block and three steals over 35 minutes during Saturday's 132-129 victory over the Bucks.",
+    "story": "The Sixers fielded a very balanced offense on the afternoon, with all five starters plus two bench players scoring at least 12 points, and James' 21 was second only to Joel Embiid's 26. James has topped 20 points in back-to-back games and three times in his last five appearances, a stretch in which the 41-year-old slam-dunk Hall of Famer is averaging 18.2 points, 6.6 assists, 5.8 boards, 0.8 steals and 0.8 threes in 32.2 minutes."
    }
   },
   "luka-doncic": {
@@ -2326,7 +2326,7 @@
    "note": {
     "date": "Sat Nov 21",
     "headline": "Jokic chipped in 26 points (10-15 FG, 2-3 3Pt, 4-4 FT), seven rebounds and 11 assists over 38 minutes during Friday's 133-124 victory over the Rockets.",
-    "story": "Jokic was his usual efficient self, leading Denver in scoring and assists. He capped the night by setting up an Aaron Gordon alley-oop in the final seconds. The three-time MVP has been remarkably consistent, scoring at least 24 points in five straight games. He's averaging 24.2 points, 10.4 rebounds and 9.1 assists."
+    "story": "Jokic was his usual efficient self, leading Denver in scoring and assists. He capped the night by setting up an Aaron Gordon alley-oop in the final seconds. The three-time MVP has been remarkably consistent, scoring at least 24 points in five straight games. He's averaging 24.2 points, 10.4 rebounds and 9.1 assists overall this season."
    }
   },
   "paolo-banchero": {
@@ -2512,6 +2512,12 @@
   "puka-nacua": {
    "news": [
     {
+     "date": "2026-11-22",
+     "desc": "Puka Nacua's recovery time from MCL surgery is considered to be four to five months, sources told ESPN, meaning he will miss the playoffs.",
+     "title": "Sources: Rams' Puka Nacua out 4-5 months after knee surgery, will miss playoffs",
+     "url": "https://www.espn.com/nfl/story/_/id/50556613/sources-rams-puka-nacua-4-5-months-knee-surgery"
+    },
+    {
      "date": "2026-11-20",
      "desc": "Rams WR Puka Nacua, who is serving a three-game suspension while on IR, had surgery on his MCL and likely will miss at least the rest of the regular season.",
      "title": "Rams' Puka Nacua has MCL surgery, likely done for regular season",
@@ -2540,12 +2546,6 @@
      "desc": "Are the Rams' playoff hopes over after Puka Nacua's injury?",
      "title": "Are the Rams' playoff hopes over after Puka Nacua's injury?",
      "url": "https://www.espn.com/video/clip/_/id/50471662/are-rams-playoff-hopes-puka-nacua-injury"
-    },
-    {
-     "date": "2026-11-13",
-     "desc": "The Rams, who had said they would not put Puka Nacua on IR, pivoted so they can sign Brennan Presley to the active roster and Tyler Scott to the practice squad.",
-     "title": "Rams put WR Puka Nacua on IR with knee, toe injuries",
-     "url": "https://www.espn.com/nfl/story/_/id/50466270/rams-wide-receiver-puka-nacua-ir-knee-toe-injuries"
     }
    ],
    "nextGame": {
@@ -2553,9 +2553,9 @@
     "name": "GB @ LAR"
    },
    "note": {
-    "date": "Fri Nov 20",
-    "headline": "Coach Sean McVay revealed Friday that Nacua (knee) had surgery to repair his MCL on Tuesday and is on track to miss a couple of months, Sarah Barshop of ESPN.com reports.",
-    "story": "Given that timetable, Nacua -- who already is on injured reserve -- could be out for the rest of the regular season, which is a huge blow to the Rams' pass-catching corps going forward. In Nacua's continued absence, Konata Mumpfield, CJ Daniels, Tutu Atwell and Xavier Smith are the team's healthy options at WR, though fellow starter Davante Adams (hamstring) is believed to be targeting a return in Week 12 following the team's bye."
+    "date": "Sat Nov 21",
+    "headline": "Nacua (knee/toe) is expected to be sidelined 4-to-5 months after undergoing surgery Tuesday to repair his right MCL, which means he won't be on track to return at any point during the playoffs, Adam Schefter of ESPN reports.",
+    "story": "Nacua is also dealing with a PCL sprain and turf toe, but the only procedure he required was for his MCL. With a firmer 4-to-5-month timeline now in place for the star wideout, he'll be done for the season while the Rams look to others to help fill the massive void in their receiver corps. Davante Adams (hamstring) should eventually take on a heavy target share, but he's also on injured reserve and isn't expected to return until at least Week 13. That leaves Konata Mumpfield, CJ Daniels, Tutu Atwell and Xavier Smith as the current healthy wideouts on the team's 53-man roster ahead of next Wedn"
    }
   },
   "roman-anthony": {
@@ -2614,12 +2614,6 @@
      "desc": "Braves GM Alex Anthopoulos dismissed the possibility of the team moving on from Ronald Acuna Jr., saying, \"I have no idea where that stuff came from.\"",
      "title": "Braves GM emphatically shuts down Ronald Acuna trade speculation: 'We need him'",
      "url": "https://www.espn.com/mlb/story/_/id/50448746/braves-gm-emphatically-shuts-ronald-acuna-trade-rumors"
-    },
-    {
-     "date": "2026-11-11",
-     "desc": "Ronald Acuna Jr. impresses with massive 411-foot grand slam",
-     "title": "Ronald Acuna Jr. impresses with massive 411-foot grand slam",
-     "url": "https://www.espn.com/video/clip/_/id/49984499/ronald-acuna-jr-impresses-massive-411-foot-grand-slam"
     },
     {
      "date": "2026-09-23",
@@ -2725,9 +2719,9 @@
     "name": "OKC @ MIA"
    },
    "note": {
-    "date": "Fri Nov 20",
-    "headline": "Gilgeous-Alexander recorded 40 points (14-24 FG, 4-7 3Pt, 8-11 FT), three rebounds, seven assists and one block in 37 minutes during Friday's 126-120 win over the Pelicans.",
-    "story": "Gilgeous-Alexander was spectacular again Friday, posting his fourth 40-point game and his second in the last four outings. He's poured in 30-plus points in five straight contests, giving him an average of 36.4 points to go along with 3.6 rebounds and 3.8 assists per game over that stretch. Gilgeous-Alexander will continue to dominate touches while the Thunder find their bearings."
+    "date": "Sat Nov 21",
+    "headline": "Gilgeous-Alexander (back/neck) is listed as questionable for Sunday's game versus Miami.",
+    "story": "After scoring 40 points in Friday's 126-120 win over the Pelicans, Gilgeous-Alexander could miss his first game of the 2026-27 campaign due to back and neck issues. With Nikola Topic (hip), Alex Caruso (hip) and Cason Wallace (shoulder) all unavailable, Bennett Stirtz may be needed in the starting lineup if Gilgeous-Alexander is ruled out Sunday."
    }
   },
   "shedeur-sanders": {
@@ -3070,38 +3064,50 @@
   "victor-wembanyama": {
    "news": [
     {
-     "date": "2026-11-20",
-     "desc": "Victor Wembanyama said his new-look \"shunk\" was done because of a blister former from actually dunking.",
-     "title": "Spurs' Victor Wembanyama says new-look 'shunk' done because of blister on hand",
-     "url": "https://www.espn.com/nba/story/_/id/50538594/spurs-victor-wembanyama-shunk-done-due-blister"
+     "date": "2026-11-22",
+     "desc": "Victor Wembanyama had his third career 50-point outing during a win over the Pelicans to go along with 19 rebounds, five blocks and four steals.",
+     "title": "Wembanyama makes history in 18 minutes, finishes game with 50 points",
+     "url": "https://www.espn.com/nba/story/_/id/50559763/victor-wembanyama-shows-50-point-5-block-performance"
     },
     {
-     "date": "2026-11-20",
-     "desc": "Victor Wembanyama takes flight for alley-oop jam",
-     "title": "Victor Wembanyama takes flight for alley-oop jam",
-     "url": "https://www.espn.com/video/clip/_/id/50536698/victor-wembanyama-takes-flight-alley-oop-jam"
+     "date": "2026-11-22",
+     "desc": "Victor Wembanyama nails the 3 vs. New Orleans Pelicans",
+     "title": "Victor Wembanyama hits the triple vs. New Orleans Pelicans",
+     "url": "https://www.espn.com/video/clip/_/id/50558103/victor-wembanyama-hits-triple-vs-new-orleans-pelicans"
     },
     {
-     "date": "2026-11-18",
-     "desc": "The Heat have bounced back from a rough start to the season, while Victor Wembanyama is now the leader for MVP just ahead of Luka Doncic.",
-     "title": "Updated NBA championship and MVP odds: Heat on the rise, Wemby ahead of Luka",
-     "url": "https://www.espn.com/espn/betting/story/_/id/44679680/2026-nba-finals-championship-mvp-odds"
+     "date": "2026-11-22",
+     "desc": "Victor Wembanyama shows off the range on 3-pointer",
+     "title": "Victor Wembanyama shows off the range on 3-pointer",
+     "url": "https://www.espn.com/video/clip/_/id/50557411/victor-wembanyama-shows-range-3-pointer"
     },
     {
-     "date": "2026-11-14",
-     "desc": "Victor Wembanyama and the Spurs pounced on the Warriors with an 18-0 opening run and went on to win 123-85.",
-     "title": "Victor Wembanyama, Spurs open on 18-0 run, rout Warriors for 11th straight win",
-     "url": "https://www.espn.com/nba/story/_/id/50478136/victor-wembanyama-spurs-rout-warriors-11th-straight-win"
+     "date": "2026-11-22",
+     "desc": "Victor Wembanyama gets the basket plus the foul",
+     "title": "Victor Wembanyama gets the basket plus the foul",
+     "url": "https://www.espn.com/video/clip/_/id/50557030/victor-wembanyama-gets-basket-plus-foul"
+    },
+    {
+     "date": "2026-11-22",
+     "desc": "Victor Wembanyama connects for huge alley-oop slam",
+     "title": "Victor Wembanyama connects for huge alley-oop slam",
+     "url": "https://www.espn.com/video/clip/_/id/50556885/victor-wembanyama-connects-huge-alley-oop-slam"
+    },
+    {
+     "date": "2026-11-22",
+     "desc": "Victor Wembanyama skies for big flush",
+     "title": "Victor Wembanyama skies for big flush",
+     "url": "https://www.espn.com/video/clip/_/id/50556769/victor-wembanyama-skies-big-flush"
     }
    ],
    "nextGame": {
-    "date": "2026-11-22T01:00",
-    "name": "NO @ SA"
+    "date": "2026-11-24T03:00",
+    "name": "SA @ SAC"
    },
    "note": {
-    "date": "Thu Nov 19",
-    "headline": "Wembanyama finished Thursday's 124-112 win over the Clippers with 32 points (13-26 FG, 2-7 3Pt, 4-4 FT), 11 rebounds, three assists, one steal and one block across 33 minutes.",
-    "story": "Wembanyama was efficient from two-point range en route to a game-high scoring total, and he's supplied at least 25 points in three straight contests. The superstar big man also recorded his fourth consecutive double-double thanks to a game-best 11 boards. Wembanyama has been spectacular on both ends of the floor to start the season, and he's averaged 25.4 points, 12.0 rebounds, 4.0 assists, 2.8 blocks and 1.2 steals per contest over the last five games."
+    "date": "Sat Nov 21",
+    "headline": "Wembanyama finished with 50 points (20-29 FG, 5-11 3Pt, 5-6 FT), 19 rebounds, one assist, four steals and five blocks across 32 minutes in Saturday's 114-91 win over the Pelicans.",
+    "story": "Wembanyama had his third career game with at least 50 points, tying David Robinson for the second-most in Spurs history. He also became the first player since 1973-74 to record at least 50 points, 15 rebounds, four steals and five blocks in a game. The 2023 No. 1 overall pick is having another MVP-caliber year and is now averaging 29.9 points, 12.4 rebounds, 1.3 steals and 3.9 blocks, all career highs, along with 3.2 assists over 30.3 minutes per outing in 17 regular-season appearances."
    }
   },
   "vladimir-guerrero-jr": {
@@ -3230,16 +3236,16 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-22T01:00",
-    "name": "NO @ SA"
+    "date": "2026-11-24T01:00",
+    "name": "PHX @ NO"
    },
    "note": {
-    "date": "Fri Nov 20",
-    "headline": "Williamson ended with 22 points (9-19 FG, 4-6 FT), six rebounds, seven assists and two steals over 37 minutes in Friday's 126-120 loss to Oklahoma City.",
-    "story": "Williamson had another productive evening, scoring at least 20 points for the sixth time in his last seven appearances. He also recorded a season high in assists. The 26-year-old is now averaging 21.7 points, 5.4 rebounds, 2.8 assists and 1.8 steals across 32.4 minutes per outing in 16 regular-season games. Without question, Williamson is a top player when healthy, but despite missing only one game during the 2026-27 campaign thus far, durability will continue to be a concern."
+    "date": "Sat Nov 21",
+    "headline": "Williamson is out for Saturday's game against the Spurs due to a left thigh contusion.",
+    "story": "Williamson won't suit up Saturday on the second leg of this back-to-back set. Derik Queen will start in his place alongside Yves Missi in the frontcourt. This will be Williamson's second absence this season. The 26-year-old is averaging 21.7 points, 5.4 rebounds, 2.8 assists and 1.8 steals across 32.4 minutes per outing in 16 regular-season games."
    }
   }
  },
  "source": "ESPN public feeds (unofficial)",
- "updated": "2026-11-21T17:36Z"
+ "updated": "2026-11-22T17:52Z"
 }
