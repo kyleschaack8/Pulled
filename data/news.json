@@ -61,7 +61,7 @@
   "aaron-rodgers": {
    "news": [
     {
-     "date": "2026-11-16",
+     "date": "2026-11-23",
      "desc": "The Pittsburgh passer is chasing records in his 22nd NFL season, and ESPN is chronicling his \"last rodeo.\"",
      "title": "Aaron Rodgers' 2026 NFL season: Tracking records, milestones",
      "url": "https://www.espn.com/nfl/story/_/id/49907062/aaron-rodgers-2026-nfl-season-steelers-packers-jets-tracking-records-milestones"
@@ -102,9 +102,9 @@
     "name": "PIT @ PHI"
    },
    "note": {
-    "date": "Sun Nov 15",
-    "headline": "Rodgers completed 15 of 29 passes for 143 yards, two touchdowns and no interceptions and rushed two times for minus-1 yard during Sunday's 38-18 loss at Cincinnati.",
-    "story": "The Steelers sat at 33 total yards of offense after three quarters, so the vast majority of Rodgers' output occurred on the team's three fourth-quarter possessions, two of which ended in touchdown connections with WR DK Metcalf (22 yards) and TE Pat Freiermuth (27 yards). Through nine games this season, Rodgers has tossed multiple TDs on five occasions, but he's also been held to less than 200 yards through the air three times. Rodgers will seek better results next Sunday in Phildadelphia."
+    "date": "Sun Nov 22",
+    "headline": "Rodgers completed 30 of 44 passes for 227 yards and one touchdown while rushing five times for 29 yards in Sunday's 19-16 loss to the Eagles.",
+    "story": "Rodgers threw a 20-yard touchdown pass to Max Hurleman on Pittsburgh's final offensive play with 1:21 remaining in the fourth quarter, but that was too little too late, as the Eagles proceeded to run out the clock to drop the Steelers to 6-4. Hurleman stepped up down the stretch in his first NFL game after starting wide receiver DK Metcalf was disqualified. Rodgers had a four-game stretch in which he threw 11 touchdown passes while posting at least 235 passing yards in each outing, but he has failed to reach that yardage total in any of his last four starts while recording only four TDs during"
    }
   },
   "anthony-davis": {
@@ -147,13 +147,13 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-23T00:00",
-    "name": "ORL @ WSH"
+    "date": "2026-11-25T01:00",
+    "name": "BOS @ WSH"
    },
    "note": {
-    "date": "Sat Nov 21",
-    "headline": "Davis totaled 36 points (16-26 FG, 4-9 FT), 11 rebounds and three assists in 34 minutes during Friday's 98-94 victory over the Bulls.",
-    "story": "Davis delivered his second-highest-scoring performance of the season, overwhelming Chicago's interior defense while securing his fifth double-double in his last seven appearances. His five missed free throws were a significant drawback for category managers, but the veteran's scoring efficiency and rebounding remain major strengths. Davis continues to anchor Washington's frontcourt, and his consistent workload should keep him among the team's most reliable fantasy contributors."
+    "date": "Mon Nov 23",
+    "headline": "Davis finished Sunday's 116-96 victory over the Magic with 22 points (8-13 FG, 2-5 3Pt, 4-4 FT), seven rebounds, one assist, one block and two steals across 33 minutes.",
+    "story": "Davis has averaged 27.7 points, 10.7 rebounds and 33.7 minutes during Washington's three-game winning streak. His efficient scoring and continued defensive production reinforce his elite fantasy value, though Sunday's seven rebounds snapped his consecutive double-double streak."
    }
   },
   "anthony-edwards": {
@@ -208,6 +208,12 @@
   "ashton-jeanty": {
    "news": [
     {
+     "date": "2026-11-23",
+     "desc": "Fernando Mendoza's first TD pass is a 68-yard dime to Ashton Jeanty",
+     "title": "Fernando Mendoza's first TD pass is a 68-yard dime to Ashton Jeanty",
+     "url": "https://www.espn.com/video/clip/_/id/50566343/fernando-mendoza-first-td-pass-68-yard-dime-ashton-jeanty"
+    },
+    {
      "date": "2026-11-05",
      "desc": "Breaking down the matchup upside and downside for Dak Prescott, Ashton Jeanty, Jonah Coleman, Nico Collins, Ladd McConkey, Omar Cooper Jr., Chig Okonkwo and Greg Dulcich.",
      "title": "Facts vs. Feelings: Dissecting eight potential lineup conundrums for Week 9",
@@ -218,18 +224,6 @@
      "desc": "Ashton Jeanty had a career low in carries Sunday, which coach Klint Kubiak said was his call but not a response to Jeanty's comments during the week.",
      "title": "Raiders' Ashton Jeanty limited to 2 carries in win vs. Jets",
      "url": "https://www.espn.com/nfl/story/_/id/50353065/raiders-ashton-jeanty-two-carries-win-jets-comments"
-    },
-    {
-     "date": "2026-10-30",
-     "desc": "Jets nose tackle T'Vondre Sweat has been ruled out with a knee injury, and rookie edge rusher David Bailey, unable to practice this week due to a strained groin, is listed as doubtful.",
-     "title": "Jets dealing with defensive injuries for matchup vs. Raiders, RB Ashton Jeanty",
-     "url": "https://www.espn.com/nfl/story/_/id/50328612/jets-rule-tvondre-sweat-say-bailey-doubtful-vs-raiders"
-    },
-    {
-     "date": "2026-10-29",
-     "desc": "We thought last year's running back class was going to be great. But Ashton Jeanty, Omarion Hampton, TreVeyon Henderson and others haven't lived up to the hype.",
-     "title": "What has gone wrong for 2025 running backs? Ashton Jeanty, Omarion Hampton, more",
-     "url": "https://www.espn.com/nfl/story/_/id/50309285/running-backs-2025-draft-class-barnwell-jeanty-hampton-skattebo"
     }
    ],
    "nextGame": {
@@ -237,9 +231,9 @@
     "name": "LV @ DEN"
    },
    "note": {
-    "date": "Sun Nov 15",
-    "headline": "Jeanty turned his nine carries into just 18 yards and caught all four of his targets for 46 yards during Sunday's 21-13 loss to the Seahawks.",
-    "story": "After reaching the 10-carry threshold in each of the first six games of the season, Jeanty has failed to do so in four straight contests, and he also has fallen shy of 30 rushing yards in six consecutive outings. Rookie RB Mike Washington continued to split the backfield with Jeanty in Week 10, turning his nine touches into 27 yards from scrimmage. Considering recent trends, Jeanty is difficult to trust for consistent production without a boost in work."
+    "date": "Sun Nov 22",
+    "headline": "Jeanty tallied 11 carries for 79 yards and gathered in five of eight targets for 90 yards and one touchdown during Sunday's 38-24 loss at Denver.",
+    "story": "Jeanty's 169 yards from scrimmage amounted to the second-highest single-game total of his career after going for 188 such yards against the Texans in Week 16 of last season. His performance was fueled by a 68-yard catch and run for a touchdown and a 46-yard rush, the latter of which marked his first of 20-plus yards on the campaign. Jeanty also broke a streak of four straight contests falling short of 10 carries, but considering No. 2 RB Mike Washington also earned nine runs in Week 11, the Raiders backfield remains a committee ahead of next Sunday's outing at Cleveland."
    }
   },
   "bijan-robinson": {
@@ -306,12 +300,6 @@
      "url": "https://www.espn.com/fantasy/football/story/_/id/50514411/facts-feelings-fantasy-advice-week-11"
     },
     {
-     "date": "2026-11-18",
-     "desc": "Bo Nix's Week 11 fantasy outlook",
-     "title": "Bo Nix's Week 11 fantasy outlook",
-     "url": "https://www.espn.com/video/clip/_/id/50520527/bo-nix-week-11-fantasy-outlook"
-    },
-    {
      "date": "2026-11-17",
      "desc": "Nix has a knack for coming through big late in games, but the Broncos want him to play better earlier to lessen the fourth-quarter drama.",
      "title": "What Broncos are doing to try to make Bo Nix more consistent throughout games",
@@ -328,6 +316,12 @@
      "desc": "Can the Broncos slow Kenneth Walker III? Can the Chiefs' pass rush fluster Bo Nix? Answering the biggest questions in Sunday's AFC West showdown.",
      "title": "Answering 10 questions about Chiefs-Broncos showdown for first place in AFC West",
      "url": "https://www.espn.com/nfl/story/_/id/50319759/kansas-city-chiefs-denver-broncos-afc-west-division-lead"
+    },
+    {
+     "date": "2026-10-26",
+     "desc": "Sean Payton issued a firm vote of confidence for his embattled quarterback Bo Nix after Sunday's win over the Cardinals.",
+     "title": "Bo Nix wows with 62-yard run as Broncos stand by 'our guy' at QB after win",
+     "url": "https://www.espn.com/nfl/story/_/id/50284110/bo-nix-breaks-slump-carries-broncos-cardinals"
     }
    ],
    "nextGame": {
@@ -335,9 +329,9 @@
     "name": "LV @ DEN"
    },
    "note": {
-    "date": "Sun Nov 08",
-    "headline": "Nix completed 25 of 37 passes for 237 yards and two touchdowns with one interception in Sunday's 26-21 win over the Panthers. He added two rushing yards on five carries.",
-    "story": "The Broncos had the home team right where they wanted them heading into the fourth quarter -- holding a lead -- and Nix worked his usual magic over the final 15 minutes, leading back-to-back touchdown drives capped by a nine-yard TD run from Jonah Coleman and a 26-yard strike to Pat Bryant for what proved to be the winning score. Nix did throw his first INT since Week 3 in the win, but he heads into a Week 10 bye with Denver riding a five-game win streak that has taken it to the top of the AFC West."
+    "date": "Sun Nov 22",
+    "headline": "Nix completed 19 of 35 passes for 225 yards, one touchdown and one interception and notched six carries for five yards during Sunday's 38-24 victory against the Raiders.",
+    "story": "After a hit-or-miss first six appearances of the season, Nix has settled into a four-game stretch in which his passing yards have ranged from 222 to 237 weekly, a span in which he boasts a 6:2 TD:INT and 84 rushing yards and another score. He also displayed some promise with offseason acquisition Jaylen Waddle (3-61-0 on six targets) while connecting with TE Adam Trautman for his 12th touchdown pass in 10 contests. Nix will look to keep things rolling Friday at Pittsburgh."
    }
   },
   "bobby-witt-jr": {
@@ -397,12 +391,24 @@
    },
    "note": {
     "date": "Sun Nov 22",
-    "headline": "Adam Schefter of ESPN reported on Sunday NFL Countdown that \"there is not a lot of optimism\" that Bowers (ankle/quadriceps) will suit up Sunday at Denver, but the tight end is \"pushing to play.\"",
-    "story": "Bowers was in and out of last Sunday's loss to the Seahawks before exiting for good after halftime due to an ankle injury. Head coach Klint Kubiak labeled Bowers day-to-day last Monday, and he then missed Wednesday's practice before being limited Thursday and Friday and entering the weekend listed as questionable. It appears Bowers' availability will be subject to a pregame warmup, after which his status will be clarified about 90 minutes before Sunday's 4:25 p.m. ET kickoff. Fellow TE Michael Mayer will get a boost in standing if Bowers is inhibited or sidelined."
+    "headline": "Raiders coach Klink Kubiak said after Sunday's 38-24 loss to the Broncos that he's optimistic Bowers (ankle/quadriceps) will be available to face the Browns on Nov. 29, Ryan McFadden of ESPN.com reports.",
+    "story": "Bowers \"was not ready to play\" against Denver, per Kubiak, but the head coach believes Vegas' star tight end could be ready to return in Week 12 against the Browns on SNF. Bowers was held to 18 yards by the Seahawks during Fernando Mendoza's first regular-season start in Week 10 after mustering at least 70 receiving yards in each of his seven games with Kirk Cousins."
    }
   },
   "brock-purdy": {
    "news": [
+    {
+     "date": "2026-11-23",
+     "desc": "Dan Orlovsky: Brock Purdy is the MVP right now",
+     "title": "Dan Orlovsky: Brock Purdy is the MVP right now",
+     "url": "https://www.espn.com/video/clip/_/id/50572660/brock-purdy-mvp-right-now"
+    },
+    {
+     "date": "2026-11-23",
+     "desc": "Quarterback Brock Purdy heard \"MVP\" chants in Mexico City and continued to earn praise from his teammates as he led the 49ers to a statement victory against the top-ranked Vikings defense on Sunday night",
+     "title": "49ers' Brock Purdy beats Vikings blitz, hears 'MVP' chants in Mexico City",
+     "url": "https://www.espn.com/nfl/story/_/id/50571034/49ers-brock-purdy-beats-vikings-blitz-hears-mvp-chants-mexico-city"
+    },
     {
      "date": "2026-11-18",
      "desc": "The most and least favorable matchups in the NFL for this week's games at the four key fantasy positions.",
@@ -427,9 +433,9 @@
     "name": "MIN VS SF"
    },
    "note": {
-    "date": "Sun Nov 15",
-    "headline": "Purdy completed 22 of 28 passes for 389 yards with three touchdowns and no interceptions and added two carries for 21 yards in the 49ers' 46-40 win over the Cowboys on Sunday. He also threw a two-point conversion pass.",
-    "story": "As expected, Sunday's showdown between the longtime rivals turned into a complete offensive showcase, and Purdy was right at the center of the fireworks. The veteran quarterback recorded a career-high passing yardage total, with his 66-yard touchdown pass to Christian McCaffrey with just over three minutes remaining putting Purdy over the top. That TD toss was preceded by 11- and 74-yard scoring strikes to Deebo Samuel and McCaffrey, respectively, in the first half, giving Purdy his third tally of at least three touchdown passes this season. Purdy's 78.6 percent completion rate also was his se"
+    "date": "Sun Nov 22",
+    "headline": "Purdy completed 21 of 26 pass attempts for 255 yards and three touchdowns in Sunday's 35-10 win over the Vikings.",
+    "story": "Purdy remained effective despite facing the vaunted Vikings defense, which had allowed just six touchdown passes through nine games. He threw touchdown passes on three of San Francisco's first four drives, connecting with George Kittle for scores of 17 and eight yards before finding Mike Evans for a four-yard touchdown in Evans' first action since Week 6 due to an Achilles injury. Purdy will take a stellar 23:5 TD:INT into another tough matchup on paper in Week 12 against the Seahawks, who held him to a season-low 189 passing yards in Week 5."
    }
   },
   "bryce-harper": {
@@ -497,23 +503,17 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-22T20:30",
-    "name": "DET @ ATL"
+    "date": "2026-11-25T00:00",
+    "name": "DET @ ORL"
    },
    "note": {
-    "date": "Sat Nov 21",
-    "headline": "Cunningham (knee) is probable to play Sunday in Atlanta.",
-    "story": "Cunningham is dealing with some minor soreness in his right knee, but he's planning to play through it. Cunningham is averaging 25.6 points, 5.1 rebounds, 7.9 assists, 2.0 triples, 1.4 steals and 0.9 blocks per game this season."
+    "date": "Mon Nov 23",
+    "headline": "Cunningham closed Sunday's 107-97 loss to the Hawks with five points (2-9 FG, 1-3 3Pt), four rebounds, 15 assists, one block and one steal in 33 minutes.",
+    "story": "Cunningham averaged 33.8 points over his previous four appearances, making Sunday's scoring collapse particularly unusual. Early foul trouble and lingering knee soreness limited his aggressiveness, though his season-high 15 assists kept his fantasy value intact. His knee warrants monitoring ahead of Tuesday's matchup with Orlando"
    }
   },
   "caleb-williams": {
    "news": [
-    {
-     "date": "2026-11-19",
-     "desc": "Why Mike Clay says Caleb Williams is not a lineup lock in Week 11",
-     "title": "Why Mike Clay says Caleb Williams is not a lineup lock in Week 11",
-     "url": "https://www.espn.com/video/clip/_/id/50531502/why-mike-clay-says-caleb-williams-not-lineup-lock-week-11"
-    },
     {
      "date": "2026-11-18",
      "desc": "Caleb Williams spent his bye week resting his ailing hamstring, supporting his close friend Pete Crow-Armstrong as the Cubs outfielder was named NL MVP, and putting one of the worst games of his career in the rearview mirror.",
@@ -543,6 +543,12 @@
      "desc": "Williams has the fourth-shortest odds to win MVP as the Bears are currently favored to win the NFC.",
      "title": "Inside the evolution of Caleb Williams' MVP candidacy",
      "url": "https://www.espn.com/nfl/story/_/id/50402109/bears-caleb-williams-mvp"
+    },
+    {
+     "date": "2026-11-03",
+     "desc": "Williams wore Caddix cleats Monday night in Seattle, but the logo was not visible as he tries to 'calm things down.'",
+     "title": "Cleats, controversy and the choice of Bears QB Caleb Williams",
+     "url": "https://www.espn.com/nfl/story/_/id/50320658/caddix-shoes-bears-caleb-williams-fines"
     }
    ],
    "nextGame": {
@@ -550,24 +556,36 @@
     "name": "NO @ CHI"
    },
    "note": {
-    "date": "Sun Nov 08",
-    "headline": "Williams completed 22 of 37 passes for 279 yards, two touchdowns and four interceptions in Sunday's 27-24 win over the Buccaneers. He also rushed five times for 16 yards.",
-    "story": "Williams looked unstoppable early, capping Chicago's two first-quarter drives with touchdown passes of nine yards to Rome Odunze and 56 yards to Luther Burden, the latter of whom later exited due to a concussion. The 2024 first overall pick cooled down after that, throwing three second-quarter interceptions en route to a career-worst four interceptions overall. Chicago's defense picked up the slack with a pick-six against Baker Mayfield, and Williams found Colston Loveland for a 38-yard gain to set up Cairo Santos' game-winning field goal on the game's final play. The Bears have reeled off fou"
+    "date": "Sun Nov 22",
+    "headline": "Williams completed 15 of 23 passes for 181 yards and two touchdowns with one interception in Sunday's 21-13 win over the Saints. He added 11 rushing yards on four carries.",
+    "story": "The Bears' offense looked a little sluggish coming out of its bye, and both of Williams' TD passes came in the second quarter as he connected with D'Andre Swift on a three-yard shovel pass and Colston Loveland on a 15-yard score. Williams failed to reach 200 passing yards for the first time since Week 2, and he'll take a somewhat disappointing 10:6 TD:INT through seven games into a Week 12 clash with the Lions."
    }
   },
   "cam-ward": {
    "news": [
     {
+     "date": "2026-11-23",
+     "desc": "Field Yates: Cam Ward paid off as the QB streamer of the week",
+     "title": "Field Yates: Cam Ward paid off as the QB streamer of the week",
+     "url": "https://www.espn.com/video/clip/_/id/50574035/cam-ward-paid-qb-streamer-week"
+    },
+    {
+     "date": "2026-11-23",
+     "desc": "Cam Ward scrambles and heaves absurd TD pass to Calvin Ridley",
+     "title": "Cam Ward scrambles and heaves absurd TD pass to Calvin Ridley",
+     "url": "https://www.espn.com/video/clip/_/id/50571065/cam-ward-scrambles-heaves-absurd-td-pass-calvin-ridley"
+    },
+    {
+     "date": "2026-11-22",
+     "desc": "Why fantasy managers should add Cam Ward off waivers",
+     "title": "Why fantasy managers should add Cam Ward off waivers",
+     "url": "https://www.espn.com/video/clip/_/id/50566740/why-fantasy-managers-add-cam-ward-waivers"
+    },
+    {
      "date": "2026-11-20",
      "desc": "Adam Rank catches you up on the vital information and insights before you make your toughest lineup decisions.",
      "title": "What to know to set your lineup: Nix, Ward viable options if your QB is on bye",
      "url": "https://www.espn.com/fantasy/football/story/_/id/50531472/fantasy-football-start-sit-week-11-need-know"
-    },
-    {
-     "date": "2026-11-17",
-     "desc": "Why Cam Ward has real streaming potential in Week 11",
-     "title": "Why Cam Ward has real streaming potential in Week 11",
-     "url": "https://www.espn.com/video/clip/_/id/50511207/why-cam-ward-real-streaming-potential-week-11"
     },
     {
      "date": "2026-11-16",
@@ -580,18 +598,6 @@
      "desc": "Ward has nine games left to convince the Titans he should be their QB when they open the new stadium in 2027.",
      "title": "Where does Cam Ward stand coming out of the bye?",
      "url": "https://www.espn.com/nfl/story/_/id/50442969/titans-cam-ward-bye"
-    },
-    {
-     "date": "2026-10-11",
-     "desc": "Robert Saleh said he'll stick with Cam Ward as his starting QB, even after the Tennessee offense had an embarrassing performance in a 26-3 loss to the Texans.",
-     "title": "Titans' Robert Saleh after loss: Cam Ward is our QB1",
-     "url": "https://www.espn.com/nfl/story/_/id/50161024/titans-robert-saleh-loss-cam-ward-our-qb1"
-    },
-    {
-     "date": "2026-09-30",
-     "desc": "Titans quarterback Cam Ward on Wednesday addressed fans' threats to his family on social media.",
-     "title": "Titans' Cam Ward on fans' threats to family: 'People are weird'",
-     "url": "https://www.espn.com/nfl/story/_/id/50069509/titans-cam-ward-fans-threats-family-people-weird"
     }
    ],
    "nextGame": {
@@ -599,13 +605,25 @@
     "name": "TEN @ DAL"
    },
    "note": {
-    "date": "Sun Nov 15",
-    "headline": "Ward completed 28 of 39 passes for 231 yards and two touchdowns with one interception in Sunday's 40-23 loss to the Jaguars.",
-    "story": "The second-year QB kept his team in the game for three quarters, and Ward connected with Tony Pollard for a 32-yard catch-and-run TD on a checkdown in the fourth quarter that brought the Titans to within one score, only for the Jags to pull away late. Ward's production is slowly creeping up, and he's thrown for 535 yards over the last two games with a 4:1 TD:INT, 68.4 percent completion rate and 6.8 YPA, numbers which represent a big step up from the beginning of the season. He'll look to keep making progress in his development in Week 11 against a vulnerable Cowboys defense."
+    "date": "Sun Nov 22",
+    "headline": "Ward completed 21 of 30 passes for 248 yards with two touchdowns and no interceptions while rushing twice for three yards and another score in the Titans' 51-30 loss to the Cowboys on Sunday. He also lost a fumble.",
+    "story": "Ward's final line belies his struggles somewhat, as a Cowboys defense that made a defensive playcaller switch brought him down for five sacks and forced a lost fumble on one of them at Dallas' 20-yard line. Ward did manage to connect with Carnell Tate (59 yards) and Calvin Ridley (12 yards) for his pair of TD passes, the first coming when the rookie wideout alertly got up after not being touched and the second on a broken play where Ward threw across the field after buying several extra seconds with his legs. Ward also had a one-yard touchdown run in the third quarter, and despite Tennessee's "
    }
   },
   "ceedee-lamb": {
    "news": [
+    {
+     "date": "2026-11-23",
+     "desc": "Dak Prescott, CeeDee Lamb and Jonah Coleman put fantasy teams on their backs in Week 11, while Josh Allen, Jonathan Taylor and Tony Pollard disappointed.",
+     "title": "Week 11 winners and losers: Cowboys put up points while Josh Allen does not",
+     "url": "https://www.espn.com/fantasy/football/story/_/page/FFSundayHighLows-50564270/nfl-week-11-fantasy-football-winners-losers-injuries-rankings-more"
+    },
+    {
+     "date": "2026-11-23",
+     "desc": "Dak Prescott connects with CeeDee Lamb for a Cowboys TD",
+     "title": "Dak Prescott connects with CeeDee Lamb for a Cowboys TD",
+     "url": "https://www.espn.com/video/clip/_/id/50563608/dak-prescott-connects-ceedee-lamb-cowboys-td"
+    },
     {
      "date": "2026-11-09",
      "desc": "CeeDee Lamb and Kenneth Walker III came up big in Week 9, while Jahmyr Gibbs and Jonathan Taylor were quieter than usual.",
@@ -629,18 +647,6 @@
      "desc": "From family reunions to postgame trash talk, here are some of the sharpest sound bites and one-liners from around the league in Week 4.",
      "title": "NFL Week 4: CeeDee Lamb, Joe Burrow and more fuel best quotes",
      "url": "https://www.espn.com/nfl/story/_/id/50112467/nfl-week-4-top-quotes-ceedee-lamb-joe-burrow-cj-gardner-johnson-mike-vrabel"
-    },
-    {
-     "date": "2026-10-05",
-     "desc": "CeeDee Lamb and Kyren Williams came up big in Week 4, while Jaxon Smith-Njigba and D'Andre Swift had disappointing days.",
-     "title": "Week 4 winners and losers: Tetairoa McMillan, CeeDee Lamb dominate; Jaxon Smith-Njigba struggles",
-     "url": "https://www.espn.com/fantasy/football/story/_/page/FFSundayHighLows-50102250/nfl-week-4-fantasy-football-winners-losers-injuries-rankings-more"
-    },
-    {
-     "date": "2026-10-04",
-     "desc": "CeeDee Lamb returned to Houston and caught 17 passes for 189 yards, including the game-winning, 12-yard touchdown with 40 seconds to go, as a large number of family members watched from the stands.",
-     "title": "CeeDee Lamb's 17 catches, go-ahead score power Cowboys",
-     "url": "https://www.espn.com/nfl/story/_/id/50104876/ceedee-lamb-17-catches-go-ahead-score-power-cowboys"
     }
    ],
    "nextGame": {
@@ -648,9 +654,9 @@
     "name": "TEN @ DAL"
    },
    "note": {
-    "date": "Sun Nov 15",
-    "headline": "Lamb secured seven of 13 targets for 72 yards and a touchdown in the Cowboys' 46-40 loss to the 49ers on Sunday.",
-    "story": "Despite his own impressive numbers, Lamb played second fiddle to George Pickens for a change, as the latter doubled up the former in receptions and did the same with a yard to spare in receiving yards. Nevertheless, Lamb still put together a solid performance that included his eighth touchdown reception of the season, a spectacular leaping one-handed one-yard grab late in the fourth quarter. Lamb now is up to five consecutive double-digit target tallies and has at least 70 receiving yards in four of the last five contests heading into a Week 11 home matchup against the vulnerable Titans defens"
+    "date": "Sun Nov 22",
+    "headline": "Lamb brought 11 of 12 targets for 132 yards and a touchdown in the Cowboys' 51-30 win over the Titans on Sunday.",
+    "story": "Lamb's near-perfect day included his fifth 100-yard effort of the season -- including his second in the last three games -- and his ninth touchdown grab, which came from eight yards out early in the second quarter. Lamb had six double-digit-yardage catches overall on the afternoon, including his game-long 29-yard grab in the first half. Lamb crossed the 1,000-yard mark for the sixth consecutive season in the process, and he'll take an 88-1,108-9 line into a Week 12 Thanksgiving Day clash at home against the Eagles."
    }
   },
   "chet-holmgren": {
@@ -681,8 +687,8 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-22T23:00",
-    "name": "OKC @ MIA"
+    "date": "2026-11-24T00:30",
+    "name": "OKC @ IND"
    },
    "note": {
     "date": "Fri Oct 30",
@@ -716,9 +722,9 @@
     "name": "MIN VS SF"
    },
    "note": {
-    "date": "Sun Nov 15",
-    "headline": "McCaffrey rushed 13 times for 62 yards and a touchdown and brought in all four targets for 161 yards and two more scores in the 49ers' 46-40 win over the Cowboys on Sunday. He also caught a two-point conversion pass.",
-    "story": "While McCaffrey's touches once again were kept below 20, the elite running back finished with a season-high total in yards from scrimmage with a career-best performance as a receiver. He struck first through the air, recording a 74-yard touchdown reception late in the first half. The versatile veteran then went in on the ground from 16 yards out early in the fourth quarter to extend San Francisco's lead to 38-19 at the time, before sealing the extremely hard-fought victory with a spectacular 66-yard catch-and-run TD on a slant and an ensuing two-point conversion grab with just over three minut"
+    "date": "Sun Nov 22",
+    "headline": "McCaffrey rushed 12 times for 49 yards and a touchdown while catching both of his targets for 13 yards in Sunday's 35-10 win over the Vikings.",
+    "story": "McCaffrey was relatively quiet in the lopsided win, but he extended his touchdown streak to nine games with a six-yard touchdown run in the fourth quarter. The versatile running back was much less involved as a pass catcher Sunday night after racking up 161 yards and two touchdowns through the air against the Cowboys in Week 10, and he finished with a season-low 62 scrimmage yards against the Vikings. Backup Kaelon Black had just eight rushing yards on his six carries after siphoning off at least 11 rushing attempts in each of the previous three games. McCaffrey is set to face another stout de"
    }
   },
   "cj-stroud": {
@@ -822,6 +828,30 @@
   "cooper-flagg": {
    "news": [
     {
+     "date": "2026-11-23",
+     "desc": "Cooper Flagg fights off defender for and-1",
+     "title": "Cooper Flagg fights off defender for and-1",
+     "url": "https://www.espn.com/video/clip/_/id/50568296/cooper-flagg-fights-defender-1"
+    },
+    {
+     "date": "2026-11-23",
+     "desc": "Cooper Flagg rocks the rim with powerful slam",
+     "title": "Cooper Flagg throws down big jam vs. Utah Jazz",
+     "url": "https://www.espn.com/video/clip/_/id/50568034/cooper-flagg-throws-big-jam-vs-utah-jazz"
+    },
+    {
+     "date": "2026-11-23",
+     "desc": "Cooper Flagg elevates for dunk",
+     "title": "Cooper Flagg elevates for dunk",
+     "url": "https://www.espn.com/video/clip/_/id/50567566/cooper-flagg-elevates-dunk"
+    },
+    {
+     "date": "2026-11-23",
+     "desc": "Cooper Flagg rocks the rim with slam dunk",
+     "title": "Cooper Flagg rocks the rim with slam",
+     "url": "https://www.espn.com/video/clip/_/id/50567443/cooper-flagg-rocks-rim-slam"
+    },
+    {
      "date": "2026-11-22",
      "desc": "Cooper Flagg with the and-1 bucket",
      "title": "Cooper Flagg gets the and-1 to fall",
@@ -832,40 +862,16 @@
      "desc": "Cooper Flagg shows off the range on 3-point shot",
      "title": "Cooper Flagg shows off the range on 3-point shot",
      "url": "https://www.espn.com/video/clip/_/id/50557817/cooper-flagg-shows-range-3-point-shot"
-    },
-    {
-     "date": "2026-11-22",
-     "desc": "Cooper Flagg throws down the hammer",
-     "title": "Cooper Flagg throws down the hammer",
-     "url": "https://www.espn.com/video/clip/_/id/50557185/cooper-flagg-throws-hammer"
-    },
-    {
-     "date": "2026-11-20",
-     "desc": "The Dallas Mavericks' pop-up includes creamy peanut butter and grape jelly on white sourdough bread.",
-     "title": "Mavericks lean into Cooper Flagg's peanut butter and jelly trend with pop-up",
-     "url": "https://www.espn.com/nba/story/_/id/50534447/cooper-flagg-peanut-butter-jelly"
-    },
-    {
-     "date": "2026-11-19",
-     "desc": "Cooper Flagg fights off defender for and-1",
-     "title": "Cooper Flagg gets the hoop and the harm",
-     "url": "https://www.espn.com/video/clip/_/id/50526381/cooper-flagg-gets-hoop-harm"
-    },
-    {
-     "date": "2026-11-13",
-     "desc": "Cooper Flagg skies for big slam",
-     "title": "Cooper Flagg skies for big slam",
-     "url": "https://www.espn.com/video/clip/_/id/50466380/cooper-flagg-skies-big-slam"
     }
    ],
    "nextGame": {
-    "date": "2026-11-23T00:00",
-    "name": "DAL @ UTAH"
+    "date": "2026-11-25T03:00",
+    "name": "DAL @ DEN"
    },
    "note": {
-    "date": "Wed Nov 18",
-    "headline": "Flagg chipped in 33 points (11-15 FG, 3-5 3Pt, 8-8 FT), five rebounds, nine assists and four steals across 34 minutes during Wednesday's 116-94 victory over the Warriors.",
-    "story": "This was Flagg's 10th career game with at least 30 points and five assists, and it was his fourth 30-plus performance of the season. The 19-year-old has gotten off to a hot start with averages of 24.2 points, 6.6 rebounds, 6.4 assists, 1.4 triples, 2.0 steals and 0.7 swats per contest on 48.5 percent shooting from the field and 89.5 percent at the line, which has been good enough for top-eight value in fantasy leagues."
+    "date": "Mon Nov 23",
+    "headline": "Flagg amassed 28 points (8-17 FG, 3-7 3Pt, 9-10 FT), three rebounds, four assists and one steal across 31 minutes during Sunday's 116-114 win over the Jazz.",
+    "story": "Flagg delivered the decisive moment for the Mavericks, converting two free throws with 3.7 seconds remaining after Utah erased a substantial fourth-quarter deficit. The second-year forward led the Mavericks in scoring and took an aggressive approach, drawing 10 free-throw attempts and making nine. His expanding offensive responsibilities continue to support his fantasy appeal, and while the five turnovers weren't ideal, fantasy managers can live with them given everything else he brings to the table. Flagg has surpassed the 20-point mark in six of his last nine games, averaging 24.3 points, 6."
    }
   },
   "corbin-carroll": {
@@ -976,6 +982,12 @@
   "donovan-mitchell": {
    "news": [
     {
+     "date": "2026-11-23",
+     "desc": "Steve Alexander looks at three players on the rise and three who are slumping and how fantasy managers should react.",
+     "title": "Fantasy risers and fallers: Trade Davion Mitchell? Move on from De'Aaron Fox?",
+     "url": "https://www.espn.com/fantasy/basketball/story/_/id/50575130/fantasy-basketball-risers-fallers-keep-cut-add-today"
+    },
+    {
      "date": "2026-11-21",
      "desc": "Donovan Mitchell gets the hoop and the harm",
      "title": "Donovan Mitchell gets the and-1 to fall",
@@ -1004,12 +1016,6 @@
      "desc": "Donovan Mitchell gets the hoop and the harm",
      "title": "Donovan Mitchell gets the hoop and the harm",
      "url": "https://www.espn.com/video/clip/_/id/50476459/donovan-mitchell-gets-hoop-harm"
-    },
-    {
-     "date": "2026-11-13",
-     "desc": "Mitchell made two commitments this summer: his marriage and his extension with the Cavs. Now it's up to him to keep pushing Cleveland forward.",
-     "title": "Donovan Mitchell's renewed faith in Cleveland fuels the Cavs' future",
-     "url": "https://www.espn.com/nba/story/_/id/50463020/donovan-mitchell-cleveland-cavaliers-extension"
     }
    ],
    "nextGame": {
@@ -1066,9 +1072,9 @@
     "name": "NE @ LAC"
    },
    "note": {
-    "date": "Sun Nov 22",
-    "headline": "Maye, who reportedly suffered a fractured right fibula last Sunday, is on track to miss at least six weeks, according to Ian Rapoport of NFL Network.",
-    "story": "The timetable put forth by Rapoport suggests that Maye could make a run at a late-season return, or for the postseason, should New England qualify. Given that the Patriots are already close to the limit of how many players they can designate for return from IR, per Mike Reiss and Adam Schefter of ESPN, it's no lock that the QB will land on the list, but he's nonetheless facing an absence longer than the required four games that a placement on IR would mandate. For now, Tommy DeVito has been installed as the team's starter ahead of Week 12 action, with Behren Morton also on hand. Beyond that, D"
+    "date": "Mon Nov 23",
+    "headline": "For now, Maye -- who suffered a fractured right fibula during a Week 10 loss to the Lions -- remains on the Patriots' 53-man roster rather than injured reserve, with coach Mike Vrabel citing the \"balance\" the team is hoping to strike with regard to managing its remaining designated to return from IR slots, Mike Reiss of ESPN reports.",
+    "story": "Per Reiss, teams are limited to eight players that can be designated to return from the list over the course of the regular season and the Patriots are close to using them all. \"Right now, he's not on injured reserve,\" Vrabel said Monday. \"He's on the active roster, so that's where it is today. I think that those things are obviously fluid,\" adding, \"but we want to try to give him every opportunity that we can to be back at some point in time. I don't know when that will be; I'm not sure. But also, try to manage the roster and do what we need to do to try to win each week.\" Back on Nov. 22, Ia"
    }
   },
   "dylan-harper": {
@@ -1196,22 +1202,16 @@
      "desc": "Heat star Giannis Antetokounmpo said Wednesday night's win over the Bucks was like any other night, while Bam Adebayo said he has moved past his issues with Tyler Herro.",
      "title": "Giannis Antetokounmpo, Bam Adebayo put Bucks drama aside as Heat hold on",
      "url": "https://www.espn.com/nba/story/_/id/50528238/giannis-bam-adebayo-put-drama-aside-heat-hold-bucks"
-    },
-    {
-     "date": "2026-11-17",
-     "desc": "Giannis Antetokounmpo gets the hoop and the harm",
-     "title": "Giannis Antetokounmpo gets the hoop and the harm",
-     "url": "https://www.espn.com/video/clip/_/id/50506983/giannis-antetokounmpo-gets-hoop-harm"
     }
    ],
    "nextGame": {
-    "date": "2026-11-22T23:00",
-    "name": "OKC @ MIA"
+    "date": "2026-11-25T22:00",
+    "name": "MIA @ PHI"
    },
    "note": {
-    "date": "Sat Nov 21",
-    "headline": "Antetokounmpo (groin) is listed as questionable for Sunday's game against Oklahoma City, Ira Winderman of the South Florida Sun Sentinel reports.",
-    "story": "Antetokounmpo previously dealt with a wrist injury in November, and he's now working through a groin issue that puts his status for Sunday's game up in the air. He has yet to miss a game this season, but if he's not cleared to play against Oklahoma City, then Andrew Wiggins and Bobby Portis would be the top candidates to enter Miami's starting lineup."
+    "date": "Sun Nov 22",
+    "headline": "Antetokounmpo (groin) won't play in Sunday's game against Oklahoma City, Clemente Almanza of USA Today reports.",
+    "story": "Antetokounmpo is dealing with a groin injury. He was initially listed as questionable, though he has since been ruled out, marking his first absence of the year. His next opportunity to suit up will come Wednesday against Philadelphia. In the meantime, Bobby Portis and Andrew Wiggins are candidates to fill the void in the starting lineup."
    }
   },
   "gunnar-henderson": {
@@ -1339,6 +1339,12 @@
   "jalen-brunson": {
    "news": [
     {
+     "date": "2026-11-23",
+     "desc": "Jalen Brunson fights off defender for and-1",
+     "title": "Jalen Brunson fights off defender for and-1",
+     "url": "https://www.espn.com/video/clip/_/id/50568584/jalen-brunson-fights-defender-1"
+    },
+    {
      "date": "2026-11-20",
      "desc": "Jalen Brunson hits the 3 Minnesota Timberwolves",
      "title": "Jalen Brunson buries 3 against vs. Minnesota Timberwolves",
@@ -1367,22 +1373,16 @@
      "desc": "Jalen Brunson drills go-ahead 3 to secure Knicks' OT win",
      "title": "Jalen Brunson drills go-ahead 3 to secure Knicks' OT win",
      "url": "https://www.espn.com/video/clip/_/id/50497418/jalen-brunson-drills-go-ahead-3-secure-knicks-ot-win"
-    },
-    {
-     "date": "2026-11-14",
-     "desc": "Jalen Brunson lets the Pacers' bench hear if after a nasty bucket",
-     "title": "Jalen Brunson lets the Pacers' bench hear if after a nasty bucket",
-     "url": "https://www.espn.com/video/clip/_/id/50476180/jalen-brunson-lets-pacers-bench-hear-nasty-bucket"
     }
    ],
    "nextGame": {
-    "date": "2026-11-23T01:00",
-    "name": "IND @ NY"
+    "date": "2026-11-26T00:30",
+    "name": "CLE @ NY"
    },
    "note": {
-    "date": "Sat Nov 21",
-    "headline": "Brunson supplied 30 points (11-23 FG, 6-10 3Pt, 2-3 FT), seven rebounds and five assists over 36 minutes during Saturday's 97-96 victory over Portland.",
-    "story": "Brunson got off to a scorching hot start, drilling his first five three-point attempts while racking up 21 points on 10 shots in his first 14 minutes of play. However, his hot shooting didn't carry over after halftime, and he went scoreless in the fourth quarter. Still, his 30 points were a game high, and he helped the Knicks notch their fourth straight win."
+    "date": "Mon Nov 23",
+    "headline": "Brunson contributed 22 points (8-18 FG, 1-6 3Pt, 5-7 FT), three rebounds, seven assists and one steal across 32 minutes during Sunday's 113-106 win over the Pacers.",
+    "story": "Brunson didn't need an explosive scoring performance, as Karl-Anthony Towns contributed 30 points and Josh Hart recorded a triple-double. Still, Brunson delivered seven assists and played a big role as the Knicks earned a fifth straight win. His established offensive responsibilities remain intact, although the relatively inefficient perimeter shooting and four turnovers reduced the fantasy value of Sunday's performance. One subpar game -- if it can be called that -- won't reduce his elite fantasy appeal as one of the most productive guards in the league."
    }
   },
   "jalen-hurts": {
@@ -1436,6 +1436,12 @@
   },
   "jamarr-chase": {
    "news": [
+    {
+     "date": "2026-11-23",
+     "desc": "Ja'Marr Chase's skill set suggests formal gymnastics training, but the reality isn't quite that simple.",
+     "title": "Inside the gymnastics lore of Bengals star Ja'Marr Chase",
+     "url": "https://www.espn.com/nfl/story/_/id/50565876/bengals-jamarr-chase-gymnastics"
+    },
     {
      "date": "2026-11-08",
      "desc": "The Bengals' first-half lead called for celebrations inspired by being in Spain.",
@@ -1566,17 +1572,23 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-23T01:30",
-    "name": "BOS @ GS"
+    "date": "2026-11-25T01:00",
+    "name": "BOS @ WSH"
    },
    "note": {
-    "date": "Sat Nov 21",
-    "headline": "Tatum (rest) has been ruled out for Saturday's game against the Kings.",
-    "story": "Tatum will be rested for the first leg of the Celtics' back-to-back set, so he should be back on the floor for Sunday's game against the Warriors. With both Tatum and Derrick White (shoulder) sidelined, the Celtics will rely more heavily on Paul George, Payton Pritchard, Baylor Scheierman, Hugo Gonzalez and Sam Hauser to carry the scoring load against Sacramento."
+    "date": "Mon Nov 23",
+    "headline": "Tatum closed with 27 points (8-20 FG, 4-11 3Pt, 7-8 FT), 10 rebounds, six assists and one steal over 38 minutes during Sunday's 88-87 loss to the Warriors.",
+    "story": "Tatum led Boston in scoring and delivered another well-rounded performance, but his late-game shooting struggles proved costly. He missed a free throw that could have tied the game and couldn't convert a contested jumper at the buzzer. Despite the disappointing finish, his combination of scoring, rebounding and playmaking remains an excellent fantasy foundation, particularly with the Celtics continuing to rely heavily on his offensive production. He's scored at least 20 points in each of his last eight games while averaging 25.9 points, 7.6 rebounds and 5.8 assists per game over that stretch."
    }
   },
   "joe-burrow": {
    "news": [
+    {
+     "date": "2026-11-21",
+     "desc": "Ben Baby previews Joe Burrow's mindset heading into Monday night against the Commanders.",
+     "title": "Joe Burrow, Bengals gearing up for MNF",
+     "url": "https://www.espn.com/video/clip/_/id/50545144/joe-burrow-bengals-gearing-mnf"
+    },
     {
      "date": "2026-11-21",
      "desc": "A full participant at practice for the second straight day despite the bug that he has battled, Bengals quarterback Joe Burrow is optimistic that he'll be at full strength when Cincinnati plays the Washington Commanders on \"Monday Night Football.\"",
@@ -1606,12 +1618,6 @@
      "desc": "Bengals QB Joe Burrow threw for 409 yards with four touchdowns and no interceptions Sunday night, becoming just the third player in NFL history after Tom Brady and Peyton Manning to throw at least 20 passing touchdowns in a five-game span.",
      "title": "Joe Burrow's 4-TD night puts QB in company of Tom Brady, Peyton Manning",
      "url": "https://www.espn.com/nfl/story/_/id/50499235/bengals-joe-burrow-4-touchdowns-win-vs-steelers-puts-company-tom-brady-peyton-manning"
-    },
-    {
-     "date": "2026-11-13",
-     "desc": "Joe Burrow is the MVP favorite halfway through the season, but is he worth a bet, or are their better values?",
-     "title": "Joe Burrow is the MVP favorite, but is there a better betting value?",
-     "url": "https://www.espn.com/espn/betting/story/_/id/50465559/2026-nfl-mvp-favorite-odds-betting-quarterbacks"
     }
    ],
    "nextGame": {
@@ -1668,13 +1674,19 @@
     "name": "POR @ PHI"
    },
    "note": {
-    "date": "Sat Nov 21",
-    "headline": "Embiid notched 26 points (7-17 FG, 0-1 3Pt, 12-14 FT), 17 rebounds, nine assists and a block across 34 minutes in Saturday's 132-29 win over the Bucks.",
-    "story": "Embiid carried the 76ers offensively, and while his shooting wasn't particularly efficient, a strong showing from the charity stripe boosted his scoring tally. The star center finished just one assist away from a triple-double and seems to be finding his form, racking up 63 points, 11 rebounds, eight assists, three steals and five blocks over his last two games. This was also his third double-double over his last eight appearances."
+    "date": "Mon Nov 23",
+    "headline": "Embiid (knee) has been downgraded to questionable for Monday's game against Portland.",
+    "story": "Embiid is under the weather and was a late addition to the injury report. If the star big man is unable to suit up, Adem Bona (back), Dominick Barlow and Jabari Walker would be candidates to see increased minutes at center. Over his last four games, Embiid has averaged 27.3 points, 8.0 rebounds, 5.0 assists, 1.8 blocks and 1.0 steals in 32.5 minutes per tilt."
    }
   },
   "josh-allen": {
    "news": [
+    {
+     "date": "2026-11-23",
+     "desc": "Dak Prescott, CeeDee Lamb and Jonah Coleman put fantasy teams on their backs in Week 11, while Josh Allen, Jonathan Taylor and Tony Pollard disappointed.",
+     "title": "Week 11 winners and losers: Cowboys put up points while Josh Allen does not",
+     "url": "https://www.espn.com/fantasy/football/story/_/page/FFSundayHighLows-50564270/nfl-week-11-fantasy-football-winners-losers-injuries-rankings-more"
+    },
     {
      "date": "2026-11-10",
      "desc": "As the number of teams shrink, the number of stars available in Knockout leagues grows. Here are the ones to get.",
@@ -1698,18 +1710,6 @@
      "desc": "QB Josh Allen said the Bills \"didn't play up to our standard\" in the first half Sunday against the Ravens -- and delivered a halftime message to his teammates that essentially said \"we're way better than this.\"",
      "title": "Josh Allen's halftime words fuel Bills' 2nd-half surge in win over Ravens",
      "url": "https://www.espn.com/nfl/story/_/id/50352713/josh-allen-half-words-fuel-bills-second-half-vs-ravens"
-    },
-    {
-     "date": "2026-10-27",
-     "desc": "Out of the 153 players who've carried from the 1- or 2-yard line at least 30 times since 1977, Allen has done it best.",
-     "title": "Is Bills' Josh Allen the best goal-line rusher ever?",
-     "url": "https://www.espn.com/nfl/story/_/id/50288152/bills-josh-allen-greatest-td-rusher"
-    },
-    {
-     "date": "2026-10-21",
-     "desc": "As Buffalo heads into its Week 7 bye, quarterback Josh Allen and the offense have thrived, while the defense has not.",
-     "title": "Why the Bills have been historically good, and bad, through six weeks",
-     "url": "https://www.espn.com/nfl/story/_/id/50230871/bills-qb-josh-allen-good-bad-bye"
     }
    ],
    "nextGame": {
@@ -1717,9 +1717,9 @@
     "name": "MIA @ BUF"
    },
    "note": {
-    "date": "Sun Nov 15",
-    "headline": "Allen completed 11 of 21 passes for 196 yards, one touchdown and one interception while rushing five times for five yards and two touchdowns in Sunday's 31-12 win over the Jets.",
-    "story": "Allen scored one-yard rushing touchdowns in the first and third quarters, bringing his season total up to 11 rushing TDs. He added his 13th touchdown pass of the campaign on a 45-yard strike to DJ Moore later in the third quarter, and Allen's fourth-quarter interception on third-and-long was basically an arm punt. Heading into a Week 11 home game against the Dolphins, the star QB has accounted for multiple touchdowns in all but one outing this season."
+    "date": "Sun Nov 22",
+    "headline": "Allen completed 27 of 45 passes for 304 yards, one touchdown and two interceptions in Sunday's 26-9 win over the Dolphins.",
+    "story": "Allen threw a four-yard touchdown pass to DJ Moore in the second quarter but got picked off twice later in the first half and had a would-be third interception nullified by a penalty on the penultimate play before halftime. Despite some sloppy play and zero rushing production from Allen, the 9-1 Bills cruised past the 1-9 Dolphins as the star QB raised his season total to 25 touchdowns (14 passing, 11 rushing). Buffalo's likely to encounter more resistance Thursday night against the 8-2 Chiefs. Allen is 5-1 against Patrick Mahomes in the regular season but 0-4 when they face off in the playoff"
    }
   },
   "juan-soto": {
@@ -1762,6 +1762,24 @@
   "justin-herbert": {
    "news": [
     {
+     "date": "2026-11-23",
+     "desc": "Quarterback Justin Herbert is in the concussion protocol, the Chargers said after Sunday's 27-24 loss to the Jets in Inglewood, California.",
+     "title": "Chargers' Justin Herbert lands in concussion protocol",
+     "url": "https://www.espn.com/nfl/story/_/id/50567478/chargers-justin-herbert-lands-concussion-protocol"
+    },
+    {
+     "date": "2026-11-22",
+     "desc": "Justin Herbert fires a dart to Ladd McConkey to pull the Chargers closer",
+     "title": "Justin Herbert fires a dart to Ladd McConkey to pull the Chargers closer",
+     "url": "https://www.espn.com/video/clip/_/id/50566987/justin-herbert-fires-dart-ladd-mcconkey-pull-chargers-closer"
+    },
+    {
+     "date": "2026-11-22",
+     "desc": "Justin Herbert somersaults into the end zone for a Chargers TD",
+     "title": "Justin Herbert somersaults into the end zone for a Chargers TD",
+     "url": "https://www.espn.com/video/clip/_/id/50566075/justin-herbert-somersaults-end-zone-chargers-td"
+    },
+    {
      "date": "2026-11-17",
      "desc": "The Chargers' defense stifles Baltimore's running backs, and Justin Herbert steps up in Los Angeles' first win.",
      "title": "Justin Herbert, defense help lift Chargers past Ravens on MNF",
@@ -1778,24 +1796,6 @@
      "desc": "X-rays on the injured middle finger of Chargers quarterback Justin Herbert's left hand came back negative for a fracture, coach Jim Harbaugh said Monday.",
      "title": "Chargers' Jim Harbaugh says X-rays on QB Justin Herbert's finger negative",
      "url": "https://www.espn.com/nfl/story/_/id/50437202/chargers-harbaugh-says-x-rays-herbert-finger-negative"
-    },
-    {
-     "date": "2026-11-09",
-     "desc": "Los Angeles Chargers quarterback Justin Herbert, who was sacked eight times and threw his NFL-leading 11th interception, left Sunday's 44-22 loss to the Houston Texans in the second half with an injury to the middle finger on his left (non-throwing) hand.",
-     "title": "Herbert to undergo testing after exiting Chargers' 44-22 loss with finger injury",
-     "url": "https://www.espn.com/nfl/story/_/id/50428280/herbert-injures-finger-chargers-loss-testing"
-    },
-    {
-     "date": "2026-11-05",
-     "desc": "Chargers coach Jim Harbaugh, asked about Quentin Lake's comments on Justin Herbert's struggles against the Rams, says, \"I don't see that.\"",
-     "title": "Harbaugh on Rams DB's 'deli meat' comment on Herbert: 'It's not what I see'",
-     "url": "https://www.espn.com/nfl/story/_/id/50388940/harbaugh-defends-herbert-rams-db-deli-meat-comment"
-    },
-    {
-     "date": "2026-11-03",
-     "desc": "Get ready for Week 9 with takes on the Bucs' division chances, why RBs could dominate the trade deadline and which teams should at least ask about Justin Herbert.",
-     "title": "Seven things Solak thinks for NFL Week 9: Bucs atop NFC South? RB trades coming?",
-     "url": "https://www.espn.com/nfl/story/_/id/50355612/week-9-seven-things-solak-thinks-trades-standings"
     }
    ],
    "nextGame": {
@@ -1803,13 +1803,19 @@
     "name": "NYJ @ LAC"
    },
    "note": {
-    "date": "Mon Nov 16",
-    "headline": "Herbert completed 12 of 18 passes for 129 yards with no touchdowns or interceptions and rushed seven times for 51 yards and a touchdown in the Chargers' 23-20 win over the Ravens on Monday night.",
-    "story": "Herbert ironically compiled his second-fewest passing yards of the season in the Chargers' first victory, but the talented signal-caller leaned heavily on both his legs and an effective rushing performance from Omarion Hampton. Herbert made a significant contribution himself to cap off Los Angeles' opening drive of the game, taking off when he couldn't find anyone open and recording a 22-yard rushing touchdown for the first points of the night. The game also marked Herbert's first interception-free performance of the season and gives the beleaguered Chargers' air attack something to hang its c"
+    "date": "Sun Nov 22",
+    "headline": "Herbert entered the concussion protocol after Sunday's 27-24 loss to the Jets, Noah Furtado of The Athletic reports.",
+    "story": "Herbert completed 15 of 21 passes for 131 yards, two touchdowns and no interceptions in Week 11, but he also endured six sacks, fumbled once and added 32 yards and one TD on his eight carries. It's unclear exactly when he picked up the head injury, but he'll be subject to the concussion protocol ahead of further game action. The Chargers take the field next Sunday against the Patriots."
    }
   },
   "justin-jefferson": {
    "news": [
+    {
+     "date": "2026-11-23",
+     "desc": "Justin Jefferson visibly upset after fumbling in third quarter",
+     "title": "Justin Jefferson visibly upset after fumbling in third quarter",
+     "url": "https://www.espn.com/video/clip/_/id/50569951/justin-jefferson-visibly-upset-fumbling-third-quarter"
+    },
     {
      "date": "2026-11-13",
      "desc": "Adam Rank catches you up on the vital information and insight before you make your toughest lineup decisions.",
@@ -1846,9 +1852,9 @@
     "name": "MIN VS SF"
    },
    "note": {
-    "date": "Sun Nov 15",
-    "headline": "Jefferson caught nine of 13 targets for 74 yards in Sunday's 30-10 win over the Packers.",
-    "story": "In Kirk Cousins' return to the Vikings, Jefferson led the team in catches, targets and receiving yards, although Myles Price and Gavin Bartholomew were on the other end of the QB's two touchdown passes. The nine grabs and 13 targets were season highs for Jefferson, while the yardage total was his best showing since Week 5. Despite a disappointing 40-467-4 line on 64 targets through eight games, the star wideout's outlook for the rest of the year is pointed up heading into a Week 11 clash with the 49ers."
+    "date": "Sun Nov 22",
+    "headline": "Jefferson caught seven of nine targets for 86 yards and lost a fumble in Sunday's 35-10 loss to the 49ers.",
+    "story": "Jefferson has experienced an uptick in usage since the Vikings reacquired Kirk Cousins. The star WR has 16 catches for 160 yards on 22 targets in two games with Cousins, though Jefferson hasn't scored since Week 8. Jefferson fumbled at the end of a 25-yard catch in the third quarter, turning what would have been one of his best plays of the night into a lowlight. Another heavy dose of targets from Cousins likely awaits Jefferson in Week 12 against the Falcons."
    }
   },
   "kawhi-leonard": {
@@ -1995,16 +2001,10 @@
   "lamelo-ball": {
    "news": [
     {
-     "date": "2026-11-22",
-     "desc": "Jim McCormick breaks down Sunday's NBA slate, highlighting the fantasy streamers to add and bets to make.",
-     "title": "Fantasy basketball adds and NBA bets: Expect Bulls, Nuggets to score",
-     "url": "https://www.espn.com/fantasy/basketball/story/_/id/50560887/fantasy-basketball-tips-nba-betting-picks-today"
-    },
-    {
-     "date": "2026-11-21",
-     "desc": "Jim McCormick breaks down Saturday's NBA slate, highlighting the fantasy streamers to add and bets to make.",
-     "title": "Fantasy basketball adds and NBA bets: Zero in on Acuff Jr., Queta on Saturday",
-     "url": "https://www.espn.com/fantasy/basketball/story/_/id/50550460/fantasy-basketball-tips-nba-betting-picks-today"
+     "date": "2026-11-23",
+     "desc": "From Thanksgiving NFL showdowns, to Christmas Day NBA action, and Boxing Day football, ESPN Africa has the festive season covered with a packed line-up of live sport, on channels across the continent and Disney+ in SA.",
+     "title": "Sport on ESPN in Africa this festive - What to watch on DStv, Disney+ in December",
+     "url": "https://www.espn.com/espn/story/_/id/50571229/sport-espn-africa-festive-watch-dstv-disney+"
     },
     {
      "date": "2026-11-20",
@@ -2029,6 +2029,12 @@
      "desc": "From downtown, LaMelo Ball hits the deep 3",
      "title": "From downtown, LaMelo Ball hits the deep 3",
      "url": "https://www.espn.com/video/clip/_/id/50428706/from-downtown-lamelo-ball-hits-deep-3"
+    },
+    {
+     "date": "2026-11-09",
+     "desc": "LaMelo Ball rocks the rim with powerful jam",
+     "title": "LaMelo Ball soars for big Dunk",
+     "url": "https://www.espn.com/video/clip/_/id/50428202/lamelo-ball-soars-big-dunk"
     }
    ],
    "nextGame": {
@@ -2044,7 +2050,7 @@
   "lebron-james": {
    "news": [
     {
-     "date": "2026-11-22",
+     "date": "2026-11-23",
      "desc": "In 2024, Bronny James joined his father LeBron on the Los Angeles Lakers. Take a closer look at the highest-scoring father-son duos in NBA history.",
      "title": "Which NBA father-son duos have the most points?",
      "url": "https://www.espn.com/nba/story/_/id/41571864/most-nba-points-father-son-duo"
@@ -2142,22 +2148,16 @@
   "malik-nabers": {
    "news": [
     {
+     "date": "2026-11-23",
+     "desc": "J.J. McCarthy picks out Malik Nabers for a Giants TD",
+     "title": "J.J. McCarthy picks out Malik Nabers for a Giants TD",
+     "url": "https://www.espn.com/video/clip/_/id/50566408/jj-mccarthy-picks-malik-nabers-giants-td"
+    },
+    {
      "date": "2026-11-19",
      "desc": "A bye-laden Week 11 might make you cringe at some of your lineup decisions, so let the facts hone your feelings on Bo Nix, Tony Pollard, Jaylen Warren, Chris Olave, Malik Nabers, Stefon Diggs and Colston Loveland.",
      "title": "Facts vs. Feelings: Bye-mageddon means getting comfortable with the uncomfortable",
      "url": "https://www.espn.com/fantasy/football/story/_/id/50514411/facts-feelings-fantasy-advice-week-11"
-    },
-    {
-     "date": "2026-11-18",
-     "desc": "Malik Nabers' Week 11 fantasy outlook",
-     "title": "Malik Nabers' Week 11 fantasy outlook",
-     "url": "https://www.espn.com/video/clip/_/id/50520477/malik-nabers-week-11-fantasy-outlook"
-    },
-    {
-     "date": "2026-11-13",
-     "desc": "Should managers be concerned with Malik Nabers after 2 straight duds?",
-     "title": "Should managers be concerned with Malik Nabers after 2 straight duds?",
-     "url": "https://www.espn.com/video/clip/_/id/50472139/should-managers-concerned-malik-nabers-2-straight-duds"
     },
     {
      "date": "2026-11-12",
@@ -2176,6 +2176,12 @@
      "desc": "Malik Nabers took issue with Fox play-by-play man Joe Davis and analyst Greg Olsen for criticizing his body language during the Giants' win Sunday.",
      "title": "Giants' Malik Nabers takes issue with Greg Olsen, Fox for comments during game",
      "url": "https://www.espn.com/nfl/story/_/id/50429684/giants-malik-nabers-takes-issue-fox-telecast"
+    },
+    {
+     "date": "2026-11-07",
+     "desc": "Giants running back Cam Skattebo is unlikely to play against the Eagles on Sunday, but receiver Malik Nabers is expected to be a \"full go\" without limitations.",
+     "title": "Giants' Cam Skattebo doubtful vs. Eagles; Malik Nabers 'full go'",
+     "url": "https://www.espn.com/nfl/story/_/id/50402162/giants-cam-skattebo-doubtful-vs-eagles-nabers-full-go"
     }
    ],
    "nextGame": {
@@ -2183,9 +2189,9 @@
     "name": "JAX @ NYG"
    },
    "note": {
-    "date": "Thu Nov 12",
-    "headline": "Nabers secured five of seven targets for 44 yards and lost a fumble in the Giants' 24-21 loss to the Commanders on Thursday.",
-    "story": "The star wideout finished with less than 50 receiving yards for the second time in five days, and Nabers' late third-quarter lost fumble had significant ramifications. The turnover came at the Commanders' 16-yard line with the Giants down by three, costing  New York a golden opportunity to tie the game at minimum. Nabers' aforementioned pair of mediocre performances have come in the wake of a four-game streak of 100-yard efforts in Weeks 4-7, and he'll look to boost his numbers back up against the Jaguars' pass-funnel defense in a Week 11 home matchup on Sunday, Nov. 22."
+    "date": "Sun Nov 22",
+    "headline": "Nabers brought in seven of 12 targets for 55 yards and a touchdown in the Giants' 23-18 win over the Jaguars on Sunday.",
+    "story": "Nabers was in the familiar position of leading the Giants across the board in receptions, receiving yards and targets, and the third-year star also snapped a four-game touchdown drought with an eight-yard grab in the second quarter. Nabers has at least five catches in eight straight contests and three double-digit target tallies within that span, and the 2024 first-round pick should continue to be the subject of plenty of J.J. McCarthy's attention in a Week 12 road matchup against the Colts next Sunday."
    }
   },
   "marvin-harrison-jr": {
@@ -2283,6 +2289,12 @@
   "nikola-jokic": {
    "news": [
     {
+     "date": "2026-11-23",
+     "desc": "Nikola Jokic leads Nuggets to OT win with a 37-point triple-double",
+     "title": "Nikola Jokic leads Nuggets to OT win with a 37-point triple-double",
+     "url": "https://www.espn.com/video/clip/_/id/50568954/nikola-jokic-leads-nuggets-ot-win-37-point-triple-double"
+    },
+    {
      "date": "2026-11-20",
      "desc": "Nikola Jokic's numbers are down from his typical norm, but has he been passed by Wemby or Luka as the top player in fantasy?",
      "title": "Should fantasy hoops managers expect a return to dominance from Nikola Jokic?",
@@ -2305,28 +2317,16 @@
      "desc": "Nikola Jokic fights off defender for and-1",
      "title": "Nikola Jokic fights off defender for and-1",
      "url": "https://www.espn.com/video/clip/_/id/50485384/nikola-jokic-fights-defender-1"
-    },
-    {
-     "date": "2026-11-06",
-     "desc": "Denver's roster was never built to overcome any slippage from its three-time MVP.",
-     "title": "Could Denver overcome a 'down' year from Nikola Jokic? Absolutely not",
-     "url": "https://www.espn.com/nba/story/_/id/50371585/nikola-jokic-mvp-denver-nuggets-struggles"
-    },
-    {
-     "date": "2026-10-29",
-     "desc": "Nikola Jokic becomes the second player to reach 200 career triple-doubles",
-     "title": "Nikola Jokic becomes the second player to reach 200 career triple-doubles",
-     "url": "https://www.espn.com/video/clip/_/id/50314568/nikola-jokic-becomes-second-player-reach-200-career-triple-doubles"
     }
    ],
    "nextGame": {
-    "date": "2026-11-23T00:00",
-    "name": "DEN @ CHI"
+    "date": "2026-11-25T03:00",
+    "name": "DAL @ DEN"
    },
    "note": {
-    "date": "Sat Nov 21",
-    "headline": "Jokic chipped in 26 points (10-15 FG, 2-3 3Pt, 4-4 FT), seven rebounds and 11 assists over 38 minutes during Friday's 133-124 victory over the Rockets.",
-    "story": "Jokic was his usual efficient self, leading Denver in scoring and assists. He capped the night by setting up an Aaron Gordon alley-oop in the final seconds. The three-time MVP has been remarkably consistent, scoring at least 24 points in five straight games. He's averaging 24.2 points, 10.4 rebounds and 9.1 assists overall this season."
+    "date": "Sun Nov 22",
+    "headline": "Jokic recorded 37 points (14-22 FG, 1-3 3Pt, 8-10 FT), 18 rebounds, 11 assists, one steal and a block in 42 minutes during Sunday's 151-145 overtime win over the Bulls.",
+    "story": "Jokic got off to a fast start Sunday, logging 12 points, eight rebounds and four assists in the first quarter alone. His dominance continued throughout the game, as he logged a game-high 18 rebounds and a team-high 11 assists to go along with a season-high 37 points. The star big man has now posted four triple-doubles this season."
    }
   },
   "paolo-banchero": {
@@ -2369,8 +2369,8 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-23T00:00",
-    "name": "ORL @ WSH"
+    "date": "2026-11-25T00:00",
+    "name": "DET @ ORL"
    },
    "note": {
     "date": "Sat Oct 24",
@@ -2380,6 +2380,18 @@
   },
   "patrick-mahomes": {
    "news": [
+    {
+     "date": "2026-11-22",
+     "desc": "Patrick Mahomes finds Xavier Worthy for a Chiefs TD",
+     "title": "Patrick Mahomes finds Xavier Worthy for a Chiefs TD",
+     "url": "https://www.espn.com/video/clip/_/id/50564442/patrick-mahomes-finds-xavier-worthy-chiefs-td"
+    },
+    {
+     "date": "2026-11-22",
+     "desc": "Patrick Mahomes, Travis Kelce link up for their 2nd TD connection of the 1st half",
+     "title": "Patrick Mahomes, Travis Kelce link up for their 2nd TD connection of the 1st half",
+     "url": "https://www.espn.com/video/clip/_/id/50563763/patrick-mahomes-travis-kelce-link-their-2nd-td-connection-1st-half"
+    },
     {
      "date": "2026-11-16",
      "desc": "Christian McCafffrey, Jahmyr Gibbs and Patrick Mahomes put fantasy teams on their back in Week 10, while Jonathan Taylor and the Packers and Panthers' passing games had quiet days.",
@@ -2394,12 +2406,6 @@
     },
     {
      "date": "2026-11-15",
-     "desc": "Why fantasy managers should keep riding the hot hand with Patrick Mahomes",
-     "title": "Why fantasy managers should keep riding the hot hand with Patrick Mahomes",
-     "url": "https://www.espn.com/video/clip/_/id/50494330/why-fantasy-managers-keep-riding-hot-hand-patrick-mahomes"
-    },
-    {
-     "date": "2026-11-15",
      "desc": "The Chiefs sought medical opinions from two renowned baseball doctors last week on Patrick Mahomes' injured elbow, sources told ESPN.",
      "title": "Sources: Chiefs had renowned baseball doctors weigh in on Patrick Mahomes' elbow",
      "url": "https://www.espn.com/nfl/story/_/id/50481210/sources-baseball-doctors-consulted-patrick-mahomes-elbow"
@@ -2409,12 +2415,6 @@
      "desc": "Former Colts WR Downs brings speed, route running and big-play ability to a Kansas City offense in need of all three.",
      "title": "How Josh Downs fits with Patrick Mahomes and the Chiefs' offense",
      "url": "https://www.espn.com/nfl/story/_/id/50448000/josh-downs-chiefs-trade-patrick-mahomes-offense-role"
-    },
-    {
-     "date": "2026-11-11",
-     "desc": "The couple shared the news on a busy trade deadline day that also brought receiver Josh Downs to Kansas City.",
-     "title": "Patrick and Brittany Mahomes announce baby No. 4 on NFL trade deadline day",
-     "url": "https://www.espn.com/nfl/story/_/id/50448300/patrick-brittany-mahomes-fourth-child-announcement"
     }
    ],
    "nextGame": {
@@ -2422,9 +2422,9 @@
     "name": "ARI @ KC"
    },
    "note": {
-    "date": "Sun Nov 15",
-    "headline": "Mahomes completed 22 of 35 passes for 348 yards with five touchdowns and no interceptions while adding two rushes for 15 yards in the Chiefs' 35-13 win over the Falcons on Sunday.",
-    "story": "Taking advantage of a controlled environment and a fast track at Mercedes-Benz Stadium -- not to mention the presence of the debuting Josh Downs -- Mahomes repeatedly exploited the vulnerabilities of the Falcons defense throughout the afternoon. The legendary signal-caller showed no ill effects from the elbow injury that he'd suffered in Week 9, and he connected with Emmett Johnson (12, six yards), Downs (18 yards), Cyrus Allen (39 yards) and Andrew Armstrong (43 yards) for his quintet of touchdown passes. Mahomes now has multiple scoring strikes and zero interceptions in three straight games,"
+    "date": "Sun Nov 22",
+    "headline": "Mahomes completed 27 of 39 passes for 324 yards with three touchdowns and no interceptions in the Chiefs' 34-7 win over the Cardinals on Sunday.",
+    "story": "Mahomes was clicking early against the Cardinals' defense, capping off the opening possession of the game with an eight-yard touchdown toss to Travis Kelce. The prolific signal-caller went on to add a 22-yard scoring pass to Kelce shortly before the end of the first half, and he capped off his day with an 18-yarder to Xavier Worthy on which the speedy receiver raced up the right sideline and into the end zone. Mahomes now has consecutive 300-yard efforts and has accomplished the feat in three of the past four games overall, affording him plenty of momentum heading into a Week 12 showdown with "
    }
   },
   "paul-skenes": {
@@ -2641,10 +2641,16 @@
   "saquon-barkley": {
    "news": [
     {
-     "date": "2026-11-20",
-     "desc": "Field Yates voices his concerns for Saquon Barkley in fantasy",
-     "title": "Field Yates voices his concerns for Saquon Barkley in fantasy",
-     "url": "https://www.espn.com/video/clip/_/id/50541498/field-yates-voices-concerns-saquon-barkley-fantasy"
+     "date": "2026-11-22",
+     "desc": "Is Saquon Barkley back to must-start status in fantasy?",
+     "title": "Is Saquon Barkley back to must-start status in fantasy?",
+     "url": "https://www.espn.com/video/clip/_/id/50565751/is-saquon-barkley-back-start-status-fantasy"
+    },
+    {
+     "date": "2026-11-22",
+     "desc": "Saquon Barkley bursts past Steelers for 38-yard TD run",
+     "title": "Saquon Barkley bursts past Steelers for 38-yard TD run",
+     "url": "https://www.espn.com/video/clip/_/id/50563547/saquon-barkley-bursts-steelers-38-yard-td-run"
     },
     {
      "date": "2026-11-02",
@@ -2669,12 +2675,6 @@
      "desc": "Eagles star Saquon Barkley said he was forced to divest his equity stake in Polymarket to comply with NFL rules.",
      "title": "Eagles star Saquon Barkley says he was forced to divest Polymarket equity stake",
      "url": "https://www.espn.com/nfl/story/_/id/50309777/saquon-barkley-says-was-forced-divest-polymarket-stake"
-    },
-    {
-     "date": "2026-10-27",
-     "desc": "Eagles running back Saquon Barkley said his \"hamstring came out great\" and doesn't believe his back issue will keep him out after a gutsy and highly efficient performance in a loss to the Cowboys on Monday night.",
-     "title": "Eagles' Saquon Barkley says hamstring 'great' in return, not sweating back issue",
-     "url": "https://www.espn.com/nfl/story/_/id/50294604/eagles-saquon-barkley-hobbled-highly-efficient-gutsy-losing-effort-vs-cowboys"
     }
    ],
    "nextGame": {
@@ -2682,13 +2682,19 @@
     "name": "PIT @ PHI"
    },
    "note": {
-    "date": "Fri Nov 20",
-    "headline": "Barkley (hamstring) told EJ Smith of PHLY Sports on Friday that he \"feels better physically\" after the team's Week 10 bye, and the running back doesn't have a designation for Sunday's contest against the Steelers.",
-    "story": "Barkley was able to put together a full week of drills during Week 11 prep, and while his current state is positive, he added that the time off isn't a \"magic pill,\" indicating that he still has some residual effects from the hamstring injury that has lingered since he picked it up in Week 4. In his last appearance in Week 9 against the Giants, he handled a 58 percent snap share and turned his 13 carries into 22 yards and one touchdown. As for the rest of the Eagles backfield, Jaydon Blue is the only other option on the active roster, Elijah Mitchell is a candidate to be elevated from the prac"
+    "date": "Sun Nov 22",
+    "headline": "Barkley (left arm) said after Sunday's 19-16 win over the Steelers that he believes he'll play in Thursday's game at Dallas, Johnny McGonigal of PennLive.com reports.",
+    "story": "Barkley didn't log a touch after the 8:02 mark of the fourth quarter after he had an apparent left arm injury examined by team trainers, according to Olivia Reiner of The Philadelphia Inquirer. While Barkley wouldn't elaborate on the issue to McGonigal, the running back seemed optimistic about his chances to suit up in Week 12. Barkley finished Sunday's matchup with 17 carries for 75 yards and one touchdown and wasn't targeted by QB Joe Milton. Monday's injury report may provide further clarity on Barkley's situation."
    }
   },
   "shai-gilgeous-alexander": {
    "news": [
+    {
+     "date": "2026-11-23",
+     "desc": "In a game that did not feature Oklahoma City's Shai Gilgeous-Alexander or Miami's Giannis Antetokounmpo, Bam Adebayo swiped the spotlight, scoring 24 points en route to a triple-double, as the surging Heat defeated the Thunder 123-113 on Sunday night.",
+     "title": "Bam Adebayo's triple-double ignites Heat's 123-113 victory over Thunder",
+     "url": "https://www.espn.com/nba/story/_/id/50568682/adebayo-triple-double-sparks-shorthanded-heat-victory"
+    },
     {
      "date": "2026-11-21",
      "desc": "Shai Gilgeous-Alexander gets the basket plus the foul",
@@ -2715,13 +2721,13 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-22T23:00",
-    "name": "OKC @ MIA"
+    "date": "2026-11-24T00:30",
+    "name": "OKC @ IND"
    },
    "note": {
-    "date": "Sat Nov 21",
-    "headline": "Gilgeous-Alexander (back/neck) is listed as questionable for Sunday's game versus Miami.",
-    "story": "After scoring 40 points in Friday's 126-120 win over the Pelicans, Gilgeous-Alexander could miss his first game of the 2026-27 campaign due to back and neck issues. With Nikola Topic (hip), Alex Caruso (hip) and Cason Wallace (shoulder) all unavailable, Bennett Stirtz may be needed in the starting lineup if Gilgeous-Alexander is ruled out Sunday."
+    "date": "Mon Nov 23",
+    "headline": "Gilgeous-Alexander (neck/back) isn't listed on the injury report for Monday's game against the Pacers.",
+    "story": "Gilgeous-Alexander will return to action in the second leg of this back-to-back set after being held out of Sunday's loss to Miami due to neck and back issues. The two-time MVP has reached the 30-point mark in each of his last five appearances, averaging 36.4 points, 4.0 assists, 3.6 rebounds and 1.4 combined steals-plus-blocks in 35.4 minutes per game during that span."
    }
   },
   "shedeur-sanders": {
@@ -2862,8 +2868,8 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-23T01:30",
-    "name": "BOS @ GS"
+    "date": "2026-11-26T03:00",
+    "name": "SAC @ GS"
    },
    "note": {
     "date": "Thu Nov 12",
@@ -2874,7 +2880,7 @@
   "travis-hunter": {
    "news": [
     {
-     "date": "2026-11-16",
+     "date": "2026-11-23",
      "desc": "Every week, we will look at how many snaps the two-way corner/receiver plays on offense and defense. Is there a trend in his usage?",
      "title": "Tracking Jaguars CB/WR Travis Hunter's 2026 season: Snaps on offense, defense",
      "url": "https://www.espn.com/nfl/story/_/id/50043976/jacksonville-jaguars-travis-hunter-stats-snaps-tracker"
@@ -2923,10 +2929,28 @@
   "travis-kelce": {
    "news": [
     {
-     "date": "2026-11-18",
+     "date": "2026-11-23",
+     "desc": "Travis Kelce passed Rob Gronkowski for third place for the most total touchdowns, including playoffs, by a tight end in league history.",
+     "title": "Travis Kelce pads Hall of Fame résumé with two first-half TDs in Chiefs' win",
+     "url": "https://www.espn.com/nfl/story/_/id/50563590/kelce-passes-gronkowski-most-tds-te-including-playoffs"
+    },
+    {
+     "date": "2026-11-22",
      "desc": "Kelce's greatest Arrowhead moments include his first catch, lots of playoff magic, and meeting the love of his life, Taylor Swift.",
      "title": "Kansas City Chiefs tight end Travis Kelce's top moments at Arrowhead Stadium",
      "url": "https://www.espn.com/nfl/story/_/id/50513358/chiefs-travis-kelce-100-games-arrowhead-taylor-swift"
+    },
+    {
+     "date": "2026-11-22",
+     "desc": "Patrick Mahomes, Travis Kelce link up for their 2nd TD connection of the 1st half",
+     "title": "Patrick Mahomes, Travis Kelce link up for their 2nd TD connection of the 1st half",
+     "url": "https://www.espn.com/video/clip/_/id/50563763/patrick-mahomes-travis-kelce-link-their-2nd-td-connection-1st-half"
+    },
+    {
+     "date": "2026-11-22",
+     "desc": "Travis Kelce moves up to 3rd for most TDs by a TE with latest score",
+     "title": "Travis Kelce moves up to 3rd for most TDs by a TE with latest score",
+     "url": "https://www.espn.com/video/clip/_/id/50563370/travis-kelce-moves-3rd-most-tds-te-latest-score"
     },
     {
      "date": "2026-10-25",
@@ -2935,22 +2959,10 @@
      "url": "https://www.espn.com/video/clip/_/id/50274245/mahomes-kelce-chiefs-dynamic-duo"
     },
     {
-     "date": "2026-09-27",
-     "desc": "Eric Karabell provides a list of what to watch for in fantasy football, so don't be surprised if any of these come true.",
-     "title": "Don't be surprised if ... Kelce, Adams keep turning back the clock, Herbert rebounds",
-     "url": "https://www.espn.com/fantasy/football/story/_/id/49997261/fantasy-football-start-sit-sleepers-busts-week-3"
-    },
-    {
      "date": "2026-09-25",
      "desc": "Why Taylor Swift and Travis Kelce picked MSG for their wedding",
      "title": "Why Taylor Swift and Travis Kelce picked MSG for their wedding",
      "url": "https://www.espn.com/video/clip/_/id/49260776/why-taylor-swift-travis-kelce-picked-msg-their-wedding"
-    },
-    {
-     "date": "2026-09-24",
-     "desc": "Kelce, who leads the NFL in YAC, has had an average route speed of 11.56 mph, the fastest he's been since 2022.",
-     "title": "How Chiefs TE Travis Kelce turned wedding shape into football shape",
-     "url": "https://www.espn.com/nfl/story/_/id/50015353/how-chiefs-te-travis-kelce-wedding-taylor-swift-football-shape"
     }
    ],
    "nextGame": {
@@ -2958,9 +2970,9 @@
     "name": "ARI @ KC"
    },
    "note": {
-    "date": "Fri Nov 20",
-    "headline": "Kelce (ankle/calf) doesn't have an injury designation for Sunday's game against the Cardinals.",
-    "story": "Kelce was forced from last Sunday's game against the Falcons with the ankle injury, but he's good to go for Week 11 against a hapless Arizona squad. The Chiefs should run all over the Cardinals defense and likely won't need much pass volume from Patrick Mahomes. Kelce is more of a fringe TE1 for fantasy purposes."
+    "date": "Sun Nov 22",
+    "headline": "Kelce brought in six of seven targets for 74 yards and two touchdowns in the Chiefs' 34-7 win over the Cardinals on Sunday.",
+    "story": "Kelce tied for the team lead in receptions with Rashee Rice while setting the pace in both receiving yards and targets, and he posted his first multi-touchdown effort of the season in the process. The legendary tight end recorded his scoring grabs from eight and 22 yards out, and both his reception and yardage totals were his highest since Week 2. Kelce will take a 41-586-4 line into Thursday's Thanksgiving Day road showdown against the Bills."
    }
   },
   "tyreek-hill": {
@@ -3052,8 +3064,8 @@
     }
    ],
    "nextGame": {
-    "date": "2026-11-23T01:00",
-    "name": "IND @ NY"
+    "date": "2026-11-24T00:30",
+    "name": "OKC @ IND"
    },
    "note": {
     "date": "Fri Nov 20",
@@ -3105,9 +3117,9 @@
     "name": "SA @ SAC"
    },
    "note": {
-    "date": "Sat Nov 21",
-    "headline": "Wembanyama finished with 50 points (20-29 FG, 5-11 3Pt, 5-6 FT), 19 rebounds, one assist, four steals and five blocks across 32 minutes in Saturday's 114-91 win over the Pelicans.",
-    "story": "Wembanyama had his third career game with at least 50 points, tying David Robinson for the second-most in Spurs history. He also became the first player since 1973-74 to record at least 50 points, 15 rebounds, four steals and five blocks in a game. The 2023 No. 1 overall pick is having another MVP-caliber year and is now averaging 29.9 points, 12.4 rebounds, 1.3 steals and 3.9 blocks, all career highs, along with 3.2 assists over 30.3 minutes per outing in 17 regular-season appearances."
+    "date": "Sun Nov 22",
+    "headline": "Wembanyama (back) is questionable for Monday's game against the Kings, Jared Weiss of The Athletic reports.",
+    "story": "Wembanyama is dealing with lower-back tightness, leaving his status for Monday's road tilt up in the air. If he's unable to play, Luke Kornet would likely replace Wembanyama in the starting lineup, while Carter Bryant, Keldon Johnson and rookie Tarris Reed could all see a bump in minutes off the Spurs' bench."
    }
   },
   "vladimir-guerrero-jr": {
@@ -3240,12 +3252,12 @@
     "name": "PHX @ NO"
    },
    "note": {
-    "date": "Sat Nov 21",
-    "headline": "Williamson is out for Saturday's game against the Spurs due to a left thigh contusion.",
-    "story": "Williamson won't suit up Saturday on the second leg of this back-to-back set. Derik Queen will start in his place alongside Yves Missi in the frontcourt. This will be Williamson's second absence this season. The 26-year-old is averaging 21.7 points, 5.4 rebounds, 2.8 assists and 1.8 steals across 32.4 minutes per outing in 16 regular-season games."
+    "date": "Sun Nov 22",
+    "headline": "Williamson (thigh) is probable for Monday's game against Phoenix.",
+    "story": "Williamson sat out Saturday's 114-91 loss to San Antonio due to a left thigh contusion, but it sounds like he's trending in the right direction for Monday. His return would likely shift Derik Queen back to the bench."
    }
   }
  },
  "source": "ESPN public feeds (unofficial)",
- "updated": "2026-11-22T17:52Z"
+ "updated": "2026-11-23T22:04Z"
 }
