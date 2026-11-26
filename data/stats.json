@@ -258,7 +258,7 @@
      ],
      [
       "QBR",
-      "45.6",
+      "45.5",
       "26th"
      ]
     ]
@@ -370,12 +370,12 @@
      [
       "AST",
       "2.0",
-      "Tied-145th"
+      "Tied-146th"
      ],
      [
       "FG%",
       "53.5",
-      "23rd"
+      "22nd"
      ]
     ]
    },
@@ -582,7 +582,7 @@
      [
       "CAR",
       "134",
-      "Tied-18th"
+      "Tied-19th"
      ],
      [
       "YDS",
@@ -703,7 +703,7 @@
      [
       "TD",
       "6",
-      "Tied-12th"
+      "Tied-13th"
      ],
      [
       "AVG",
@@ -989,8 +989,8 @@
    "espnId": "4432665",
    "experience": "3rd Season",
    "injury": {
-    "comment": "questionable",
-    "date": "2026-11-24",
+    "comment": "Head coach Klint Kubiak said that Bowers (ankle/quadriceps) remained a limited participant in Wednesday's practice, but the Raiders are optimistic that the tight end will play Sunday against the Browns, Sam Warren of The Athletic reports.",
+    "date": "2026-11-25",
     "returnDate": "2026-11-29",
     "status": "Questionable",
     "type": "Ankle"
@@ -1115,7 +1115,7 @@
    "espnId": "4361741",
    "experience": "5th Season",
    "injury": {
-    "comment": "questionable",
+    "comment": "Purdy didn't practice Wednesday due to an ankle injury, Vic Tafur of The Athletic reports.",
     "date": "2026-11-25",
     "returnDate": "2026-11-29",
     "status": "Questionable",
@@ -1208,7 +1208,7 @@
      [
       "YDS",
       "2,624",
-      "9th"
+      "10th"
      ],
      [
       "TD",
@@ -1222,7 +1222,7 @@
      ],
      [
       "QBR",
-      "84.6",
+      "84.5",
       "1st"
      ]
     ]
@@ -1440,7 +1440,7 @@
      [
       "REB",
       "5.1",
-      "86th"
+      "Tied-85th"
      ],
      [
       "AST",
@@ -1450,7 +1450,7 @@
      [
       "FG%",
       "46.7",
-      "71st"
+      "66th"
      ]
     ]
    },
@@ -1592,8 +1592,8 @@
      ],
      [
       "QBR",
-      "68.9",
-      "8th"
+      "68.8",
+      "7th"
      ]
     ]
    },
@@ -1735,7 +1735,7 @@
      ],
      [
       "QBR",
-      "53.2",
+      "53.1",
       "18th"
      ]
     ]
@@ -2063,12 +2063,12 @@
      [
       "CAR",
       "127",
-      "21st"
+      "22nd"
      ],
      [
       "YDS",
       "568",
-      "17th"
+      "18th"
      ],
      [
       "TD",
@@ -2211,7 +2211,7 @@
      [
       "YDS",
       "2,656",
-      "7th"
+      "8th"
      ],
      [
       "TD",
@@ -2225,7 +2225,7 @@
      ],
      [
       "QBR",
-      "72.9",
+      "72.8",
       "5th"
      ]
     ]
@@ -2402,17 +2402,17 @@
      [
       "REB",
       "6.3",
-      "54th"
+      "Tied-56th"
      ],
      [
       "AST",
       "6.7",
-      "14th"
+      "15th"
      ],
      [
       "FG%",
       "47.8",
-      "55th"
+      "54th"
      ]
     ]
    },
@@ -2602,7 +2602,7 @@
    "season": [
     [
      "PTS",
-     "20.4"
+     "20.9"
     ],
     [
      "REB",
@@ -2610,19 +2610,19 @@
     ],
     [
      "AST",
-     "4.1"
+     "4.2"
     ],
     [
      "FG%",
-     "39.4"
+     "39.1"
     ],
     [
      "3P%",
-     "33.6"
+     "34.1"
     ],
     [
      "STL",
-     "0.6"
+     "0.7"
     ]
    ],
    "statsLabel": "Stats",
@@ -2631,22 +2631,22 @@
     "stats": [
      [
       "PTS",
-      "20.4",
-      "34th"
+      "20.9",
+      "30th"
      ],
      [
       "REB",
       "3.2",
-      "Tied-183rd"
+      "Tied-184th"
      ],
      [
       "AST",
-      "4.1",
-      "58th"
+      "4.2",
+      "Tied-53rd"
      ],
      [
       "FG%",
-      "39.4",
+      "39.1",
       "129th"
      ]
     ]
@@ -2691,7 +2691,7 @@
     ],
     [
      "3P%",
-     "35.2"
+     "35.1"
     ],
     [
      "STL",
@@ -2710,7 +2710,7 @@
     ],
     [
      "REB",
-     "2.8"
+     "2.6"
     ],
     [
      "AST",
@@ -2718,11 +2718,11 @@
     ],
     [
      "FG%",
-     "47.0"
+     "46.2"
     ],
     [
      "3P%",
-     "33.7"
+     "32.7"
     ],
     [
      "STL",
@@ -2736,22 +2736,22 @@
      [
       "PTS",
       "24.5",
-      "15th"
+      "14th"
      ],
      [
       "REB",
-      "2.8",
-      "Tied-206th"
+      "2.6",
+      "Tied-220th"
      ],
      [
       "AST",
       "5.4",
-      "Tied-34th"
+      "34th"
      ],
      [
       "FG%",
-      "47.0",
-      "67th"
+      "46.2",
+      "72nd"
      ]
     ]
    },
@@ -2795,7 +2795,7 @@
     ],
     [
      "3P%",
-     "36.6"
+     "36.5"
     ],
     [
      "STL",
@@ -2810,7 +2810,7 @@
    "season": [
     [
      "PTS",
-     "24.7"
+     "25.0"
     ],
     [
      "REB",
@@ -2818,7 +2818,7 @@
     ],
     [
      "AST",
-     "5.2"
+     "5.1"
     ],
     [
      "FG%",
@@ -2826,11 +2826,11 @@
     ],
     [
      "3P%",
-     "35.5"
+     "34.4"
     ],
     [
      "STL",
-     "1.2"
+     "1.4"
     ]
    ],
    "statsLabel": "Stats",
@@ -2839,23 +2839,23 @@
     "stats": [
      [
       "PTS",
-      "24.7",
-      "12th"
+      "25.0",
+      "10th"
      ],
      [
       "REB",
       "4.6",
-      "108th"
+      "109th"
      ],
      [
       "AST",
-      "5.2",
-      "37th"
+      "5.1",
+      "39th"
      ],
      [
       "FG%",
       "49.5",
-      "40th"
+      "41st"
      ]
     ]
    },
@@ -3000,11 +3000,11 @@
      [
       "INT",
       "11",
-      "Tied-30th"
+      "Tied-29th"
      ],
      [
       "QBR",
-      "73.8",
+      "73.7",
       "4th"
      ]
     ]
@@ -3098,17 +3098,17 @@
      [
       "REB",
       "5.4",
-      "Tied-75th"
+      "Tied-76th"
      ],
      [
       "AST",
       "4.5",
-      "46th"
+      "48th"
      ],
      [
       "FG%",
       "50.5",
-      "33rd"
+      "34th"
      ]
     ]
    },
@@ -3486,35 +3486,28 @@
    "draft": "2013: Rd 1, Pk 15 (MIL)",
    "espnId": "3032977",
    "experience": "14th Season",
-   "injury": {
-    "comment": "Antetokounmpo (groin) is questionable for Wednesday's game in Philadelphia.",
-    "date": "2026-11-24",
-    "returnDate": "2026-11-25",
-    "status": "Day-To-Day",
-    "type": "Groin"
-   },
    "jersey": "7",
    "position": "F",
    "season": [
     [
      "PTS",
-     "28.2"
+     "28.4"
     ],
     [
      "REB",
-     "12.6"
+     "12.7"
     ],
     [
      "AST",
-     "5.5"
+     "5.4"
     ],
     [
      "FG%",
-     "60.2"
+     "60.3"
     ],
     [
      "3P%",
-     "24.2"
+     "23.5"
     ],
     [
      "STL",
@@ -3527,22 +3520,22 @@
     "stats": [
      [
       "PTS",
-      "28.2",
+      "28.4",
       "4th"
      ],
      [
       "REB",
-      "12.6",
+      "12.7",
       "3rd"
      ],
      [
       "AST",
-      "5.5",
-      "33rd"
+      "5.4",
+      "35th"
      ],
      [
       "FG%",
-      "60.2",
+      "60.3",
       "6th"
      ]
     ]
@@ -4012,7 +4005,7 @@
     ],
     [
      "FG%",
-     "48.3"
+     "48.2"
     ],
     [
      "3P%",
@@ -4026,19 +4019,12 @@
    "draft": "2018: Rd 2, Pk 33 (DAL)",
    "espnId": "3934672",
    "experience": "9th Season",
-   "injury": {
-    "comment": "Brunson (illness) has been downgraded to questionable for Wednesday's game against the Cavaliers.",
-    "date": "2026-11-25",
-    "returnDate": "2026-11-25",
-    "status": "Day-To-Day",
-    "type": "Illness"
-   },
    "jersey": "11",
    "position": "G",
    "season": [
     [
      "PTS",
-     "26.5"
+     "26.1"
     ],
     [
      "REB",
@@ -4050,15 +4036,15 @@
     ],
     [
      "FG%",
-     "43.7"
+     "42.7"
     ],
     [
      "3P%",
-     "40.5"
+     "39.6"
     ],
     [
      "STL",
-     "0.8"
+     "0.7"
     ]
    ],
    "statsLabel": "Stats",
@@ -4067,13 +4053,13 @@
     "stats": [
      [
       "PTS",
-      "26.5",
+      "26.1",
       "6th"
      ],
      [
       "REB",
       "3.1",
-      "Tied-188th"
+      "Tied-189th"
      ],
      [
       "AST",
@@ -4082,8 +4068,8 @@
      ],
      [
       "FG%",
-      "43.7",
-      "98th"
+      "42.7",
+      "110th"
      ]
     ]
    },
@@ -4237,7 +4223,7 @@
      ],
      [
       "QBR",
-      "56.5",
+      "56.6",
       ""
      ]
     ]
@@ -4349,7 +4335,7 @@
      [
       "TD",
       "7",
-      "Tied-4th"
+      "Tied-5th"
      ],
      [
       "AVG",
@@ -4502,7 +4488,7 @@
      [
       "QBR",
       "61.6",
-      "14th"
+      "13th"
      ]
     ]
    },
@@ -4604,17 +4590,17 @@
      [
       "REB",
       "6.8",
-      "41st"
+      "43rd"
      ],
      [
       "AST",
       "6.8",
-      "12th"
+      "13th"
      ],
      [
       "FG%",
       "43.3",
-      "103rd"
+      "99th"
      ]
     ]
    },
@@ -4761,7 +4747,7 @@
      ],
      [
       "QBR",
-      "79.7",
+      "79.6",
       "3rd"
      ]
     ]
@@ -4825,8 +4811,8 @@
    "espnId": "3059318",
    "experience": "11th Season",
    "injury": {
-    "comment": "Embiid (illness) is listed as doubtful for Wednesday's game versus Miami.",
-    "date": "2026-11-24",
+    "comment": "Embiid (illness) is out for Wednesday's game against Miami, Ira Winderman of the South Florida Sun Sentinel reports.",
+    "date": "2026-11-26",
     "returnDate": "2026-11-27",
     "status": "Day-To-Day",
     "type": "Illness"
@@ -4866,7 +4852,7 @@
      [
       "PTS",
       "20.4",
-      "33rd"
+      "35th"
      ],
      [
       "REB",
@@ -4876,12 +4862,12 @@
      [
       "AST",
       "4.1",
-      "53rd"
+      "57th"
      ],
      [
       "FG%",
       "40.0",
-      "127th"
+      "126th"
      ]
     ]
    },
@@ -5024,7 +5010,7 @@
      [
       "INT",
       "9",
-      "Tied-25th"
+      "Tied-24th"
      ],
      [
       "QBR",
@@ -5288,8 +5274,8 @@
    "espnId": "4038941",
    "experience": "7th Season",
    "injury": {
-    "comment": "Herbert entered the concussion protocol after Sunday's 27-24 loss to the Jets, Noah Furtado of The Athletic reports.",
-    "date": "2026-11-23",
+    "comment": "Herbert (concussion) didn't participate during the portion of Thursday's practice open to the media, Noah Furtado of The Athletic reports.",
+    "date": "2026-11-26",
     "returnDate": "2026-11-29",
     "status": "Questionable",
     "type": "Concussion"
@@ -5391,7 +5377,7 @@
      [
       "INT",
       "11",
-      "Tied-30th"
+      "Tied-29th"
      ],
      [
       "QBR",
@@ -5706,27 +5692,27 @@
    "season": [
     [
      "PTS",
-     "21.6"
+     "21.5"
     ],
     [
      "REB",
-     "5.4"
+     "5.6"
     ],
     [
      "AST",
-     "3.8"
+     "3.7"
     ],
     [
      "FG%",
-     "51.0"
+     "50.8"
     ],
     [
      "3P%",
-     "42.3"
+     "39.7"
     ],
     [
      "STL",
-     "0.4"
+     "0.5"
     ]
    ],
    "statsLabel": "Stats",
@@ -5735,23 +5721,23 @@
     "stats": [
      [
       "PTS",
-      "21.6",
-      "26th"
+      "21.5",
+      "25th"
      ],
      [
       "REB",
-      "5.4",
-      "Tied-77th"
+      "5.6",
+      "70th"
      ],
      [
       "AST",
-      "3.8",
-      "69th"
+      "3.7",
+      "73rd"
      ],
      [
       "FG%",
-      "51.0",
-      "30th"
+      "50.8",
+      "32nd"
      ]
     ]
    },
@@ -5905,7 +5891,7 @@
      ],
      [
       "QBR",
-      "82.2",
+      "82.1",
       ""
      ]
     ]
@@ -5946,7 +5932,7 @@
     ],
     [
      "3P%",
-     "36.4"
+     "36.5"
     ],
     [
      "STL",
@@ -5956,32 +5942,39 @@
    "draft": "2020: Rd 1, Pk 3 (CHA)",
    "espnId": "4432816",
    "experience": "7th Season",
+   "injury": {
+    "comment": "Ball (ankle) did not return to Wednesday's 113-106 win over the Thunder.",
+    "date": "2026-11-26",
+    "returnDate": "2026-11-27",
+    "status": "Day-To-Day",
+    "type": "Ankle"
+   },
    "jersey": "1",
    "position": "G",
    "season": [
     [
      "PTS",
-     "17.2"
+     "17.3"
     ],
     [
      "REB",
-     "4.2"
+     "4.4"
     ],
     [
      "AST",
-     "5.6"
+     "5.7"
     ],
     [
      "FG%",
-     "40.8"
+     "40.7"
     ],
     [
      "3P%",
-     "34.9"
+     "36.0"
     ],
     [
      "STL",
-     "1.7"
+     "1.6"
     ]
    ],
    "statsLabel": "Stats",
@@ -5990,23 +5983,23 @@
     "stats": [
      [
       "PTS",
-      "17.2",
+      "17.3",
       "52nd"
      ],
      [
       "REB",
-      "4.2",
-      "Tied-122nd"
+      "4.4",
+      "119th"
      ],
      [
       "AST",
-      "5.6",
-      "30th"
+      "5.7",
+      "26th"
      ],
      [
       "FG%",
-      "40.8",
-      "122nd"
+      "40.7",
+      "120th"
      ]
     ]
    },
@@ -6058,7 +6051,7 @@
     ],
     [
      "FG%",
-     "50.6"
+     "50.7"
     ],
     [
      "3P%",
@@ -6077,23 +6070,23 @@
    "season": [
     [
      "PTS",
-     "16.6"
+     "17.1"
     ],
     [
      "REB",
-     "6.7"
+     "6.9"
     ],
     [
      "AST",
-     "6.5"
+     "6.9"
     ],
     [
      "FG%",
-     "47.5"
+     "48.5"
     ],
     [
      "3P%",
-     "27.5"
+     "31.6"
     ],
     [
      "STL",
@@ -6106,23 +6099,23 @@
     "stats": [
      [
       "PTS",
-      "16.6",
-      "57th"
+      "17.1",
+      "55th"
      ],
      [
       "REB",
-      "6.7",
-      "Tied-43rd"
+      "6.9",
+      "41st"
      ],
      [
       "AST",
-      "6.5",
-      "16th"
+      "6.9",
+      "12th"
      ],
      [
       "FG%",
-      "47.5",
-      "58th"
+      "48.5",
+      "50th"
      ]
     ]
    },
@@ -6224,7 +6217,7 @@
      [
       "REB",
       "6.6",
-      "Tied-45th"
+      "Tied-46th"
      ],
      [
       "AST",
@@ -6234,7 +6227,7 @@
      [
       "FG%",
       "46.0",
-      "75th"
+      "76th"
      ]
     ]
    },
@@ -6379,7 +6372,7 @@
    "espnId": "4432708",
    "experience": "3rd Season",
    "injury": {
-    "comment": "Harrison (hamstring) was at practice Wednesday, Jonathan M. Alexander of the Houston Chronicle  reports.",
+    "comment": "Harrison (hamstring) was listed as a limited participant in Wednesday's practice.",
     "date": "2026-11-25",
     "returnDate": "2026-11-29",
     "status": "Questionable",
@@ -6811,7 +6804,7 @@
      [
       "FG%",
       "53.0",
-      "25th"
+      "24th"
      ]
     ]
    },
@@ -7059,7 +7052,7 @@
      [
       "YDS",
       "2,709",
-      "6th"
+      "7th"
      ],
      [
       "TD",
@@ -7073,7 +7066,7 @@
      ],
      [
       "QBR",
-      "64.3",
+      "64.2",
       "11th"
      ]
     ]
@@ -7345,7 +7338,7 @@
    "projected": [
     [
      "YDS",
-     "1,215"
+     "1,105"
     ],
     [
      "TD",
@@ -7353,11 +7346,11 @@
     ],
     [
      "REC",
-     "119"
+     "108"
     ],
     [
      "CAR",
-     "11"
+     "10"
     ]
    ],
    "season": [
@@ -7813,15 +7806,15 @@
     ],
     [
      "AST",
-     "4.6"
+     "4.7"
     ],
     [
      "FG%",
-     "47.9"
+     "48.0"
     ],
     [
      "3P%",
-     "37.5"
+     "36.1"
     ],
     [
      "STL",
@@ -7840,17 +7833,17 @@
      [
       "REB",
       "4.1",
-      "127th"
+      "131st"
      ],
      [
       "AST",
-      "4.6",
-      "45th"
+      "4.7",
+      "44th"
      ],
      [
       "FG%",
-      "47.9",
-      "53rd"
+      "48.0",
+      "52nd"
      ]
     ]
    },
@@ -7966,7 +7959,7 @@
      ],
      [
       "QBR",
-      "41.5",
+      "41.4",
       ""
      ]
     ]
@@ -8150,8 +8143,8 @@
    "espnId": "3975",
    "experience": "18th Season",
    "injury": {
-    "comment": "Curry has been diagnosed with an oblique abdominal tear and will be re-evaluated in two weeks, Shams Charania of ESPN reports.",
-    "date": "2026-11-12",
+    "comment": "Curry (abdomen) will be re-evaluated Friday after Thanksgiving, Anthony Slater of ESPN.com reports.",
+    "date": "2026-11-26",
     "returnDate": "2026-12-12",
     "status": "Out",
     "type": "Abdomen"
@@ -8206,7 +8199,7 @@
      [
       "FG%",
       "50.0",
-      "Tied-34th"
+      "Tied-36th"
      ]
     ]
    },
@@ -8413,7 +8406,7 @@
      [
       "REC",
       "41",
-      "Tied-32nd"
+      "Tied-33rd"
      ],
      [
       "YDS",
@@ -8679,11 +8672,11 @@
    "career": [
     [
      "PTS",
-     "24.0"
+     "24.1"
     ],
     [
      "REB",
-     "11.1"
+     "11.2"
     ],
     [
      "AST",
@@ -8691,7 +8684,7 @@
     ],
     [
      "FG%",
-     "49.0"
+     "49.1"
     ],
     [
      "3P%",
@@ -8705,23 +8698,16 @@
    "draft": "2023: Rd 1, Pk 1 (SA)",
    "espnId": "5104157",
    "experience": "4th Season",
-   "injury": {
-    "comment": "Wembanyama (back) is questionable for Wednesday's game in Portland.",
-    "date": "2026-11-25",
-    "returnDate": "2026-11-25",
-    "status": "Day-To-Day",
-    "type": "Back"
-   },
    "jersey": "1",
    "position": "F",
    "season": [
     [
      "PTS",
-     "29.9"
+     "30.7"
     ],
     [
      "REB",
-     "12.3"
+     "12.5"
     ],
     [
      "AST",
@@ -8729,11 +8715,11 @@
     ],
     [
      "FG%",
-     "54.1"
+     "54.3"
     ],
     [
      "3P%",
-     "31.5"
+     "31.7"
     ],
     [
      "STL",
@@ -8746,12 +8732,12 @@
     "stats": [
      [
       "PTS",
-      "29.9",
+      "30.7",
       "3rd"
      ],
      [
       "REB",
-      "12.3",
+      "12.5",
       "4th"
      ],
      [
@@ -8761,8 +8747,8 @@
      ],
      [
       "FG%",
-      "54.1",
-      "21st"
+      "54.3",
+      "20th"
      ]
     ]
    },
@@ -9164,7 +9150,7 @@
      [
       "AST",
       "2.6",
-      "111th"
+      "109th"
      ],
      [
       "FG%",
@@ -9180,5 +9166,5 @@
   }
  },
  "source": "ESPN public data feeds (unofficial; replace with a licensed provider before launch)",
- "updated": "2026-11-25T19:57Z"
+ "updated": "2026-11-26T19:40Z"
 }
