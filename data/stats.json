@@ -258,7 +258,7 @@
      ],
      [
       "QBR",
-      "45.5",
+      "45.4",
       "26th"
      ]
     ]
@@ -708,7 +708,7 @@
      [
       "AVG",
       "5.1",
-      "4th"
+      "5th"
      ]
     ]
    },
@@ -836,22 +836,22 @@
      [
       "YDS",
       "1,955",
-      "21st"
+      "22nd"
      ],
      [
       "TD",
       "12",
-      "17th"
+      "Tied-17th"
      ],
      [
       "INT",
       "5",
-      "Tied-11th"
+      "Tied-10th"
      ],
      [
       "QBR",
-      "48.2",
-      "24th"
+      "48.6",
+      "23rd"
      ]
     ]
    },
@@ -989,8 +989,8 @@
    "espnId": "4432665",
    "experience": "3rd Season",
    "injury": {
-    "comment": "Head coach Klint Kubiak said that Bowers (ankle/quadriceps) remained a limited participant in Wednesday's practice, but the Raiders are optimistic that the tight end will play Sunday against the Browns, Sam Warren of The Athletic reports.",
-    "date": "2026-11-25",
+    "comment": "Bowers (ankle/quadriceps) wasn't on the field for the portion of Friday's practice open to the media, Ryan McFadden of ESPN.com reports.",
+    "date": "2026-11-27",
     "returnDate": "2026-11-29",
     "status": "Questionable",
     "type": "Ankle"
@@ -1063,7 +1063,7 @@
      [
       "YDS",
       "676",
-      "17th"
+      "19th"
      ],
      [
       "TD",
@@ -1073,7 +1073,7 @@
      [
       "AVG",
       "13.5",
-      "Tied-33rd"
+      "Tied-31st"
      ]
     ]
    },
@@ -1115,8 +1115,8 @@
    "espnId": "4361741",
    "experience": "5th Season",
    "injury": {
-    "comment": "Purdy didn't practice Wednesday due to an ankle injury, Vic Tafur of The Athletic reports.",
-    "date": "2026-11-25",
+    "comment": "Purdy (ankle) was listed as a non-participant on Thursday's injury report, Eric Branch of the San Francisco Chronicle reports.",
+    "date": "2026-11-26",
     "returnDate": "2026-11-29",
     "status": "Questionable",
     "type": "Ankle"
@@ -1218,11 +1218,11 @@
      [
       "INT",
       "5",
-      "Tied-11th"
+      "Tied-10th"
      ],
      [
       "QBR",
-      "84.5",
+      "84.6",
       "1st"
      ]
     ]
@@ -1394,10 +1394,10 @@
    "espnId": "4432166",
    "experience": "6th Season",
    "injury": {
-    "comment": "Cunningham (knee) is listed as out for Tuesday's game against Orlando.",
-    "date": "2026-11-25",
-    "returnDate": "2026-11-27",
-    "status": "Day-To-Day",
+    "comment": "Cunningham (knee) is out for Friday's game against the Bucks.",
+    "date": "2026-11-26",
+    "returnDate": "2026-11-29",
+    "status": "Out",
     "type": "Knee"
    },
    "jersey": "2",
@@ -1465,11 +1465,11 @@
    "career": [
     [
      "YDS",
-     "9,210"
+     "9,555"
     ],
     [
      "TD",
-     "57"
+     "59"
     ],
     [
      "INT",
@@ -1477,29 +1477,36 @@
     ],
     [
      "CMP%",
-     "61.6"
+     "61.8"
     ],
     [
      "RTG",
-     "90.1"
+     "90.6"
     ],
     [
      "CAR",
-     "193"
+     "196"
     ]
    ],
    "draft": "2024: Rd 1, Pk 1 (CHI)",
    "espnId": "4431611",
    "experience": "3rd Season",
+   "injury": {
+    "comment": "Williams said after Thursday's 39-35 win in Detroit that he's \"fine\" and likely just has \"a bruise on his abdomen,\" Jason Lieser of the Chicago Sun-Times reports.",
+    "date": "2026-11-26",
+    "returnDate": "2026-12-06",
+    "status": "Questionable",
+    "type": "Abdomen"
+   },
    "jersey": "18",
    "last5": [
     [
      "YDS",
-     "1,320"
+     "1,360"
     ],
     [
      "TD",
-     "8"
+     "9"
     ],
     [
      "INT",
@@ -1507,30 +1514,30 @@
     ],
     [
      "CMP%",
-     "69.1"
+     "66.0"
     ],
     [
      "RTG",
-     "98.1"
+     "97.2"
     ],
     [
      "CAR",
-     "20"
+     "19"
     ]
    ],
    "position": "QB",
    "projected": [
     [
      "YDS",
-     "2,935"
+     "3,202"
     ],
     [
      "TD",
-     "17"
+     "18"
     ],
     [
      "INT",
-     "10"
+     "9"
     ],
     [
      "CMP%",
@@ -1538,21 +1545,21 @@
     ],
     [
      "RTG",
-     "95.9"
+     "97.7"
     ],
     [
      "CAR",
-     "59"
+     "58"
     ]
    ],
    "season": [
     [
      "YDS",
-     "1,727"
+     "2,072"
     ],
     [
      "TD",
-     "10"
+     "12"
     ],
     [
      "INT",
@@ -1564,11 +1571,11 @@
     ],
     [
      "RTG",
-     "95.9"
+     "97.7"
     ],
     [
      "CAR",
-     "35"
+     "38"
     ]
    ],
    "statsLabel": "2026 Passing",
@@ -1577,13 +1584,13 @@
     "stats": [
      [
       "YDS",
-      "1,727",
-      "25th"
+      "2,072",
+      "19th"
      ],
      [
       "TD",
-      "10",
-      "Tied-19th"
+      "12",
+      "Tied-17th"
      ],
      [
       "INT",
@@ -1592,8 +1599,8 @@
      ],
      [
       "QBR",
-      "68.8",
-      "7th"
+      "70.9",
+      "6th"
      ]
     ]
    },
@@ -1721,12 +1728,12 @@
      [
       "YDS",
       "1,962",
-      "20th"
+      "21st"
      ],
      [
       "TD",
       "10",
-      "Tied-19th"
+      "Tied-20th"
      ],
      [
       "INT",
@@ -1751,7 +1758,7 @@
    "career": [
     [
      "YDS",
-     "8,524"
+     "8,658"
     ],
     [
      "TD",
@@ -1759,7 +1766,7 @@
     ],
     [
      "REC",
-     "659"
+     "666"
     ],
     [
      "CAR",
@@ -1773,15 +1780,15 @@
    "last5": [
     [
      "YDS",
-     "531"
+     "591"
     ],
     [
      "TD",
-     "5"
+     "3"
     ],
     [
      "REC",
-     "40"
+     "42"
     ],
     [
      "CAR",
@@ -1792,25 +1799,25 @@
    "projected": [
     [
      "YDS",
-     "1,712"
+     "1,759"
     ],
     [
      "TD",
-     "13"
+     "12"
     ],
     [
      "REC",
-     "136"
+     "134"
     ],
     [
      "CAR",
-     "3"
+     "2"
     ]
    ],
    "season": [
     [
      "YDS",
-     "1,108"
+     "1,242"
     ],
     [
      "TD",
@@ -1818,7 +1825,7 @@
     ],
     [
      "REC",
-     "88"
+     "95"
     ],
     [
      "CAR",
@@ -1831,13 +1838,13 @@
     "stats": [
      [
       "REC",
-      "88",
+      "95",
       "1st"
      ],
      [
       "YDS",
-      "1,108",
-      "2nd"
+      "1,242",
+      "1st"
      ],
      [
       "TD",
@@ -1846,8 +1853,8 @@
      ],
      [
       "AVG",
-      "12.6",
-      "46th"
+      "13.1",
+      "40th"
      ]
     ]
    },
@@ -2073,12 +2080,12 @@
      [
       "TD",
       "11",
-      "Tied-2nd"
+      "Tied-3rd"
      ],
      [
       "AVG",
       "4.5",
-      "12th"
+      "13th"
      ]
     ]
    },
@@ -2225,7 +2232,7 @@
      ],
      [
       "QBR",
-      "72.8",
+      "73.0",
       "5th"
      ]
     ]
@@ -2597,6 +2604,13 @@
    "draft": "2012: Rd 1, Pk 6 (POR)",
    "espnId": "6606",
    "experience": "15th Season",
+   "injury": {
+    "comment": "Lillard (calf) has been ruled out for Friday's game against the Warriors. The veteran guard is dealing with right calf tightness and soreness.",
+    "date": "2026-11-27",
+    "returnDate": "2026-11-29",
+    "status": "Out",
+    "type": "Calf"
+   },
    "jersey": "0",
    "position": "G",
    "season": [
@@ -3000,7 +3014,7 @@
      [
       "INT",
       "11",
-      "Tied-29th"
+      "Tied-28th"
      ],
      [
       "QBR",
@@ -3052,9 +3066,9 @@
    "espnId": "5037871",
    "experience": "2nd Season",
    "injury": {
-    "comment": "Harper (hip) is expected to miss two to three weeks, Brett Siegel of ClutchPoints.com reports.",
-    "date": "2026-11-19",
-    "returnDate": "2026-12-13",
+    "comment": "Harper (hip) participated in Friday's morning shootaround, per Matt Guzman of SI.com.",
+    "date": "2026-11-27",
+    "returnDate": "2026-11-27",
     "status": "Out",
     "type": "Hip"
    },
@@ -3486,6 +3500,13 @@
    "draft": "2013: Rd 1, Pk 15 (MIL)",
    "espnId": "3032977",
    "experience": "14th Season",
+   "injury": {
+    "comment": "Antetokounmpo is probable for Friday's game against the Knicks due to right groin tendinitis.",
+    "date": "2026-11-26",
+    "returnDate": "2026-11-27",
+    "status": "Day-To-Day",
+    "type": "Groin"
+   },
    "jersey": "7",
    "position": "F",
    "season": [
@@ -4153,15 +4174,15 @@
    "projected": [
     [
      "YDS",
-     "1,586"
+     "1,441"
     ],
     [
      "TD",
-     "13"
+     "12"
     ],
     [
      "INT",
-     "5"
+     "4"
     ],
     [
      "CMP%",
@@ -4173,7 +4194,7 @@
     ],
     [
      "CAR",
-     "39"
+     "35"
     ]
    ],
    "season": [
@@ -4223,7 +4244,7 @@
      ],
      [
       "QBR",
-      "56.6",
+      "56.5",
       ""
      ]
     ]
@@ -4330,7 +4351,7 @@
      [
       "YDS",
       "909",
-      "4th"
+      "5th"
      ],
      [
       "TD",
@@ -4340,7 +4361,7 @@
      [
       "AVG",
       "13.2",
-      "38th"
+      "37th"
      ]
     ]
    },
@@ -4473,12 +4494,12 @@
      [
       "YDS",
       "1,788",
-      "23rd"
+      "24th"
      ],
      [
       "TD",
       "10",
-      "Tied-19th"
+      "Tied-20th"
      ],
      [
       "INT",
@@ -4487,8 +4508,8 @@
      ],
      [
       "QBR",
-      "61.6",
-      "13th"
+      "61.2",
+      "14th"
      ]
     ]
    },
@@ -4733,7 +4754,7 @@
      [
       "YDS",
       "3,095",
-      "1st"
+      "2nd"
      ],
      [
       "TD",
@@ -4747,7 +4768,7 @@
      ],
      [
       "QBR",
-      "79.6",
+      "79.8",
       "3rd"
      ]
     ]
@@ -4811,8 +4832,8 @@
    "espnId": "3059318",
    "experience": "11th Season",
    "injury": {
-    "comment": "Embiid (illness) is out for Wednesday's game against Miami, Ira Winderman of the South Florida Sun Sentinel reports.",
-    "date": "2026-11-26",
+    "comment": "Embiid (illness) was at shootaround for the 76ers on Friday, Chris Hine of The Philly Inquirer reports.",
+    "date": "2026-11-27",
     "returnDate": "2026-11-27",
     "status": "Day-To-Day",
     "type": "Illness"
@@ -4887,7 +4908,7 @@
    "career": [
     [
      "YDS",
-     "32,629"
+     "32,710"
     ],
     [
      "TD",
@@ -4895,19 +4916,19 @@
     ],
     [
      "INT",
-     "103"
+     "105"
     ],
     [
      "CMP%",
-     "64.0"
+     "63.9"
     ],
     [
      "RTG",
-     "94.4"
+     "94.0"
     ],
     [
      "CAR",
-     "937"
+     "944"
     ]
    ],
    "draft": "2018: Rd 1, Pk 7 (BUF)",
@@ -4917,50 +4938,50 @@
    "last5": [
     [
      "YDS",
-     "1,278"
+     "1,104"
     ],
     [
      "TD",
-     "7"
-    ],
-    [
-     "INT",
      "5"
     ],
     [
+     "INT",
+     "7"
+    ],
+    [
      "CMP%",
-     "62.3"
+     "57.9"
     ],
     [
      "RTG",
-     "89.2"
+     "70.3"
     ],
     [
      "CAR",
-     "23"
+     "25"
     ]
    ],
    "position": "QB",
    "projected": [
     [
      "YDS",
-     "4,295"
+     "4,030"
     ],
     [
      "TD",
-     "23"
+     "21"
     ],
     [
      "INT",
-     "15"
+     "17"
     ],
     [
      "CMP%",
-     "64.2"
+     "63.2"
     ],
     [
      "RTG",
-     "93.5"
+     "88.6"
     ],
     [
      "CAR",
@@ -4970,7 +4991,7 @@
    "season": [
     [
      "YDS",
-     "2,527"
+     "2,608"
     ],
     [
      "TD",
@@ -4978,19 +4999,19 @@
     ],
     [
      "INT",
-     "9"
+     "11"
     ],
     [
      "CMP%",
-     "64.2"
+     "63.2"
     ],
     [
      "RTG",
-     "93.5"
+     "88.6"
     ],
     [
      "CAR",
-     "66"
+     "73"
     ]
    ],
    "statsLabel": "2026 Passing",
@@ -4999,8 +5020,8 @@
     "stats": [
      [
       "YDS",
-      "2,527",
-      "12th"
+      "2,608",
+      "11th"
      ],
      [
       "TD",
@@ -5009,13 +5030,13 @@
      ],
      [
       "INT",
-      "9",
-      "Tied-24th"
+      "11",
+      "Tied-28th"
      ],
      [
       "QBR",
-      "70.2",
-      "6th"
+      "68.1",
+      "7th"
      ]
     ]
    },
@@ -5274,7 +5295,7 @@
    "espnId": "4038941",
    "experience": "7th Season",
    "injury": {
-    "comment": "Herbert (concussion) didn't participate during the portion of Thursday's practice open to the media, Noah Furtado of The Athletic reports.",
+    "comment": "Herbert (concussion) was officially deemed a non-participant in Thursday's practice.",
     "date": "2026-11-26",
     "returnDate": "2026-11-29",
     "status": "Questionable",
@@ -5367,7 +5388,7 @@
      [
       "YDS",
       "1,851",
-      "22nd"
+      "23rd"
      ],
      [
       "TD",
@@ -5377,12 +5398,12 @@
      [
       "INT",
       "11",
-      "Tied-29th"
+      "Tied-28th"
      ],
      [
       "QBR",
-      "35.4",
-      "29th"
+      "35.8",
+      "28th"
      ]
     ]
    },
@@ -5483,12 +5504,12 @@
      [
       "REC",
       "47",
-      "Tied-24th"
+      "Tied-25th"
      ],
      [
       "YDS",
       "553",
-      "26th"
+      "27th"
      ],
      [
       "TD",
@@ -5943,10 +5964,10 @@
    "espnId": "4432816",
    "experience": "7th Season",
    "injury": {
-    "comment": "Ball (ankle) did not return to Wednesday's 113-106 win over the Thunder.",
-    "date": "2026-11-26",
-    "returnDate": "2026-11-27",
-    "status": "Day-To-Day",
+    "comment": "Ball (ankle) has been ruled out for Friday's game against the Grizzlies. The guard was previously questionable after spraining his left ankle during Wednesday's win over Oklahoma City.",
+    "date": "2026-11-27",
+    "returnDate": "2026-11-29",
+    "status": "Out",
     "type": "Ankle"
    },
    "jersey": "1",
@@ -6333,12 +6354,12 @@
      [
       "TD",
       "3",
-      "Tied-36th"
+      "Tied-38th"
      ],
      [
       "AVG",
       "11.5",
-      "62nd"
+      "63rd"
      ]
     ]
    },
@@ -6371,13 +6392,6 @@
    "draft": "2024: Rd 1, Pk 4 (ARI)",
    "espnId": "4432708",
    "experience": "3rd Season",
-   "injury": {
-    "comment": "Harrison (hamstring) was listed as a limited participant in Wednesday's practice.",
-    "date": "2026-11-25",
-    "returnDate": "2026-11-29",
-    "status": "Questionable",
-    "type": "Hamstring"
-   },
    "jersey": "18",
    "last5": [
     [
@@ -6939,7 +6953,7 @@
    "career": [
     [
      "YDS",
-     "38,648"
+     "38,822"
     ],
     [
      "TD",
@@ -6955,11 +6969,11 @@
     ],
     [
      "RTG",
-     "101.3"
+     "101.1"
     ],
     [
      "CAR",
-     "521"
+     "524"
     ]
    ],
    "draft": "2017: Rd 1, Pk 10 (KC)",
@@ -6969,7 +6983,7 @@
    "last5": [
     [
      "YDS",
-     "1,400"
+     "1,409"
     ],
     [
      "TD",
@@ -6977,30 +6991,30 @@
     ],
     [
      "INT",
-     "1"
+     "0"
     ],
     [
      "CMP%",
-     "67.4"
+     "66.9"
     ],
     [
      "RTG",
-     "110.4"
+     "113.3"
     ],
     [
      "CAR",
-     "8"
+     "9"
     ]
    ],
    "position": "QB",
    "projected": [
     [
      "YDS",
-     "4,605"
+     "4,455"
     ],
     [
      "TD",
-     "37"
+     "34"
     ],
     [
      "INT",
@@ -7008,21 +7022,21 @@
     ],
     [
      "CMP%",
-     "67.1"
+     "66.1"
     ],
     [
      "RTG",
-     "108.3"
+     "105.5"
     ],
     [
      "CAR",
-     "42"
+     "43"
     ]
    ],
    "season": [
     [
      "YDS",
-     "2,709"
+     "2,883"
     ],
     [
      "TD",
@@ -7034,15 +7048,15 @@
     ],
     [
      "CMP%",
-     "67.1"
+     "66.1"
     ],
     [
      "RTG",
-     "108.3"
+     "105.5"
     ],
     [
      "CAR",
-     "25"
+     "28"
     ]
    ],
    "statsLabel": "2026 Passing",
@@ -7051,8 +7065,8 @@
     "stats": [
      [
       "YDS",
-      "2,709",
-      "7th"
+      "2,883",
+      "5th"
      ],
      [
       "TD",
@@ -7066,8 +7080,8 @@
      ],
      [
       "QBR",
-      "64.2",
-      "11th"
+      "63.6",
+      "12th"
      ]
     ]
    },
@@ -7378,7 +7392,7 @@
      [
       "REC",
       "70",
-      "Tied-4th"
+      "5th"
      ],
      [
       "YDS",
@@ -7393,7 +7407,7 @@
      [
       "AVG",
       "10.2",
-      "87th"
+      "86th"
      ]
     ]
    },
@@ -7631,7 +7645,7 @@
    "career": [
     [
      "YDS",
-     "8,727"
+     "8,734"
     ],
     [
      "TD",
@@ -7643,17 +7657,24 @@
     ],
     [
      "CAR",
-     "1912"
+     "1917"
     ]
    ],
    "draft": "2018: Rd 1, Pk 2 (NYG)",
    "espnId": "3929630",
    "experience": "9th Season",
+   "injury": {
+    "comment": "Barkley suffered a stinger during Thursday's game in Dallas.",
+    "date": "2026-11-26",
+    "returnDate": "2026-12-06",
+    "status": "Questionable",
+    "type": "Neck"
+   },
    "jersey": "26",
    "last5": [
     [
      "YDS",
-     "197"
+     "196"
     ],
     [
      "TD",
@@ -7661,18 +7682,18 @@
     ],
     [
      "REC",
-     "4"
+     "3"
     ],
     [
      "CAR",
-     "52"
+     "55"
     ]
    ],
    "position": "RB",
    "projected": [
     [
      "YDS",
-     "630"
+     "584"
     ],
     [
      "TD",
@@ -7680,17 +7701,17 @@
     ],
     [
      "REC",
-     "11"
+     "10"
     ],
     [
      "CAR",
-     "146"
+     "140"
     ]
    ],
    "season": [
     [
      "YDS",
-     "371"
+     "378"
     ],
     [
      "TD",
@@ -7702,7 +7723,7 @@
     ],
     [
      "CAR",
-     "86"
+     "91"
     ]
    ],
    "statsLabel": "2026 Offense",
@@ -7711,23 +7732,23 @@
     "stats": [
      [
       "CAR",
-      "86",
-      "32nd"
+      "91",
+      "31st"
      ],
      [
       "YDS",
-      "371",
-      "29th"
+      "378",
+      "30th"
      ],
      [
       "TD",
       "4",
-      "Tied-18th"
+      "Tied-19th"
      ],
      [
       "AVG",
-      "4.3",
-      "18th"
+      "4.2",
+      "21st"
      ]
     ]
    },
@@ -7959,7 +7980,7 @@
      ],
      [
       "QBR",
-      "41.4",
+      "41.6",
       ""
      ]
     ]
@@ -8325,7 +8346,7 @@
    "career": [
     [
      "YDS",
-     "13,588"
+     "13,659"
     ],
     [
      "TD",
@@ -8333,7 +8354,7 @@
     ],
     [
      "REC",
-     "1121"
+     "1125"
     ],
     [
      "CAR",
@@ -8347,7 +8368,7 @@
    "last5": [
     [
      "YDS",
-     "287"
+     "314"
     ],
     [
      "TD",
@@ -8366,7 +8387,7 @@
    "projected": [
     [
      "YDS",
-     "996"
+     "1,015"
     ],
     [
      "TD",
@@ -8384,7 +8405,7 @@
    "season": [
     [
      "YDS",
-     "586"
+     "657"
     ],
     [
      "TD",
@@ -8392,7 +8413,7 @@
     ],
     [
      "REC",
-     "41"
+     "45"
     ],
     [
      "CAR",
@@ -8405,13 +8426,13 @@
     "stats": [
      [
       "REC",
-      "41",
-      "Tied-33rd"
+      "45",
+      "27th"
      ],
      [
       "YDS",
-      "586",
-      "24th"
+      "657",
+      "22nd"
      ],
      [
       "TD",
@@ -8420,8 +8441,8 @@
      ],
      [
       "AVG",
-      "14.3",
-      "27th"
+      "14.6",
+      "24th"
      ]
     ]
    },
@@ -8576,8 +8597,8 @@
    "espnId": "4396993",
    "experience": "7th Season",
    "injury": {
-    "comment": "Haliburton (hamstring) was recalled from the G League's Noblesville Boom on Tuesday, Tony East of Forbes.com reports.",
-    "date": "2026-11-24",
+    "comment": "Haliburton (hamstring) has been ruled out per Scott Agness of FieldhouseFiles.com for Friday's game against the 76ers. The guard participated in practice activities earlier this week as he continues working toward his return.",
+    "date": "2026-11-27",
     "returnDate": "2026-12-13",
     "status": "Out",
     "type": "Hamstring"
@@ -9166,5 +9187,5 @@
   }
  },
  "source": "ESPN public data feeds (unofficial; replace with a licensed provider before launch)",
- "updated": "2026-11-26T19:40Z"
+ "updated": "2026-11-27T19:30Z"
 }
